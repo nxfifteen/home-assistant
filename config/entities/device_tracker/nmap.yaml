@@ -1,0 +1,5 @@
+---
+# https://www.home-assistant.io/components/nmap_tracker/
+platform: nmap_tracker
+hosts: !secret home_ip_range
+home_interval: 10

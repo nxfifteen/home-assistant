@@ -1,13 +1,6 @@
-*
-
-# Generic ignores
-*.log
-*.db
-*.db-shm
-*.db-wal
-*.pyc
-._*
-__pycache__
+# Example .gitignore file for your config dir.
+# A * ensures that everything will be ignored.
+/*
 
 # Directory (contents) ignores
 config/.cloud
@@ -15,10 +8,18 @@ config/.storage
 config/deps
 
 # Specific file ignores
+config/.uuid
 config/ip_bans.yaml
 config/known_devices.yaml
 config/secrets.yaml
+**/*.log
+**/*.db
+**/*.conf
+**/*.xml
+config/node-red/.config.json.backup
 
-# Specific keeps
-!.gitkeep
-!config/*.yaml
+# You can whitelist files/folders with !, these will not be ignored.
+!.gitignore
+!*.md
+!config/
+!gitupdate.sh
