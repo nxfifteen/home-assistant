@@ -1,7 +1,5 @@
 *
 
-!/config/*
-
 # Generic ignores
 *.log
 *.db
@@ -23,3 +21,4 @@ config/secrets.yaml
 
 # Specific keeps
 !.gitkeep
+!config/*.yaml
