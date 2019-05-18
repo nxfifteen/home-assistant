@@ -3,3 +3,5 @@
 platform: nmap_tracker
 hosts: !secret home_ip_range
 home_interval: 10
+exclude:
+  - !secret mqtt_broker
