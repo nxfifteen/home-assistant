@@ -27,3 +27,4 @@ homeassistant/node-red/.config.json.backup
 !*.md
 !homeassistant/
 !gitupdate.sh
+!sanitise.sh

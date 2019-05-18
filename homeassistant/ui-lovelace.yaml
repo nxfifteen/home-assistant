@@ -1,1 +1,2 @@
 title: Home Control Panel
+views: !include_dir_list ./lovelace/views

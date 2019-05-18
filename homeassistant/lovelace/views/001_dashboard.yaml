@@ -1,0 +1,6 @@
+---
+id: dashboard
+title: Dashboard
+icon: mdi:home-assistant
+cards:
+  - !include ../cards/compact_custom_header_main.yaml

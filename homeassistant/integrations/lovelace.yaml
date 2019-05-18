@@ -1,4 +1,4 @@
-#---
+---
 # Lovelace component for confuring the UI.
 #
 # I use Lovelace in manual YAML mode. Pro: I can have my Lovelace in Git
@@ -7,5 +7,5 @@
 # https://www.home-assistant.io/lovelace/
 # https://www.home-assistant.io/lovelace/yaml-mode/
 #
-#lovelace:
-#  mode: yaml
+lovelace:
+  mode: yaml
