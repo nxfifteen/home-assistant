@@ -3,23 +3,23 @@
 /*
 
 # Directory (contents) ignores
-config/.cloud
-config/.storage
-config/deps
+homeassistant/.cloud
+homeassistant/.storage
+homeassistant/deps
 
 # Specific file ignores
-config/.uuid
-config/ip_bans.yaml
-config/known_devices.yaml
-config/secrets.yaml
+homeassistant/.uuid
+homeassistant/ip_bans.yaml
+homeassistant/known_devices.yaml
+homeassistant/secrets.yaml
 **/*.log
 **/*.db
 **/*.conf
 **/*.xml
-config/node-red/.config.json.backup
+homeassistant/node-red/.config.json.backup
 
 # You can whitelist files/folders with !, these will not be ignored.
 !.gitignore
 !*.md
-!config/
+!homeassistant/
 !gitupdate.sh
