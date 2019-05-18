@@ -8,4 +8,4 @@ latitude: !secret zone_parents_his_latitude
 longitude: !secret zone_parents_his_longitude
 radius: 250
 passive: false
-icon: mdi:home
+icon: mdi:account-group-outline

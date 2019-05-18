@@ -1,0 +1,11 @@
+#
+# Defines the Home Zone
+#
+# https://www.home-assistant.io/components/zone/
+#
+name: work_hers_a
+latitude: !secret zone_work_hers_a_latitude
+longitude: !secret zone_work_hers_a_longitude
+radius: 250
+passive: false
+icon: mdi:account-badge-outline

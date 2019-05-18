@@ -16,6 +16,7 @@ homeassistant/secrets.yaml
 **/*.db
 **/*.conf
 **/*.xml
+**/*.pyc
 homeassistant/node-red/.config.json.backup
 
 # You can whitelist files/folders with !, these will not be ignored.
