@@ -14,3 +14,8 @@ homeassistant:
 
   # Lets me custimize entities based on a matching pattern
   customize_glob: !include_dir_merge_named ../../customizations/globs
+  
+  auth_providers:
+  - type: homeassistant
+  - type: legacy_api_password
+    api_password: !secret http_password

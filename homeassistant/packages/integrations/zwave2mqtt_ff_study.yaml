@@ -18,7 +18,7 @@ sensor:
 - platform: mqtt
   name: ff_study_sensor_temperature
   state_topic: "zwave/2/49/1/1"
-  unit_of_measurement: "°C"
+  unit_of_measurement: "ï¿½C"
   device_class: temperature
 
 - platform: mqtt
@@ -97,3 +97,4 @@ homeassistant:
       friendly_name: Sterio
     sensor.ff_study_sterio_power:
       friendly_name: Sterio Watts
+ 

@@ -18,7 +18,7 @@ sensor:
 - platform: mqtt
   name: gf_living_sensor_temperature
   state_topic: "zwave/3/49/1/1"
-  unit_of_measurement: "°C"
+  unit_of_measurement: "ï¿½C"
   device_class: temperature
 
 - platform: mqtt
@@ -70,3 +70,4 @@ homeassistant:
     sensor.gf_living_tv_power:
       friendly_name: TV Watts
 
+ 

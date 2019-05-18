@@ -18,7 +18,7 @@ sensor:
 - platform: mqtt
   name: ff_bedroom_sensor_temperature
   state_topic: "zwave/5/49/1/1"
-  unit_of_measurement: "°C"
+  unit_of_measurement: "Â°C"
   device_class: temperature
 
 - platform: mqtt

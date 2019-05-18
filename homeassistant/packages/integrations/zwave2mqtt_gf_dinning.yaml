@@ -25,7 +25,7 @@ sensor:
 - platform: mqtt
   name: gf_dinning_sensor_temperature
   state_topic: "zwave/4/49/1/1"
-  unit_of_measurement: "°C"
+  unit_of_measurement: "ï¿½C"
   device_class: temperature
 
 - platform: mqtt
@@ -81,3 +81,4 @@ homeassistant:
       friendly_name: TV
     binary_sensor.gf_dinning_contact_side:
       friendly_name: Side Door
+ 

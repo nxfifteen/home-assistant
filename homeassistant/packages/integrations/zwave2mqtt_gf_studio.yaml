@@ -27,3 +27,4 @@ homeassistant:
       friendly_name: Treadmill
     sensor.gf_studio_treadmill_power:
       friendly_name: Treadmill Watts
+ 

@@ -20,3 +20,4 @@ homeassistant:
   customize:
     binary_sensor.gf_hallway_contact_sensor:
       friendly_name: Front Door
+ 
