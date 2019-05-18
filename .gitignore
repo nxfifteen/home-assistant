@@ -12,8 +12,11 @@ homeassistant/.uuid
 homeassistant/ip_bans.yaml
 homeassistant/known_devices.yaml
 homeassistant/secrets.yaml
+**/alexa_media.*.pickle
 **/*.log
 **/*.db
+**/*.db-shm
+**/*.db-wal
 **/*.conf
 **/*.xml
 **/*.pyc

@@ -1,0 +1,5 @@
+---
+pihole:
+  title: Pi-hole
+  icon: mdi:block-helper
+  url: !secret iframe_pihole_url

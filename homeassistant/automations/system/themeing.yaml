@@ -1,0 +1,20 @@
+---
+alias: sys_ui_theme_day_night
+trigger:
+  - platform: homeassistant
+    event: start
+  - platform: state
+    entity_id: sun.sun
+    to: above_horizon
+  - platform: state
+    entity_id: sun.sun
+    to: below_horizon
+action:
+  - service_template: frontend.set_theme
+    data_template:
+      name: >
+        {% if states.sun.sun.state == "above_horizon" %}
+          day
+        {% else %}
+          night
+        {% endif %}

@@ -1,0 +1,3 @@
+---
+person.kareen:
+  entity_picture: !secret person_kareen_picture

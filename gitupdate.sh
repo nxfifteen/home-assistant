@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#git add .
+git add .
 git status
 echo -n "Enter the Description for the Change: "
 read CHANGE_MSG
