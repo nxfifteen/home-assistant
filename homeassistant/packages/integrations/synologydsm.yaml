@@ -1,0 +1,43 @@
+---
+sensor:
+- platform: synologydsm
+  host: !secret synology_ip
+  username: !secret synology_user
+  password: !secret synology_password
+  monitored_conditions:
+    - disk_status
+    - disk_smart_status
+    - disk_below_remain_life_thr
+    - volume_status
+    - volume_percentage_used
+    - volume_size_total
+    - volume_size_used
+
+homeassistant:
+  customize:
+    sensor.volume_used_volume_1:
+      friendly_name: User / System Used
+    sensor.status_volume_1:
+      friendly_name: User / System Status
+    sensor.total_size_volume_1:
+      friendly_name: User / System Size
+    sensor.used_space_volume_1:
+      friendly_name: User / System Used
+    
+    sensor.volume_used_volume_2:
+      friendly_name: Media Storage Used
+    sensor.status_volume_2:
+      friendly_name: Media Storage Status
+    sensor.total_size_volume_2:
+      friendly_name: Media Storage Size
+    sensor.used_space_volume_2:
+      friendly_name: Media Storage Used
+    
+    sensor.volume_used_volume_3:
+      friendly_name: Godzilla Storage Used
+    sensor.status_volume_3:
+      friendly_name: Godzilla Storage Status
+    sensor.total_size_volume_3:
+      friendly_name: Godzilla Storage Size
+    sensor.used_space_volume_3:
+      friendly_name: Godzilla Storage Used

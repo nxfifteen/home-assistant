@@ -1,0 +1,83 @@
+---
+sensor:
+- platform: cert_expiry
+  host: core.nxfifteen.rocks
+  name: cert_nxfifteen_core
+
+- platform: cert_expiry
+  host: docs.core.nxfifteen_rocks
+  name: cert_nxfifteen_core_docs
+
+- platform: cert_expiry
+  host: git.nxfifteen.rocks
+  name: cert_nxfifteen_git
+
+- platform: cert_expiry
+  host: license.nxfifteen.rocks
+  name: cert_license_nxfifteen_rocks
+
+- platform: cert_expiry
+  host: nx15.at
+  name: cert_nx15.at
+
+- platform: cert_expiry
+  host: nxfifteen.xyz
+  name: cert_nxfifteen_xyz
+
+- platform: cert_expiry
+  host: skizimport.nxfifteen.rocks
+  name: cert_nxfifteen_skizimport
+
+- platform: cert_expiry
+  host: web.eml.nxfifteen.me.uk
+  name: cert_nxfifteen_eml_web
+
+- platform: cert_expiry
+  host: www.nxfifteen.me.uk
+  name: cert_nxfifteen_www
+
+- platform: cert_expiry
+  host: your.nxfifteen.xyz
+  name: cert_nxfifteen_your
+
+homeassistant:
+  customize:
+    sensor.cert_license_nxfifteen_rocks:
+      friendly_name: Rocks License
+      icon: mdi:attachment
+      
+    sensor.cert_nx15_at:
+      friendly_name: Nx15.at
+      icon: mdi:at
+      
+    sensor.cert_nxfifteen_core:
+      friendly_name: Core
+      icon: mdi:database
+      
+    sensor.cert_nxfifteen_core_docs:
+      friendly_name: Core Docs
+      icon: mdi:library-books
+      
+    sensor.cert_nxfifteen_eml_web:
+      friendly_name: NxWEBMAIL
+      icon: mdi:email-check
+      
+    sensor.cert_nxfifteen_git:
+      friendly_name: GitLab Instance
+      icon: mdi:gitlab
+      
+    sensor.cert_nxfifteen_skizimport:
+      friendly_name: Core Skiz Import
+      icon: mdi:snowman
+      
+    sensor.cert_nxfifteen_www:
+      friendly_name: Wordpress Blog
+      icon: mdi:wordpress
+      
+    sensor.cert_nxfifteen_xyz:
+      friendly_name: NxSHARED HOST
+      icon: mdi:server
+      
+    sensor.cert_nxfifteen_your:
+      friendly_name: NxCLIENT
+      icon: mdi:account-group

@@ -1,0 +1,19 @@
+---
+# https://www.home-assistant.io/components/wemo/
+wemo:
+  discovery: false
+  static:
+    - !secret wemo_static_switch_1
+    - !secret wemo_static_switch_2
+    - !secret wemo_static_switch_3
+
+homeassistant:
+  customize:
+    switch.gf_dinning_dishwasher:
+      friendly_name: Dishwasher
+      
+    switch.gf_dinning_washing_machine:
+      friendly_name: Washing Machine
+      
+    switch.ff_study_fan:
+      friendly_name: Study Fan

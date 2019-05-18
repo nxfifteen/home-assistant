@@ -1,4 +1,0 @@
----
-binary_sensor.hallway_nest_protect_online:
-  friendly_name: Hallway Protect
-  icon: mdi:fire

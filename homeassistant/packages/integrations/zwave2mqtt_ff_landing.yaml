@@ -1,0 +1,24 @@
+---
+binary_sensor:
+- platform: mqtt
+  name: ff_landing_sensor
+  state_topic: "zwave/10/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: motion
+
+
+sensor:
+- platform: mqtt
+  name: ff_landing_sensor_battery
+  state_topic: "zwave/10/128/1/0"
+  unit_of_measurement: "%"
+  device_class: battery
+
+
+homeassistant:
+  customize:
+    sensor.ff_landing_sensor:
+      friendly_name: Landing
+    sensor.ff_landing_sensor_battery:
+      friendly_name: PIR Battery

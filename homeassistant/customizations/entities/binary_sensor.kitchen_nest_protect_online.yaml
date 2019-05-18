@@ -1,4 +1,0 @@
----
-binary_sensor.kitchen_nest_protect_online:
-  friendly_name: Kitchen Room Protect
-  icon: mdi:fire

@@ -1,4 +1,0 @@
----
-binary_sensor.landing_nest_protect_online:
-  friendly_name: Landing Protect
-  icon: mdi:fire

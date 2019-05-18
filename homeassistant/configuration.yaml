@@ -17,5 +17,5 @@ homeassistant:
   time_zone: Europe/London
 
   # Load packages
-  packages: !include_dir_named integrations
+  packages: !include_dir_named packages
   

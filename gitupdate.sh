@@ -1,10 +1,14 @@
 #!/bin/bash
 
-./sanitise.sh
+if [ -f homeassistant/secrets.yaml ]; then
+    ./sanitise.sh
+    nano -w homeassistant/secrets.dist
 
-nano -w homeassistant/secrets.dist
+    read -p "Was the secrets file properly cleaned?" -n 1 -r
+else
+    read -p "Ready to commit?" -n 1 -r
+fi
 
-read -p "Was the secrets file properly cleaned?" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then

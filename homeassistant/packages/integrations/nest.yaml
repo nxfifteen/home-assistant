@@ -1,0 +1,18 @@
+---
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+homeassistant:
+  customize:
+    binary_sensor.hallway_nest_protect_online:
+      friendly_name: Hallway Protect
+      icon: mdi:fire
+    
+    binary_sensor.kitchen_nest_protect_online:
+      friendly_name: Kitchen Room Protect
+      icon: mdi:fire
+    
+    binary_sensor.landing_nest_protect_online:
+      friendly_name: Landing Protect
+      icon: mdi:fire

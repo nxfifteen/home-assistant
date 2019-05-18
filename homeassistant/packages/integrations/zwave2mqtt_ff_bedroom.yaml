@@ -1,0 +1,79 @@
+---
+binary_sensor:
+- platform: mqtt
+  name: ff_bedroom_sensor_sensor
+  state_topic: "zwave/5/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: motion
+
+
+sensor:
+- platform: mqtt
+  name: ff_bedroom_sensor_battery
+  state_topic: "zwave/5/128/1/0"
+  unit_of_measurement: "%"
+  device_class: battery
+
+- platform: mqtt
+  name: ff_bedroom_sensor_temperature
+  state_topic: "zwave/5/49/1/1"
+  unit_of_measurement: "°C"
+  device_class: temperature
+
+- platform: mqtt
+  name: ff_bedroom_sensor_lux
+  state_topic: "zwave/5/49/1/3"
+  unit_of_measurement: "lux"
+  device_class: illuminance
+
+- platform: mqtt
+  name: ff_bedroom_sensor_tamper
+  state_topic: "zwave/5/113/1/0"
+  unit_of_measurement: "#"
+
+
+switch:
+- platform: mqtt
+  name: ff_bedroom_fairylights
+  icon: mdi:led-strip
+  state_topic: "zwave/15/37/1/0"
+  command_topic: "zwave/15/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true
+
+- platform: mqtt
+  name: ff_bedroom_tv
+  icon: mdi:television-classic
+  state_topic: "zwave/13/37/1/0"
+  command_topic: "zwave/13/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true
+
+
+homeassistant:
+  customize:
+    switch.ff_bedroom_fairylights:
+      friendly_name: Fairy Lights
+    sensor.ff_bedroom_sensor_battery:
+      friendly_name: PIR Battery
+    sensor.ff_bedroom_sensor_lux:
+      friendly_name: Illuminance
+    binary_sensor.ff_bedroom_sensor_sensor:
+      friendly_name: Bedroom
+    sensor.ff_bedroom_sensor_tamper:
+      friendly_name: Tamper
+    sensor.ff_bedroom_sensor_temperature:
+      friendly_name: Temperature
+    switch.ff_bedroom_tv:
+      friendly_name: TV

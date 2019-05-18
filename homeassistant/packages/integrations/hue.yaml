@@ -1,0 +1,67 @@
+---
+# Philips Hue support is integrated into Home Assistant as a Hub that can
+# drive the light platform.
+#
+# https://www.home-assistant.io/components/hue/
+#
+hue:
+  bridges:
+    - host: !secret hue_bridges_host
+      allow_unreachable: true
+      allow_hue_groups: false
+
+homeassistant:
+  customize:
+    light.gf_dinning_display_unit:
+      friendly_name: Display Unit
+    
+    light.gf_dinning_at_kitchen:
+      friendly_name: Cat Litter
+    
+    light.gf_dinning_dinner_table:
+      friendly_name: Dinner Table
+    
+    light.ff_bedroom_bedside_kareen:
+      friendly_name: Kareen's Bedside
+    
+    light.ff_bedroom_bedside_stuart:
+      friendly_name: Stuart's Bedside
+    
+    light.ff_bedroom_celing:
+      friendly_name: Bedroom Celing
+    
+    light.gf_studio_celing:
+      friendly_name: Studio Celing
+    
+    light.ff_study_celing:
+      friendly_name: Study Celing
+    
+    light.ff_study_desk:
+      friendly_name: Desk Lighting
+    
+    light.ff_study_wall:
+      friendly_name: Monitor Strip
+    
+    light.gf_dinning_cooker:
+      friendly_name: Cooker Spot
+    
+    light.gf_dinning_dishwahser:
+      friendly_name: Dishwasher Spot
+    
+    light.gf_dinning_sink:
+      friendly_name: Sink Spot
+    
+    light.gf_dinning_door_way:
+      friendly_name: Kitchen Door Spot
+    
+    light.ff_landing_celing:
+      friendly_name: Landing Light
+    
+    light.gf_hallway_celing:
+      friendly_name: Front Door Light
+      
+    light.gf_living_celing:
+      friendly_name: Livingroom Celing
+      
+    light.gf_living_lamp:
+      friendly_name: Livingroom Lamp

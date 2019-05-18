@@ -1,0 +1,72 @@
+---
+binary_sensor:
+- platform: mqtt
+  name: gf_living_sensor_sensor
+  state_topic: "zwave/3/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: motion
+
+
+sensor:
+- platform: mqtt
+  name: gf_living_sensor_battery
+  state_topic: "zwave/3/128/1/0"
+  unit_of_measurement: "%"
+  device_class: battery
+
+- platform: mqtt
+  name: gf_living_sensor_temperature
+  state_topic: "zwave/3/49/1/1"
+  unit_of_measurement: "°C"
+  device_class: temperature
+
+- platform: mqtt
+  name: gf_living_sensor_lux
+  state_topic: "zwave/3/49/1/3"
+  unit_of_measurement: "lux"
+  device_class: illuminance
+
+- platform: mqtt
+  name: gf_living_sensor_tamper
+  state_topic: "zwave/3/113/1/0"
+  unit_of_measurement: "#"
+
+- platform: mqtt
+  name: gf_living_tv_power
+  state_topic: "zwave/18/50/1/0"
+  device_class: power
+
+
+switch:
+- platform: mqtt
+  name: gf_living_tv
+  icon: mdi:television-classic
+  state_topic: "zwave/18/37/1/0"
+  command_topic: "zwave/18/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true
+
+
+homeassistant:
+  customize:
+    sensor.gf_living_sensor_battery:
+      friendly_name: PIR Battery
+    sensor.gf_living_sensor_lux:
+      friendly_name: Illuminance
+    binary_sensor.gf_living_sensor_sensor:
+      friendly_name: Livingroom
+    sensor.gf_living_sensor_tamper:
+      friendly_name: Tamper
+    sensor.gf_living_sensor_temperature:
+      friendly_name: Temperature
+    switch.gf_living_tv:
+      friendly_name: TV
+    sensor.gf_living_tv_power:
+      friendly_name: TV Watts
+

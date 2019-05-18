@@ -1,0 +1,22 @@
+---
+binary_sensor:
+- platform: mqtt
+  name: gf_hallway_contact_sensor
+  state_topic: "zwave/8/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: door
+
+
+sensor:
+- platform: mqtt
+  name: gf_hallway_contact_battery
+  state_topic: "zwave/8/128/1/0"
+  unit_of_measurement: "%"
+  device_class: battery
+
+
+homeassistant:
+  customize:
+    binary_sensor.gf_hallway_contact_sensor:
+      friendly_name: Front Door

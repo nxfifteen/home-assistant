@@ -1,0 +1,33 @@
+---
+sensor:
+- platform: pi_hole
+  host: !secret pi_hole_host
+  monitored_conditions:
+    - ads_blocked_today
+    - ads_percentage_today
+    - queries_cached
+    - queries_forwarded
+    - unique_clients
+
+homeassistant:
+  customize:
+    sensor.pi_hole_ads_percentage_blocked_today:
+      friendly_name: Percentage of Ad Traffic Blocked
+      unit_of_measurement: '%'
+      icon: mdi:ticket-percent
+    
+    sensor.pi_hole_ads_blocked_today:
+      friendly_name: Ads Blocked Today
+      icon: mdi:do-not-disturb
+    
+    sensor.pi_hole_dns_queries_cached:
+      friendly_name: DNS Queries Cached
+      icon: mdi:note-text
+    
+    sensor.pi_hole_dns_queries_forwarded:
+      friendly_name: DNS Queries Forwarded
+      icon: mdi:note-text
+    
+    sensor.pi_hole_dns_unique_clients:
+      friendly_name: Unique Clients
+      icon: mdi:desktop-classic
