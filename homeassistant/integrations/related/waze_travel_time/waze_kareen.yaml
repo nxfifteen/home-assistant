@@ -1,0 +1,19 @@
+---
+sensor:
+- platform: waze_travel_time
+  name: "Commute Kareen Home"
+  origin: person.kareen
+  destination: zone.home
+  region: 'EU'
+
+- platform: waze_travel_time
+  name: "Commute Kareen Newport"
+  origin: person.kareen
+  destination: zone.work_hers_a
+  region: 'EU'
+
+- platform: waze_travel_time
+  name: "Commute Kareen Tayport"
+  origin: person.kareen
+  destination: zone.work_hers_b
+  region: 'EU'

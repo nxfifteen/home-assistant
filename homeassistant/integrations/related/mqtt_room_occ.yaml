@@ -1,0 +1,64 @@
+---
+switch:
+- platform: mqtt
+  name: "Room Occupancy Livingroom"
+  command_topic: "iot/room/occupancy/livingroom/set"
+  state_topic: "iot/room/occupancy/livingroom"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"
+
+- platform: mqtt
+  name: "Room Occupancy Study"
+  command_topic: "iot/room/occupancy/study/set"
+  state_topic: "iot/room/occupancy/study"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"
+
+- platform: mqtt
+  name: "Room Occupancy Bedroom"
+  command_topic: "iot/room/occupancy/bedroom/set"
+  state_topic: "iot/room/occupancy/bedroom"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"
+
+- platform: mqtt
+  name: "Room Occupancy Kitchen"
+  command_topic: "iot/room/occupancy/kitchen/set"
+  state_topic: "iot/room/occupancy/kitchen"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"
+
+- platform: mqtt
+  name: "Room Occupancy Landing"
+  command_topic: "iot/room/occupancy/landing/set"
+  state_topic: "iot/room/occupancy/landing"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"
+
+- platform: mqtt
+  name: "Room Occupancy Hallway"
+  command_topic: "iot/room/occupancy/hallway/set"
+  state_topic: "iot/room/occupancy/hallway"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"
+
+- platform: mqtt
+  name: "Room Occupancy Studio"
+  command_topic: "iot/room/occupancy/studio/set"
+  state_topic: "iot/room/occupancy/studio"
+  payload_on: "ON"
+  payload_off: "OFF"
+  state_on: "ON"
+  state_off: "OFF"

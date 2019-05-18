@@ -1,0 +1,13 @@
+---
+sensor:
+- platform: waze_travel_time
+  name: "Commute Stuart Home"
+  origin: person.stuart_2
+  destination: zone.home
+  region: 'EU'
+
+- platform: waze_travel_time
+  name: "Commute Stuart"
+  origin: person.stuart_2
+  destination: zone.work_his
+  region: 'EU'

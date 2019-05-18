@@ -1,0 +1,92 @@
+---
+switch:
+- platform: mqtt
+  name: ff_study_monitors
+  icon: mdi:monitor-dashboard
+  state_topic: "zwave/11/37/1/0"
+  command_topic: "zwave/11/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true
+
+- platform: mqtt
+  name: gf_studio_treadmill
+  icon: mdi:run-fast
+  state_topic: "zwave/12/37/1/0"
+  command_topic: "zwave/12/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true
+
+- platform: mqtt
+  name: ff_bedroom_tv
+  icon: mdi:television-classic
+  state_topic: "zwave/13/37/1/0"
+  command_topic: "zwave/13/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true
+
+- platform: mqtt
+  name: gf_dinning_tv
+  icon: mdi:television-classic
+  state_topic: "zwave/14/37/1/0"
+  command_topic: "zwave/14/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true
+
+- platform: mqtt
+  name: ff_bedroom_fairylights
+  icon: mdi:led-strip
+  state_topic: "zwave/15/37/1/0"
+  command_topic: "zwave/15/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true
+
+- platform: mqtt
+  name: gf_living_tv
+  icon: mdi:television-classic
+  state_topic: "zwave/18/37/1/0"
+  command_topic: "zwave/18/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true
+
+- platform: mqtt
+  name: ff_study_sterio
+  icon: mdi:speaker-wireless
+  state_topic: "zwave/19/37/1/0"
+  command_topic: "zwave/19/37/1/0/set"
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 0
+  retain: true

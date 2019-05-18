@@ -1,0 +1,14 @@
+---
+sensor:
+- platform: synologydsm
+  host: !secret synology_ip
+  username: !secret synology_user
+  password: !secret synology_password
+  monitored_conditions:
+    - disk_status
+    - disk_smart_status
+    - disk_below_remain_life_thr
+    - volume_status
+    - volume_percentage_used
+    - volume_size_total
+    - volume_size_used

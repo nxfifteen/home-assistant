@@ -1,0 +1,19 @@
+---
+sensor:
+- platform: gitlab_ci
+  gitlab_id: 252
+  token: !secret gitlab_token
+  name: gitlab_ci_store
+  url: !secret gitlab_url
+  
+- platform: gitlab_ci
+  gitlab_id: 277
+  token: !secret gitlab_token
+  name: gitlab_ci_hass
+  url: !secret gitlab_url
+  
+- platform: gitlab_ci
+  gitlab_id: 274
+  token: !secret gitlab_token
+  name: gitlab_ci_nxore_sync
+  url: !secret gitlab_url

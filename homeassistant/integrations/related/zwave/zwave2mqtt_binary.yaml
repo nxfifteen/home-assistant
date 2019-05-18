@@ -1,0 +1,50 @@
+---
+binary_sensor:
+- platform: mqtt
+  name: ff_study_sensor_sensor
+  state_topic: "zwave/2/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: motion
+
+- platform: mqtt
+  name: gf_living_sensor_sensor
+  state_topic: "zwave/3/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: motion
+
+- platform: mqtt
+  name: gf_dinning_sensor_sensor
+  state_topic: "zwave/4/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: motion
+
+- platform: mqtt
+  name: ff_bedroom_sensor_sensor
+  state_topic: "zwave/5/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: motion
+
+- platform: mqtt
+  name: gf_hallway_contact_sensor
+  state_topic: "zwave/8/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: door
+
+- platform: mqtt
+  name: gf_dinning_contact_side
+  state_topic: "zwave/9/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: door
+
+- platform: mqtt
+  name: ff_landing_sensor
+  state_topic: "zwave/10/48/1/0"
+  payload_on: "true"
+  payload_off: "false"
+  device_class: motion

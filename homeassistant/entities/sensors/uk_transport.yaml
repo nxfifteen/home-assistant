@@ -1,0 +1,11 @@
+---
+platform: uk_transport
+app_id: !secret uk_transport_app_id
+app_key: !secret uk_transport_app_key
+queries:
+  - mode: bus
+    origin: !secret uk_transport_bus_a_origin
+    destination: !secret uk_transport_bus_a_dest
+  - mode: bus
+    origin: !secret uk_transport_bus_b_origin
+    destination: !secret uk_transport_bus_b_dest

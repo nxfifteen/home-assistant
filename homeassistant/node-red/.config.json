@@ -1198,7 +1198,9 @@
      "view-snap-grid": true,
      "view-show-grid": true
     }
-   }
+   },
+   "menu-deploymenu-item-flow": true,
+   "menu-deploymenu-item-full": false
   }
  }
 }

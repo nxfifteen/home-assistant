@@ -1,0 +1,5 @@
+---
+platform: workday
+country: UK
+add_holidays: 
+  - '2019-05-21'

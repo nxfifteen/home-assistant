@@ -1,0 +1,6 @@
+---
+platform: tile
+username: !secret tile_email
+password: !secret tile_password
+monitored_variables:
+  - TILE

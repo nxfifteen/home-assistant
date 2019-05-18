@@ -4,3 +4,264 @@ title: Dashboard
 icon: mdi:home-assistant
 cards:
   - !include ../cards/compact_custom_header_main.yaml
+
+  #####################
+  # Home - Clock Card #
+  #####################
+  - type: vertical-stack
+    cards:
+      - type: 'custom:clock-card'
+
+    #################################################################
+    #                                                               #
+    #                     Home - Glance Card                        #
+    #                                                               #
+    ################################################################# 
+        
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - sensor.hallway_nest_protect_smoke_status
+      - sensor.kitchen_nest_protect_smoke_status
+      - sensor.landing_nest_protect_smoke_status
+      - type: divider
+      - binary_sensor.gf_hallway_contact_sensor
+      - binary_sensor.gf_dinning_contact_side
+  
+  #################################################################
+  #                                                               #
+  #                     Home - Next Bus Card                      #
+  #                                                               #
+  #################################################################
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Next Bus
+      - entity: sensor.next_bus_to_st_andrews_madras_college
+        name: 'To Town'
+      - type: section
+      - entity: sensor.next_bus_to_letham_village_centre
+        name: 'Home'
+
+  #################################################################
+  #                                                               #
+  #                     Home - Presence Card                      #
+  #                                                               #
+  ################################################################# 
+
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - person.stuart_2
+              - type: divider
+              - entity: sensor.family_stuart_battery_phone
+                name: Battery
+                icon: mdi:battery
+              
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - person.kareen
+              - type: divider
+              - entity: sensor.family_kareen_battery_phone
+                name: Battery
+                icon: mdi:battery
+      
+      - type: horizontal-stack
+        cards:
+          - type: glance
+            entities:
+              - device_tracker.tile_19063e4f07561dcf
+              - device_tracker.tile_353e0f954ad1a9af
+              - device_tracker.tile_964004c0e14c4228
+              - entity: device_tracker.tile_c4f2161059284831
+                name: Backpack
+
+  #################################################################
+  #                                                               #
+  #                   Home - Waze Travel Card                     #
+  #                                                               #
+  ################################################################# 
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Travel
+      - entity: sensor.commute_stuart_home
+        name: Stuart Home
+        icon: mdi:home-account
+      - entity: sensor.commute_stuart
+        name: Work
+        icon: mdi:cash-usd
+      - type: divider
+      - entity: sensor.commute_kareen_home
+        name: Kareen Home
+        icon: mdi:home-account
+      - entity: sensor.commute_kareen_newport
+        name: Newport
+        icon: mdi:cash-usd
+      - entity: sensor.commute_kareen_tayport
+        name: Tayport
+        icon: mdi:cash-usd
+        
+  - type: custom:waze-card
+    entities:
+      - entity: sensor.commute_stuart_home
+        zone: zone.home
+        name: Stuart Home
+      - entity: sensor.commute_kareen_home
+        zone: zone.home
+        name: Kareen Home
+        
+  #################################################################
+  #                                                               #
+  #                      Home - Weather Card                      #
+  #                                                               #
+  #################################################################
+
+  - type: custom:dark-sky-weather-card
+    entity_sun: sun.sun
+    entity_daily_summary: sensor.dark_sky_daily_summary
+    entity_current_conditions: sensor.dark_sky_icon  
+    entity_humidity: sensor.dark_sky_humidity
+    entity_pressure: sensor.dark_sky_pressure
+    entity_temperature: sensor.dark_sky_temperature
+    entity_visibility: sensor.dark_sky_visibility
+    entity_wind_bearing: sensor.dark_sky_wind_bearing
+    entity_wind_speed: sensor.dark_sky_wind_speed
+    entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
+    entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
+    entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
+    entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
+    entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
+    entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature
+    entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_1
+    entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_2
+    entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_3
+    entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_4
+    entity_forecast_icon_1: sensor.dark_sky_icon_1
+    entity_forecast_icon_2: sensor.dark_sky_icon_2
+    entity_forecast_icon_3: sensor.dark_sky_icon_3
+    entity_forecast_icon_4: sensor.dark_sky_icon_4
+    entity_forecast_icon_5: sensor.dark_sky_icon_5
+
+  #################################################################
+  #                                                               #
+  #                   Home - Temperature Card                     #
+  #                                                               #
+  #################################################################
+
+  - type: custom:mini-graph-card
+    entities: 
+     - sensor.hallway_thermostat_temperature
+    name: Nest
+    height: 46
+    line_width: 2
+    font_size: 65
+    hours_to_show: 168
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 28
+        color: "#e74c3c"
+      - value: 15
+        color: "#1db954"
+      - value: 0
+        color: "#3498db"
+        
+  #- type: custom:gap-card
+  #  height: 65
+  #  size: 
+        
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities: 
+         - sensor.ff_study_sensor_temperature
+        name: Study
+        height: 74
+        line_width: 2
+        font_size: 65
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          icon: false
+          extrema: true
+        color_thresholds:
+          - value: 28
+            color: "#e74c3c"
+          - value: 15
+            color: "#1db954"
+          - value: 0
+            color: "#3498db"
+        
+      - type: custom:mini-graph-card
+        entities: 
+         - sensor.ff_bedroom_sensor_temperature
+        name: Bedroom
+        height: 74
+        line_width: 2
+        font_size: 65
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          icon: false
+          extrema: true
+        color_thresholds:
+          - value: 28
+            color: "#e74c3c"
+          - value: 15
+            color: "#1db954"
+          - value: 0
+            color: "#3498db"
+        
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities: 
+         - sensor.gf_dinning_sensor_temperature
+        name: Dinning Room
+        height: 74
+        line_width: 2
+        font_size: 65
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          icon: false
+          extrema: true
+        color_thresholds:
+          - value: 28
+            color: "#e74c3c"
+          - value: 15
+            color: "#1db954"
+          - value: 0
+            color: "#3498db"
+        
+      - type: custom:mini-graph-card
+        entities: 
+         - sensor.gf_living_sensor_temperature
+        name: Livingroom
+        height: 74
+        line_width: 2
+        font_size: 65
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          icon: false
+          extrema: true
+        color_thresholds:
+          - value: 28
+            color: "#e74c3c"
+          - value: 15
+            color: "#1db954"
+          - value: 0
+            color: "#3498db"
