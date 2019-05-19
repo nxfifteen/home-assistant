@@ -1,0 +1,58 @@
+---
+alias: uptime_robot_down_still
+trigger:
+- entity_id: sensor.family_stuart_state
+  platform: state
+  to: '7'
+  
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: binary_sensor.gitlab
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.jarvis_assistant
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.jarvis_nodered
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.jarvis_openhab
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.mail_server
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.nxcore
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.nxfifteen
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.ssh_odin
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.ssh_roger_young
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.ssh_synology
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.webmail
+      state: 'off'
+
+action:
+  service: notify.synchat_nx
+  data_template:
+    message: "One of your servers is still down. Please investigate IMMEDIATELY. #UpTimeRobot #Failed"

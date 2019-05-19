@@ -1,0 +1,25 @@
+---
+alias: uptime_robot_down
+trigger:
+  platform: state
+  entity_id:
+  - binary_sensor.gitlab
+  - binary_sensor.jarvis_assistant
+  - binary_sensor.jarvis_nodered
+  - binary_sensor.jarvis_openhab
+  - binary_sensor.mail_server
+  - binary_sensor.nxcore
+  - binary_sensor.nxfifteen
+  - binary_sensor.ssh_odin
+  - binary_sensor.ssh_roger_young
+  - binary_sensor.ssh_synology
+  - binary_sensor.webmail
+  to: 'off'
+
+  for:
+    minutes: 30
+    
+action:
+  service: notify.synchat_nx
+  data_template:
+    message: "ok {{ trigger.to_state.attributes.friendly_name }} has disconnected. Please investigate IMMEDIATELY. #UpTimeRobot #Failed"

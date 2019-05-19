@@ -10,6 +10,19 @@ hue:
       allow_unreachable: true
       allow_hue_groups: false
 
+sensor:
+  - platform: mqtt
+    name: light_scene
+    state_topic: "iot/scene/lights"
+  
+  - platform: mqtt
+    name: light_scene_gf
+    state_topic: "iot/scene/lights/gf"
+  
+  - platform: mqtt
+    name: light_scene_ff
+    state_topic: "iot/scene/lights/ff"
+
 homeassistant:
   customize:
     light.gf_dinning_display_unit:
@@ -65,3 +78,15 @@ homeassistant:
       
     light.gf_living_lamp:
       friendly_name: Livingroom Lamp
+
+    sensor.light_scene:
+      friendly_name: Lighting Scene
+      icon: mdi:ceiling-light
+      
+    sensor.light_scene_gf:
+      friendly_name: GF Lighting Scene
+      icon: mdi:ceiling-light
+      
+    sensor.light_scene_ff:
+      friendly_name: FF Lighting Scene
+      icon: mdi:ceiling-light

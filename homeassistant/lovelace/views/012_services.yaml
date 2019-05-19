@@ -1,0 +1,22 @@
+---
+id: services
+icon: mdi:shield-home
+name: Security
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    title: UptimeRobot
+    show_header_toggle: false
+    entities:
+    - binary_sensor.gitlab
+    - binary_sensor.jarvis_assistant
+    - binary_sensor.jarvis_nodered
+    - binary_sensor.jarvis_openhab
+    - binary_sensor.mail_server
+    - binary_sensor.nxcore
+    - binary_sensor.nxfifteen
+    - binary_sensor.ssh_odin
+    - binary_sensor.ssh_roger_young
+    - binary_sensor.ssh_synology
+    - binary_sensor.webmail

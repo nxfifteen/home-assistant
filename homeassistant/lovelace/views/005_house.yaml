@@ -1,0 +1,7 @@
+---
+id: house
+icon: mdi:home
+name: Security
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+  

@@ -1,0 +1,14 @@
+---
+id: gitlab
+icon: mdi:gitlab
+name: Security
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    title: GitLab
+    show_header_toggle: false
+    entities:
+    - sensor.gitlab_ci_hass
+    - sensor.gitlab_ci_store
+    - sensor.gitlab_ci_nxore_sync

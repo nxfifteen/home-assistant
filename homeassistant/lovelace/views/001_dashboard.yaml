@@ -32,6 +32,12 @@ cards:
         card:
           type: glance
           title: People at home
+        
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - sensor.available_version
+      - sensor.current_version
 
     #################################################################
     #                                                               #

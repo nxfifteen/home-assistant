@@ -1,0 +1,12 @@
+---
+id: nas
+icon: mdi:nas
+name: nas
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    entities:
+      - sensor.volume_used_volume_1
+      - sensor.volume_used_volume_2
+      - sensor.volume_used_volume_3
