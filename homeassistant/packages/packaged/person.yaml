@@ -1,0 +1,99 @@
+---
+# https://www.home-assistant.io/components/person/
+#
+person:
+- name: Stuart
+  id: !secret person_stuart
+  user_id: !secret person_stuart
+  device_trackers:
+    - device_tracker.stuart_tasker
+    - device_tracker.stuart_phone
+
+- name: Kareen
+  id: !secret person_kareen
+  user_id: !secret person_kareen
+  device_trackers:
+    - device_tracker.kareen_tasker
+    - device_tracker.kareen_phone
+    
+- name: John
+  id: 6k04PeJa4L7sKQkr4B
+  device_trackers:
+    - device_tracker.john
+    - device_tracker.john_phone_nmap
+    
+- name: Maureen
+  id: S2s8CRueRm4agYNog9
+  device_trackers:
+    - device_tracker.maureen
+    - device_tracker.maureen_phone_nmap
+
+- name: Allan
+  id: H5c1ztBp88I1ICq632
+  
+- name: Colin
+  id: uI1o4jjBrEDdZxOVXR
+  
+- name: Irene
+  id: id5FZ39htZdsZ3dsFz
+  
+- name: Kayleigh
+  id: 4rC7eaYUm1OlETutYa
+  
+- name: Kev
+  id: 54Vo3BI0XeO2LtWoWB
+  
+- name: Khristen
+  id: bY6G5gq20jZ7fpM90J
+  
+- name: Mecha
+  id: 7aBW1C2KvQd6etr4vA
+  device_trackers:
+    - device_tracker.mecha_phone_nmap
+  
+- name: Scott
+  id: T9pCj81jNAaTbvZizm
+  
+- name: Steve
+  id: rH1F1E7kI55TgvlY01
+
+homeassistant:
+  customize:
+    person.stuart_2:
+      entity_picture: !secret person_stuart_picture
+      
+    person.kareen:
+      entity_picture: !secret person_kareen_picture
+
+    person.maureen:
+      entity_picture: !secret person_maureen_picture
+    
+    person.john:
+      entity_picture: !secret person_john_picture
+    
+    person.steve:
+      entity_picture: !secret person_steve_picture
+    
+    person.irene:
+      entity_picture: !secret person_irene_picture
+    
+    person.mecha:
+      entity_picture: !secret person_mecha_picture
+    
+    person.scott:
+      entity_picture: !secret person_scott_picture
+    
+    person.colin:
+      entity_picture: !secret person_colin_picture
+    
+    person.allan:
+      entity_picture: !secret person_allan_picture
+    
+    person.khristen:
+      entity_picture: !secret person_khristen_picture
+    
+    person.kev:
+      entity_picture: !secret person_kev_picture
+    
+    person.kayleigh:
+      entity_picture: !secret person_kayleigh_picture

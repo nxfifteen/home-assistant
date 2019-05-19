@@ -1,0 +1,15 @@
+---
+people_guests:
+  name: Guests
+  entities:
+    - person.john
+    - person.maureen
+    - person.allan
+    - person.colin
+    - person.irene
+    - person.kayleigh
+    - person.kev
+    - person.khristen
+    - person.mecha
+    - person.scott
+    - person.steve

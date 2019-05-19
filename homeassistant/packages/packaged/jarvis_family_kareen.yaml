@@ -1,6 +1,19 @@
 ---
 sensor:
 - platform: mqtt
+  name: family_kareen_state
+  state_topic: "tracker/family/kareen/state"
+
+- platform: mqtt
+  name: family_kareen_state_human
+  state_topic: "tracker/family/kareen/state/human"
+
+- platform: mqtt
+  name: family_kareen_loc_room
+  state_topic: "tracker/family/kareen/room"
+  value_template: '{{ value_json.data.loc }}'
+  
+- platform: mqtt
   name: family_kareen_battery_phone
   state_topic: "tracker/family/kareen/phone/location"
   unit_of_measurement: '%'
@@ -31,6 +44,15 @@ sensor:
   state_topic: "tracker/family/kareen/phone/location"
   value_template: "{{ value_json.dist }}"
 
+input_select:
+  kareen:
+    options:
+      - Away            # 0
+      - Extended Away   # 1
+      - Just Left       # 2
+      - Just Arrived    # 3
+      - Home            # 4
+
 homeassistant:
   customize:
     sensor.family_kareen_battery_phone:
@@ -56,3 +78,13 @@ homeassistant:
     sensor.family_kareen_drive_dist:
       friendly_name: Kareen's Distance
       icon: mdi:map-marker-distance
+
+    sensor.family_kareen_state:
+      friendly_name: "Kareen's State"
+    
+    sensor.family_kareen_state_human:
+      friendly_name: "Kareen's State"
+    
+    sensor.family_kareen_loc_room:
+      friendly_name: "Kareen's Room Location"
+      icon: mdi:google-classroom

@@ -1,0 +1,22 @@
+---
+sensor:
+- platform: mqtt
+  name: family_family_state_raw
+  state_topic: "tracker/family/state/raw"
+  unit_of_measurement: 'State'
+
+- platform: mqtt
+  name: family_family_state
+  state_topic: "tracker/family/state"
+
+- platform: mqtt
+  name: "House Scene"
+  state_topic: "iot/scene/house"
+
+homeassistant:
+  customize:
+    sensor.family_family_state:
+      friendly_name: "Family State"
+    
+    sensor.family_family_state_raw:
+      friendly_name: "Family State Raw"

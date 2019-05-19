@@ -1,0 +1,25 @@
+---
+device_tracker:
+- platform: tile
+  username: !secret tile_email
+  password: !secret tile_password
+  monitored_variables:
+    - TILE
+
+homeassistant:
+  customize:
+    device_tracker.tile_19063e4f07561dcf:
+      friendly_name: Camera Bag
+      icon: mdi:camera-account
+      
+    device_tracker.tile_353e0f954ad1a9af:
+      friendly_name: Camera
+      icon: mdi:camera
+      
+    device_tracker.tile_964004c0e14c4228:
+      friendly_name: Keys
+      icon: mdi:car-key
+      
+    device_tracker.tile_c4f2161059284831:
+      friendly_name: Backpack
+      icon: mdi:carry-on-bag-check

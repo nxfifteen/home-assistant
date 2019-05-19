@@ -1,6 +1,0 @@
-name: Kareen
-id: !secret person_kareen
-user_id: !secret person_kareen
-device_trackers:
-  - device_tracker.kareen_tasker
-  - device_tracker.kareen_phone

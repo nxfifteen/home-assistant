@@ -1,0 +1,6 @@
+---
+people_family:
+  name: Family
+  entities:
+    - person.stuart_2
+    - person.kareen

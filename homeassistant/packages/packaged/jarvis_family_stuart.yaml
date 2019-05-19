@@ -1,6 +1,19 @@
 ---
 sensor:
 - platform: mqtt
+  name: family_stuart_state
+  state_topic: "tracker/family/stuart/state"
+
+- platform: mqtt
+  name: family_stuart_state_human
+  state_topic: "tracker/family/stuart/state/human"
+
+- platform: mqtt
+  name: family_stuart_loc_room
+  state_topic: "tracker/family/stuart/room"
+  value_template: '{{ value_json.data.loc }}'
+
+- platform: mqtt
   name: family_stuart_battery_phone
   state_topic: "tracker/family/stuart/phone/location"
   unit_of_measurement: '%'
@@ -31,6 +44,15 @@ sensor:
   state_topic: "tracker/family/stuart/phone/location"
   value_template: "{{ value_json.dist }}"
 
+input_select:
+  stuart:
+    options:
+      - Away            # 0
+      - Extended Away   # 1
+      - Just Left       # 2
+      - Just Arrived    # 3
+      - Home            # 4
+
 homeassistant:
   customize:
     sensor.family_stuart_battery_phone:
@@ -56,3 +78,13 @@ homeassistant:
     sensor.family_stuart_drive_dist:
       friendly_name: Stuart's Distance
       icon: mdi:map-marker-distance
+
+    sensor.family_stuart_state:
+      friendly_name: "Stuart's State"
+    
+    sensor.family_stuart_state_human:
+      friendly_name: "Stuart's State"
+    
+    sensor.family_stuart_loc_room:
+      friendly_name: "Stuart's Room Location"
+      icon: mdi:google-classroom

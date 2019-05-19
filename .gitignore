@@ -20,7 +20,8 @@ homeassistant/secrets.yaml
 **/*.conf
 **/*.xml
 **/*.pyc
-homeassistant/node-red/.config.json.backup
+**/*.json.backup
+**/flows_cred.json
 
 # You can whitelist files/folders with !, these will not be ignored.
 !.gitignore

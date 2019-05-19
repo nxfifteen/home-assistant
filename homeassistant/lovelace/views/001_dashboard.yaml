@@ -12,6 +12,27 @@ cards:
     cards:
       - type: 'custom:clock-card'
 
+      - type: entity-filter
+        entities:
+          - person.stuart_2
+          - person.kareen
+          - person.john
+          - person.maureen
+          - person.allan
+          - person.colin
+          - person.irene
+          - person.kayleigh
+          - person.kev
+          - person.khristen
+          - person.mecha
+          - person.scott
+          - person.steve
+        state_filter:
+          - home
+        card:
+          type: glance
+          title: People at home
+
     #################################################################
     #                                                               #
     #                     Home - Glance Card                        #
@@ -24,10 +45,65 @@ cards:
       - sensor.hallway_nest_protect_smoke_status
       - sensor.kitchen_nest_protect_smoke_status
       - sensor.landing_nest_protect_smoke_status
-      - type: divider
+      - type: section
       - binary_sensor.gf_hallway_contact_sensor
       - binary_sensor.gf_dinning_contact_side
-  
+
+  #################################################################
+  #                                                               #
+  #                     Home - Presence Card                      #
+  #                                                               #
+  ################################################################# 
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Family
+          - sensor.family_family_state
+          - sensor.family_family_state_raw
+          - sensor.house_scene
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - person.stuart_2
+              - type: section
+              - sensor.family_stuart_state_human
+              - entity: sensor.family_stuart_loc_room
+                name: Room
+              - type: section
+              - input_select.stuart
+              - type: section
+              - entity: sensor.family_stuart_battery_phone
+                name: Battery
+              
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - person.kareen
+              - type: section
+              - sensor.family_kareen_state_human
+              - entity: sensor.family_kareen_loc_room
+                name: Room
+              - type: section
+              - input_select.kareen
+              - type: section
+              - entity: sensor.family_kareen_battery_phone
+                name: Battery
+      
+      - type: horizontal-stack
+        cards:
+          - type: glance
+            entities:
+              - device_tracker.tile_964004c0e14c4228
+              - device_tracker.tile_c4f2161059284831
+              - device_tracker.tile_19063e4f07561dcf
+              - device_tracker.tile_353e0f954ad1a9af
+
   #################################################################
   #                                                               #
   #                     Home - Next Bus Card                      #
@@ -44,44 +120,6 @@ cards:
       - type: section
       - entity: sensor.next_bus_to_letham_village_centre
         name: 'Home'
-
-  #################################################################
-  #                                                               #
-  #                     Home - Presence Card                      #
-  #                                                               #
-  ################################################################# 
-
-  - type: vertical-stack
-    cards:
-      - type: horizontal-stack
-        cards:
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - person.stuart_2
-              - type: divider
-              - entity: sensor.family_stuart_battery_phone
-                name: Battery
-                icon: mdi:battery
-              
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - person.kareen
-              - type: divider
-              - entity: sensor.family_kareen_battery_phone
-                name: Battery
-                icon: mdi:battery
-      
-      - type: horizontal-stack
-        cards:
-          - type: glance
-            entities:
-              - device_tracker.tile_19063e4f07561dcf
-              - device_tracker.tile_353e0f954ad1a9af
-              - device_tracker.tile_964004c0e14c4228
-              - entity: device_tracker.tile_c4f2161059284831
-                name: Backpack
 
   #################################################################
   #                                                               #

@@ -1,6 +1,0 @@
-name: Stuart
-id: !secret person_stuart
-user_id: !secret person_stuart
-device_trackers:
-  - device_tracker.stuart_tasker
-  - device_tracker.stuart_phone
