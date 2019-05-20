@@ -1,4 +1,33 @@
 ---
+sensor:
+- platform: mqtt
+  name: "Room Occupancy Livingroom - Reason"
+  state_topic: "iot/room/occupancy/livingroom/reason"
+
+- platform: mqtt
+  name: "Room Occupancy Study - Reason"
+  state_topic: "iot/room/occupancy/study/reason"
+
+- platform: mqtt
+  name: "Room Occupancy Bedroom - Reason"
+  state_topic: "iot/room/occupancy/bedroom/reason"
+
+- platform: mqtt
+  name: "Room Occupancy Kitchen - Reason"
+  state_topic: "iot/room/occupancy/kitchen/reason"
+
+- platform: mqtt
+  name: "Room Occupancy Landing - Reason"
+  state_topic: "iot/room/occupancy/landing/reason"
+
+- platform: mqtt
+  name: "Room Occupancy Hallway - Reason"
+  state_topic: "iot/room/occupancy/hallway/reason"
+
+- platform: mqtt
+  name: "Room Occupancy Studio - Reason"
+  state_topic: "iot/room/occupancy/studio/reason"
+
 switch:
 - platform: mqtt
   name: "Room Occupancy Livingroom"

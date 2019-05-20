@@ -4,9 +4,9 @@ sensor:
   host: core.nxfifteen.rocks
   name: cert_nxfifteen_core
 
-- platform: cert_expiry
-  host: docs.core.nxfifteen_rocks
-  name: cert_nxfifteen_core_docs
+#- platform: cert_expiry
+#  host: docs.core.nxfifteen_rocks
+#  name: cert_nxfifteen_core_docs
 
 - platform: cert_expiry
   host: git.nxfifteen.rocks
@@ -123,32 +123,42 @@ homeassistant:
       icon: mdi:account-group
 
     sensor.cert_anderson_ha:
-      friendly_name: cert_anderson_ha
+      friendly_name: Home-Assitant
+      icon: mdi:home-assistant
       
     sensor.cert_anderson_ha_find3:
-      friendly_name: cert_anderson_ha_find3
+      friendly_name: FIND3
+      icon: mdi:crosshairs-gps
       
     sensor.cert_anderson_ha_grocy:
-      friendly_name: cert_anderson_ha_grocy
+      friendly_name: Grocy
+      icon: mdi:shopify
       
     sensor.cert_anderson_ha_ide:
-      friendly_name: cert_anderson_ha_ide
+      friendly_name: Cloud9 IDE
+      icon: mdi:border-color
       
     sensor.cert_anderson_ha_node:
-      friendly_name: cert_anderson_ha_node
+      friendly_name: NodeRed
+      icon: mdi:nodejs
       
     sensor.cert_anderson_ha_portainer:
-      friendly_name: cert_anderson_ha_portainer
+      friendly_name: Portainer
+      icon: mdi:docker
       
     sensor.cert_anderson_ha_proxy:
-      friendly_name: cert_anderson_ha_proxy
+      friendly_name: Proxy
+      icon: mdi:spider-web
       
     sensor.cert_anderson_ha_trac:
-      friendly_name: cert_anderson_ha_trac
+      friendly_name: TracCar
+      icon: mdi:car
       
     sensor.cert_anderson_ha_zwave:
-      friendly_name: cert_anderson_ha_zwave
+      friendly_name: Z-Wave2MQTT
+      icon: mdi:z-wave
       
     sensor.cert_synology_stuartma:
-      friendly_name: cert_synology_stuartma
+      friendly_name: Synology
+      icon: mdi:nas
     

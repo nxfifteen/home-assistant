@@ -32,6 +32,20 @@ cards:
         card:
           type: glance
           title: People at home
+        
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - sensor.hallway_nest_protect_smoke_status
+      - sensor.kitchen_nest_protect_smoke_status
+      - sensor.landing_nest_protect_smoke_status
+      - type: section
+      - binary_sensor.gf_hallway_contact_sensor
+      - binary_sensor.gf_dinning_contact_side
+      - type: section
+      - sensor.light_scene
+      - sensor.light_scene_ff
+      - sensor.light_scene_gf
 
     #################################################################
     #                                                               #
@@ -62,9 +76,11 @@ cards:
         entities:
           - type: 'custom:text-divider-row'
             text: Family
+          - input_select.family_family_act_bedtime
           - sensor.family_family_state
           - sensor.family_family_state_raw
           - sensor.house_scene
+          
       - type: horizontal-stack
         cards:
           - type: entities

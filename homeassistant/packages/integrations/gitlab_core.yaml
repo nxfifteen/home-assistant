@@ -144,12 +144,6 @@ homeassistant:
     sensor.gitlab_252_stars_month_last:
       friendly_name: Stars Last Month
       icon: mdi:star-four-points-outline
-    sensor.gitlab_252_stars_weekly:
-      friendly_name: Weekly Stars
-      icon: mdi:star-circle
-    sensor.gitlab_252_stars_monthly:
-      friendly_name: Monthly Stars
-      icon: mdi:star-circle-outline
     
     #'
     #  utility_meter

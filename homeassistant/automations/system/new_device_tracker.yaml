@@ -1,6 +1,6 @@
 ---
 alias: new_device_tracker
-initial_state: true
+initial_state: false
 
 trigger:
   - platform: event
@@ -9,4 +9,8 @@ trigger:
 action:
   - service: notify.synchat_hab
     data_template:
-      message: "New device joined the network - {{trigger.event.data.entity_id}}. #System #Network #Security"
+      message: >
+        {{ [
+        "New Device on the Network! @MeetCircle has alerted me and now it is locked down.",
+        "Constant monitoring of the network by @MeetCircle has detected a new device in the environment."
+        ] | random + " (http://amzn.to/2eAgaA6)"}}

@@ -1,0 +1,103 @@
+---
+id: appliances
+icon: mdi:washing-machine
+title: Appliances
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    title: nest
+    show_header_toggle: false
+    entities:
+    - switch.dishwasher
+    - input_select.dishwasher_status
+    - input_boolean.disable_dishwasher_notification
+    - sensor.dishwasher_status
+    - sensor.dishwasher_power
+    - sensor.dishwasher_load
+    - sensor.dish_washer_status
+    - sensor.dishwasher_consumption
+    - sensor.dishwasher_last_week
+    - sensor.dishwasher_last_month
+    - sensor.dishwasher_cost
+    - sensor.weekly_dishwasher
+    - sensor.monthly_dishwasher
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Laundry
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:card-modder
+                    card:
+                      type: "custom:button-card"
+                      entity: switch.washing_machine
+                      name: Washer
+                      icon: mdi:washing-machine
+                      tap_action:
+                        action: more-info
+                      size: '20%'
+                      style:
+                        - font-size: 14px
+                    style:                 
+                      border-radius: 8px
+                      
+                  - type: "custom:button-card"
+                    color_type: blank-card
+  
+                  - type: custom:card-modder
+                    card:
+                      type: "custom:button-card"
+                      entity: switch.dishwasher
+                      name: Dishwasher
+                      icon: mdi:dishwasher
+                      tap_action:
+                        action: more-info
+                      size: '20%'
+                      style:
+                        - font-size: 14px
+                    style:                 
+                      border-radius: 8px
+                      
+          - type: custom:bar-card
+            title_position: off
+            title: Status
+            align: center
+            padding: 4px
+            card_style: 
+              border-radius: 5px
+            columns: 2
+            #color: '#bf4040'
+            entities:
+              - entity: sensor.washing_machine_status
+              - entity: sensor.dishwasher_status
+
+          - type: custom:mini-graph-card
+            name: Consumption
+            entities: 
+              - entity: sensor.waching_machine_power
+                name: Washing Machine
+                show_state: true
+                unit: 'W'
+              - entity: sensor.dishwasher_power
+                name: Dishwasher
+                show_state: true
+                unit: 'W'
+            icon: mdi:flash
+            height: 40
+            line_color: '#3498db'
+            line_width: 2
+            font_size: 70
+            hours_to_show: 72
+            points_per_hour: 1
+            show:
+              extrema: true
+              fill: true
+
+  - !include ../cards/gist_aftership_tracking.yaml

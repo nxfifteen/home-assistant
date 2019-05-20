@@ -1,0 +1,24 @@
+---
+title: Kareen
+icon: mdi:human-female
+id: kareen
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    title: Litter Change
+    show_header_toggle: false
+    entities:
+    - sensor.grocy_chore_litter_changed
+    - sensor.grocy_chore_litter_changed_count
+    - sensor.grocy_chore_litter_changed_by
+    - sensor.grocy_chore_litter_changed_next
+
+  - type: entities
+    title: Cut Grass
+    show_header_toggle: false
+    entities:
+    - sensor.grocy_chore_cut_grass
+    - sensor.grocy_chore_cut_grass_count
+    - sensor.grocy_chore_cut_grass_by
+    - sensor.grocy_chore_cut_grass_next

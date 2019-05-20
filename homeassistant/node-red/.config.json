@@ -1402,6 +1402,24 @@
      "file": "/opt/node_modules/node-red-dashboard/nodes/ui_spacer.js"
     }
    }
+  },
+  "node-red-contrib-bigssh": {
+   "name": "node-red-contrib-bigssh",
+   "version": "1.3.0",
+   "local": false,
+   "nodes": {
+    "bigssh": {
+     "name": "bigssh",
+     "types": [
+      "SSH_Credentials",
+      "bigssh"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-bigssh",
+     "file": "/config/node-red/node_modules/node-red-contrib-bigssh/bigssh/bigssh.js"
+    }
+   }
   }
  },
  "users": {

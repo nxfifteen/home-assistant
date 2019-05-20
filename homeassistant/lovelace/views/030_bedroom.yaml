@@ -1,0 +1,46 @@
+---
+id: bedroom
+title: Bedroom
+icon: mdi:bed-empty
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-media-player
+        name: Plex Audio
+        entity: media_player.plex_bedroom_audio
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+          
+      - type: custom:mini-media-player
+        name: FireTV
+        entity: media_player.bedroom_fire_tv_stick
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+        
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - light.ff_bedroom_bedside_kareen
+      - light.ff_bedroom_bedside_stuart
+      - light.ff_bedroom_celing
+      - sensor.ff_bedroom_sensor_battery
+      - sensor.ff_bedroom_sensor_lux
+      - sensor.ff_bedroom_sensor_tamper
+      - sensor.ff_landing_sensor_battery
+      - switch.ff_bedroom_tv
+      - switch.ff_bedroom_fairylights
+      - switch.room_occupancy_bedroom
+      - binary_sensor.ff_bedroom_sensor_sensor
+      - binary_sensor.ff_landing_sensor
+      - light.ff_landing_celing
+      - switch.room_occupancy_landing

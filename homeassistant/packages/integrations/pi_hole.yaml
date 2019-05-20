@@ -10,13 +10,17 @@ sensor:
     - queries_forwarded
     - unique_clients
 
-  - platform: template
-    sensors:
-      rpi_pihole:
-        friendly_name: 'Pi-Hole'
-        entity_id: []
-        value_template: "{{ 'Online' if is_state('device_tracker.rpi_pihole', 'home') else 'Offline' }}"
+- platform: template
+  sensors:
+    rpi_pihole:
+      friendly_name: 'Pi-Hole'
+      entity_id: []
+      value_template: "{{ 'Online' if is_state('device_tracker.rpi_pihole', 'home') else 'Offline' }}"
 
+binary_sensor:
+  - platform: ping
+    host: 8.8.8.8
+    
 # Pi-Hole switch
 switch:
   - platform: command_line
@@ -47,3 +51,6 @@ homeassistant:
     sensor.pi_hole_dns_unique_clients:
       friendly_name: Unique Clients
       icon: mdi:desktop-classic
+    
+    switch.pihole_temp_disable:
+      friendly_name: Disable PiHole

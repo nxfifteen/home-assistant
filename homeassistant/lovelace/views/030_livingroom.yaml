@@ -1,0 +1,64 @@
+---
+id: livingroom
+title: Livingroom
+icon: mdi:sofa
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-media-player
+        name: FireTV
+        entity: media_player.livingroom_fire_tv_stick
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+    
+      - type: custom:mini-media-player
+        name: Alexa
+        entity: media_player.living_room
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+    
+      - type: custom:mini-media-player
+        name: Alexa (Everywhere)
+        entity: media_player.everywhere
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+    
+      - type: custom:mini-media-player
+        name: Alexa (Downstairs)
+        entity: media_player.downstairs
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+        
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - binary_sensor.gf_living_sensor_sensor
+      - light.gf_living_celing
+      - light.gf_living_lamp
+      - switch.gf_living_tv
+      - switch.room_occupancy_livingroom
+      - sensor.gf_living_sensor_lux
+      - sensor.gf_living_sensor_battery
+      - sensor.gf_living_sensor_tamper
+      - sensor.gf_living_tv_power
+      - light.gf_hallway_celing
+      - sensor.gf_hallway_contact_battery
+      - switch.room_occupancy_hallway

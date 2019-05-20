@@ -1,0 +1,50 @@
+---
+id: livingroom
+title: Livingroom
+icon: mdi:sofa
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-media-player
+        name: Alexa
+        entity: media_player.study
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+          
+      - type: custom:mini-media-player
+        name: Alexa (Everywhere)
+        entity: media_player.everywhere
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+        
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - light.ff_study_celing
+      - light.ff_study_desk 
+      - light.ff_study_wall
+      - sensor.ff_study_monitors_colour
+      - sensor.ff_study_monitors_power
+      - sensor.ff_study_sensor_battery
+      - sensor.ff_study_sensor_lux
+      - sensor.ff_study_sensor_tamper
+      - sensor.ff_study_sterio_power
+      - switch.ff_study_monitors
+      - switch.ff_study_sterio
+      - binary_sensor.ff_study_sensor_sensor
+      - binary_sensor.ff_landing_sensor
+      - light.ff_landing_celing
+      - switch.room_occupancy_landing
+      - switch.room_occupancy_study
+      - switch.wake_on_lan
+      - switch.study_fan

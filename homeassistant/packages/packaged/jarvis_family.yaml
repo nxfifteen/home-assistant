@@ -13,6 +13,14 @@ sensor:
   name: "House Scene"
   state_topic: "iot/scene/house"
 
+input_select:
+  family_family_act_bedtime:
+    name: Bedtime Indicator
+    options:
+      - Idle
+      - Bed Time
+    initial: Idle
+
 homeassistant:
   customize:
     sensor.family_family_state:

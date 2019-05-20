@@ -1,0 +1,70 @@
+---
+id: dinningroom
+title: Kitchen/Dinning Room
+icon: mdi:food-fork-drink
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-media-player
+        name: Alexa
+        entity: media_player.kitchen
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+    
+      - type: custom:mini-media-player
+        name: FireTV
+        entity: media_player.kitchen_fire_tv_stick
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+    
+      - type: custom:mini-media-player
+        name: Alexa (Everywhere)
+        entity: media_player.everywhere
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+    
+      - type: custom:mini-media-player
+        name: Alexa (Downstairs)
+        entity: media_player.downstairs
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+        
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - light.gf_dinning_at_kitchen
+      - light.gf_dinning_cooker
+      - light.gf_dinning_dinner_table
+      - light.gf_dinning_display_unit
+      - light.gf_dinning_sink
+      - light.gf_dinning_door_way
+      - sensor.gf_dinning_sensor_battery
+      - sensor.gf_dinning_contact_battery
+      - sensor.gf_dinning_sensor_lux
+      - sensor.gf_dinning_sensor_tamper
+      - binary_sensor.gf_dinning_sensor_sensor
+      - switch.gf_dinning_tv
+      - switch.washing_machine
+      - switch.room_occupancy_kitchen
+      - light.gf_dinning_dishwahser
+      - light.gf_hallway_celing
+      - sensor.gf_hallway_contact_battery
+      - switch.room_occupancy_hallway
