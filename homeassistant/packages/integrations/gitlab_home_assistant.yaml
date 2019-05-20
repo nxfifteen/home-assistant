@@ -1,0 +1,168 @@
+---
+sensor:
+- platform: gitlab_ci
+  gitlab_id: 279
+  token: !secret gitlab_token
+  name: gitlab_279_ci
+  url: !secret gitlab_url
+
+- platform: command_line
+  command: !secret gitlab_project_279
+  name: gitlab_279_project
+  scan_interval: 3600
+  value_template: '{{ value_json.name }}'
+  json_attributes:
+    - open_issues_count
+    - star_count
+    - forks_count
+
+- platform: template
+  sensors:
+    gitlab_279_issues:
+      value_template: "{{ state_attr('sensor.gitlab_279_project', 'open_issues_count') }}"
+      entity_id: sensor.gitlab_279_project
+      friendly_name: 'Issues'
+      
+    gitlab_279_forks:
+      value_template: "{{ state_attr('sensor.gitlab_279_project', 'forks_count') }}"
+      entity_id: sensor.gitlab_279_project
+      friendly_name: 'Forks'
+
+    gitlab_279_stars:
+      value_template: "{{ state_attr('sensor.gitlab_279_project', 'star_count') }}"
+      entity_id: sensor.gitlab_279_project
+      friendly_name: 'Stars'
+
+    gitlab_279_stars_last_week:
+      value_template: "{{ states.sensor.gitlab_279_stars_weekly.attributes.last_period }}"
+      friendly_name: 'Last Week'
+      
+    gitlab_279_stars_last_month:
+      value_template: "{{ states.sensor.gitlab_279_stars_monthly.attributes.last_period }}"
+      friendly_name: 'Last Month'
+
+    gitlab_279_issues_last_week:
+      value_template: "{{ states.sensor.gitlab_279_issues_weekly.attributes.last_period }}"
+      friendly_name: 'Last Week'
+      
+    gitlab_279_issues_last_month:
+      value_template: "{{ states.sensor.gitlab_279_issues_monthly.attributes.last_period }}"
+      friendly_name: 'Last Month'
+
+- platform: statistics
+  name: gitlab_279_stars_week_this
+  entity_id: sensor.gitlab_279_stars
+  max_age:
+    days: 7
+    
+- platform: statistics
+  name: gitlab_279_stars_week_last
+  entity_id: sensor.gitlab_279_stars
+  max_age:
+    days: 14
+    
+- platform: statistics
+  name: gitlab_279_stars_month_this
+  entity_id: sensor.gitlab_279_stars
+  max_age:
+    days: 30
+    
+- platform: statistics
+  name: gitlab_279_stars_month_last
+  entity_id: sensor.gitlab_279_stars
+  max_age:
+    days: 60
+
+- platform: statistics
+  name: gitlab_279_issues_week_this
+  entity_id: sensor.gitlab_279_issues
+  max_age:
+    days: 7
+    
+- platform: statistics
+  name: gitlab_279_issues_week_last
+  entity_id: sensor.gitlab_279_issues
+  max_age:
+    days: 14
+    
+- platform: statistics
+  name: gitlab_279_issues_month_this
+  entity_id: sensor.gitlab_279_issues
+  max_age:
+    days: 30
+    
+- platform: statistics
+  name: gitlab_279_issues_month_last
+  entity_id: sensor.gitlab_279_issues
+  max_age:
+    days: 60
+
+utility_meter:
+  gitlab_279_stars_weekly:
+    source: sensor.gitlab_279_stars
+    cycle: weekly
+    
+  gitlab_279_stars_monthly:
+    source: sensor.gitlab_279_stars
+    cycle: monthly
+    
+  gitlab_279_issues_weekly:
+    source: sensor.gitlab_279_issues
+    cycle: weekly
+    
+  gitlab_279_issues_monthly:
+    source: sensor.gitlab_279_issues
+    cycle: monthly
+
+homeassistant:
+  customize:
+    sensor.gitlab_279_ci:
+      friendly_name: CI
+      icon: mdi:powershell
+    sensor.gitlab_279_issues:
+      friendly_name: 'Issues'
+      icon: mdi:exclamation
+    sensor.gitlab_279_forks:
+      friendly_name: 'Forks'
+      icon: mdi:directions-fork
+    sensor.gitlab_279_stars:
+      friendly_name: 'Stars'
+      icon: mdi:star-four-points
+    
+    #'
+    #  statistics
+    #'
+    sensor.gitlab_279_stars_week_this:
+      friendly_name: Stars This Week
+      icon: mdi:star
+    sensor.gitlab_279_stars_week_last:
+      friendly_name: Stars Last Week
+      icon: mdi:star-outline
+    sensor.gitlab_279_stars_month_this:
+      friendly_name: Stars This Month
+      icon: mdi:star-four-points
+    sensor.gitlab_279_stars_month_last:
+      friendly_name: Stars Last Month
+      icon: mdi:star-four-points-outline
+    sensor.gitlab_279_stars_weekly:
+      friendly_name: Weekly Stars
+      icon: mdi:star-circle
+    sensor.gitlab_279_stars_monthly:
+      friendly_name: Monthly Stars
+      icon: mdi:star-circle-outline
+    
+    #'
+    #  utility_meter
+    #'
+    sensor.gitlab_279_stars_weekly:
+      friendly_name: 'Weekly Stars'
+      icon: mdi:star-four-points
+    sensor.gitlab_279_stars_monthly:
+      friendly_name: 'Monthly Stars'
+      icon: mdi:star-four-points
+    sensor.gitlab_279_issues_weekly:
+      friendly_name: 'Weekly Issues'
+      icon: mdi:exclamation
+    sensor.gitlab_279_issues_monthly:
+      friendly_name: 'Monthly Issues'
+      icon: mdi:exclamation

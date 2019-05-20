@@ -1,3 +1,31 @@
 ---
 sensor:
+
+## Check Latest HA Version
+  - platform: rest
+    resource: https://s3.amazonaws.com/hassio-version/stable.json
+    name: Latest HA Version
+    value_template: "{{ value_json.homeassistant.default }}"
+    scan_interval: 3600
+
   - platform: version
+
+group:
+  firmware:
+    name: Firmware Status
+    view: no
+    entities:
+      - binary_sensor.ha_update_available
+
+homeassistant:
+  customize:
+    sensor.potential_breaking_changes:
+      friendly_name: Potential Breaking Changes
+
+breaking_changes:
+
+input_boolean:        
+  ha_update_available:
+    name: HA Update Avaiable
+    initial: off
+    icon: mdi:cloud-download

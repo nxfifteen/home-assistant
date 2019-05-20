@@ -7,12 +7,6 @@ sensor:
   url: !secret gitlab_url
   
 - platform: gitlab_ci
-  gitlab_id: 279
-  token: !secret gitlab_token
-  name: gitlab_ci_hass
-  url: !secret gitlab_url
-  
-- platform: gitlab_ci
   gitlab_id: 274
   token: !secret gitlab_token
   name: gitlab_ci_nxore_sync
@@ -20,10 +14,6 @@ sensor:
 
 homeassistant:
   customize:
-    sensor.gitlab_ci_hass:
-      friendly_name: Home-Assistant
-      icon: mdi:home-assistant
-      
     sensor.gitlab_ci_store:
       friendly_name: NxCore Store
       icon: mdi:database

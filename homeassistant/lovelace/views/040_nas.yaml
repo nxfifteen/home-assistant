@@ -1,0 +1,230 @@
+---
+id: nas
+icon: mdi:nas
+title: Network
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities: 
+          - sensor.network_down
+        height: 50
+        line_width: 2
+        font_size: 70
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          extrema: true
+          fill: true
+        color_thresholds:
+          - value: 0
+            color: "#FFFF00"
+          - value: 40
+            color: "#3498db"
+            
+      - type: custom:mini-graph-card
+        entities: 
+          - sensor.network_up
+        height: 50
+        line_width: 2
+        font_size: 70
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          extrema: true
+          fill: true
+        color_thresholds:
+          - value: 0
+            color: "#FFFF00"
+          - value: 13
+            color: "#3498db"
+
+  - type: vertical-stack
+    cards:    
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: section
+            label: Synolgy Storage - User Space
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:card-modder
+                    card:
+                      type: picture
+                      image: /local/images/hass.jpg
+                    style:                 
+                      border-radius: 5px
+                 
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.status_volume_1
+                    title: Status
+                    align: center
+                    padding: 5px
+                    card_style: 
+                      border-radius: 5px
+                      
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.total_size_volume_1
+                    title: Total Storage
+                    align: center
+                    padding: 5px
+                    card_style: 
+                      border-radius: 5px
+       
+          - type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 1
+            card_style: 
+              border-radius: 5px
+            entities:
+              - entity: sensor.volume_used_volume_1
+                title: Disk
+                icon: mdi:harddisk
+
+  - type: vertical-stack
+    cards:    
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: section
+            label: Synolgy Storage - Media
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:card-modder
+                    card:
+                      type: picture
+                      image: /local/images/media.jpg
+                    style:                 
+                      border-radius: 5px
+                 
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.status_volume_2
+                    title: Status
+                    align: center
+                    padding: 5px
+                    card_style: 
+                      border-radius: 5px
+                      
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.total_size_volume_2
+                    title: Total Storage
+                    align: center
+                    padding: 5px
+                    card_style: 
+                      border-radius: 5px
+       
+          - type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 1
+            card_style: 
+              border-radius: 5px
+            entities:
+              - entity: sensor.volume_used_volume_2
+                title: Disk
+                icon: mdi:harddisk
+
+  - type: vertical-stack
+    cards:    
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: section
+            label: Synolgy Storage - Backup Space
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:card-modder
+                    card:
+                      type: picture
+                      image: /local/images/core_network.jpg
+                    style:                 
+                      border-radius: 5px
+                 
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.status_volume_3
+                    title: Status
+                    align: center
+                    padding: 5px
+                    card_style: 
+                      border-radius: 5px
+                      
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.total_size_volume_3
+                    title: Total Storage
+                    align: center
+                    padding: 5px
+                    card_style: 
+                      border-radius: 5px
+       
+          - type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 1
+            card_style: 
+              border-radius: 5px
+            entities:
+              - entity: sensor.volume_used_volume_3
+                title: Disk
+                icon: mdi:harddisk
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities: 
+          - sensor.m5_kbyte_sec_received
+        height: 50
+        line_width: 2
+        font_size: 70
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          extrema: true
+          fill: true
+        color_thresholds:
+          - value: 0
+            color: "#FFFF00"
+          - value: 40
+            color: "#3498db"
+            
+      - type: custom:mini-graph-card
+        entities: 
+          - sensor.m5_kbyte_sec_sent
+        height: 50
+        line_width: 2
+        font_size: 70
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          extrema: true
+          fill: true
+        color_thresholds:
+          - value: 0
+            color: "#FFFF00"
+          - value: 13
+            color: "#3498db"
+
+  - type: entities
+    entities:
+      - sensor.pi_hole_ads_blocked_today
+      - sensor.pi_hole_ads_percentage_blocked_today
+      - sensor.pi_hole_dns_unique_clients
+
+

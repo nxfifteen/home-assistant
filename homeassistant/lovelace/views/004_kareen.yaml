@@ -1,7 +1,0 @@
----
-title: Kareen
-icon: mdi:human-female
-id: kareen
-cards:
-  - !include ../cards/compact_custom_header_main.yaml
-  

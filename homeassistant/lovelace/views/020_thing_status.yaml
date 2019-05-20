@@ -1,0 +1,253 @@
+---
+id: things
+title: Things
+icon: mdi:cogs
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+#################################################################
+#                                                               #
+#              Things Status - Firmware Status Card             #
+#                                                               #
+#################################################################
+
+  #- type: vertical-stack
+  #  cards:
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - type: 'custom:text-divider-row'
+      text: Firmware
+    - type: section 
+      label: HOME ASSISTANT
+    - entity: input_boolean.ha_update_available
+      name: HA Update Available
+    - type: custom:bar-card
+      title_position: inside
+      align: center
+      padding: 4px
+      card_style: 
+        border-radius: 5px
+      columns: 2
+      entities:
+        - entity: sensor.current_version
+          title: Current
+        - entity: sensor.latest_ha_version
+          title: Latest
+    - type: custom:fold-entity-row
+      head: sensor.potential_breaking_changes
+
+#################################################################
+#                                                               #
+#                 Things Status - Tracker Card                  #
+#                                                               #
+#################################################################
+
+  - type: vertical-stack
+    cards:
+      - type: custom:tracker-card
+        title:
+        trackers:
+          - sensor.custom_card_tracker
+          - sensor.custom_component_tracker
+      
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: 'custom:text-divider-row'
+            text: UpTimeRobot
+
+          - type: custom:vertical-stack-in-card
+            cards:
+
+            - type: horizontal-stack
+              cards:
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.gitlab
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.jarvis_assistant
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.jarvis_nodered
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.jarvis_openhab
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+            - type: horizontal-stack
+              cards:
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.mail_server
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.nxcore
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.nxfifteen
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.ssh_odin
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+            - type: horizontal-stack
+              cards:
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.ssh_roger_young
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.ssh_synology
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+      
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.webmail
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info

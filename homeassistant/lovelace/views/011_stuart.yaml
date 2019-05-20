@@ -1,0 +1,110 @@
+---
+title: Stuart
+icon: mdi:human-male
+id: stuart
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: picture-entity
+    entity: person.stuart_2
+    name: Stuart
+    tap_action: 
+      action: toggle
+    image: !secret person_stuart_picture
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Family
+      - sensor.family_family_state
+      - sensor.family_family_state_raw
+      - sensor.house_scene
+      
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.family_stuart_state_human
+          - entity: sensor.family_stuart_loc_room
+            name: Room
+          - type: section
+          - input_select.stuart
+
+  - type: custom:mini-graph-card
+    entities: 
+     - sensor.family_stuart_battery_phone
+    name: Phone Battery
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 18
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 0
+        color: "#e74c3c"
+      - value: 60
+        color: "#3498db"
+      - value: 80
+        color: "#1db954"
+  
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Accounts
+          - entity: sensor.steam_76561197982696593
+            name: Steam
+  
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Car
+          - entity: sensor.family_stuart_drive_ignition
+            name: Ignition
+          - entity: device_tracker.stuart_car
+            name: Tracker
+          - entity: sensor.family_stuart_drive_dest
+            name: Destingation
+          - entity: sensor.family_stuart_drive_eta
+            name: ETA
+          - entity: sensor.family_stuart_drive_dist
+            name: Distance
+          - entity: sensor.family_stuart_drive_out
+            name: Minutes Away
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Travel
+      - entity: sensor.commute_stuart_home
+        name: Stuart Home
+        icon: mdi:home-account
+      - entity: sensor.commute_stuart
+        name: Work
+        icon: mdi:cash-usd
+        
+  - type: custom:waze-card
+    entities:
+      - entity: sensor.commute_stuart_home
+        zone: zone.home
+        name: Stuart Home
+
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Tiles
+          - device_tracker.tile_964004c0e14c4228
+          - device_tracker.tile_c4f2161059284831
+          - device_tracker.tile_19063e4f07561dcf
+          - device_tracker.tile_353e0f954ad1a9af

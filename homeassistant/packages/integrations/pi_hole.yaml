@@ -5,9 +5,25 @@ sensor:
   monitored_conditions:
     - ads_blocked_today
     - ads_percentage_today
+    - dns_queries_today
     - queries_cached
     - queries_forwarded
     - unique_clients
+
+  - platform: template
+    sensors:
+      rpi_pihole:
+        friendly_name: 'Pi-Hole'
+        entity_id: []
+        value_template: "{{ 'Online' if is_state('device_tracker.rpi_pihole', 'home') else 'Offline' }}"
+
+# Pi-Hole switch
+switch:
+  - platform: command_line
+    switches:
+      pihole_temp_disable:
+        command_on: !secret cmd_pi_hole_on
+        command_off: !secret cmd_pi_hole_off
 
 homeassistant:
   customize:

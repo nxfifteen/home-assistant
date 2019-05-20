@@ -1,0 +1,92 @@
+---
+title: Kareen
+icon: mdi:human-female
+id: kareen
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: picture-entity
+    entity: person.kareen
+    name: Kareen
+    tap_action: 
+      action: toggle
+    image: !secret person_kareen_picture
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Family
+      - sensor.family_family_state
+      - sensor.family_family_state_raw
+      - sensor.house_scene
+      
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.family_kareen_state_human
+          - entity: sensor.family_kareen_loc_room
+            name: Room
+          - type: section
+          - input_select.kareen
+
+  - type: custom:mini-graph-card
+    entities: 
+     - sensor.family_kareen_battery_phone
+    name: Phone Battery
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 18
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 0
+        color: "#e74c3c"
+      - value: 60
+        color: "#3498db"
+      - value: 80
+        color: "#1db954"
+  
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Car
+          - entity: sensor.family_kareen_drive_ignition
+            name: Ignition
+          - entity: sensor.family_kareen_drive_dest
+            name: Destingation
+          - entity: sensor.family_kareen_drive_eta
+            name: ETA
+          - entity: sensor.family_kareen_drive_dist
+            name: Distance
+          - entity: sensor.family_kareen_drive_out
+            name: Minutes Away
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Travel
+      - entity: sensor.commute_kareen_home
+        name: Kareen Home
+        icon: mdi:home-account
+      - entity: sensor.commute_kareen_newport
+        name: Newport
+        icon: mdi:cash-usd
+      - entity: sensor.commute_kareen_tayport
+        name: Tayport
+        icon: mdi:cash-usd
+        
+  - type: custom:waze-card
+    entities:
+      - entity: sensor.commute_kareen_home
+        zone: zone.home
+        name: Kareen Home
+  

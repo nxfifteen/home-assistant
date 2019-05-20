@@ -3,9 +3,9 @@
 #
 # https://www.home-assistant.io/components/zone/
 #
-name: work_hers_b
+name: !secret zone_work_hers_b
 latitude: !secret zone_work_hers_b_latitude
 longitude: !secret zone_work_hers_b_longitude
 radius: 250
 passive: false
-icon: mdi:account-badge-outline
+icon: mdi:doctor

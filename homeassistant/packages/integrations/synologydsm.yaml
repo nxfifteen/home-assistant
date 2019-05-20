@@ -12,6 +12,8 @@ sensor:
     - volume_percentage_used
     - volume_size_total
     - volume_size_used
+    - network_up
+    - network_down
 
 homeassistant:
   customize:
