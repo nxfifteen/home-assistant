@@ -30,3 +30,4 @@ homeassistant/secrets.yaml
 !gitupdate.sh
 !sanitise.sh
 !.gitattributes
+!.gitlab-ci.yml

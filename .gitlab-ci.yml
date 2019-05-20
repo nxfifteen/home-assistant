@@ -1,0 +1,51 @@
+---
+image: docker:latest
+
+stages:
+  - preflight
+  - homeassistant
+
+# Generic preflight template
+.preflight: &preflight
+  stage: preflight
+  tags:
+    - preflight
+
+# Generic Home Assistant template
+.ha: &ha
+  stage: homeassistant
+  variables:
+    PYTHONPATH: "/usr/src/app:$PYTHONPATH"
+  before_script:
+    - python -m homeassistant --version
+    - mv  homeassistant/secrets.yaml.dist  homeassistant/secrets.yaml
+  script:
+    - |
+      python -m homeassistant \
+        --config ./homeassistant/ \
+        --script check_config \
+        --info all
+  tags:
+    - test
+
+# Home Assistant test jobs
+ha-latest:
+  <<: *ha
+  image:
+    name: homeassistant/home-assistant:latest
+    entrypoint: [""]
+
+ha-rc:
+  <<: *ha
+  image:
+    name: homeassistant/home-assistant:rc
+    entrypoint: [""]
+  allow_failure: true
+
+ha-dev:
+  <<: *ha
+  image:
+    name: homeassistant/home-assistant:dev
+    entrypoint: [""]
+  allow_failure: true
+
