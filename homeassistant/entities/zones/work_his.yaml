@@ -3,7 +3,7 @@
 #
 # https://www.home-assistant.io/components/zone/
 #
-name: !secret zone_work_his
+name: CS.TPS
 latitude: !secret zone_work_his_latitude
 longitude: !secret zone_work_his_longitude
 radius: 250

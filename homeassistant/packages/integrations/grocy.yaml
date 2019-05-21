@@ -23,3 +23,59 @@ sensor:
     - next_estimated_execution_time
   headers:
     GROCY-API-KEY: !secret grocy_api_key
+
+- platform: template
+  sensors:
+    grocy_chore_litter_changed_count:
+      friendly_name: grocy_chore_litter_changed_count
+      value_template: '{{ states.sensor.grocy_chore_litter_changed.attributes["tracked_count"] }}'
+    grocy_chore_litter_changed_by:
+      friendly_name: grocy_chore_litter_changed_by
+      value_template: '{{ states.sensor.grocy_chore_litter_changed.attributes["last_done_by"]["first_name"] }}'
+    grocy_chore_litter_changed_next:
+      friendly_name: grocy_chore_litter_changed_next
+      value_template: '{{ states.sensor.grocy_chore_litter_changed.attributes["next_estimated_execution_time"] }}'
+      
+    grocy_chore_cut_grass_count:
+      friendly_name: grocy_chore_cut_grass_count
+      value_template: '{{ states.sensor.grocy_chore_cut_grass.attributes["tracked_count"] }}'
+    grocy_chore_cut_grass_by:
+      friendly_name: grocy_chore_cut_grass_by
+      value_template: '{{ states.sensor.grocy_chore_cut_grass.attributes["last_done_by"]["first_name"] }}'
+    grocy_chore_cut_grass_next:
+      friendly_name: grocy_chore_cut_grass_next
+      value_template: '{{ states.sensor.grocy_chore_cut_grass.attributes["next_estimated_execution_time"] }}'
+
+homeassistant:
+  customize:
+    sensor.grocy_chore_litter_changed:
+      friendly_name: Litter Last Changed
+      icon: mdi:cat
+      
+    sensor.grocy_chore_litter_changed_count:
+      friendly_name: Litter Changed
+      icon: mdi:calendar-check
+      
+    sensor.grocy_chore_litter_changed_by:
+      friendly_name: Litter Changed By
+      icon: mdi:account
+      
+    sensor.grocy_chore_litter_changed_next:
+      friendly_name: Litter Next Changed
+      icon: mdi:calendar-clock
+    
+    sensor.grocy_chore_cut_grass:
+      friendly_name: Last Grass Cut
+      icon: mdi:tree
+      
+    sensor.grocy_chore_cut_grass_count:
+      friendly_name: Grass Cuttings
+      icon: mdi:calendar-check
+      
+    sensor.grocy_chore_cut_grass_by:
+      friendly_name: Grass Cut By
+      icon: mdi:account
+      
+    sensor.grocy_chore_cut_grass_next:
+      friendly_name: Next Grass Cut
+      icon: mdi:calendar-clock

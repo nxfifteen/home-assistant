@@ -88,15 +88,14 @@ cards:
       - entity: sensor.commute_stuart_home
         name: Stuart Home
         icon: mdi:home-account
-      - entity: sensor.commute_stuart
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+        
+      - entity: sensor.commute_stuart_work
         name: Work
         icon: mdi:cash-usd
-        
-  - type: custom:waze-card
-    entities:
-      - entity: sensor.commute_stuart_home
-        zone: zone.home
-        name: Stuart Home
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
 
   - type: horizontal-stack
     cards:

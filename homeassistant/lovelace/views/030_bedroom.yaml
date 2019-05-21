@@ -44,3 +44,5 @@ cards:
       - binary_sensor.ff_landing_sensor
       - light.ff_landing_celing
       - switch.room_occupancy_landing
+      - sensor.room_occupancy_bedroom_reason
+      - sensor.room_occupancy_landing_reason

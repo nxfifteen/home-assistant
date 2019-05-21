@@ -3,7 +3,7 @@
 #
 # https://www.home-assistant.io/components/zone/
 #
-name: !secret zone_parents_hers
+name: Her Parents
 latitude: !secret zone_parents_hers_latitude
 longitude: !secret zone_parents_hers_longitude
 radius: 250

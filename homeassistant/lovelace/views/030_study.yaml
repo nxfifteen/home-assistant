@@ -1,9 +1,46 @@
 ---
-id: livingroom
-title: Livingroom
-icon: mdi:sofa
+id: study
+title: Study
+icon: mdi:office
 cards:
   - !include ../cards/compact_custom_header_main.yaml
+
+  - type: picture-entity
+    entity: person.stuart_2
+    name: Stuart
+    tap_action: 
+      action: toggle
+    image: !secret person_stuart_picture
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Family
+      - sensor.room_occupancy_study
+      - sensor.room_occupancy_study_reason
+      - sensor.room_occupancy_landing
+      - sensor.room_occupancy_landing_reason
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.ff_study_sensor_temperature
+    name: Study
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 168
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 28
+        color: "#e74c3c"
+      - value: 15
+        color: "#1db954"
+      - value: 0
+        color: "#3498db"
 
   - type: vertical-stack
     cards:
@@ -44,7 +81,5 @@ cards:
       - binary_sensor.ff_study_sensor_sensor
       - binary_sensor.ff_landing_sensor
       - light.ff_landing_celing
-      - switch.room_occupancy_landing
-      - switch.room_occupancy_study
       - switch.wake_on_lan
       - switch.study_fan

@@ -3,7 +3,7 @@
 #
 # https://www.home-assistant.io/components/zone/
 #
-name: !secret zone_work_hers_a
+name: Newport
 latitude: !secret zone_work_hers_a_latitude
 longitude: !secret zone_work_hers_a_longitude
 radius: 250

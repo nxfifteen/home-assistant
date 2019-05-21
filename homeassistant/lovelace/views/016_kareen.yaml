@@ -77,16 +77,15 @@ cards:
       - entity: sensor.commute_kareen_home
         name: Kareen Home
         icon: mdi:home-account
-      - entity: sensor.commute_kareen_newport
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+      - entity: sensor.commute_kareen_work_a
         name: Newport
         icon: mdi:cash-usd
-      - entity: sensor.commute_kareen_tayport
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+      - entity: sensor.commute_kareen_work_b
         name: Tayport
         icon: mdi:cash-usd
-        
-  - type: custom:waze-card
-    entities:
-      - entity: sensor.commute_kareen_home
-        zone: zone.home
-        name: Kareen Home
-  
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"

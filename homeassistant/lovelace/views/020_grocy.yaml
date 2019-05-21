@@ -1,7 +1,7 @@
 ---
-title: Kareen
-icon: mdi:human-female
-id: kareen
+title: Grocy
+icon: mdi:cart-arrow-down
+id: grocy
 cards:
   - !include ../cards/compact_custom_header_main.yaml
 

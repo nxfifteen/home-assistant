@@ -1,31 +1,31 @@
 ---
 sensor:
 - platform: waze_travel_time
-  name: "Commute Stuart Home"
+  name: commute_stuart_home
   origin: person.stuart_2
   destination: zone.home
   region: 'EU'
 
 - platform: waze_travel_time
-  name: "Commute Stuart"
-  origin: person.stuart_2
-  destination: zone.work_his
+  name: commute_stuart_work
+  origin: zone.home
+  destination: zone.cs_tps
   region: 'EU'
   
 - platform: waze_travel_time
-  name: "Commute Kareen Home"
+  name: commute_kareen_home
   origin: person.kareen
   destination: zone.home
   region: 'EU'
 
 - platform: waze_travel_time
-  name: "Commute Kareen Newport"
-  origin: person.kareen
-  destination: zone.work_hers_a
+  name: commute_kareen_work_a
+  origin: zone.home
+  destination: zone.newport
   region: 'EU'
 
 - platform: waze_travel_time
-  name: "Commute Kareen Tayport"
-  origin: person.kareen
-  destination: zone.work_hers_b
+  name: commute_kareen_work_b
+  origin: zone.home
+  destination: zone.tayport
   region: 'EU'

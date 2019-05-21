@@ -3,7 +3,7 @@
 #
 # https://www.home-assistant.io/components/zone/
 #
-name: !secret zone_work_hers_b
+name: Tayport
 latitude: !secret zone_work_hers_b_latitude
 longitude: !secret zone_work_hers_b_longitude
 radius: 250

@@ -8,7 +8,7 @@ sensor:
 
       dishwasher_consumption:
         entity_id: switch.dishwasher
-        value_template: '{{ (states.switch.dishwasher.attributes.power_consumed|int / 1000)|round(2) }}' 
+        value_template: '{{ states.sensor.dishwasher_power.state|int }}' 
         friendly_name: 'dishwasher Consumption' 
         unit_of_measurement: 'W' 
         

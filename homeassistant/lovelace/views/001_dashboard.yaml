@@ -47,22 +47,6 @@ cards:
       - sensor.light_scene_ff
       - sensor.light_scene_gf
 
-    #################################################################
-    #                                                               #
-    #                     Home - Glance Card                        #
-    #                                                               #
-    ################################################################# 
-        
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - sensor.hallway_nest_protect_smoke_status
-      - sensor.kitchen_nest_protect_smoke_status
-      - sensor.landing_nest_protect_smoke_status
-      - type: section
-      - binary_sensor.gf_hallway_contact_sensor
-      - binary_sensor.gf_dinning_contact_side
-
   #################################################################
   #                                                               #
   #                     Home - Presence Card                      #
@@ -76,10 +60,11 @@ cards:
         entities:
           - type: 'custom:text-divider-row'
             text: Family
-          - input_select.family_family_act_bedtime
           - sensor.family_family_state
           - sensor.family_family_state_raw
           - sensor.house_scene
+          - type: section
+          - input_select.family_family_act_bedtime
           
       - type: horizontal-stack
         cards:
@@ -119,23 +104,30 @@ cards:
               - device_tracker.tile_c4f2161059284831
               - device_tracker.tile_19063e4f07561dcf
               - device_tracker.tile_353e0f954ad1a9af
+              
+  # - type: entities
+  #   show_header_toggle: false
+  #   entities:
+  #     - sensor.next_bus_to_6500n0200
+  #     - sensor.next_bus_to_6500n0468
+  #     - sensor.next_bus_to_6500k9922
 
-  #################################################################
-  #                                                               #
-  #                     Home - Next Bus Card                      #
-  #                                                               #
-  #################################################################
+  # #################################################################
+  # #                                                               #
+  # #                     Home - Next Bus Card                      #
+  # #                                                               #
+  # #################################################################
 
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Next Bus
-      - entity: sensor.next_bus_to_st_andrews_madras_college
-        name: 'To Town'
-      - type: section
-      - entity: sensor.next_bus_to_letham_village_centre
-        name: 'Home'
+  # - type: entities
+  #   show_header_toggle: false
+  #   entities:
+  #     - type: 'custom:text-divider-row'
+  #       text: Next Bus
+  #     - entity: sensor.next_bus_to_st_andrews_madras_college
+  #       name: 'To Town'
+  #     - type: section
+  #     - entity: sensor.next_bus_to_letham_village_centre
+  #       name: 'Home'
 
   #################################################################
   #                                                               #
@@ -151,28 +143,26 @@ cards:
       - entity: sensor.commute_stuart_home
         name: Stuart Home
         icon: mdi:home-account
-      - entity: sensor.commute_stuart
+      - entity: sensor.commute_stuart_work
         name: Work
         icon: mdi:cash-usd
       - type: divider
       - entity: sensor.commute_kareen_home
         name: Kareen Home
         icon: mdi:home-account
-      - entity: sensor.commute_kareen_newport
+      - entity: sensor.commute_kareen_work_a
         name: Newport
         icon: mdi:cash-usd
-      - entity: sensor.commute_kareen_tayport
+      - entity: sensor.commute_kareen_work_b
         name: Tayport
         icon: mdi:cash-usd
-        
-  - type: custom:waze-card
-    entities:
-      - entity: sensor.commute_stuart_home
-        zone: zone.home
-        name: Stuart Home
-      - entity: sensor.commute_kareen_home
-        zone: zone.home
-        name: Kareen Home
+      - type: divider
+      - proximity.his_home
+      - proximity.his_work
+      - type: section
+      - proximity.her_home
+      - proximity.her_work_a
+      - proximity.her_work_b
         
   #################################################################
   #                                                               #
@@ -246,90 +236,88 @@ cards:
       - value: 0
         color: "#3498db"
         
-  #- type: custom:gap-card
-  #  height: 65
-  #  size: 
-        
-  - type: horizontal-stack
-    cards:
-      - type: custom:mini-graph-card
-        entities: 
-         - sensor.ff_study_sensor_temperature
-        name: Study
-        height: 74
-        line_width: 2
-        font_size: 65
-        hours_to_show: 168
-        points_per_hour: 1
-        show:
-          icon: false
-          extrema: true
-        color_thresholds:
-          - value: 28
-            color: "#e74c3c"
-          - value: 15
-            color: "#1db954"
-          - value: 0
-            color: "#3498db"
-        
-      - type: custom:mini-graph-card
-        entities: 
-         - sensor.ff_bedroom_sensor_temperature
-        name: Bedroom
-        height: 74
-        line_width: 2
-        font_size: 65
-        hours_to_show: 168
-        points_per_hour: 1
-        show:
-          icon: false
-          extrema: true
-        color_thresholds:
-          - value: 28
-            color: "#e74c3c"
-          - value: 15
-            color: "#1db954"
-          - value: 0
-            color: "#3498db"
-        
-  - type: horizontal-stack
-    cards:
-      - type: custom:mini-graph-card
-        entities: 
-         - sensor.gf_dinning_sensor_temperature
-        name: Dinning Room
-        height: 74
-        line_width: 2
-        font_size: 65
-        hours_to_show: 168
-        points_per_hour: 1
-        show:
-          icon: false
-          extrema: true
-        color_thresholds:
-          - value: 28
-            color: "#e74c3c"
-          - value: 15
-            color: "#1db954"
-          - value: 0
-            color: "#3498db"
-        
-      - type: custom:mini-graph-card
-        entities: 
-         - sensor.gf_living_sensor_temperature
-        name: Livingroom
-        height: 74
-        line_width: 2
-        font_size: 65
-        hours_to_show: 168
-        points_per_hour: 1
-        show:
-          icon: false
-          extrema: true
-        color_thresholds:
-          - value: 28
-            color: "#e74c3c"
-          - value: 15
-            color: "#1db954"
-          - value: 0
-            color: "#3498db"
+  - type: vertical-stack
+    cards:  
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities: 
+             - sensor.ff_study_sensor_temperature
+            name: Study
+            height: 74
+            line_width: 2
+            font_size: 65
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              icon: false
+              extrema: true
+            color_thresholds:
+              - value: 28
+                color: "#e74c3c"
+              - value: 15
+                color: "#1db954"
+              - value: 0
+                color: "#3498db"
+            
+          - type: custom:mini-graph-card
+            entities: 
+             - sensor.ff_bedroom_sensor_temperature
+            name: Bedroom
+            height: 74
+            line_width: 2
+            font_size: 65
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              icon: false
+              extrema: true
+            color_thresholds:
+              - value: 28
+                color: "#e74c3c"
+              - value: 15
+                color: "#1db954"
+              - value: 0
+                color: "#3498db"
+            
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities: 
+             - sensor.gf_dinning_sensor_temperature
+            name: Dinning Room
+            height: 74
+            line_width: 2
+            font_size: 65
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              icon: false
+              extrema: true
+            color_thresholds:
+              - value: 28
+                color: "#e74c3c"
+              - value: 15
+                color: "#1db954"
+              - value: 0
+                color: "#3498db"
+            
+          - type: custom:mini-graph-card
+            entities: 
+             - sensor.gf_living_sensor_temperature
+            name: Livingroom
+            height: 74
+            line_width: 2
+            font_size: 65
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              icon: false
+              extrema: true
+            color_thresholds:
+              - value: 28
+                color: "#e74c3c"
+              - value: 15
+                color: "#1db954"
+              - value: 0
+                color: "#3498db"
