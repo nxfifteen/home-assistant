@@ -1,0 +1,150 @@
+---
+id: study
+title: Study
+icon: mdi:office
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Study
+      - binary_sensor.ff_study_sensor_sensor
+      - switch.room_occupancy_study
+      - sensor.room_occupancy_study_reason
+      - type: section
+      - binary_sensor.ff_landing_sensor
+      - switch.room_occupancy_landing
+      - sensor.room_occupancy_landing_reason
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Lights
+      - light.ff_study_celing
+      - light.ff_study_desk
+      - light.ff_study_wall
+      - type: section
+      - light.ff_landing_celing
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Plugs
+      - switch.wake_on_lan
+      - type: section
+      - switch.ff_study_monitors
+      - switch.ff_study_sterio
+      - switch.study_fan
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.ff_study_sensor_temperature
+    name: Study
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 168
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 28
+        color: "#e74c3c"
+      - value: 15
+        color: "#1db954"
+      - value: 0
+        color: "#3498db"
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.ff_study_sensor_lux
+    name: Study
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 168
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 28
+        color: "#e74c3c"
+      - value: 15
+        color: "#1db954"
+      - value: 0
+        color: "#3498db"
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.ff_study_sterio_power
+    name: Study
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 168
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 28
+        color: "#e74c3c"
+      - value: 15
+        color: "#1db954"
+      - value: 0
+        color: "#3498db"
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.ff_study_monitors_power
+    name: Study
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 168
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 28
+        color: "#e74c3c"
+      - value: 15
+        color: "#1db954"
+      - value: 0
+        color: "#3498db"
+
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-media-player
+        name: Alexa
+        entity: media_player.study
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+          
+      - type: custom:mini-media-player
+        name: Alexa (Everywhere)
+        entity: media_player.everywhere
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+        
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - sensor.ff_study_monitors_colour
+      - sensor.ff_study_sensor_battery
+      - sensor.ff_study_sensor_tamper
