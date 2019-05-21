@@ -2,7 +2,7 @@
 sensor:
 - platform: mqtt
   name: gf_studio_treadmill_power
-  state_topic: "zwave/12/50/1/0"
+  state_topic: "zwave/13/50/1/0"
   device_class: power
 
 
@@ -10,8 +10,8 @@ switch:
 - platform: mqtt
   name: gf_studio_treadmill
   icon: mdi:run-fast
-  state_topic: "zwave/12/37/1/0"
-  command_topic: "zwave/12/37/1/0/set"
+  state_topic: "zwave/13/37/1/0"
+  command_topic: "zwave/13/37/1/0/set"
   payload_on: "true"
   payload_off: "false"
   state_on: "true"

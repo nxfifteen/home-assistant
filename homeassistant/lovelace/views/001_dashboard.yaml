@@ -40,7 +40,7 @@ cards:
       - sensor.kitchen_nest_protect_smoke_status
       - sensor.landing_nest_protect_smoke_status
       - type: section
-      - binary_sensor.gf_hallway_contact_sensor
+      #- binary_sensor.gf_hallway_contact_sensor
       - binary_sensor.gf_dinning_contact_side
       - type: section
       - sensor.light_scene
@@ -157,12 +157,10 @@ cards:
         name: Tayport
         icon: mdi:cash-usd
       - type: divider
-      - proximity.his_home
-      - proximity.his_work
-      - type: section
-      - proximity.her_home
-      - proximity.her_work_a
-      - proximity.her_work_b
+      - proximity.home
+      - proximity.cs_tps
+      - proximity.newport
+      - proximity.tayport
         
   #################################################################
   #                                                               #

@@ -4,6 +4,95 @@ title: Livingroom
 icon: mdi:sofa
 cards:
   - !include ../cards/compact_custom_header_main.yaml
+ 
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Livingroom
+      - binary_sensor.gf_living_sensor_sensor
+      - switch.room_occupancy_livingroom
+      - sensor.room_occupancy_livingroom_reason
+      - type: section
+      - switch.room_occupancy_hallway
+      - sensor.room_occupancy_hallway_reason
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Lights
+      - light.gf_living_celing
+      - light.gf_living_lamp
+      - type: section
+      - light.gf_hallway_celing
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Plugs
+      - switch.gf_living_tv
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.gf_living_sensor_temperature
+    name: Temperature
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 168
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 28
+        color: "#e74c3c"
+      - value: 15
+        color: "#1db954"
+      - value: 0
+        color: "#3498db"
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.gf_living_sensor_lux
+    name: Lux
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 168
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 28
+        color: "#e74c3c"
+      - value: 15
+        color: "#1db954"
+      - value: 0
+        color: "#3498db"
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.gf_living_tv_power
+    name: TV
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 168
+    points_per_hour: 1
+    show:
+      icon: false
+      extrema: true
+    color_thresholds:
+      - value: 28
+        color: "#e74c3c"
+      - value: 15
+        color: "#1db954"
+      - value: 0
+        color: "#3498db"
 
   - type: vertical-stack
     cards:
@@ -50,17 +139,5 @@ cards:
   - type: entities
     show_header_toggle: false
     entities:
-      - binary_sensor.gf_living_sensor_sensor
-      - light.gf_living_celing
-      - light.gf_living_lamp
-      - switch.gf_living_tv
-      - switch.room_occupancy_livingroom
-      - sensor.gf_living_sensor_lux
       - sensor.gf_living_sensor_battery
       - sensor.gf_living_sensor_tamper
-      - sensor.gf_living_tv_power
-      - light.gf_hallway_celing
-      - sensor.gf_hallway_contact_battery
-      - switch.room_occupancy_hallway
-      - sensor.room_occupancy_hallway_reason
-      - sensor.room_occupancy_livingroom_reason

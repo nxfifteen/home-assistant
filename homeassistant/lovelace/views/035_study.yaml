@@ -4,7 +4,7 @@ title: Study
 icon: mdi:office
 cards:
   - !include ../cards/compact_custom_header_main.yaml
-
+ 
   - type: entities
     show_header_toggle: false
     entities:
@@ -13,10 +13,10 @@ cards:
       - binary_sensor.ff_study_sensor_sensor
       - switch.room_occupancy_study
       - sensor.room_occupancy_study_reason
-      - type: section
-      - binary_sensor.ff_landing_sensor
-      - switch.room_occupancy_landing
-      - sensor.room_occupancy_landing_reason
+      #- type: section
+      #- binary_sensor.ff_landing_sensor
+      #- switch.room_occupancy_landing
+      #- sensor.room_occupancy_landing_reason
 
   - type: entities
     show_header_toggle: false
@@ -43,7 +43,7 @@ cards:
   - type: custom:mini-graph-card
     entities: 
       - sensor.ff_study_sensor_temperature
-    name: Study
+    name: Temperature
     height: 74
     line_width: 2
     font_size: 65
@@ -63,7 +63,7 @@ cards:
   - type: custom:mini-graph-card
     entities: 
       - sensor.ff_study_sensor_lux
-    name: Study
+    name: Lux
     height: 74
     line_width: 2
     font_size: 65

@@ -4,14 +4,29 @@ title: Studio
 icon: mdi:android-studio
 cards:
   - !include ../cards/compact_custom_header_main.yaml
+ 
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Studio
+      - switch.room_occupancy_studio
+      - sensor.room_occupancy_studio_reason
+      - type: section
+      - switch.room_occupancy_hallway
+      - sensor.room_occupancy_hallway_reason
 
   - type: entities
     show_header_toggle: false
     entities:
-      - switch.gf_studio_treadmill
+      - type: 'custom:text-divider-row'
+        text: Lights
       - light.gf_studio_celing
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Plugs
+      - switch.gf_studio_treadmill
       - sensor.gf_studio_treadmill_power
-      - switch.room_occupancy_studio
-      - light.gf_hallway_celing
-      - switch.room_occupancy_hallway
-      - sensor.room_occupancy_studio_reason

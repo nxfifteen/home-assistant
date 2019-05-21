@@ -6,14 +6,6 @@ binary_sensor:
   payload_on: "true"
   payload_off: "false"
   device_class: motion
-  
-- platform: mqtt
-  name: gf_dinning_contact_side
-  state_topic: "zwave/9/48/1/0"
-  payload_on: "true"
-  payload_off: "false"
-  device_class: door
-
 
 sensor:
 - platform: mqtt
@@ -39,28 +31,6 @@ sensor:
   state_topic: "zwave/4/113/1/0"
   unit_of_measurement: "#"
 
-- platform: mqtt
-  name: gf_dinning_contact_battery
-  state_topic: "zwave/9/128/1/0"
-  unit_of_measurement: "%"
-  device_class: battery
-
-
-switch:
-- platform: mqtt
-  name: gf_dinning_tv
-  icon: mdi:television-classic
-  state_topic: "zwave/14/37/1/0"
-  command_topic: "zwave/14/37/1/0/set"
-  payload_on: "true"
-  payload_off: "false"
-  state_on: "true"
-  state_off: "false"
-  optimistic: false
-  qos: 0
-  retain: true
-
-
 homeassistant:
   customize:
     sensor.gf_dinning_contact_battery:
@@ -77,8 +47,3 @@ homeassistant:
       friendly_name: Tamper
     sensor.gf_dinning_sensor_temperature:
       friendly_name: Temperature
-    switch.gf_dinning_tv:
-      friendly_name: TV
-    binary_sensor.gf_dinning_contact_side:
-      friendly_name: Side Door
- 

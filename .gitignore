@@ -6,6 +6,8 @@
 homeassistant/.cloud
 homeassistant/.storage
 homeassistant/deps
+**/.Trash
+**/.Trash-*
 
 # Specific file ignores
 homeassistant/.uuid
@@ -22,6 +24,7 @@ homeassistant/secrets.yaml
 **/*.pyc
 **/*.json.backup
 **/flows_cred.json
+homeassistant/node-red/ssh/id_*
 
 # You can whitelist files/folders with !, these will not be ignored.
 !.gitignore
