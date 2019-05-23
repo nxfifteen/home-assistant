@@ -33,6 +33,23 @@ cards:
           type: glance
           title: People at home
         
+      # - type: glance
+      #   show_header_toggle: false
+      #   entities:
+      #     - person.stuart_2
+      #     - person.kareen
+      #     - person.john
+      #     - person.maureen
+      #     - person.allan
+      #     - person.colin
+      #     - person.irene
+      #     - person.kayleigh
+      #     - person.kev
+      #     - person.khristen
+      #     - person.mecha
+      #     - person.scott
+      #     - person.steve
+        
   - type: entities
     show_header_toggle: false
     entities:
@@ -44,8 +61,7 @@ cards:
       - binary_sensor.gf_dinning_contact_side
       - type: section
       - sensor.light_scene
-      - sensor.light_scene_ff
-      - sensor.light_scene_gf
+      - input_select.light_scene
 
   #################################################################
   #                                                               #

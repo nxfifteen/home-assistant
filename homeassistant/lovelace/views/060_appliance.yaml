@@ -10,6 +10,12 @@ cards:
     show_header_toggle: false
     entities:
     - switch.dishwasher
+    - switch.washing_machine
+
+  - type: entities
+    title: nest
+    show_header_toggle: false
+    entities:
     - input_select.dishwasher_status
     - input_boolean.disable_dishwasher_notification
     - sensor.dishwasher_status

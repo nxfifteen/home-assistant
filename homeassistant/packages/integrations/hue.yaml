@@ -14,14 +14,20 @@ sensor:
   - platform: mqtt
     name: light_scene
     state_topic: "iot/scene/lights"
-  
-  - platform: mqtt
-    name: light_scene_gf
-    state_topic: "iot/scene/lights/gf"
-  
-  - platform: mqtt
-    name: light_scene_ff
-    state_topic: "iot/scene/lights/ff"
+
+input_select:
+  light_scene:
+    name: Lighting Scene
+    options:
+    - Pulse
+    - Sunrise
+    - Dawn
+    - Off
+    - Dull
+    - Sunset
+    - Night
+    - Full
+    initial: Off
 
 homeassistant:
   customize:

@@ -6,6 +6,7 @@ person:
   id: !secret person_stuart
   user_id: !secret person_stuart
   device_trackers:
+    - device_tracker.stuart
     - device_tracker.stuart_tasker
     - device_tracker.stuart_phone
 
@@ -13,6 +14,7 @@ person:
   id: !secret person_kareen
   user_id: !secret person_kareen
   device_trackers:
+    - device_tracker.kareen
     - device_tracker.kareen_tasker
     - device_tracker.kareen_phone
     
