@@ -6,6 +6,3 @@ queries:
   - mode: bus
     origin: !secret uk_transport_bus_a_origin
     destination: !secret uk_transport_bus_a_dest
-  - mode: bus
-    origin: !secret uk_transport_bus_b_origin
-    destination: !secret uk_transport_bus_b_dest

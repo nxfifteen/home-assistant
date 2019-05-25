@@ -1,8 +1,8 @@
 ---
-binary_sensor:
+sensor:
 - platform: mqtt
   name: ff_study_sterio_power
-  state_topic: "zwave/7/50/1/0"
+  state_topic: "zwave/7/50/1/8"
   device_class: power
 
 switch:

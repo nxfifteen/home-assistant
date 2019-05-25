@@ -1420,6 +1420,60 @@
      "file": "/config/node-red/node_modules/node-red-contrib-bigssh/bigssh/bigssh.js"
     }
    }
+  },
+  "node-red-contrib-unifi": {
+   "name": "node-red-contrib-unifi",
+   "version": "0.0.6",
+   "local": true,
+   "nodes": {
+    "unifi": {
+     "name": "unifi",
+     "types": [
+      "Unifi"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-unifi",
+     "file": "/config/node-red/node_modules/node-red-contrib-unifi/unifi.js"
+    }
+   }
+  },
+  "node-red-contrib-loop-processing": {
+   "name": "node-red-contrib-loop-processing",
+   "version": "0.3.1",
+   "local": true,
+   "nodes": {
+    "index-loop": {
+     "name": "index-loop",
+     "types": [
+      "counter-loop"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-loop-processing",
+     "file": "/config/node-red/node_modules/node-red-contrib-loop-processing/counter-loop.js"
+    },
+    "array-loop": {
+     "name": "array-loop",
+     "types": [
+      "array-loop"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-loop-processing",
+     "file": "/config/node-red/node_modules/node-red-contrib-loop-processing/array-loop.js"
+    },
+    "while-loop": {
+     "name": "while-loop",
+     "types": [
+      "while-loop"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-loop-processing",
+     "file": "/config/node-red/node_modules/node-red-contrib-loop-processing/while-loop.js"
+    }
+   }
   }
  },
  "users": {

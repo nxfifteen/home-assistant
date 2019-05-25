@@ -47,3 +47,236 @@ cards:
       - sensor.cert_nxfifteen_skizimport
       - sensor.cert_nxfifteen_your
       - sensor.cert_nxfifteen_xyz
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Jarvis
+
+          - type: custom:vertical-stack-in-card
+            cards:
+        
+            - type: horizontal-stack
+              cards:
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.jarvis_ha
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.jarvis_nodered
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.jarvis_traccar
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: 'custom:text-divider-row'
+            text: NxFIFTEEN
+
+          - type: custom:vertical-stack-in-card
+            cards:
+        
+            - type: horizontal-stack
+              cards:
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.gitlab
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.mail_server
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.webmail
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: 'custom:text-divider-row'
+            text: SSH
+
+          - type: custom:vertical-stack-in-card
+            cards:
+        
+            - type: horizontal-stack
+              cards:
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.ssh_odin
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.ssh_roger_young
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+        
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.ssh_synology
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Websites
+
+          - type: custom:vertical-stack-in-card
+            cards:
+        
+            - type: horizontal-stack
+              cards:        
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.nxcore
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+        
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.nxfifteen
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                  tap_action:
+                    action: more-info
+        
+        

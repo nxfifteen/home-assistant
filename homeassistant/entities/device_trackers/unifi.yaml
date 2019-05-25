@@ -1,0 +1,25 @@
+---
+platform: unifi
+host: !secret unifi_host
+port: !secret unifi_port
+username: !secret unifi_username
+password: !secret unifi_password
+monitored_conditions:
+  - _is_guest_by_uap
+  - _last_seen_by_uap
+  - _uptime_by_uap
+  - authorized
+  - first_seen
+  - idletime
+  - ip
+  - is_guest
+  - is_wired
+  - last_seen
+  - latest_assoc_time
+  - mac
+  - name
+  - noted
+  - signal
+  - uptime
+  - user_id
+  - usergroup_id

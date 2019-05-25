@@ -1,0 +1,47 @@
+---
+alias: 'Dark House Little extra light'
+trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 20.0
+  - platform: numeric_state
+    entity_id: sensor.dark_sky_precip_intensity
+    above: 1
+  - platform: state
+    entity_id: group.family
+    to: 'home'
+    from: 'not_home'
+
+condition:
+  condition: and
+  conditions:
+    - condition: or
+      conditions:
+        - condition: and
+          conditions:
+            - condition: numeric_state
+              entity_id: sun.sun
+              value_template: '{{ state.attributes.elevation }}'
+              below: 20.0
+        - condition: numeric_state
+          entity_id: sensor.dark_sky_precip_intensity
+          above: 1
+    - condition: numeric_state
+      entity_id: sensor.family_stuart_state
+      below: '9'
+    - condition: numeric_state
+      entity_id: sensor.family_kareen_state
+      below: '9'
+    - condition: state
+      entity_id: sun.sun
+      state: 'above_horizon'
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.light_scene
+      option: Dull

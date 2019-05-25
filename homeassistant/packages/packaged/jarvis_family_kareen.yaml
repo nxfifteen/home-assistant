@@ -47,11 +47,11 @@ sensor:
 input_select:
   kareen:
     options:
+      - Home            # 4
       - Away            # 0
       - Extended Away   # 1
       - Just Left       # 2
       - Just Arrived    # 3
-      - Home            # 4
 
 homeassistant:
   customize:

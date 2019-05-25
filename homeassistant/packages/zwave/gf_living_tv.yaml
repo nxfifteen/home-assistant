@@ -2,9 +2,8 @@
 sensor:
 - platform: mqtt
   name: gf_living_tv_power
-  state_topic: "zwave/14/50/1/0"
+  state_topic: "zwave/14/50/1/8"
   device_class: power
-
 
 switch:
 - platform: mqtt

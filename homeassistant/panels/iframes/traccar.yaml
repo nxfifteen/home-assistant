@@ -4,7 +4,7 @@
 #
 # https://www.home-assistant.io/components/panel_iframe/
 #
-portainer:
+traccar:
   title: Traccar
   icon: mdi:car-connected
   url: !secret iframe_traccar_url

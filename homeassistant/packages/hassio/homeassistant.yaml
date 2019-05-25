@@ -5,12 +5,6 @@
 # main configuration.yaml.
 #
 homeassistant:
-  
-  auth_providers:
-  - type: legacy_api_password
-    api_password: !secret http_password
-  - type: homeassistant
-
   # Lets me customize individual entities
   customize: !include_dir_merge_named ../../customizations/entities
 

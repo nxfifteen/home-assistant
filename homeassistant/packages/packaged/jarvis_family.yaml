@@ -19,7 +19,6 @@ input_select:
     options:
       - Idle
       - Bed Time
-    initial: Idle
 
 homeassistant:
   customize:

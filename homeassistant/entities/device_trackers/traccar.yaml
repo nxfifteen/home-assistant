@@ -1,4 +1,4 @@
-#---
+---
 # https://www.home-assistant.io/components/traccar/
 platform: traccar
 host: !secret traccar_host

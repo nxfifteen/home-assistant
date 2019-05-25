@@ -1,5 +1,15 @@
 ---
-platform: mqtt_json
+platform: mqtt
 devices:
-  stuart_tasker: 'tracker/family/stuart'
-  kareen_tasker: 'tracker/family/kareen'
+  allan_phone_unifi: 'network/guest/allan'
+  colin_phone_unifi: 'network/guest/colin'
+  irene_phone_unifi: 'network/guest/irene'
+  john_phone_unifi: 'network/guest/john'
+  kayleigh_phone_unifi: 'network/guest/kayleigh'
+  kev_phone_unifi: 'network/guest/kev'
+  khristen_phone_unifi: 'network/guest/khristen'
+  maureen_phone_unifi: 'network/guest/maureen'
+  mecha_phone_unifi: 'network/guest/mecha'
+  scott_phone_unifi: 'network/guest/scott'
+  steve_phone_unifi: 'network/guest/steve'
+  dev_phone_unifi: 'network/guest/devphone'

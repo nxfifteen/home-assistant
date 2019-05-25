@@ -18,9 +18,6 @@ cards:
     - sensor.used_space_volume_1
     - sensor.used_space_volume_2
     - sensor.used_space_volume_3
-    - sensor.status_volume_1
-    - sensor.status_volume_2
-    - sensor.status_volume_3
     - sensor.status_smart_sda
     - sensor.status_smart_sdb
     - sensor.status_smart_sdc

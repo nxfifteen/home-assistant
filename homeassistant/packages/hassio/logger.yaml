@@ -1,0 +1,7 @@
+---
+logger:
+  default: info
+  logs:
+    aiounifi: debug
+    homeassistant.components.unifi: debug
+    homeassistant.components.switch.unifi: debug

@@ -1,0 +1,15 @@
+---
+alias: PiHole Daily stats!
+trigger:
+  platform: time
+  at: '04:30:00'
+
+action:
+  - delay: '00:{{ range(0,5) | random | int }}{{ range(0,9) | random | int }}:00'
+  - service: notify.hass_synchat
+    data_template:
+      message: >
+          {{ [
+          "There are currently {{states.sensor.pi_hole_dns_unique_clients.state}} clients on my network.",
+          "As reported by #PiHole, there are {{states.sensor.pi_hole_dns_unique_clients.state}} clients on my network.",
+          ] | random + " #PiHole #Security"}}

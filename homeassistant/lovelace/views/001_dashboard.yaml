@@ -229,26 +229,31 @@ cards:
   #                   Home - Temperature Card                     #
   #                                                               #
   #################################################################
-
-  - type: custom:mini-graph-card
-    entities: 
-     - sensor.hallway_thermostat_temperature
-    name: Nest
-    height: 46
-    line_width: 2
-    font_size: 65
-    hours_to_show: 168
-    points_per_hour: 1
-    show:
-      icon: false
-      extrema: true
-    color_thresholds:
-      - value: 28
-        color: "#e74c3c"
-      - value: 15
-        color: "#1db954"
-      - value: 0
-        color: "#3498db"
+        
+  - type: vertical-stack
+    cards:  
+      - type: thermostat
+        entity: climate.hallway
+    
+      - type: custom:mini-graph-card
+        entities: 
+         - sensor.hallway_thermostat_temperature
+        name: Nest
+        height: 46
+        line_width: 2
+        font_size: 65
+        hours_to_show: 168
+        points_per_hour: 1
+        show:
+          icon: false
+          extrema: true
+        color_thresholds:
+          - value: 28
+            color: "#e74c3c"
+          - value: 15
+            color: "#1db954"
+          - value: 0
+            color: "#3498db"
         
   - type: vertical-stack
     cards:  

@@ -2,7 +2,7 @@
 sensor:
 - platform: mqtt
   name: gf_studio_treadmill_power
-  state_topic: "zwave/13/50/1/0"
+  state_topic: "zwave/13/50/1/8"
   device_class: power
 
 
