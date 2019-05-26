@@ -6,7 +6,7 @@ trigger:
 
 action:
   - delay: '00:{{ range(0,5) | random | int }}{{ range(0,9) | random | int }}:00'
-  - service: notify.hass_synchat
+  - service: notify.synchat_tweets
     data_template:
       message: >
           {{ [

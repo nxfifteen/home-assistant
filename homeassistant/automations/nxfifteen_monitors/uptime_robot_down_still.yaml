@@ -9,11 +9,7 @@ condition:
   condition: and
   conditions:
     - condition: state
-      entity_id: binary_sensor.gitlab
-      state: 'off'
-
-    - condition: state
-      entity_id: binary_sensor.jarvis_assistant
+      entity_id: binary_sensor.jarvis_ha
       state: 'off'
 
     - condition: state
@@ -21,7 +17,11 @@ condition:
       state: 'off'
 
     - condition: state
-      entity_id: binary_sensor.jarvis_openhab
+      entity_id: binary_sensor.jarvis_traccar
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.gitlab
       state: 'off'
 
     - condition: state
@@ -29,11 +29,7 @@ condition:
       state: 'off'
 
     - condition: state
-      entity_id: binary_sensor.nxcore
-      state: 'off'
-
-    - condition: state
-      entity_id: binary_sensor.nxfifteen
+      entity_id: binary_sensor.webmail
       state: 'off'
 
     - condition: state
@@ -49,7 +45,11 @@ condition:
       state: 'off'
 
     - condition: state
-      entity_id: binary_sensor.webmail
+      entity_id: binary_sensor.nxcore
+      state: 'off'
+
+    - condition: state
+      entity_id: binary_sensor.nxfifteen
       state: 'off'
 
 action:

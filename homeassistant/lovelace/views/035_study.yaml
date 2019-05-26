@@ -40,85 +40,99 @@ cards:
       - switch.ff_study_sterio
       - switch.study_fan
 
-  - type: custom:mini-graph-card
-    entities: 
-      - sensor.ff_study_sensor_temperature
-    name: Temperature
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 168
-    points_per_hour: 1
-    show:
-      icon: false
-      extrema: true
-    color_thresholds:
-      - value: 28
-        color: "#e74c3c"
-      - value: 15
-        color: "#1db954"
-      - value: 0
-        color: "#3498db"
-
-  - type: custom:mini-graph-card
-    entities: 
-      - sensor.ff_study_sensor_lux
-    name: Lux
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 168
-    points_per_hour: 1
-    show:
-      icon: false
-      extrema: true
-    color_thresholds:
-      - value: 28
-        color: "#e74c3c"
-      - value: 15
-        color: "#1db954"
-      - value: 0
-        color: "#3498db"
+  - type: horizontal-stack
+    cards:
+    - type: custom:mini-graph-card
+      entities: 
+        - sensor.ff_study_sensor_temperature
+      name: Temperature
+      height: 74
+      line_width: 2
+      font_size: 65
+      hours_to_show: 168
+      points_per_hour: 4
+      show:
+        icon: true
+        extrema: true
+        icon_adaptive_color: true
+      color_thresholds:
+        - value: 21
+          color: "#e74c3c"
+        - value: 15
+          color: "#1db954"
+        - value: -1
+          color: "#3498db"
+        - value: -100
+          color: "#e74c3c"
+  
+    - type: custom:mini-graph-card
+      entities: 
+        - sensor.ff_study_sensor_lux
+      name: Lux
+      height: 74
+      line_width: 2
+      font_size: 65
+      hours_to_show: 36
+      points_per_hour: 4
+      show:
+        icon: true
+        extrema: true
 
   - type: custom:mini-graph-card
     entities: 
       - sensor.ff_study_sterio_power
-    name: Study
+    name: Sterio
     height: 74
     line_width: 2
     font_size: 65
-    hours_to_show: 168
-    points_per_hour: 1
+    hours_to_show: 24
+    points_per_hour: 6
+    icon: mdi:power-socket-uk
     show:
-      icon: false
+      icon: true
       extrema: true
+      icon_adaptive_color: true
     color_thresholds:
-      - value: 28
+        # High
+      - value: 75
         color: "#e74c3c"
-      - value: 15
-        color: "#1db954"
-      - value: 0
+        # In Use
+      - value: 45
+        color: "#ffa500"
+        # Stand By
+      - value: 5
         color: "#3498db"
+        # Off
+      - value: -1
+        color: "#1db954"
 
   - type: custom:mini-graph-card
     entities: 
       - sensor.ff_study_monitors_power
-    name: Study
+    name: Monitors
     height: 74
     line_width: 2
     font_size: 65
-    hours_to_show: 168
-    points_per_hour: 1
+    hours_to_show: 24
+    points_per_hour: 6
+    icon: mdi:power-socket-uk
     show:
-      icon: false
+      icon: true
       extrema: true
+      icon_adaptive_color: true
     color_thresholds:
-      - value: 28
+        # High
+      - value: 75
         color: "#e74c3c"
-      - value: 15
-        color: "#1db954"
-      - value: 0
+        # In Use
+      - value: 45
+        color: "#ffa500"
+        # Stand By
+      - value: 5
         color: "#3498db"
+        # Off
+      - value: -1
+        color: "#1db954"
 
   - type: vertical-stack
     cards:
@@ -144,7 +158,7 @@ cards:
         
   - type: entities
     show_header_toggle: false
+    title: Batteries
     entities:
-      - sensor.ff_study_monitors_colour
-      - sensor.ff_study_sensor_battery
-      - sensor.ff_study_sensor_tamper
+      - entity: sensor.ff_study_sensor_battery
+        name: Study Sensor

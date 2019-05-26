@@ -1,7 +1,7 @@
 ---
 logger:
-  default: info
+  default: error
   logs:
-    aiounifi: debug
-    homeassistant.components.unifi: debug
-    homeassistant.components.switch.unifi: debug
+    homeassistant.helpers.script: info
+    homeassistant.components.automation: info
+    homeassistant.components.rest.sensor: debug

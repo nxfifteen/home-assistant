@@ -1,0 +1,15 @@
+---
+uptime_robot:
+  name: UpTimeRobot Services
+  entities:
+    - binary_sensor.jarvis_ha
+    - binary_sensor.jarvis_nodered
+    - binary_sensor.jarvis_traccar
+    - binary_sensor.gitlab
+    - binary_sensor.mail_server
+    - binary_sensor.webmail
+    - binary_sensor.ssh_odin
+    - binary_sensor.ssh_roger_young
+    - binary_sensor.ssh_synology
+    - binary_sensor.nxcore
+    - binary_sensor.nxfifteen

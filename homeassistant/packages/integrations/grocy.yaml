@@ -1,28 +1,22 @@
 ---
 sensor:
-- platform: rest
-  resource: !secret grocy_url_chore_1
+- platform: command_line
+  command: !secret grocy_url_chore_1
   name: grocy_chore_litter_changed
-  verify_ssl: false
   value_template: '{{ value_json.last_tracked }}'
   json_attributes:
     - tracked_count
     - last_done_by
     - next_estimated_execution_time
-  headers:
-    GROCY-API-KEY: !secret grocy_api_key
 
-- platform: rest
-  resource: !secret grocy_url_chore_2
+- platform: command_line
+  command: !secret grocy_url_chore_2
   name: grocy_chore_cut_grass
-  verify_ssl: false
   value_template: '{{ value_json.last_tracked }}'
   json_attributes:
     - tracked_count
     - last_done_by
     - next_estimated_execution_time
-  headers:
-    GROCY-API-KEY: !secret grocy_api_key
 
 - platform: template
   sensors:

@@ -28,3 +28,11 @@ action:
         There is a Home Assistant upgrade for Hass.io pending!
         Version {{ states('sensor.version_available') }} just got released!
       notification_id: hassio_upgrade
+
+  - service: notify.alexa_media
+    data:
+      target: 
+        - media_player.study
+      data:
+        type: announce
+      message: "There is a Home Assistant upgrade for Hass.io pending!"

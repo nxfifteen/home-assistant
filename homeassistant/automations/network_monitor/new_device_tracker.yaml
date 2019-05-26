@@ -1,0 +1,24 @@
+---
+alias: new_device_tracker
+initial_state: false
+
+trigger:
+  - platform: event
+    event_type: device_tracker_new_device
+    
+action:
+  - service: notify.synchat_tweets
+    data_template:
+      message: >
+        {{ [
+        "New Device on the Network! @ubnt has alerted me and now it is locked down.",
+        "Constant monitoring of the network by @ubnt has detected a new device in the environment."
+        ] | random + " (https://amzn.to/2YUkk93)"}}
+        
+  - service: notify.alexa_media
+    data:
+      target: 
+        - media_player.study
+      data:
+        type: announce
+      message: "A new device just joined the network."

@@ -330,3 +330,39 @@ cards:
     - sensor.gitlab_252_stars_week_last_mean
     - sensor.gitlab_252_stars_week_this_mean
     - sensor.gitlab_252_stars_weekly
+    - binary_sensor.jarvis_ha
+    - binary_sensor.jarvis_traccar
+    - device_tracker.1_deco_nx_2
+    - device_tracker.80_1f_02_6f_af_40
+    - device_tracker.00_62_6e_66_50_ce
+    - device_tracker.allan_phone_unifi
+    - device_tracker.colin_phone_unifi
+    - device_tracker.dev_phone_unifi
+    - device_tracker.irene_phone_unifi
+    - device_tracker.john
+    - device_tracker.john_phone_unifi
+    - device_tracker.kareen
+    - device_tracker.kayleigh_phone_unifi
+    - device_tracker.kev_phone_unifi
+    - device_tracker.khristen_phone_unifi
+    - device_tracker.kindle_kareen_nx_2
+    - device_tracker.maureen
+    - device_tracker.maureen_phone_unifi
+    - device_tracker.mecha_phone_unifi
+    - device_tracker.pc_taichi
+    - device_tracker.scott_phone_unifi
+    - device_tracker.steve_phone_unifi
+    - device_tracker.stuart
+    - binary_sensor.motion_ff_bedroom
+    - binary_sensor.motion_ff_landing
+    - binary_sensor.motion_gf_dinning
+    - binary_sensor.motion_ff_study
+    - binary_sensor.motion_gf_living
+    - sensor.ff_bedroom_sensor_tamper
+    - sensor.ff_study_monitors_colour
+    - sensor.ff_study_sensor_tamper
+    - sensor.gf_dinning_sensor_tamper
+    - sensor.gf_living_sensor_tamper
+    - sensor.next_bus_to_6500n0468
+    - sensor.room_occupancy_landing_reason
+    - switch.room_occupancy_landing

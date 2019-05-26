@@ -13,3 +13,12 @@ action:
   - service: notify.hass_synchat
     data_template:
       message: "The {{ trigger.to_state.attributes.friendly_name }} is now {{ (trigger.to_state.state)|replace('_', ' ') }}.  Please check immediately. #Nest #Protect #Failed"
+  - service: notify.alexa_media
+    data:
+      target: 
+        - media_player.kitchen
+        - media_player.study
+        - media_player.living_room
+      data:
+        type: announce
+      message: "The {{ trigger.to_state.attributes.friendly_name }} has just gone offline."

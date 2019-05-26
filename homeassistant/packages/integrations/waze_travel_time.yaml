@@ -2,7 +2,7 @@
 sensor:
 - platform: waze_travel_time
   name: commute_stuart_home
-  origin: person.stuart_2
+  origin: person.stuart
   destination: zone.home
   region: 'EU'
 

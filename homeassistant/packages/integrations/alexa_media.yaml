@@ -8,3 +8,10 @@ alexa_media:
     - email: !secret alexa_username
       password: !secret alexa_password
       url: !secret alexa_domain
+      exclude_devices:
+        - "This Device"
+        - "Stuart's Fire"
+        - "Stuart's Alexa Gear"
+        - "Stuart's Alexa apps"
+        - "Kareen's Alexa apps"
+        - "Kareen's Fire"

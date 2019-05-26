@@ -6,7 +6,7 @@ cards:
   - !include ../cards/compact_custom_header_main.yaml
 
   - type: picture-entity
-    entity: person.stuart_2
+    entity: person.stuart
     name: Stuart
     tap_action: 
       action: toggle

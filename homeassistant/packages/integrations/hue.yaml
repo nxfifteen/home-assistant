@@ -76,7 +76,7 @@ homeassistant:
       friendly_name: Landing Light
     
     light.gf_hallway_celing:
-      friendly_name: Front Door Light
+      friendly_name: Hallway Light
       
     light.gf_living_celing:
       friendly_name: Livingroom Celing

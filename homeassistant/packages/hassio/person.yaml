@@ -77,7 +77,7 @@ person:
 
 homeassistant:
   customize:
-    person.stuart_2:
+    person.stuart:
       entity_picture: !secret person_stuart_picture
       
     person.kareen:

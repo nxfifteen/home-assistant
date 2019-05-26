@@ -14,7 +14,7 @@ cards:
 
       - type: entity-filter
         entities:
-          - person.stuart_2
+          - person.stuart
           - person.kareen
           - person.john
           - person.maureen
@@ -36,7 +36,7 @@ cards:
       # - type: glance
       #   show_header_toggle: false
       #   entities:
-      #     - person.stuart_2
+      #     - person.stuart
       #     - person.kareen
       #     - person.john
       #     - person.maureen
@@ -87,7 +87,7 @@ cards:
           - type: entities
             show_header_toggle: false
             entities:
-              - person.stuart_2
+              - person.stuart
               - type: section
               - sensor.family_stuart_state_human
               - entity: sensor.family_stuart_loc_room
@@ -242,18 +242,22 @@ cards:
         height: 46
         line_width: 2
         font_size: 65
-        hours_to_show: 168
-        points_per_hour: 1
+        hours_to_show: 36
+        points_per_hour: 4
         show:
-          icon: false
+          icon: true
           extrema: true
+          icon_adaptive_color: true
         color_thresholds:
-          - value: 28
+          - value: 21
             color: "#e74c3c"
           - value: 15
             color: "#1db954"
-          - value: 0
+          - value: -1
             color: "#3498db"
+          - value: -100
+            color: "#e74c3c"
+
         
   - type: vertical-stack
     cards:  
@@ -266,18 +270,21 @@ cards:
             height: 74
             line_width: 2
             font_size: 65
-            hours_to_show: 168
-            points_per_hour: 1
+            hours_to_show: 12
+            points_per_hour: 4
             show:
-              icon: false
+              icon: true
               extrema: true
+              icon_adaptive_color: true
             color_thresholds:
-              - value: 28
+              - value: 21
                 color: "#e74c3c"
               - value: 15
                 color: "#1db954"
-              - value: 0
+              - value: -1
                 color: "#3498db"
+              - value: -100
+                color: "#e74c3c"
             
           - type: custom:mini-graph-card
             entities: 
@@ -286,18 +293,21 @@ cards:
             height: 74
             line_width: 2
             font_size: 65
-            hours_to_show: 168
-            points_per_hour: 1
+            hours_to_show: 12
+            points_per_hour: 4
             show:
-              icon: false
+              icon: true
               extrema: true
+              icon_adaptive_color: true
             color_thresholds:
-              - value: 28
+              - value: 21
                 color: "#e74c3c"
               - value: 15
                 color: "#1db954"
-              - value: 0
+              - value: -1
                 color: "#3498db"
+              - value: -100
+                color: "#e74c3c"
             
       - type: horizontal-stack
         cards:
@@ -308,18 +318,21 @@ cards:
             height: 74
             line_width: 2
             font_size: 65
-            hours_to_show: 168
-            points_per_hour: 1
+            hours_to_show: 12
+            points_per_hour: 4
             show:
-              icon: false
+              icon: true
               extrema: true
+              icon_adaptive_color: true
             color_thresholds:
-              - value: 28
+              - value: 21
                 color: "#e74c3c"
               - value: 15
                 color: "#1db954"
-              - value: 0
+              - value: -1
                 color: "#3498db"
+              - value: -100
+                color: "#e74c3c"
             
           - type: custom:mini-graph-card
             entities: 
@@ -328,15 +341,18 @@ cards:
             height: 74
             line_width: 2
             font_size: 65
-            hours_to_show: 168
-            points_per_hour: 1
+            hours_to_show: 12
+            points_per_hour: 4
             show:
-              icon: false
+              icon: true
               extrema: true
+              icon_adaptive_color: true
             color_thresholds:
-              - value: 28
+              - value: 21
                 color: "#e74c3c"
               - value: 15
                 color: "#1db954"
-              - value: 0
+              - value: -1
                 color: "#3498db"
+              - value: -100
+                color: "#e74c3c"

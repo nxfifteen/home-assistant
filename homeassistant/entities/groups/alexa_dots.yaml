@@ -1,0 +1,7 @@
+---
+alexa_dots:
+  name: Alexa Dots
+  entities:
+    - media_player.kitchen
+    - media_player.study
+    - media_player.living_room

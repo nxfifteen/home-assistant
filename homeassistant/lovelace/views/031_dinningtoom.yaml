@@ -14,6 +14,8 @@ cards:
       - switch.room_occupancy_kitchen
       - sensor.room_occupancy_kitchen_reason
       - type: section
+      - binary_sensor.gf_dinning_contact_side
+      - type: section
       - switch.room_occupancy_hallway
       - sensor.room_occupancy_hallway_reason
 
@@ -43,45 +45,43 @@ cards:
       - switch.washing_machine
       - switch.dishwasher
 
-  - type: custom:mini-graph-card
-    entities: 
-      - sensor.gf_dinning_sensor_temperature
-    name: Temperature
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 168
-    points_per_hour: 1
-    show:
-      icon: false
-      extrema: true
-    color_thresholds:
-      - value: 28
-        color: "#e74c3c"
-      - value: 15
-        color: "#1db954"
-      - value: 0
-        color: "#3498db"
-
-  - type: custom:mini-graph-card
-    entities: 
-      - sensor.gf_dinning_sensor_lux
-    name: Lux
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 168
-    points_per_hour: 1
-    show:
-      icon: false
-      extrema: true
-    color_thresholds:
-      - value: 28
-        color: "#e74c3c"
-      - value: 15
-        color: "#1db954"
-      - value: 0
-        color: "#3498db"
+  - type: horizontal-stack
+    cards:
+    - type: custom:mini-graph-card
+      entities: 
+        - sensor.gf_dinning_sensor_temperature
+      name: Temperature
+      height: 74
+      line_width: 2
+      font_size: 65
+      hours_to_show: 36
+      points_per_hour: 4
+      show:
+        icon: true
+        extrema: true
+        icon_adaptive_color: true
+      color_thresholds:
+        - value: 21
+          color: "#e74c3c"
+        - value: 15
+          color: "#1db954"
+        - value: -1
+          color: "#3498db"
+        - value: -100
+          color: "#e74c3c"
+  
+    - type: custom:mini-graph-card
+      entities: 
+        - sensor.gf_dinning_sensor_lux
+      name: Lux
+      height: 74
+      line_width: 2
+      font_size: 65
+      hours_to_show: 36
+      points_per_hour: 4
+      show:
+        icon: true
+        extrema: true
 
   - type: vertical-stack
     cards:
@@ -127,6 +127,9 @@ cards:
         
   - type: entities
     show_header_toggle: false
+    title: Batteries
     entities:
-      - sensor.gf_dinning_sensor_battery
-      - sensor.gf_dinning_contact_battery
+      - entity: sensor.gf_dinning_sensor_battery
+        name: Bedroom Sensor
+      - entity: sensor.gf_dinning_contact_battery
+        name: Side Door Contact
