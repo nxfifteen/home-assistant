@@ -22,6 +22,6 @@ then
 
   git commit -m "${CHANGE_MSG}"
   git push origin master
-  #git push github master
+  git push github master
 fi
 exit
