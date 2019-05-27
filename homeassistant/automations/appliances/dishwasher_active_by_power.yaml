@@ -1,0 +1,24 @@
+---
+alias: Set Dishwasher active when power detected
+trigger:
+  - platform: numeric_state
+    entity_id: switch.dishwasher
+    value_template: '{{ state.attributes.current_power_w }}'
+    above: 10
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: sensor.dishwasher_status
+      state: Idle
+    - condition: state
+      entity_id: sensor.dishwasher_status
+      state: Clean
+    - condition: state
+      entity_id: sensor.dishwasher_status
+      state: Finishing
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.dishwasher_status
+      option: Running

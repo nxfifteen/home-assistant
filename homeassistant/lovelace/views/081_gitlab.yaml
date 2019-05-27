@@ -1,7 +1,7 @@
 ---
 id: gitlab
 icon: mdi:gitlab
-name: Security
+title: Git
 cards:
   - !include ../cards/compact_custom_header_main.yaml
 

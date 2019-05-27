@@ -1,7 +1,7 @@
 ---
 id: security
 icon: mdi:shield-home
-name: Security
+title: Security
 cards:
   - !include ../cards/compact_custom_header_main.yaml
   

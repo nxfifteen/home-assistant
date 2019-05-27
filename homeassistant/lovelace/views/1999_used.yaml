@@ -77,8 +77,6 @@ cards:
     title: nest
     show_header_toggle: false
     entities:
-    - binary_sensor.jarvis_assistant
-    - binary_sensor.jarvis_openhab
     - binary_sensor.jarvis_nodered
     - binary_sensor.mail_server
     - binary_sensor.nxcore
@@ -90,26 +88,16 @@ cards:
     - binary_sensor.webmail
     - device_tracker.stuart_tasker
     - device_tracker.kareen_phone
-    - device_tracker.pixel_2_xl
     - device_tracker.kareen_tasker
     - device_tracker.stuart_dashcam
     - device_tracker.stuart_phone
-    - device_tracker.backroom_ipcam_nx
 
   - type: entities
     title: nest
     show_header_toggle: false
     entities:
     - media_player.kareen_s_alexa_apps
-    - media_player.kareen_s_fire
-    - media_player.plex_firefox
-    - media_player.plex_kareen_s_phone
-    - media_player.plex_stuart_s_phone
     - media_player.stuart_s_alexa_apps
-    - media_player.stuart_s_alexa_gear
-    - media_player.stuart_s_fire
-    - media_player.this_device
-    - media_player.this_device_2
 
   - type: entities
     title: aftership
@@ -127,11 +115,8 @@ cards:
     - sensor.custom_card_tracker
     - sensor.latest_ha_version
     - sensor.custom_component_tracker
-    - sensor.cert_nxfifteen_core_docs
     - binary_sensor.workday_sensor
     - sensor.potential_breaking_changes
-    - sensor.gitlab_ci_store
-    - sensor.gitlab_ci_nxore_sync
     - sensor.steam_76561197982696593
     - sensor.family_stuart_state
     - sensor.family_kareen_state
@@ -250,12 +235,6 @@ cards:
     entities:
     - sensor.pi_hole_dns_queries_forwarded
     - sensor.pi_hole_dns_queries_cached
-    - sensor.m5_packets_sent
-    - sensor.m5_packets_sec_sent
-    - sensor.m5_packets_sec_received
-    - sensor.m5_packets_received
-    - sensor.m5_bytes_sent
-    - sensor.m5_bytes_received
     
   - type: entities
     title: git

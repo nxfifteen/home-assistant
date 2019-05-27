@@ -1,0 +1,23 @@
+---
+# ## Wait 1 minutes for us to be in the Finishing state before we
+# ## decide the washing_machine has finished. This way, if the
+# ## washing_machine is in between cycles and the power drops, we
+# ## won't mark the washing_machine cycle as finished too early.
+alias: Set washing machine clean after timeout
+trigger:
+  - platform: state
+    entity_id: input_select.washing_machine_status
+    to: Finishing
+    for:
+      minutes: 1
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_select.washing_machine_status
+      state: Finishing
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.washing_machine_status
+      option: Clean

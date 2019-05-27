@@ -1,0 +1,20 @@
+---
+# ## When the power drops, move the state of the Dishwasher to
+# ## Finishing.
+alias: Set Dishwasher finished when power drops
+trigger:
+  - platform: numeric_state
+    entity_id: switch.dishwasher
+    value_template: '{{ state.attributes.current_power_w }}'
+    below: 6
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_select.dishwasher_status
+      state: Running
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.dishwasher_status
+      option: Finishing

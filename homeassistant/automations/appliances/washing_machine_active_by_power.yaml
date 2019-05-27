@@ -1,0 +1,24 @@
+---
+alias: Set washing machine active when power detected
+trigger:
+  - platform: numeric_state
+    entity_id: switch.washing_machine
+    value_template: '{{ state.attributes.current_power_w }}'
+    above: 10
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: sensor.washing_machine_status
+      state: Idle
+    - condition: state
+      entity_id: sensor.washing_machine_status
+      state: Clean
+    - condition: state
+      entity_id: sensor.washing_machine_status
+      state: Finishing
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.washing_machine_status
+      option: Running

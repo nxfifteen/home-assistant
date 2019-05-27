@@ -22,7 +22,8 @@ switch:
 homeassistant:
   customize:
     switch.ff_study_sterio:
-      friendly_name: Sterio
+      friendly_name: Fan
+      icon: mdi:fan
     sensor.ff_study_sterio_power:
-      friendly_name: Sterio Watts
+      friendly_name: Fan Watts
  
