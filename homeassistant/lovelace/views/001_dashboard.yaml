@@ -90,6 +90,7 @@ cards:
               - person.stuart
               - type: section
               - sensor.family_stuart_state_human
+              - sensor.family_stuart_state
               - entity: sensor.family_stuart_loc_room
                 name: Room
               - type: section
@@ -104,6 +105,7 @@ cards:
               - person.kareen
               - type: section
               - sensor.family_kareen_state_human
+              - sensor.family_kareen_state
               - entity: sensor.family_kareen_loc_room
                 name: Room
               - type: section

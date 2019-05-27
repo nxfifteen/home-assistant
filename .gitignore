@@ -2,6 +2,7 @@
 # A * ensures that everything will be ignored.
 /*
 
+
 # Directory (contents) ignores
 homeassistant/.cloud
 homeassistant/.storage
@@ -25,6 +26,7 @@ homeassistant/secrets.yaml
 **/*.json.backup
 **/flows_cred.json
 homeassistant/node-red/ssh/id_*
+homeassistant/node-red/shell/*
 
 # You can whitelist files/folders with !, these will not be ignored.
 !.gitignore
@@ -34,3 +36,7 @@ homeassistant/node-red/ssh/id_*
 !sanitise.sh
 !.gitattributes
 !.gitlab-ci.yml
+!**/.gitkeep
+!homeassistant/node-red/shell/.gitkeep
+homeassistant/node-red/shell/README.md
+homeassistant/node-red/update_nx_shell.sh

@@ -41,9 +41,6 @@ cards:
       - type: 'custom:text-divider-row'
         text: Plugs
       - switch.gf_dinning_tv
-      - type: section
-      - switch.washing_machine
-      - switch.dishwasher
 
   - type: horizontal-stack
     cards:

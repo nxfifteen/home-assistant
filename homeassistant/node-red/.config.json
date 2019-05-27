@@ -1480,7 +1480,7 @@
   "_": {
    "editor": {
     "view": {
-     "view-grid-size": "10",
+     "view-grid-size": "8",
      "view-node-status": true,
      "view-node-show-label": true,
      "view-show-tips": true,
@@ -1490,7 +1490,8 @@
    },
    "menu-deploymenu-item-flow": true,
    "menu-deploymenu-item-full": false,
-   "menu-menu-item-sidebar": true
+   "menu-menu-item-sidebar": true,
+   "menu-menu-item-palette": true
   }
  }
 }

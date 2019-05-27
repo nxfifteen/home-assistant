@@ -1,0 +1,19 @@
+---
+switchs_all_safe:
+  name: Switchs That Are Safe
+  entities:
+    - switch.room_occupancy_kitchen
+    - switch.room_occupancy_hallway
+    - switch.gf_dinning_tv
+    - switch.room_occupancy_livingroom
+    - switch.gf_living_tv
+    - switch.room_occupancy_study
+    - switch.ff_study_monitors
+    - switch.ff_study_sterio
+    - switch.study_fan
+    - switch.ff_bedroom_tv
+    - switch.ff_bedroom_fairylights
+    - switch.room_occupancy_bedroom
+    - switch.room_occupancy_landing
+    - switch.gf_studio_treadmill
+    - switch.room_occupancy_studio
