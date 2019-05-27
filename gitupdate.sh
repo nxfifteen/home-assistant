@@ -9,13 +9,17 @@ else
     read -p "Ready to commit?" -n 1 -r
 fi
 
-echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   git add .
   git status
-  echo -n "Enter the Description for the Change: "
-  read CHANGE_MSG
+  if [ -z "$1" ]; then
+    CHANGE_MSG=`date +"%A, %B %d @%T"`
+    CHANGE_MSG="Check in ${CHANGE_MSG}";
+  else
+    CHANGE_MSG="$1"
+  fi
+
   git commit -m "${CHANGE_MSG}"
   git push origin master
   #git push github master
