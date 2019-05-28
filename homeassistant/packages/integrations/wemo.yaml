@@ -8,14 +8,14 @@ wemo:
     - !secret wemo_static_switch_3
 
 input_boolean:
-  disable_washing_machine_notification:
-    name: Disable Washing Machine Notification
-    initial: off
+  enable_washing_machine_notification:
+    name: Enable Washing Machine Notification
+    initial: on
     icon: mdi:washing-machine  
     
   disable_dishwasher_notification:
-    name: Disable Dishwasher Notification
-    initial: off
+    name: Enable Dishwasher Notification
+    initial: on
     icon: mdi:dishwasher
 
 input_select:
@@ -47,11 +47,11 @@ sensor:
         friendly_name: 'Washing Machine Status'
       ## Washing Machine Power Usage
       washing_machine_power:
-        value_template: '{{ states.switch.washing_machine_status.attributes.current_power_w|int }}'  
+        value_template: '{{ states.switch.washing_machine.attributes.current_power_w|default(0)|int }}'  
         friendly_name: 'Washing Machine Power' 
       ## Washer Power Graph
       washing_machine_load:
-        value_template: 'Power: {{ states.switch.washing_machine.attributes.current_power_w|int }}'  
+        value_template: 'Power: {{ states.switch.washing_machine.attributes.current_power_w|default(0)|int }}'  
         friendly_name: 'Washer Power' 
         unit_of_measurement: 'W'
       ## Washer Status
@@ -80,7 +80,7 @@ sensor:
       ## dishwasher Power Usage
       study_fan_power:
         value_template: '{{ states.switch.study_fan.attributes.current_power_w|default(0)|int }}'  
-        friendly_name: 'dishwasher Power'
+        friendly_name: 'Study Sterio Power'
       ## dishwasher Power Graph
       study_fan_load:
         value_template: 'Power: {{ states.switch.study_fan.attributes.current_power_w|default(0)|int }}'  

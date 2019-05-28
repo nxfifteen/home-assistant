@@ -1,0 +1,7 @@
+---
+light_gf_dinning:
+  name: Dinning Room Lights
+  entities:
+    - light.gf_dinning_at_kitchen
+    - light.gf_dinning_dinner_table
+    - light.gf_dinning_display_unit

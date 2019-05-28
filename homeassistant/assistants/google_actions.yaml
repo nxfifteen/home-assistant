@@ -1,0 +1,177 @@
+---
+google_actions:
+  filter:
+    include_entities:
+      - input_boolean.enable_dishwasher_notification
+      - input_boolean.enable_washing_machine_notification
+      - sensor.gf_dinning_sensor_temperature
+      - sensor.gf_living_sensor_temperature
+      - sensor.ff_study_sensor_temperature
+      - sensor.ff_bedroom_sensor_temperature
+      - light.gf_hallway_celing
+      - group.light_gf_dinning
+      - group.light_gf_kitchen
+      - group.light_gf_living
+      - light.gf_living_celing
+      - light.gf_living_lamp
+      - light.ff_landing_celing
+      - light.ff_study_celing
+      - group.light_ff_study_mood
+      - light.ff_bedroom_celing
+      - light.ff_bedroom_bedside_stuart
+      - light.ff_bedroom_bedside_kareen
+      - light.gf_studio_celing
+      - script.house_scene_bedtime
+      - script.lighting_dull
+      - script.lighting_night
+      - script.lighting_sunset
+      - script.my_computer
+    
+    include_domains:
+      - switch
+      
+    exclude_entities:
+      - switch.dishwasher
+      - switch.washing_machine
+      - switch.room_occupancy_studio
+      - switch.room_occupancy_hallway
+      - switch.room_occupancy_livingroom
+      - switch.room_occupancy_study
+      - switch.room_occupancy_bedroom
+      - switch.room_occupancy_studio
+      - switch.room_occupancy_hallway
+      - switch.room_occupancy_landing
+      - switch.room_occupancy_kitchen
+      - switch.pihole_temp_disable
+      - switch.wake_on_lan
+  
+  entity_config:
+
+    sensor.ff_study_sensor_temperature:
+      name: Study
+      room: Study
+
+    sensor.gf_dinning_sensor_temperature:
+      name: Dinning Room
+      room: Dinning Room
+  
+    sensor.gf_living_sensor_temperature:
+      name: Living Room
+      room: Living Room
+  
+    sensor.ff_bedroom_sensor_temperature:
+      name: Bedroom
+      room: Bedroom
+    
+    switch.pi_hole_enable:
+      name: Pi Hole
+      aliases:
+        - pie hole
+      
+    script.my_computer:
+      name: My Computer
+      room: Study
+      
+    input_boolean.enable_dishwasher_notification:
+      name: Dish Washer Notifications
+      
+    input_boolean.enable_washing_machine_notification:
+      name: Washing Machine Notifications
+   
+    light.gf_hallway_celing:
+      name: Hallway Light
+      room: Hallway
+  
+    group.light_gf_dinning:
+      name: Dinning Room Lights
+      room: Dinning Room
+  
+    group.light_gf_kitchen:
+      name: Kitchen Lights
+      room: Kitchen
+
+    group.light_gf_living:
+      name: Livingroom Lights
+      room: Living Room
+
+    light.gf_living_celing:
+      name: Livingroom Light
+      room: Living Room
+
+    light.gf_living_lamp:
+      name: Livingroom Lamp
+      room: Living Room
+
+    light.ff_landing_celing:
+      name: Landing Light
+      room: Landing
+  
+    light.ff_study_celing:
+      name: Study Light
+      room: Study
+      
+    group.light_ff_study_mood:
+      name: Study Mood Lighting
+      aliases:
+        - Study motor Lighting
+      room: Study
+
+    light.ff_bedroom_celing:
+      name: Bedroom Light
+      room: Bedroom
+
+    light.ff_bedroom_bedside_stuart:
+      name: Stuart's Bedside Light
+      room: Bedroom
+
+    light.ff_bedroom_bedside_kareen:
+      name: Kareen's Bedside Light
+      room: Bedroom
+  
+    light.gf_studio_celing:
+      name: Studio Light
+      room: Studio
+
+    switch.gf_dinning_tv:
+      name: Kitchen TV
+      room: Kitchen
+
+    switch.gf_living_tv:
+      name: TV
+      room: Living Room
+
+    switch.ff_study_monitors:
+      name: Computer Monitors
+      room: Study
+
+    switch.ff_study_sterio:
+      name: Study Sterio
+      room: Study
+
+    switch.study_fan:
+      name: Study Fan
+      room: Study
+  
+    switch.ff_bedroom_tv:
+      name: Bedroom TV
+      room: Bedroom
+
+    switch.ff_bedroom_fairylights:
+      name: Bedroom Fairy Lights
+      room: Bedroom
+  
+    switch.gf_studio_treadmill:
+      name: Treadmill
+      room: Studio
+
+    script.house_scene_bedtime:
+      name: Bedtime
+
+    script.lighting_dull:
+      name: Dull Lighting
+
+    script.lighting_night:
+      name: Night Lighting
+
+    script.lighting_sunset:
+      name: Sunset Lighting

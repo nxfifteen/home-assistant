@@ -60,6 +60,7 @@ cards:
       #- binary_sensor.gf_hallway_contact_sensor
       - binary_sensor.gf_dinning_contact_side
       - type: section
+      - sun.sun
       - sensor.light_scene
       - input_select.light_scene
 
@@ -164,6 +165,8 @@ cards:
       - entity: sensor.commute_stuart_work
         name: Work
         icon: mdi:cash-usd
+      - entity: sensor.tay_road_bridge
+        name: Tay Bridge
       - type: divider
       - entity: sensor.commute_kareen_home
         name: Kareen Home

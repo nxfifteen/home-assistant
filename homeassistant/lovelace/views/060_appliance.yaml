@@ -24,7 +24,7 @@ cards:
     show_header_toggle: false
     entities:
     - input_select.washing_machine_status
-    - input_boolean.disable_washing_machine_notification
+    - input_boolean.enable_washing_machine_notification
     - sensor.washing_machine_status
     - sensor.washing_machine_power
     - sensor.washing_machine_load

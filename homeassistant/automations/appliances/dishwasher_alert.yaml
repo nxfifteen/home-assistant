@@ -34,7 +34,7 @@ condition:
       state: Clean
     - condition: state
       entity_id: input_boolean.disable_dishwasher_notification
-      state: 'off'
+      state: 'on'
     - condition: template
       value_template: >
         {% if states.automation.send_alert_when_dishwasher_is_finished.last_triggered is not none %}

@@ -1,0 +1,8 @@
+---
+light_gf_kitchen:
+  name: Kitchen Lights
+  entities:
+    - light.gf_dinning_dishwahser
+    - light.gf_dinning_cooker
+    - light.gf_dinning_sink
+    - light.gf_dinning_door_way

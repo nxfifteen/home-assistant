@@ -1,0 +1,7 @@
+---
+house_scene_bedtime:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.family_family_act_bedtime
+        option: Bed Time

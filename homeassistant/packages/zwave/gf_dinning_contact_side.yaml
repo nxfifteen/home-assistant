@@ -2,7 +2,7 @@
 binary_sensor:  
 - platform: mqtt
   name: gf_dinning_contact_side
-  state_topic: "zwave/17/48/1/0"
+  state_topic: "zwave/18/48/1/0"
   payload_on: "true"
   payload_off: "false"
   device_class: door
@@ -11,7 +11,7 @@ binary_sensor:
 sensor:
 - platform: mqtt
   name: gf_dinning_contact_battery
-  state_topic: "zwave/17/128/1/0"
+  state_topic: "zwave/18/128/1/0"
   unit_of_measurement: "%"
   device_class: battery
 

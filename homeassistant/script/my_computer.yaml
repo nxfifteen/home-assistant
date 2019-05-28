@@ -1,0 +1,11 @@
+---
+my_computer:
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.wake_on_lan
+        data: 'on'
+    - service: switch.turn_on
+      data:
+        entity_id: switch.ff_study_monitors
+        data: 'on'

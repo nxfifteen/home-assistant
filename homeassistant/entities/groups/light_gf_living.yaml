@@ -1,0 +1,6 @@
+---
+light_gf_living:
+  name: Livingroom Lights
+  entities:
+    - light.gf_living_celing
+    - light.gf_living_lamp

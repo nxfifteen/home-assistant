@@ -22,58 +22,41 @@ person:
   id: 6k04PeJa4L7sKQkr4B
   device_trackers:
     - device_tracker.john
-    - device_tracker.john_phone_unifi
+    - device_tracker.john_phone
     
 - name: Maureen
   id: S2s8CRueRm4agYNog9
   device_trackers:
     - device_tracker.maureen
-    - device_tracker.maureen_phone_unifi
 
 - name: Allan
   id: H5c1ztBp88I1ICq632
-  device_trackers:
-    - device_tracker.allan_phone_unifi
   
 - name: Colin
   id: uI1o4jjBrEDdZxOVXR
-  device_trackers:
-    - device_tracker.colin_phone_unifi
   
 - name: Irene
   id: id5FZ39htZdsZ3dsFz
   device_trackers:
-    - device_tracker.irene_phone_unifi
+    - device_tracker.irene_phone
   
 - name: Kayleigh
   id: 4rC7eaYUm1OlETutYa
-  device_trackers:
-    - device_tracker.kayleigh_phone_unifi
   
 - name: Kev
   id: 54Vo3BI0XeO2LtWoWB
-  device_trackers:
-    - device_tracker.kev_phone_unifi
   
 - name: Khristen
   id: bY6G5gq20jZ7fpM90J
-  device_trackers:
-    - device_tracker.khristen_phone_unifi
   
 - name: Mecha
   id: 7aBW1C2KvQd6etr4vA
-  device_trackers:
-    - device_tracker.mecha_phone_unifi
   
 - name: Scott
   id: T9pCj81jNAaTbvZizm
-  device_trackers:
-    - device_tracker.scott_phone_unifi
   
 - name: Steve
   id: rH1F1E7kI55TgvlY01
-  device_trackers:
-    - device_tracker.steve_phone_unifi
 
 homeassistant:
   customize:

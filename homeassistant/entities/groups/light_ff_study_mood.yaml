@@ -1,0 +1,6 @@
+---
+light_ff_study_mood:
+  name: Study Mood Lighting
+  entities:
+    - light.ff_study_desk
+    - light.ff_study_wall

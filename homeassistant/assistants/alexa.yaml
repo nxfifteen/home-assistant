@@ -1,0 +1,213 @@
+---
+alexa:
+  filter:
+    include_entities:
+      - input_boolean.enable_dishwasher_notification
+      - input_boolean.enable_washing_machine_notification
+      - sensor.gf_dinning_sensor_temperature
+      - sensor.gf_living_sensor_temperature
+      - sensor.ff_study_sensor_temperature
+      - sensor.ff_bedroom_sensor_temperature
+      - light.gf_hallway_celing
+      - group.light_gf_dinning
+      - group.light_gf_kitchen
+      - group.light_gf_living
+      - light.gf_living_celing
+      - light.gf_living_lamp
+      - light.ff_landing_celing
+      - light.ff_study_celing
+      - group.light_ff_study_mood
+      - light.ff_bedroom_celing
+      - light.ff_bedroom_bedside_stuart
+      - light.ff_bedroom_bedside_kareen
+      - light.gf_studio_celing
+      - script.house_scene_bedtime
+      - script.lighting_dull
+      - script.lighting_night
+      - script.lighting_sunset
+      - script.my_computer
+    
+    include_domains:
+      - switch
+      
+    exclude_entities:
+      - switch.dishwasher
+      - switch.washing_machine
+      - switch.room_occupancy_studio
+      - switch.room_occupancy_hallway
+      - switch.room_occupancy_livingroom
+      - switch.room_occupancy_study
+      - switch.room_occupancy_bedroom
+      - switch.room_occupancy_studio
+      - switch.room_occupancy_hallway
+      - switch.room_occupancy_landing
+      - switch.room_occupancy_kitchen
+      - switch.pihole_temp_disable
+      - switch.wake_on_lan
+  
+  entity_config:
+
+    sensor.ff_study_sensor_temperature:
+      name: Study
+      description: The study Temperature
+      display_categories: TEMPERATURE_SENSOR 
+
+    sensor.gf_dinning_sensor_temperature:
+      name: Kitchen
+      description: The Dinning Room Temperature
+      display_categories: TEMPERATURE_SENSOR 
+  
+    sensor.gf_living_sensor_temperature:
+      name: Livingroom
+      description: The Livingroom Temperature
+      display_categories: TEMPERATURE_SENSOR 
+  
+    sensor.ff_bedroom_sensor_temperature:
+      name: Bedroom
+      description: The Bedroom Temperature
+      display_categories: TEMPERATURE_SENSOR 
+    
+    switch.pi_hole_enable:
+      name: Pi Hole
+      description: Enable Pi-Hole Ad Blocking
+      display_categories: SWITCH
+      
+    script.my_computer:
+      name: My Computer
+      description: My Computers WOL
+      display_categories: SWITCH
+      
+    input_boolean.enable_dishwasher_notification:
+      name: Dish Washer Notifications
+      description: Notifications when the Dishwasher is done 
+      display_categories: SWITCH
+      
+    input_boolean.enable_washing_machine_notification:
+      name: Washing Machine Notifications
+      description: Notifications when the Washing Machine is done
+      display_categories: SWITCH
+   
+    light.gf_hallway_celing:
+      name: Hallway Light
+      description: The celing light in the hallway
+      display_categories: LIGHT
+  
+    group.light_gf_dinning:
+      name: Dinning Room Lights
+      description: The Dinning Room lights
+      display_categories: LIGHT
+  
+    group.light_gf_kitchen:
+      name: Kitchen Lights
+      description: The Kitchen Lights
+      display_categories: LIGHT
+
+    group.light_gf_living:
+      name: Livingroom Lights
+      description: The Livingroom Lights
+      display_categories: LIGHT
+
+    light.gf_living_celing:
+      name: Livingroom Light
+      description: The celing light in the Livingroom
+      display_categories: LIGHT
+
+    light.gf_living_lamp:
+      name: Livingroom Lamp
+      description: The lamp light in the Livingroom
+      display_categories: LIGHT
+
+    light.ff_landing_celing:
+      name: Landing Light
+      description: The landing light
+      display_categories: LIGHT
+  
+    light.ff_study_celing:
+      name: Study Light
+      description: The celing light in the study
+      display_categories: LIGHT
+      
+    group.light_ff_study_mood:
+      name: Study Mood Lighting
+      description: The mood lights in the study
+      display_categories: LIGHT
+
+    light.ff_bedroom_celing:
+      name: Bedroom Light
+      description: The celing light in the bedroom
+      display_categories: LIGHT
+
+    light.ff_bedroom_bedside_stuart:
+      name: Stuart's Bedside Light
+      description: The Stuart's Bedside light in the Bedroom
+      display_categories: LIGHT
+
+    light.ff_bedroom_bedside_kareen:
+      name: Kareen's Bedside Light
+      description: The Kareen's Bedside light in the bedroom
+      display_categories: LIGHT
+  
+    light.gf_studio_celing:
+      name: Studio Light
+      description: The celing light in the studio
+      display_categories: LIGHT
+
+    switch.gf_dinning_tv:
+      name: Kitchen TV
+      description: The Kitchen TV
+      display_categories: SWITCH
+
+    switch.gf_living_tv:
+      name: TV
+      description: The Livingroom TV
+      display_categories: SWITCH
+
+    switch.ff_study_monitors:
+      name: Computer Monitors
+      description: The Computer Monitors 
+      display_categories: SWITCH
+
+    switch.ff_study_sterio:
+      name: Study Sterio
+      description: The Study Sterio
+      display_categories: SWITCH
+
+    switch.study_fan:
+      name: Study Fan
+      description: The Study Fan
+      display_categories: SWITCH
+  
+    switch.ff_bedroom_tv:
+      name: Bedroom TV
+      description: The Bedroom TV 
+      display_categories: SWITCH
+
+    switch.ff_bedroom_fairylights:
+      name: Bedroom Fairy Lights
+      description: The Bedroom Fairy Lights 
+      display_categories: SWITCH
+  
+    switch.gf_studio_treadmill:
+      name: Treadmill
+      description: The Treadmill 
+      display_categories: SWITCH
+
+    script.house_scene_bedtime:
+      name: Bedtime
+      description: Bedtime scene
+      display_categories: SWITCH
+
+    script.lighting_dull:
+      name: Dull Lighting
+      description: Dull Lighting scene
+      display_categories: SWITCH
+
+    script.lighting_night:
+      name: Night Lighting
+      description: Night Lighting scene
+      display_categories: SWITCH
+
+    script.lighting_sunset:
+      name: Sunset Lighting
+      description: Sunset Lighting scene
+      display_categories: SWITCH

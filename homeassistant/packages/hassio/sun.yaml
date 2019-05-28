@@ -15,7 +15,7 @@ automation:
     - platform: numeric_state
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
-      below: 0
+      below: 2
       above: -6
   action:
     - service: input_select.select_option

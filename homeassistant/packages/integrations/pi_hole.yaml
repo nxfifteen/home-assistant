@@ -25,7 +25,7 @@ binary_sensor:
 switch:
   - platform: command_line
     switches:
-      pihole_temp_disable:
+      pi_hole_enable:
         command_on: !secret cmd_pi_hole_on
         command_off: !secret cmd_pi_hole_off
 
@@ -52,5 +52,6 @@ homeassistant:
       friendly_name: Unique Clients
       icon: mdi:desktop-classic
     
-    switch.pihole_temp_disable:
-      friendly_name: Disable PiHole
+    switch.pi_hole_enable:
+      friendly_name: Pi-Hole
+      icon: mdi:block-helper

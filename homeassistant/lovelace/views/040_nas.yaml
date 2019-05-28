@@ -257,8 +257,8 @@ cards:
     cards:    
     - type: entities
       entities:
-        - sensor.rpi_pihole
-        - switch.pihole_temp_disable
+        - entity: switch.pi_hole_enable
+          name: Pi-Hole
         
     - type: custom:mini-graph-card
       entities: 

@@ -81,6 +81,34 @@ cards:
   - type: custom:mini-graph-card
     entities: 
       - sensor.ff_study_sterio_power
+    name: Fan
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 24
+    points_per_hour: 6
+    icon: mdi:power-socket-uk
+    show:
+      icon: true
+      extrema: true
+      icon_adaptive_color: true
+    color_thresholds:
+        # High
+      - value: 75
+        color: "#e74c3c"
+        # In Use
+      - value: 45
+        color: "#ffa500"
+        # Stand By
+      - value: 5
+        color: "#3498db"
+        # Off
+      - value: -1
+        color: "#1db954"
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.study_fan_power
     name: Sterio
     height: 74
     line_width: 2
@@ -155,7 +183,29 @@ cards:
           volume: true
           source: true
           power_state: false
-        
+
+  - type: vertical-stack
+    cards:
+      - type: custom:mini-media-player
+        name: Plex - Video
+        entity: media_player.plex_taichi
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+          
+      - type: custom:mini-media-player
+        name: Plex - Audio
+        entity: media_player.plex_taichi_audio
+        artwork: cover
+        source: icon
+        hide:
+          volume: true
+          source: true
+          power_state: false
+
   - type: entities
     show_header_toggle: false
     title: Batteries
