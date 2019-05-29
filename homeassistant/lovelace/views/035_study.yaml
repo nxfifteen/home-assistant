@@ -34,6 +34,7 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Plugs
+      - input_select.his_pc_options
       - switch.wake_on_lan
       - type: section
       - switch.ff_study_monitors

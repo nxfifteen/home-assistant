@@ -26,6 +26,8 @@ google_actions:
       - script.lighting_night
       - script.lighting_sunset
       - script.my_computer
+      - script.my_computer_lock
+      - script.my_computer_hibernate
     
     include_domains:
       - switch
@@ -175,3 +177,9 @@ google_actions:
 
     script.lighting_sunset:
       name: Sunset Lighting
+
+    script.my_computer_lock:
+      name: Lock My Computer
+
+    script.my_computer_hibernate:
+      name: Hibernate My Computer

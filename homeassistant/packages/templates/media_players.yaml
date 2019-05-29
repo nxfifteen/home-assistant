@@ -2,6 +2,15 @@
 sensor:
   - platform: template
     sensors:
+      media_everywhere_alexa:
+        value_template: '{{ states.media_player.everywhere.state|default(off)|string }}'  
+        friendly_name: 'Alexa Everywhere'
+        
+      media_downstairs_alexa:
+        value_template: '{{ states.media_player.downstairs.state|default(off)|string }}'  
+        friendly_name: 'Alexa Downstairs'
+      
+      # Study
       media_ff_study_alexa:
         value_template: '{{ states.media_player.study.state|default(off)|string }}'  
         friendly_name: 'Study Alexa'
@@ -12,4 +21,31 @@ sensor:
         
       media_ff_study_plex_audio:
         value_template: '{{ states.media_player.plex_taichi_audio.state|default(off)|string }}'  
-        friendly_name: 'Study Plex (Video)'
+        friendly_name: 'Study Plex (Audio)'
+        
+      # Bedroom
+      media_ff_bedroom_plex_audio:
+        value_template: '{{ states.media_player.plex_bedroom_audio.state|default(off)|string }}'  
+        friendly_name: 'Bedroom Plex (Audio)'
+        
+      media_ff_bedroom_fire_tv:
+        value_template: '{{ states.media_player.bedroom_fire_tv_stick.state|default(off)|string }}'  
+        friendly_name: 'Bedroom FireTV'
+
+      # Kitchen
+      media_gf_kitchen_alexa:
+        value_template: '{{ states.media_player.kitchen.state|default(off)|string }}'  
+        friendly_name: 'Kitchen Alexa'
+        
+      media_gf_kitchen_fire_tv:
+        value_template: '{{ states.media_player.kitchen_fire_tv_stick.state|default(off)|string }}'  
+        friendly_name: 'Kitchen FireTV'
+
+      # Livingroom
+      media_gf_livingroom_alexa:
+        value_template: '{{ states.media_player.living_room.state|default(off)|string }}'  
+        friendly_name: 'Livingroom Alexa'
+        
+      media_gf_livingroom_fire_tv:
+        value_template: '{{ states.media_player.livingroom_fire_tv_stick.state|default(off)|string }}'  
+        friendly_name: 'Livingroom FireTV'

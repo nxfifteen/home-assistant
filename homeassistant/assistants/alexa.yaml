@@ -26,6 +26,8 @@ alexa:
       - script.lighting_night
       - script.lighting_sunset
       - script.my_computer
+      - script.my_computer_lock
+      - script.my_computer_hibernate
     
     include_domains:
       - switch
@@ -210,4 +212,14 @@ alexa:
     script.lighting_sunset:
       name: Sunset Lighting
       description: Sunset Lighting scene
+      display_categories: SWITCH
+
+    script.my_computer_lock:
+      name: Lock My Computer
+      description: Lock PC Via GhostScript
+      display_categories: SWITCH
+
+    script.my_computer_hibernate:
+      name: Hibernate My Computer
+      description: Hibernate PC Via GhostScript
       display_categories: SWITCH

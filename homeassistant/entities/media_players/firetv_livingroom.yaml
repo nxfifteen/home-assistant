@@ -1,0 +1,6 @@
+---
+platform: androidtv
+host: 192.168.41.2
+name: "Livingroom Fire TV"
+adb_server_ip: 127.0.0.1
+adb_server_port: 5000

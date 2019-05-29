@@ -1,0 +1,7 @@
+---
+my_computer_hibernate:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.his_pc_options
+        option: Hibernate

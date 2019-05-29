@@ -25,6 +25,8 @@ homeassistant/secrets.yaml
 **/*.pyc
 **/*.json.backup
 **/flows_cred.json
+homeassistant/.androidkeys/adbkey
+homeassistant/.androidkeys/adbkey.pub
 homeassistant/node-red/ssh/id_*
 homeassistant/node-red/shell/*
 
