@@ -85,8 +85,8 @@ google_actions:
       room: Hallway
   
     group.light_gf_dinning:
-      name: Dinning Room Lights
-      room: Dinning Room
+      name: Dining Room Lights
+      room: Dining Room
   
     group.light_gf_kitchen:
       name: Kitchen Lights

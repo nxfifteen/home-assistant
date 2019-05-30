@@ -4,5 +4,6 @@ logger:
   logs:
     homeassistant.helpers.script: info
     homeassistant.components.automation: info
-    homeassistant.components.media_player: debug
-    homeassistant.components.plex.sensor: debug
+    #homeassistant.components.media_player: debug
+    #homeassistant.components.plex.sensor: debug
+    #homeassistant.components.rest.sensor: debug

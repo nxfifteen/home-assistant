@@ -1,0 +1,330 @@
+---
+sensor:
+  - platform: rest
+    name: books_series_lost_fleet
+    payload: '{ "key" : "B00HHGK5KK" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_series_beyond_the_frontier
+    payload: '{ "key" : "B00HHGJZGU" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_series_genesis_fleet
+    payload: '{ "key" : "B06XSM7WZC" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_series_the_lost_stars
+    payload: '{ "key" : "B00KWRAVK0" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_series_hell_divers
+    payload: '{ "key" : "B01MRBZT7F" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_series_angel_in_the_whirlwind
+    payload: '{ "key" : "B01B8I7MAI" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_series_jack_reacher
+    payload: '{ "key" : "B00HS44NCW" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_series_expeditionary_force
+    payload: '{ "key" : "B01N1NWMX6" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_series_the_expanse
+    payload: '{ "key" : "B00PBA7AG6" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_series_world_apart
+    payload: '{ "key" : "B07JFGK123" }'
+    resource: !secret nodered_endpoint_books
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    force_update: true
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_search_query_star_trek
+    payload: '{ "search" : "node=536034031" }'
+    resource: !secret nodered_endpoint_books_search
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    #icon: mdi:audiobook
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_search_author_peter_f_hamilton
+    payload: '{ "search" : "searchAuthor=Peter+F+Hamilton" }'
+    resource: !secret nodered_endpoint_books_author
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    #icon: mdi:audiobook
+    scan_interval: 21000
+
+  - platform: rest
+    name: books_search_author_dayton_ward
+    payload: '{ "search" : "searchAuthor=Dayton+Ward" }'
+    resource: !secret nodered_endpoint_books_author
+    username: !secret nodered_username
+    password: !secret nodered_password
+    authentication: basic
+    headers:
+      User-Agent: Home Assistant
+      Content-Type: application/json
+    method: POST
+    json_attributes:
+      - title
+      - release
+      - url
+      - latest_book
+      - latest_narrator
+      - latest_length
+    value_template: '{{ value_json.books }}'
+    #icon: mdi:audiobook
+    scan_interval: 21000
+
+homeassistant:
+  customize:
+    sensor.books_series_angel_in_the_whirlwind:
+      friendly_name: Angel in The Whirlwind
+      icon: mdi:audiobook
+    sensor.books_series_beyond_the_frontier:
+      friendly_name: Beyond The Frontier
+      icon: mdi:audiobook
+    sensor.books_series_genesis_fleet:
+      friendly_name: Genesis Fleet
+      icon: mdi:audiobook
+    sensor.books_series_hell_divers:
+      friendly_name: Hell Divers
+      icon: mdi:audiobook
+    sensor.books_series_lost_fleet:
+      friendly_name: Lost Fleet
+      icon: mdi:audiobook
+    sensor.books_series_the_lost_stars:
+      friendly_name: The Lost Stars
+      icon: mdi:audiobook
+    sensor.books_series_the_expanse:
+      friendly_name: The Expanse
+      icon: mdi:audiobook
+    sensor.books_series_world_apart:
+      friendly_name: World Apart
+      icon: mdi:audiobook
+    sensor.books_series_expeditionary_force:
+      friendly_name: Expeditionary Force
+      icon: mdi:audiobook
+    sensor.books_series_jack_reacher:
+      friendly_name: Jack Reacher
+      icon: mdi:audiobook
+    sensor.books_search_author_dayton_ward:
+      friendly_name: Dayton Ward
+      icon: mdi:audiobook
+    sensor.books_search_author_peter_f_hamilton:
+      friendly_name: Peter F. Hamilton
+      icon: mdi:audiobook
+    sensor.books_search_query_star_trek:
+      friendly_name: Star Trek
+      icon: mdi:audiobook
+

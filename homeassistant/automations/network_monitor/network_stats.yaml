@@ -1,5 +1,5 @@
 ---
-alias: PiHole Daily stats!
+alias: PiHole Daily Blocked stats!
 trigger:
   platform: time
   at: '23:50:00'

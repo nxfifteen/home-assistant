@@ -29,7 +29,7 @@ sensor:
         friendly_name: 'Bedroom Plex (Audio)'
         
       media_ff_bedroom_fire_tv:
-        value_template: '{{ states.media_player.bedroom_fire_tv_stick.state|default(off)|string }}'  
+        value_template: '{{ states.media_player.bedroom_fire_tv.state|default(off)|string }}'  
         friendly_name: 'Bedroom FireTV'
 
       # Kitchen
@@ -38,7 +38,7 @@ sensor:
         friendly_name: 'Kitchen Alexa'
         
       media_gf_kitchen_fire_tv:
-        value_template: '{{ states.media_player.kitchen_fire_tv_stick.state|default(off)|string }}'  
+        value_template: '{{ states.media_player.kitchen_fire_tv.state|default(off)|string }}'  
         friendly_name: 'Kitchen FireTV'
 
       # Livingroom
@@ -47,5 +47,5 @@ sensor:
         friendly_name: 'Livingroom Alexa'
         
       media_gf_livingroom_fire_tv:
-        value_template: '{{ states.media_player.livingroom_fire_tv_stick.state|default(off)|string }}'  
+        value_template: '{{ states.media_player.livingroom_fire_tv.state|default(off)|string }}'  
         friendly_name: 'Livingroom FireTV'

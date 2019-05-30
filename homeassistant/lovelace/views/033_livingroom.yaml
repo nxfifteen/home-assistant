@@ -96,13 +96,13 @@ cards:
     cards:
       - type: custom:mini-media-player
         name: FireTV
-        entity: media_player.livingroom_fire_tv_stick
+        entity: media_player.livingroom_fire_tv
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
     
       - type: custom:mini-media-player
         name: Alexa
@@ -110,9 +110,9 @@ cards:
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
     
       - type: custom:mini-media-player
         name: Alexa (Everywhere)
@@ -120,9 +120,9 @@ cards:
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
     
       - type: custom:mini-media-player
         name: Alexa (Downstairs)
@@ -130,9 +130,9 @@ cards:
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
         
   - type: entities
     show_header_toggle: false

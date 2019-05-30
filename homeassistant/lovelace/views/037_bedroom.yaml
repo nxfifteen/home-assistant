@@ -77,25 +77,26 @@ cards:
 
   - type: vertical-stack
     cards:
+        
       - type: custom:mini-media-player
         name: Plex Audio
         entity: media_player.plex_bedroom_audio
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
           
       - type: custom:mini-media-player
         name: FireTV
-        entity: media_player.bedroom_fire_tv_stick
+        entity: media_player.bedroom_fire_tv
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
         
   - type: entities
     show_header_toggle: false

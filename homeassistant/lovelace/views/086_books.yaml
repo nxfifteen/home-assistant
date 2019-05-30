@@ -1,0 +1,64 @@
+---
+id: books
+icon: mdi:audiobook
+title: Books
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Series
+      - entity: sensor.books_series_angel_in_the_whirlwind
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_angel_in_the_whirlwind.attributes.release ]]"
+      - entity: sensor.books_series_beyond_the_frontier
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_beyond_the_frontier.attributes.release ]]"
+      - entity: sensor.books_series_genesis_fleet
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_genesis_fleet.attributes.release ]]"
+      - entity: sensor.books_series_hell_divers
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_hell_divers.attributes.release ]]"
+      - entity: sensor.books_series_lost_fleet
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_lost_fleet.attributes.release ]]"
+      - entity: sensor.books_series_the_lost_stars
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_the_lost_stars.attributes.release ]]"
+      - entity: sensor.books_series_the_expanse
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_the_expanse.attributes.release ]]"
+      - entity: sensor.books_series_world_apart
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_world_apart.attributes.release ]]"
+      - entity: sensor.books_series_expeditionary_force
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_expeditionary_force.attributes.release ]]"
+      - entity: sensor.books_series_jack_reacher
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_series_jack_reacher.attributes.release ]]"
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Authors
+      - entity: sensor.books_search_author_dayton_ward
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_search_author_dayton_ward.attributes.release ]]"
+      - entity: sensor.books_search_author_peter_f_hamilton
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_search_author_peter_f_hamilton.attributes.release ]]"
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Searches
+      - entity: sensor.books_search_query_star_trek
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.books_search_query_star_trek.attributes.release ]]"
+

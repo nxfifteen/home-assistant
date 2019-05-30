@@ -171,9 +171,9 @@ cards:
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
           
       - type: custom:mini-media-player
         name: Alexa (Everywhere)
@@ -181,9 +181,9 @@ cards:
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
 
   - type: vertical-stack
     cards:
@@ -193,9 +193,9 @@ cards:
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
           
       - type: custom:mini-media-player
         name: Plex - Audio
@@ -203,9 +203,9 @@ cards:
         artwork: cover
         source: icon
         hide:
-          volume: true
+          volume: false
           source: true
-          power_state: false
+          power_state: true
 
   - type: entities
     show_header_toggle: false

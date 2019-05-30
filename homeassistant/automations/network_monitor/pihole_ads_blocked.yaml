@@ -1,5 +1,5 @@
 ---
-alias: PiHole Daily stats!
+alias: PiHole Daily Client stats!
 trigger:
   platform: time
   at: '04:30:00'

@@ -95,8 +95,8 @@ alexa:
       display_categories: LIGHT
   
     group.light_gf_dinning:
-      name: Dinning Room Lights
-      description: The Dinning Room lights
+      name: Dining Room Lights
+      description: The Dining Room lights
       display_categories: LIGHT
   
     group.light_gf_kitchen:

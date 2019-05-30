@@ -1,0 +1,281 @@
+---
+id: books
+icon: mdi:audiobook
+title: Books
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_angel_in_the_whirlwind.attributes.title ]]
+          
+          * Has [[ sensor.books_series_angel_in_the_whirlwind ]] books
+          * Lastest Release: [[ sensor.books_series_angel_in_the_whirlwind.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_angel_in_the_whirlwind.attributes.latest_book ]]**, read by **[[ sensor.books_series_angel_in_the_whirlwind.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_angel_in_the_whirlwind.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_angel_in_the_whirlwind.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_angel_in_the_whirlwind
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_angel_in_the_whirlwind.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_beyond_the_frontier.attributes.title ]]
+          
+          * Has [[ sensor.books_series_beyond_the_frontier ]] books
+          * Lastest Release: [[ sensor.books_series_beyond_the_frontier.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_beyond_the_frontier.attributes.latest_book ]]**, read by **[[ sensor.books_series_beyond_the_frontier.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_beyond_the_frontier.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_beyond_the_frontier.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_beyond_the_frontier
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_beyond_the_frontier.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_genesis_fleet.attributes.title ]]
+          
+          * Has [[ sensor.books_series_genesis_fleet ]] books
+          * Lastest Release: [[ sensor.books_series_genesis_fleet.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_genesis_fleet.attributes.latest_book ]]**, read by **[[ sensor.books_series_genesis_fleet.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_genesis_fleet.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_genesis_fleet.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_genesis_fleet
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_genesis_fleet.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_hell_divers.attributes.title ]]
+          
+          * Has [[ sensor.books_series_hell_divers ]] books
+          * Lastest Release: [[ sensor.books_series_hell_divers.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_hell_divers.attributes.latest_book ]]**, read by **[[ sensor.books_series_hell_divers.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_hell_divers.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_hell_divers.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_hell_divers
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_hell_divers.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_lost_fleet.attributes.title ]]
+          
+          * Has [[ sensor.books_series_lost_fleet ]] books
+          * Lastest Release: [[ sensor.books_series_lost_fleet.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_lost_fleet.attributes.latest_book ]]**, read by **[[ sensor.books_series_lost_fleet.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_lost_fleet.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_lost_fleet.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_lost_fleet
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_lost_fleet.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_the_lost_stars.attributes.title ]]
+          
+          * Has [[ sensor.books_series_the_lost_stars ]] books
+          * Lastest Release: [[ sensor.books_series_the_lost_stars.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_the_lost_stars.attributes.latest_book ]]**, read by **[[ sensor.books_series_the_lost_stars.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_the_lost_stars.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_the_lost_stars.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_the_lost_stars
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_the_lost_stars.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_the_expanse.attributes.title ]]
+          
+          * Has [[ sensor.books_series_the_expanse ]] books
+          * Lastest Release: [[ sensor.books_series_the_expanse.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_the_expanse.attributes.latest_book ]]**, read by **[[ sensor.books_series_the_expanse.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_the_expanse.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_the_expanse.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_the_expanse
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_the_expanse.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_world_apart.attributes.title ]]
+          
+          * Has [[ sensor.books_series_world_apart ]] books
+          * Lastest Release: [[ sensor.books_series_world_apart.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_world_apart.attributes.latest_book ]]**, read by **[[ sensor.books_series_world_apart.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_world_apart.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_world_apart.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_world_apart
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_world_apart.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_expeditionary_force.attributes.title ]]
+          
+          * Has [[ sensor.books_series_expeditionary_force ]] books
+          * Lastest Release: [[ sensor.books_series_expeditionary_force.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_expeditionary_force.attributes.latest_book ]]**, read by **[[ sensor.books_series_expeditionary_force.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_expeditionary_force.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_expeditionary_force.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_expeditionary_force
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_expeditionary_force.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_series_jack_reacher.attributes.title ]]
+          
+          * Has [[ sensor.books_series_jack_reacher ]] books
+          * Lastest Release: [[ sensor.books_series_jack_reacher.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_series_jack_reacher.attributes.latest_book ]]**, read by **[[ sensor.books_series_jack_reacher.attributes.latest_narrator ]]** and lasting **[[ sensor.books_series_jack_reacher.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_series_jack_reacher.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_series_jack_reacher
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_series_jack_reacher.attributes.release ]]"
+
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_search_author_dayton_ward.attributes.title ]]
+          
+          * Has [[ sensor.books_search_author_dayton_ward ]] books
+          * Lastest Release: [[ sensor.books_search_author_dayton_ward.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_search_author_dayton_ward.attributes.latest_book ]]**, read by **[[ sensor.books_search_author_dayton_ward.attributes.latest_narrator ]]** and lasting **[[ sensor.books_search_author_dayton_ward.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_search_author_dayton_ward.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_search_author_dayton_ward
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_search_author_dayton_ward.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_search_author_peter_f_hamilton.attributes.title ]]
+          
+          * Has [[ sensor.books_search_author_peter_f_hamilton ]] books
+          * Lastest Release: [[ sensor.books_search_author_peter_f_hamilton.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_search_author_peter_f_hamilton.attributes.latest_book ]]**, read by **[[ sensor.books_search_author_peter_f_hamilton.attributes.latest_narrator ]]** and lasting **[[ sensor.books_search_author_peter_f_hamilton.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_search_author_peter_f_hamilton.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_search_author_peter_f_hamilton
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_search_author_peter_f_hamilton.attributes.release ]]"
+
+  # Some controlls for demo purposes
+  - type: vertical-stack
+    cards:
+      # And finally, the useful-markdown-card with a copy of the same content
+      - type: custom:useful-markdown-card
+        content: |
+          ## [[ sensor.books_search_query_star_trek.attributes.title ]]
+          
+          * Has [[ sensor.books_search_query_star_trek ]] books
+          * Lastest Release: [[ sensor.books_search_query_star_trek.attributes.release ]]
+          
+          The latest book is **[[ sensor.books_search_query_star_trek.attributes.latest_book ]]**, read by **[[ sensor.books_search_query_star_trek.attributes.latest_narrator ]]** and lasting **[[ sensor.books_search_query_star_trek.attributes.latest_length ]]**
+    
+          [Find Online]([[ sensor.books_search_query_star_trek.attributes.url ]])
+          
+      - type: entities
+        entities:
+        - entity: sensor.books_search_query_star_trek
+          type: custom:secondaryinfo-entity-row
+          secondary_info: "[[ sensor.books_search_query_star_trek.attributes.release ]]"
+
