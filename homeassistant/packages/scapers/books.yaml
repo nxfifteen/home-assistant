@@ -2,8 +2,8 @@
 sensor:
   - platform: rest
     name: books_series_lost_fleet
-    payload: '{ "key" : "B00HHGK5KK" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=Angel+in+the+Whirlwind+Christopher+G.+Nuttall" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic
@@ -24,8 +24,8 @@ sensor:
 
   - platform: rest
     name: books_series_beyond_the_frontier
-    payload: '{ "key" : "B00HHGJZGU" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=Lost+Fleet%3A+Beyond+the+Frontier+Jack+Campbell" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic
@@ -46,8 +46,8 @@ sensor:
 
   - platform: rest
     name: books_series_genesis_fleet
-    payload: '{ "key" : "B06XSM7WZC" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=Genesis+Fleet+Jack+Campbell" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic
@@ -68,8 +68,8 @@ sensor:
 
   - platform: rest
     name: books_series_the_lost_stars
-    payload: '{ "key" : "B00KWRAVK0" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=The+Lost+Stars+Jack+Campbell" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic
@@ -90,8 +90,8 @@ sensor:
 
   - platform: rest
     name: books_series_hell_divers
-    payload: '{ "key" : "B01MRBZT7F" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=Hell+Divers+Nicholas+Sansbury+Smith" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic
@@ -112,8 +112,8 @@ sensor:
 
   - platform: rest
     name: books_series_angel_in_the_whirlwind
-    payload: '{ "key" : "B01B8I7MAI" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=Angel+in+the+Whirlwind+Christopher+G.+Nuttall" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic
@@ -134,8 +134,8 @@ sensor:
 
   - platform: rest
     name: books_series_jack_reacher
-    payload: '{ "key" : "B00HS44NCW" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=jack+reacher+lee+child" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic
@@ -156,8 +156,8 @@ sensor:
 
   - platform: rest
     name: books_series_expeditionary_force
-    payload: '{ "key" : "B01N1NWMX6" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=Expeditionary+Force+Craig+Alanson" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic
@@ -178,8 +178,8 @@ sensor:
 
   - platform: rest
     name: books_series_the_expanse
-    payload: '{ "key" : "B00PBA7AG6" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=The+Expanse+James+S.+A.+Corey" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic
@@ -200,8 +200,8 @@ sensor:
 
   - platform: rest
     name: books_series_world_apart
-    payload: '{ "key" : "B07JFGK123" }'
-    resource: !secret nodered_endpoint_books
+    payload: '{ "search" : "keywords=World+Apart+Robert+D.+Armstrong" }'
+    resource: !secret nodered_endpoint_books_search
     username: !secret nodered_username
     password: !secret nodered_password
     authentication: basic

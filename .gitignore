@@ -29,6 +29,8 @@ homeassistant/.androidkeys/adbkey
 homeassistant/.androidkeys/adbkey.pub
 homeassistant/node-red/ssh/id_*
 homeassistant/node-red/shell/*
+homeassistant/redacted.txt
+homeassistant/redacted_users.txt
 
 # You can whitelist files/folders with !, these will not be ignored.
 !.gitignore

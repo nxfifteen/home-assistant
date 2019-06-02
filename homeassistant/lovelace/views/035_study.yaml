@@ -36,6 +36,7 @@ cards:
         text: Plugs
       - input_select.his_pc_options
       - switch.wake_on_lan
+      - script.my_computer
       - type: section
       - switch.ff_study_monitors
       - switch.ff_study_sterio

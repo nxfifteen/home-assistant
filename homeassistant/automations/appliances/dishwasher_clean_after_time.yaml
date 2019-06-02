@@ -9,7 +9,7 @@ trigger:
     entity_id: input_select.dishwasher_status
     to: Finishing
     for:
-      minutes: 1
+      minutes: 5
 condition:
   condition: and
   conditions:

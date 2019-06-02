@@ -239,6 +239,8 @@ cards:
     cards:  
       - type: thermostat
         entity: climate.hallway
+        
+      - binary_sensor.strath_away
     
       - type: custom:mini-graph-card
         entities: 
