@@ -4,28 +4,33 @@ sensor:
   name: commute_stuart_home
   origin: person.stuart
   destination: zone.home
+  scan_interval: 00:45
   region: 'EU'
 
 - platform: waze_travel_time
   name: commute_stuart_work
   origin: zone.home
   destination: zone.cs_tps
+  scan_interval: 01:30
   region: 'EU'
   
 - platform: waze_travel_time
   name: commute_kareen_home
   origin: person.kareen
   destination: zone.home
+  scan_interval: 00:45
   region: 'EU'
 
 - platform: waze_travel_time
   name: commute_kareen_work_a
   origin: zone.home
   destination: zone.newport
+  scan_interval: 01:30
   region: 'EU'
 
 - platform: waze_travel_time
   name: commute_kareen_work_b
   origin: zone.home
   destination: zone.tayport
+  scan_interval: 01:30
   region: 'EU'

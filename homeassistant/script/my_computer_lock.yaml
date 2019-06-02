@@ -5,3 +5,18 @@ my_computer_lock:
       data:
         entity_id: input_select.his_pc_options
         option: Lock
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.study_fan
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ff_study_sterio
+
+    - delay:
+        seconds: 20
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ff_study_monitors

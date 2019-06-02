@@ -21,6 +21,29 @@ cards:
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
+        text: Harmony
+      - sensor.remote_gf_livingroom
+      - switch.remote_gf_livingroom_watch_tv
+      - switch.remote_gf_livingroom_watch_fire_tv
+      - media_player.livingroom_fire_tv
+      - media_player.livingroom_fire_tv_stick
+
+  - type: picture-glance
+    title: Harmony
+    entities:
+      - switch.gf_living_tv
+      - switch.remote_gf_livingroom_watch_tv
+      - switch.remote_gf_livingroom_watch_fire_tv
+    state_image:
+      "PowerOff": /local/images/power_off_red.png
+      "Watch TV": /local/images/humax.png
+      "Watch Fire TV": /local/images/amazon_tv.png
+    entity: sensor.remote_gf_livingroom
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
         text: Lights
       - light.gf_living_celing
       - light.gf_living_lamp
