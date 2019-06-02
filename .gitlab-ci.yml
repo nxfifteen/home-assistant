@@ -19,6 +19,8 @@ stages:
   before_script:
     - python -m homeassistant --version
     - mv  homeassistant/secrets.dist  homeassistant/secrets.yaml
+    - pwd
+    - ls -al
   script:
     - |
       python -m homeassistant \

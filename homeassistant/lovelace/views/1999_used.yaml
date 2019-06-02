@@ -333,8 +333,6 @@ cards:
     - binary_sensor.jarvis_traccar
     - device_tracker.john
     - device_tracker.kareen
-    - device_tracker.kev_phone_unifi
-    - device_tracker.kindle_kareen_nx_2
     - device_tracker.maureen
     - device_tracker.stuart
     - binary_sensor.motion_ff_bedroom
@@ -350,5 +348,21 @@ cards:
     - sensor.next_bus_to_6500n0468
     - sensor.room_occupancy_landing_reason
     - switch.room_occupancy_landing
-    - media_player.plex_stuart_s_kindle
     - media_player.plex_firefox
+    - sensor.network_down
+    - sensor.network_up
+    - sensor.remote_gf_livingroom
+    - sensor.rpi_pihole
+    - switch.dishwasher
+    - switch.pihole_enable
+    - switch.washing_machine
+    - media_player.livingroom_fire_tv_stick
+    - media_player.kitchen_fire_tv_stick
+    - media_player.bedroom_fire_tv_stick
+    - remote.living_room
+    - device_tracker.stuart_pc
+    - device_tracker.stuart_kindle
+    - device_tracker.john_phone
+    - device_tracker.irene_phone
+    - binary_sensor.remote_ui
+    - binary_sensor.ff_landing_sensor

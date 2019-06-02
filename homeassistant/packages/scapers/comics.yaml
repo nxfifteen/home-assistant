@@ -1,0 +1,19 @@
+---
+sensor:
+  - platform: mqtt
+    name: "comics_upcoming"
+    state_topic: "eml/alerts/comics/upcoming"
+    value_template: "{{ value_json.humanized }}"
+    json_attributes_topic: "eml/alerts/comics/upcoming"
+
+  - platform: template
+    sensors:
+      comics_upcoming_issue:
+        value_template: '{{ sensor.comics_upcoming.attributes.title }} #{{ sensor.comics_upcoming.attributes.issue }}'
+        friendly_name: 'Upcoming Comic'
+
+homeassistant:
+  customize:
+    sensor.comics_upcoming:
+      friendly_name: Next Comic Subscription
+      icon: mdi:book-open

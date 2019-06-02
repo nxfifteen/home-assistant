@@ -62,3 +62,12 @@ cards:
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ sensor.books_search_query_star_trek.attributes.release ]]"
 
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Comics
+      - entity: sensor.comics_upcoming
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.comics_upcoming_issue.state ]]"
+

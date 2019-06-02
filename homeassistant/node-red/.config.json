@@ -1474,6 +1474,24 @@
      "file": "/config/node-red/node_modules/node-red-contrib-loop-processing/while-loop.js"
     }
    }
+  },
+  "node-red-node-mysql": {
+   "name": "node-red-node-mysql",
+   "version": "0.0.18",
+   "local": true,
+   "nodes": {
+    "mysql": {
+     "name": "mysql",
+     "types": [
+      "MySQLdatabase",
+      "mysql"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-mysql",
+     "file": "/config/node-red/node_modules/node-red-node-mysql/68-mysql.js"
+    }
+   }
   }
  },
  "users": {
