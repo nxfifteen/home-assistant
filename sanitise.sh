@@ -24,5 +24,9 @@ sed -ri 's/"//' homeassistant/secrets.dist
 sed -ri "s/'//" homeassistant/secrets.dist
 sed -ri "s/'//" homeassistant/secrets.dist
 
+sed -ri "s/REDACTED/REDACTED'/" homeassistant/secrets.dist
+sed -ri "s/=:=REDACTED/=:='REDACTED/" homeassistant/secrets.dist
+sed -ri "s/curl/'curl/" homeassistant/secrets.dist
+
 sed -ri 's/=:=/: /' homeassistant/secrets.dist
 
