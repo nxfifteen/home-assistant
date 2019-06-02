@@ -9,7 +9,7 @@ sensor:
   - platform: template
     sensors:
       comics_upcoming_issue:
-        value_template: '{{ sensor.comics_upcoming.attributes.title }} #{{ sensor.comics_upcoming.attributes.issue }}'
+        value_template: '{{ states.sensor.comics_upcoming.attributes.title }} #{{ states.sensor.comics_upcoming.attributes.issue }}'
         friendly_name: 'Upcoming Comic'
 
 homeassistant:
