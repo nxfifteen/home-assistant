@@ -57,7 +57,7 @@ cards:
       - sensor.kitchen_nest_protect_smoke_status
       - sensor.landing_nest_protect_smoke_status
       - type: section
-      #- binary_sensor.gf_hallway_contact_sensor
+      - binary_sensor.gf_hallway_contact_sensor
       - binary_sensor.gf_dinning_contact_side
       - type: section
       - sun.sun
