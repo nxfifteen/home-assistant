@@ -5,11 +5,19 @@ title: Git
 cards:
   - !include ../cards/compact_custom_header_main.yaml
 
-  - type: 'custom:clock-card'
-
   - type: entities
     entities:
       - binary_sensor.gitlab
+      
+      - sensor.gitlab_279_commits_weekly
+      - sensor.gitlab_279_commits_week_last_mean
+      - sensor.gitlab_279_commits_week_this_mean
+      
+      - sensor.gitlab_279_commits_monthly
+      - sensor.gitlab_279_commits_month_last_mean
+      - sensor.gitlab_279_commits_month_this_mean
+      
+      - sensor.gitlab_279_commits_last_month
 
   - type: entities
     entities:
@@ -23,9 +31,9 @@ cards:
                 card:
                   type: glance
                   entities:
-                    - sensor.gitlab_279_stars
                     - sensor.gitlab_279_forks
                     - sensor.gitlab_279_issues
+                    - sensor.gitlab_279_commits
                 style: 
                   border-radius: 0px
                 
@@ -45,8 +53,8 @@ cards:
                 card:
                   type: glance
                   entities:
-                    - sensor.gitlab_279_stars_weekly
-                    - sensor.gitlab_279_stars_last_week
+                    - sensor.gitlab_279_commits_weekly
+                    - sensor.gitlab_279_commits_last_week
                 style: 
                   border-radius: 0px
           
@@ -54,8 +62,8 @@ cards:
                 card:
                   type: glance
                   entities:
-                    - sensor.gitlab_279_stars_monthly
-                    - sensor.gitlab_279_stars_last_month
+                    - sensor.gitlab_279_commits_monthly
+                    - sensor.gitlab_279_commits_last_month
                 style: 
                   border-radius: 0px
                   
@@ -81,142 +89,6 @@ cards:
                 style: 
                   border-radius: 0px
 
-  - type: entities
-    entities:
-      - type: section
-        label: GitLab - Core (Store)
-      - type: custom:vertical-stack-in-card
-        cards:
-          - type: horizontal-stack
-            cards:
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_252_stars
-                    - sensor.gitlab_252_forks
-                    - sensor.gitlab_252_issues
-                style: 
-                  border-radius: 0px
-                
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_252_ci
-                style: 
-                  border-radius: 0px
-            
-          - type: divider
-           
-          - type: horizontal-stack
-            cards:
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_252_stars_weekly
-                    - sensor.gitlab_252_stars_last_week
-                style: 
-                  border-radius: 0px
-          
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_252_stars_monthly
-                    - sensor.gitlab_252_stars_last_month
-                style: 
-                  border-radius: 0px
-                  
-          - type: divider
-           
-          - type: horizontal-stack
-            cards:
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_252_issues_weekly
-                    - sensor.gitlab_252_issues_last_week
-                style: 
-                  border-radius: 0px
-          
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_252_issues_monthly
-                    - sensor.gitlab_252_issues_last_month
-                style: 
-                  border-radius: 0px
 
-  - type: entities
-    entities:
-      - type: section
-        label: GitLab - Core (Samsung Health Sync)
-      - type: custom:vertical-stack-in-card
-        cards:
-          - type: horizontal-stack
-            cards:
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_274_stars
-                    - sensor.gitlab_274_forks
-                    - sensor.gitlab_274_issues
-                style: 
-                  border-radius: 0px
-                
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_274_ci
-                style: 
-                  border-radius: 0px
-            
-          - type: divider
-           
-          - type: horizontal-stack
-            cards:
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_274_stars_weekly
-                    - sensor.gitlab_274_stars_last_week
-                style: 
-                  border-radius: 0px
-          
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_274_stars_monthly
-                    - sensor.gitlab_274_stars_last_month
-                style: 
-                  border-radius: 0px
-                  
-          - type: divider
-           
-          - type: horizontal-stack
-            cards:
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_274_issues_weekly
-                    - sensor.gitlab_274_issues_last_week
-                style: 
-                  border-radius: 0px
-          
-              - type: custom:card-modder
-                card:
-                  type: glance
-                  entities:
-                    - sensor.gitlab_274_issues_monthly
-                    - sensor.gitlab_274_issues_last_month
-                style: 
-                  border-radius: 0px
+
+

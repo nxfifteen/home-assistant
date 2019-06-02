@@ -19,14 +19,11 @@ stages:
   before_script:
     - python -m homeassistant --version
     - mv  homeassistant/secrets.dist  homeassistant/secrets.yaml
-    - pwd
-    - ls -al
   script:
     - |
       python -m homeassistant \
         --config ./homeassistant/ \
-        --script check_config \
-        --info all
+        --script check_config
   tags:
     - test
 
