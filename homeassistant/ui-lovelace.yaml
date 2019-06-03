@@ -1,3 +1,4 @@
 title: Home Control Panel
 resources: !include_dir_list ./lovelace/resources
+decluttering_templates: !include_dir_list ./lovelace/decluttering
 views: !include_dir_list ./lovelace/views

@@ -146,11 +146,11 @@ google_actions:
       name: Computer Monitors
       room: Study
 
-    switch.ff_study_sterio:
+    switch.study_fan:
       name: Study Sterio
       room: Study
 
-    switch.study_fan:
+    switch.ff_study_sterio:
       name: Study Fan
       room: Study
   

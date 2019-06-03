@@ -1,29 +1,23 @@
 ---
 sensor:
-- platform: mqtt
-  name: ff_study_sterio_power
-  state_topic: "zwave/7/50/1/8"
-  device_class: power
-
-switch:
-- platform: mqtt
-  name: ff_study_sterio
-  icon: mdi:speaker-wireless
-  state_topic: "zwave/7/37/1/0"
-  command_topic: "zwave/7/37/1/0/set"
-  payload_on: "true"
-  payload_off: "false"
-  state_on: "true"
-  state_off: "false"
-  optimistic: false
-  qos: 0
-  retain: true
+  - platform: template
+    sensors:
+      ## dishwasher Power Usage
+      study_fan_power:
+        value_template: '{{ states.switch.study_fan.attributes.current_power_w|default(0)|int }}'  
+        friendly_name: 'Study Sterio Power'
+      ## dishwasher Power Graph
+      study_fan_load:
+        value_template: 'Power: {{ states.switch.study_fan.attributes.current_power_w|default(0)|int }}'  
+        friendly_name: 'Study Sterio Power'  
+        unit_of_measurement: 'W'
 
 homeassistant:
   customize:
-    switch.ff_study_sterio:
-      friendly_name: Fan
-      icon: mdi:fan
-    sensor.ff_study_sterio_power:
-      friendly_name: Fan Watts
- 
+    switch.study_fan:
+      friendly_name: Study Sterio
+      icon: mdi:speaker-wireless
+      initial_state: off
+      
+    sensor.study_fan_power:
+      friendly_name: Study Sterio

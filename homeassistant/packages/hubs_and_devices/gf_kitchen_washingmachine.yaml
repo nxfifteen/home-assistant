@@ -1,0 +1,84 @@
+---
+input_boolean:
+  enable_washing_machine_notification:
+    name: Enable Washing Machine Notification
+    initial: on
+    icon: mdi:washing-machine  
+
+input_select:
+  washing_machine_status:
+    name: Washing Machine Status
+    options:
+      - Idle
+      - Running
+      - Finishing
+      - Clean
+    initial: Idle
+
+sensor:
+  - platform: template
+    sensors:
+      ## Washing Machine Status
+      washing_machine_status:
+        value_template: '{{ states.input_select.washing_machine_status.state}}'
+        friendly_name: 'Washing Machine Status'
+      ## Washing Machine Power Usage
+      washing_machine_power:
+        value_template: '{{ states.switch.washing_machine.attributes.current_power_w|default(0)|int }}'  
+        friendly_name: 'Washing Machine Power' 
+      ## Washer Power Graph
+      washing_machine_load:
+        value_template: 'Power: {{ states.switch.washing_machine.attributes.current_power_w|default(0)|int }}'  
+        friendly_name: 'Washer Power' 
+        unit_of_measurement: 'W'
+      ## Washer Status
+      washing_machine_friendly_status:
+        value_template: 'Washer: {{ states.input_select.washing_machine_status.state}}'
+        friendly_name: 'Washing Machine Status'
+
+      washing_machine_consumption:
+        entity_id: switch.washing_machine
+        value_template: '{{ states.sensor.washing_machine_power.state|int }}' 
+        friendly_name: 'washing_machine Consumption' 
+        unit_of_measurement: 'W' 
+        
+      washing_machine_last_week:
+        value_template: "{{ states.sensor.weekly_washing_machine.attributes.last_period }}"
+        friendly_name: 'Last Week'
+        
+      washing_machine_last_month:
+        value_template: "{{ states.sensor.monthly_washing_machine.attributes.last_period }}"
+        friendly_name: 'Last Month'
+        
+      washing_machine_cost:
+        entity_id: sensor.monthly_washing_machine
+        friendly_name: 'washing_machine Cost'
+        value_template: >-
+          {% if (states.sensor.monthly_washing_machine.state|float > 0) %}
+            £{{ (states.sensor.monthly_washing_machine.state|float * 0.2420)|round(2) }}
+          {% elif (states.sensor.monthly_washing_machine.state|float == 0) %}
+            £{{ (states.sensor.monthly_washing_machine.state|float * 0.2420)|round(2) }}
+          {% endif %}
+
+utility_meter:
+  weekly_washing_machine:
+    source: sensor.washing_machine_consumption
+    cycle: weekly
+    
+  monthly_washing_machine:
+    source: sensor.washing_machine_consumption
+    cycle: monthly
+
+homeassistant:
+  customize:
+    switch.washing_machine:
+      friendly_name: Washing Machine
+      icon: mdi:washing-machine
+      initial_state: on
+      
+    sensor.washing_machine_status:
+      friendly_name: Washing Machine Status
+      icon: mdi:washing-machine
+      
+    sensor.washing_machine_power:
+      friendly_name: Washing Machine Power

@@ -27,6 +27,21 @@ cards:
       - switch.remote_gf_livingroom_watch_fire_tv
       - media_player.livingroom_fire_tv
       - media_player.livingroom_fire_tv_stick
+ 
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Power
+      - sensor.gf_living_tv_power
+      - type: section
+      - sensor.monthly_gf_living_tv
+      - sensor.weekly_gf_living_tv
+      - type: section
+      - sensor.gf_living_tv_cost
+      - type: section
+      - sensor.gf_living_tv_last_month
+      - sensor.gf_living_tv_last_week
 
   - type: picture-glance
     title: Harmony

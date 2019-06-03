@@ -5,39 +5,3 @@ sensor:
       total_consumption:
         value_template: "{{ (states.sensor.monthly_dishwasher.state|float) |round(2) }}"
         friendly_name: 'Total'
-
-      dishwasher_consumption:
-        entity_id: switch.dishwasher
-        value_template: '{{ states.sensor.dishwasher_power.state|int }}' 
-        friendly_name: 'dishwasher Consumption' 
-        unit_of_measurement: 'W' 
-        
-      dishwasher_last_week:
-        value_template: "{{ states.sensor.weekly_dishwasher.attributes.last_period }}"
-        friendly_name: 'Last Week'
-        
-      dishwasher_last_month:
-        value_template: "{{ states.sensor.monthly_dishwasher.attributes.last_period }}"
-        friendly_name: 'Last Month'
-        
-      dishwasher_cost:
-        entity_id: sensor.monthly_dishwasher
-        friendly_name: 'dishwasher Cost'
-        value_template: >-
-          {% if (states.sensor.monthly_dishwasher.state|float > 0) %}
-            £{{ (states.sensor.monthly_dishwasher.state|float * 0.2420)|round(2) }}
-          {% elif (states.sensor.monthly_dishwasher.state|float == 0) %}
-            £{{ (states.sensor.monthly_dishwasher.state|float * 0.2420)|round(2) }}
-          {% endif %}
-
-utility_meter:
-  weekly_dishwasher:
-    source: sensor.dishwasher_consumption
-    cycle: weekly
-    
-  monthly_dishwasher:
-    source: sensor.dishwasher_consumption
-    cycle: monthly
-
-  
-  

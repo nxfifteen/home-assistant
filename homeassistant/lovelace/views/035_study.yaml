@@ -17,6 +17,21 @@ cards:
       #- binary_sensor.ff_landing_sensor
       #- switch.room_occupancy_landing
       #- sensor.room_occupancy_landing_reason
+ 
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Power
+      - sensor.ff_study_monitors_power
+      - type: section
+      - sensor.monthly_ff_study_monitors
+      - sensor.weekly_ff_study_monitors
+      - type: section
+      - sensor.ff_study_monitors_cost
+      - type: section
+      - sensor.ff_study_monitors_last_month
+      - sensor.ff_study_monitors_last_week
 
   - type: entities
     show_header_toggle: false
@@ -41,6 +56,12 @@ cards:
       - switch.ff_study_monitors
       - switch.ff_study_sterio
       - switch.study_fan
+  
+  # - type: custom:decluterring-card
+  #   template: power_graph
+  #   variables:
+  #     - name: Some Name
+  #     - sensor: sensor.ff_study_sterio_power
 
   - type: horizontal-stack
     cards:

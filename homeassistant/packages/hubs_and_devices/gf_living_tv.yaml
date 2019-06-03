@@ -5,6 +5,26 @@ sensor:
   state_topic: "zwave/13/50/1/8"
   device_class: power
 
+- platform: template
+  sensors:
+    gf_living_tv_last_week:
+      value_template: "{{ states.sensor.weekly_gf_living_tv.attributes.last_period }}"
+      friendly_name: 'Last Week'
+      
+    gf_living_tv_last_month:
+      value_template: "{{ states.sensor.monthly_gf_living_tv.attributes.last_period }}"
+      friendly_name: 'Last Month'
+      
+    gf_living_tv_cost:
+      entity_id: sensor.monthly_gf_living_tv
+      friendly_name: 'dishwasher Cost'
+      value_template: >-
+        {% if (states.sensor.monthly_gf_living_tv.state|float > 0) %}
+          £{{ (states.sensor.monthly_gf_living_tv.state|float * 0.000242)|round(2) }}
+        {% elif (states.sensor.monthly_gf_living_tv.state|float == 0) %}
+          £{{ (states.sensor.monthly_gf_living_tv.state|float * 0.000242)|round(2) }}
+        {% endif %}
+
 switch:
 - platform: mqtt
   name: gf_living_tv
@@ -19,12 +39,33 @@ switch:
   qos: 0
   retain: true
 
+utility_meter:
+  weekly_gf_living_tv:
+    source: sensor.gf_living_tv_power
+    cycle: weekly
+    
+  monthly_gf_living_tv:
+    source: sensor.gf_living_tv_power
+    cycle: monthly
 
 homeassistant:
   customize:
     switch.gf_living_tv:
       friendly_name: TV
+      
     sensor.gf_living_tv_power:
       friendly_name: TV Watts
+      
+    sensor.monthly_gf_living_tv:
+      friendly_name: TV Monthly Useage
+      icon: mdi:chart-line-variant
+      
+    sensor.weekly_gf_living_tv:
+      friendly_name: TV Weekly Useage
+      icon: mdi:chart-multiline
+      
+    sensor.gf_living_tv_cost:
+      friendly_name: TV Cost
+      icon: mdi:chart-areaspline
 
  

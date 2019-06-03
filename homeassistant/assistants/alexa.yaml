@@ -169,12 +169,12 @@ alexa:
       description: The Computer Monitors 
       display_categories: SWITCH
 
-    switch.ff_study_sterio:
+    switch.study_fan:
       name: Study Sterio
       description: The Study Sterio
       display_categories: SWITCH
 
-    switch.study_fan:
+    switch.ff_study_sterio:
       name: Study Fan
       description: The Study Fan
       display_categories: SWITCH
