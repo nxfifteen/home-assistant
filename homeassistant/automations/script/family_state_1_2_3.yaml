@@ -1,0 +1,18 @@
+---
+family_state_1_2_3:
+  sequence:
+    - service: media_player.alexa_tts
+      data_template:
+        entity_id: media_player.study
+        message: "Family State set to 1, 2 or 3"
+
+    - service: mqtt.publish
+      data:
+        topic: iot/scene/house
+        payload: "Occupied"
+        qos: 2
+        retain: true
+
+    - service: scene.turn_on
+      data:
+        entity_id: scene.family_state_1_2_3

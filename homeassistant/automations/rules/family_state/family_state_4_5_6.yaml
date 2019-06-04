@@ -1,0 +1,31 @@
+---
+alias: Family State 4, 5 or 6
+
+trigger:
+  - entity_id: sensor.family_family_state_raw
+    platform: state
+    to: '4'
+  - entity_id: sensor.family_family_state_raw
+    platform: state
+    to: '5'
+  - entity_id: sensor.family_family_state_raw
+    platform: state
+    to: '6'
+
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: sensor.family_family_state_raw
+      state:  '4'
+    - condition: state
+      entity_id: sensor.family_family_state_raw
+      state:  '5'
+    - condition: state
+      entity_id: sensor.family_family_state_raw
+      state:  '6'
+
+action:
+  - service: script.turn_on
+    data:
+      entity_id: script.family_state_4_5_6

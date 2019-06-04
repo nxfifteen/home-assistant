@@ -1,0 +1,13 @@
+---
+alias: Reset Bedtime Dropdown
+trigger:
+- entity_id: input_select.family_family_act_bedtime
+  from: Idle
+  platform: state
+
+action:
+- delay: 00:00:05
+- service: input_select.select_option
+  data:
+    entity_id: input_select.family_family_act_bedtime
+    option: Idle

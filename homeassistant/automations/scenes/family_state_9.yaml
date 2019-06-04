@@ -1,0 +1,7 @@
+name: family_state_9
+entities:
+  light.ff_bedroom_celing:
+    state: on
+    transition: 5
+    rgb_color: [255,207,120]
+    brightness: 255
