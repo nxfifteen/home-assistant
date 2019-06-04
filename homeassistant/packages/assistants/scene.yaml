@@ -3,4 +3,4 @@
 #
 # https://www.home-assistant.io/docs/automation/
 #
-scene: !include_dir_list ../../scenes
+scene: !include_dir_list ../../automations/scenes

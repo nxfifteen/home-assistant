@@ -1,0 +1,17 @@
+---
+alias: Lighting Off - FF Livingroom
+
+trigger:
+- entity_id: switch.room_occupancy_livingroom
+  platform: state
+  to: 'off'
+  
+condition:
+- condition: state
+  entity_id: switch.room_occupancy_livingroom
+  state: 'off'
+  
+action:
+- service: light.turn_off
+  data:
+    entity_id: group.lights_gf_livingroom
