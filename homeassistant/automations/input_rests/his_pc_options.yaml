@@ -1,0 +1,14 @@
+---
+id: '1559677042897'
+alias: Reset His PC Dropdown
+trigger:
+- entity_id: input_select.his_pc_options
+  from: None
+  platform: state
+
+action:
+- delay: 00:00:05
+- service: input_select.select_option
+  data:
+    entity_id: input_select.his_pc_options
+    option: None

@@ -50,22 +50,22 @@ alexa:
   entity_config:
 
     sensor.ff_study_sensor_temperature:
-      name: Study
+      name: Study Temperature
       description: The study Temperature
       display_categories: TEMPERATURE_SENSOR 
 
     sensor.gf_dinning_sensor_temperature:
-      name: Kitchen
+      name: Kitchen Temperature
       description: The Dinning Room Temperature
       display_categories: TEMPERATURE_SENSOR 
   
     sensor.gf_living_sensor_temperature:
-      name: Livingroom
+      name: Livingroom Temperature
       description: The Livingroom Temperature
       display_categories: TEMPERATURE_SENSOR 
   
     sensor.ff_bedroom_sensor_temperature:
-      name: Bedroom
+      name: Bedroom Temperature
       description: The Bedroom Temperature
       display_categories: TEMPERATURE_SENSOR 
     

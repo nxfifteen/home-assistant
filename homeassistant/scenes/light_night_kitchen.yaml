@@ -1,0 +1,13 @@
+name: light night kitchen
+entities:
+  group.light_gf_dinning:
+    state: on
+    transition: 5
+    rgb_color: [255,207,120]
+    brightness: 255
+    
+  light.gf_hallway_celing:
+    state: on
+    transition: 5
+    rgb_color: [255,207,120]
+    brightness: 150

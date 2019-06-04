@@ -451,7 +451,7 @@
   },
   "node-red-contrib-home-assistant-websocket": {
    "name": "node-red-contrib-home-assistant-websocket",
-   "version": "0.11.0",
+   "version": "0.12.2",
    "local": false,
    "nodes": {
     "server": {
@@ -961,7 +961,7 @@
   },
   "node-red-node-email": {
    "name": "node-red-node-email",
-   "version": "1.4.0",
+   "version": "1.6.0",
    "local": false,
    "nodes": {
     "email": {
@@ -996,7 +996,7 @@
   },
   "node-red-node-geofence": {
    "name": "node-red-node-geofence",
-   "version": "0.1.0",
+   "version": "0.1.1",
    "local": false,
    "nodes": {
     "geofence": {
@@ -1188,7 +1188,7 @@
   },
   "node-red-dashboard": {
    "name": "node-red-dashboard",
-   "version": "2.15.2",
+   "version": "2.15.4",
    "local": false,
    "nodes": {
     "ui_base": {
@@ -1509,7 +1509,7 @@
    "menu-deploymenu-item-flow": true,
    "menu-deploymenu-item-full": false,
    "menu-menu-item-sidebar": true,
-   "menu-menu-item-palette": true
+   "menu-menu-item-palette": false
   }
  }
 }

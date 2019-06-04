@@ -1,0 +1,27 @@
+---
+id: '1559678318406'
+alias: Lighting Sunset - Study
+
+trigger:
+- entity_id: switch.room_occupancy_study
+  platform: state
+  to: 'on'
+- entity_id: sensor.light_scene
+  platform: state
+  to: Sunset
+  
+condition:
+- condition: state
+  entity_id: sensor.house_scene
+  state: Occupied
+- condition: state
+  entity_id: sensor.light_scene
+  state: Sunset
+- condition: state
+  entity_id: switch.room_occupancy_study
+  state: 'on'
+  
+action:
+- service: scene.turn_on
+  data:
+    entity_id: scene.light_sunset_study
