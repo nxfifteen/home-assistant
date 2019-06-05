@@ -7,4 +7,4 @@ sensor:
   queries:
     - mode: bus
       origin: !secret uk_transport_bus_a_origin
-     destination: !secret uk_transport_bus_a_dest
+      destination: !secret uk_transport_bus_a_dest

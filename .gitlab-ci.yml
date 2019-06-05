@@ -3,7 +3,9 @@ image: docker:latest
 
 stages:
   - preflight
-  - homeassistant
+  - latest
+  - rc
+  - dev
 
 # Generic preflight template
 .preflight: &preflight
@@ -13,7 +15,6 @@ stages:
 
 # Generic Home Assistant template
 .ha: &ha
-  stage: homeassistant
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
@@ -30,12 +31,14 @@ stages:
 # Home Assistant test jobs
 ha-latest:
   <<: *ha
+  stage: latest
   image:
     name: homeassistant/home-assistant:latest
     entrypoint: [""]
 
 ha-rc:
   <<: *ha
+  stage: rc
   image:
     name: homeassistant/home-assistant:rc
     entrypoint: [""]
@@ -43,6 +46,7 @@ ha-rc:
 
 ha-dev:
   <<: *ha
+  stage: dev
   image:
     name: homeassistant/home-assistant:dev
     entrypoint: [""]
