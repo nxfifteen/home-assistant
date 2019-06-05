@@ -6,7 +6,7 @@ trigger:
   to: '7'
   
 condition:
-  condition: and
+  condition: or
   conditions:
     - condition: state
       entity_id: binary_sensor.jarvis_ha
