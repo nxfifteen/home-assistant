@@ -13,6 +13,49 @@ family_state_8:
         qos: 2
         retain: true
 
-    - service: scene.turn_on
+    - service: climate.set_temperature
       data:
-        entity_id: scene.family_state_8
+        entity_id: climate.hallway
+        temperature: 10
+    
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ff_bedroom_tv
+    
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ff_bedroom_fairylights
+    
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ff_study_monitors
+    
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ff_study_sterio
+    
+    - service: switch.turn_off
+      data:
+        entity_id: switch.study_fan
+    
+    - service: light.turn_off
+      data:
+        entity_id: light.ff_bedroom_celing
+    
+    - service: light.turn_off
+      data:
+        entity_id: light.ff_bedroom_bedside_stuart
+    
+    - service: light.turn_on
+      data:
+        entity_id: light.ff_bedroom_bedside_kareen
+        transition: 5
+        rgb_color: [255,207,120]
+        brightness: 10
+    
+    - service: light.turn_on
+      data:
+        entity_id: light.ff_landing_celing
+        transition: 5
+        rgb_color: [255,207,120]
+        brightness: 50

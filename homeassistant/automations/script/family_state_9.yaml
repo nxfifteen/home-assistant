@@ -13,6 +13,15 @@ family_state_9:
         qos: 2
         retain: true
 
-    - service: scene.turn_on
+    - service: climate.set_temperature
       data:
-        entity_id: scene.family_state_9
+        entity_id: climate.hallway
+        temperature: 10
+
+    - service: light.turn_off
+      data:
+        entity_id: group.all_lights
+
+    - service: switch.turn_off
+      data:
+        entity_id: group.switchs_all_safe
