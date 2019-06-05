@@ -3,9 +3,9 @@ alias: gitlab_ci_failure
 trigger:
   platform: state
   entity_id:
-  - sensor.gitlab_ci_hass
-  - sensor.gitlab_ci_store
-  - sensor.gitlab_ci_nxore_sync
+  - sensor.gitlab_252_ci
+  - sensor.gitlab_274_ci
+  - sensor.gitlab_279_ci
   to: 'failed'
   
 action:
