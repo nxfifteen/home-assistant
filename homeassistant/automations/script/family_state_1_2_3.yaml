@@ -4,7 +4,7 @@ family_state_1_2_3:
     - service: media_player.alexa_tts
       data_template:
         entity_id: media_player.study
-        message: "Family State set to 1, 2 or 3"
+        message: "Good Bye"
 
     - service: mqtt.publish
       data:
