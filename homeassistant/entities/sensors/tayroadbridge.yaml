@@ -1,4 +1,0 @@
----
-platform: mqtt
-name: "Tay Road Bridge"
-state_topic: "iot/information/taybridge"

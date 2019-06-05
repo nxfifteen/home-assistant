@@ -1,0 +1,22 @@
+media_player:
+  - platform: plex
+    entity_namespace: 'plex'
+    scan_interval: 5
+    show_all_controls: false
+    use_episode_art: true
+    remove_unavailable_clients: false
+
+sensor:
+  - platform: template
+    sensors:
+      media_ff_study_plex_video:
+        value_template: '{{ states.media_player.plex_taichi.state|default(off)|string }}'  
+        friendly_name: 'Study Plex (Video)'
+        
+      media_ff_study_plex_audio:
+        value_template: '{{ states.media_player.plex_taichi_audio.state|default(off)|string }}'  
+        friendly_name: 'Study Plex (Audio)'
+        
+      media_ff_bedroom_plex_audio:
+        value_template: '{{ states.media_player.plex_bedroom_audio.state|default(off)|string }}'  
+        friendly_name: 'Bedroom Plex (Audio)'

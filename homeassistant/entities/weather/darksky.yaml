@@ -1,8 +1,0 @@
----
-# https://www.home-assistant.io/components/darksky/
-platform: darksky
-api_key: !secret darksky_api_key
-latitude: !secret zone_home_latitude
-longitude: !secret zone_home_longitude
-units: uk2
-scan_interval: 00:35

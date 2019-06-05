@@ -7,14 +7,12 @@ binary_sensor:
   payload_off: "false"
   device_class: door
 
-
 sensor:
 - platform: mqtt
   name: gf_hallway_contact_battery
   state_topic: "zwave/19/128/1/0"
   unit_of_measurement: "%"
   device_class: battery
-
 
 homeassistant:
   customize:
