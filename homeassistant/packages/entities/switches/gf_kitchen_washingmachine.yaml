@@ -55,9 +55,9 @@ sensor:
         friendly_name: 'washing_machine Cost'
         value_template: >-
           {% if (states.sensor.monthly_washing_machine.state|float > 0) %}
-            £{{ (states.sensor.monthly_washing_machine.state|float * 0.2420)|round(2) }}
+            £{{ (states.sensor.monthly_washing_machine.state|float * 0.000242)|round(2) }}
           {% elif (states.sensor.monthly_washing_machine.state|float == 0) %}
-            £{{ (states.sensor.monthly_washing_machine.state|float * 0.2420)|round(2) }}
+            £{{ (states.sensor.monthly_washing_machine.state|float * 0.000242)|round(2) }}
           {% endif %}
 
 utility_meter:
