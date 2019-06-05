@@ -9,12 +9,12 @@ cards:
     title: Dishwasher
     show_header_toggle: false
     entities:
-    - input_select.dishwasher_status
-    - input_boolean.disable_dishwasher_notification
-    - sensor.dishwasher_status
-    - sensor.dishwasher_power
-    - sensor.dishwasher_load
+    - sensor.dishwasher_cost
     - sensor.dishwasher_friendly_status
+    - input_boolean.disable_dishwasher_notification
+    - type: section
+    - sensor.dishwasher_load
+    - type: section
     - sensor.weekly_dishwasher
     - sensor.monthly_dishwasher
 
@@ -23,12 +23,12 @@ cards:
     title: Washing Machine
     show_header_toggle: false
     entities:
-    - input_select.washing_machine_status
-    - input_boolean.enable_washing_machine_notification
-    - sensor.washing_machine_status
-    - sensor.washing_machine_power
-    - sensor.washing_machine_load
+    - sensor.washing_machine_cost
     - sensor.washing_machine_friendly_status
+    - input_boolean.enable_washing_machine_notification
+    - type: section
+    - sensor.washing_machine_load
+    - type: section
     - sensor.weekly_washing_machine
     - sensor.monthly_washing_machine
 

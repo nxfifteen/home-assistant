@@ -7,11 +7,6 @@
 # https://www.home-assistant.io/components/device_tracker/
 #
 device_tracker:
-  - platform: mqtt_json
-    devices:
-      stuart_tasker: 'tracker/family/stuart'
-      kareen_tasker: 'tracker/family/kareen'
-  
   - platform: nmap_tracker
     hosts:
       - !secret his_ip_range
@@ -30,15 +25,3 @@ device_tracker:
       - !secret nmap_exclude_8
       - !secret nmap_exclude_9
       - !secret nmap_exclude_10
-  
-  - platform: traccar
-    host: !secret traccar_host
-    port: !secret traccar_port
-    username: !secret traccar_username
-    password: !secret traccar_password
-    ssl: true
-    verify_ssl: false
-    interval_seconds: 120
-    consider_home: 60
-    track_new_devices: yes
-    event: ['all_events']

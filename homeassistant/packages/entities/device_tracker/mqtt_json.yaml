@@ -1,0 +1,13 @@
+---
+# Home Assistant can get information from various devices. These can be used,
+# for example, to track the location of your mobile phone.
+#
+# This configuration loads up my device trackers
+#
+# https://www.home-assistant.io/components/device_tracker/
+#
+device_tracker:
+  - platform: mqtt_json
+    devices:
+      stuart_tasker: 'tracker/family/stuart'
+      kareen_tasker: 'tracker/family/kareen'
