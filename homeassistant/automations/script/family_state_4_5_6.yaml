@@ -16,3 +16,7 @@ family_state_4_5_6:
     - service: scene.turn_on
       data:
         entity_id: scene.family_state_4_5_6
+    
+    - service: nest.set_away_mode
+      data:
+        away_mode: home

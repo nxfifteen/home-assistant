@@ -13,6 +13,14 @@ family_state_1_2_3:
         qos: 2
         retain: true
 
-    - service: scene.turn_on
+    - service: light.turn_off
       data:
-        entity_id: scene.family_state_1_2_3
+        entity_id: group.all_lights
+
+    - service: switch.turn_off
+      data:
+        entity_id: group.switchs_all_safe
+    
+    - service: nest.set_away_mode
+      data:
+        away_mode: away
