@@ -1,4 +1,4 @@
-name: light sunset study
+name: light sunset livingroom
 entities:
   light.gf_living_lamp:
     state: on
