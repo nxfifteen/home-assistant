@@ -86,13 +86,6 @@ cards:
       - value: -1
         color: "#1db954"
 
-  - type: entities
-    title: Study Fan
-    show_header_toggle: false
-    entities:
-    - sensor.study_fan_power
-    - sensor.study_fan_load
-
   - type: vertical-stack
     cards:
       - type: entities
