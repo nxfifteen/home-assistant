@@ -9,7 +9,7 @@ family_state_1_2_3:
     - service: mqtt.publish
       data:
         topic: iot/scene/house
-        payload: "Occupied"
+        payload: "Empty"
         qos: 2
         retain: true
 
