@@ -8,10 +8,22 @@ trigger:
   - sensor.gitlab_279_ci
   to: 'running'
   
+condition:
+  - condition: state
+    entity_id: sensor.family_stuart_state
+    state: 'Home'
+  
 action:
   - service: notify.synchat_nx
     data_template:
       message: "GitLab validation testing is running on {{ trigger.to_state.attributes.friendly_name }}. #GitLab #CI"
+    
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_study_wall
+      rgb_color: [21, 92, 255]
+      brightness: 254
+
   - service: notify.alexa_media
     data:
       target: 
