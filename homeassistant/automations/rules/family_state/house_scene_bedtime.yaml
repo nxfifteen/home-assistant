@@ -1,0 +1,80 @@
+---
+alias: House Scene - Going to Bed
+
+trigger:
+  - entity_id: sensor.house_scene
+    platform: state
+    to: 'Going To Bed'
+    for:
+      seconds: 3
+
+action:
+  - service: shell_command.shell_plex_music_evening
+
+  - service: light.turn_off
+    data:
+      entity_id: light.gf_living_lamp
+
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_living_celing
+
+  - service: switch.turn_on
+    data:
+      entity_id: switch.ff_bedroom_fairylights
+
+  - service: switch.turn_off
+    data:
+      entity_id: switch.gf_dinning_tv
+
+  - service: switch.turn_off
+    data:
+      entity_id: switch.gf_studio_treadmill
+
+  - service: switch.turn_off
+    data:
+      entity_id: switch.gf_living_tv
+
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_bedroom_bedside_kareen
+
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_bedroom_bedside_stuart
+
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_landing_celing
+
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_dinning_dishwahser
+
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_dinning_sink
+
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_hallway_celing
+
+  - service: light.turn_off
+    data:
+      entity_id: group.light_gf_dinning
+
+  - service: light.turn_off
+    data:
+      entity_id: light.ff_bedroom_celing
+
+  - service: light.turn_off
+    data:
+      entity_id: light.gf_dinning_cooker
+
+  - service: light.turn_off
+    data:
+      entity_id: light.gf_dinning_door_way
+
+  - service: light.turn_off
+    data:
+      entity_id: light.gf_studio_celing
