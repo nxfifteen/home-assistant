@@ -1,5 +1,5 @@
 ---
-alias: gitlab_ci_failure
+alias: GitLab CI Passed
 trigger:
   platform: state
   entity_id:

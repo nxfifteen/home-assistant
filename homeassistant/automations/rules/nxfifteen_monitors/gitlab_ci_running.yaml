@@ -1,5 +1,5 @@
 ---
-alias: gitlab_ci_failure
+alias: GitLab CI Running
 trigger:
   platform: state
   entity_id:
