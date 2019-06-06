@@ -24,6 +24,9 @@ sed -ri 's/: [0-9a-zA-Z].*\b/=:=REDACTED/' homeassistant/secrets.dist
 # Remove Curl command string
 sed -ri "s/curl.*/\/path\/to\/curl\/command/" homeassistant/secrets.dist
 
+# Remove Shell command string
+sed -ri "s/\/config\/node-red\/shell.*/\/path\/to\/shell\/command/" homeassistant/secrets.dist
+
 # Hog-pog clean up - Find the mess and fix it
 sed -ri "s/com\//com/" homeassistant/secrets.dist
 sed -ri 's/"//' homeassistant/secrets.dist
