@@ -13,11 +13,11 @@ trigger:
   - binary_sensor.ssh_roger_young
   - binary_sensor.ssh_synology
   - binary_sensor.nxcore
-  - binary_sensor.webmail
+  - binary_sensor.nxfifteen
   to: 'off'
 
   for:
-    minutes: 30
+    minutes: 15
     
 action:
   - service: notify.synchat_nx
