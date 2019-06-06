@@ -1,0 +1,2 @@
+shell_command:
+  shell_plex_music_evening: !secret shell_plex_music_evening
