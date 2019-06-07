@@ -1,11 +1,4 @@
 ---
-whoishome:
-  - title: Who's at home?
-    text: >
-      {%- if is_state('person.stuart', 'home') and
-              is_state('person.kareen', 'home') -%}
-        You are both home, you silly
-      {%- else -%}
-        Stuart is at {{ states("person.kareen") }}
-        and Kareen is at {{ states("person.stuart") }}
-      {% endif %}
+the_house_briefing:
+  - title: The House
+    text: !include ../../entities/templates/briefing.yaml
