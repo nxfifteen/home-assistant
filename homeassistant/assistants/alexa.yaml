@@ -46,6 +46,10 @@ alexa:
       - switch.room_occupancy_kitchen
       - switch.pihole_temp_disable
       - switch.wake_on_lan
+      - switch.remote_gf_livingroom_watch_tv
+      - switch.remote_gf_livingroom_watch_fire_tv
+      - switch.pihole_enable
+      - switch.gf_living_tv
   
   entity_config:
 
@@ -157,11 +161,6 @@ alexa:
     switch.gf_dinning_tv:
       name: Kitchen TV
       description: The Kitchen TV
-      display_categories: SWITCH
-
-    switch.gf_living_tv:
-      name: TV
-      description: The Livingroom TV
       display_categories: SWITCH
 
     switch.ff_study_monitors:

@@ -46,6 +46,10 @@ google_actions:
       - switch.room_occupancy_kitchen
       - switch.pihole_temp_disable
       - switch.wake_on_lan
+      - switch.remote_gf_livingroom_watch_tv
+      - switch.remote_gf_livingroom_watch_fire_tv
+      - switch.pihole_enable
+      - switch.gf_living_tv
   
   entity_config:
 
@@ -137,10 +141,6 @@ google_actions:
     switch.gf_dinning_tv:
       name: Kitchen TV
       room: Kitchen
-
-    switch.gf_living_tv:
-      name: TV
-      room: Living Room
 
     switch.ff_study_monitors:
       name: Computer Monitors
