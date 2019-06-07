@@ -1,0 +1,23 @@
+---
+certs:
+  name: Monitored SSL Certs
+  entities:
+    - sensor.cert_synology_stuartma
+    - sensor.cert_anderson_ha
+    - sensor.cert_anderson_ha_find3
+    - sensor.cert_anderson_ha_grocy
+    - sensor.cert_anderson_ha_ide
+    - sensor.cert_anderson_ha_node
+    - sensor.cert_anderson_ha_portainer
+    - sensor.cert_anderson_ha_proxy
+    - sensor.cert_anderson_ha_trac
+    - sensor.cert_anderson_ha_zwave
+    - sensor.cert_nxfifteen_www
+    - sensor.cert_nx15_at
+    - sensor.cert_nxfifteen_eml_web
+    - sensor.cert_nxfifteen_git
+    - sensor.cert_nxfifteen_core
+    - sensor.cert_license_nxfifteen_rocks
+    - sensor.cert_nxfifteen_skizimport
+    - sensor.cert_nxfifteen_your
+    - sensor.cert_nxfifteen_xyz
