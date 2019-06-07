@@ -1,0 +1,11 @@
+---
+alias: morning_briefing
+trigger:
+- entity_id: sensor.family_stuart_state
+  platform: state
+  to: '7'
+
+action:
+  service: notify.synchat_nx
+  data_template:
+    message: !include ../../entities/templates/briefing.yaml
