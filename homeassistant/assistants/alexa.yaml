@@ -1,5 +1,7 @@
 ---
 alexa:
+  flash_briefings: !include_dir_merge_named ./flash_briefings
+
   filter:
     include_entities:
       - input_boolean.enable_dishwasher_notification
