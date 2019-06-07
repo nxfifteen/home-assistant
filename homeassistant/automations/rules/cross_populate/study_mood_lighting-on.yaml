@@ -10,7 +10,7 @@ trigger:
 action:
   - service: light.turn_on
     data:
-      entity_id: light.light.ff_study_wall
+      entity_id: light.ff_study_wall
       brightness: 154
       rgb_color: [58, 184, 255]
       transition: 5
