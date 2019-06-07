@@ -11,61 +11,47 @@ trigger:
 action:
   - service: shell_command.shell_plex_music_evening
 
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_living_lamp
-
+  # Setup the livingroom
   - service: light.turn_on
     data:
       entity_id: light.gf_living_celing
+      brightness: 150
+      rgb_color: [255, 206, 121]
+      transition: 3
 
-  - service: switch.turn_on
+  - service: light.turn_off
     data:
-      entity_id: switch.ff_bedroom_fairylights
-
-  - service: switch.turn_off
-    data:
-      entity_id: switch.gf_dinning_tv
-
-  - service: switch.turn_off
-    data:
-      entity_id: switch.gf_studio_treadmill
+      entity_id: light.gf_living_lamp
+      transition: 3
 
   - service: switch.turn_off
     data:
       entity_id: switch.gf_living_tv
 
-  - service: light.turn_on
+  - service: switch.turn_off
     data:
-      entity_id: light.ff_bedroom_bedside_kareen
+      entity_id: switch.gf_studio_treadmill
 
-  - service: light.turn_on
+  - service: light.turn_off
     data:
-      entity_id: light.ff_bedroom_bedside_stuart
+      entity_id: light.gf_studio_celing
 
-  - service: light.turn_on
-    data:
-      entity_id: light.ff_landing_celing
-
+  # Setup the kitchen
   - service: light.turn_on
     data:
       entity_id: light.gf_dinning_dishwahser
+      brightness: 150
+      transition: 3
 
   - service: light.turn_on
     data:
       entity_id: light.gf_dinning_sink
-
-  - service: light.turn_on
-    data:
-      entity_id: light.gf_hallway_celing
+      brightness: 150
+      transition: 3
 
   - service: light.turn_off
     data:
       entity_id: group.light_gf_dinning
-
-  - service: light.turn_off
-    data:
-      entity_id: light.ff_bedroom_celing
 
   - service: light.turn_off
     data:
@@ -75,6 +61,39 @@ action:
     data:
       entity_id: light.gf_dinning_door_way
 
+  - service: switch.turn_off
+    data:
+      entity_id: switch.gf_dinning_tv
+
+  # Setup the Hallways
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_hallway_celing
+      rgb_color: [255, 206, 121]
+      transition: 5
+
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_landing_celing
+      brightness: 150
+      rgb_color: [255, 206, 121]
+      transition: 5
+
+  # Setup the Bedroom
   - service: light.turn_off
     data:
-      entity_id: light.gf_studio_celing
+      entity_id: light.ff_bedroom_celing
+
+  - service: switch.turn_on
+    data:
+      entity_id: switch.ff_bedroom_fairylights
+
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_bedroom_bedside_kareen
+      brightness: 150
+
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_bedroom_bedside_stuart
+      brightness: 150

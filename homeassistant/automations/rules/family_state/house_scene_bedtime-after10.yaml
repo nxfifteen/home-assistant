@@ -11,36 +11,12 @@ trigger:
 action:
   - service: light.turn_off
     data:
+      entity_id: group.light_gf_living
+
+  - service: light.turn_off
+    data:
+      entity_id: group.light_gf_kitchen
+
+  - service: light.turn_off
+    data:
       entity_id: group.light_gf_dinning
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_hallway_celing
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_dinning_cooker
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_dinning_dishwahser
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_dinning_door_way
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_dinning_sink
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_living_celing
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_living_lamp
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_studio_celing
