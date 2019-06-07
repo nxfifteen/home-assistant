@@ -11,18 +11,26 @@ trigger:
 condition:
   - condition: state
     entity_id: sensor.family_stuart_state
-    state: 'Home'
+    state: '7'
   
 action:
   - service: notify.synchat_nx
     data_template:
       message: "GitLab validation testing failed for {{ trigger.to_state.attributes.friendly_name }}. #GitLab #CI #Failed"
-    
+
   - service: light.turn_on
     data:
-      entity_id: light.ff_study_wall
+      entity_id: light.light.ff_study_wall
+      brightness: 154
       rgb_color: [255, 25, 60]
-      brightness: 254
+      transition: 2
+      
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_study_desk
+      brightness: 77
+      rgb_color: [255, 25, 60]
+      transition: 2
       
   - service: notify.alexa_media
     data:

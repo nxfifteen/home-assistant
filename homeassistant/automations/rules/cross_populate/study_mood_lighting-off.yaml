@@ -1,0 +1,19 @@
+---
+alias: Study Mood Lighting (Off)
+
+trigger:
+- platform: state
+  entity_id: switch.ff_study_monitors
+  from:  'on'
+  to:  'off'
+  
+action:
+  - service: light.turn_off
+    data:
+      entity_id: light.light.ff_study_wall
+      
+  - service: light.turn_off
+    data:
+      entity_id: light.ff_study_desk
+
+ 

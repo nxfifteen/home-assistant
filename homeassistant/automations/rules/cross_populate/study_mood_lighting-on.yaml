@@ -1,0 +1,25 @@
+---
+alias: Study Mood Lighting (On)
+
+trigger:
+- platform: state
+  entity_id: switch.ff_study_monitors
+  from:  'off'
+  to:  'on'
+  
+action:
+  - service: light.turn_on
+    data:
+      entity_id: light.light.ff_study_wall
+      brightness: 154
+      rgb_color: [58, 184, 255]
+      transition: 5
+      
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_study_desk
+      brightness: 77
+      rgb_color: [58, 184, 255]
+      transition: 5
+
+ 
