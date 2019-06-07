@@ -1,0 +1,6 @@
+---
+camera:
+  - platform: synology
+    url: !secret synology_ip
+    username: !secret synology_user
+    password: !secret synology_password
