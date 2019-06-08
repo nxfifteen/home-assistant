@@ -1,0 +1,21 @@
+---
+alias: Family State From 9 to 7
+
+trigger:
+  - entity_id: sensor.family_family_state_raw
+    platform: state
+    from: '9'
+    to: '7'
+
+action:
+  - service: homeassistant.update_entity
+    data:
+      entity_id: sensor.commute_stuart_work
+      
+  - service: homeassistant.update_entity
+    data:
+      entity_id: sensor.commute_kareen_work_a
+      
+  - service: homeassistant.update_entity
+    data:
+      entity_id: sensor.commute_kareen_work_b
