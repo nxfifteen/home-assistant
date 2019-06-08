@@ -18,11 +18,7 @@ condition:
     entity_id: sensor.family_stuart_state
     state: '7'
   
-action:
-  - service: notify.synchat_nx
-    data_template:
-      message: "GitLab validation testing has passed for {{ trigger.to_state.attributes.friendly_name }}. #GitLab #CI"
-      
+action:      
   - service: light.turn_on
     data:
       entity_id: light.ff_study_wall
@@ -37,10 +33,14 @@ action:
       rgb_color: [81, 255, 76]
       transition: 2
 
+  - service: notify.synchat_nx
+    data_template:
+      message: "GitLab validation testing has passed. #GitLab #CI"
+
   - service: notify.alexa_media
     data:
       target: 
         - media_player.study
       data:
         type: announce
-      message: "GitLab validation testing has passed for {{ trigger.to_state.attributes.friendly_name }}."
+      message: "GitLab validation testing has passed."

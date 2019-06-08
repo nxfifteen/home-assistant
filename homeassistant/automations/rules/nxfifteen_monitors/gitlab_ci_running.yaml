@@ -19,10 +19,6 @@ condition:
     state: '7'
   
 action:
-  - service: notify.synchat_nx
-    data_template:
-      message: "GitLab validation testing is running on {{ trigger.to_state.attributes.friendly_name }}. #GitLab #CI"
-
   - service: light.turn_on
     data:
       entity_id: light.ff_study_wall
@@ -37,10 +33,14 @@ action:
       rgb_color: [21, 92, 255]
       transition: 5
 
+  - service: notify.synchat_nx
+    data_template:
+      message: "GitLab validation testing is running. #GitLab #CI"
+
   - service: notify.alexa_media
     data:
       target: 
         - media_player.study
       data:
         type: announce
-      message: "GitLab validation testing is being run on {{ trigger.to_state.attributes.friendly_name }}."
+      message: "GitLab validation testing is running."

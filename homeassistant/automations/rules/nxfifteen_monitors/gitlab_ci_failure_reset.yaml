@@ -5,19 +5,19 @@ trigger:
     entity_id: sensor.gitlab_252_ci
     to: 'failed'
     for:
-      minutes: 2
+      minutes: 5
 
   - platform: state
     entity_id: sensor.gitlab_274_ci
     to: 'failed'
     for:
-      minutes: 2
+      minutes: 5
 
   - platform: state
     entity_id: sensor.gitlab_279_ci
     to: 'failed'
     for:
-      minutes: 2
+      minutes: 5
   
 condition:
   - condition: state
