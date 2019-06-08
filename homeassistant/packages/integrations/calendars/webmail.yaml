@@ -4,3 +4,13 @@ calendar:
     username: !secret webmail_username
     password: !secret webmail_password
     url: !secret webmail_cal_main
+    custom_calendars:
+      - name: 'Bin Trash'
+        calendar: 'Calendar'
+        search: 'Future Event'
+      - name: 'Bin Green'
+        calendar: 'Calendar'
+        search: 'Spanning Event'
+      - name: 'Bin Grey'
+        calendar: 'Calendar'
+        search: 'All Day Event'
