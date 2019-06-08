@@ -1,12 +1,17 @@
 ---
 alias: GitLab CI Failed
 trigger:
-  platform: state
-  entity_id:
-  - sensor.gitlab_252_ci
-  - sensor.gitlab_274_ci
-  - sensor.gitlab_279_ci
-  to: 'failed'
+  - platform: state
+    entity_id: sensor.gitlab_252_ci
+    to: 'failed'
+
+  - platform: state
+    entity_id: sensor.gitlab_274_ci
+    to: 'failed'
+
+  - platform: state
+    entity_id: sensor.gitlab_279_ci
+    to: 'failed'
   
 condition:
   - condition: state
