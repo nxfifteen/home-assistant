@@ -8,4 +8,4 @@ trigger:
 action:
   service: notify.synchat_nx
   data_template:
-    message: !include ../../entities/templates/briefing.yaml
+    message: !include ../../../entities/templates/briefing.yaml
