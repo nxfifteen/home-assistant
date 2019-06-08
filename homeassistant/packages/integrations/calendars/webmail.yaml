@@ -1,0 +1,6 @@
+---
+calendar:
+  - platform: caldav
+    username: !secret webmail_username
+    password: !secret webmail_password
+    url: !secret webmail_cal_main
