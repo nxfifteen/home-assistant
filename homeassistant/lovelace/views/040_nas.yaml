@@ -64,6 +64,57 @@ cards:
         show_header_toggle: off
         entities:
           - type: section
+            label: HP Envy 4500
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:card-modder
+                    card:
+                      type: picture
+                      image: /local/images/hp_envy_4500.jpg
+                    style:                 
+                      border-radius: 5px
+                 
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.printer_hp
+                    title: Status
+                    align: center
+                    padding: 5px
+                    card_style: 
+                      border-radius: 5px
+       
+          - type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 1
+            card_style: 
+              border-radius: 5px
+            entities:
+              - entity: sensor.printer_hp_black
+                title: Black
+                icon: mdi:alpha-b-box
+       
+          - type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 1
+            card_style: 
+              border-radius: 5px
+            entities:
+              - entity: sensor.printer_hp_colour
+                title: Colour
+                icon: mdi:alpha-c-box
+
+  - type: vertical-stack
+    cards:    
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: section
             label: Synolgy Storage - User Space
           - type: custom:vertical-stack-in-card
             cards:
