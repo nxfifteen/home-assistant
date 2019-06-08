@@ -43,4 +43,4 @@ action:
         - media_player.study
       data:
         type: announce
-      message: "GitLab validation testing is running."
+      message: "Git Lab is running continuous Integration testing now."

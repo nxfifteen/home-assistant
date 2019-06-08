@@ -43,4 +43,4 @@ action:
         - media_player.study
       data:
         type: announce
-      message: "GitLab validation testing has passed."
+      message: "According to Git Lab continuous Integration your code is good."

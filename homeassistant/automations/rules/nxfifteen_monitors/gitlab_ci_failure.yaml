@@ -43,4 +43,4 @@ action:
         - media_player.study
       data:
         type: announce
-      message: "GitLab validation testing failed."
+      message: "Git Lab continuous Integration has rejected your code."

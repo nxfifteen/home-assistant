@@ -1,23 +1,23 @@
 ---
-alias: GitLab CI Running
+alias: GitLab CI Running (rest)
 trigger:
   - platform: state
     entity_id: sensor.gitlab_252_ci
     to: 'running'
     for:
-      minutes: 10
+      minutes: 15
 
   - platform: state
     entity_id: sensor.gitlab_274_ci
     to: 'running'
     for:
-      minutes: 10
+      minutes: 15
 
   - platform: state
     entity_id: sensor.gitlab_279_ci
     to: 'running'
     for:
-      minutes: 10
+      minutes: 15
   
 condition:
   - condition: state
@@ -30,11 +30,11 @@ action:
       entity_id: light.ff_study_wall
       brightness: 154
       rgb_color: [58, 184, 255]
-      transition: 5
+      transition: 10
       
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk
       brightness: 77
       rgb_color: [58, 184, 255]
-      transition: 5
+      transition: 10
