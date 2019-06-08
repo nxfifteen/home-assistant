@@ -1,10 +1,8 @@
 ---
 sensor:
-- platform: gitlab_ci
-  gitlab_id: 252
-  token: !secret gitlab_token
+- platform: mqtt
   name: gitlab_252_ci
-  url: !secret gitlab_url
+  state_topic: "webhooks/gitlab/252"
 
 - platform: command_line
   command: !secret gitlab_project_252
