@@ -1,6 +1,4 @@
-  >
-  {% set night_hour = 12 %}
-
+>
   {# Morning opening sentence #}
   {% macro morning_opening_sentence() -%}
     {% set closings = [
@@ -97,7 +95,7 @@
   {%- endmacro %}
 
   {% macro traffic_sentence() -%}
-    {% if now().hour< night_hour  %}{% set his_slow = float( states.sensor.commute_stuart_work.state) > 28 %}{% set her_slow_a = float( states.sensor.commute_kareen_work_a.state) > 18 %}{% set her_slow_b = float( states.sensor.commute_kareen_work_b.state) > 18 %}
+    {% if now().hour< 12  %}{% set his_slow = float( states.sensor.commute_stuart_work.state) > 28 %}{% set her_slow_a = float( states.sensor.commute_kareen_work_a.state) > 18 %}{% set her_slow_b = float( states.sensor.commute_kareen_work_b.state) > 18 %}
       {% if states.binary_sensor.workday_sensor.state == 'on' %}
         {% if his_slow and her_slow_a and her_slow_b %} 
           {{ slow_traffic_sentence_generic() }}. the bridge is {{ states.sensor.tay_road_bridge.state }} but it's still going to take Stuart {{ states.sensor.commute_stuart_work.state }} minutes, and it's {{states.sensor.commute_kareen_work_a.state }} minutes for Kareen if she's going to Newport or {{states.sensor.commute_kareen_work_b.state }} minutes if its Tayport.
@@ -132,10 +130,10 @@
     {% for entity_id in states.group.certs.attributes.entity_id if float(states(entity_id)) < 14 %}{% if loop.first %}It would appear certificates for {% endif %}{% if loop.last and loop.length > 1 %} and {% elif not loop.first and loop.length > 1 %}, {% endif %}{{ state_attr(entity_id, 'friendly_name') }} {{states(entity_id)}}{% if loop.last %} {% if loop.length == 1 %}is{% else %}are{% endif %} offline.{% endif %}{% endfor %}
   {%- endmacro %}
 
-  {% if now().hour< night_hour  %}{{ morning_opening_sentence() }}{%- else%}{{ evening_opening_sentence() }}{% endif %}
+  {% if now().hour< 12  %}{{ morning_opening_sentence() }}{%- else%}{{ evening_opening_sentence() }}{% endif %}
   {{ time_sentence() }}
   {{ traffic_sentence() }}
   {{ network_sentence() }}
   {{ servers_sentence() }}
   {{ certs_sentence() }}
-  {% if now().hour< night_hour  %}{{ morning_closing_sentence() }}{%- else %}{{ evening_closing_sentence() }}{% endif %}
+  {% if now().hour< 12  %}{{ morning_closing_sentence() }}{%- else %}{{ evening_closing_sentence() }}{% endif %}
