@@ -4,13 +4,24 @@ calendar:
     username: !secret webmail_username
     password: !secret webmail_password
     url: !secret webmail_cal_main
+
+  - platform: caldav
+    username: !secret webmail_username
+    password: !secret webmail_password
+    url: !secret webmail_cal_main
     custom_calendars:
       - name: 'Bin Trash'
-        calendar: 'Calendar'
-        search: 'Future Event'
+        calendar: 'Reminders'
+        search: 'Blue & Brown Bins This Week'
       - name: 'Bin Green'
-        calendar: 'Calendar'
-        search: 'Spanning Event'
+        calendar: 'Reminders'
+        search: 'Green Bins This Week'
       - name: 'Bin Grey'
-        calendar: 'Calendar'
-        search: 'All Day Event'
+        calendar: 'Reminders'
+        search: 'Grey Bins This Week'
+      - name: 'Bin Out'
+        calendar: 'Reminders'
+        search: 'Bin Needs to Go Out'
+      - name: 'Bin Day'
+        calendar: 'Reminders'
+        search: 'Its Bin Day'
