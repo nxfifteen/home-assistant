@@ -167,6 +167,26 @@
       {% endif %}
     {%- endfor -%}
   {% endmacro %}
+  
+  {%- macro bin_sentence() -%}
+    {%- if states.calendar.reminders_bin_trash.state == 'on' -%}
+      {%- set thisweeksbin = "Blue & Brown bins" -%}
+      {%- set plural = "are they" -%}
+    {%- elif states.calendar.reminders_bin_grey.state == 'on' -%}
+      {%- set thisweeksbin = "Grey bin" -%}
+      {%- set plural = "is it" -%}
+    {%- elif states.calendar.reminders_bin_green.state == 'on' -%}
+      {%- set thisweeksbin = "Green bin" -%}
+      {%- set plural = "is it" -%}
+    {%- endif -%}
+    {%- if states.calendar.reminders_bin_out.state == 'on' -%}
+      Remember their collecting the {{ thisweeksbin }} tomorrow.
+    {%- elif states.calendar.reminders_bin_day.state == 'on' -%}
+      It's that time again. The {{ thisweeksbin }} are getting collected today, so, {{ plural }} out yet?
+    {%- else -%}
+      One last thing. Remember this their collecting the {{ thisweeksbin }} this week.
+    {%- endif -%}
+  {% endmacro %}
 
   {% if now().hour< morning_hours  %}
     {{ morning_opening_sentence() }}
@@ -180,6 +200,7 @@
   {{ network_sentence() }}
   {{ servers_sentence() }}
   {{ certs_sentence() }}
+  {{ bin_sentence() }}
   {% if now().hour< morning_hours  -%}
     {{ morning_closing_sentence() }}
   {%- elif now().hour< afternoon_hours -%}
