@@ -1,0 +1,40 @@
+---
+alias: GitLab CI Failed
+trigger:
+  - platform: state
+    entity_id: sensor.gitlab_252_ci
+    to: 'failed'
+    for:
+      minutes: 2
+
+  - platform: state
+    entity_id: sensor.gitlab_274_ci
+    to: 'failed'
+    for:
+      minutes: 2
+
+  - platform: state
+    entity_id: sensor.gitlab_279_ci
+    to: 'failed'
+    for:
+      minutes: 2
+  
+condition:
+  - condition: state
+    entity_id: sensor.family_stuart_state
+    state: '7'
+  
+action:
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_study_wall
+      brightness: 154
+      rgb_color: [58, 184, 255]
+      transition: 2
+      
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_study_desk
+      brightness: 77
+      rgb_color: [58, 184, 255]
+      transition: 2
