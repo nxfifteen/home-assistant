@@ -22,18 +22,12 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.ff_study_wall
-      brightness: 255
       effect: none
-      rgb_color: [81, 255, 76]
-      transition: 2
       
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk
-      brightness: 77
       effect: none
-      rgb_color: [81, 255, 76]
-      transition: 2
 
   - service: notify.synchat_nx
     data_template:
@@ -46,3 +40,21 @@ action:
       data:
         type: announce
       message: "According to Git Lab's continuous Integration your code is good."
+
+  - delay: 00:00:02
+
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_study_wall
+      brightness: 255
+      effect: none
+      rgb_color: [81, 255, 76]
+      transition: 2
+      
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_study_desk
+      brightness: 77
+      effect: none
+      rgb_color: [81, 255, 76]
+      transition: 2
