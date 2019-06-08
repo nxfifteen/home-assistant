@@ -24,14 +24,14 @@ action:
       entity_id: light.ff_study_wall
       effect: colorloop
       brightness: 255
-      transition: 5
+      transition: 3
       
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk
       effect: colorloop
       brightness: 77
-      transition: 5
+      transition: 3
 
   - service: notify.synchat_nx
     data_template:

@@ -23,6 +23,7 @@ action:
     data:
       entity_id: light.ff_study_wall
       brightness: 255
+      effect: none
       rgb_color: [255, 25, 60]
       transition: 2
       
@@ -30,6 +31,7 @@ action:
     data:
       entity_id: light.ff_study_desk
       brightness: 77
+      effect: none
       rgb_color: [255, 25, 60]
       transition: 2
 

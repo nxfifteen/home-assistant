@@ -31,6 +31,7 @@ action:
       brightness: 154
       rgb_color: [58, 184, 255]
       transition: 10
+      effect: none
       
   - service: light.turn_on
     data:
@@ -38,3 +39,4 @@ action:
       brightness: 77
       rgb_color: [58, 184, 255]
       transition: 10
+      effect: none
