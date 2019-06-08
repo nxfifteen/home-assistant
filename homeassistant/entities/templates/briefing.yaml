@@ -126,13 +126,13 @@
 
   {%- macro traffic_sentence() -%}
     {%- if now().hour< night_hours  -%}
-      {%- set his_slow = states.sensor.commute_stuart_work.state -%}{%- if his_slow == 'unknown' -%}{%- set his_slow = 0 -%}{%- endif -%}
-      {%- set her_slow_a = states.sensor.commute_kareen_work_a.state -%}{%- if her_slow_a == 'unknown' -%}{%- set her_slow_a = 0 -%}{%- endif -%}
-      {%- set her_slow_b = states.sensor.commute_kareen_work_b.state -%}{%- if her_slow_b == 'unknown' -%}{%- set her_slow_b = 0 -%}{%- endif -%}
-      {%- set his_slow = float( his_slow ) > 28 -%}
-      {%- set her_slow_a = float( her_slow_a ) > 18 -%}
-      {%- set her_slow_b = float( her_slow_b ) > 18 -%}
-      {%- if states.binary_sensor.workday_sensor.state == 'off' -%}
+      {%- if states.binary_sensor.workday_sensor.state == 'on' -%}
+        {%- set his_slow = states.sensor.commute_stuart_work.state -%}{%- if his_slow == 'unknown' -%}{%- set his_slow = 0 -%}{%- endif -%}
+        {%- set her_slow_a = states.sensor.commute_kareen_work_a.state -%}{%- if her_slow_a == 'unknown' -%}{%- set her_slow_a = 0 -%}{%- endif -%}
+        {%- set her_slow_b = states.sensor.commute_kareen_work_b.state -%}{%- if her_slow_b == 'unknown' -%}{%- set her_slow_b = 0 -%}{%- endif -%}
+        {%- set his_slow = float( his_slow ) > 28 -%}
+        {%- set her_slow_a = float( her_slow_a ) > 18 -%}
+        {%- set her_slow_b = float( her_slow_b ) > 18 -%}
         {%- if his_slow and her_slow_a and her_slow_b -%} 
           {{ slow_traffic_sentence_generic() }}. the bridge is {{ states.sensor.tay_road_bridge.state }} but it's still going to take Stuart {{ states.sensor.commute_stuart_work.state }} minutes, and it's {{states.sensor.commute_kareen_work_a.state }} minutes for Kareen if she's going to Newport or {{her_slow_b }} minutes if its Tayport.
         {%- elif his_slow  -%}
