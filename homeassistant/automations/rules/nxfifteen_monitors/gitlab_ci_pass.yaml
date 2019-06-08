@@ -41,7 +41,7 @@ action:
         type: announce
       message: "According to Git Lab's continuous Integration your code is good."
 
-  - delay: 00:00:02
+  - delay: 00:00:01
 
   - service: light.turn_on
     data:
