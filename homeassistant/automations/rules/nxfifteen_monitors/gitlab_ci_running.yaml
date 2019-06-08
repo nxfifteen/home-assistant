@@ -22,15 +22,15 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.ff_study_wall
-      brightness: 154
-      rgb_color: [21, 92, 255]
+      effect: colorloop
+      brightness: 255
       transition: 5
       
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk
+      effect: colorloop
       brightness: 77
-      rgb_color: [21, 92, 255]
       transition: 5
 
   - service: notify.synchat_nx

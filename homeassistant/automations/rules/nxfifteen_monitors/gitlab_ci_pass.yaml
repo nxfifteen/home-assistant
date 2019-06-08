@@ -22,7 +22,7 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.ff_study_wall
-      brightness: 154
+      brightness: 255
       rgb_color: [81, 255, 76]
       transition: 2
       
@@ -43,4 +43,4 @@ action:
         - media_player.study
       data:
         type: announce
-      message: "According to Git Lab continuous Integration your code is good."
+      message: "According to Git Lab's continuous Integration your code is good."

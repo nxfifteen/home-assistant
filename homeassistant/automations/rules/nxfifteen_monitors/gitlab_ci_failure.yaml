@@ -22,7 +22,7 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.ff_study_wall
-      brightness: 154
+      brightness: 255
       rgb_color: [255, 25, 60]
       transition: 2
       
