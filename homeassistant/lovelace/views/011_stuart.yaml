@@ -27,6 +27,8 @@ cards:
         show_header_toggle: false
         entities:
           - sensor.family_stuart_state_human
+          - entity: sensor.family_stuart_locality
+            name: Locality
           - entity: sensor.family_stuart_loc_room
             name: Room
           - type: section
