@@ -1,0 +1,14 @@
+---
+# Home Assistant can get information from various devices. These can be used,
+# for example, to track the location of your mobile phone.
+#
+# This configuration loads up my device trackers
+#
+# https://www.home-assistant.io/components/device_tracker/
+#
+device_tracker:
+  - platform: unifi
+    hosts: !secret unifi_host
+    port: !secret unifi_port
+    username: !secret unifi_username
+    password: !secret unifi_password
