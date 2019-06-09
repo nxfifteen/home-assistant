@@ -1,8 +1,7 @@
 ---
 LocateIntent:
   speech:
-    text: >
-      I am sorry, I do not know where {{ User }} is.
+    text: 'I am sorry, I do not know where {{ User }} is.'
   card:
     type: simple
     title: Location queried
