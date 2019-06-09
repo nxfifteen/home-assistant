@@ -1,0 +1,9 @@
+---
+LocateIntent:
+  speech:
+    text: >
+      I am sorry, I do not know where {{ User }} is.
+  card:
+    type: simple
+    title: Location queried
+    content: Ask Home Assistant about user location

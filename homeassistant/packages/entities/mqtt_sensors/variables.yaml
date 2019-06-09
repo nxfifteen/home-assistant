@@ -1,0 +1,5 @@
+---
+sensor:
+- platform: mqtt
+  name: ff_study_mood_lighting_colour
+  state_topic: "var/room/ff/study/mood/colour"
