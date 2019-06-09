@@ -32,23 +32,13 @@ cards:
         card:
           type: glance
           title: People at home
-        
-      # - type: glance
-      #   show_header_toggle: false
-      #   entities:
-      #     - person.stuart
-      #     - person.kareen
-      #     - person.john
-      #     - person.maureen
-      #     - person.allan
-      #     - person.colin
-      #     - person.irene
-      #     - person.kayleigh
-      #     - person.kev
-      #     - person.khristen
-      #     - person.mecha
-      #     - person.scott
-      #     - person.steve
+  
+  - type: picture-glance
+    title: Front Door
+    entities:
+      - binary_sensor.gf_hallway_contact_sensor
+      - binary_sensor.motion_gf_hallway_camera
+    camera_image: camera.front_door
         
   - type: entities
     show_header_toggle: false
@@ -366,28 +356,3 @@ cards:
                 color: "#3498db"
               - value: -100
                 color: "#e74c3c"
-  
-  - type: picture-glance
-    title: Front garden
-    entities: []
-    camera_image: camera.front_door
-  
-  - type: picture-glance
-    title: Front garden
-    entities: []
-    camera_image: camera.lounge
-  
-  - type: picture-glance
-    title: Front garden
-    entities: []
-    camera_image: camera.dinning_room
-  
-  - type: picture-glance
-    title: Front garden
-    entities: []
-    camera_image: camera.kitchen
-  
-  - type: picture-glance
-    title: Front garden
-    entities: []
-    camera_image: camera.backdoor
