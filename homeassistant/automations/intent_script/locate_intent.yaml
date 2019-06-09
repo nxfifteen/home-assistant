@@ -1,6 +1,7 @@
 ---
 LocateIntent:
   speech:
+    type: plaintext
     text: 'I am sorry, I do not know where {{ User }} is.'
   card:
     type: simple
