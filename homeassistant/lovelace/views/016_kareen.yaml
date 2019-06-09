@@ -27,10 +27,10 @@ cards:
         show_header_toggle: false
         entities:
           - sensor.family_kareen_state_human
-          - entity: sensor.family_kareen_loc_room
-            name: Room
           - entity: sensor.family_kareen_locality
             name: Locality
+          - entity: sensor.family_kareen_loc_room
+            name: Room
           - type: section
           - input_select.kareen
 

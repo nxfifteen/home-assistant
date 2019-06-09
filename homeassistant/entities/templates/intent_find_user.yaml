@@ -1,10 +1,9 @@
 >
-  {% set User = "Stuart" %}
   {%- if User.lower() == "stuart" or User.lower() == "kareen" -%}
     {% set user_dest = states.sensor["family_" ~ User.lower() ~ "_drive_dest"].state %}
     
     {%- if user_dest == "None" -%}
-      {{ User }} is at {{ states.person[User.lower()].state }}
+      {{ User }} is at {{ states.sensor["family_" ~ User.lower() ~ "_locality"].state }}
     {%- else -%}
       {%- if user_dest != "Home" -%}
         {% set user_dest = "to " ~ user_dest %}
