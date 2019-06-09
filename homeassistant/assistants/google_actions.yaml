@@ -147,7 +147,7 @@ google_actions:
       room: Study
 
     switch.study_fan:
-      name: Study Sterio
+      name: Study Hi-Fi
       room: Study
 
     switch.ff_study_sterio:

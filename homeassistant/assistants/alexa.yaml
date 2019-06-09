@@ -169,7 +169,7 @@ alexa:
       display_categories: SWITCH
 
     switch.study_fan:
-      name: Study Sterio
+      name: Study Hi-Fi
       description: The Study Sterio
       display_categories: SWITCH
 
