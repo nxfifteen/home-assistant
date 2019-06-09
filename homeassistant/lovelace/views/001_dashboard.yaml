@@ -36,6 +36,7 @@ cards:
   - type: picture-glance
     title: Front Door
     entities:
+      - binary_sensor.camera_front_door_recording
       - binary_sensor.gf_hallway_contact_sensor
       - binary_sensor.motion_gf_hallway_camera
     camera_image: camera.front_door

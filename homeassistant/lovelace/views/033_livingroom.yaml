@@ -8,6 +8,7 @@ cards:
   - type: picture-glance
     title: Livingroom
     entities:
+      - binary_sensor.camera_lounge_recording
       - binary_sensor.motion_gf_living
       - binary_sensor.motion_gf_living_camera
     camera_image: camera.lounge

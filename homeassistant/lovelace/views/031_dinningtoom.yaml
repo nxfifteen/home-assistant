@@ -8,6 +8,7 @@ cards:
   - type: picture-glance
     title: Dinning Room
     entities:
+      - binary_sensor.camera_dinning_room_recording
       - binary_sensor.gf_dinning_contact_side
       - binary_sensor.motion_gf_dinning
       - binary_sensor.motion_gf_dinning_camera
@@ -16,6 +17,7 @@ cards:
   - type: picture-glance
     title: Kitchen
     entities:
+      - binary_sensor.camera_kitchen_recording
       - binary_sensor.gf_dinning_contact_side
       - binary_sensor.motion_gf_dinning
       - binary_sensor.motion_gf_kitchen_camera
