@@ -28,6 +28,7 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Plugs
+      - switch.gf_studio_camera
       - switch.gf_studio_treadmill
       - sensor.gf_studio_treadmill_power
 
