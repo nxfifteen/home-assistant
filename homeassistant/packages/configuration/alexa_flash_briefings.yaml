@@ -1,0 +1,3 @@
+---
+alexa:
+  flash_briefings: !include_dir_merge_named ../../automations/flash_briefings
