@@ -1,0 +1,19 @@
+---
+alias: Restart IP Camera - By Socket
+
+trigger:
+- platform: state
+  entity_id: switch.gf_studio_camera
+  from:  'on'
+  to:  'off'
+  for:
+    minutes: 5
+  
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.gf_studio_camera
+      
+  - service: notify.synchat_nx
+    data_template:
+      message: "The Studio Camera got turned off? I've turned it on again"

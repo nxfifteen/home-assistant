@@ -9,21 +9,51 @@ binary_sensor:
   - platform: template
     sensors:
       camera_front_door_recording:
-        friendly_name: 'Upcoming Comic'
+        friendly_name: 'Recording'
         value_template: "{{ is_state('camera.front_door', 'recording') }}"
+        icon_template: >-
+          {% if is_state("binary_sensor.camera_front_door_recording", "on") %}
+            mdi:cctv
+          {% else %}
+            mdi:skull
+          {% endif %}
         
       camera_backdoor_recording:
-        friendly_name: 'Upcoming Comic'
+        friendly_name: 'Recording'
         value_template: "{{ is_state('camera.backdoor', 'recording') }}"
+        icon_template: >-
+          {% if is_state("binary_sensor.camera_backdoor_recording", "on") %}
+            mdi:cctv
+          {% else %}
+            mdi:skull
+          {% endif %}
         
       camera_dinning_room_recording:
-        friendly_name: 'Upcoming Comic'
+        friendly_name: 'Recording'
         value_template: "{{ is_state('camera.dinning_room', 'recording') }}"
+        icon_template: >-
+          {% if is_state("binary_sensor.camera_dinning_room_recording", "on") %}
+            mdi:cctv
+          {% else %}
+            mdi:skull
+          {% endif %}
         
       camera_kitchen_recording:
-        friendly_name: 'Upcoming Comic'
+        friendly_name: 'Recording'
         value_template: "{{ is_state('camera.kitchen', 'recording') }}"
+        icon_template: >-
+          {% if is_state("binary_sensor.camera_kitchen_recording", "on") %}
+            mdi:cctv
+          {% else %}
+            mdi:skull
+          {% endif %}
         
       camera_lounge_recording:
-        friendly_name: 'Upcoming Comic'
+        friendly_name: 'Recording'
         value_template: "{{ is_state('camera.lounge', 'recording') }}"
+        icon_template: >-
+          {% if is_state("binary_sensor.camera_lounge_recording", "on") %}
+            mdi:cctv
+          {% else %}
+            mdi:skull
+          {% endif %}

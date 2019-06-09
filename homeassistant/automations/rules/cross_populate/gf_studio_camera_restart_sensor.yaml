@@ -1,0 +1,25 @@
+---
+alias: Restart IP Camera - By Sensor
+
+trigger:
+- platform: state
+  entity_id: binary_sensor.gf_studio_camera
+  to:  'off'
+  for:
+    seconds: 30
+  
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.gf_studio_camera
+      
+  - delay: 00:00:30
+      
+  - service: switch.turn_on
+    data:
+      entity_id: switch.gf_studio_camera
+      
+  - service: notify.synchat_nx
+    data_template:
+      message: "The Studio Camera crashed again! I've restarted it"
+ 
