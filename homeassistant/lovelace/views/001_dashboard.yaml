@@ -64,6 +64,7 @@ cards:
       - sensor.light_scene
       - input_select.light_scene
 
+
   #################################################################
   #                                                               #
   #                     Home - Presence Card                      #
@@ -365,3 +366,28 @@ cards:
                 color: "#3498db"
               - value: -100
                 color: "#e74c3c"
+  
+  - type: picture-glance
+    title: Front garden
+    entities: []
+    camera_image: camera.front_door
+  
+  - type: picture-glance
+    title: Front garden
+    entities: []
+    camera_image: camera.lounge
+  
+  - type: picture-glance
+    title: Front garden
+    entities: []
+    camera_image: camera.dinning_room
+  
+  - type: picture-glance
+    title: Front garden
+    entities: []
+    camera_image: camera.kitchen
+  
+  - type: picture-glance
+    title: Front garden
+    entities: []
+    camera_image: camera.backdoor

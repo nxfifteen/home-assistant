@@ -1492,6 +1492,113 @@
      "file": "/config/node-red/node_modules/node-red-node-mysql/68-mysql.js"
     }
    }
+  },
+  "node-red-contrib-geonames": {
+   "name": "node-red-contrib-geonames",
+   "version": "0.1.11",
+   "local": false,
+   "nodes": {
+    "lookup-place": {
+     "name": "lookup-place",
+     "types": [
+      "lookup place"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-geonames",
+     "file": "/config/node-red/node_modules/node-red-contrib-geonames/lookup-place/lookup-place.js"
+    },
+    "lookup-timezone": {
+     "name": "lookup-timezone",
+     "types": [
+      "lookup timezone"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-geonames",
+     "file": "/config/node-red/node_modules/node-red-contrib-geonames/lookup-timezone/lookup-timezone.js"
+    },
+    "search-place": {
+     "name": "search-place",
+     "types": [
+      "search place"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-geonames",
+     "file": "/config/node-red/node_modules/node-red-contrib-geonames/search-place/search-place.js"
+    }
+   }
+  },
+  "node-red-node-google": {
+   "name": "node-red-node-google",
+   "version": "0.1.4",
+   "local": false,
+   "nodes": {
+    "google plus": {
+     "name": "google plus",
+     "types": [
+      "google plus"
+     ],
+     "enabled": false,
+     "local": true,
+     "module": "node-red-node-google",
+     "file": "/config/node-red/node_modules/node-red-node-google/plus.js"
+    },
+    "google places": {
+     "name": "google places",
+     "types": [
+      "google places"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-google",
+     "file": "/config/node-red/node_modules/node-red-node-google/places.js"
+    },
+    "google-api-config": {
+     "name": "google-api-config",
+     "types": [
+      "google-credentials",
+      "google-api-config"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-google",
+     "file": "/config/node-red/node_modules/node-red-node-google/google.js"
+    },
+    "google geocoding": {
+     "name": "google geocoding",
+     "types": [
+      "google geocoding"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-google",
+     "file": "/config/node-red/node_modules/node-red-node-google/geocoding.js"
+    },
+    "google directions": {
+     "name": "google directions",
+     "types": [
+      "google directions"
+     ],
+     "enabled": false,
+     "local": true,
+     "module": "node-red-node-google",
+     "file": "/config/node-red/node_modules/node-red-node-google/directions.js"
+    },
+    "google calendar": {
+     "name": "google calendar",
+     "types": [
+      "google calendar in",
+      "google calendar",
+      "google calendar out"
+     ],
+     "enabled": false,
+     "local": true,
+     "module": "node-red-node-google",
+     "file": "/config/node-red/node_modules/node-red-node-google/calendar.js"
+    }
+   }
   }
  },
  "users": {

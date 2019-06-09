@@ -1,2 +1,2 @@
 ---
-intent_script: !include_dir_merge_named ../../automations/intent_script
+intent_script: !include ../../automations/intent_script/intent_script.yaml

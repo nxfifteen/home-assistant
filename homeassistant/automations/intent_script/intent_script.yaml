@@ -1,0 +1,8 @@
+---
+LocateIntent:
+  speech:
+    text: !include ../../entities/templates/intent_find_user.yaml
+  card:
+    type: simple
+    title: Location queried
+    content: !include ../../entities/templates/intent_find_user.yaml

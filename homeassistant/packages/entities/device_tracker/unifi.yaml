@@ -8,8 +8,19 @@
 #
 device_tracker:
   - platform: unifi
-    hosts: !secret unifi_host
+    host: !secret unifi_host
     port: !secret unifi_port
     username: !secret unifi_username
     password: !secret unifi_password
     verify_ssl: false
+    ssid_filter:
+        - 'NxMESH'
+        - 'NxFriends'
+    monitored_conditions:
+        - first_seen
+        - idletime
+        - last_seen
+        - name
+        - uptime
+        - signal
+        - user_id
