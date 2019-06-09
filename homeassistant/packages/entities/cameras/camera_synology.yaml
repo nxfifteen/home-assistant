@@ -8,22 +8,22 @@ camera:
 binary_sensor:
   - platform: template
     sensors:
-      - camera_front_door_recording:
+      camera_front_door_recording:
         friendly_name: 'Upcoming Comic'
         value_template: "{{ is_state('camera.front_door', 'recording') }}"
         
-      - camera_backdoor_recording:
+      camera_backdoor_recording:
         friendly_name: 'Upcoming Comic'
         value_template: "{{ is_state('camera.backdoor', 'recording') }}"
         
-      - camera_dinning_room_recording:
+      camera_dinning_room_recording:
         friendly_name: 'Upcoming Comic'
         value_template: "{{ is_state('camera.dinning_room', 'recording') }}"
         
-      - camera_kitchen_recording:
+      camera_kitchen_recording:
         friendly_name: 'Upcoming Comic'
         value_template: "{{ is_state('camera.kitchen', 'recording') }}"
         
-      - camera_lounge_recording:
+      camera_lounge_recording:
         friendly_name: 'Upcoming Comic'
         value_template: "{{ is_state('camera.lounge', 'recording') }}"
