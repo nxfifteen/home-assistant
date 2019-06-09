@@ -1,0 +1,17 @@
+>
+  {% set User = "Stuart" %}
+  {%- if User.lower() == "stuart" or User.lower() == "kareen" -%}
+    {% set user_dest = states.sensor["family_" ~ User.lower() ~ "_drive_dest"].state %}
+    
+    {%- if user_dest == "None" -%}
+      {{ User }} is at {{ states.person[User.lower()].state }}
+    {%- else -%}
+      {%- if user_dest != "Home" -%}
+        {% set user_dest = "to " ~ user_dest %}
+      {%- endif -%}
+      {% set user_eta = states.sensor["family_" ~ User.lower() ~ "_drive_eta"].state %}
+      {{ User }} is at driving {{ user_dest }}, and should arrive at {{ user_eta }}
+    {%- endif -%}
+  {%- else -%}
+    I am sorry, I do not know where {{ User }} is.
+  {%- endif -%}
