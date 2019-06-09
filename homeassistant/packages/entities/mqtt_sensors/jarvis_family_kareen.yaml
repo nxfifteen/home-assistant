@@ -12,6 +12,11 @@ sensor:
   name: family_kareen_loc_room
   state_topic: "tracker/family/kareen/room"
   value_template: '{{ value_json.data.loc }}'
+
+- platform: mqtt
+  name: family_kareen_locality
+  state_topic: "tracker/family/kareen/phone/location"
+  value_template: "{{ value_json.locality }}"
   
 - platform: mqtt
   name: family_kareen_battery_phone

@@ -14,6 +14,11 @@ sensor:
   value_template: '{{ value_json.data.loc }}'
 
 - platform: mqtt
+  name: family_stuart_locality
+  state_topic: "tracker/family/stuart/phone/location"
+  value_template: "{{ value_json.locality }}"
+
+- platform: mqtt
   name: family_stuart_battery_phone
   state_topic: "tracker/family/stuart/phone/location"
   unit_of_measurement: '%'
