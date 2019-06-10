@@ -1,7 +1,4 @@
 >
-  {%- if User.lower() == "stewart" %}
-    {% set User = "Stuart" %}
-  {%- endif -%}
   {%- if User.lower() == "stuart" or User.lower() == "kareen" -%}
     {% set user_dest = states.sensor["family_" ~ User.lower() ~ "_drive_dest"].state %}
     

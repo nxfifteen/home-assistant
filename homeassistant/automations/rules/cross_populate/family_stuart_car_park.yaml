@@ -3,9 +3,9 @@ alias: family_stuart_car_park
 
 trigger:
 - platform: state
-  entity_id: binary_sensor.family_stuart_drive_ignition
-  from:  'true'
-  to:  'false'
+  entity_id: sensor.family_stuart_drive_ignition
+  from:  'True'
+  to:  'False'
   
 action:
   - service: notify.synchat_hab

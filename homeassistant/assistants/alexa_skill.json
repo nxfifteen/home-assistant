@@ -1,0 +1,116 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "the a. i.",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "LocateIntent",
+                    "slots": [
+                        {
+                            "name": "User",
+                            "type": "NXFAMILY"
+                        }
+                    ],
+                    "samples": [
+                        "to find {User}",
+                        "Where has {User} gone",
+                        "Where is {User}"
+                    ]
+                },
+                {
+                    "name": "BinsIntent",
+                    "slots": [],
+                    "samples": [
+                        "what bin should i take out",
+                        "what bin are they collecting today",
+                        "what's this weeks bin",
+                        "what bin goes out this week"
+                    ]
+                },
+                {
+                    "name": "ChoreIntent",
+                    "slots": [
+                        {
+                            "name": "Chore",
+                            "type": "NXCORES"
+                        }
+                    ],
+                    "samples": [
+                        "I've {Chore}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "NXCORES",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Litter",
+                                "synonyms": [
+                                    "done the litter",
+                                    "sorted the litter",
+                                    "Changed the litter"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Grass",
+                                "synonyms": [
+                                    "done the grass",
+                                    "Cut The Grass"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "NXFAMILY",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Kareen",
+                                "synonyms": [
+                                    "carrie",
+                                    "carlene",
+                                    "corinne",
+                                    "karine",
+                                    "carin"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Stuart",
+                                "synonyms": [
+                                    "Stewart"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

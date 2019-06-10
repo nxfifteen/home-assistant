@@ -1,4 +1,12 @@
 ---
+amzn1.ask.skill.be96a688-9463-494a-8b9f-aa2a6953ed5c:
+  speech:
+    text: hiya, The A. I. is online
+  card:
+    type: simple
+    title: Welcome
+    content: Okay
+    
 LocateIntent:
   speech:
     text: !include ../../entities/templates/intent_find_user.yaml
@@ -6,3 +14,28 @@ LocateIntent:
     type: simple
     title: Location queried
     content: !include ../../entities/templates/intent_find_user.yaml
+
+BinsIntent:
+  speech:
+    text: Okay
+  card:
+    type: simple
+    title: This Weeks Bin Collection
+    content: Okay
+
+ChoreIntent:
+  speech:
+    text: nice job
+  card:
+    type: simple
+    title: I've logged the Chore
+    content: Okay
+
+AMAZON.HelpIntent:
+  speech:
+    text: I dont know how to help you yet
+  card:
+    type: simple
+    title: Help
+    content: Okay
+
