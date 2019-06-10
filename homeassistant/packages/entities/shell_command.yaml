@@ -1,2 +1,4 @@
 shell_command:
   shell_plex_music_evening: !secret shell_plex_music_evening
+  grocy_url_chore_1_done: !secret grocy_url_chore_1_done
+  grocy_url_chore_2_done: !secret grocy_url_chore_2_done
