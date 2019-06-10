@@ -42,6 +42,10 @@ sensor:
 
 homeassistant:
   customize:
+    script.grocy_url_chore_litter_done:
+      friendly_name: Change the Litter
+      icon: mdi:cat
+
     sensor.grocy_chore_litter_changed:
       friendly_name: Litter Last Changed
       icon: mdi:cat
@@ -57,6 +61,10 @@ homeassistant:
     sensor.grocy_chore_litter_changed_next:
       friendly_name: Litter Next Changed
       icon: mdi:calendar-clock
+      
+    script.grocy_url_chore_grass_done:
+      friendly_name: Cut the Grass
+      icon: mdi:tree
     
     sensor.grocy_chore_cut_grass:
       friendly_name: Last Grass Cut
