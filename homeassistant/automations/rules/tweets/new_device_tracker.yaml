@@ -1,7 +1,5 @@
 ---
 alias: new_device_tracker
-initial_state: false
-
 trigger:
   - platform: event
     event_type: device_tracker_new_device
