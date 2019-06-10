@@ -1,0 +1,18 @@
+>
+  {%- if states.calendar.reminders_bin_trash.state == 'on' -%}
+    {%- set thisweeksbin = "Blue & Brown bins" -%}
+    {%- set plural = "are they" -%}
+  {%- elif states.calendar.reminders_bin_grey.state == 'on' -%}
+    {%- set thisweeksbin = "Grey bin" -%}
+    {%- set plural = "is it" -%}
+  {%- elif states.calendar.reminders_bin_green.state == 'on' -%}
+    {%- set thisweeksbin = "Green bin" -%}
+    {%- set plural = "is it" -%}
+  {%- endif -%}
+  {%- if states.calendar.reminders_bin_out.state == 'on' -%}
+    Their collecting the {{ thisweeksbin }} tomorrow.
+  {%- elif states.calendar.reminders_bin_day.state == 'on' -%}
+    The {{ thisweeksbin }} are getting collected today, so, {{ plural }} out yet?
+  {%- else -%}
+    Their collecting the {{ thisweeksbin }} this week.
+  {%- endif -%}

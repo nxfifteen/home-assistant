@@ -45,7 +45,7 @@ binary_sensor:
     sensors:
       grocy_chore_litter_due:
         friendly_name: 'Litter Change Due'
-        value_template: '{{ as_timestamp(now()) | int) > as_timestamp(states.sensor.grocy_chore_litter_changed_next.state) }}'
+        value_template: '{{ (as_timestamp(now()) | int) > (as_timestamp(states.sensor.grocy_chore_litter_changed_next.state) | int) }}'
 
 homeassistant:
   customize:
