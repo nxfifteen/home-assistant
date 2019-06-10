@@ -1,0 +1,4 @@
+---
+grocy_url_chore_grass_done:
+  sequence:
+    - service: shell_command.grocy_url_chore_2_done
