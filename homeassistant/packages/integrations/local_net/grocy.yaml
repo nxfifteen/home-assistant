@@ -40,6 +40,13 @@ sensor:
       friendly_name: grocy_chore_cut_grass_next
       value_template: '{{ states.sensor.grocy_chore_cut_grass.attributes["next_estimated_execution_time"] }}'
 
+binary_sensor:
+  - platform: template
+    sensors:
+      grocy_chore_litter_due:
+        friendly_name: 'Litter Change Due'
+        value_template: '{{ as_timestamp(now()) | int) > as_timestamp(states.sensor.grocy_chore_litter_changed_next.state) }}'
+
 homeassistant:
   customize:
     script.grocy_url_chore_litter_done:
