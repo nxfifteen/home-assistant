@@ -1,3 +1,0 @@
->
-  {% from 'macros.j2' import bin_sentence as bin %}
-  {{ bin() }}

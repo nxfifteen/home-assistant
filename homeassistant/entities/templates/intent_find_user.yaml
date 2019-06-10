@@ -6,7 +6,7 @@
         {{ User }} is driving just now, but is {{ states.sensor["family_" ~ User.lower() ~ "_locality"].state }}
       {%- else -%}
         {%- if User.lower() == "stuart" and states.sensor.steam_76561197982696593.state == "online" -%}
-          {{ User }} is {{ states.sensor["family_" ~ User.lower() ~ "_locality"].state }}, playing 
+          {{ User }} is {{ states.sensor["family_" ~ User.lower() ~ "_locality"].state }}, playing on steam
         {%- else -%}
           {{ User }} is {{ states.sensor["family_" ~ User.lower() ~ "_locality"].state }}
         {%- endif -%}
