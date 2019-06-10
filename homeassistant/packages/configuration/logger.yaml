@@ -3,4 +3,4 @@ logger:
   default: error
   logs:
     homeassistant.components.plex.sensor: debug
-    homeassistant.components.alexa.intent: info
+    homeassistant.components.alexa.intent: debug
