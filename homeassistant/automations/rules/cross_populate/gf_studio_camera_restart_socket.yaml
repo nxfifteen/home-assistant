@@ -16,4 +16,4 @@ action:
       
   - service: notify.synchat_nx
     data_template:
-      message: "The Studio Camera got turned off? I've turned it on again"
+      message: "The Studio Camera got turned off? I've turned it on again #A.I. #CCTV #Failed #HouseKeeping #SudioCCTV"

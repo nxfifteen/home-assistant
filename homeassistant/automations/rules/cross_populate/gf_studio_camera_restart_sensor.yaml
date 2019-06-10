@@ -21,5 +21,5 @@ action:
       
   - service: notify.synchat_nx
     data_template:
-      message: "The Studio Camera crashed again! I've restarted it"
+      message: "The Studio Camera crashed again! I've restarted it #A.I. #CCTV #Failed #HouseKeeping #SudioCCTV"
  
