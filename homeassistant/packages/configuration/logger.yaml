@@ -4,3 +4,4 @@ logger:
   logs:
     homeassistant.components.plex.sensor: debug
     homeassistant.components.alexa.intent: debug
+    homeassistant.components.script: debug
