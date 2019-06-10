@@ -184,7 +184,7 @@
     {%- elif states.calendar.reminders_bin_day.state == 'on' -%}
       It's that time again. The {{ thisweeksbin }} are getting collected today, so, {{ plural }} out yet?
     {%- else -%}
-      One last thing. Remember this their collecting the {{ thisweeksbin }} this week.
+      One last thing. Remember their collecting the {{ thisweeksbin }} this week.
     {%- endif -%}
   {% endmacro %}
 
