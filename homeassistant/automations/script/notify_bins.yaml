@@ -1,0 +1,6 @@
+---
+notify_bins:
+  sequence:
+    - service: notify.hass_synchat
+      data_template:
+        message: !include ../../entities/templates/bin_collection.yaml

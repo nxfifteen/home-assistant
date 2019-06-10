@@ -1,9 +1,16 @@
 >
   {%- if User.lower() == "stuart" or User.lower() == "kareen" -%}
     {% set user_dest = states.sensor["family_" ~ User.lower() ~ "_drive_dest"].state %}
-    
     {%- if user_dest == "None" -%}
-      {{ User }} is {{ states.sensor["family_" ~ User.lower() ~ "_locality"].state }}
+      {%- if states.sensor["family_" ~ User.lower() ~ "_drive_ignition"].state == "True" -%}
+        {{ User }} is driving just now, but is {{ states.sensor["family_" ~ User.lower() ~ "_locality"].state }}
+      {%- else -%}
+        {%- if User.lower() == "stuart" and states.sensor.steam_76561197982696593.state == "online" -%}
+          {{ User }} is {{ states.sensor["family_" ~ User.lower() ~ "_locality"].state }}, playing 
+        {%- else -%}
+          {{ User }} is {{ states.sensor["family_" ~ User.lower() ~ "_locality"].state }}
+        {%- endif -%}
+      {%- endif -%}
     {%- else -%}
       {%- if user_dest != "Home" -%}
         {% set user_dest = "to " ~ user_dest %}
