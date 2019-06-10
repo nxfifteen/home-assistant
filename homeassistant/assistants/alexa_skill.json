@@ -53,9 +53,18 @@
                         {
                             "name": "Chore",
                             "type": "NXCORES"
+                        },
+                        {
+                            "name": "User",
+                            "type": "NXFAMILY"
                         }
                     ],
                     "samples": [
+                        "{User} just {Chore}",
+                        "{User} has {Chore}",
+                        "We have {Chore}",
+                        "We've {Chore}",
+                        "I have {Chore}",
                         "I've {Chore}"
                     ]
                 }

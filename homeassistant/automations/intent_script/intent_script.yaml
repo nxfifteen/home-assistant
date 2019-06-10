@@ -17,11 +17,11 @@ LocateIntent:
 
 BinsIntent:
   speech:
-    text: Okay
+    text: !include ../../entities/templates/bin_collection.yaml
   card:
     type: simple
     title: This Weeks Bin Collection
-    content: Okay
+    content: !include ../../entities/templates/bin_collection.yaml
 
 ChoreIntent:
   speech:
@@ -30,6 +30,10 @@ ChoreIntent:
     type: simple
     title: I've logged the Chore
     content: Okay
+  action:
+    service: script.turn_on
+    data_template:
+      entity_id: script.grocy_url_chore_{{ Chore.lower() | replace(" ", "_") }}_done
 
 AMAZON.HelpIntent:
   speech:
