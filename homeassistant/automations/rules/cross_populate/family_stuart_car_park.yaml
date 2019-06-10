@@ -2,16 +2,10 @@
 alias: family_stuart_car_park
 
 trigger:
-- platform: mqtt
-  topic: tracker/family/stuart/phone/location
-  
-condition:
-- condition: template
-  value_template: '{{ trigger.payload_json[''ignition''] == ''false'' }}'
-- condition: template
-  value_template: '{{ trigger.payload_json.lat is defined }}'
-- condition: template
-  value_template: '{{ trigger.payload_json.lon is defined }}'
+- platform: state
+  entity_id: binary_sensor.family_stuart_drive_ignition
+  from:  'true'
+  to:  'false'
   
 action:
   - service: notify.synchat_hab
@@ -22,8 +16,8 @@ action:
     data_template:
       dev_id: stuart_car
       gps:
-      - '{{ trigger.payload_json.lat }}'
-      - '{{ trigger.payload_json.lon }}'
+      - '{{ state_attr("device_tracker.stuart", "latitude") }}'
+      - '{{ state_attr("device_tracker.stuart", "longitude") }}'
       gps_accuracy: 1
       host_name: "Stuart's Car"
       mac: '00:25:42:73:A1:B9'

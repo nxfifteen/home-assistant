@@ -4,5 +4,3 @@ logger:
   logs:
     homeassistant.components.plex.sensor: debug
     homeassistant.components.alexa.intent: info
-    aiounifi: debug
-    homeassistant.components.unifi: debug

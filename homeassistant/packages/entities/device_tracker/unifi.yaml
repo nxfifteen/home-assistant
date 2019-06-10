@@ -24,3 +24,9 @@ device_tracker:
         - uptime
         - signal
         - user_id
+        - bssid
+        - essid
+        - is_guest
+        - is_wired
+        - rssi
+        - vlan
