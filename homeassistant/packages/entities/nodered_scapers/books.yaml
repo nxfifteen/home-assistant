@@ -244,7 +244,7 @@ sensor:
 
   - platform: rest
     name: books_search_author_peter_f_hamilton
-    payload: '{ "search" : "searchAuthor=Peter+F+Hamilton" }'
+    payload: '{ "search" : "keywords=\"Peter+F+Hamilton\"" }'
     resource: !secret nodered_endpoint_books_author
     username: !secret nodered_username
     password: !secret nodered_password
@@ -266,7 +266,7 @@ sensor:
 
   - platform: rest
     name: books_search_author_dayton_ward
-    payload: '{ "search" : "searchAuthor=Dayton+Ward" }'
+    payload: '{ "search" : "keywords=\"Dayton+Ward\"" }'
     resource: !secret nodered_endpoint_books_author
     username: !secret nodered_username
     password: !secret nodered_password
