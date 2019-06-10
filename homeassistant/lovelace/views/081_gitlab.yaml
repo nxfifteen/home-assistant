@@ -7,17 +7,25 @@ cards:
 
   - type: entities
     entities:
-      - binary_sensor.gitlab
-      
-      - sensor.gitlab_279_commits_weekly
-      - sensor.gitlab_279_commits_week_last_mean
-      - sensor.gitlab_279_commits_week_this_mean
-      
-      - sensor.gitlab_279_commits_monthly
-      - sensor.gitlab_279_commits_month_last_mean
-      - sensor.gitlab_279_commits_month_this_mean
-      
-      - sensor.gitlab_279_commits_last_month
+      - type: 'custom:text-divider-row'
+        text: Weekly Trend
+      - entity: sensor.gitlab_279_commits_weekly
+        name: Commits
+      - entity: sensor.gitlab_279_commits_week_this_mean
+        name: This Week
+      - entity: sensor.gitlab_279_commits_week_last_mean
+        name: Last Week
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Monthly Trend
+      - entity: sensor.gitlab_279_commits_monthly
+        name: Commits
+      - entity: sensor.gitlab_279_commits_month_this_mean
+        name: This Month
+      - entity: sensor.gitlab_279_commits_month_last_mean
+        name: Last Month
 
   - type: entities
     entities:
