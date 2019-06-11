@@ -1,0 +1,43 @@
+---
+######################################################################################################
+###Script to send notifications to IFTTT to notify me on the mobile Phone! Call like this:
+  # action:
+  #   service: script.notify_tts
+  #   data_template:
+  #     room: "living_room | study | kitchen | everywhere | downstairs"
+  #     value1: 'Startup: Home Assistant is Up and Running!'
+  #     value2: "{{ trigger.to_state.state }}"
+  #     value3:
+######################################################################################################
+
+notify_tts:
+  sequence:
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_boolean.speech_notifications
+          state: 'on'
+
+    - service: notify.alexa_media
+      data_template:
+        target: >
+            {% if room == 'living_room' %}
+              media_player.living_room
+            {% elif room == 'study' %}
+              media_player.study
+            {% elif room == 'kitchen' %}
+              media_player.kitchen
+            {% elif room == 'everywhere' %}
+              media_player.everywhere
+            {% elif room == 'downstairs' %}
+              media_player.downstairs
+            {% else %}
+              media_player.everywhere
+            {% endif %}
+        data:
+          type: announce
+        message: "{{ value1 }} {{ value2 }} {{ value3 }}"
+
+    - service_template: notify.synchat_tts
+      data_template:
+        message: "{{ value1 }} {{ value2 }} {{ value3 }} {{ hastag }}"

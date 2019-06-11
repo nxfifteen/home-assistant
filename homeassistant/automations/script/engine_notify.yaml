@@ -2,15 +2,12 @@
 ######################################################################################################
 ###Script to send notifications to IFTTT to notify me on the mobile Phone! Call like this:
   # action:
-    # service: script.notify_engine
-    # data_template:
-      # title: 'Ios Title'
-      # value1: 'Startup: Home Assistant is Up and Running!'
-      # value2: "{{ trigger.to_state.state }}"
-      # value3:
-      # who: "stacey | carlo | paige | family | parents"
-      # camera_entity: 'Camera.Camera'
-      # content-type: "jpeg"
+  #   service: script.notify_engine
+  #   data_template:
+  #     channel: "synchat | hab | tweets | outside | nx"
+  #     value1: 'Startup: Home Assistant is Up and Running!'
+  #     value2: "{{ trigger.to_state.state }}"
+  #     value3:
 ######################################################################################################
 
 notify_engine:
@@ -22,16 +19,17 @@ notify_engine:
           state: 'on'
 
     - service_template: >
-          {% if who == 'synchat' %}
-            notify.hass_synchat
-          {% elif who == 'hab' %}
-            notify.hass_hab
-          {% elif who == 'tweets' %}
-            notify.hass_tweets
-          {% elif who == 'outside' %}
-            notify.hass_outside
+          {% if channel == 'synchat' %}
+            notify.synchat_synchat
+          {% elif channel == 'hab' %}
+            notify.synchat_hab
+          {% elif channel == 'tweets' %}
+            notify.synchat_tweets
+          {% elif channel == 'outside' %}
+            notify.synchat_outside
           {% else %}
-            notify.hass_nx
+            notify.synchat_nx
           {% endif %}
+      
       data_template:
-        message: "{{ value1 }} {{ value2 }} {{ value3 }}"
+        message: "{{ value1 }} {{ value2 }} {{ value3 }} {{ hastag }}"

@@ -25,6 +25,8 @@ trigger:
   below: 30
     
 action:
-  service: notify.synchat_nx
-  data_template:
-    message: "{{ trigger.to_state.attributes.friendly_name }} is about to expire. Please investigate IMMEDIATELY. #CertCheck"
+  - service: script.notify_engine
+    data_template:
+      channel: "nx"
+      value1: '{{ trigger.to_state.attributes.friendly_name }} is about to expire.'
+      value2: '#CertCheck'

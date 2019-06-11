@@ -28,18 +28,12 @@ action:
     data:
       entity_id: light.ff_study_desk
       effect: none
-
-  - service: notify.synchat_nx
+      
+  - service: script.notify_tts
     data_template:
-      message: "GitLab validation testing has passed. #GitLab #CI"
-
-  - service: notify.alexa_media
-    data:
-      target: 
-        - media_player.study
-      data:
-        type: announce
-      message: "According to Git Lab's continuous Integration your code is good."
+      room: "study"
+      value1: "According to Git Lab's continuous Integration your code is good."
+      hashtag: "#GitLab #CI"
 
   - delay: 00:00:01
 

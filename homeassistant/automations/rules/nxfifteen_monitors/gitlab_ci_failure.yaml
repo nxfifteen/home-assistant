@@ -28,18 +28,12 @@ action:
     data:
       entity_id: light.ff_study_desk
       effect: none
-
-  - service: notify.synchat_nx
-    data_template:
-      message: "GitLab validation testing failed. #GitLab #CI #Failed"
       
-  - service: notify.alexa_media
-    data:
-      target: 
-        - media_player.study
-      data:
-        type: announce
-      message: "Git Lab continuous Integration has rejected your code."
+  - service: script.notify_tts
+    data_template:
+      room: "study"
+      value1: "Git Lab continuous Integration has rejected your code."
+      hashtag: "#GitLab #CI #Failed"
 
   - delay: 00:00:01
 

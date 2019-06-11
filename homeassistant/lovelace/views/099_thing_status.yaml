@@ -36,6 +36,12 @@ cards:
           title: Latest
     - type: custom:fold-entity-row
       head: sensor.potential_breaking_changes
+      
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - input_boolean.speech_notifications
+      - input_boolean.text_notifications
 
 #################################################################
 #                                                               #

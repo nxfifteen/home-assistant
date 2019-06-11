@@ -45,14 +45,7 @@ condition:
         {% endif %}
 
 action:
-  - service: notify.synchat_tts
+  - service: script.notify_tts
     data_template:
-      message: "The washing machine has finished and is ready to be emptied"
-        
-  - service: notify.alexa_media
-    data:
-      target: 
-        - media_player.everywhere
-      data:
-        type: announce
-      message: "The washing machine has finished and is ready to be emptied"
+      room: "everywhere"
+      value1: "The washing machine has finished and is ready to be emptied"

@@ -34,8 +34,3 @@ notify:
     name: synchat_visitorlog
     resource: !secret synology_webhook_synchat_visitorlog
     verify_ssl: false
-    
-  - platform: joaoapps_join
-    api_key: !secret joaoapps_his_key
-    device_id: !secret joaoapps_his_id
-    name: join_his

@@ -1,0 +1,30 @@
+---
+######################################################################################################
+###Script to send notifications to IFTTT to notify me on the mobile Phone! Call like this:
+  # action:
+    # service: script.notify_join
+    # data_template:
+    #   title: 'Ios Title'
+    #   value1: 'Startup: Home Assistant is Up and Running!'
+    #   value2: "{{ trigger.to_state.state }}"
+    #   value3:
+    #   who: "stuart"
+######################################################################################################
+
+notify_join:
+  sequence:
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_boolean.text_notifications
+          state: 'on'
+
+    - service_template: >
+          {% if who == 'stuart' %}
+            notify.join_his_phone
+          {% else %}
+            notify.join_his_phone
+          {% endif %}
+      data_template:
+        title: "{{ title }}"
+        message: "{{ value1 }} {{ value2 }} {{ value3 }}"

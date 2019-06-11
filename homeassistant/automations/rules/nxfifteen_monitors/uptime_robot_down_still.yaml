@@ -53,6 +53,8 @@ condition:
       state: 'off'
 
 action:
-  service: notify.synchat_nx
-  data_template:
-    message: "One of your servers is still down. Please investigate IMMEDIATELY. #UpTimeRobot #Failed"
+  - service: script.notify_tts
+    data_template:
+      room: "study"
+      value1: "{{ trigger.to_state.attributes.friendly_name }} is still offline. Please investigate IMMEDIATELY"
+      hashtag: "#UpTimeRobot #Failed"

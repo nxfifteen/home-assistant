@@ -32,15 +32,9 @@ action:
       effect: colorloop
       brightness: 77
       transition: 3
-
-  - service: notify.synchat_nx
+      
+  - service: script.notify_tts
     data_template:
-      message: "GitLab validation testing is running. #GitLab #CI"
-
-  - service: notify.alexa_media
-    data:
-      target: 
-        - media_player.study
-      data:
-        type: announce
-      message: "Git Lab is running continuous Integration testing now."
+      room: "study"
+      value1: "Git Lab is running continuous Integration testing now."
+      hashtag: "#GitLab #CI"

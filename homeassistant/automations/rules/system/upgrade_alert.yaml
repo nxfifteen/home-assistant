@@ -15,6 +15,7 @@ condition:
         states('sensor.version_current')
       }}
 action:
+
   - service: notify.synchat_nx
     data_template:
       message: >-

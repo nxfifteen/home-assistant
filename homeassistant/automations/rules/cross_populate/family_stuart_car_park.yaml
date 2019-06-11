@@ -8,10 +8,6 @@ trigger:
   to:  'False'
   
 action:
-  - service: notify.synchat_hab
-    data_template:
-      message: "Your cars location has been updated. #AI #Debug"
-      
   - service: device_tracker.see
     data_template:
       dev_id: stuart_car
@@ -22,3 +18,16 @@ action:
       host_name: "Stuart's Car"
       mac: '00:25:42:73:A1:B9'
       source_type: gps
+      
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Parking Spot Saved'
+      value1: 'Your cars location has been updated.'
+      
+  - service: script.notify_engine
+    data_template:
+      channel: "hab"
+      value1: 'Your cars location has been updated.'
+      value2: '#AI #Debug'
+      

@@ -20,13 +20,8 @@ trigger:
     minutes: 15
     
 action:
-  - service: notify.synchat_nx
+  - service: script.notify_tts
     data_template:
-      message: "{{ trigger.to_state.attributes.friendly_name }} has disconnected. Please investigate IMMEDIATELY. #UpTimeRobot #Failed"
-  - service: notify.alexa_media
-    data_template:
-      target: 
-        - media_player.study
-      data:
-        type: announce
-      message: "{{ trigger.to_state.attributes.friendly_name }} has just gone offline."
+      room: "study"
+      value1: "{{ trigger.to_state.attributes.friendly_name }} has disconnected. Please investigate IMMEDIATELY"
+      hashtag: "#UpTimeRobot #Failed"

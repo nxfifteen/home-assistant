@@ -17,7 +17,8 @@ action:
     data_template:
       name: Backup {{ now().strftime('%Y-%m-%d') }} running HA version {{ states('sensor.current_version') }}
 
-  - service: notify.synchat_tweets
+  - service: script.notify_engine
     data_template:
-      message: >-
-        "Backup {{ now().strftime('%Y-%m-%d') }} running HA version {{ states('sensor.current_version') }} #HASS #Backup"
+      channel: "tweets"
+      value1: "Backup {{ now().strftime('%Y-%m-%d') }} running HA version {{ states('sensor.current_version') }}"
+      hashtag: '#HASS #Backup'

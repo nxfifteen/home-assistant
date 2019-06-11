@@ -19,7 +19,14 @@ action:
     data:
       entity_id: switch.gf_studio_camera
       
-  - service: notify.synchat_nx
+  - service: script.notify_join
     data_template:
-      message: "The Studio Camera crashed again! I've restarted it #A.I. #CCTV #Failed #HouseKeeping #SudioCCTV"
- 
+      who: "stuart"
+      title: 'Parking Spot Saved'
+      value1: "The Studio Camera crashed again! I've restarted it"
+      
+  - service: script.notify_engine
+    data_template:
+      channel: "hab"
+      value1: "The Studio Camera crashed again! I've restarted it"
+      hastag: "#A.I. #CCTV #Failed #HouseKeeping #SudioCCTV"

@@ -6,6 +6,8 @@ trigger:
   to: '7'
 
 action:
-  service: notify.synchat_nx
-  data_template:
-    message: !include ../../../entities/templates/briefing.yaml
+  - service: script.notify_engine
+    data_template:
+      channel: "nx"
+      value1: !include ../../../entities/templates/briefing.yaml
+      hastag: "#GoodMorning"

@@ -1,7 +1,0 @@
----
-alexa_tts:
-  sequence:
-    - service: media_player.alexa_tts
-      data_template:
-        entity_id: media_player.study
-        message: "Hello"
