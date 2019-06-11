@@ -13,14 +13,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_series_beyond_the_frontier
@@ -35,14 +36,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_series_genesis_fleet
@@ -57,14 +59,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_series_the_lost_stars
@@ -79,14 +82,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_series_hell_divers
@@ -101,14 +105,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_series_angel_in_the_whirlwind
@@ -123,14 +128,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_series_jack_reacher
@@ -145,14 +151,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_series_expeditionary_force
@@ -167,14 +174,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_series_the_expanse
@@ -189,14 +197,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_series_world_apart
@@ -211,14 +220,15 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
     force_update: true
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_search_query_star_trek
@@ -233,14 +243,14 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
-    #icon: mdi:audiobook
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_search_author_peter_f_hamilton
@@ -255,14 +265,14 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
-    #icon: mdi:audiobook
-    scan_interval: 21000
+    scan_interval: 21600
 
   - platform: rest
     name: books_search_author_dayton_ward
@@ -277,14 +287,14 @@ sensor:
     method: POST
     json_attributes:
       - title
-      - release
-      - url
       - latest_book
       - latest_narrator
       - latest_length
+      - latest_release
+      - url
+      - updated
     value_template: '{{ value_json.books }}'
-    #icon: mdi:audiobook
-    scan_interval: 21000
+    scan_interval: 21600
 
 homeassistant:
   customize:
