@@ -30,6 +30,9 @@ google_actions:
       - script.my_computer_hibernate
       - script.find_phone_his
       - script.find_phone_her
+      - script.family_state_out_everyone
+      - script.family_state_out_her
+      - script.family_state_out_him
     
     include_domains:
       - switch
@@ -191,3 +194,12 @@ google_actions:
 
     script.find_phone_her:
       name: Find Her Phone
+
+    script.family_state_out_everyone:
+      name: We're Going Out
+
+    script.family_state_out_her:
+      name: She's Going Out
+
+    script.family_state_out_him:
+      name: He's Going Out

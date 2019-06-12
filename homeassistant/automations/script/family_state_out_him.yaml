@@ -1,0 +1,6 @@
+---
+family_state_out_him:
+  sequence:
+    - service: joaoapps_join.join_his_send_tasker
+      data_template:
+        command: "jarvis=:=going_out"

@@ -30,6 +30,9 @@ alexa:
       - script.my_computer_hibernate
       - script.find_phone_his
       - script.find_phone_her
+      - script.family_state_out_everyone
+      - script.family_state_out_her
+      - script.family_state_out_him
     
     include_domains:
       - switch
@@ -233,4 +236,19 @@ alexa:
     script.find_phone_her:
       name: Find Her Phone
       description: Find Her Phone
+      display_categories: SWITCH
+
+    script.family_state_out_everyone:
+      name: We're Going Out
+      description: Tell Jarvis Your Both Leaving
+      display_categories: SWITCH
+
+    script.family_state_out_her:
+      name: She's Going Out
+      description: Tell Jarvis She's Leaving
+      display_categories: SWITCH
+
+    script.family_state_out_him:
+      name: He's Going Out
+      description: Tell Jarvis He's Leaving
       display_categories: SWITCH

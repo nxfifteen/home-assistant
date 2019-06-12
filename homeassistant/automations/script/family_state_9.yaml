@@ -25,3 +25,11 @@ family_state_9:
     - service: switch.turn_off
       data:
         entity_id: group.switchs_all_safe
+        
+    - service: joaoapps_join.join_his_send_tasker
+      data_template:
+        command: "jarvis=:=sleeping"
+        
+    - service: joaoapps_join.join_her_send_tasker
+      data_template:
+        command: "jarvis=:=sleeping"

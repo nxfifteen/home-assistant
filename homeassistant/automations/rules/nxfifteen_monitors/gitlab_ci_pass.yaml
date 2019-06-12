@@ -17,6 +17,9 @@ condition:
   - condition: state
     entity_id: sensor.family_stuart_state
     state: '7'
+  - condition: state
+    entity_id: light.ff_study_wall
+    state: 'on'
   
 action:      
   - service: light.turn_on

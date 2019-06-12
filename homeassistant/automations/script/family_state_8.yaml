@@ -59,3 +59,7 @@ family_state_8:
         transition: 5
         rgb_color: [255,207,120]
         brightness: 50
+        
+    - service: joaoapps_join.join_his_send_tasker
+      data_template:
+        command: "jarvis=:=sleeping"
