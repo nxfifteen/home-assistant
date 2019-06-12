@@ -1,0 +1,5 @@
+---
+find_phone_his:
+  alias: Tell Join to Ring His Phone
+  sequence:
+    - service: joaoapps_join.join_his_ring

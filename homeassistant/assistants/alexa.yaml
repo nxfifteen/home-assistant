@@ -28,6 +28,8 @@ alexa:
       - script.my_computer
       - script.my_computer_lock
       - script.my_computer_hibernate
+      - script.find_phone_his
+      - script.find_phone_her
     
     include_domains:
       - switch
@@ -221,4 +223,14 @@ alexa:
     script.my_computer_hibernate:
       name: Hibernate My Computer
       description: Hibernate PC Via GhostScript
+      display_categories: SWITCH
+
+    script.find_phone_his:
+      name: Find His Phone
+      description: Find His Phone
+      display_categories: SWITCH
+
+    script.find_phone_her:
+      name: Find Her Phone
+      description: Find Her Phone
       display_categories: SWITCH

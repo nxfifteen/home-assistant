@@ -28,6 +28,8 @@ google_actions:
       - script.my_computer
       - script.my_computer_lock
       - script.my_computer_hibernate
+      - script.find_phone_his
+      - script.find_phone_her
     
     include_domains:
       - switch
@@ -183,3 +185,9 @@ google_actions:
 
     script.my_computer_hibernate:
       name: Hibernate My Computer
+
+    script.find_phone_his:
+      name: Find His Phone
+
+    script.find_phone_her:
+      name: Find Her Phone

@@ -1,0 +1,5 @@
+---
+find_phone_her:
+  alias: Tell Join to Ring Her Phone
+  sequence:
+    - service: joaoapps_join.join_her_ring
