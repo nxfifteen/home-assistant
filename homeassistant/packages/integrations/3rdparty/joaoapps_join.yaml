@@ -3,6 +3,10 @@ joaoapps_join:
   - name: join_his
     device_id: !secret joaoapps_his_id_phone
     api_key: !secret joaoapps_his_key
+    
+  - name: join_her
+    device_id: !secret joaoapps_her_id_phone
+    api_key: !secret joaoapps_her_key
 
 notify:
   - platform: joaoapps_join
@@ -14,3 +18,8 @@ notify:
     name: join_his_pc
     api_key: !secret joaoapps_his_key
     device_id: !secret joaoapps_his_id_pc
+    
+  - platform: joaoapps_join
+    name: join_her_phone
+    api_key: !secret joaoapps_her_key
+    device_id: !secret joaoapps_her_id_phone
