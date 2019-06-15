@@ -35,3 +35,5 @@ action:
   - service: joaoapps_join.join_his_send_tasker
     data_template:
       command: "jarvis=:=wake_up"
+
+  - service: shell_command.shell_plex_music_morning
