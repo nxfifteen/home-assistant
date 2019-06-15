@@ -20,6 +20,12 @@ input_select:
       - Idle
       - Bed Time
 
+  family_family_act_wakeup:
+    name: Wakeup Indicator
+    options:
+      - Idle
+      - Good Morning
+
 homeassistant:
   customize:
     sensor.family_family_state:
