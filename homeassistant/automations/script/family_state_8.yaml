@@ -1,11 +1,6 @@
 ---
 family_state_8:
   sequence:
-    - service: media_player.alexa_tts
-      data_template:
-        entity_id: media_player.study
-        message: "Good Night Sir"
-
     - service: mqtt.publish
       data:
         topic: iot/scene/house
