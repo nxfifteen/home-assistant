@@ -1,0 +1,13 @@
+---
+alias: Family State Test
+
+trigger:
+  - entity_id: sensor.family_family_state_raw
+    platform: state
+
+action:
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'State Changed'
+      value1: 'The Family State Value has changed'
