@@ -1,0 +1,13 @@
+---
+alias: Family State From 9
+
+trigger:
+  - entity_id: sensor.family_family_state_raw
+    platform: state
+    from: '9'
+
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.family_family_act_wakeup
+      option: Idle
