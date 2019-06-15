@@ -33,9 +33,9 @@ action:
       title: 'Alarm Call'
       value1: 'Time to start getting up'
 
-  - service: joaoapps_join.join_her_send_tasker
-    data_template:
-      command: "jarvis=:=wake_up"
+  #- service: joaoapps_join.join_her_send_tasker
+  #  data_template:
+  #    command: "jarvis=:=wake_up"
 
   - service: joaoapps_join.join_his_send_tasker
     data_template:
@@ -43,11 +43,11 @@ action:
 
   - service: shell_command.shell_plex_music_morning
 
-  - service: light.turn_on
-    data:
-      entity_id: light.ff_bedroom_bedside_kareen
-      transition: 600
-      brightness: 150
+  #- service: light.turn_on
+  #  data:
+  #    entity_id: light.ff_bedroom_bedside_kareen
+  #    transition: 600
+  #    brightness: 150
 
   - service: light.turn_on
     data:
