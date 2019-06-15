@@ -40,20 +40,6 @@ family_state_8:
     - service: light.turn_off
       data:
         entity_id: light.ff_bedroom_bedside_stuart
-    
-    - service: light.turn_on
-      data:
-        entity_id: light.ff_bedroom_bedside_kareen
-        transition: 5
-        rgb_color: [255,207,120]
-        brightness: 10
-    
-    - service: light.turn_on
-      data:
-        entity_id: light.ff_landing_celing
-        transition: 5
-        rgb_color: [255,207,120]
-        brightness: 50
         
     - service: joaoapps_join.join_his_send_tasker
       data_template:
