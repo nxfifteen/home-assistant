@@ -1,0 +1,37 @@
+---
+alias: Wake Up - Weekdays
+trigger:
+  platform: time
+  at: '06:00:00'
+
+condition:
+  - condition: state
+    entity_id: sensor.family_family_state_raw
+    state: '9'
+
+action:
+  - service: script.notify_tts
+    data_template:
+      room: "everywhere"
+      value1: "Time to start getting up"
+      hastag: "#Alarm #GoodMorning"
+
+  - service: script.notify_engine
+    data_template:
+      channel: "tweets"
+      value1: "It's 6am so I'm getting the household up"
+      hashtag: '#Alarm #GoodMorning'
+
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Alarm Call'
+      value1: 'Time to start getting up'
+
+  - service: joaoapps_join.join_her_send_tasker
+    data_template:
+      command: "jarvis=:=wake_up"
+
+  - service: joaoapps_join.join_his_send_tasker
+    data_template:
+      command: "jarvis=:=wake_up"
