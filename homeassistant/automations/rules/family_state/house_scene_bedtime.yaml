@@ -9,8 +9,6 @@ trigger:
       seconds: 3
 
 action:
-  - service: shell_command.shell_plex_music_evening
-
   # Setup the livingroom
   - service: light.turn_on
     data:
@@ -97,3 +95,5 @@ action:
     data:
       entity_id: light.ff_bedroom_bedside_stuart
       brightness: 150
+
+  - service: shell_command.shell_plex_music_evening

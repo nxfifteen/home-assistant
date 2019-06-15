@@ -5,3 +5,4 @@ logger:
     homeassistant.components.plex.sensor: debug
     homeassistant.components.alexa.intent: debug
     homeassistant.components.script: debug
+    custom_components.breaking_changes: critical

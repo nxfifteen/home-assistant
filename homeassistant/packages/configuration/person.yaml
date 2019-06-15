@@ -21,13 +21,12 @@ person:
 - name: John
   id: 6k04PeJa4L7sKQkr4B
   device_trackers:
-    - device_tracker.john
     - device_tracker.john_phone
     
 - name: Maureen
   id: S2s8CRueRm4agYNog9
   device_trackers:
-    - device_tracker.maureen
+    - device_tracker.maureen_phone
 
 - name: Allan
   id: H5c1ztBp88I1ICq632
