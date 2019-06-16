@@ -1,5 +1,11 @@
 {
     "files.associations": {
         "*.yaml": "home-assistant"
-    }
+    },
+    "gitflow4code.features": [
+        {
+            "name": "feature/morning_alarm_call",
+            "base": "develop"
+        }
+    ]
 }
