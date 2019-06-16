@@ -1,10 +1,14 @@
 ---
-alias: Family State From 9
+alias: Wake Up - Worked
 
 trigger:
   - entity_id: sensor.family_family_state_raw
     platform: state
-    from: '9'
+
+condition:
+  - condition: state
+    entity_id: input_select.select_option
+    state: 'Good Morning'
 
 action:
   - service: input_select.select_option

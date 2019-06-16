@@ -2,7 +2,7 @@
 alias: Wake Up - Weekends
 trigger:
   platform: time
-  at: '06:25:00'
+  at: '06:00:00'
 
 condition:
   - condition: state
@@ -10,47 +10,6 @@ condition:
     state: '9'
 
 action:
-  - service: input_select.select_option
-    data:
-      entity_id: input_select.family_family_act_wakeup
-      option: Good Morning
-
-  - service: script.notify_tts
-    data_template:
-      room: "everywhere"
-      value1: "Time to start getting up"
-      hastag: "#Alarm #GoodMorning"
-
-  - service: script.notify_engine
-    data_template:
-      channel: "tweets"
-      value1: "It's the weekend, so I've let everyone sleep till 7am"
-      hashtag: '#Alarm #GoodMorning'
-
-  - service: script.notify_join
-    data_template:
-      who: "stuart"
-      title: 'Alarm Call'
-      value1: "It's the weekend, so I've let you sleep till 7am! Now you need to get up"
-
-  #- service: joaoapps_join.join_her_send_tasker
-  #  data_template:
-  #    command: "jarvis=:=wake_up"
-
-  - service: joaoapps_join.join_his_send_tasker
-    data_template:
-      command: "jarvis=:=wake_up"
-
-  - service: shell_command.shell_plex_music_morning
-
-  #- service: light.turn_on
-  #  data:
-  #    entity_id: light.ff_bedroom_bedside_kareen
-  #    transition: 600
-  #    brightness: 150
-
-  - service: light.turn_on
-    data:
-      entity_id: light.ff_bedroom_bedside_stuart
-      transition: 600
-      brightness: 150
+- service: scene.turn_on
+  data:
+    entity_id: scene.alarm_goodmorning
