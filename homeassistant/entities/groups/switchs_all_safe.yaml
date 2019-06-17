@@ -9,7 +9,6 @@ switchs_all_safe:
     - switch.gf_living_tv
     - switch.room_occupancy_study
     - switch.ff_study_monitors
-    - switch.ff_study_sterio
     - switch.study_fan
     - switch.ff_bedroom_tv
     - switch.ff_bedroom_fairylights

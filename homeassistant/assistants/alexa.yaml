@@ -179,8 +179,8 @@ alexa:
       display_categories: SWITCH
 
     switch.ff_study_sterio:
-      name: Study Fan
-      description: The Study Fan
+      name: Loading Station
+      description: The Loading Station
       display_categories: SWITCH
   
     switch.ff_bedroom_tv:
