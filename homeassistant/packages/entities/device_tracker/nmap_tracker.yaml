@@ -13,6 +13,7 @@ device_tracker:
       - !secret her_ip_range
       - !secret dhcp_ip_range
       - !secret guest_ip_range
+      - !secret namp_host_backup_box
     home_interval: 10
     exclude:
       - !secret nmap_exclude_1

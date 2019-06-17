@@ -156,7 +156,7 @@ google_actions:
       room: Study
 
     switch.ff_study_sterio:
-      name: Study Fan
+      name: Loading Station
       room: Study
   
     switch.ff_bedroom_tv:
