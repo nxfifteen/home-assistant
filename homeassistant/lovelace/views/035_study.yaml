@@ -54,8 +54,10 @@ cards:
       - script.my_computer
       - type: section
       - switch.ff_study_monitors
-      - switch.ff_study_sterio
       - switch.study_fan
+      - type: section
+      - switch.ff_study_sterio
+      - device_tracker.sd_loader
   
   # - type: custom:decluterring-card
   #   template: power_graph
