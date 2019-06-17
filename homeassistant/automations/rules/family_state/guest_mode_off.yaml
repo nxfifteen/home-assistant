@@ -1,0 +1,12 @@
+---
+alias: Guest Mode
+
+trigger:
+  platform: state
+  entity_id:  group.people_guests
+  to: not_home
+
+action:
+  - service: input_select.turn_off
+    data:
+      entity_id: input_boolean.guest_mode
