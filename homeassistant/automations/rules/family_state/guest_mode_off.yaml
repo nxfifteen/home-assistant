@@ -3,10 +3,74 @@ alias: Guest Mode
 
 trigger:
   platform: state
-  entity_id:  group.people_guests
+  entity_id:
+    - person.john
+    - person.maureen
+    - person.allan
+    - person.colin
+    - person.irene
+    - person.kayleigh
+    - person.kev
+    - person.khristen
+    - person.mecha
+    - person.scott
+    - person.steve
   to: not_home
 
-action:
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: person.john
+      state: not_home
+
+    - condition: state
+      entity_id: person.maureen
+      state: not_home
+
+    - condition: state
+      entity_id: person.allan
+      state: not_home
+
+    - condition: state
+      entity_id: person.colin
+      state: not_home
+
+    - condition: state
+      entity_id: person.irene
+      state: not_home
+
+    - condition: state
+      entity_id: person.kayleigh
+      state: not_home
+
+    - condition: state
+      entity_id: person.kev
+      state: not_home
+
+    - condition: state
+      entity_id: person.khristen
+      state: not_home
+
+    - condition: state
+      entity_id: person.mecha
+      state: not_home
+
+    - condition: state
+      entity_id: person.scott
+      state: not_home
+
+    - condition: state
+      entity_id: person.steve
+      state: not_home
+
+action:      
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Guest Mode Off'
+      value1: 'Guest Mode just turned off'
+
   - service: input_select.turn_off
     data:
       entity_id: input_boolean.guest_mode
