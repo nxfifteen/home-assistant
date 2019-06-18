@@ -2,7 +2,7 @@
 alias: Wake Up - Weekdays
 trigger:
   platform: time
-  at: '06:00:00'
+  at: '05:45:00'
 
 condition:
   - condition: state
@@ -10,6 +10,6 @@ condition:
     state: '9'
 
 action:
-- service: scene.turn_on
+- service: script.turn_on
   data:
-    entity_id: scene.alarm_goodmorning
+    entity_id: script.alarm_goodmorning
