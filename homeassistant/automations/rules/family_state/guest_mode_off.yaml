@@ -71,6 +71,6 @@ action:
       title: 'Guest Mode Off'
       value1: 'Guest Mode just turned off'
 
-  - service: input_select.turn_off
+  - service: input_boolean.turn_off
     data:
       entity_id: input_boolean.guest_mode

@@ -97,3 +97,8 @@ action:
       brightness: 150
 
   - service: shell_command.shell_plex_music_evening
+
+  - service: climate.set_temperature
+    data:
+      entity_id: climate.hallway
+      temperature: 10
