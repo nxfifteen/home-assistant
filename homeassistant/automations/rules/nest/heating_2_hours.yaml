@@ -1,0 +1,23 @@
+---
+alias: heating_2_hours
+hide_entity: true
+initial_state: false
+trigger:
+  platform: state
+  entity_id: sensor.heating_on
+  to: 'ON'
+
+  for:
+    hours: 2
+
+action:
+  - service: script.notify_tts
+    data_template:
+      room: "everywhere"
+      value1: "The heatings been on for 2 hours, turnning it off now"
+      hastag: "#Nest #Heating #Timers"
+
+  - service: climate.set_temperature
+    data:
+      entity_id: climate.hallway
+      temperature: 10

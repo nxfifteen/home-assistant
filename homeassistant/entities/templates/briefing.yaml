@@ -125,7 +125,7 @@
   {% endmacro %}
 
   {%- macro traffic_sentence() -%}
-    {%- if now().hour< night_hours  -%}
+    {%- if now().hour< afternoon_hours  -%}
       {%- if states.binary_sensor.workday_sensor.state == 'on' -%}
         {%- set his_slow = states.sensor.commute_stuart_work.state -%}{%- if his_slow == 'unknown' -%}{%- set his_slow = 0 -%}{%- endif -%}
         {%- set her_slow_a = states.sensor.commute_kareen_work_a.state -%}{%- if her_slow_a == 'unknown' -%}{%- set her_slow_a = 0 -%}{%- endif -%}

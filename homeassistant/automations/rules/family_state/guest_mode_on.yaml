@@ -71,6 +71,6 @@ action:
       title: 'Guest Mode On'
       value1: '{{ trigger.to_state.attributes.friendly_name }} is home'
 
-  - service: input_select.turn_on
+  - service: input_boolean.turn_on
     data:
       entity_id: input_boolean.guest_mode
