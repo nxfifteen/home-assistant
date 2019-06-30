@@ -4,25 +4,7 @@ title: Kitchen/Dinning Room
 icon: mdi:food-fork-drink
 cards:
   - !include ../cards/compact_custom_header_main.yaml
-  
-  - type: picture-glance
-    title: Dinning Room
-    entities:
-      - binary_sensor.camera_dinning_room_recording
-      - binary_sensor.gf_dinning_contact_side
-      - binary_sensor.motion_gf_dinning
-      - binary_sensor.motion_gf_dinning_camera
-    camera_image: camera.dinning_room
-  
-  - type: picture-glance
-    title: Kitchen
-    entities:
-      - binary_sensor.camera_kitchen_recording
-      - binary_sensor.gf_dinning_contact_side
-      - binary_sensor.motion_gf_dinning
-      - binary_sensor.motion_gf_kitchen_camera
-    camera_image: camera.kitchen
- 
+   
   - type: entities
     show_header_toggle: false
     entities:

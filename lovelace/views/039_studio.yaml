@@ -4,14 +4,6 @@ title: Studio
 icon: mdi:android-studio
 cards:
   - !include ../cards/compact_custom_header_main.yaml
-  
-  - type: picture-glance
-    title: Studio
-    entities:
-      - binary_sensor.gf_studio_camera
-      - binary_sensor.camera_backdoor_recording
-      - binary_sensor.motion_gf_studio_camera
-    camera_image: camera.backdoor
  
   - type: entities
     show_header_toggle: false
