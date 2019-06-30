@@ -23,11 +23,6 @@ stages:
       python -m homeassistant \
         --config ./ \
         --script check_config
-  tags:
-    - test
-    - python
-    - hass
-    - homeassistant
 
 # Home Assistant test jobs
 ha-latest:
