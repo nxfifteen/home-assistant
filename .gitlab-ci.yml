@@ -23,6 +23,8 @@ stages:
       python -m homeassistant \
         --config ./ \
         --script check_config
+  tags:
+    - docker
 
 # Home Assistant test jobs
 ha-latest:
