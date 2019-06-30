@@ -1,20 +1,19 @@
 # Example .gitignore file for your config dir.
 # A * ensures that everything will be ignored.
-/*
 
 
 # Directory (contents) ignores
-homeassistant/.cloud
-homeassistant/.storage
-homeassistant/deps
+.cloud
+.storage
+deps
 **/.Trash
 **/.Trash-*
 
 # Specific file ignores
-homeassistant/.uuid
-homeassistant/ip_bans.yaml
-homeassistant/known_devices.yaml
-homeassistant/secrets.yaml
+.uuid
+ip_bans.yaml
+known_devices.yaml
+secrets.yaml
 **/alexa_media.*.pickle
 **/*.log
 **/*.db
@@ -25,22 +24,22 @@ homeassistant/secrets.yaml
 **/*.pyc
 **/*.json.backup
 **/flows_cred.json
-homeassistant/.androidkeys/adbkey
-homeassistant/.androidkeys/adbkey.pub
-homeassistant/node-red/ssh/id_*
-homeassistant/node-red/shell/*
-homeassistant/redacted.txt
-homeassistant/redacted_users.txt
+.androidkeys/adbkey
+.androidkeys/adbkey.pub
+node-red/ssh/id_*
+node-red/shell/*
+redacted.txt
+redacted_users.txt
 
 # You can whitelist files/folders with !, these will not be ignored.
 !.gitignore
 !*.md
-!homeassistant/
+!
 !gitupdate.sh
 !sanitise.sh
 !.gitattributes
 !.gitlab-ci.yml
 !**/.gitkeep
-!homeassistant/node-red/shell/.gitkeep
-homeassistant/node-red/shell/README.md
-homeassistant/node-red/update_nx_shell.sh
+!node-red/shell/.gitkeep
+node-red/shell/README.md
+node-red/update_nx_shell.sh
