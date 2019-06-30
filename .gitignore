@@ -10,6 +10,7 @@ deps
 **/.Trash-*
 
 # Specific file ignores
+.HA_VERSION
 .uuid
 ip_bans.yaml
 known_devices.yaml
