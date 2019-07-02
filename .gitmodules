@@ -1,0 +1,3 @@
+[submodule "node-red"]
+	path = node-red
+	url = git@nxfifteen.me.uk:home/nodered.git
