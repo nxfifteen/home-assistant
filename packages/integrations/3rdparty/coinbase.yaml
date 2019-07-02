@@ -2,7 +2,14 @@ coinbase:
   api_key: !secret coinbase_api_key
   api_secret: !secret coinbase_api_secret
   account_balance_currencies:
-    - EUR
+    - GBP
     - BTC
   exchange_rate_currencies:
     - BTC
+
+sensor:
+  - platform: template
+    sensors:
+      coinbase_native_currency:
+        value_template: '{{ states.sensor.coinbase_my_wallet.attributes["Balance in native currency"] }}'
+        friendly_name: 'Native Currency'
