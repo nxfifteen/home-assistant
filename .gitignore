@@ -27,8 +27,7 @@ secrets.yaml
 **/flows_cred.json
 .androidkeys/adbkey
 .androidkeys/adbkey.pub
-node-red/ssh/id_*
-node-red/shell/*
+node-red/
 redacted.txt
 redacted_users.txt
 
