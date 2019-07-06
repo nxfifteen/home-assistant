@@ -9,12 +9,8 @@
 device_tracker:
   - platform: nmap_tracker
     hosts:
-      - !secret his_ip_range
-      - !secret her_ip_range
-      - !secret dhcp_ip_range
       - !secret guest_ip_range
-      - !secret namp_host_backup_box
-    home_interval: 10
+    interval_seconds: 20
     exclude:
       - !secret nmap_exclude_1
       - !secret nmap_exclude_2
@@ -26,3 +22,5 @@ device_tracker:
       - !secret nmap_exclude_8
       - !secret nmap_exclude_9
       - !secret nmap_exclude_10
+    new_device_defaults:
+      track_new_devices: true
