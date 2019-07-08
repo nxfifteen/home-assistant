@@ -27,7 +27,6 @@ secrets.yaml
 **/flows_cred.json
 .androidkeys/adbkey
 .androidkeys/adbkey.pub
-node-red/
 redacted.txt
 redacted_users.txt
 
@@ -40,6 +39,3 @@ redacted_users.txt
 !.gitattributes
 !.gitlab-ci.yml
 !**/.gitkeep
-!node-red/shell/.gitkeep
-node-red/shell/README.md
-node-red/update_nx_shell.sh

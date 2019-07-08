@@ -15,54 +15,43 @@ trigger:
     - person.mecha
     - person.scott
     - person.steve
-  to: not_home
+  from: home
 
 condition:
   condition: and
   conditions:
-    - condition: state
-      entity_id: person.john
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.john.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.maureen
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.maureen.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.allan
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.allan.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.colin
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.colin.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.irene
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.irene.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.kayleigh
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.kayleigh.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.kev
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.kev.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.khristen
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.khristen.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.mecha
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.mecha.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.scott
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.scott.state != 'home' }}"
 
-    - condition: state
-      entity_id: person.steve
-      state: not_home
+    - condition: template
+      value_template: "{{ states.person.steve.state != 'home' }}"
 
 action:      
   - service: script.notify_join
