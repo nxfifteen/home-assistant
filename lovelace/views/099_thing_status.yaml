@@ -43,18 +43,4 @@ cards:
       - input_boolean.speech_notifications
       - input_boolean.text_notifications
       - input_boolean.guest_mode
-
-#################################################################
-#                                                               #
-#                 Things Status - Tracker Card                  #
-#                                                               #
-#################################################################
-
-  - type: vertical-stack
-    cards:
-      - type: custom:tracker-card
-        title:
-        trackers:
-          - sensor.custom_card_tracker
-          - sensor.custom_component_tracker
       
