@@ -64,39 +64,7 @@ cards:
                     
                 - type: "custom:button-card"
                   color_type: icon
-                  entity: binary_sensor.jarvis_ha
-                  state:
-                    - value: "on"
-                      color: green
-                      icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
-                    - operator: default
-                      color: red
-                      icon: mdi:server-network-off
-                  tap_action:
-                    action: more-info
-                    
-                - type: "custom:button-card"
-                  color_type: icon
-                  entity: binary_sensor.jarvis_nodered
-                  state:
-                    - value: "on"
-                      color: green
-                      icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
-                    - operator: default
-                      color: red
-                      icon: mdi:server-network-off
-                  tap_action:
-                    action: more-info
-                    
-                - type: "custom:button-card"
-                  color_type: icon
-                  entity: binary_sensor.jarvis_traccar
+                  entity: binary_sensor.jarvis
                   state:
                     - value: "on"
                       color: green
@@ -244,24 +212,7 @@ cards:
             cards:
         
             - type: horizontal-stack
-              cards:        
-                    
-                - type: "custom:button-card"
-                  color_type: icon
-                  entity: binary_sensor.nxcore
-                  state:
-                    - value: "on"
-                      color: green
-                      icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
-                    - operator: default
-                      color: red
-                      icon: mdi:server-network-off
-                  tap_action:
-                    action: more-info
-        
+              cards:
                     
                 - type: "custom:button-card"
                   color_type: icon
