@@ -9,6 +9,8 @@
 device_tracker:
   - platform: nmap_tracker
     hosts:
+      - !secret his_ip_range
+      - !secret her_ip_range
       - !secret guest_ip_range
     interval_seconds: 20
     exclude:
