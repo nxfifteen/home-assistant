@@ -101,6 +101,16 @@ cards:
           volume: false
           source: true
           power_state: true
+     
+      - type: custom:mini-media-player
+        name: FireTV
+        entity: media_player.kitchen_fire_tv_stick
+        artwork: cover
+        source: icon
+        hide:
+          volume: false
+          source: true
+          power_state: true
     
       - type: custom:mini-media-player
         name: Alexa (Everywhere)

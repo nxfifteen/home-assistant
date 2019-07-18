@@ -10,8 +10,6 @@ cards:
   #####################
   - type: vertical-stack
     cards:
-      - type: 'custom:clock-card'
-
       - type: entity-filter
         entities:
           - person.stuart
@@ -166,6 +164,36 @@ cards:
       - proximity.cs_tps
       - proximity.newport
       - proximity.tayport
+
+  - type: custom:mini-media-player
+    name: Alexa (Everywhere)
+    entity: media_player.everywhere_2
+    artwork: cover
+    source: icon
+    hide:
+      volume: false
+      source: true
+      power_state: true
+
+  - type: custom:mini-media-player
+    name: Alexa (Downstairs)
+    entity: media_player.downstairs_2
+    artwork: cover
+    source: icon
+    hide:
+      volume: false
+      source: true
+      power_state: true
+
+  - type: custom:mini-media-player
+    name: Alexa (Upstairs)
+    entity: media_player.upstairs
+    artwork: cover
+    source: icon
+    hide:
+      volume: false
+      source: true
+      power_state: true
         
   #################################################################
   #                                                               #

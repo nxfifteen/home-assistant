@@ -22,6 +22,9 @@ sensor:
       washing_machine_status:
         value_template: '{{ states.input_select.washing_machine_status.state}}'
         friendly_name: 'Washing Machine Status'
+      washing_machine_status_detail:
+        value_template: '{{ states.switch.washing_machine.attributes.state_detail}}'
+        friendly_name: 'Washing Machine Status Detail'
       ## Washing Machine Power Usage
       washing_machine_power:
         value_template: '{{ states.switch.washing_machine.attributes.current_power_w|default(0)|int }}'  

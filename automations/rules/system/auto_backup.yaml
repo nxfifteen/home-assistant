@@ -5,12 +5,7 @@ alias: System - Make weekly Hassio backup
 initial_state: true
 trigger:
   - platform: time
-    at: '17:15:00'
-    
-condition:
-  - condition: time
-    weekday:
-      - mon
+    at: '10:25:00'
       
 action:
   - service: hassio.snapshot_full

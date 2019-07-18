@@ -48,7 +48,7 @@ sensor:
       
       # Study
       media_ff_study_alexa:
-        value_template: '{{ states.media_player.study.state|default(off)|string }}'  
+        value_template: '{{ states.media_player.bedroom.state|default(off)|string }}'  
         friendly_name: 'Study Alexa'
         
       # Bedroom
@@ -67,7 +67,7 @@ sensor:
 
       # Livingroom
       media_gf_livingroom_alexa:
-        value_template: '{{ states.media_player.living_room.state|default(off)|string }}'  
+        value_template: '{{ states.media_player.hallway.state|default(off)|string }}'  
         friendly_name: 'Livingroom Alexa'
         
       media_gf_livingroom_fire_tv:

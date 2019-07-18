@@ -22,6 +22,9 @@ sensor:
       dishwasher_status:
         value_template: '{{ states.input_select.dishwasher_status.state}}'
         friendly_name: 'Dishwasher Status'
+      dishwasher_status_detail:
+        value_template: '{{ states.switch.dishwasher.attributes.state_detail}}'
+        friendly_name: 'Dishwasher Status Detail'
       ## dishwasher Power Usage
       dishwasher_power:
         value_template: '{{ states.switch.dishwasher.attributes.current_power_w|default(0)|int }}'  
