@@ -22,3 +22,9 @@ action:
     data:
       entity_id: input_select.washing_machine_status
       option: Running
+
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Guest Mode On'
+      value1: 'The washing machine is on'
