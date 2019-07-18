@@ -93,6 +93,7 @@ cards:
     - input_boolean.enable_washing_machine_notification
     - type: section
     - sensor.washing_machine_load
+    - sensor.washing_machine_status_detail
     - type: section
     - sensor.weekly_washing_machine
     - sensor.monthly_washing_machine
@@ -133,6 +134,7 @@ cards:
     - input_boolean.disable_dishwasher_notification
     - type: section
     - sensor.dishwasher_load
+    - sensor.dishwasher_status_detail
     - type: section
     - sensor.weekly_dishwasher
     - sensor.monthly_dishwasher

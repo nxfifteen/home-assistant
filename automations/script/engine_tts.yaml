@@ -22,15 +22,19 @@ notify_tts:
       data_template:
         target: >
             {% if room == 'living_room' %}
-              media_player.living_room
+              media_player.livingroom
+            {% elif room == 'bedroom' %}
+              media_player.bedroom
             {% elif room == 'study' %}
               media_player.study
             {% elif room == 'kitchen' %}
               media_player.kitchen
             {% elif room == 'everywhere' %}
-              media_player.everywhere
+              media_player.everywhere_2
             {% elif room == 'downstairs' %}
-              media_player.downstairs
+              media_player.downstairs_2
+            {% elif room == 'upstairs' %}
+              media_player.upstairs
             {% else %}
               media_player.everywhere
             {% endif %}
