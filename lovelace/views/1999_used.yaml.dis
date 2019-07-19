@@ -248,13 +248,6 @@ cards:
     - sensor.dark_sky_wind_speed_3d
     - sensor.dark_sky_wind_speed_4d
     - sensor.dark_sky_wind_speed_5d
-
-  - type: entities
-    title: network
-    show_header_toggle: false
-    entities:
-    - sensor.pi_hole_dns_queries_forwarded
-    - sensor.pi_hole_dns_queries_cached
     
   - type: entities
     title: git
@@ -352,9 +345,7 @@ cards:
     - sensor.network_down
     - sensor.network_up
     - sensor.remote_gf_livingroom
-    - sensor.rpi_pihole
     - switch.dishwasher
-    - switch.pihole_enable
     - switch.washing_machine
     - media_player.livingroom_fire_tv_stick
     - media_player.kitchen_fire_tv_stick
