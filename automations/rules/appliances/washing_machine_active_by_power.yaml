@@ -22,3 +22,23 @@ action:
     data:
       entity_id: input_select.washing_machine_status
       option: Running
+
+  - service: shell_command.grocy_consume_item
+    data:
+      server_ip: !secret grocy_url
+      grocy_key: !secret grocy_api_key
+      product_id: 6
+      amount: 40
+
+  - service: shell_command.grocy_consume_item
+    data:
+      server_ip: !secret grocy_url
+      grocy_key: !secret grocy_api_key
+      product_id: 7
+      amount: 80
+
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Appliances'
+      value1: 'The washing machine is on'
