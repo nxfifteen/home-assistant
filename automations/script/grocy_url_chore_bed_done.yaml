@@ -1,4 +1,4 @@
 ---
-grocy_url_change_the_bed_done:
+grocy_url_change_bed_done:
   sequence:
     - service: shell_command.grocy_url_chore_3_done
