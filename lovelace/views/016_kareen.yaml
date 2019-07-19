@@ -32,6 +32,8 @@ cards:
           - entity: sensor.family_kareen_loc_room
             name: Room
           - type: section
+          - device_tracker.kareen_presence
+          - type: section
           - input_select.kareen
 
   - type: custom:mini-graph-card

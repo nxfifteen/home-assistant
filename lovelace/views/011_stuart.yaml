@@ -32,6 +32,8 @@ cards:
           - entity: sensor.family_stuart_loc_room
             name: Room
           - type: section
+          - device_tracker.stuart_presence
+          - type: section
           - input_select.stuart
 
   - type: custom:mini-graph-card
