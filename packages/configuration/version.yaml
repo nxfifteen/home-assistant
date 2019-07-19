@@ -22,8 +22,6 @@ homeassistant:
     sensor.potential_breaking_changes:
       friendly_name: Potential Breaking Changes
 
-breaking_changes:
-
 input_boolean:        
   ha_update_available:
     name: HA Update Avaiable
