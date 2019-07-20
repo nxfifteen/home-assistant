@@ -1,0 +1,47 @@
+---
+id: travel
+icon: mdi:google-maps
+title: travel
+cards:
+  - type: entities
+    show_header_toggle: false
+    entities:
+    - switch.tay_road_bridge
+  
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Stuart
+      - entity: sensor.commute_stuart_home
+        name: Stuart Home
+        icon: mdi:home-account
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+        
+      - entity: sensor.commute_stuart_work
+        name: Work
+        icon: mdi:cash-usd
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Kareen
+      - entity: sensor.commute_kareen_home
+        name: Kareen Home
+        icon: mdi:home-account
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+      - entity: sensor.commute_kareen_work_a
+        name: Newport
+        icon: mdi:cash-usd
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+      - entity: sensor.commute_kareen_work_b
+        name: Tayport
+        icon: mdi:cash-usd
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
