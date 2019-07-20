@@ -26,9 +26,11 @@ switch:
   icon: mdi:wifi
   state_topic: "unifi/status/wifi/NxMESH/enabled"
   command_topic: "unifi/set/wifi/NxMESH/enabled"
+  availability_topic: "unifi/connected"
   value_template: '{% if value_json.val == "true" %}on{% else %}off{% endif %}'
   payload_on: "true"
   payload_off: "false"
+  payload_available: 2
   optimistic: false
   qos: 2
   retain: true
@@ -38,10 +40,12 @@ switch:
   icon: mdi:wifi
   state_topic: "unifi/status/wifi/NxFriends/enabled"
   command_topic: "unifi/set/wifi/NxFriends/enabled"
+  availability_topic: "unifi/connected"
   value_template: '{% if value_json.val == "true" %}on{% else %}off{% endif %}'
   payload_on: "true"
   payload_off: "false"
   optimistic: false
+  payload_available: 2
   qos: 2
   retain: true
   
@@ -50,9 +54,11 @@ switch:
   icon: mdi:wifi
   state_topic: "unifi/status/wifi/NxIoT/enabled"
   command_topic: "unifi/set/wifi/NxIoT/enabled"
+  availability_topic: "unifi/connected"
   value_template: '{% if value_json.val == "true" %}on{% else %}off{% endif %}'
   payload_on: "true"
   payload_off: "false"
   optimistic: false
+  payload_available: 2
   qos: 2
   retain: true
