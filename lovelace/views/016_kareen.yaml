@@ -15,17 +15,14 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - sensor.family_kareen_state_human
+          - entity: device_tracker.kareen_presence
+            name: Presence
+          - entity: sensor.family_kareen_state_human
+            name: State
           - entity: sensor.family_kareen_locality
             name: Locality
-          - entity: sensor.family_kareen_loc_room
-            name: Room
           - type: section
-          - device_tracker.kareen_presence
-          - type: section
-          - input_select.kareen
-          - type: section
-          - script.find_phone_her
+          - script.find_phone_kareen
 
   - type: custom:mini-graph-card
     entities: 
