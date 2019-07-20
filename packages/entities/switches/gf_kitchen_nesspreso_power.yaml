@@ -22,7 +22,7 @@ switch:
 homeassistant:
   customize:
     switch.gf_kitchen_nesspreso:
-      friendly_name: Treadmill
+      friendly_name: Nesspreso Machine
     sensor.gf_kitchen_nesspreso_power:
-      friendly_name: Treadmill Watts
+      friendly_name: Nesspreso Watts
  
