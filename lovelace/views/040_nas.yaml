@@ -3,8 +3,6 @@ id: nas
 icon: mdi:nas
 title: Network
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-
   - type: custom:mini-graph-card
     entities: 
       - sensor.speedtest_ping

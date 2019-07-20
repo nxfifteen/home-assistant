@@ -3,8 +3,6 @@ id: bedroom
 title: Bedroom
 icon: mdi:bed-empty
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
- 
   - type: entities
     show_header_toggle: false
     entities:

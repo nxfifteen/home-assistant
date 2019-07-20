@@ -3,8 +3,6 @@ id: dinningroom
 title: Kitchen/Dinning Room
 icon: mdi:food-fork-drink
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-   
   - type: entities
     show_header_toggle: false
     entities:

@@ -3,8 +3,6 @@ id: things
 title: Things
 icon: mdi:cogs
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-
 #################################################################
 #                                                               #
 #              Things Status - Firmware Status Card             #

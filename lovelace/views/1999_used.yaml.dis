@@ -3,8 +3,6 @@ id: used
 icon: mdi:shield-home
 name: Used
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-
   - type: entities
     title: media sensors
     show_header_toggle: false

@@ -3,8 +3,6 @@ id: appliances
 icon: mdi:washing-machine
 title: Appliances
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-
   - type: vertical-stack
     cards:
       - type: entities

@@ -3,8 +3,6 @@ title: Stuart
 icon: mdi:human-male
 id: stuart
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-
   - type: picture-entity
     entity: person.stuart
     name: Stuart

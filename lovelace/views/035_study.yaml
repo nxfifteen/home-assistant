@@ -3,8 +3,6 @@ id: study
 title: Study
 icon: mdi:office
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
- 
   - type: entities
     show_header_toggle: false
     entities:
