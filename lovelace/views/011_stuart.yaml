@@ -35,6 +35,8 @@ cards:
           - device_tracker.stuart_presence
           - type: section
           - input_select.stuart
+          - type: section
+          - script.find_phone_his
 
   - type: custom:mini-graph-card
     entities: 

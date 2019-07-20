@@ -35,6 +35,8 @@ cards:
           - device_tracker.kareen_presence
           - type: section
           - input_select.kareen
+          - type: section
+          - script.find_phone_her
 
   - type: custom:mini-graph-card
     entities: 
