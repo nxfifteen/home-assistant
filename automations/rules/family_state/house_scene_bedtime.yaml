@@ -28,7 +28,7 @@ action:
 
   - service: switch.turn_off
     data:
-      entity_id: switch.gf_studio_treadmill
+      entity_id: switch.gf_kitchen_nesspreso
 
   - service: light.turn_off
     data:

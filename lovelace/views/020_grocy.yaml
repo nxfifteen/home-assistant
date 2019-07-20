@@ -30,4 +30,4 @@ cards:
     - sensor.grocy_chore_change_the_bed
     - sensor.grocy_chore_change_the_bed_next
     - type: section
-    - script.grocy_url_change_the_bed_done
+    - script.grocy_url_change_bed_done
