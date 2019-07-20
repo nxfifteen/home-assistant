@@ -28,8 +28,8 @@ google_actions:
       - script.my_computer
       - script.my_computer_lock
       - script.my_computer_hibernate
-      - script.find_phone_his
-      - script.find_phone_her
+      - script.find_phone_stuart
+      - script.find_phone_kareen
       - script.family_state_out_everyone
       - script.family_state_out_her
       - script.family_state_out_him
@@ -179,10 +179,10 @@ google_actions:
     script.my_computer_hibernate:
       name: Hibernate My Computer
 
-    script.find_phone_his:
+    script.find_phone_stuart:
       name: Find His Phone
 
-    script.find_phone_her:
+    script.find_phone_kareen:
       name: Find Her Phone
 
     script.family_state_out_everyone:

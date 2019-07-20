@@ -28,8 +28,8 @@ alexa:
       - script.my_computer
       - script.my_computer_lock
       - script.my_computer_hibernate
-      - script.find_phone_his
-      - script.find_phone_her
+      - script.find_phone_stuart
+      - script.find_phone_kareen
       - script.family_state_out_everyone
       - script.family_state_out_her
       - script.family_state_out_him
@@ -217,12 +217,12 @@ alexa:
       description: Hibernate PC Via GhostScript
       display_categories: SWITCH
 
-    script.find_phone_his:
+    script.find_phone_stuart:
       name: Find His Phone
       description: Find His Phone
       display_categories: SWITCH
 
-    script.find_phone_her:
+    script.find_phone_kareen:
       name: Find Her Phone
       description: Find Her Phone
       display_categories: SWITCH
