@@ -77,8 +77,6 @@ cards:
           name: Battery
         - entity: sensor.hallway_nest_protect_color_status
           name: Status
-    - type: glance
-      entities:
         - entity: sensor.hallway_nest_protect_smoke_status
           name: Smoke
         - entity: sensor.hallway_nest_protect_co_status
@@ -95,8 +93,6 @@ cards:
           name: Battery
         - entity: sensor.kitchen_nest_protect_color_status
           name: Status
-    - type: glance
-      entities:
         - entity: sensor.kitchen_nest_protect_smoke_status
           name: Smoke
         - entity: sensor.kitchen_nest_protect_co_status
@@ -113,8 +109,6 @@ cards:
           name: Battery
         - entity: sensor.landing_nest_protect_color_status
           name: Status
-    - type: glance
-      entities:
         - entity: sensor.landing_nest_protect_smoke_status
           name: Smoke
         - entity: sensor.landing_nest_protect_co_status
