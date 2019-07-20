@@ -42,8 +42,8 @@ cards:
         height: 50
         line_width: 2
         font_size: 70
-        hours_to_show: 48
-        points_per_hour: 4
+        hours_to_show: 32
+        points_per_hour: 2
         show:
           extrema: true
           fill: true
@@ -59,8 +59,8 @@ cards:
         height: 50
         line_width: 2
         font_size: 70
-        hours_to_show: 48
-        points_per_hour: 4
+        hours_to_show: 32
+        points_per_hour: 2
         show:
           extrema: true
           fill: true
