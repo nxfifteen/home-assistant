@@ -4,6 +4,21 @@ sensor:
   name: unifi_client_count
   state_topic: "unifi/status/clientCount"
   value_template: '{{ value_json.val }}'
+  
+- platform: mqtt
+  name: unifi_client_count_lan
+  state_topic: "unifi/status/wifi/NxMESH/clientCount"
+  value_template: '{{ value_json.val }}'
+  
+- platform: mqtt
+  name: unifi_client_count_guest
+  state_topic: "unifi/status/wifi/NxFriends/clientCount"
+  value_template: '{{ value_json.val }}'
+  
+- platform: mqtt
+  name: unifi_client_count_iot
+  state_topic: "unifi/status/wifi/NxIoT/clientCount"
+  value_template: '{{ value_json.val }}'
 
 switch:
 - platform: mqtt
@@ -11,11 +26,9 @@ switch:
   icon: mdi:wifi
   state_topic: "unifi/status/wifi/NxMESH/enabled"
   command_topic: "unifi/set/wifi/NxMESH/enabled"
-  value_template: '{{ value_json.val }}'
+  value_template: '{% if value_json.val == "true" %}on{% else %}off{% endif %}'
   payload_on: "true"
   payload_off: "false"
-  state_on: "true"
-  state_off: "false"
   optimistic: false
   qos: 2
   retain: true
@@ -25,11 +38,9 @@ switch:
   icon: mdi:wifi
   state_topic: "unifi/status/wifi/NxFriends/enabled"
   command_topic: "unifi/set/wifi/NxFriends/enabled"
-  value_template: '{{ value_json.val }}'
+  value_template: '{% if value_json.val == "true" %}on{% else %}off{% endif %}'
   payload_on: "true"
   payload_off: "false"
-  state_on: "true"
-  state_off: "false"
   optimistic: false
   qos: 2
   retain: true
@@ -39,11 +50,9 @@ switch:
   icon: mdi:wifi
   state_topic: "unifi/status/wifi/NxIoT/enabled"
   command_topic: "unifi/set/wifi/NxIoT/enabled"
-  value_template: '{{ value_json.val }}'
+  value_template: '{% if value_json.val == "true" %}on{% else %}off{% endif %}'
   payload_on: "true"
   payload_off: "false"
-  state_on: "true"
-  state_off: "false"
   optimistic: false
   qos: 2
   retain: true
