@@ -1,0 +1,49 @@
+---
+sensor:
+- platform: mqtt
+  name: unifi_client_count
+  state_topic: "unifi/status/clientCount"
+  value_template: '{{ value_json.val }}'
+
+switch:
+- platform: mqtt
+  name: unifi_wifi_lan
+  icon: mdi:wifi
+  state_topic: "unifi/status/wifi/NxMESH/enabled"
+  command_topic: "unifi/set/wifi/NxMESH/enabled"
+  value_template: '{{ value_json.val }}'
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 2
+  retain: true
+  
+- platform: mqtt
+  name: unifi_wifi_guest
+  icon: mdi:wifi
+  state_topic: "unifi/status/wifi/NxFriends/enabled"
+  command_topic: "unifi/set/wifi/NxFriends/enabled"
+  value_template: '{{ value_json.val }}'
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 2
+  retain: true
+  
+- platform: mqtt
+  name: unifi_wifi_iot
+  icon: mdi:wifi
+  state_topic: "unifi/status/wifi/NxIoT/enabled"
+  command_topic: "unifi/set/wifi/NxIoT/enabled"
+  value_template: '{{ value_json.val }}'
+  payload_on: "true"
+  payload_off: "false"
+  state_on: "true"
+  state_off: "false"
+  optimistic: false
+  qos: 2
+  retain: true
