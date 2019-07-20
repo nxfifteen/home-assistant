@@ -193,3 +193,15 @@ google_actions:
 
     script.family_state_out_him:
       name: He's Going Out
+    
+    switch.adguard_filtering:
+      name: Ad Gaurd
+    
+    switch.adguard_safe_browsing:
+      name: Safe Browsing
+    
+    switch.adguard_safe_search:
+      name: Safe Search
+    
+    switch.adguard_parental_control:
+      name: Parental Control
