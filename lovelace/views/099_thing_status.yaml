@@ -33,7 +33,6 @@ cards:
         - entity: sensor.latest_ha_version
           title: Latest
     - type: custom:fold-entity-row
-      head: sensor.potential_breaking_changes
       
   - type: entities
     show_header_toggle: off
