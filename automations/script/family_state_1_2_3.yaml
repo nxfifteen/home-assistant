@@ -1,11 +1,6 @@
 ---
 family_state_1_2_3:
   sequence:
-    - service: media_player.alexa_tts
-      data_template:
-        entity_id: media_player.hallway
-        message: "Good Bye"
-
     - service: mqtt.publish
       data:
         topic: iot/scene/house
