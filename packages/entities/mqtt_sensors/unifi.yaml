@@ -40,11 +40,7 @@ switch:
     name: unifi_wifi_lan
     icon: mdi:wifi
     state_topic: "unifi/status/wifi/NxMESH/enabled/hass"
-    command_topic: "unifi/set/wifi/NxMESH/enabled"
-    availability_topic: "unifi/connected"
-    payload_on: "true"
-    payload_off: "false"
-    payload_available: 2
+    command_topic: "unifi/set/wifi/NxMESH/enabled/hass"
     optimistic: false
     qos: 2
     retain: true
@@ -53,12 +49,8 @@ switch:
     name: unifi_wifi_guest
     icon: mdi:wifi
     state_topic: "unifi/status/wifi/NxFriends/enabled/hass"
-    command_topic: "unifi/set/wifi/NxFriends/enabled"
-    availability_topic: "unifi/connected"
-    payload_on: "true"
-    payload_off: "false"
+    command_topic: "unifi/set/wifi/NxFriends/enabled/hass"
     optimistic: false
-    payload_available: 2
     qos: 2
     retain: true
     
@@ -66,12 +58,8 @@ switch:
     name: unifi_wifi_iot
     icon: mdi:wifi
     state_topic: "unifi/status/wifi/NxIoT/enabled/hass"
-    command_topic: "unifi/set/wifi/NxIoT/enabled"
-    availability_topic: "unifi/connected"
-    payload_on: "true"
-    payload_off: "false"
+    command_topic: "unifi/set/wifi/NxIoT/enabled/hass"
     optimistic: false
-    payload_available: 2
     qos: 2
     retain: true
 
@@ -92,3 +80,12 @@ homeassistant:
       friendly_name: Clients Connected to Guest
     sensor.unifi_client_count_iot:
       friendly_name: Clients Connected to IoT
+      
+    binary_sensor.unifi_client_count_increase:
+      friendly_name: Online Clients Increasing
+    binary_sensor.unifi_client_count_lan_increase:
+      friendly_name: Clients Connected to Private Increasing
+    binary_sensor.unifi_client_count_guest_increase:
+      friendly_name: Clients Connected to Guest Increasing
+    binary_sensor.unifi_client_count_iot_increase:
+      friendly_name: Clients Connected to IoT Increasing
