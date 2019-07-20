@@ -1,64 +1,79 @@
 ---
 sensor:
-- platform: mqtt
-  name: unifi_client_count
-  state_topic: "unifi/status/clientCount"
-  value_template: '{{ value_json.val }}'
-  
-- platform: mqtt
-  name: unifi_client_count_lan
-  state_topic: "unifi/status/wifi/NxMESH/clientCount"
-  value_template: '{{ value_json.val }}'
-  
-- platform: mqtt
-  name: unifi_client_count_guest
-  state_topic: "unifi/status/wifi/NxFriends/clientCount"
-  value_template: '{{ value_json.val }}'
-  
-- platform: mqtt
-  name: unifi_client_count_iot
-  state_topic: "unifi/status/wifi/NxIoT/clientCount"
-  value_template: '{{ value_json.val }}'
+  - platform: mqtt
+    name: unifi_client_count
+    state_topic: "unifi/status/clientCount"
+    value_template: '{{ value_json.val }}'
+    
+  - platform: mqtt
+    name: unifi_client_count_lan
+    state_topic: "unifi/status/wifi/NxMESH/clientCount"
+    value_template: '{{ value_json.val }}'
+    
+  - platform: mqtt
+    name: unifi_client_count_guest
+    state_topic: "unifi/status/wifi/NxFriends/clientCount"
+    value_template: '{{ value_json.val }}'
+    
+  - platform: mqtt
+    name: unifi_client_count_iot
+    state_topic: "unifi/status/wifi/NxIoT/clientCount"
+    value_template: '{{ value_json.val }}'
 
 switch:
-- platform: mqtt
-  name: unifi_wifi_lan
-  icon: mdi:wifi
-  state_topic: "unifi/status/wifi/NxMESH/enabled"
-  command_topic: "unifi/set/wifi/NxMESH/enabled"
-  availability_topic: "unifi/connected"
-  value_template: '{% if value_json.val == "true" %}on{% else %}off{% endif %}'
-  payload_on: "true"
-  payload_off: "false"
-  payload_available: 2
-  optimistic: false
-  qos: 2
-  retain: true
-  
-- platform: mqtt
-  name: unifi_wifi_guest
-  icon: mdi:wifi
-  state_topic: "unifi/status/wifi/NxFriends/enabled"
-  command_topic: "unifi/set/wifi/NxFriends/enabled"
-  availability_topic: "unifi/connected"
-  value_template: '{% if value_json.val == "true" %}on{% else %}off{% endif %}'
-  payload_on: "true"
-  payload_off: "false"
-  optimistic: false
-  payload_available: 2
-  qos: 2
-  retain: true
-  
-- platform: mqtt
-  name: unifi_wifi_iot
-  icon: mdi:wifi
-  state_topic: "unifi/status/wifi/NxIoT/enabled"
-  command_topic: "unifi/set/wifi/NxIoT/enabled"
-  availability_topic: "unifi/connected"
-  value_template: '{% if value_json.val == "true" %}on{% else %}off{% endif %}'
-  payload_on: "true"
-  payload_off: "false"
-  optimistic: false
-  payload_available: 2
-  qos: 2
-  retain: true
+  - platform: mqtt
+    name: unifi_wifi_lan
+    icon: mdi:wifi
+    state_topic: "unifi/status/wifi/NxMESH/enabled/hass"
+    command_topic: "unifi/set/wifi/NxMESH/enabled"
+    availability_topic: "unifi/connected"
+    payload_on: "true"
+    payload_off: "false"
+    payload_available: 2
+    optimistic: false
+    qos: 2
+    retain: true
+    
+  - platform: mqtt
+    name: unifi_wifi_guest
+    icon: mdi:wifi
+    state_topic: "unifi/status/wifi/NxFriends/enabled/hass"
+    command_topic: "unifi/set/wifi/NxFriends/enabled"
+    availability_topic: "unifi/connected"
+    payload_on: "true"
+    payload_off: "false"
+    optimistic: false
+    payload_available: 2
+    qos: 2
+    retain: true
+    
+  - platform: mqtt
+    name: unifi_wifi_iot
+    icon: mdi:wifi
+    state_topic: "unifi/status/wifi/NxIoT/enabled/hass"
+    command_topic: "unifi/set/wifi/NxIoT/enabled"
+    availability_topic: "unifi/connected"
+    payload_on: "true"
+    payload_off: "false"
+    optimistic: false
+    payload_available: 2
+    qos: 2
+    retain: true
+
+homeassistant:
+  customize:
+    switch.unifi_wifi_lan:
+      friendly_name: Private WiFi
+    switch.unifi_wifi_guest:
+      friendly_name: Guest WiFi
+    switch.unifi_wifi_iot:
+      friendly_name: IoT WiFi
+      
+    sensor.unifi_client_count:
+      friendly_name: Online Clients
+    sensor.unifi_client_count_lan:
+      friendly_name: Clients Connected to Private
+    sensor.unifi_client_count_guest:
+      friendly_name: Clients Connected to Guest
+    sensor.unifi_client_count_iot:
+      friendly_name: Clients Connected to IoT
