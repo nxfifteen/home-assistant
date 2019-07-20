@@ -24,7 +24,7 @@ binary_sensor:
 
 homeassistant:
   customize:
-    sensor.gf_studio_camera:
+    binary_sensor.gf_studio_camera:
       friendly_name: Studio Camera
-    sensor.gf_studio_camera_sensor:
+    binary_sensor.gf_studio_camera_sensor:
       friendly_name: Studio Camera

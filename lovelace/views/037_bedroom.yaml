@@ -3,8 +3,6 @@ id: bedroom
 title: Bedroom
 icon: mdi:bed-empty
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
- 
   - type: entities
     show_header_toggle: false
     entities:
@@ -13,10 +11,6 @@ cards:
       - binary_sensor.ff_bedroom_sensor_sensor
       - switch.room_occupancy_bedroom
       - sensor.room_occupancy_bedroom_reason
-      #- type: section
-      #- binary_sensor.ff_landing_sensor
-      #- switch.room_occupancy_landing
-      #- sensor.room_occupancy_landing_reason
 
   - type: entities
     show_header_toggle: false

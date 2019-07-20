@@ -3,8 +3,6 @@ id: studio
 title: Studio
 icon: mdi:android-studio
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
- 
   - type: entities
     show_header_toggle: false
     entities:

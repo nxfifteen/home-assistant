@@ -3,8 +3,6 @@ title: Stuart
 icon: mdi:human-male
 id: stuart
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-
   - type: picture-entity
     entity: person.stuart
     name: Stuart
@@ -17,17 +15,14 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - sensor.family_stuart_state_human
+          - entity: device_tracker.stuart_presence
+            name: Presence
+          - entity: sensor.family_stuart_state_human
+            name: State
           - entity: sensor.family_stuart_locality
             name: Locality
-          - entity: sensor.family_stuart_loc_room
-            name: Room
           - type: section
-          - device_tracker.stuart_presence
-          - type: section
-          - input_select.stuart
-          - type: section
-          - script.find_phone_his
+          - script.find_phone_stuart
 
   - type: custom:mini-graph-card
     entities: 

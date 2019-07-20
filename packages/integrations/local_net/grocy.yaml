@@ -90,6 +90,10 @@ binary_sensor:
         friendly_name: 'Litter Change Due'
         value_template: '{{ (as_timestamp(now()) | int) > (as_timestamp(states.sensor.grocy_chore_litter_changed_next.state) | int) }}'
 
+      grocy_chore_change_bed_due:
+        friendly_name: 'Bed Change Due'
+        value_template: '{{ (as_timestamp(now()) | int) > (as_timestamp(states.sensor.grocy_chore_change_the_bed_next.state) | int) }}'
+
 shell_command:
   grocy_consume_item: "curl -X POST {{grocy_url}}/api/stock/products/{{product_id}}/consume -H 'Accept: application/json' -H 'Content-Type: application/json' -H 'GROCY-API-KEY: {{grocy_api_key}}' -H 'cache-control: no-cache' -d '{ \"amount\": {{amount}},  \"transaction_type\": \"consume\",  \"spoiled\": false }'"
   grocy_url_chore_1_done: !secret grocy_url_chore_1_done
@@ -157,3 +161,15 @@ homeassistant:
     sensor.grocy_chore_change_the_bed_next:
       friendly_name: Next Bed Change
       icon: mdi:calendar-clock
+      
+    sensor.grocy_stock_washing_powder:
+      friendly_name: Washing Powder Stock
+      icon: mdi:washing-machine
+      
+    sensor.grocy_stock_washing_softner:
+      friendly_name: Fabric Softner Stock
+      icon: mdi:tumble-dryer
+      
+    sensor.grocy_stock_dishwasher_tabs:
+      friendly_name: Dishwasher Tabs
+      icon: mdi:dishwasher

@@ -1,13 +1,13 @@
 ---
 sensor:
 - platform: mqtt
-  name: ff_study_sterio_power
+  name: ff_study_loading_pi_power
   state_topic: "zwave/7/50/1/8"
   device_class: power
 
 switch:
 - platform: mqtt
-  name: ff_study_sterio
+  name: ff_study_loading_pi
   icon: mdi:speaker-wireless
   state_topic: "zwave/7/37/1/0"
   command_topic: "zwave/7/37/1/0/set"
@@ -21,9 +21,9 @@ switch:
 
 homeassistant:
   customize:
-    switch.ff_study_sterio:
+    switch.ff_study_loading_pi:
       friendly_name: Loading Station
       icon: mdi:fan
-    sensor.ff_study_sterio_power:
+    sensor.ff_study_loading_pi_power:
       friendly_name: Loading Station Watts
  

@@ -24,7 +24,7 @@ binary_sensor:
 
 homeassistant:
   customize:
-    sensor.gf_kitchen_camera:
+    binary_sensor.gf_kitchen_camera:
       friendly_name: kitchen Camera
-    sensor.gf_kitchen_camera_sensor:
+    binary_sensor.gf_kitchen_camera_sensor:
       friendly_name: kitchen Camera

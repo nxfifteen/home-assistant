@@ -3,8 +3,6 @@ id: adguard
 icon: mdi:access-point-network-off
 title: AdGaurd
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-
   - type: entities
     show_header_toggle: off
     entities:

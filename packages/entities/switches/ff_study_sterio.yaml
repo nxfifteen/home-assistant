@@ -3,21 +3,21 @@ sensor:
   - platform: template
     sensors:
       ## dishwasher Power Usage
-      study_fan_power:
-        value_template: '{{ states.switch.study_fan.attributes.current_power_w|default(0)|int }}'  
+      study_sterio_power:
+        value_template: '{{ states.switch.study_sterio.attributes.current_power_w|default(0)|int }}'  
         friendly_name: 'Study Sterio Power'
       ## dishwasher Power Graph
-      study_fan_load:
-        value_template: 'Power: {{ states.switch.study_fan.attributes.current_power_w|default(0)|int }}'  
+      study_sterio_load:
+        value_template: 'Power: {{ states.switch.study_sterio.attributes.current_power_w|default(0)|int }}'  
         friendly_name: 'Study Sterio Power'  
         unit_of_measurement: 'W'
 
 homeassistant:
   customize:
-    switch.study_fan:
+    switch.study_sterio:
       friendly_name: Study Sterio
       icon: mdi:speaker-wireless
       initial_state: off
       
-    sensor.study_fan_power:
+    sensor.study_sterio_power:
       friendly_name: Study Sterio

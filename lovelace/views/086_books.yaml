@@ -3,8 +3,6 @@ id: books
 icon: mdi:audiobook
 title: Books
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-
   - type: entities
     show_header_toggle: off
     entities:

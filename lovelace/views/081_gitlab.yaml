@@ -3,8 +3,6 @@ id: gitlab
 icon: mdi:gitlab
 title: Git
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
-
   - type: entities
     entities:
       - type: 'custom:text-divider-row'
