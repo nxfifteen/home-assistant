@@ -8,14 +8,22 @@ cards:
   - type: entities
     show_header_toggle: off
     entities:
+    - switch.unifi_wifi_lan
+    - switch.unifi_wifi_guest
+    - switch.unifi_wifi_iot
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - binary_sensor.unifi_client_count_increase
+    - binary_sensor.unifi_client_count_lan_increase
+    - binary_sensor.unifi_client_count_guest_increase
+    - binary_sensor.unifi_client_count_iot_increase
+    - type: section
     - sensor.unifi_client_count
     - sensor.unifi_client_count_lan
     - sensor.unifi_client_count_guest
     - sensor.unifi_client_count_iot
-    - type: section
-    - switch.unifi_wifi_lan
-    - switch.unifi_wifi_guest
-    - switch.unifi_wifi_iot
 
   - type: vertical-stack
     cards:

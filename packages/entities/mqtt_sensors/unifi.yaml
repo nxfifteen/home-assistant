@@ -20,6 +20,21 @@ sensor:
     state_topic: "unifi/status/wifi/NxIoT/clientCount"
     value_template: '{{ value_json.val }}'
 
+binary_sensor:
+  - platform: trend
+    sensors:
+      unifi_client_count_increase:
+        entity_id: sensor.unifi_client_count
+      
+      unifi_client_count_lan_increase:
+        entity_id: sensor.unifi_client_count_lan
+      
+      unifi_client_count_guest_increase:
+        entity_id: sensor.unifi_client_count_guest
+      
+      unifi_client_count_iot_increase:
+        entity_id: sensor.unifi_client_count_iot
+
 switch:
   - platform: mqtt
     name: unifi_wifi_lan
