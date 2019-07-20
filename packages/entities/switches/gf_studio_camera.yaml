@@ -2,7 +2,6 @@
 switch:
 - platform: mqtt
   name: gf_studio_camera
-  icon: mdi:led-strip
   state_topic: "zwave/11/37/1/0"
   command_topic: "zwave/11/37/1/0/set"
   payload_on: "true"
@@ -17,3 +16,4 @@ homeassistant:
   customize:
     switch.gf_studio_camera:
       friendly_name: Studio IP Camera
+      icon: mdi:camera-wireless

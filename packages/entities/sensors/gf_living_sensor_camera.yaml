@@ -24,5 +24,7 @@ binary_sensor:
 
 homeassistant:
   customize:
+    sensor.gf_living_camera:
+      friendly_name: Livingroom Camera
     sensor.gf_living_camera_sensor:
       friendly_name: Livingroom Camera

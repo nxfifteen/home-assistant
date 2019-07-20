@@ -24,5 +24,7 @@ binary_sensor:
 
 homeassistant:
   customize:
+    sensor.gf_dinning_camera:
+      friendly_name: Dinning Room Camera
     sensor.gf_dinning_camera_sensor:
       friendly_name: Dinning Room Camera

@@ -24,5 +24,7 @@ binary_sensor:
 
 homeassistant:
   customize:
+    sensor.gf_hallway_camera:
+      friendly_name: Hallway Camera
     sensor.gf_hallway_camera_sensor:
       friendly_name: Hallway Camera
