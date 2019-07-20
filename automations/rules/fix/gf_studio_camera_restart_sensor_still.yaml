@@ -1,5 +1,5 @@
 ---
-alias: Restart IP Camera - By Sensor
+alias: Restart Studio IP Camera - By Sensor
 
 trigger:
 - platform: state
@@ -23,10 +23,10 @@ action:
     data_template:
       who: "stuart"
       title: 'Studio Camera'
-      value1: "The Studio Camera is still offline! I've restarted it"
+      value1: "The Studio Camera is still offline! I'm struggling to fix it"
       
   - service: script.notify_engine
     data_template:
       channel: "hab"
-      value1: "The Studio Camera still offline! I've restarted it"
+      value1: "The Studio Camera still offline! I'm struggling to fix it"
       hastag: "#A.I. #CCTV #Failed #HouseKeeping #SudioCCTV"

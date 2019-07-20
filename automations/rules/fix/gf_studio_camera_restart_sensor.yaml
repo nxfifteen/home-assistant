@@ -1,5 +1,5 @@
 ---
-alias: Restart IP Camera - By Sensor
+alias: Restart Studio IP Camera - By Sensor
 
 trigger:
 - platform: state

@@ -1,5 +1,5 @@
 ---
-alias: Restart IP Camera - By Socket
+alias: Restart Studio IP Camera - By Socket
 
 trigger:
 - platform: state
