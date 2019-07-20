@@ -32,6 +32,8 @@ cards:
           title: Current
         - entity: sensor.latest_ha_version
           title: Latest
+        - entity: sensor.hacs
+          title: HACS Updates
     - type: custom:fold-entity-row
       
   - type: entities
