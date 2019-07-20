@@ -92,3 +92,12 @@ homeassistant:
       friendly_name: Clients Connected to Guest
     sensor.unifi_client_count_iot:
       friendly_name: Clients Connected to IoT
+      
+    binary_sensor.unifi_client_count_increase:
+      friendly_name: Online Clients Increasing
+    binary_sensor.unifi_client_count_lan_increase:
+      friendly_name: Clients Connected to Private Increasing
+    binary_sensor.unifi_client_count_guest_increase:
+      friendly_name: Clients Connected to Guest Increasing
+    binary_sensor.unifi_client_count_iot_increase:
+      friendly_name: Clients Connected to IoT Increasing
