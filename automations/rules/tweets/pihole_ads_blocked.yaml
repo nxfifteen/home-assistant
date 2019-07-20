@@ -1,0 +1,19 @@
+---
+alias: PiHole Daily Blocked stats!
+trigger:
+  platform: time
+  at: '23:50:00'
+
+action:
+  - delay: '00:{{ range(0,5) | random | int }}{{ range(0,9) | random | int }}:00'
+
+  - service: script.notify_engine
+    data_template:
+      channel: "tweets"
+      value1: >
+          {{ [
+          "I blocked {{states.sensor.adguard_dns_queries_blocked.state}} ads via #adguard. That is {{states.sensor.adguard_dns_queries_blocked_ratio.state}}% of my internet traffic.",
+          "Today was a good day! Why, you ask? Because I blocked {{states.sensor.adguard_dns_queries_blocked.state}} ads via #adguard!",
+          "#AdGaurd has protected me from {{states.sensor.adguard_safe_browsing_blocked.state}} unsafe sites as well as {{states.sensor.adguard_dns_queries_blocked.state}} ads",
+          ] | random }}
+      hashtag: '#AdGuard #Security'

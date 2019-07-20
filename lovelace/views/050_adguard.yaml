@@ -1,0 +1,74 @@
+---
+id: adguard
+icon: mdi:nas
+title: AdGaurd
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - switch.adguard_filtering
+    - switch.adguard_protection
+    - switch.adguard_query_log
+    - type: section
+    - sensor.adguard_rules_count
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.adguard_average_processing_speed
+    height: 50
+    line_width: 2
+    font_size: 70
+    hours_to_show: 48
+    points_per_hour: 4
+    show:
+      extrema: true
+      fill: true
+    color_thresholds:
+      - value: 0
+        color: "#FFFF00"
+      - value: 13
+        color: "#3498db"
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - sensor.adguard_dns_queries
+    - sensor.adguard_dns_queries_blocked
+    - sensor.adguard_dns_queries_blocked_ratio
+
+  - type: custom:mini-graph-card
+    entities: 
+      - sensor.adguard_dns_queries_blocked_ratio
+    height: 50
+    line_width: 2
+    font_size: 70
+    hours_to_show: 48
+    points_per_hour: 4
+    show:
+      extrema: true
+      fill: true
+    color_thresholds:
+      - value: 0
+        color: "#FFFF00"
+      - value: 13
+        color: "#3498db"
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - switch.adguard_parental_control
+    - sensor.adguard_parental_control_blocked
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - switch.adguard_safe_browsing
+    - sensor.adguard_safe_browsing_blocked
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - switch.adguard_safe_search
+    - sensor.searches_safe_search_enforced

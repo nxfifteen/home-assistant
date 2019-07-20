@@ -241,3 +241,23 @@ alexa:
       name: He's Going Out
       description: Tell Jarvis He's Leaving
       display_categories: SWITCH
+    
+    switch.adguard_filtering:
+      name: Ad Gaurd
+      description: Enable AdGuard Ad Blocking
+      display_categories: SWITCH
+    
+    switch.adguard_safe_browsing:
+      name: Safe Browsing
+      description: Enable AdGuard Safe Browsing
+      display_categories: SWITCH
+    
+    switch.adguard_safe_search:
+      name: Safe Search
+      description: Enable AdGuard Safe Search
+      display_categories: SWITCH
+    
+    switch.adguard_parental_control:
+      name: Parental Control
+      description: Enable AdGuard Parental Controls
+      display_categories: SWITCH

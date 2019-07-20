@@ -11,15 +11,6 @@ cards:
     tap_action: 
       action: toggle
     image: !secret person_stuart_picture
-
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Family
-      - sensor.family_family_state
-      - sensor.family_family_state_raw
-      - sensor.house_scene
       
   - type: horizontal-stack
     cards:
@@ -35,6 +26,8 @@ cards:
           - device_tracker.stuart_presence
           - type: section
           - input_select.stuart
+          - type: section
+          - script.find_phone_his
 
   - type: custom:mini-graph-card
     entities: 
@@ -56,14 +49,12 @@ cards:
       - value: 80
         color: "#1db954"
   
-  - type: horizontal-stack
-    cards:
-      - type: entities
-        entities:
-          - type: 'custom:text-divider-row'
-            text: Accounts
-          - entity: sensor.steam_76561197982696593
-            name: Steam
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Accounts
+      - entity: sensor.steam_76561197982696593
+        name: Steam
   
   - type: horizontal-stack
     cards:
@@ -101,13 +92,11 @@ cards:
         type: custom:secondaryinfo-entity-row
         secondary_info:  "[[ {entity}.attributes.distance ]] km"
 
-  - type: horizontal-stack
-    cards:
-      - type: entities
-        entities:
-          - type: 'custom:text-divider-row'
-            text: Tiles
-          - device_tracker.tile_964004c0e14c4228
-          - device_tracker.tile_c4f2161059284831
-          - device_tracker.tile_19063e4f07561dcf
-          - device_tracker.tile_353e0f954ad1a9af
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Tiles
+      - device_tracker.tile_964004c0e14c4228
+      - device_tracker.tile_c4f2161059284831
+      - device_tracker.tile_19063e4f07561dcf
+      - device_tracker.tile_353e0f954ad1a9af
