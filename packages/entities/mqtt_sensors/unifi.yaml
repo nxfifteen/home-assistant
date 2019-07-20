@@ -40,11 +40,7 @@ switch:
     name: unifi_wifi_lan
     icon: mdi:wifi
     state_topic: "unifi/status/wifi/NxMESH/enabled/hass"
-    command_topic: "unifi/set/wifi/NxMESH/enabled"
-    availability_topic: "unifi/connected"
-    payload_on: "true"
-    payload_off: "false"
-    payload_available: 2
+    command_topic: "unifi/set/wifi/NxMESH/enabled/hass"
     optimistic: false
     qos: 2
     retain: true
@@ -53,12 +49,8 @@ switch:
     name: unifi_wifi_guest
     icon: mdi:wifi
     state_topic: "unifi/status/wifi/NxFriends/enabled/hass"
-    command_topic: "unifi/set/wifi/NxFriends/enabled"
-    availability_topic: "unifi/connected"
-    payload_on: "true"
-    payload_off: "false"
+    command_topic: "unifi/set/wifi/NxFriends/enabled/hass"
     optimistic: false
-    payload_available: 2
     qos: 2
     retain: true
     
@@ -66,12 +58,8 @@ switch:
     name: unifi_wifi_iot
     icon: mdi:wifi
     state_topic: "unifi/status/wifi/NxIoT/enabled/hass"
-    command_topic: "unifi/set/wifi/NxIoT/enabled"
-    availability_topic: "unifi/connected"
-    payload_on: "true"
-    payload_off: "false"
+    command_topic: "unifi/set/wifi/NxIoT/enabled/hass"
     optimistic: false
-    payload_available: 2
     qos: 2
     retain: true
 
