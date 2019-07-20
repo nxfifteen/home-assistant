@@ -80,13 +80,6 @@ cards:
   - type: entities
     show_header_toggle: false
     entities:
-      - sensor.hallway_nest_protect_smoke_status
-      - sensor.kitchen_nest_protect_smoke_status
-      - sensor.landing_nest_protect_smoke_status
-      - type: section
-      - binary_sensor.gf_hallway_contact_sensor
-      - binary_sensor.gf_dinning_contact_side
-      - type: section
       - sun.sun
       - sensor.light_scene
       - input_select.light_scene
@@ -180,7 +173,6 @@ cards:
             color: "#3498db"
           - value: -100
             color: "#e74c3c"
-
         
   - type: vertical-stack
     cards:  

@@ -1,0 +1,121 @@
+---
+id: security
+icon: mdi:shield-home
+title: Security
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    title: Camera Sockets
+    show_header_toggle: false
+    entities:
+    - switch.gf_hallway_camera
+    - switch.gf_living_camera
+    - switch.gf_studio_camera
+
+  - type: entities
+    title: Camera Online
+    show_header_toggle: false
+    entities:
+    - binary_sensor.gf_dinning_camera
+    - binary_sensor.gf_hallway_camera
+    - binary_sensor.gf_kitchen_camera
+    - binary_sensor.gf_living_camera
+    - binary_sensor.gf_studio_camera
+
+  - type: entities
+    title: Camera Motion
+    show_header_toggle: false
+    entities:
+    - binary_sensor.motion_gf_dinning_camera
+    - binary_sensor.motion_gf_hallway_camera
+    - binary_sensor.motion_gf_kitchen_camera
+    - binary_sensor.motion_gf_living_camera
+    - binary_sensor.motion_gf_studio_camera
+
+  - type: entities
+    title: Camera Recordings
+    show_header_toggle: false
+    entities:
+    - binary_sensor.camera_dinning_room_recording
+    - binary_sensor.camera_front_door_recording
+    - binary_sensor.camera_kitchen_recording
+    - binary_sensor.camera_lounge_recording
+    - binary_sensor.camera_backdoor_recording
+
+  - type: entities
+    title: ZWave Motion
+    show_header_toggle: false
+    entities:
+    - binary_sensor.motion_ff_bedroom
+    - binary_sensor.motion_ff_landing
+    - binary_sensor.motion_ff_study
+    - binary_sensor.motion_gf_dinning
+    - binary_sensor.motion_gf_living
+
+  - type: entities
+    title: ZWave Contacts
+    show_header_toggle: false
+    entities:
+    - binary_sensor.gf_dinning_contact_side
+    - binary_sensor.gf_hallway_contact_sensor
+
+  #################################################################
+  #                                                               #
+  #                  Security - Smoke Alarm Card                  #
+  #                                                               #
+  #################################################################
+              
+  - type: vertical-stack
+    cards:
+    - type: glance
+      title: Hallway Protect
+      entities:
+        - entity: binary_sensor.hallway_nest_protect_online
+          name: Online
+        - entity: sensor.hallway_nest_protect_battery_health
+          name: Battery
+        - entity: sensor.hallway_nest_protect_color_status
+          name: Status
+    - type: glance
+      entities:
+        - entity: sensor.hallway_nest_protect_smoke_status
+          name: Smoke
+        - entity: sensor.hallway_nest_protect_co_status
+          name: CO
+          
+  - type: vertical-stack
+    cards:
+    - type: glance
+      title: Kicthen Protect
+      entities:
+        - entity: binary_sensor.kitchen_nest_protect_online
+          name: Online
+        - entity: sensor.kitchen_nest_protect_battery_health
+          name: Battery
+        - entity: sensor.kitchen_nest_protect_color_status
+          name: Status
+    - type: glance
+      entities:
+        - entity: sensor.kitchen_nest_protect_smoke_status
+          name: Smoke
+        - entity: sensor.kitchen_nest_protect_co_status
+          name: CO
+
+  - type: vertical-stack
+    cards:
+    - type: glance
+      title: Landing Protect
+      entities:
+        - entity: binary_sensor.landing_nest_protect_online
+          name: Online
+        - entity: sensor.landing_nest_protect_battery_health
+          name: Battery
+        - entity: sensor.landing_nest_protect_color_status
+          name: Status
+    - type: glance
+      entities:
+        - entity: sensor.landing_nest_protect_smoke_status
+          name: Smoke
+        - entity: sensor.landing_nest_protect_co_status
+          name: CO
