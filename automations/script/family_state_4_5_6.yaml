@@ -1,11 +1,6 @@
 ---
 family_state_4_5_6:
   sequence:
-    - service: media_player.alexa_tts
-      data_template:
-        entity_id: media_player.hallway
-        message: "Welcome Home"
-
     - service: mqtt.publish
       data:
         topic: iot/scene/house
