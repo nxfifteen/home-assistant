@@ -30,6 +30,52 @@ cards:
         card:
           type: glance
           title: People at home
+                        
+  #################################################################
+  #                                                               #
+  #                      Home - Weather Card                      #
+  #                                                               #
+  #################################################################
+
+  - type: 'custom:dark-sky-weather-card'
+    entity_current_conditions: sensor.dark_sky_icon
+    entity_temperature: sensor.dark_sky_temperature
+    entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1d
+    entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2d
+    entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3d
+    entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4d
+    entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5d
+    entity_forecast_icon_1: sensor.dark_sky_icon_1d
+    entity_forecast_icon_2: sensor.dark_sky_icon_2d
+    entity_forecast_icon_3: sensor.dark_sky_icon_3d
+    entity_forecast_icon_4: sensor.dark_sky_icon_4d
+    entity_forecast_icon_5: sensor.dark_sky_icon_5d
+    entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_1d
+    entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_2d
+    entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_3d
+    entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_4d
+    entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_5d
+    entity_summary_1: sensor.dark_sky_summary_1d
+    entity_summary_2: sensor.dark_sky_summary_2d
+    entity_summary_3: sensor.dark_sky_summary_3d
+    entity_summary_4: sensor.dark_sky_summary_4d
+    entity_summary_5: sensor.dark_sky_summary_5d
+    entity_sun: sun.sun
+    entity_visibility: sensor.dark_sky_visibility
+    entity_daytime_high: sensor.dark_sky_daytime_high_temperature_1d
+    entity_wind_bearing: sensor.dark_sky_wind_bearing
+    entity_wind_speed: sensor.dark_sky_wind_speed
+    entity_humidity: sensor.dark_sky_humidity
+    entity_pressure: sensor.dark_sky_pressure
+    entity_apparent_temp: sensor.dark_sky_apparent_temperature
+    entity_daily_summary: sensor.dark_sky_daily_summary
+    entity_pop: sensor.dark_sky_precip_probability
+    entity_pop_intensity: sensor.dark_sky_precip_intensity
+    entity_pop_1: sensor.dark_sky_precip_probability_1d
+    entity_pop_2: sensor.dark_sky_precip_probability_2d
+    entity_pop_3: sensor.dark_sky_precip_probability_3d
+    entity_pop_4: sensor.dark_sky_precip_probability_4d
+    entity_pop_5: sensor.dark_sky_precip_probability_5d
         
   - type: entities
     show_header_toggle: false
@@ -96,150 +142,6 @@ cards:
               - type: section
               - entity: sensor.family_kareen_battery_phone
                 name: Battery
-      
-      - type: horizontal-stack
-        cards:
-          - type: glance
-            entities:
-              - device_tracker.tile_964004c0e14c4228
-              - device_tracker.tile_c4f2161059284831
-              - device_tracker.tile_19063e4f07561dcf
-              - device_tracker.tile_353e0f954ad1a9af
-              
-  # - type: entities
-  #   show_header_toggle: false
-  #   entities:
-  #     - sensor.next_bus_to_6500n0200
-  #     - sensor.next_bus_to_6500n0468
-  #     - sensor.next_bus_to_6500k9922
-
-  # #################################################################
-  # #                                                               #
-  # #                     Home - Next Bus Card                      #
-  # #                                                               #
-  # #################################################################
-
-  # - type: entities
-  #   show_header_toggle: false
-  #   entities:
-  #     - type: 'custom:text-divider-row'
-  #       text: Next Bus
-  #     - entity: sensor.next_bus_to_st_andrews_madras_college
-  #       name: 'To Town'
-  #     - type: section
-  #     - entity: sensor.next_bus_to_letham_village_centre
-  #       name: 'Home'
-
-  #################################################################
-  #                                                               #
-  #                   Home - Waze Travel Card                     #
-  #                                                               #
-  ################################################################# 
-
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Travel
-      - entity: sensor.commute_stuart_home
-        name: Stuart Home
-        icon: mdi:home-account
-      - entity: sensor.commute_stuart_work
-        name: Work
-        icon: mdi:cash-usd
-      - entity: sensor.tay_road_bridge
-        name: Tay Bridge
-      - type: divider
-      - entity: sensor.commute_kareen_home
-        name: Kareen Home
-        icon: mdi:home-account
-      - entity: sensor.commute_kareen_work_a
-        name: Newport
-        icon: mdi:cash-usd
-      - entity: sensor.commute_kareen_work_b
-        name: Tayport
-        icon: mdi:cash-usd
-      - type: divider
-      - proximity.home
-      - proximity.cs_tps
-      - proximity.newport
-      - proximity.tayport
-
-  - type: custom:mini-media-player
-    name: Alexa (Everywhere)
-    entity: media_player.everywhere_2
-    artwork: cover
-    source: icon
-    hide:
-      volume: false
-      source: true
-      power_state: true
-
-  - type: custom:mini-media-player
-    name: Alexa (Downstairs)
-    entity: media_player.downstairs_2
-    artwork: cover
-    source: icon
-    hide:
-      volume: false
-      source: true
-      power_state: true
-
-  - type: custom:mini-media-player
-    name: Alexa (Upstairs)
-    entity: media_player.upstairs
-    artwork: cover
-    source: icon
-    hide:
-      volume: false
-      source: true
-      power_state: true
-        
-  #################################################################
-  #                                                               #
-  #                      Home - Weather Card                      #
-  #                                                               #
-  #################################################################
-
-  - type: 'custom:dark-sky-weather-card'
-    entity_current_conditions: sensor.dark_sky_icon
-    entity_temperature: sensor.dark_sky_temperature
-    entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1d
-    entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2d
-    entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3d
-    entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4d
-    entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5d
-    entity_forecast_icon_1: sensor.dark_sky_icon_1d
-    entity_forecast_icon_2: sensor.dark_sky_icon_2d
-    entity_forecast_icon_3: sensor.dark_sky_icon_3d
-    entity_forecast_icon_4: sensor.dark_sky_icon_4d
-    entity_forecast_icon_5: sensor.dark_sky_icon_5d
-    entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_1d
-    entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_2d
-    entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_3d
-    entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_4d
-    entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_5d
-    entity_summary_1: sensor.dark_sky_summary_1d
-    entity_summary_2: sensor.dark_sky_summary_2d
-    entity_summary_3: sensor.dark_sky_summary_3d
-    entity_summary_4: sensor.dark_sky_summary_4d
-    entity_summary_5: sensor.dark_sky_summary_5d
-    entity_sun: sun.sun
-    entity_visibility: sensor.dark_sky_visibility
-    entity_daytime_high: sensor.dark_sky_daytime_high_temperature_1d
-    entity_wind_bearing: sensor.dark_sky_wind_bearing
-    entity_wind_speed: sensor.dark_sky_wind_speed
-    entity_humidity: sensor.dark_sky_humidity
-    entity_pressure: sensor.dark_sky_pressure
-    entity_apparent_temp: sensor.dark_sky_apparent_temperature
-    entity_daily_summary: sensor.dark_sky_daily_summary
-    entity_pop: sensor.dark_sky_precip_probability
-    entity_pop_intensity: sensor.dark_sky_precip_intensity
-    entity_pop_1: sensor.dark_sky_precip_probability_1d
-    entity_pop_2: sensor.dark_sky_precip_probability_2d
-    entity_pop_3: sensor.dark_sky_precip_probability_3d
-    entity_pop_4: sensor.dark_sky_precip_probability_4d
-    entity_pop_5: sensor.dark_sky_precip_probability_5d
 
   #################################################################
   #                                                               #

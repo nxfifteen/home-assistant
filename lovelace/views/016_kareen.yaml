@@ -11,15 +11,6 @@ cards:
     tap_action: 
       action: toggle
     image: !secret person_kareen_picture
-
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Family
-      - sensor.family_family_state
-      - sensor.family_family_state_raw
-      - sensor.house_scene
       
   - type: horizontal-stack
     cards:
@@ -58,22 +49,20 @@ cards:
       - value: 80
         color: "#1db954"
   
-  - type: horizontal-stack
-    cards:
-      - type: entities
-        entities:
-          - type: 'custom:text-divider-row'
-            text: Car
-          - entity: sensor.family_kareen_drive_ignition
-            name: Ignition
-          - entity: sensor.family_kareen_drive_dest
-            name: Destingation
-          - entity: sensor.family_kareen_drive_eta
-            name: ETA
-          - entity: sensor.family_kareen_drive_dist
-            name: Distance
-          - entity: sensor.family_kareen_drive_out
-            name: Minutes Away
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Car
+      - entity: sensor.family_kareen_drive_ignition
+        name: Ignition
+      - entity: sensor.family_kareen_drive_dest
+        name: Destingation
+      - entity: sensor.family_kareen_drive_eta
+        name: ETA
+      - entity: sensor.family_kareen_drive_dist
+        name: Distance
+      - entity: sensor.family_kareen_drive_out
+        name: Minutes Away
 
   - type: entities
     show_header_toggle: false
