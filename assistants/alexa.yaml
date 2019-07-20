@@ -167,12 +167,12 @@ alexa:
       description: The Computer Monitors 
       display_categories: SWITCH
 
-    switch.study_fan:
+    switch.study_sterio:
       name: Study Hi-Fi
       description: The Study Sterio
       display_categories: SWITCH
 
-    switch.ff_study_sterio:
+    switch.ff_study_loading_pi:
       name: Loading Station
       description: The Loading Station
       display_categories: SWITCH

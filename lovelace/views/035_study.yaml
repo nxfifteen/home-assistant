@@ -52,16 +52,15 @@ cards:
       - script.my_computer
       - type: section
       - switch.ff_study_monitors
-      - switch.study_fan
+      - switch.study_sterio
       - type: section
-      - switch.ff_study_sterio
-      - device_tracker.sd_loader
+      - switch.ff_study_loading_pi
   
   # - type: custom:decluterring-card
   #   template: power_graph
   #   variables:
   #     - name: Some Name
-  #     - sensor: sensor.ff_study_sterio_power
+  #     - sensor: sensor.ff_study_loading_pi_power
 
   - type: horizontal-stack
     cards:
@@ -103,7 +102,7 @@ cards:
 
   - type: custom:mini-graph-card
     entities: 
-      - sensor.ff_study_sterio_power
+      - sensor.ff_study_loading_pi_power
     name: Fan
     height: 74
     line_width: 2
@@ -131,7 +130,7 @@ cards:
 
   - type: custom:mini-graph-card
     entities: 
-      - sensor.study_fan_power
+      - sensor.study_sterio_power
     name: Sterio
     height: 74
     line_width: 2
