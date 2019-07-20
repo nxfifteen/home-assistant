@@ -157,3 +157,15 @@ homeassistant:
     sensor.grocy_chore_change_the_bed_next:
       friendly_name: Next Bed Change
       icon: mdi:calendar-clock
+      
+    sensor.grocy_stock_washing_powder:
+      friendly_name: Washing Powder Stock
+      icon: mdi:washing-machine
+      
+    sensor.grocy_stock_washing_softner:
+      friendly_name: Fabric Softner Stock
+      icon: mdi:tumble-dryer
+      
+    sensor.grocy_stock_dishwasher_tabs:
+      friendly_name: Dishwasher Tabs
+      icon: mdi:dishwasher
