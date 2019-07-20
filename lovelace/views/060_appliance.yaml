@@ -84,85 +84,89 @@ cards:
 
   - !include ../cards/gist_aftership_tracking.yaml
 
-  - type: entities
-    title: Washing Machine
-    show_header_toggle: false
-    entities:
-    - sensor.washing_machine_cost
-    - sensor.washing_machine_friendly_status
-    - input_boolean.enable_washing_machine_notification
-    - type: section
-    - sensor.washing_machine_load
-    - sensor.washing_machine_status_detail
-    - type: section
-    - sensor.weekly_washing_machine
-    - sensor.monthly_washing_machine
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: Washing Machine
+        show_header_toggle: false
+        entities:
+        - sensor.washing_machine_cost
+        - sensor.washing_machine_friendly_status
+        - input_boolean.enable_washing_machine_notification
+        - type: section
+        - sensor.washing_machine_load
+        - sensor.washing_machine_status_detail
+        - type: section
+        - sensor.weekly_washing_machine
+        - sensor.monthly_washing_machine
 
-  - type: custom:mini-graph-card
-    entities: 
-      - sensor.washing_machine_power
-    name: Washing Machine
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 24
-    icon: mdi:washing-machine
-    show:
-      icon: true
-      extrema: true
-      icon_adaptive_color: true
-    color_thresholds:
-        # High
-      - value: 75
-        color: "#e74c3c"
-        # In Use
-      - value: 45
-        color: "#ffa500"
-        # Stand By
-      - value: 5
-        color: "#3498db"
-        # Off
-      - value: -1
-        color: "#1db954"
+      - type: custom:mini-graph-card
+        entities: 
+          - sensor.washing_machine_power
+        name: Washing Machine
+        height: 74
+        line_width: 2
+        font_size: 65
+        hours_to_show: 24
+        icon: mdi:washing-machine
+        show:
+          icon: true
+          extrema: true
+          icon_adaptive_color: true
+        color_thresholds:
+            # High
+          - value: 75
+            color: "#e74c3c"
+            # In Use
+          - value: 45
+            color: "#ffa500"
+            # Stand By
+          - value: 5
+            color: "#3498db"
+            # Off
+          - value: -1
+            color: "#1db954"
 
-  - type: entities
-    title: Dishwasher
-    show_header_toggle: false
-    entities:
-    - sensor.dishwasher_cost
-    - sensor.dishwasher_friendly_status
-    - input_boolean.disable_dishwasher_notification
-    - type: section
-    - sensor.dishwasher_load
-    - sensor.dishwasher_status_detail
-    - type: section
-    - sensor.weekly_dishwasher
-    - sensor.monthly_dishwasher
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: Dishwasher
+        show_header_toggle: false
+        entities:
+        - sensor.dishwasher_cost
+        - sensor.dishwasher_friendly_status
+        - input_boolean.disable_dishwasher_notification
+        - type: section
+        - sensor.dishwasher_load
+        - sensor.dishwasher_status_detail
+        - type: section
+        - sensor.weekly_dishwasher
+        - sensor.monthly_dishwasher
 
-  - type: custom:mini-graph-card
-    entities: 
-      - sensor.dishwasher_power
-    name: Dishwasher
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 24
-    icon: mdi:dishwasher
-    show:
-      icon: true
-      extrema: true
-      icon_adaptive_color: true
-    color_thresholds:
-        # High
-      - value: 75
-        color: "#e74c3c"
-        # In Use
-      - value: 45
-        color: "#ffa500"
-        # Stand By
-      - value: 5
-        color: "#3498db"
-        # Off
-      - value: -1
-        color: "#1db954"
+      - type: custom:mini-graph-card
+        entities: 
+          - sensor.dishwasher_power
+        name: Dishwasher
+        height: 74
+        line_width: 2
+        font_size: 65
+        hours_to_show: 24
+        icon: mdi:dishwasher
+        show:
+          icon: true
+          extrema: true
+          icon_adaptive_color: true
+        color_thresholds:
+            # High
+          - value: 75
+            color: "#e74c3c"
+            # In Use
+          - value: 45
+            color: "#ffa500"
+            # Stand By
+          - value: 5
+            color: "#3498db"
+            # Off
+          - value: -1
+            color: "#1db954"
 

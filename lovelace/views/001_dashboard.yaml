@@ -81,8 +81,6 @@ cards:
     show_header_toggle: false
     entities:
       - sun.sun
-      - sensor.light_scene
-      - input_select.light_scene
 
 
   #################################################################
@@ -97,12 +95,14 @@ cards:
         show_header_toggle: false
         entities:
           - type: 'custom:text-divider-row'
-            text: Family
+            text: House
           - sensor.family_family_state
           - sensor.family_family_state_raw
           - sensor.house_scene
+          - sensor.light_scene
           - type: section
           - input_select.family_family_act_bedtime
+          - input_select.light_scene
           
       - type: horizontal-stack
         cards:
@@ -113,8 +113,6 @@ cards:
               - type: section
               - sensor.family_stuart_state_human
               - sensor.family_stuart_state
-              - entity: sensor.family_stuart_loc_room
-                name: Room
               - type: section
               - input_select.stuart
               - type: section
@@ -128,8 +126,6 @@ cards:
               - type: section
               - sensor.family_kareen_state_human
               - sensor.family_kareen_state
-              - entity: sensor.family_kareen_loc_room
-                name: Room
               - type: section
               - input_select.kareen
               - type: section
