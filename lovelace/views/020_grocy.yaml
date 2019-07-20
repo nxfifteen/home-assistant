@@ -22,3 +22,12 @@ cards:
     - sensor.grocy_chore_cut_grass_next
     - type: section
     - script.grocy_url_chore_grass_done
+
+  - type: entities
+    title: Changed the Bed
+    show_header_toggle: false
+    entities:
+    - sensor.grocy_chore_change_the_bed
+    - sensor.grocy_chore_change_the_bed_next
+    - type: section
+    - script.grocy_url_change_the_bed_done

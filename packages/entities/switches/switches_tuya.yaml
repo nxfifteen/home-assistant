@@ -1,0 +1,6 @@
+---
+tuya:
+  username: tuya_username
+  password: tuya_password
+  country_code: tuya_countryCode
+  platform: smart_life

@@ -18,6 +18,15 @@ sensor:
     - last_done_by
     - next_estimated_execution_time
 
+- platform: command_line
+  command: !secret grocy_url_chore_3
+  name: grocy_chore_change_the_bed
+  value_template: '{{ value_json.last_tracked }}'
+  json_attributes:
+    - tracked_count
+    - last_done_by
+    - next_estimated_execution_time
+
 - platform: template
   sensors:
     grocy_chore_litter_changed_count:
@@ -39,6 +48,16 @@ sensor:
     grocy_chore_cut_grass_next:
       friendly_name: grocy_chore_cut_grass_next
       value_template: '{{ states.sensor.grocy_chore_cut_grass.attributes["next_estimated_execution_time"] }}'
+      
+    grocy_chore_change_the_bed_count:
+      friendly_name: grocy_chore_cut_grass_count
+      value_template: '{{ states.sensor.grocy_chore_change_the_bed.attributes["tracked_count"] }}'
+    grocy_chore_change_the_bed_by:
+      friendly_name: grocy_chore_cut_grass_by
+      value_template: '{{ states.sensor.grocy_chore_change_the_bed.attributes["last_done_by"]["first_name"] }}'
+    grocy_chore_change_the_bed_next:
+      friendly_name: grocy_chore_cut_grass_next
+      value_template: '{{ states.sensor.grocy_chore_change_the_bed.attributes["next_estimated_execution_time"] }}'
 
 binary_sensor:
   - platform: template
@@ -49,6 +68,9 @@ binary_sensor:
 
 shell_command:
   grocy_consume_item: "curl -X POST {{grocy_url}}/api/stock/products/{{product_id}}/consume -H 'Accept: application/json' -H 'Content-Type: application/json' -H 'GROCY-API-KEY: {{grocy_api_key}}' -H 'cache-control: no-cache' -d '{ \"amount\": {{amount}},  \"transaction_type\": \"consume\",  \"spoiled\": false }'"
+  grocy_url_chore_1_done: !secret grocy_url_chore_1_done
+  grocy_url_chore_2_done: !secret grocy_url_chore_2_done
+  grocy_url_chore_3_done: !secret grocy_url_chore_3_done
 
 homeassistant:
   customize:
@@ -90,4 +112,24 @@ homeassistant:
       
     sensor.grocy_chore_cut_grass_next:
       friendly_name: Next Grass Cut
+      icon: mdi:calendar-clock
+      
+    script.grocy_url_change_the_bed_done:
+      friendly_name: Changed the Bed
+      icon: mdi:bed-empty
+    
+    sensor.grocy_chore_change_the_bed:
+      friendly_name: Last Changed the Bed
+      icon: mdi:bed-empty
+      
+    sensor.grocy_chore_change_the_bed_count:
+      friendly_name: Changed the Bed
+      icon: mdi:calendar-check
+      
+    sensor.grocy_chore_change_the_bed_by:
+      friendly_name: Changed the Bed By
+      icon: mdi:account
+      
+    sensor.grocy_chore_change_the_bed_next:
+      friendly_name: Next Bed Change
       icon: mdi:calendar-clock

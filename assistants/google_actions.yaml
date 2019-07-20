@@ -49,11 +49,9 @@ google_actions:
       - switch.room_occupancy_hallway
       - switch.room_occupancy_landing
       - switch.room_occupancy_kitchen
-      - switch.pihole_temp_disable
       - switch.wake_on_lan
       - switch.remote_gf_livingroom_watch_tv
       - switch.remote_gf_livingroom_watch_fire_tv
-      - switch.pihole_enable
       - switch.gf_living_tv
   
   entity_config:
@@ -73,11 +71,6 @@ google_actions:
     sensor.ff_bedroom_sensor_temperature:
       name: Bedroom
       room: Bedroom
-    
-    switch.pi_hole_enable:
-      name: Pi Hole
-      aliases:
-        - pie hole
       
     script.my_computer:
       name: My Computer

@@ -49,11 +49,9 @@ alexa:
       - switch.room_occupancy_hallway
       - switch.room_occupancy_landing
       - switch.room_occupancy_kitchen
-      - switch.pihole_temp_disable
       - switch.wake_on_lan
       - switch.remote_gf_livingroom_watch_tv
       - switch.remote_gf_livingroom_watch_fire_tv
-      - switch.pihole_enable
       - switch.gf_living_tv
   
   entity_config:
@@ -77,11 +75,6 @@ alexa:
       name: Bedroom Temperature
       description: The Bedroom Temperature
       display_categories: TEMPERATURE_SENSOR 
-    
-    switch.pi_hole_enable:
-      name: Pi Hole
-      description: Enable Pi-Hole Ad Blocking
-      display_categories: SWITCH
       
     script.my_computer:
       name: My Computer
