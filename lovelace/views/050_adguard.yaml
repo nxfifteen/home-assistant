@@ -1,6 +1,6 @@
 ---
 id: adguard
-icon: mdi:nas
+icon: mdi:access-point-network-off
 title: AdGaurd
 cards:
   - !include ../cards/compact_custom_header_main.yaml
