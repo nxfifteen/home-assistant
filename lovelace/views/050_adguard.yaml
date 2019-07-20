@@ -5,6 +5,18 @@ title: AdGaurd
 cards:
   - !include ../cards/compact_custom_header_main.yaml
 
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - sensor.unifi_client_count
+    - sensor.unifi_client_count_lan
+    - sensor.unifi_client_count_guest
+    - sensor.unifi_client_count_iot
+    - type: section
+    - switch.unifi_wifi_lan
+    - switch.unifi_wifi_guest
+    - switch.unifi_wifi_iot
+
   - type: vertical-stack
     cards:
       - type: entities
