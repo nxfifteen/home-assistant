@@ -1,0 +1,24 @@
+---
+id: adguard
+icon: mdi:nas
+title: AdGaurd
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - sensor.adguard_average_processing_speed
+    - sensor.adguard_dns_queries
+    - sensor.adguard_dns_queries_blocked
+    - sensor.adguard_dns_queries_blocked_ratio
+    - switch.adguard_filtering
+    - switch.adguard_parental_control
+    - sensor.adguard_parental_control_blocked
+    - switch.adguard_protection
+    - switch.adguard_query_log
+    - sensor.adguard_rules_count
+    - switch.adguard_safe_browsing
+    - sensor.adguard_safe_browsing_blocked
+    - switch.adguard_safe_search
+    - sensor.searches_safe_search_enforced
