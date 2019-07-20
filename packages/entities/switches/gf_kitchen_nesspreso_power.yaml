@@ -8,7 +8,7 @@ sensor:
 switch:
 - platform: mqtt
   name: gf_kitchen_nesspreso
-  icon: mdi:run-fast
+  icon: mdi:coffee-outline
   state_topic: "zwave/14/37/1/0"
   command_topic: "zwave/14/37/1/0/set"
   payload_on: "true"

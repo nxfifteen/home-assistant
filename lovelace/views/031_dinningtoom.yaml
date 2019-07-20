@@ -39,19 +39,18 @@ cards:
       - type: 'custom:text-divider-row'
         text: Plugs
       - switch.gf_dinning_tv
-      - switch.gf_studio_camera
       - switch.gf_kitchen_nesspreso
       - sensor.gf_kitchen_nesspreso_power
 
   - type: custom:mini-graph-card
     entities: 
       - sensor.gf_kitchen_nesspreso_power
-    name: Treadmill
+    name: Nesspreso
     height: 74
     line_width: 2
     font_size: 65
     hours_to_show: 24
-    icon: mdi:power-socket-uk
+    icon: mdi:coffee-outline
     show:
       icon: true
       extrema: true
