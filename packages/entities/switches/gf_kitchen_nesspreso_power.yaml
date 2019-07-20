@@ -1,13 +1,13 @@
 ---
 sensor:
 - platform: mqtt
-  name: gf_studio_treadmill_power
+  name: gf_kitchen_nesspreso_power
   state_topic: "zwave/14/50/1/8"
   device_class: power
 
 switch:
 - platform: mqtt
-  name: gf_studio_treadmill
+  name: gf_kitchen_nesspreso
   icon: mdi:run-fast
   state_topic: "zwave/14/37/1/0"
   command_topic: "zwave/14/37/1/0/set"
@@ -19,11 +19,10 @@ switch:
   qos: 0
   retain: true
 
-
 homeassistant:
   customize:
-    switch.gf_studio_treadmill:
+    switch.gf_kitchen_nesspreso:
       friendly_name: Treadmill
-    sensor.gf_studio_treadmill_power:
+    sensor.gf_kitchen_nesspreso_power:
       friendly_name: Treadmill Watts
  

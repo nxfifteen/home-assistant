@@ -14,5 +14,5 @@ switchs_all_safe:
     - switch.ff_bedroom_fairylights
     - switch.room_occupancy_bedroom
     - switch.room_occupancy_landing
-    - switch.gf_studio_treadmill
+    - switch.gf_kitchen_nesspreso
     - switch.room_occupancy_studio
