@@ -27,6 +27,30 @@ sensor:
     - last_done_by
     - next_estimated_execution_time
 
+- platform: command_line
+  command: !secret grocy_url_stock_1
+  name: grocy_stock_washing_powder
+  value_template: '{{ value_json.stock_amount }}'
+  json_attributes:
+    - last_used
+    - last_purchased
+
+- platform: command_line
+  command: !secret grocy_url_stock_2
+  name: grocy_stock_washing_softner
+  value_template: '{{ value_json.stock_amount }}'
+  json_attributes:
+    - last_used
+    - last_purchased
+
+- platform: command_line
+  command: !secret grocy_url_stock_3
+  name: grocy_stock_dishwasher_tabs
+  value_template: '{{ value_json.stock_amount }}'
+  json_attributes:
+    - last_used
+    - last_purchased
+
 - platform: template
   sensors:
     grocy_chore_litter_changed_count:

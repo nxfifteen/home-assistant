@@ -99,6 +99,9 @@ cards:
         - type: section
         - sensor.weekly_washing_machine
         - sensor.monthly_washing_machine
+        - type: section
+        - sensor.grocy_stock_washing_powder
+        - sensor.grocy_stock_washing_softner
 
       - type: custom:mini-graph-card
         entities: 
@@ -142,6 +145,8 @@ cards:
         - type: section
         - sensor.weekly_dishwasher
         - sensor.monthly_dishwasher
+        - type: section
+        - sensor.grocy_stock_dishwasher_tabs
 
       - type: custom:mini-graph-card
         entities: 
