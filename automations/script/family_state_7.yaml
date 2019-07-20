@@ -32,3 +32,24 @@ family_state_7:
     - service: joaoapps_join.join_her_send_tasker
       data_template:
         command: "jarvis=:=sleeping"
+
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/Entry/led
+        payload: "off"
+        qos: 2
+        retain: true
+
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/Study/led
+        payload: "off"
+        qos: 2
+        retain: true
+
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/Dinning Room/led
+        payload: "off"
+        qos: 2
+        retain: true

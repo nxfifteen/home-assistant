@@ -10,7 +10,7 @@ binary_sensor:
 - platform: template
   sensors:
     motion_ff_landing:
-      friendly_name: "Motion Detected"
+      friendly_name: "Landing Motion"
       device_class: motion
       value_template: "{{ is_state('binary_sensor.ff_landing_sensor', 'on') }}"
       delay_off:

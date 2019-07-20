@@ -1,0 +1,27 @@
+---
+alias: Restart Livingroom IP Camera - By Socket
+
+trigger:
+- platform: state
+  entity_id: switch.gf_living_camera
+  from:  'on'
+  to:  'off'
+  for:
+    minutes: 5
+  
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.gf_living_camera
+      
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Livingroom Camera'
+      value1: "The Livingroom Camera got turned off? I've turned it on again"
+      
+  - service: script.notify_engine
+    data_template:
+      channel: "hab"
+      value1: "The Livingroom Camera got turned off? I've turned it on again"
+      hastag: "#A.I. #CCTV #Failed #HouseKeeping #SudioCCTV"
