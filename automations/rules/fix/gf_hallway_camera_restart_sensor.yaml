@@ -23,10 +23,5 @@ action:
     data_template:
       who: "stuart"
       title: 'Hallway Camera'
+      notification_id: "hass-cam-hallway"
       value1: "The Hallway Camera crashed again! I've restarted it"
-      
-  - service: script.notify_engine
-    data_template:
-      channel: "hab"
-      value1: "The Hallway Camera crashed again! I've restarted it"
-      hastag: "#A.I. #CCTV #Failed #HouseKeeping #SudioCCTV"

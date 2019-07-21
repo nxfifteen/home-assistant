@@ -11,17 +11,12 @@ alarm_goodmorning:
         value1: "Time to start getting up"
         hastag: "#Alarm #GoodMorning"
 
-    - service: script.notify_engine
-      data_template:
-        channel: "tweets"
-        value1: "It's the weekend, so I've let everyone sleep till 7am"
-        hashtag: '#Alarm #GoodMorning'
-
     - service: script.notify_join
       data_template:
         who: "stuart"
         title: 'Alarm Call'
-        value1: "It's the weekend, so I've let you sleep till 7am! Now you need to get up"
+        notification_id: "hass-wakeup"
+        value1: "It's time to getup! Now you need to get up"
 
     #- service: joaoapps_join.join_her_send_tasker
     #  data_template:

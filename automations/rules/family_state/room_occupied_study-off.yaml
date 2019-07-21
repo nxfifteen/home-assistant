@@ -12,4 +12,5 @@ action:
     data_template:
       who: "stuart"
       title: 'Study Empty'
+      notification_id: "hass-room-study"
       value1: 'The Study is now empty'

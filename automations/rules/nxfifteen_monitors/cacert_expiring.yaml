@@ -29,10 +29,5 @@ action:
     data_template:
       who: "stuart"
       title: 'Parking Spot Saved'
+      notification_id: "hass-sslwatch"
       value1: '{{ trigger.to_state.attributes.friendly_name }} is about to expire. Please investigate IMMEDIATELY.'
-      
-  - service: script.notify_engine
-    data_template:
-      channel: "nx"
-      value1: '{{ trigger.to_state.attributes.friendly_name }} is about to expire. Please investigate IMMEDIATELY.'
-      value2: '#CertCheck'

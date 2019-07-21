@@ -18,10 +18,5 @@ action:
     data_template:
       who: "stuart"
       title: 'Dinning Room Camera'
+      notification_id: "hass-cam-dinning"
       value1: "The Dinning Room Camera got turned off? I've turned it on again"
-      
-  - service: script.notify_engine
-    data_template:
-      channel: "hab"
-      value1: "The Dinning Room Camera got turned off? I've turned it on again"
-      hastag: "#A.I. #CCTV #Failed #HouseKeeping #SudioCCTV"

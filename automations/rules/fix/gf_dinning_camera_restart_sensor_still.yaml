@@ -23,10 +23,5 @@ action:
     data_template:
       who: "stuart"
       title: 'Dinning Room Camera'
+      notification_id: "hass-cam-dinning"
       value1: "The Dinning Room Camera is still offline! I'm struggling to fix it"
-      
-  - service: script.notify_engine
-    data_template:
-      channel: "hab"
-      value1: "The Dinning Room Camera still offline! I'm struggling to fix it"
-      hastag: "#A.I. #CCTV #Failed #HouseKeeping #SudioCCTV"

@@ -49,4 +49,5 @@ action:
     data_template:
       who: "stuart"
       title: 'Guest Mode On'
+      notification_id: "hass-appliance-washing"
       value1: 'The washing machine has finished and is ready to be emptied'
