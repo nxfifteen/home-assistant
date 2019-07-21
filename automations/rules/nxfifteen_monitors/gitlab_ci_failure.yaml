@@ -35,7 +35,7 @@ action:
   - service: script.notify_tts
     data_template:
       room: "study"
-      value1: "Git Lab continuous Integration has rejected your code."
+      value1: "Git Lab has rejected your code."
       hashtag: "#GitLab #CI #Failed"
 
   - delay: 00:00:01
