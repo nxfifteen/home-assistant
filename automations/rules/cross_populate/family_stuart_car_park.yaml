@@ -25,9 +25,3 @@ action:
       title: 'Parking Spot Saved'
       value1: 'Your cars location has been updated.'
       
-  - service: script.notify_engine
-    data_template:
-      channel: "hab"
-      value1: 'Your cars location has been updated.'
-      value2: '#AI #Debug'
-      
