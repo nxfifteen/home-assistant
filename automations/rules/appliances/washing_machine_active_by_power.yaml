@@ -41,4 +41,5 @@ action:
     data_template:
       who: "stuart"
       title: 'Appliances'
+      notification_id: "hass-appliance-washing"
       value1: 'The washing machine is on'

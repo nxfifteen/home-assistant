@@ -34,4 +34,5 @@ action:
     data_template:
       who: "stuart"
       title: 'Appliances'
+      notification_id: "hass-appliance-dishwasher"
       value1: 'The dish washer is on'

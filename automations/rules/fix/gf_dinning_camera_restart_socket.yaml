@@ -1,0 +1,22 @@
+---
+alias: Restart Dinning Room IP Camera - By Socket
+
+trigger:
+- platform: state
+  entity_id: switch.gf_dinning_room_camera
+  from:  'on'
+  to:  'off'
+  for:
+    minutes: 5
+  
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.gf_dinning_room_camera
+      
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Dinning Room Camera'
+      notification_id: "hass-cam-dinning"
+      value1: "The Dinning Room Camera got turned off? I've turned it on again"

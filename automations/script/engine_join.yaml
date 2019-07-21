@@ -5,6 +5,11 @@
     # service: script.notify_join
     # data_template:
     #   title: 'Ios Title'
+    #   notification_id: 'hass-notification'
+    #   sound: !secret http_sound
+    #   icon: !secret http_icon
+    #   smallicon: !secret http_smallicon
+    #   image: !secret http_image
     #   value1: 'Startup: Home Assistant is Up and Running!'
     #   value2: "{{ trigger.to_state.state }}"
     #   value3:
@@ -22,9 +27,38 @@ notify_join:
     - service_template: >
           {% if who == 'stuart' %}
             notify.join_his_phone
+          {% elif who == 'kareen' %}
+            notify.join_her_phone
           {% else %}
             notify.join_his_phone
           {% endif %}
       data_template:
         title: "{{ title }}"
         message: "{{ value1 }} {{ value2 }} {{ value3 }}"
+        notification_id: "{{ notification_id }}"
+        vibration: "0,65,706,86,657,95,668,100"
+        sound:  >
+          {%- if sound is defined -%}
+            {{ image }}
+          {%- else -%}
+            !secret http_sound
+          {%- endif -%}
+        icon:  >
+          {%- if icon is defined -%}
+            {{ image }}
+          {%- else -%}
+            !secret http_icon
+          {%- endif -%}
+        smallicon:  >
+          {%- if smallicon is defined -%}
+            {{ image }}
+          {%- else -%}
+            !secret http_smallicon
+          {%- endif -%}
+        image: >
+          {%- if image is defined -%}
+            {{ image }}
+          {%- else -%}
+            !secret http_image
+          {%- endif -%}
+        url: !secret http_base_url

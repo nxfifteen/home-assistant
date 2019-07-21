@@ -1,0 +1,27 @@
+---
+alias: Restart Dinning Room IP Camera - By Sensor
+
+trigger:
+- platform: state
+  entity_id: binary_sensor.gf_dinning_room_camera
+  to:  'off'
+  for:
+    seconds: 30
+  
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.gf_dinning_room_camera
+      
+  - delay: 00:00:30
+      
+  - service: switch.turn_on
+    data:
+      entity_id: switch.gf_dinning_room_camera
+      
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Dinning Room Camera'
+      notification_id: "hass-cam-dinning"
+      value1: "The Dinning Room Camera crashed again! I've restarted it"

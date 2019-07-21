@@ -57,8 +57,10 @@ action:
   - service: script.notify_join
     data_template:
       who: "stuart"
-      title: 'Guest Mode Off'
-      value1: 'Guest Mode just turned off'
+      title: 'Guest Mode - Off'
+      notification_id: "hass-guest-off"
+      value1: 'All your guest have left.'
+      value2: "I've turned off guest mode"
 
   - service: input_boolean.turn_off
     data:
