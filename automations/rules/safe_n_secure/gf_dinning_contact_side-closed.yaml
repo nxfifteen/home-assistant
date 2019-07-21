@@ -1,0 +1,15 @@
+---
+alias: Contact Closed (Side Door)
+
+trigger:
+  - entity_id: binary_sensor.gf_dinning_contact_side
+    platform: state
+    to:  'off'
+
+action:
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Contact Closed (Side Door)'
+      notification_id: "hass-contact-side"
+      value1: 'The side door is closed'
