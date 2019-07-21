@@ -2,8 +2,8 @@
 binary_sensor:
   name: room_occupancy_kitchen
   platform: 'bayesian'
-  prior: 0.25
-  probability_threshold: 0.95
+  prior: 0.25 # 0.12 -> 100 / 7 rooms
+  probability_threshold: 0.90
   observations:
     # we are in the study -> very likely at least one household member is at home, and we're not asleep
     - platform: 'numeric_state'
