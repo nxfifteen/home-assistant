@@ -27,7 +27,7 @@ notify_join:
     - service_template: >
           {% if who == 'stuart' %}
             notify.join_his_phone
-          {% elseif who == 'kareen' %}
+          {% else if who == 'kareen' %}
             notify.join_her_phone
           {% else %}
             notify.join_his_phone
