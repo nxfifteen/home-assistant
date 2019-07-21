@@ -62,4 +62,3 @@ notify_join:
             {%- else -%}
               !secret http_image
             {%- endif -%}
-          url: !secret http_base_url
