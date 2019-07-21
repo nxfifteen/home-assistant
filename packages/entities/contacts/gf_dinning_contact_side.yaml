@@ -13,3 +13,8 @@ sensor:
   state_topic: "zwave/18/128/1/0"
   unit_of_measurement: "%"
   device_class: battery
+
+homeassistant:
+  customize:
+    binary_sensor.gf_dinning_contact_side:
+      friendly_name: Side Door
