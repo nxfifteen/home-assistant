@@ -13,7 +13,7 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.gf_living_celing
-      brightness: 150
+      brightness: 75
       rgb_color: [255, 206, 121]
       transition: 3
 
@@ -26,9 +26,12 @@ action:
     data:
       entity_id: switch.gf_living_tv
 
-  - service: light.turn_off
+  - service: light.turn_on
     data:
       entity_id: light.gf_studio_celing
+      brightness: 50
+      rgb_color: [255, 206, 121]
+      transition: 3
 
   # Setup the kitchen
   - service: light.turn_on
