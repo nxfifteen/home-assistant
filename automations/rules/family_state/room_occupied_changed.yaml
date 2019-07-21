@@ -16,4 +16,4 @@ action:
     data_template:
       who: "stuart"
       title: 'Bayesian Room Dection'
-      value1: '{{ trigger.to_state.attributes.friendly_name }} is now {{ trigger.to_state.state }} ({{ trigger.to_state.state }})'
+      value1: '{{ trigger.to_state.attributes.friendly_name }} is now {{ trigger.to_state.state }} ({{ trigger.to_state.attributes.probability | multiply(100) }}%)'
