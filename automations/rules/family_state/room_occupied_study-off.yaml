@@ -1,0 +1,15 @@
+---
+alias: Room Not Occupied (Study)
+
+trigger:
+  - entity_id: binary_sensor.room_occupancy_study
+    platform: state
+    from:  'on'
+    to:  'off'
+
+action:
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Study Empty'
+      value1: 'The Study is now empty'
