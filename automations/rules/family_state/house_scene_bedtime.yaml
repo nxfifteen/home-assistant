@@ -26,10 +26,6 @@ action:
     data:
       entity_id: switch.gf_living_tv
 
-  - service: switch.turn_off
-    data:
-      entity_id: switch.gf_kitchen_nesspreso
-
   - service: light.turn_off
     data:
       entity_id: light.gf_studio_celing
