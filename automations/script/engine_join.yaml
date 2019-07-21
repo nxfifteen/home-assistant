@@ -39,19 +39,19 @@ notify_join:
         vibration: "0,65,706,86,657,95,668,100"
         sound:  >
           {%- if sound is defined -%}
-            {{ image }}
+            {{ sound }}
           {%- else -%}
             !secret http_sound
           {%- endif -%}
         icon:  >
           {%- if icon is defined -%}
-            {{ image }}
+            {{ icon }}
           {%- else -%}
             !secret http_icon
           {%- endif -%}
         smallicon:  >
           {%- if smallicon is defined -%}
-            {{ image }}
+            {{ smallicon }}
           {%- else -%}
             !secret http_smallicon
           {%- endif -%}
