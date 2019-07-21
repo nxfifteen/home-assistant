@@ -23,7 +23,6 @@ notify_join:
         - condition: state
           entity_id: input_boolean.text_notifications
           state: 'on'
-
     - service_template: >
           {% if who == 'stuart' %}
             notify.join_his_phone
@@ -62,4 +61,3 @@ notify_join:
             {%- else -%}
               !secret http_image
             {%- endif -%}
-          url: !secret http_base_url

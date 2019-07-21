@@ -59,6 +59,13 @@ cards:
     - binary_sensor.gf_dinning_contact_side
     - binary_sensor.gf_hallway_contact_sensor
 
+  - type: entities
+    title: Room Occupancy
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.room_occupancy_study
+        name: Study
+
   #################################################################
   #                                                               #
   #                  Security - Smoke Alarm Card                  #

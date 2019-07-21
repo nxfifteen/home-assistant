@@ -41,9 +41,5 @@ homeassistant:
   customize:
     binary_sensor.room_occupancy_study:
       friendly_name: Study Occupancy
-      icon_template: >-
-        {% if is_state("binary_sensor.room_occupancy_study", "on") %}
-          mdi:account-search-outline
-        {% else %}
-          mdi:account-remove-outline
-        {% endif %}
+      icon_template: mdi:account-search-outline
+      device_class: motion

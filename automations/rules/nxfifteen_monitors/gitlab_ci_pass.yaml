@@ -35,7 +35,7 @@ action:
   - service: script.notify_tts
     data_template:
       room: "study"
-      value1: "According to Git Lab's continuous Integration your code is good."
+      value1: "Git Lab has accepted your code."
       hashtag: "#GitLab #CI"
 
   - delay: 00:00:01

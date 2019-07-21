@@ -1,0 +1,15 @@
+---
+alias: Contact Closed - Front Door
+
+trigger:
+  - entity_id: binary_sensor.gf_hallway_contact_sensor
+    platform: state
+    to:  'off'
+
+action:
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Contact Closed (Front Door)'
+      notification_id: "hass-contact-front"
+      value1: 'The front door is closed'
