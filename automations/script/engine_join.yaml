@@ -35,30 +35,31 @@ notify_join:
       data_template:
         title: "{{ title }}"
         message: "{{ value1 }} {{ value2 }} {{ value3 }}"
-        notification_id: "{{ notification_id }}"
-        vibration: "0,65,706,86,657,95,668,100"
-        sound:  >
-          {%- if sound is defined -%}
-            {{ sound }}
-          {%- else -%}
-            !secret http_sound
-          {%- endif -%}
-        icon:  >
-          {%- if icon is defined -%}
-            {{ icon }}
-          {%- else -%}
-            !secret http_icon
-          {%- endif -%}
-        smallicon:  >
-          {%- if smallicon is defined -%}
-            {{ smallicon }}
-          {%- else -%}
-            !secret http_smallicon
-          {%- endif -%}
-        image: >
-          {%- if image is defined -%}
-            {{ image }}
-          {%- else -%}
-            !secret http_image
-          {%- endif -%}
-        url: !secret http_base_url
+        data:
+          notification_id: "{{ notification_id }}"
+          vibration: "0,65,706,86,657,95,668,100"
+          sound:  >-
+            {%- if sound is defined -%}
+              {{ sound }}
+            {%- else -%}
+              !secret http_sound
+            {%- endif -%}
+          icon:  >-
+            {%- if icon is defined -%}
+              {{ icon }}
+            {%- else -%}
+              !secret http_icon
+            {%- endif -%}
+          smallicon:  >-
+            {%- if smallicon is defined -%}
+              {{ smallicon }}
+            {%- else -%}
+              !secret http_smallicon
+            {%- endif -%}
+          image: >-
+            {%- if image is defined -%}
+              {{ image }}
+            {%- else -%}
+              !secret http_image
+            {%- endif -%}
+          url: !secret http_base_url
