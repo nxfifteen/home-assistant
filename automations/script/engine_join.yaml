@@ -4,6 +4,7 @@
   # action:
     # service: script.notify_join
     # data_template:
+    #   notification_id: 'hass-notification'
     #   title: 'Ios Title'
     #   value1: 'Startup: Home Assistant is Up and Running!'
     #   value2: "{{ trigger.to_state.state }}"
@@ -22,9 +23,18 @@ notify_join:
     - service_template: >
           {% if who == 'stuart' %}
             notify.join_his_phone
+          {% elseif who == 'kareen' %}
+            notify.join_her_phone
           {% else %}
             notify.join_his_phone
           {% endif %}
       data_template:
         title: "{{ title }}"
         message: "{{ value1 }} {{ value2 }} {{ value3 }}"
+        notification_id: "{{ notification_id }}"
+        vibration: "0,65,706,86,657,95,668,100"
+        sound: !secret http_sound
+        icon: !secret http_icon
+        smallicon: !secret http_smallicon
+        image: !secret http_image
+        url: !secret http_base_url
