@@ -11,6 +11,8 @@ cards:
       - binary_sensor.ff_study_sensor_sensor
       - switch.room_occupancy_study
       - sensor.room_occupancy_study_reason
+      - type: section
+      - binary_sensor.room_occupancy_study
       #- type: section
       #- binary_sensor.ff_landing_sensor
       #- switch.room_occupancy_landing
