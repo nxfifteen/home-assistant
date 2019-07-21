@@ -19,4 +19,7 @@ action:
       who: "stuart"
       title: 'Studio Camera'
       notification_id: "hass-cam-studio"
+      icon: !secret http_icon_cctv
+      smallicon: !secret http_smallicon_cctv
+      image: !secret http_image_cctv
       value1: "The Studio Camera got turned off? I've turned it on again"
