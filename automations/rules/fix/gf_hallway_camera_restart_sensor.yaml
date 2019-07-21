@@ -24,4 +24,7 @@ action:
       who: "stuart"
       title: 'Hallway Camera'
       notification_id: "hass-cam-hallway"
+      icon: !secret http_icon_cctv
+      smallicon: !secret http_smallicon_cctv
+      image: !secret http_image_cctv
       value1: "The Hallway Camera crashed again! I've restarted it"
