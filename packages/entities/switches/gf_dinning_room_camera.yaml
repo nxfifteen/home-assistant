@@ -15,5 +15,5 @@ switch:
 homeassistant:
   customize:
     switch.gf_dinning_room_camera:
-      friendly_name: Studio IP Camera
+      friendly_name: Dinning Room Camera
       icon: mdi:camera-wireless

@@ -14,3 +14,11 @@ homeassistant:
     switch.gf_hallway_camera:
       friendly_name: Hallway IP Camera
       icon: mdi:camera-wireless
+      
+    switch.gf_studio_camera:
+      friendly_name: Studio IP Camera
+      icon: mdi:camera-wireless
+      
+    switch.gf_dinning_tv:
+      friendly_name: TV
+      icon: mdi:television-classic

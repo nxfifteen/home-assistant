@@ -1,0 +1,27 @@
+---
+binary_sensor:
+  name: room_occupancy_study
+  platform: 'bayesian'
+  prior: 0.25
+  probability_threshold: 0.95
+  observations:
+    - platform: 'state'
+      entity_id: 'sensor.media_ff_study_alexa'
+      prob_given_true: 0.5
+      prob_given_false: 0.2
+      to_state: 'playing'
+    - platform: 'state'
+      entity_id: 'binary_sensor.motion_ff_study'
+      prob_given_true: 0.8
+      prob_given_false: 0.2
+      to_state: 'on'
+    - platform: 'state'
+      entity_id: 'switch.ff_study_monitors'
+      prob_given_true: 0.4
+      prob_given_false: 0.2
+      to_state: 'on'
+    - platform: 'numeric_state'
+      entity_id: 'sensor.ff_study_monitors_power'
+      prob_given_true: 0.6
+      prob_given_false: 0.2
+      above: 40
