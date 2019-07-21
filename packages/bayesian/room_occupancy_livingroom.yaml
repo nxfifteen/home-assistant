@@ -1,6 +1,6 @@
 ---
 binary_sensor:
-  name: room_occupancy_study
+  name: room_occupancy_livingroom
   platform: 'bayesian'
   prior: 0.25
   probability_threshold: 0.95
@@ -13,33 +13,33 @@ binary_sensor:
       below: 9
       above: 4
     # we are in the study -> very likely motion is detected
-    - entity_id: binary_sensor.motion_ff_study
+    - entity_id: binary_sensor.motion_gf_living_camera
       platform: state
       to_state: 'on'
       prob_given_true: 0.9  # 90% chance that if we are in the study if motion is detected
       prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
-    # we are in the study -> likely if the media is playing
-    - platform: 'state'
-      entity_id: 'sensor.media_ff_study_alexa'
-      prob_given_true: 0.7  # 70% chance that if we are in the study if media is playing
-      prob_given_false: 0.5 # 50% chance that if we are in the study if media is not playing
-      to_state: 'playing'
-    # we are in the study -> likely if the monitors are on
-    - platform: 'state'
-      entity_id: 'switch.ff_study_monitors'
-      prob_given_true: 0.7  # 70% chance that if we are in the study if the monitors are on
-      prob_given_false: 0.1 # 10% chance that if we are in the study if the monitors are off
+    # we are in the study -> very likely motion is detected
+    - entity_id: binary_sensor.motion_gf_living
+      platform: state
       to_state: 'on'
+      prob_given_true: 0.9  # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
+    # we are in the study -> very likely motion is detected
+    - entity_id: binary_sensor.motion_gf_studio_camera
+      platform: state
+      to_state: 'on'
+      prob_given_true: 0.9  # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely the monitors are not in standby
     - platform: 'numeric_state'
-      entity_id: 'sensor.ff_study_monitors_power'
+      entity_id: 'sensor.gf_living_tv_power'
       prob_given_true: 0.85 # 85% chance that if we are in the study if the monitors are not in standby
       prob_given_false: 0.1 # 10% chance that if we are in the study if the monitors are in standby
-      above: 40
+      above: 10
 
 homeassistant:
   customize:
-    binary_sensor.room_occupancy_study:
-      friendly_name: Study Occupancy
+    binary_sensor.room_occupancy_livingroom:
+      friendly_name: Livingroom Occupancy
       icon_template: mdi:account-search-outline
       device_class: motion

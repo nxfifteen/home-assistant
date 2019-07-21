@@ -65,6 +65,16 @@ cards:
     entities:
       - entity: binary_sensor.room_occupancy_study
         name: Study
+      - entity: binary_sensor.room_occupancy_bedroom
+        name: Bedroom
+      - entity: binary_sensor.room_occupancy_dinning
+        name: Dinning Room
+      - entity: binary_sensor.room_occupancy_kitchen
+        name: Kitchen
+      - entity: binary_sensor.room_occupancy_livingroom
+        name: Livingroom
+      - entity: binary_sensor.room_occupancy_studio
+        name: Studio
 
   #################################################################
   #                                                               #
