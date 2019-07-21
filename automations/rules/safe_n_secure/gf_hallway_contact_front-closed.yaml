@@ -1,5 +1,5 @@
 ---
-alias: Contact Closed (Front Door)
+alias: Contact Closed - Front Door
 
 trigger:
   - entity_id: binary_sensor.gf_hallway_contact_sensor

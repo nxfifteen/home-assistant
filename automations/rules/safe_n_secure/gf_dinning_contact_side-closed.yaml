@@ -1,5 +1,5 @@
 ---
-alias: Contact Closed (Side Door)
+alias: Contact Closed - Side Door
 
 trigger:
   - entity_id: binary_sensor.gf_dinning_contact_side
