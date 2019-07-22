@@ -6,14 +6,14 @@
   {# Morning opening sentence #}
   {%- macro morning_opening_sentence() -%}
     {%- set closings = [
-      "Good morning",
-      "Morning",
-      "Hello", 
-      "Top o' the mornin’ to ya!",
-      "One, two, good morning to you!",
-      "Good morning, Sunshine!",
-      "Wakey, wakey, eggs and bakey!",
-      "Mornin', good-lookin'!"
+      "Good morning, ",
+      "Morning, ",
+      "Hello, ", 
+      "Top o' the mornin’ to ya!, ",
+      "One, two, good morning to you!, ",
+      "Good morning, Sunshine!, ",
+      "Wakey, wakey, eggs and bakey!, ",
+      "Mornin', good-lookin'!, "
     ] -%}
     {{closings|random}}
   {%- endmacro -%}
@@ -32,14 +32,14 @@
   {# Afternoon opening sentence #}
   {%- macro afternoon_opening_sentence() -%}
     {%- set closings = [
-      "Good afternoon",
-      "afternoon",
-      "Hello", 
-      "Top o' the mornin’ to ya!",
-      "One, two, good afternoon to you!",
-      "Good afternoon, Sunshine!",
-      "Wakey, wakey, eggs and bakey!",
-      "Mornin', good-lookin'!"
+      "Good afternoon, ",
+      "afternoon, ",
+      "Hello, ", 
+      "Top o' the mornin’ to ya!, ",
+      "One, two, good afternoon to you!, ",
+      "Good afternoon, Sunshine!, ",
+      "Wakey, wakey, eggs and bakey!, ",
+      "Mornin', good-lookin'!, "
     ] -%}
     {{closings|random}}
   {%- endmacro -%}
@@ -151,9 +151,15 @@
   {% endmacro %}
 
   {%- macro network_sentence() -%}
-    I'm protecting {{states.sensor.pi_hole_dns_unique_clients.state}} clients on the network from {{states.sensor.adguard_dns_queries_blocked.state}} ads.
+    I'm protecting {{states.sensor.unifi_client_count_lan.state}} clients on the network from {{states.sensor.adguard_dns_queries_blocked.state}} ads.
     That is {{states.sensor.adguard_dns_queries_blocked_ratio.state}}% of the internet traffic.
-    I've also protected you from {{states.sensor.adguard_safe_browsing_blocked.state}} suspect sites and enforced {{states.sensor.searches_safe_search_enforced.state}} safe searches.
+    {%- if states.sensor.adguard_safe_browsing_blocked.state > 0 and states.sensor.searches_safe_search_enforced.state > 0 -%}
+      I've also protected you from {{states.sensor.adguard_safe_browsing_blocked.state}} suspect sites and enforced {{states.sensor.searches_safe_search_enforced.state}} safe searches.
+    {%- elif states.sensor.adguard_safe_browsing_blocked.state > 0 -%}
+      I've also protected you from {{states.sensor.adguard_safe_browsing_blocked.state}} suspect sites.
+    {%- elif states.sensor.searches_safe_search_enforced.state > 0 -%}
+      I've also enforced {{states.sensor.searches_safe_search_enforced.state}} safe searches.
+    {%- endif -%}
   {% endmacro %}
 
   {%- macro servers_sentence() -%}
@@ -164,7 +170,7 @@
   {% endmacro %}
 
   {%- macro certs_sentence() -%}
-    {%- for entity_id in states.group.certs.attributes.entity_id if float(states(entity_id)) < 15 -%}
+    {%- for entity_id in states.group.certs.attributes.entity_id if float(states(entity_id)) < 20 -%}
       {% if loop.first %}It would appear certificates for {% endif %}{% if loop.last and loop.length > 1 %} and {% elif not loop.first and loop.length > 1 %}, {% endif %}{{ state_attr(entity_id, 'friendly_name') }}{% if loop.last %} {% if loop.length == 1 %}is{% else %}are{% endif %} going to expire soon.
       {% endif %}
     {%- endfor -%}
