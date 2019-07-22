@@ -1,0 +1,24 @@
+---
+alias: Lighting Night - Bedroom
+
+trigger:
+- entity_id: sensor.light_scene
+  platform: state
+  to: Night
+  
+condition:
+- condition: state
+  entity_id: sensor.house_scene
+  state: Empty
+- condition: state
+  entity_id: sensor.light_scene
+  state: Night
+  
+action:
+- service: scene.turn_on
+  data:
+    entity_id: scene.light_security_ff
+
+- service: scene.turn_on
+  data:
+    entity_id: scene.light_security_gf

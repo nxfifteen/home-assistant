@@ -11,8 +11,8 @@ trigger:
   
 condition:
 - condition: state
-  entity_id: sensor.house_scene
-  state: Occupied
+  entity_id: group.people_family
+  state: 'home'
 - condition: state
   entity_id: sensor.light_scene
   state: Night

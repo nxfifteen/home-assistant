@@ -10,6 +10,7 @@ trigger:
     - binary_sensor.room_occupancy_kitchen
     - binary_sensor.room_occupancy_livingroom
     - binary_sensor.room_occupancy_studio
+  to: 'on'
 
 action:
   - service: script.notify_join

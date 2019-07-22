@@ -2,7 +2,7 @@
 logger:
   default: error
   logs:
-    homeassistant.components.plex.sensor: debug
-    homeassistant.components.alexa.intent: debug
-    homeassistant.components.script: debug
-    custom_components.breaking_changes: critical
+    homeassistant.components.plex.sensor: info
+    homeassistant.components.alexa.intent: info
+    homeassistant.components.script: info
+    homeassistant.components.shell_command: debug
