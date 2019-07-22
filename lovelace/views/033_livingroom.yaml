@@ -165,4 +165,4 @@ cards:
     title: Batteries
     entities:
       - entity: sensor.gf_living_sensor_battery
-        name: Bedroom Sensor
+        name: Living Room Sensor
