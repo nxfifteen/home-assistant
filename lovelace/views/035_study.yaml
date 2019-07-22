@@ -190,7 +190,7 @@ cards:
     cards:
       - type: custom:mini-media-player
         name: Alexa
-        entity: media_player.study
+        entity: media_player.alexa_study
         artwork: cover
         source: icon
         hide:
@@ -200,29 +200,7 @@ cards:
           
       - type: custom:mini-media-player
         name: Alexa (Everywhere)
-        entity: media_player.everywhere
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-
-  - type: vertical-stack
-    cards:
-      - type: custom:mini-media-player
-        name: Plex - Video
-        entity: media_player.plex_taichi
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-          
-      - type: custom:mini-media-player
-        name: Plex - Audio
-        entity: media_player.plex_taichi_audio
+        entity: media_player.zone_everywhere
         artwork: cover
         source: icon
         hide:

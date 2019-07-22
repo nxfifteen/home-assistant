@@ -111,17 +111,7 @@ cards:
     cards:
       - type: custom:mini-media-player
         name: Alexa
-        entity: media_player.kitchen
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-     
-      - type: custom:mini-media-player
-        name: FireTV
-        entity: media_player.kitchen_fire_tv
+        entity: media_player.alexa_kitchen
         artwork: cover
         source: icon
         hide:
@@ -141,7 +131,7 @@ cards:
     
       - type: custom:mini-media-player
         name: Alexa (Everywhere)
-        entity: media_player.everywhere
+        entity: media_player.zone_everywhere
         artwork: cover
         source: icon
         hide:
@@ -151,7 +141,7 @@ cards:
     
       - type: custom:mini-media-player
         name: Alexa (Downstairs)
-        entity: media_player.downstairs
+        entity: media_player.zone_downstairs
         artwork: cover
         source: icon
         hide:

@@ -23,7 +23,6 @@ cards:
       - sensor.remote_gf_livingroom
       - switch.remote_gf_livingroom_watch_tv
       - switch.remote_gf_livingroom_watch_fire_tv
-      - media_player.livingroom_fire_tv
       - media_player.livingroom_fire_tv_stick
  
   - type: entities
@@ -142,7 +141,7 @@ cards:
     
       - type: custom:mini-media-player
         name: Alexa
-        entity: media_player.livingroom
+        entity: media_player.alexa_livingroom
         artwork: cover
         source: icon
         hide:
@@ -152,7 +151,7 @@ cards:
     
       - type: custom:mini-media-player
         name: Alexa
-        entity: media_player.hallway
+        entity: media_player.alexa_hallway
         artwork: cover
         source: icon
         hide:

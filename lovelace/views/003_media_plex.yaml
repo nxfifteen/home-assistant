@@ -1,0 +1,20 @@
+---
+id: media_plex
+icon: mdi:kodi
+title: Plex Media Devices
+cards:
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - sensor.media_ff_study_plex_video
+      - sensor.media_ff_study_plex_audio
+      - sensor.media_ff_bedroom_plex_audio
+
+  - type: media-control
+    entity: media_player.plex_taichi
+
+  - type: media-control
+    entity: media_player.plex_taichi_audio
+
+  - type: media-control
+    entity: media_player.plex_bedroom_audio

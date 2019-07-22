@@ -16,7 +16,7 @@ action:
   - service: notify.alexa_media
     data:
       target: 
-        - media_player.study
+        - media_player.alexa_study
       data:
         type: announce
       message: "A new device just joined the network."
