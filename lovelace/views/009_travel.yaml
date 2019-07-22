@@ -6,7 +6,7 @@ cards:
   - type: entities
     show_header_toggle: false
     entities:
-    - switch.tay_road_bridge
+    - sensor.tay_road_bridge
   
   - type: entities
     show_header_toggle: false
