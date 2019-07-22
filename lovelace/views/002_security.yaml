@@ -13,6 +13,35 @@ cards:
     - switch.gf_dinning_room_camera
 
   - type: entities
+    title: Bayesian Occupancy
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.room_occupancy_study
+        name: Study
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ binary_sensor.room_occupancy_studio.attributes.probability ]]"
+      - entity: binary_sensor.room_occupancy_bedroom
+        name: Bedroom
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ binary_sensor.room_occupancy_studio.attributes.probability ]]"
+      - entity: binary_sensor.room_occupancy_dinning
+        name: Dinning Room
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ binary_sensor.room_occupancy_studio.attributes.probability ]]"
+      - entity: binary_sensor.room_occupancy_kitchen
+        name: Kitchen
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ binary_sensor.room_occupancy_studio.attributes.probability ]]"
+      - entity: binary_sensor.room_occupancy_livingroom
+        name: Livingroom
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ binary_sensor.room_occupancy_studio.attributes.probability ]]"
+      - entity: binary_sensor.room_occupancy_studio
+        name: Studio
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ binary_sensor.room_occupancy_studio.attributes.probability ]]"
+
+  - type: entities
     title: Camera Online
     show_header_toggle: false
     entities:
@@ -58,23 +87,6 @@ cards:
     entities:
     - binary_sensor.gf_dinning_contact_side
     - binary_sensor.gf_hallway_contact_sensor
-
-  - type: entities
-    title: Room Occupancy
-    show_header_toggle: false
-    entities:
-      - entity: binary_sensor.room_occupancy_study
-        name: Study
-      - entity: binary_sensor.room_occupancy_bedroom
-        name: Bedroom
-      - entity: binary_sensor.room_occupancy_dinning
-        name: Dinning Room
-      - entity: binary_sensor.room_occupancy_kitchen
-        name: Kitchen
-      - entity: binary_sensor.room_occupancy_livingroom
-        name: Livingroom
-      - entity: binary_sensor.room_occupancy_studio
-        name: Studio
 
   #################################################################
   #                                                               #
