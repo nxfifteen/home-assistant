@@ -164,6 +164,6 @@ cards:
     title: Batteries
     entities:
       - entity: sensor.gf_dinning_sensor_battery
-        name: Bedroom Sensor
+        name: Dinning Room Sensor
       - entity: sensor.gf_dinning_contact_battery
         name: Side Door Contact

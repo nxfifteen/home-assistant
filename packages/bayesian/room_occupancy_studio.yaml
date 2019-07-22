@@ -2,7 +2,7 @@
 binary_sensor:
   name: room_occupancy_studio
   platform: 'bayesian'
-  prior: 0.25 # 0.12 -> 100 / 7 rooms
+  prior: 0.12 # 0.12 -> 100 / 7 rooms
   probability_threshold: 0.90
   observations:
     # we are in the study -> very likely at least one household member is at home, and we're not asleep
@@ -10,7 +10,6 @@ binary_sensor:
       entity_id: 'sensor.family_family_state_raw'
       prob_given_true: 0.99 # 99% chance that if we are in the study we are at home
       prob_given_false: 0.05 # 30% chance that if we are not in the study when we are at home
-      below: 9
       above: 4
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.room_occupancy_livingroom

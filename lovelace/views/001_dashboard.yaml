@@ -82,49 +82,46 @@ cards:
   #                     Home - Presence Card                      #
   #                                                               #
   ################################################################# 
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: House
+      - sensor.family_family_state
+      - sensor.family_family_state_raw
+      - sensor.house_scene
+      - sensor.light_scene
+      - type: section
+      - input_select.family_family_act_bedtime
+      - input_select.light_scene
 
   - type: vertical-stack
     cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - type: 'custom:text-divider-row'
-            text: House
-          - sensor.family_family_state
-          - sensor.family_family_state_raw
-          - sensor.house_scene
-          - sensor.light_scene
+          - person.stuart
           - type: section
-          - input_select.family_family_act_bedtime
-          - input_select.light_scene
+          - sensor.family_stuart_state_human
+          - sensor.family_stuart_state
+          - type: section
+          - input_select.stuart
+          - type: section
+          - entity: sensor.family_stuart_battery_phone
+            name: Battery
           
-      - type: horizontal-stack
-        cards:
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - person.stuart
-              - type: section
-              - sensor.family_stuart_state_human
-              - sensor.family_stuart_state
-              - type: section
-              - input_select.stuart
-              - type: section
-              - entity: sensor.family_stuart_battery_phone
-                name: Battery
-              
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - person.kareen
-              - type: section
-              - sensor.family_kareen_state_human
-              - sensor.family_kareen_state
-              - type: section
-              - input_select.kareen
-              - type: section
-              - entity: sensor.family_kareen_battery_phone
-                name: Battery
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - person.kareen
+          - type: section
+          - sensor.family_kareen_state_human
+          - sensor.family_kareen_state
+          - type: section
+          - input_select.kareen
+          - type: section
+          - entity: sensor.family_kareen_battery_phone
+            name: Battery
 
   #################################################################
   #                                                               #

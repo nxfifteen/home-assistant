@@ -1,0 +1,20 @@
+---
+alias: Security Lighting - OFF
+
+trigger:
+  platform: time
+  at: '23:30:00'
+  
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: sensor.house_scene
+      state: Empty
+  
+action:
+- delay: '00:{{ range(0,5) | random | int }}{{ range(0,9) | random | int }}:00'
+
+- service: scene.turn_on
+  data:
+    entity_id: scene.light_off

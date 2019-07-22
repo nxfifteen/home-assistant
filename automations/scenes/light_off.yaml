@@ -1,0 +1,5 @@
+---
+name: light off
+entities:
+  group.all_lights:
+    state: off

@@ -15,9 +15,7 @@ cards:
     show_header_toggle: off
     entities:
     - type: 'custom:text-divider-row'
-      text: Firmware
-    - type: section 
-      label: HOME ASSISTANT
+      text: HOME ASSISTANT
     - entity: input_boolean.ha_update_available
       name: HA Update Available
     - type: custom:bar-card
@@ -34,7 +32,6 @@ cards:
           title: Latest
         - entity: sensor.hacs
           title: HACS Updates
-    - type: custom:fold-entity-row
       
   - type: entities
     show_header_toggle: off
