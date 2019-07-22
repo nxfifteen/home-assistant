@@ -11,12 +11,23 @@ sensor:
     sensors:
       media_ff_study_plex_video:
         value_template: '{{ states.media_player.plex_taichi.state|default(off)|string }}'  
-        friendly_name: 'Study Plex (Video)'
         
       media_ff_study_plex_audio:
         value_template: '{{ states.media_player.plex_taichi_audio.state|default(off)|string }}'  
-        friendly_name: 'Study Plex (Audio)'
         
       media_ff_bedroom_plex_audio:
         value_template: '{{ states.media_player.plex_bedroom_audio.state|default(off)|string }}'  
+
+homeassistant:
+  customize:
+      media_ff_study_plex_video:
+        friendly_name: 'Study Plex (Video)'
+        icon: mdi:kodi
+        
+      media_ff_study_plex_audio:
+        friendly_name: 'Study Plex (Audio)'
+        icon: mdi:kodi
+        
+      media_ff_bedroom_plex_audio:
         friendly_name: 'Bedroom Plex (Audio)'
+        icon: mdi:kodi

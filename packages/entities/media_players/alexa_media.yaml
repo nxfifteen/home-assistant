@@ -12,8 +12,8 @@ alexa_media:
         - "This Device"
         - "Stuart's Fire"
         - "Stuart's Alexa Gear"
-        - "Stuart's Alexa apps"
-        - "Kareen's Alexa apps"
+        - "Stuart's Alexa Apps"
+        - "Kareen's Alexa Apps"
         - "Kareen's Fire"
 
 media_player:
@@ -39,37 +39,86 @@ sensor:
   - platform: template
     sensors:
       media_everywhere_alexa:
-        value_template: '{{ states.media_player.everywhere.state|default(off)|string }}'  
-        friendly_name: 'Alexa Everywhere'
+        value_template: '{{ states.media_player.zone_everywhere.state|default(off)|string }}'  
         
       media_downstairs_alexa:
-        value_template: '{{ states.media_player.downstairs.state|default(off)|string }}'  
-        friendly_name: 'Alexa Downstairs'
+        value_template: '{{ states.media_player.zone_downstairs.state|default(off)|string }}'
+        
+      media_upstairs_alexa:
+        value_template: '{{ states.media_player.zone_upstairs.state|default(off)|string }}' 
       
       # Study
       media_ff_study_alexa:
-        value_template: '{{ states.media_player.bedroom.state|default(off)|string }}'  
-        friendly_name: 'Study Alexa'
-        
-      # Bedroom
-      media_ff_bedroom_fire_tv:
-        value_template: '{{ states.media_player.bedroom_fire_tv.state|default(off)|string }}'  
-        friendly_name: 'Bedroom FireTV'
+        value_template: '{{ states.media_player.alexa_study.state|default(off)|string }}'  
+      
+      # Study
+      media_ff_bedroom_alexa:
+        value_template: '{{ states.media_player.alexa_bedroom.state|default(off)|string }}'
 
       # Kitchen
       media_gf_kitchen_alexa:
-        value_template: '{{ states.media_player.kitchen.state|default(off)|string }}'  
-        friendly_name: 'Kitchen Alexa'
-        
-      media_gf_kitchen_fire_tv:
-        value_template: '{{ states.media_player.kitchen_fire_tv.state|default(off)|string }}'  
-        friendly_name: 'Kitchen FireTV'
+        value_template: '{{ states.media_player.alexa_kitchen.state|default(off)|string }}'  
 
       # Livingroom
       media_gf_livingroom_alexa:
-        value_template: '{{ states.media_player.hallway.state|default(off)|string }}'  
-        friendly_name: 'Livingroom Alexa'
+        value_template: '{{ states.media_player.alexa_livingroom.state|default(off)|string }}'  
+
+      # Livingroom
+      media_gf_hallway_alexa:
+        value_template: '{{ states.media_player.alexa_hallway.state|default(off)|string }}'
+        
+      # Bedroom
+      media_ff_bedroom_fire_tv:
+        value_template: '{{ states.media_player.bedroom_fire_tv_stick.state|default(off)|string }}'  
+        
+      media_gf_kitchen_fire_tv:
+        value_template: '{{ states.media_player.kitchen_fire_tv_stick.state|default(off)|string }}'  
         
       media_gf_livingroom_fire_tv:
-        value_template: '{{ states.media_player.livingroom_fire_tv.state|default(off)|string }}'  
+        value_template: '{{ states.media_player.livingroom_fire_tv_stick.state|default(off)|string }}'  
+
+homeassistant:
+  customize:
+      media_everywhere_alexa:
+        friendly_name: 'Alexa Everywhere Group'
+        icon: mdi:speaker-multiple
+        
+      media_downstairs_alexa:
+        friendly_name: 'Alexa Downstairs Group'
+        icon: mdi:speaker-multiple
+        
+      media_upstairs_alexa:
+        friendly_name: 'Alexa Upstairs Group'
+        icon: mdi:speaker-multiple
+      
+      media_ff_study_alexa:
+        friendly_name: 'Study Alexa'
+        icon: mdi:speaker-wireless
+      
+      media_ff_bedroom_alexa:
+        friendly_name: 'Bedroom Alexa'
+        icon: mdi:speaker-wireless
+
+      media_gf_kitchen_alexa:
+        friendly_name: 'Kitchen Alexa'
+        icon: mdi:speaker-wireless
+
+      media_gf_livingroom_alexa:
+        friendly_name: 'Livingroom Alexa'
+        icon: mdi:speaker-wireless
+
+      media_gf_hallway_alexa:
+        friendly_name: 'Hallway Alexa'
+        icon: mdi:speaker-wireless
+        
+      media_ff_bedroom_fire_tv:
+        friendly_name: 'Bedroom FireTV'
+        icon: mdi:youtube-tv
+        
+      media_gf_kitchen_fire_tv:
+        friendly_name: 'Kitchen FireTV'
+        icon: mdi:youtube-tv
+        
+      media_gf_livingroom_fire_tv:
         friendly_name: 'Livingroom FireTV'
+        icon: mdi:youtube-tv

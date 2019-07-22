@@ -33,7 +33,7 @@ action:
   - service: notify.alexa_media
     data:
       target: 
-        - media_player.study
+        - media_player.alexa_study
       data:
         type: announce
       message: "There is a Home Assistant upgrade for Hass.io pending!"

@@ -22,21 +22,21 @@ notify_tts:
       data_template:
         target: >
             {% if room == 'living_room' %}
-              media_player.livingroom
+              media_player.alexa_livingroom
             {% elif room == 'bedroom' %}
-              media_player.bedroom
+              media_player.alexa_bedroom
             {% elif room == 'study' %}
-              media_player.study
+              media_player.alexa_study
             {% elif room == 'kitchen' %}
-              media_player.kitchen
+              media_player.alexa_kitchen
             {% elif room == 'everywhere' %}
-              media_player.everywhere_2
+              media_player.zone_everywhere
             {% elif room == 'downstairs' %}
-              media_player.downstairs_2
+              media_player.zone_downstairs
             {% elif room == 'upstairs' %}
-              media_player.upstairs
+              media_player.zone_upstairs
             {% else %}
-              media_player.everywhere
+              media_player.zone_everywhere
             {% endif %}
         data:
           type: announce

@@ -1,0 +1,54 @@
+---
+id: media_alexa
+icon: mdi:youtube-tv
+title: Alexa Media Devices
+cards:
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - sensor.media_everywhere_alexa
+      - sensor.media_downstairs_alexa
+      - sensor.media_upstairs_alexa
+      - type: section
+      - sensor.media_ff_study_alexa
+      - sensor.media_ff_bedroom_alexa
+      - sensor.media_gf_kitchen_alexa
+      - sensor.media_gf_livingroom_alexa
+      - sensor.media_gf_hallway_alexa
+      - type: section
+      - sensor.media_ff_bedroom_fire_tv
+      - sensor.media_gf_kitchen_fire_tv
+      - sensor.media_gf_livingroom_fire_tv
+
+  - type: media-control
+    entity: media_player.zone_upstairs
+
+  - type: media-control
+    entity: media_player.zone_downstairs
+
+  - type: media-control
+    entity: media_player.zone_everywhere
+
+  - type: media-control
+    entity: media_player.alexa_study
+
+  - type: media-control
+    entity: media_player.alexa_bedroom
+
+  - type: media-control
+    entity: media_player.alexa_kitchen
+
+  - type: media-control
+    entity: media_player.alexa_livingroom
+
+  - type: media-control
+    entity: media_player.alexa_hallway
+
+  - type: media-control
+    entity: media_player.bedroom_fire_tv_stick
+
+  - type: media-control
+    entity: media_player.kitchen_fire_tv_stick
+
+  - type: media-control
+    entity: media_player.livingroom_fire_tv_stick
