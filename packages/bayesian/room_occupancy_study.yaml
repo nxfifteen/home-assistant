@@ -35,6 +35,16 @@ binary_sensor:
       prob_given_true: 0.85 # 85% chance that if we are in the study if the monitors are not in standby
       prob_given_false: 0.1 # 10% chance that if we are in the study if the monitors are in standby
       above: 40
+    - platform: 'state'
+      entity_id: 'sensor.media_ff_study_plex_audio'
+      prob_given_true: 0.99  # 70% chance that if we are in the study if media is playing
+      prob_given_false: 0.70 # 50% chance that if we are in the study if media is not playing
+      to_state: 'playing'
+    - platform: 'state'
+      entity_id: 'sensor.media_ff_study_plex_alexa'
+      prob_given_true: 0.99  # 70% chance that if we are in the study if media is playing
+      prob_given_false: 0.70 # 50% chance that if we are in the study if media is not playing
+      to_state: 'playing'
 
 homeassistant:
   customize:

@@ -39,6 +39,11 @@ binary_sensor:
       prob_given_true: 1  # 70% chance that if we are in the study if media is playing
       prob_given_false: 0.80 # 50% chance that if we are in the study if media is not playing
       to_state: 'playing'
+    - platform: 'state'
+      entity_id: 'sensor.media_ff_bedroom_plex_audio'
+      prob_given_true: 0.99  # 70% chance that if we are in the study if media is playing
+      prob_given_false: 0.50 # 50% chance that if we are in the study if media is not playing
+      to_state: 'playing'
 
 homeassistant:
   customize:
