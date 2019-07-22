@@ -10,7 +10,7 @@ trigger:
 action:
   - service: light.turn_off
     data:
-      entity_id: light.light.ff_study_wall
+      entity_id: light.ff_study_wall
       
   - service: light.turn_off
     data:
