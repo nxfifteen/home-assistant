@@ -1,6 +1,5 @@
 media_player:
   - platform: plex
-    entity_namespace: 'plex'
     scan_interval: 5
     show_all_controls: false
     use_episode_art: true
@@ -18,16 +17,23 @@ sensor:
       media_ff_bedroom_plex_audio:
         value_template: '{{ states.media_player.plex_bedroom_audio.state|default(off)|string }}'  
 
+      media_ff_study_plex_alexa:
+        value_template: '{{ states.media_player.plex_study_alexa.state|default(off)|string }}'  
+
 homeassistant:
   customize:
-      media_ff_study_plex_video:
+      sensor.media_ff_study_plex_video:
         friendly_name: 'Study Plex (Video)'
         icon: mdi:kodi
         
-      media_ff_study_plex_audio:
+      sensor.media_ff_study_plex_audio:
         friendly_name: 'Study Plex (Audio)'
         icon: mdi:kodi
         
-      media_ff_bedroom_plex_audio:
+      sensor.media_ff_study_plex_alexa:
+        friendly_name: 'Study Plex (Alexa)'
+        icon: mdi:kodi
+        
+      sensor.media_ff_bedroom_plex_audio:
         friendly_name: 'Bedroom Plex (Audio)'
         icon: mdi:kodi
