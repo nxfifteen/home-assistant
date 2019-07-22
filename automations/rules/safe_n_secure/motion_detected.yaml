@@ -14,6 +14,16 @@ trigger:
     - binary_sensor.motion_gf_dinning
     - binary_sensor.motion_gf_living
   to: 'on'
+  
+condition:
+  condition: or
+  conditions:
+    - condition: time
+      before: '04:00:00'
+      after: '23:30:00'
+    - condition: state
+      entity_id: group.people_family
+      state: 'not_home'
     
 action:
   - service: script.notify_join
