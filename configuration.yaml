@@ -26,4 +26,12 @@ homeassistant:
 
 hacs:
   token: !secret giltab_token_hacs
-  
+
+# Example configuration.yaml entry
+discovery:
+  ignore:
+    - harmony
+    - philips_hue
+  enable:
+    - belkin_wemo
+    - plex_mediaserver
