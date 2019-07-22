@@ -1,5 +1,5 @@
 ---
-alias: Lighting Night - Bedroom
+alias: Security Lighting - ON
 
 trigger:
 - entity_id: sensor.light_scene
@@ -7,14 +7,20 @@ trigger:
   to: Night
   
 condition:
-- condition: state
-  entity_id: sensor.house_scene
-  state: Empty
-- condition: state
-  entity_id: sensor.light_scene
-  state: Night
+  condition: and
+  conditions:
+    - condition: time
+      before: '23:30:00'
+    - condition: state
+      entity_id: sensor.house_scene
+      state: Empty
+    - condition: state
+      entity_id: sensor.light_scene
+      state: Night
   
 action:
+- delay: '00:{{ range(0,2) | random | int }}{{ range(0,9) | random | int }}:00'
+
 - service: scene.turn_on
   data:
     entity_id: scene.light_security_ff
