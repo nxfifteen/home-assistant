@@ -1,0 +1,37 @@
+---
+# ## Dishwasher Alerts
+alias: Send alert when Dishwasher is finished
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.ff_bedroom_sensor_temperature
+    above: 22
+    for:
+      minutes: 1
+  - platform: time
+    at: '21:30:00'
+    
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      before: '23:00:00'
+      after: '21:00:00'
+    - condition: numeric_state
+      entity_id: sensor.ff_bedroom_sensor_temperature
+      above: 22
+    - condition: numeric_state
+      entity_id: sensor.family_family_state_raw
+      above: 3
+      below: 7
+
+action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.ff_bedroom_fan
+      
+    - service: script.notify_join
+      data_template:
+        who: "stuart"
+        title: 'Too Hot'
+        notification_id: "hass-parking-his"
+        value1: "I've turned on the bedroom fan"

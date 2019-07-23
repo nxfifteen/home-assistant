@@ -260,3 +260,13 @@ alexa:
       name: Parental Control
       description: Enable AdGuard Parental Controls
       display_categories: SWITCH
+
+    switch.ff_bedroom_fan:
+      name: Bedroom Fan
+      description: The Bedroom Fan
+      display_categories: SWITCH
+
+    switch.ff_study_fan:
+      name: Study Fan
+      description: The Study Fan
+      display_categories: SWITCH

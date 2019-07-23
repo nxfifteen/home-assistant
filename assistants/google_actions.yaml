@@ -204,3 +204,9 @@ google_actions:
     
     switch.adguard_parental_control:
       name: Parental Control
+
+    switch.ff_bedroom_fan:
+      name: Bedroom Fan
+
+    switch.ff_study_fan:
+      name: Study Fan
