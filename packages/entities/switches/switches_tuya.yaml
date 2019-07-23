@@ -19,6 +19,6 @@ homeassistant:
       friendly_name: Studio IP Camera
       icon: mdi:camera-wireless
       
-    switch.gf_dinning_tv:
-      friendly_name: TV
-      icon: mdi:television-classic
+    switch.ff_study_fan:
+      friendly_name: Study Fan
+      icon: mdi:fan

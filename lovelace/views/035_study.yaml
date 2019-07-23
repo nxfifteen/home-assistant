@@ -52,6 +52,7 @@ cards:
       - input_select.his_pc_options
       - switch.wake_on_lan
       - script.my_computer
+      - switch.ff_study_fan
       - type: section
       - switch.ff_study_monitors
       - switch.study_sterio

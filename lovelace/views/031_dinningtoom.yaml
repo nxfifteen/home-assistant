@@ -39,12 +39,11 @@ cards:
       - type: 'custom:text-divider-row'
         text: Plugs
       - switch.gf_dinning_tv
-      - switch.gf_kitchen_nesspreso
-      - sensor.gf_kitchen_nesspreso_power
+      - sensor.gf_dinning_tv_power
 
   - type: custom:mini-graph-card
     entities: 
-      - sensor.gf_kitchen_nesspreso_power
+      - sensor.gf_dinning_tv_power
     name: Nesspreso
     height: 74
     line_width: 2
