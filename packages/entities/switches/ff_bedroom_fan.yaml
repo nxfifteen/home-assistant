@@ -16,4 +16,5 @@ switch:
 homeassistant:
   customize:
     switch.ff_bedroom_fan:
-      friendly_name: ff_bedroom_fan
+      friendly_name: Bedroom Fan
+      icon: mdi:fan
