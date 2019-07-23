@@ -1,6 +1,6 @@
 ---
 # ## Fan Before Bed
-alias: Turn on Fan before bed
+alias: Turn on study fan when hot
 trigger:
   - platform: numeric_state
     entity_id: sensor.ff_study_sensor_temperature
