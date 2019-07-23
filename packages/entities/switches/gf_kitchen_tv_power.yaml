@@ -1,13 +1,13 @@
 ---
 sensor:
 - platform: mqtt
-  name: gf_kitchen_nesspreso_power
+  name: gf_dinning_tv_power
   state_topic: "zwave/14/50/1/8"
   device_class: power
 
 switch:
 - platform: mqtt
-  name: gf_kitchen_nesspreso
+  name: gf_dinning_tv
   icon: mdi:coffee-outline
   state_topic: "zwave/14/37/1/0"
   command_topic: "zwave/14/37/1/0/set"
@@ -21,8 +21,8 @@ switch:
 
 homeassistant:
   customize:
-    switch.gf_kitchen_nesspreso:
+    switch.gf_dinning_tv:
       friendly_name: Nesspreso Machine
-    sensor.gf_kitchen_nesspreso_power:
+    sensor.gf_dinning_tv_power:
       friendly_name: Nesspreso Watts
  

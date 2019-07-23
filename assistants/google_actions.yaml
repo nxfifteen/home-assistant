@@ -53,7 +53,6 @@ google_actions:
       - switch.remote_gf_livingroom_watch_tv
       - switch.remote_gf_livingroom_watch_fire_tv
       - switch.gf_living_tv
-      - switch.gf_kitchen_nesspreso
   
   entity_config:
 

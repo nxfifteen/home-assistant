@@ -30,6 +30,7 @@ cards:
         text: Plugs
       - switch.ff_bedroom_tv
       - switch.ff_bedroom_fairylights
+      - switch.ff_bedroom_fan
 
   - type: horizontal-stack
     cards:

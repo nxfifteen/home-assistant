@@ -1,7 +1,7 @@
 ---
 switch:
 - platform: mqtt
-  name: nf_spare_socket
+  name: ff_bedroom_fan
   icon: mdi:television-classic
   state_topic: "zwave/12/37/1/0"
   command_topic: "zwave/12/37/1/0/set"
@@ -15,5 +15,5 @@ switch:
 
 homeassistant:
   customize:
-    switch.nf_spare_socket:
-      friendly_name: nf_spare_socket
+    switch.ff_bedroom_fan:
+      friendly_name: ff_bedroom_fan
