@@ -15,7 +15,7 @@ binary_sensor:
     - platform: 'numeric_state'
       entity_id: 'sensor.family_family_state_raw'
       prob_given_true: 0.99 # 99% chance that if we are in the study we are at home
-      prob_given_false: 0.05 # 5% chance that if we are not in the study when we are at home
+      prob_given_false: 0.50 # 5% chance that if we are not in the study when we are at home
       above: 6
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_ff_bedroom
