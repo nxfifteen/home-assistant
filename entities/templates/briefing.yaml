@@ -151,7 +151,7 @@
   {% endmacro %}
 
   {%- macro network_sentence() -%}
-    I'm protecting {{states.sensor.unifi_client_count_lan.state}} clients on the network from {{states.sensor.adguard_dns_queries_blocked.state}} ads.
+    I'm protecting {{states.sensor.unifi_client_count.state}} clients on the network from {{states.sensor.adguard_dns_queries_blocked.state}} ads.
     That is {{states.sensor.adguard_dns_queries_blocked_ratio.state}}% of the internet traffic.
     {%- if states.sensor.adguard_safe_browsing_blocked.state > 0 and states.sensor.searches_safe_search_enforced.state > 0 -%}
       I've also protected you from {{states.sensor.adguard_safe_browsing_blocked.state}} suspect sites and enforced {{states.sensor.searches_safe_search_enforced.state}} safe searches.
