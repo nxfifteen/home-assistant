@@ -27,6 +27,10 @@ family_state_8:
     
     - service: switch.turn_off
       data:
+        entity_id: switch.ff_bedroom_fan
+    
+    - service: switch.turn_off
+      data:
         entity_id: switch.study_sterio
     
     - service: light.turn_off
