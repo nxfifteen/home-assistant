@@ -16,3 +16,11 @@ action:
     - service: automation.trigger
       data:
         entity_id: automation.lighting_off_ff_study
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ff_study_fan
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.study_sterio
