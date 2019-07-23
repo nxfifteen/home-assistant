@@ -45,10 +45,10 @@ cards:
     entity: media_player.alexa_hallway
 
   - type: media-control
-    entity: media_player.bedroom_fire_tv_stick
+    entity: media_player.bedroom_fire_tv_stick_2
 
   - type: media-control
-    entity: media_player.kitchen_fire_tv_stick
+    entity: media_player.kitchen_fire_tv_stick_2
 
   - type: media-control
-    entity: media_player.livingroom_fire_tv_stick
+    entity: media_player.livingroom_fire_tv_stick_2
