@@ -20,3 +20,7 @@ action:
     - service: automation.trigger
       data:
         entity_id: automation.lighting_sunset_study
+
+    - service: automation.trigger
+      data:
+        entity_id: automation.turn_on_study_fan_when_hot
