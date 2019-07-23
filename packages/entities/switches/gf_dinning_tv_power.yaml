@@ -22,7 +22,7 @@ switch:
 homeassistant:
   customize:
     switch.gf_dinning_tv:
-      friendly_name: Nesspreso Machine
+      friendly_name: TV
     sensor.gf_dinning_tv_power:
-      friendly_name: Nesspreso Watts
+      friendly_name: TV Watts
  
