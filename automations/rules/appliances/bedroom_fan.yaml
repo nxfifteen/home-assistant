@@ -1,6 +1,6 @@
 ---
-# ## Dishwasher Alerts
-alias: Send alert when Dishwasher is finished
+# ## Fan Before Bed
+alias: Turn on Fan before bed
 trigger:
   - platform: numeric_state
     entity_id: sensor.ff_bedroom_sensor_temperature
@@ -8,14 +8,14 @@ trigger:
     for:
       minutes: 1
   - platform: time
-    at: '21:30:00'
+    at: '21:00:00'
     
 condition:
   condition: and
   conditions:
     - condition: time
       before: '23:00:00'
-      after: '21:00:00'
+      after: '20:30:00'
     - condition: numeric_state
       entity_id: sensor.ff_bedroom_sensor_temperature
       above: 22
