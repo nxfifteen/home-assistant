@@ -10,7 +10,6 @@ cards:
       - sensor.media_ff_study_plex_audio
       - sensor.media_ff_study_plex_alexa
       - sensor.media_ff_bedroom_plex_audio
-      - sensor.media_ff_bedroom_plex_audio
 
   - type: media-control
     entity: media_player.plex_taichi

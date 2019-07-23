@@ -1,0 +1,22 @@
+---
+alias: The Study is Occupied
+trigger:
+  - platform: state
+    entity_id: binary_sensor.room_occupancy_study
+    to: 'on'
+    
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: binary_sensor.room_occupancy_study
+      state: 'on'
+
+action:
+    - service: automation.trigger
+      data:
+        entity_id: automation.lighting_night_study
+
+    - service: automation.trigger
+      data:
+        entity_id: automation.lighting_sunset_study

@@ -29,7 +29,7 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.gf_studio_celing
-      brightness: 50
+      brightness: 30
       rgb_color: [255, 206, 121]
       transition: 3
 

@@ -1,0 +1,36 @@
+---
+# ## Fan Before Bed
+alias: Turn on study fan when hot
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.ff_study_sensor_temperature
+    above: 21
+    for:
+      minutes: 10
+  - platform: time
+    at: '21:00:00'
+  - platform: state
+    entity_id: binary_sensor.room_occupancy_study
+    to: 'on'
+    
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: binary_sensor.room_occupancy_study
+      state: 'on'
+    - condition: numeric_state
+      entity_id: sensor.ff_study_sensor_temperature
+      above: 21
+
+action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.ff_study_fan
+      
+    - service: script.notify_join
+      data_template:
+        who: "stuart"
+        title: 'Too Hot'
+        notification_id: "hass-parking-his"
+        value1: "I've turned on the study fan"
