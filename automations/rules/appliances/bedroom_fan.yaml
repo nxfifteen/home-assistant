@@ -6,7 +6,7 @@ trigger:
     entity_id: sensor.ff_bedroom_sensor_temperature
     above: 22
     for:
-      minutes: 1
+      minutes: 5
   - platform: time
     at: '21:00:00'
     
