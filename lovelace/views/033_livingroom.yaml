@@ -23,7 +23,7 @@ cards:
       - sensor.remote_gf_livingroom
       - switch.remote_gf_livingroom_watch_tv
       - switch.remote_gf_livingroom_watch_fire_tv
-      - media_player.livingroom_fire_tv_stick
+      - media_player.livingroom_fire_tv_stick_2
  
   - type: entities
     show_header_toggle: false

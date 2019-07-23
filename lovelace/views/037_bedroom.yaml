@@ -75,7 +75,7 @@ cards:
           
       - type: custom:mini-media-player
         name: FireTV
-        entity: media_player.bedroom_fire_tv_stick
+        entity: media_player.bedroom_fire_tv_stick_2
         artwork: cover
         source: icon
         hide:
