@@ -2,10 +2,6 @@
 alias: Lighting Night - Study
 
 trigger:
-- entity_id: switch.room_occupancy_study
-  platform: state
-  to: 'on'
-
 - platform: state
   entity_id: binary_sensor.room_occupancy_study
   from: 'off'

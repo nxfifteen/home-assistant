@@ -7,7 +7,6 @@ trigger:
     - binary_sensor.room_occupancy_study
     - binary_sensor.room_occupancy_bedroom
     - binary_sensor.room_occupancy_dinning
-    - binary_sensor.room_occupancy_kitchen
     - binary_sensor.room_occupancy_livingroom
     - binary_sensor.room_occupancy_studio
   to: 'on'

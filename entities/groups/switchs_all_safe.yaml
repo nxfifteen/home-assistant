@@ -14,5 +14,4 @@ switchs_all_safe:
     - switch.room_occupancy_landing
     - switch.room_occupancy_livingroom
     - switch.room_occupancy_studio
-    - switch.room_occupancy_study
     - switch.study_sterio
