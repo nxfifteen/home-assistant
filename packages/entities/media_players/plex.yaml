@@ -9,16 +9,16 @@ sensor:
   - platform: template
     sensors:
       media_ff_study_plex_video:
-        value_template: '{{ states.media_player.plex_taichi.state|default(off)|string }}'  
+        value_template: "{% if states('media_player.plex_taichi') == 'unknown' %}off{% else %}{{ states('media_player.plex_taichi') }}{% endif %}"
         
       media_ff_study_plex_audio:
-        value_template: '{{ states.media_player.plex_taichi_audio.state|default(off)|string }}'  
+        value_template: "{% if states('media_player.plex_taichi_audio') == 'unknown' %}off{% else %}{{ states('media_player.plex_taichi_audio') }}{% endif %}"
         
       media_ff_bedroom_plex_audio:
-        value_template: '{{ states.media_player.plex_bedroom_audio.state|default(off)|string }}'  
+        value_template: "{% if states('media_player.plex_bedroom_audio') == 'unknown' %}off{% else %}{{ states('media_player.plex_bedroom_audio') }}{% endif %}"
 
       media_ff_study_plex_alexa:
-        value_template: '{{ states.media_player.plex_study_alexa.state|default(off)|string }}'  
+        value_template: "{% if states('media_player.plex_study_alexa') == 'unknown' %}off{% else %}{{ states('media_player.plex_study_alexa') }}{% endif %}"
 
 homeassistant:
   customize:
