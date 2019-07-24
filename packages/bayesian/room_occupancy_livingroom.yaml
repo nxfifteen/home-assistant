@@ -27,8 +27,8 @@ binary_sensor:
     - entity_id: binary_sensor.motion_gf_living
       platform: state
       to_state: 'on'
-      prob_given_true: 0.9  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
+      prob_given_true: 1 # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.80 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_gf_studio_camera
       platform: state

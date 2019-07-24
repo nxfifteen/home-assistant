@@ -21,8 +21,8 @@ binary_sensor:
     - entity_id: binary_sensor.motion_ff_bedroom
       platform: state
       to_state: 'on'
-      prob_given_true: 0.99  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
+      prob_given_true: 1 # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.80 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> likely if the monitors are on
     - platform: 'state'
       entity_id: 'switch.ff_bedroom_tv'
