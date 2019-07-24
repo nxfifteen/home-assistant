@@ -1,14 +1,19 @@
 ---
-id: '1559678318406'
 alias: Lighting Sunset - Study
 
 trigger:
 - entity_id: switch.room_occupancy_study
   platform: state
   to: 'on'
+
 - entity_id: sensor.light_scene
   platform: state
   to: Sunset
+
+- platform: state
+  entity_id: binary_sensor.room_occupancy_study
+  from: 'off'
+  to: 'on'
   
 condition:
 - condition: state
@@ -18,7 +23,7 @@ condition:
   entity_id: sensor.light_scene
   state: Sunset
 - condition: state
-  entity_id: switch.room_occupancy_study
+  entity_id: binary_sensor.room_occupancy_study
   state: 'on'
   
 action:

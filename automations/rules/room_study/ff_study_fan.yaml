@@ -7,10 +7,13 @@ trigger:
     above: 21
     for:
       minutes: 10
+
   - platform: time
     at: '21:00:00'
+
   - platform: state
     entity_id: binary_sensor.room_occupancy_study
+    from: 'off'
     to: 'on'
     
 condition:
@@ -19,6 +22,7 @@ condition:
     - condition: state
       entity_id: binary_sensor.room_occupancy_study
       state: 'on'
+
     - condition: numeric_state
       entity_id: sensor.ff_study_sensor_temperature
       above: 21

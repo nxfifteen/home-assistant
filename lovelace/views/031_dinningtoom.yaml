@@ -16,6 +16,15 @@ cards:
       - type: section
       - switch.room_occupancy_hallway
       - sensor.room_occupancy_hallway_reason
+      - type: section
+      - entity: binary_sensor.room_occupancy_dinning
+        name: Dinning Room
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ binary_sensor.room_occupancy_dinning.attributes.probability ]]"
+      - entity: binary_sensor.room_occupancy_kitchen
+        name: Kitchen
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ binary_sensor.room_occupancy_kitchen.attributes.probability ]]"
 
   - type: entities
     show_header_toggle: false
