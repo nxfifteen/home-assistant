@@ -8,14 +8,14 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Bedroom
-      - binary_sensor.ff_bedroom_sensor_sensor
-      - switch.room_occupancy_bedroom
-      - sensor.room_occupancy_bedroom_reason
-      - type: section
       - entity: binary_sensor.room_occupancy_bedroom
         name: Bedroom
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ binary_sensor.room_occupancy_bedroom.attributes.probability ]]"
+      - type: section
+      - binary_sensor.ff_bedroom_sensor_sensor
+      - switch.room_occupancy_bedroom
+      - sensor.room_occupancy_bedroom_reason
 
   - type: entities
     show_header_toggle: false

@@ -8,19 +8,14 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Kitchen
-      - binary_sensor.gf_dinning_sensor_sensor
-      - switch.room_occupancy_kitchen
-      - sensor.room_occupancy_kitchen_reason
-      - type: section
-      - binary_sensor.gf_dinning_contact_side
-      - type: section
-      - switch.room_occupancy_hallway
-      - sensor.room_occupancy_hallway_reason
-      - type: section
       - entity: binary_sensor.room_occupancy_dinning
         name: Dinning Room
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ binary_sensor.room_occupancy_dinning.attributes.probability ]]"
+      - type: section
+      - binary_sensor.gf_dinning_contact_side
+      - type: section
+      - binary_sensor.gf_dinning_sensor_sensor
 
   - type: entities
     show_header_toggle: false
