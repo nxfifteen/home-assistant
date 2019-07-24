@@ -8,21 +8,9 @@ binary_sensor:
     # we are in the study -> very likely at least one household member is at home, and we're not asleep
     - platform: 'numeric_state'
       entity_id: 'sensor.family_family_state_raw'
-      prob_given_true: 0.99 # 99% chance that if we are in the study we are at home
+      prob_given_true: 1 # 99% chance that if we are in the study we are at home
       prob_given_false: 0.05 # 30% chance that if we are not in the study when we are at home
       above: 4
-    # we are in the study -> very likely motion is detected
-    - entity_id: binary_sensor.room_occupancy_studio
-      platform: state
-      to_state: 'on'
-      prob_given_true: 0.5  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.5 # 10% chance that if we are in the study if no motion is detected
-    # we are in the study -> very likely motion is detected
-    - entity_id: binary_sensor.motion_gf_living_camera
-      platform: state
-      to_state: 'on'
-      prob_given_true: 0.9  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_gf_living
       platform: state
@@ -30,16 +18,22 @@ binary_sensor:
       prob_given_true: 1 # 90% chance that if we are in the study if motion is detected
       prob_given_false: 0.80 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
+    - entity_id: binary_sensor.motion_gf_living_camera
+      platform: state
+      to_state: 'on'
+      prob_given_true: 0.99  # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
+    # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_gf_studio_camera
       platform: state
       to_state: 'on'
-      prob_given_true: 0.9  # 90% chance that if we are in the study if motion is detected
+      prob_given_true: 0.99  # 90% chance that if we are in the study if motion is detected
       prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely the monitors are not in standby
     - platform: 'numeric_state'
       entity_id: 'sensor.gf_living_tv_power'
-      prob_given_true: 0.85 # 85% chance that if we are in the study if the monitors are not in standby
-      prob_given_false: 0.1 # 10% chance that if we are in the study if the monitors are in standby
+      prob_given_true: 0.90 # 85% chance that if we are in the study if the monitors are not in standby
+      prob_given_false: 0.60 # 10% chance that if we are in the study if the monitors are in standby
       above: 10
 
 homeassistant:

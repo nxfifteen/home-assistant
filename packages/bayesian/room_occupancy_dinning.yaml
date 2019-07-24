@@ -8,15 +8,9 @@ binary_sensor:
     # we are in the study -> very likely at least one household member is at home, and we're not asleep
     - platform: 'numeric_state'
       entity_id: 'sensor.family_family_state_raw'
-      prob_given_true: 0.99 # 99% chance that if we are in the study we are at home
+      prob_given_true: 1 # 99% chance that if we are in the study we are at home
       prob_given_false: 0.05 # 30% chance that if we are not in the study when we are at home
       above: 4
-    # we are in the study -> very likely motion is detected
-    - entity_id: binary_sensor.room_occupancy_kitchen
-      platform: state
-      to_state: 'on'
-      prob_given_true: 0.5  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.5 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_gf_dinning
       platform: state
@@ -27,20 +21,20 @@ binary_sensor:
     - entity_id: binary_sensor.motion_gf_dinning_camera
       platform: state
       to_state: 'on'
-      prob_given_true: 0.9  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.4 # 10% chance that if we are in the study if no motion is detected
+      prob_given_true: 0.99  # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.5 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_gf_kitchen_camera
       platform: state
       to_state: 'on'
-      prob_given_true: 0.7  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.3 # 10% chance that if we are in the study if no motion is detected
+      prob_given_true: 0.99  # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.5 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: switch.gf_dinning_tv
       platform: state
       to_state: 'on'
-      prob_given_true: 0.9  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.5 # 10% chance that if we are in the study if no motion is detected
+      prob_given_true: 0.90  # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.70 # 10% chance that if we are in the study if no motion is detected
 
 homeassistant:
   customize:
