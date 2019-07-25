@@ -19,6 +19,8 @@ cards:
             name: Presence
           - entity: sensor.family_kareen_state_human
             name: State
+          - entity: sensor.family_kareen_loc_room
+            name: Room
           - entity: sensor.family_kareen_locality
             name: Locality
           - type: section
