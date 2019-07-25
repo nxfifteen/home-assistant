@@ -23,4 +23,8 @@ action:
 
   - service: switch.turn_off
     data:
+      entity_id: switch.ff_study_monitors
+
+  - service: switch.turn_off
+    data:
       entity_id: switch.study_sterio

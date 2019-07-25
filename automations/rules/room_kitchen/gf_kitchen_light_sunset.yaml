@@ -1,24 +1,33 @@
 ---
-alias: Lighting Sunset - Kitchen
+alias: Lighting Night - Kitchen
 
 trigger:
-- entity_id: switch.room_occupancy_kitchen
-  platform: state
+- platform: state
+  entity_id: binary_sensor.room_occupancy_dinning
+  from: 'off'
   to: 'on'
+
 - entity_id: sensor.light_scene
   platform: state
   to: Sunset
+
+- platform: state
+  entity_id: binary_sensor.motion_gf_dinning
+  from: 'off'
+  to: 'on'
   
 condition:
 - condition: state
-  entity_id: sensor.house_scene
-  state: Occupied
+  entity_id: group.people_family
+  state: 'home'
+
+- condition: numeric_state
+  entity_id: sensor.family_family_state_raw
+  below: 8 # Awake
+
 - condition: state
   entity_id: sensor.light_scene
   state: Sunset
-- condition: state
-  entity_id: switch.room_occupancy_kitchen
-  state: 'on'
   
 action:
 - service: scene.turn_on

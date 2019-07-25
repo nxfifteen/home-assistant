@@ -1,12 +1,13 @@
 ---
 # ## Fan Before Bed
-alias: Turn on Fan before bed
+alias: Bedroom Too Hot Fan
 trigger:
   - platform: numeric_state
     entity_id: sensor.ff_bedroom_sensor_temperature
-    above: 22
+    above: 21
     for:
       minutes: 5
+
   - platform: time
     at: '21:00:00'
     
@@ -16,13 +17,18 @@ condition:
     - condition: time
       before: '23:00:00'
       after: '20:30:00'
+
     - condition: numeric_state
       entity_id: sensor.ff_bedroom_sensor_temperature
-      above: 22
+      above: 21
+      
     - condition: numeric_state
       entity_id: sensor.family_family_state_raw
-      above: 3
       below: 7
+
+    - condition: state
+      entity_id: group.people_family
+      state: 'home'
 
 action:
     - service: switch.turn_on

@@ -1,6 +1,6 @@
 ---
 # ## Turn off Fan after 20 minutes
-alias: Turn off Fan after 20 minutes
+alias: Bedroom Overnight Fan
 trigger:
   - platform: time_pattern
     minutes: '/120'

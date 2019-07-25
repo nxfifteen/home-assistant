@@ -15,3 +15,7 @@ action:
 - service: light.turn_off
   data:
     entity_id: group.light_gf_dinning
+
+#- service: switch.turn_off
+#  data:
+#    entity_id: switch.ff_bedroom_tv

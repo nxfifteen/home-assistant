@@ -24,4 +24,4 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Lights
-      - light.gf_studio_celing
+      - lighttext: .gf_studio_celing
