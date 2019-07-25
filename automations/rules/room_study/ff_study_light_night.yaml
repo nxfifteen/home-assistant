@@ -10,19 +10,24 @@ trigger:
 - entity_id: sensor.light_scene
   platform: state
   to: Night
+
+- platform: state
+  entity_id: binary_sensor.motion_ff_study
+  from: 'off'
+  to: 'on'
   
 condition:
 - condition: state
   entity_id: group.people_family
   state: 'home'
 
+- condition: numeric_state
+  entity_id: sensor.family_family_state_raw
+  below: 8 # Awake
+
 - condition: state
   entity_id: sensor.light_scene
   state: Night
-
-- condition: state
-  entity_id: binary_sensor.room_occupancy_study
-  state: 'on'
   
 action:
 - service: scene.turn_on

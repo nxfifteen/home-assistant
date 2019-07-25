@@ -4,7 +4,7 @@ alias: Turn on study fan when hot
 trigger:
   - platform: numeric_state
     entity_id: sensor.ff_study_sensor_temperature
-    above: 21
+    above: 22
     for:
       minutes: 10
 
@@ -19,13 +19,25 @@ trigger:
 condition:
   condition: and
   conditions:
+    # I'm awake
+    - condition: numeric_state
+      entity_id: sensor.family_family_state_raw
+      below: 8
+
+    # Someone is home
+    - condition: state
+      entity_id: group.people_family
+      state: 'home'
+
+    # The room is occupied
     - condition: state
       entity_id: binary_sensor.room_occupancy_study
       state: 'on'
 
+    # The room is too hot
     - condition: numeric_state
       entity_id: sensor.ff_study_sensor_temperature
-      above: 21
+      above: 22
 
 action:
     - service: switch.turn_on
