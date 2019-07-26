@@ -11,6 +11,12 @@ binary_sensor:
       prob_given_true: 1 # 99% chance that if we are in the study we are at home
       prob_given_false: 0.05 # 30% chance that if we are not in the study when we are at home
       above: 4
+    # we are in the study -> very likely at least one household member is at home, and we're not asleep
+    - platform: 'numeric_state'
+      entity_id: 'sensor.house_scene'
+      prob_given_true: 1 # 99% chance that if we are in the study we are at home
+      prob_given_false: 0.50 # 30% chance that if we are not in the study when we are at home
+      state: Asleep
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_ff_bedroom
       platform: state
