@@ -2,7 +2,7 @@
 alias: PiHole Daily Client stats!
 trigger:
   platform: time
-  at: '23:50:00'
+  at: '23:00:00'
 
 action:
   - delay: '00:{{ range(0,5) | random | int }}{{ range(0,9) | random | int }}:00'
@@ -14,5 +14,5 @@ action:
           {{ [
           "There are currently {{states.sensor.unifi_client_count.state}} clients on my network.",
           "As reported by #PiHole, there are {{states.sensor.unifi_client_count.state}} clients on my network.",
-          ] | random }}
+          ] | random + " (https://amzn.to/2SKJ957)" }}
       hashtag: '#PiHole #Security'
