@@ -1,0 +1,12 @@
+---
+alias: Lighting Off - WH
+
+trigger:
+- entity_id: sensor.light_scene
+  platform: state
+  to: None
+  
+action:
+- service: scene.turn_on
+  data:
+    entity_id: scene.light_off
