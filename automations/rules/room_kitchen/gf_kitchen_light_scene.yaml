@@ -1,18 +1,17 @@
 ---
-alias: Lighting Night - Bedroom
+alias: Lighting Night - Kitchen
 
 trigger:
 - platform: state
-  entity_id: binary_sensor.room_occupancy_bedroom
+  entity_id: switch.room_occupancy_dinning
   from: 'off'
   to: 'on'
 
 - entity_id: sensor.light_scene
   platform: state
-  to: Night
 
 - platform: state
-  entity_id: binary_sensor.motion_ff_bedroom
+  entity_id: binary_sensor.motion_gf_dinning
   from: 'off'
   to: 'on'
   
@@ -23,13 +22,9 @@ condition:
 
 - condition: numeric_state
   entity_id: sensor.family_family_state_raw
-  below: 7 # Awake
-
-- condition: state
-  entity_id: sensor.light_scene
-  state: Night
+  below: 8 # Awake
   
 action:
 - service: scene.turn_on
-  data:
-    entity_id: scene.light_night_bedroom
+  data_template:
+    entity_id: scene.light_{{ states.sensor.light_scene.state.lower() | replace(" ", "_") }}_kitchen

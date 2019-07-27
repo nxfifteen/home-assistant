@@ -21,19 +21,19 @@ media_player:
     host: 192.168.41.5
     name: bedroom_fire_tv_stick
     adb_server_ip: 127.0.0.1
-    adb_server_port: 5000
+    adb_server_port: 8037
     
   - platform: androidtv
     host: 192.168.41.1
     name: kitchen_fire_tv_stick
     adb_server_ip: 127.0.0.1
-    adb_server_port: 5000
+    adb_server_port: 8037
 
   - platform: androidtv
     host: 192.168.41.2
     name: livingroom_fire_tv_stick
     adb_server_ip: 127.0.0.1
-    adb_server_port: 5000
+    adb_server_port: 8037
 
 sensor:
   - platform: template
