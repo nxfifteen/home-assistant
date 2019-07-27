@@ -11,7 +11,7 @@ action:
         {{ [
         "New Device on the Network! @ubnt has alerted me and now it is locked down.",
         "Constant monitoring of the network by @ubnt has detected a new device in the environment."
-        ] | random + " (https://amzn.to/2YUkk93)"}}
+        ] | random + " (https://amzn.to/2SKJ957)"}}
         
   - service: notify.alexa_media
     data:
