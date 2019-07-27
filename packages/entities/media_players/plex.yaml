@@ -20,6 +20,12 @@ sensor:
       media_ff_study_plex_alexa:
         value_template: "{% if states('media_player.plex_study_alexa') == 'unknown' %}off{% else %}{{ states('media_player.plex_study_alexa') }}{% endif %}"
 
+      media_gf_livingroom_plex_fire:
+        value_template: "{% if states('media_player.plex_livingroom_firetv') == 'unknown' %}off{% else %}{{ states('media_player.plex_livingroom_firetv') }}{% endif %}"
+
+      media_gf_kitchen_plex_fire:
+        value_template: "{% if states('media_player.plex_dining') == 'unknown' %}off{% else %}{{ states('media_player.plex_dining') }}{% endif %}"
+
 homeassistant:
   customize:
       sensor.media_ff_study_plex_video:
@@ -36,4 +42,12 @@ homeassistant:
         
       sensor.media_ff_bedroom_plex_audio:
         friendly_name: 'Bedroom Plex (Audio)'
+        icon: mdi:kodi
+        
+      sensor.media_gf_livingroom_plex_fire:
+        friendly_name: 'Livingroom Plex (FireTV)'
+        icon: mdi:kodi
+        
+      sensor.media_gf_kitchen_plex_fire:
+        friendly_name: 'Kitchen Plex (FireTV)'
         icon: mdi:kodi
