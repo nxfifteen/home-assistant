@@ -19,6 +19,8 @@ cards:
             name: Presence
           - entity: sensor.family_stuart_state_human
             name: State
+          - entity: sensor.family_stuart_loc_room
+            name: Room
           - entity: sensor.family_stuart_locality
             name: Locality
           - type: section
