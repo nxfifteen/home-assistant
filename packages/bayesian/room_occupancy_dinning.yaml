@@ -16,19 +16,19 @@ binary_sensor:
       platform: state
       to_state: 'on'
       prob_given_true: 1 # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.80 # 10% chance that if we are in the study if no motion is detected
+      prob_given_false: 0.60 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_gf_dinning_camera
       platform: state
       to_state: 'on'
       prob_given_true: 1  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.30 # 10% chance that if we are in the study if no motion is detected
+      prob_given_false: 0.60 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_gf_kitchen_camera
       platform: state
       to_state: 'on'
       prob_given_true: 1  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.30 # 10% chance that if we are in the study if no motion is detected
+      prob_given_false: 0.70 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: switch.gf_dinning_tv
       platform: state
