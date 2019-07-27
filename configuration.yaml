@@ -27,6 +27,8 @@ homeassistant:
 hacs:
   token: !secret giltab_token_hacs
 
+system_health:
+
 # Example configuration.yaml entry
 discovery:
   ignore:
