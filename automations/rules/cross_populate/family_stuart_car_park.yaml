@@ -19,10 +19,3 @@ action:
       mac: '00:25:42:73:A1:B9'
       source_type: gps
       
-  - service: script.notify_join
-    data_template:
-      who: "stuart"
-      title: 'Parking Spot Saved'
-      notification_id: "hass-parking-his"
-      value1: 'Your cars location has been updated.'
-      
