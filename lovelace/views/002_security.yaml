@@ -42,7 +42,7 @@ cards:
     show_header_toggle: false
     entities:
       - entity: binary_sensor.room_occupancy_dinning
-        name: Study
+        name: dinning
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ binary_sensor.room_occupancy_dinning.attributes.probability ]]"
       - type: section
@@ -57,7 +57,7 @@ cards:
     show_header_toggle: false
     entities:
       - entity: binary_sensor.room_occupancy_livingroom
-        name: Study
+        name: livingroom
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ binary_sensor.room_occupancy_livingroom.attributes.probability ]]"
       - type: section
