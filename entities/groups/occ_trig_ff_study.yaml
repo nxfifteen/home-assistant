@@ -1,0 +1,13 @@
+---
+occ_trig_ff_study:
+  name: Study Occ Trigger
+  entities:
+    - sensor.family_family_state_raw
+    - binary_sensor.motion_ff_study
+    - binary_sensor.ff_study_sensor_sensor
+    - switch.ff_study_monitors
+    - sensor.ff_study_monitors_power
+    - sensor.media_ff_study_alexa
+    - sensor.media_ff_study_plex_audio
+    - sensor.media_ff_study_plex_alexa
+    - sensor.media_ff_study_plex_video
