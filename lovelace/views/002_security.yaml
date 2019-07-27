@@ -66,6 +66,7 @@ cards:
       - binary_sensor.motion_gf_living_camera
       - binary_sensor.motion_gf_studio_camera
       - sensor.gf_living_tv_power
+      - sensor.remote_gf_livingroom
 
   - type: entities
     title: Bayesian Occupancy (Study)
@@ -84,6 +85,23 @@ cards:
       - sensor.media_ff_study_plex_audio
       - sensor.media_ff_study_plex_alexa
       - sensor.media_ff_study_plex_video
+
+  - type: entities
+    title: Bayesian Occupancy (Bedroom)
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.room_occupancy_bedroom
+        name: Bedroom
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ binary_sensor.room_occupancy_bedroom.attributes.probability ]]"
+      - type: section
+      - sensor.family_family_state_raw
+      - sensor.house_scene
+      - binary_sensor.motion_ff_bedroom
+      - switch.ff_bedroom_tv
+      - sensor.media_ff_bedroom_alexa
+      - sensor.media_ff_bedroom_fire_tv
+      - sensor.media_ff_bedroom_plex_audio
 
   - type: entities
     title: Camera Online

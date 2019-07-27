@@ -16,23 +16,28 @@ binary_sensor:
       platform: state
       to_state: 'on'
       prob_given_true: 1 # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.80 # 10% chance that if we are in the study if no motion is detected
+      prob_given_false: 0.30 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_gf_living_camera
       platform: state
       to_state: 'on'
-      prob_given_true: 0.99  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
+      prob_given_true: 1  # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.30 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely motion is detected
     - entity_id: binary_sensor.motion_gf_studio_camera
       platform: state
       to_state: 'on'
-      prob_given_true: 0.99  # 90% chance that if we are in the study if motion is detected
-      prob_given_false: 0.1 # 10% chance that if we are in the study if no motion is detected
+      prob_given_true: 0.80  # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.10 # 10% chance that if we are in the study if no motion is detected
+    - entity_id: sensor.remote_gf_livingroom
+      platform: state
+      to_state: 'PowerOff'
+      prob_given_true: 0.20  # 90% chance that if we are in the study if motion is detected
+      prob_given_false: 0.95 # 10% chance that if we are in the study if no motion is detected
     # we are in the study -> very likely the monitors are not in standby
     - platform: 'numeric_state'
       entity_id: 'sensor.gf_living_tv_power'
-      prob_given_true: 0.90 # 85% chance that if we are in the study if the monitors are not in standby
+      prob_given_true: 1 # 85% chance that if we are in the study if the monitors are not in standby
       prob_given_false: 0.60 # 10% chance that if we are in the study if the monitors are in standby
       above: 10
 
