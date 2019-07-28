@@ -6,6 +6,8 @@ trigger:
   platform: state
   from: 'on'
   to: 'off'
+  for:
+    seconds: 90
   
 condition:
 - condition: state

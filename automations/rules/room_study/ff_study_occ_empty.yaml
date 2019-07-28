@@ -4,6 +4,8 @@ trigger:
   - platform: state
     entity_id: switch.occ_room_study
     to: 'off'
+    for:
+      seconds: 90
     
 condition:
   condition: and

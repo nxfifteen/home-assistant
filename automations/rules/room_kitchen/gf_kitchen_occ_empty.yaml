@@ -5,6 +5,8 @@ trigger:
 - entity_id: switch.occ_room_kitchen
   platform: state
   to: 'off'
+  for:
+    seconds: 90
   
 condition:
 - condition: state
