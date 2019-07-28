@@ -1,0 +1,18 @@
+---
+alias: Set Watts to Zero (Study Monitors)
+
+trigger:
+- platform: state
+  entity_id: switch.ff_study_monitors
+  from:  'on'
+  to:  'off'
+  
+action:
+  - service: mqtt.publish
+    data:
+      topic: zwave/20/50/1/8
+      payload: 0
+      qos: 2
+      retain: false
+
+ 
