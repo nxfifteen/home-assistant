@@ -8,10 +8,10 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Study
-      - entity: switch.room_occupancy_study
+      - entity: switch.occ_room_study
         name: Study
         type: custom:secondaryinfo-entity-row
-        secondary_info: "[[  sensor.room_occupancy_study_reason.state ]]"
+        secondary_info: "[[  sensor.occ_room_study_reason.state ]]"
  
   - type: entities
     show_header_toggle: false
@@ -44,23 +44,17 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Plugs
-      - input_select.his_pc_options
-      - switch.wake_on_lan
       - script.my_computer
-      - switch.ff_study_fan
-      - type: section
+      - switch.wake_on_lan
       - switch.ff_study_monitors
+      - input_select.his_pc_options
+      - type: section
+      - switch.ff_study_fan
       - switch.study_sterio
       - type: section
       - switch.ff_study_loading_pi
-  
-  # - type: custom:decluterring-card
-  #   template: power_graph
-  #   variables:
-  #     - name: Some Name
-  #     - sensor: sensor.ff_study_loading_pi_power
 
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
     - type: custom:mini-graph-card
       entities: 
@@ -101,7 +95,7 @@ cards:
   - type: custom:mini-graph-card
     entities: 
       - sensor.ff_study_loading_pi_power
-    name: Fan
+    name: Loading Station
     height: 74
     line_width: 2
     font_size: 65
@@ -181,28 +175,6 @@ cards:
         # Off
       - value: -1
         color: "#1db954"
-
-  - type: vertical-stack
-    cards:
-      - type: custom:mini-media-player
-        name: Alexa
-        entity: media_player.alexa_study
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-          
-      - type: custom:mini-media-player
-        name: Alexa (Everywhere)
-        entity: media_player.zone_everywhere
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
 
   - type: entities
     show_header_toggle: false

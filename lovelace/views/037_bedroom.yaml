@@ -8,14 +8,10 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Bedroom
-      - entity: switch.room_occupancy_bedroom
+      - entity: switch.occ_room_bedroom
         name: Bedroom
         type: custom:secondaryinfo-entity-row
-        secondary_info: "[[  sensor.room_occupancy_bedroom_reason.state ]]"
-      - type: section
-      - binary_sensor.ff_bedroom_sensor_sensor
-      - switch.room_occupancy_bedroom
-      - sensor.room_occupancy_bedroom_reason
+        secondary_info: "[[  sensor.occ_room_bedroom_reason.state ]]"
 
   - type: entities
     show_header_toggle: false
@@ -37,7 +33,7 @@ cards:
       - switch.ff_bedroom_fairylights
       - switch.ff_bedroom_fan
 
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
       - type: custom:mini-graph-card
         entities: 
@@ -74,42 +70,7 @@ cards:
         show:
           icon: true
           extrema: true
-
-  - type: vertical-stack
-    cards:
-          
-      - type: custom:mini-media-player
-        name: FireTV
-        entity: media_player.bedroom_fire_tv_stick_2
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-
-  - type: vertical-stack
-    cards:
-      - type: custom:mini-media-player
-        name: Alexa
-        entity: media_player.alexa_bedroom
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-          
-      - type: custom:mini-media-player
-        name: Alexa (Everywhere)
-        entity: media_player.zone_everywhere
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-        
+       
   - type: entities
     show_header_toggle: false
     title: Batteries

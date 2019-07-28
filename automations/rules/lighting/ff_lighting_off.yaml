@@ -2,19 +2,19 @@
 alias: Lighting Off - FF
 
 trigger:
-- entity_id: switch.room_occupancy_bedroom
+- entity_id: switch.occ_room_bedroom
   platform: state
   to: 'off'
-- entity_id: switch.room_occupancy_study
+- entity_id: switch.occ_room_study
   platform: state
   to: 'off'
   
 condition:
 - condition: state
-  entity_id: switch.room_occupancy_bedroom
+  entity_id: switch.occ_room_bedroom
   state: 'off'
 - condition: state
-  entity_id: switch.room_occupancy_study
+  entity_id: switch.occ_room_study
   state: 'off'
   
 action:

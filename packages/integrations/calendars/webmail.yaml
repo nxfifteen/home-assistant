@@ -25,3 +25,17 @@ calendar:
       - name: 'Bin Day'
         calendar: 'Reminders'
         search: 'Its Bin Day'
+
+sensor:
+  - platform: template
+    sensors:
+      this_weeks_bin:
+        friendly_name: 'This Weeks Bin'
+        value_template: >
+          {% if is_state("calendar.reminders_bin_green", "on") -%}
+            Green
+          {%- elif is_state("calendar.reminders_bin_grey", "on") -%}
+            Grey
+          {%- else -%}
+            Blue & Brown
+          {%- endif %}

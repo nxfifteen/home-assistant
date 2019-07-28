@@ -3,7 +3,7 @@ alias: Lighting Scene - Study
 
 trigger:
 - platform: state
-  entity_id: switch.room_occupancy_study
+  entity_id: switch.occ_room_study
   from: 'off'
   to: 'on'
 

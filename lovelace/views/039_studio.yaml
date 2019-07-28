@@ -8,13 +8,10 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Studio
-      - entity: switch.room_occupancy_studio
+      - entity: switch.occ_room_studio
         name: Studio
         type: custom:secondaryinfo-entity-row
-        secondary_info: "[[ sensor.room_occupancy_studio_reason.state ]]"
-      - type: section
-      - switch.room_occupancy_hallway
-      - sensor.room_occupancy_hallway_reason
+        secondary_info: "[[ sensor.occ_room_studio_reason.state ]]"
 
   - type: entities
     show_header_toggle: false

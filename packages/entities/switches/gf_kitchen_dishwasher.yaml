@@ -78,6 +78,10 @@ homeassistant:
       friendly_name: Dishwasher
       icon: mdi:dishwasher
       initial_state: on
+
+    switch.dishwasher_cost:
+      friendly_name: Running Cost
+      icon: mdi:currency-gbp
       
     sensor.dishwasher_status:
       friendly_name: Dishwasher Status
@@ -85,3 +89,9 @@ homeassistant:
       
     sensor.dishwasher_power:
       friendly_name: Dishwasher Power
+      
+    sensor.weekly_dishwasher:
+      friendly_name: Washing Dishwasher Meter
+      
+    sensor.monthly_dishwasher:
+      friendly_name: Washing Dishwasher Meter

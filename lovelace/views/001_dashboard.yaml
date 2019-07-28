@@ -100,12 +100,15 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - person.stuart
+          - entity: device_tracker.stuart_presence
+            name: Stuart
           - type: section
-          - sensor.family_stuart_state_human
-          - sensor.family_stuart_state
-          - type: section
-          - input_select.stuart
+          - entity: sensor.family_stuart_loc_room
+            name: Room
+          - entity: sensor.family_stuart_locality
+            name: Locality
+          - entity: sensor.family_stuart_drive_dest
+            name: Driving Too
           - type: section
           - entity: sensor.family_stuart_battery_phone
             name: Battery
@@ -113,12 +116,15 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - person.kareen
+          - entity: device_tracker.kareen_presence
+            name: Kareen
           - type: section
-          - sensor.family_kareen_state_human
-          - sensor.family_kareen_state
-          - type: section
-          - input_select.kareen
+          - entity: sensor.family_kareen_loc_room
+            name: Room
+          - entity: sensor.family_kareen_locality
+            name: Locality
+          - entity: sensor.family_kareen_drive_dest
+            name: Driving Too
           - type: section
           - entity: sensor.family_kareen_battery_phone
             name: Battery
@@ -133,10 +139,6 @@ cards:
     cards:  
       - type: thermostat
         entity: climate.hallway
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - binary_sensor.strath_away
     
       - type: custom:mini-graph-card
         entities: 
@@ -161,98 +163,98 @@ cards:
           - value: -100
             color: "#e74c3c"
             
-  - type: horizontal-stack
-    cards:
-      - type: custom:mini-graph-card
-        entities: 
-          - sensor.ff_study_sensor_temperature
-        name: Study
-        height: 74
-        line_width: 2
-        font_size: 65
-        hours_to_show: 12
-        points_per_hour: 4
-        show:
-          icon: true
-          extrema: true
-          icon_adaptive_color: true
-        color_thresholds:
-          - value: 21
-            color: "#e74c3c"
-          - value: 15
-            color: "#1db954"
-          - value: -1
-            color: "#3498db"
-          - value: -100
-            color: "#e74c3c"
-        
-      - type: custom:mini-graph-card
-        entities: 
-          - sensor.ff_bedroom_sensor_temperature
-        name: Bedroom
-        height: 74
-        line_width: 2
-        font_size: 65
-        hours_to_show: 12
-        points_per_hour: 4
-        show:
-          icon: true
-          extrema: true
-          icon_adaptive_color: true
-        color_thresholds:
-          - value: 21
-            color: "#e74c3c"
-          - value: 15
-            color: "#1db954"
-          - value: -1
-            color: "#3498db"
-          - value: -100
-            color: "#e74c3c"
-        
-  - type: horizontal-stack
-    cards:
-      - type: custom:mini-graph-card
-        entities: 
-          - sensor.gf_dinning_sensor_temperature
-        name: Dinning Room
-        height: 74
-        line_width: 2
-        font_size: 65
-        hours_to_show: 12
-        points_per_hour: 4
-        show:
-          icon: true
-          extrema: true
-          icon_adaptive_color: true
-        color_thresholds:
-          - value: 21
-            color: "#e74c3c"
-          - value: 15
-            color: "#1db954"
-          - value: -1
-            color: "#3498db"
-          - value: -100
-            color: "#e74c3c"
-        
-      - type: custom:mini-graph-card
-        entities: 
-          - sensor.gf_living_sensor_temperature
-        name: Livingroom
-        height: 74
-        line_width: 2
-        font_size: 65
-        hours_to_show: 12
-        points_per_hour: 4
-        show:
-          icon: true
-          extrema: true
-          icon_adaptive_color: true
-        color_thresholds:
-          - value: 21
-            color: "#e74c3c"
-          - value: 15
-            color: "#1db954"
-          - value: -1
-            color: "#3498db"
-          - value: -100
-            color: "#e74c3c"
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities: 
+              - sensor.ff_study_sensor_temperature
+            name: Study
+            height: 74
+            line_width: 2
+            font_size: 65
+            hours_to_show: 36
+            points_per_hour: 2
+            show:
+              icon: true
+              extrema: true
+              icon_adaptive_color: true
+            color_thresholds:
+              - value: 21
+                color: "#e74c3c"
+              - value: 15
+                color: "#1db954"
+              - value: -1
+                color: "#3498db"
+              - value: -100
+                color: "#e74c3c"
+            
+          - type: custom:mini-graph-card
+            entities: 
+              - sensor.ff_bedroom_sensor_temperature
+            name: Bedroom
+            height: 74
+            line_width: 2
+            font_size: 65
+            hours_to_show: 36
+            points_per_hour: 2
+            show:
+              icon: true
+              extrema: true
+              icon_adaptive_color: true
+            color_thresholds:
+              - value: 21
+                color: "#e74c3c"
+              - value: 15
+                color: "#1db954"
+              - value: -1
+                color: "#3498db"
+              - value: -100
+                color: "#e74c3c"
+            
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities: 
+              - sensor.gf_dinning_sensor_temperature
+            name: Dinning Room
+            height: 74
+            line_width: 2
+            font_size: 65
+            hours_to_show: 36
+            points_per_hour: 2
+            show:
+              icon: true
+              extrema: true
+              icon_adaptive_color: true
+            color_thresholds:
+              - value: 21
+                color: "#e74c3c"
+              - value: 15
+                color: "#1db954"
+              - value: -1
+                color: "#3498db"
+              - value: -100
+                color: "#e74c3c"
+            
+          - type: custom:mini-graph-card
+            entities: 
+              - sensor.gf_living_sensor_temperature
+            name: Livingroom
+            height: 74
+            line_width: 2
+            font_size: 65
+            hours_to_show: 36
+            points_per_hour: 2
+            show:
+              icon: true
+              extrema: true
+              icon_adaptive_color: true
+            color_thresholds:
+              - value: 21
+                color: "#e74c3c"
+              - value: 15
+                color: "#1db954"
+              - value: -1
+                color: "#3498db"
+              - value: -100
+                color: "#e74c3c"

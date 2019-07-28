@@ -3,7 +3,7 @@ alias: Lighting Night - Kitchen
 
 trigger:
 - platform: state
-  entity_id: switch.room_occupancy_dinning
+  entity_id: switch.occ_room_dinning
   from: 'off'
   to: 'on'
 
