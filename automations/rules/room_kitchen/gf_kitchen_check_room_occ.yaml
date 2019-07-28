@@ -1,0 +1,35 @@
+---
+alias: Check Room Occupancy - Kitchen
+
+trigger:
+- platform: state
+  entity_id: binary_sensor.motion_gf_dinning
+
+- platform: state
+  entity_id: binary_sensor.motion_gf_dinning_camera
+
+- platform: state
+  entity_id: binary_sensor.motion_gf_kitchen_camera
+
+- platform: state
+  entity_id: sensor.alexa_gf_dinning
+
+- platform: state
+  entity_id: sensor.family_family_state_raw
+
+- platform: state
+  entity_id: sensor.media_gf_kitchen_alexa
+
+- platform: state
+  entity_id: sensor.media_gf_kitchen_fire_tv
+
+- platform: state
+  entity_id: sensor.media_gf_kitchen_plex_fire
+  
+action:
+  - service: mqtt.publish
+    data:
+      topic: cmd/nodered/occcheck/kitchen
+      payload: "true"
+      qos: 2
+      retain: false

@@ -1,0 +1,38 @@
+---
+alias: Check Room Occupancy - Study
+
+trigger:
+- platform: state
+  entity_id: sensor.family_family_state_raw
+
+- platform: state
+  entity_id: binary_sensor.motion_ff_study
+
+- platform: state
+  entity_id: binary_sensor.ff_study_sensor_sensor
+
+- platform: state
+  entity_id: switch.ff_study_monitors
+
+- platform: state
+  entity_id: sensor.ff_study_monitors_power
+
+- platform: state
+  entity_id: sensor.media_ff_study_alexa
+
+- platform: state
+  entity_id: sensor.media_ff_study_plex_audio
+
+- platform: state
+  entity_id: sensor.media_ff_study_plex_alexa
+
+- platform: state
+  entity_id: sensor.media_ff_study_plex_video
+  
+action:
+  - service: mqtt.publish
+    data:
+      topic: cmd/nodered/occcheck/study
+      payload: "true"
+      qos: 2
+      retain: false
