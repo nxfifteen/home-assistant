@@ -221,22 +221,22 @@ homeassistant:
     #  utility_meter
     #'
     sensor.gitlab_279_stars_weekly:
-      friendly_name: 'Weekly Stars'
+      friendly_name: 'Stars'
       icon: mdi:star-four-points
     sensor.gitlab_279_stars_monthly:
-      friendly_name: 'Monthly Stars'
+      friendly_name: 'Stars'
       icon: mdi:star-four-points
       
     sensor.gitlab_279_issues_weekly:
-      friendly_name: 'Weekly Issues'
+      friendly_name: 'Issues'
       icon: mdi:exclamation
     sensor.gitlab_279_issues_monthly:
-      friendly_name: 'Monthly Issues'
+      friendly_name: 'Issues'
       icon: mdi:exclamation
       
     sensor.gitlab_279_commits_weekly:
-      friendly_name: 'Weekly Commits'
+      friendly_name: 'Commits'
       icon: mdi:source-merge
     sensor.gitlab_279_commits_monthly:
-      friendly_name: 'Monthly Commits'
+      friendly_name: 'Commits'
       icon: mdi:exclamation
