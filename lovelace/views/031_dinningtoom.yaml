@@ -14,8 +14,6 @@ cards:
         secondary_info: "[[  sensor.occ_room_kitchen_reason.state ]]"
       - type: section
       - binary_sensor.gf_dinning_contact_side
-      - type: section
-      - binary_sensor.gf_dinning_sensor_sensor
 
   - type: entities
     show_header_toggle: false
@@ -68,7 +66,7 @@ cards:
       - value: -1
         color: "#1db954"
 
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
     - type: custom:mini-graph-card
       entities: 
@@ -105,48 +103,6 @@ cards:
       show:
         icon: true
         extrema: true
-
-  - type: vertical-stack
-    cards:
-      - type: custom:mini-media-player
-        name: Alexa
-        entity: media_player.alexa_kitchen
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-     
-      - type: custom:mini-media-player
-        name: FireTV
-        entity: media_player.kitchen_fire_tv_stick_2
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-    
-      - type: custom:mini-media-player
-        name: Alexa (Everywhere)
-        entity: media_player.zone_everywhere
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-    
-      - type: custom:mini-media-player
-        name: Alexa (Downstairs)
-        entity: media_player.zone_downstairs
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
         
   - type: entities
     show_header_toggle: false
