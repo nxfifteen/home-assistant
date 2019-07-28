@@ -51,7 +51,8 @@ cards:
                 style: 
                   border-radius: 0px
             
-          - type: divider
+          - type: section
+            label: Weekly
            
           - type: horizontal-stack
             cards:
@@ -68,12 +69,13 @@ cards:
                 card:
                   type: glance
                   entities:
-                    - sensor.gitlab_279_commits_monthly
-                    - sensor.gitlab_279_commits_last_month
+                    - sensor.gitlab_279_issues_weekly
+                    - sensor.gitlab_279_issues_last_week
                 style: 
                   border-radius: 0px
-                  
-          - type: divider
+
+          - type: section
+            label: Monthly
            
           - type: horizontal-stack
             cards:
@@ -81,8 +83,8 @@ cards:
                 card:
                   type: glance
                   entities:
-                    - sensor.gitlab_279_issues_weekly
-                    - sensor.gitlab_279_issues_last_week
+                    - sensor.gitlab_279_commits_monthly
+                    - sensor.gitlab_279_commits_last_month
                 style: 
                   border-radius: 0px
           

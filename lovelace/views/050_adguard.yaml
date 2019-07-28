@@ -3,37 +3,8 @@ id: adguard
 icon: mdi:access-point-network-off
 title: AdGaurd
 cards:
-  - type: entities
-    show_header_toggle: off
-    entities:
-    - switch.unifi_wifi_lan
-    - switch.unifi_wifi_guest
-    - switch.unifi_wifi_iot
-
-  - type: entities
-    show_header_toggle: off
-    entities:
-    - binary_sensor.unifi_client_count_increase
-    - binary_sensor.unifi_client_count_lan_increase
-    - binary_sensor.unifi_client_count_guest_increase
-    - binary_sensor.unifi_client_count_iot_increase
-    - type: section
-    - sensor.unifi_client_count
-    - sensor.unifi_client_count_lan
-    - sensor.unifi_client_count_guest
-    - sensor.unifi_client_count_iot
-
   - type: vertical-stack
     cards:
-      - type: entities
-        show_header_toggle: off
-        entities:
-        - switch.adguard_filtering
-        - switch.adguard_protection
-        - switch.adguard_query_log
-        - type: section
-        - sensor.adguard_rules_count
-
       - type: custom:mini-graph-card
         entities: 
           - sensor.adguard_average_processing_speed
@@ -71,24 +42,50 @@ cards:
   - type: entities
     show_header_toggle: off
     entities:
-    - sensor.adguard_dns_queries
-    - sensor.adguard_dns_queries_blocked
-    - sensor.adguard_dns_queries_blocked_ratio
+      - type: 'custom:text-divider-row'
+        text: WiFi Networks
+      - switch.unifi_wifi_guest
 
   - type: entities
     show_header_toggle: off
     entities:
-    - switch.adguard_parental_control
-    - sensor.adguard_parental_control_blocked
+      - type: 'custom:text-divider-row'
+        text: Connected Devices
+      - sensor.unifi_client_count
+      - sensor.unifi_client_count_lan
+      - sensor.unifi_client_count_guest
+      - sensor.unifi_client_count_iot
 
   - type: entities
     show_header_toggle: off
     entities:
-    - switch.adguard_safe_browsing
-    - sensor.adguard_safe_browsing_blocked
+      - type: 'custom:text-divider-row'
+        text: AdGuard
+      - switch.adguard_filtering
+      - switch.adguard_protection
+      - switch.adguard_query_log
 
   - type: entities
     show_header_toggle: off
     entities:
-    - switch.adguard_safe_search
-    - sensor.searches_safe_search_enforced
+      - type: 'custom:text-divider-row'
+        text: DNS Logs
+      - sensor.adguard_dns_queries
+      - sensor.adguard_dns_queries_blocked
+      - sensor.adguard_dns_queries_blocked_ratio
+      - type: section
+      - sensor.adguard_rules_count
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: DNS Protection
+      - switch.adguard_parental_control
+      - sensor.adguard_parental_control_blocked
+      - type: section
+      - switch.adguard_safe_browsing
+      - sensor.adguard_safe_browsing_blocked
+      - type: section
+      - switch.adguard_safe_search
+      - sensor.searches_safe_search_enforced

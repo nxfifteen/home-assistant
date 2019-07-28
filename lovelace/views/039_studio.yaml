@@ -12,9 +12,6 @@ cards:
         name: Studio
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ sensor.occ_room_studio_reason.state ]]"
-      - type: section
-      - switch.occ_room_hallway
-      - sensor.occ_room_hallway_reason
 
   - type: entities
     show_header_toggle: false

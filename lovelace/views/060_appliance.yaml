@@ -3,6 +3,8 @@ id: appliances
 icon: mdi:washing-machine
 title: Appliances
 cards:
+  - !include ../cards/gist_aftership_tracking.yaml
+
   - type: vertical-stack
     cards:
       - type: entities
@@ -80,27 +82,8 @@ cards:
               extrema: true
               fill: true
 
-  - !include ../cards/gist_aftership_tracking.yaml
-
   - type: vertical-stack
     cards:
-      - type: entities
-        title: Washing Machine
-        show_header_toggle: false
-        entities:
-        - sensor.washing_machine_cost
-        - sensor.washing_machine_friendly_status
-        - input_boolean.enable_washing_machine_notification
-        - type: section
-        - sensor.washing_machine_load
-        - sensor.washing_machine_status_detail
-        - type: section
-        - sensor.weekly_washing_machine
-        - sensor.monthly_washing_machine
-        - type: section
-        - sensor.grocy_stock_washing_powder
-        - sensor.grocy_stock_washing_softner
-
       - type: custom:mini-graph-card
         entities: 
           - sensor.washing_machine_power
@@ -128,24 +111,25 @@ cards:
           - value: -1
             color: "#1db954"
 
-  - type: vertical-stack
-    cards:
       - type: entities
-        title: Dishwasher
+        title: Washing Machine
         show_header_toggle: false
         entities:
-        - sensor.dishwasher_cost
-        - sensor.dishwasher_friendly_status
-        - input_boolean.disable_dishwasher_notification
+        - sensor.washing_machine_cost
+        - sensor.washing_machine_friendly_status
+        - input_boolean.enable_washing_machine_notification
         - type: section
-        - sensor.dishwasher_load
-        - sensor.dishwasher_status_detail
+        - sensor.washing_machine_load
+        - sensor.washing_machine_status_detail
         - type: section
-        - sensor.weekly_dishwasher
-        - sensor.monthly_dishwasher
+        - sensor.weekly_washing_machine
+        - sensor.monthly_washing_machine
         - type: section
-        - sensor.grocy_stock_dishwasher_tabs
+        - sensor.grocy_stock_washing_powder
+        - sensor.grocy_stock_washing_softner
 
+  - type: vertical-stack
+    cards:
       - type: custom:mini-graph-card
         entities: 
           - sensor.dishwasher_power
@@ -172,4 +156,20 @@ cards:
             # Off
           - value: -1
             color: "#1db954"
+
+      - type: entities
+        title: Dishwasher
+        show_header_toggle: false
+        entities:
+        - sensor.dishwasher_cost
+        - sensor.dishwasher_friendly_status
+        - input_boolean.disable_dishwasher_notification
+        - type: section
+        - sensor.dishwasher_load
+        - sensor.dishwasher_status_detail
+        - type: section
+        - sensor.weekly_dishwasher
+        - sensor.monthly_dishwasher
+        - type: section
+        - sensor.grocy_stock_dishwasher_tabs
 

@@ -3,49 +3,6 @@ id: cert
 icon: mdi:certificate
 title: Security
 cards:
-  - type: entities
-    show_header_toggle: off
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Synolgy
-      - sensor.cert_synology_stuartma
-
-  - type: entities
-    show_header_toggle: off
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Home-Assitant
-      - sensor.cert_anderson_ha
-      - sensor.cert_anderson_ha_find3
-      - sensor.cert_anderson_ha_grocy
-      - sensor.cert_anderson_ha_ide
-      - sensor.cert_anderson_ha_node
-      - sensor.cert_anderson_ha_portainer
-      - sensor.cert_anderson_ha_proxy
-      - sensor.cert_anderson_ha_trac
-      - sensor.cert_anderson_ha_zwave
-
-  - type: entities
-    show_header_toggle: off
-    entities:
-      - type: 'custom:text-divider-row'
-        text: NxFIFTEEN
-      - sensor.cert_nxfifteen_www
-      - sensor.cert_nx15_at
-      - sensor.cert_nxfifteen_eml_web
-      - sensor.cert_nxfifteen_git
-
-  - type: entities
-    show_header_toggle: off
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Projects
-      - sensor.cert_nxfifteen_core
-      - sensor.cert_license_nxfifteen_rocks
-      - sensor.cert_nxfifteen_skizimport
-      - sensor.cert_nxfifteen_your
-      - sensor.cert_nxfifteen_xyz
-
   - type: vertical-stack
     cards:
       - type: entities
@@ -227,5 +184,47 @@ cards:
                       icon: mdi:server-network-off
                   tap_action:
                     action: more-info
-        
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Synolgy
+      - sensor.cert_synology_stuartma
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Home-Assitant
+      - sensor.cert_anderson_ha
+      - sensor.cert_anderson_ha_find3
+      - sensor.cert_anderson_ha_grocy
+      - sensor.cert_anderson_ha_ide
+      - sensor.cert_anderson_ha_node
+      - sensor.cert_anderson_ha_portainer
+      - sensor.cert_anderson_ha_proxy
+      - sensor.cert_anderson_ha_trac
+      - sensor.cert_anderson_ha_zwave
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: NxFIFTEEN
+      - sensor.cert_nxfifteen_www
+      - sensor.cert_nx15_at
+      - sensor.cert_nxfifteen_eml_web
+      - sensor.cert_nxfifteen_git
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Projects
+      - sensor.cert_nxfifteen_core
+      - sensor.cert_license_nxfifteen_rocks
+      - sensor.cert_nxfifteen_skizimport
+      - sensor.cert_nxfifteen_your
+      - sensor.cert_nxfifteen_xyz
         
