@@ -100,12 +100,15 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - person.stuart
+          - entity: device_tracker.stuart_presence
+            name: Stuart
           - type: section
-          - sensor.family_stuart_state_human
-          - sensor.family_stuart_state
-          - type: section
-          - input_select.stuart
+          - entity: sensor.family_stuart_loc_room
+            name: Room
+          - entity: sensor.family_stuart_locality
+            name: Locality
+          - entity: sensor.family_stuart_drive_dest
+            name: Driving Too
           - type: section
           - entity: sensor.family_stuart_battery_phone
             name: Battery
@@ -113,12 +116,15 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - person.kareen
+          - entity: device_tracker.kareen_presence
+            name: Kareen
           - type: section
-          - sensor.family_kareen_state_human
-          - sensor.family_kareen_state
-          - type: section
-          - input_select.kareen
+          - entity: sensor.family_kareen_loc_room
+            name: Room
+          - entity: sensor.family_kareen_locality
+            name: Locality
+          - entity: sensor.family_kareen_drive_dest
+            name: Driving Too
           - type: section
           - entity: sensor.family_kareen_battery_phone
             name: Battery
