@@ -100,6 +100,12 @@ shell_command:
   grocy_url_chore_2_done: !secret grocy_url_chore_2_done
   grocy_url_chore_3_done: !secret grocy_url_chore_3_done
 
+grocy:
+  url: !secret grocy_url_api
+  api_key: !secret grocy_url_key
+  sensor:
+    - enabled: true
+
 homeassistant:
   customize:
     script.grocy_url_chore_litter_done:
