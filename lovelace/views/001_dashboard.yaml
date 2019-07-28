@@ -2,7 +2,26 @@
 id: dashboard
 title: Dashboard
 icon: mdi:home-assistant
-cards:
+cards:  
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: House
+      - person.stuart
+      - person.kareen
+      - person.john
+      - person.maureen
+      - person.allan
+      - person.colin
+      - person.irene
+      - person.kayleigh
+      - person.kev
+      - person.khristen
+      - person.mecha
+      - person.scott
+      - person.steve
+
   - type: vertical-stack
     cards:
       #####################
