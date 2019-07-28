@@ -8,10 +8,10 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Kitchen
-      - entity: switch.room_occupancy_kitchen
+      - entity: switch.occ_room_kitchen
         name: Dinning Room
         type: custom:secondaryinfo-entity-row
-        secondary_info: "[[  sensor.room_occupancy_kitchen_reason.state ]]"
+        secondary_info: "[[  sensor.occ_room_kitchen_reason.state ]]"
       - type: section
       - binary_sensor.gf_dinning_contact_side
       - type: section

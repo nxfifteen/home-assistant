@@ -12,7 +12,7 @@ trigger:
     at: '21:00:00'
 
   - platform: state
-    entity_id: switch.room_occupancy_study
+    entity_id: switch.occ_room_study
     from: 'off'
     to: 'on'
     
@@ -31,7 +31,7 @@ condition:
 
     # The room is occupied
     - condition: state
-      entity_id: switch.room_occupancy_study
+      entity_id: switch.occ_room_study
       state: 'on'
 
     # The room is too hot

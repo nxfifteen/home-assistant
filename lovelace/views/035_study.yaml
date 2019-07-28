@@ -8,10 +8,10 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Study
-      - entity: switch.room_occupancy_study
+      - entity: switch.occ_room_study
         name: Study
         type: custom:secondaryinfo-entity-row
-        secondary_info: "[[  sensor.room_occupancy_study_reason.state ]]"
+        secondary_info: "[[  sensor.occ_room_study_reason.state ]]"
  
   - type: entities
     show_header_toggle: false

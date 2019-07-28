@@ -2,14 +2,14 @@
 alias: The Study is Occupied
 trigger:
   - platform: state
-    entity_id: switch.room_occupancy_study
+    entity_id: switch.occ_room_study
     to: 'off'
     
 condition:
   condition: and
   conditions:
     - condition: state
-      entity_id: switch.room_occupancy_study
+      entity_id: switch.occ_room_study
       state: 'off'
 
 action:

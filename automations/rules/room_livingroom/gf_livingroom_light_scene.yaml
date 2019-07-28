@@ -3,7 +3,7 @@ alias: Lighting Night - Livingroom
 
 trigger:
 - platform: state
-  entity_id: switch.room_occupancy_livingroom
+  entity_id: switch.occ_room_livingroom
   from: 'off'
   to: 'on'
 

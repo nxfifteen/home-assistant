@@ -1,36 +1,36 @@
 ---
 sensor:
 - platform: mqtt
-  name: "Room Occupancy Livingroom - Reason"
+  name: "Occ Room Livingroom - Reason"
   state_topic: "iot/room/occupancy/livingroom/reason"
 
 - platform: mqtt
-  name: "Room Occupancy Study - Reason"
+  name: "Occ Room Study - Reason"
   state_topic: "iot/room/occupancy/study/reason"
 
 - platform: mqtt
-  name: "Room Occupancy Bedroom - Reason"
+  name: "Occ Room Bedroom - Reason"
   state_topic: "iot/room/occupancy/bedroom/reason"
 
 - platform: mqtt
-  name: "Room Occupancy Kitchen - Reason"
+  name: "Occ Room Kitchen - Reason"
   state_topic: "iot/room/occupancy/kitchen/reason"
 
 - platform: mqtt
-  name: "Room Occupancy Landing - Reason"
+  name: "Occ Room Landing - Reason"
   state_topic: "iot/room/occupancy/landing/reason"
 
 - platform: mqtt
-  name: "Room Occupancy Hallway - Reason"
+  name: "Occ Room Hallway - Reason"
   state_topic: "iot/room/occupancy/hallway/reason"
 
 - platform: mqtt
-  name: "Room Occupancy Studio - Reason"
+  name: "Occ Room Studio - Reason"
   state_topic: "iot/room/occupancy/studio/reason"
 
 switch:
 - platform: mqtt
-  name: "Room Occupancy Livingroom"
+  name: "Occ Room Livingroom"
   command_topic: "iot/room/occupancy/livingroom/set"
   state_topic: "iot/room/occupancy/livingroom"
   payload_on: "ON"
@@ -39,7 +39,7 @@ switch:
   state_off: "OFF"
 
 - platform: mqtt
-  name: "Room Occupancy Study"
+  name: "Occ Room Study"
   command_topic: "iot/room/occupancy/study/set"
   state_topic: "iot/room/occupancy/study"
   payload_on: "ON"
@@ -48,7 +48,7 @@ switch:
   state_off: "OFF"
 
 - platform: mqtt
-  name: "Room Occupancy Bedroom"
+  name: "Occ Room Bedroom"
   command_topic: "iot/room/occupancy/bedroom/set"
   state_topic: "iot/room/occupancy/bedroom"
   payload_on: "ON"
@@ -57,7 +57,7 @@ switch:
   state_off: "OFF"
 
 - platform: mqtt
-  name: "Room Occupancy Kitchen"
+  name: "Occ Room Kitchen"
   command_topic: "iot/room/occupancy/kitchen/set"
   state_topic: "iot/room/occupancy/kitchen"
   payload_on: "ON"
@@ -66,7 +66,7 @@ switch:
   state_off: "OFF"
 
 - platform: mqtt
-  name: "Room Occupancy Landing"
+  name: "Occ Room Landing"
   command_topic: "iot/room/occupancy/landing/set"
   state_topic: "iot/room/occupancy/landing"
   payload_on: "ON"
@@ -75,7 +75,7 @@ switch:
   state_off: "OFF"
 
 - platform: mqtt
-  name: "Room Occupancy Hallway"
+  name: "Occ Room Hallway"
   command_topic: "iot/room/occupancy/hallway/set"
   state_topic: "iot/room/occupancy/hallway"
   payload_on: "ON"
@@ -84,7 +84,7 @@ switch:
   state_off: "OFF"
 
 - platform: mqtt
-  name: "Room Occupancy Studio"
+  name: "Occ Room Studio"
   command_topic: "iot/room/occupancy/studio/set"
   state_topic: "iot/room/occupancy/studio"
   payload_on: "ON"

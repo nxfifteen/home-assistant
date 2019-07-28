@@ -8,14 +8,14 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Livingroom
-      - entity: switch.room_occupancy_livingroom
+      - entity: switch.occ_room_livingroom
         name: Livingroom
         type: custom:secondaryinfo-entity-row
-        secondary_info: "[[  sensor.room_occupancy_livingroom_reason.state ]]"
+        secondary_info: "[[  sensor.occ_room_livingroom_reason.state ]]"
       - type: section
       - binary_sensor.gf_living_sensor_sensor
-      - switch.room_occupancy_livingroom
-      - sensor.room_occupancy_livingroom_reason
+      - switch.occ_room_livingroom
+      - sensor.occ_room_livingroom_reason
 
   - type: entities
     show_header_toggle: false

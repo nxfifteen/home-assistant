@@ -2,14 +2,14 @@
 alias: Occ Empty - FF Bedroom
 
 trigger:
-- entity_id: switch.room_occupancy_bedroom
+- entity_id: switch.occ_room_bedroom
   platform: state
   from: 'on'
   to: 'off'
   
 condition:
 - condition: state
-  entity_id: switch.room_occupancy_bedroom
+  entity_id: switch.occ_room_bedroom
   state: 'off'
   
 action:

@@ -40,15 +40,15 @@ alexa:
     exclude_entities:
       - switch.dishwasher
       - switch.washing_machine
-      - switch.room_occupancy_studio
-      - switch.room_occupancy_hallway
-      - switch.room_occupancy_livingroom
-      - switch.room_occupancy_study
-      - switch.room_occupancy_bedroom
-      - switch.room_occupancy_studio
-      - switch.room_occupancy_hallway
-      - switch.room_occupancy_landing
-      - switch.room_occupancy_kitchen
+      - switch.occ_room_studio
+      - switch.occ_room_hallway
+      - switch.occ_room_livingroom
+      - switch.occ_room_study
+      - switch.occ_room_bedroom
+      - switch.occ_room_studio
+      - switch.occ_room_hallway
+      - switch.occ_room_landing
+      - switch.occ_room_kitchen
       - switch.wake_on_lan
       - switch.remote_gf_livingroom_watch_tv
       - switch.remote_gf_livingroom_watch_fire_tv

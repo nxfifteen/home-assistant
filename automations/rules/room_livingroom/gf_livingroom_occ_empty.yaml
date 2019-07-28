@@ -2,13 +2,13 @@
 alias: Lighting Off - FF Livingroom
 
 trigger:
-- entity_id: switch.room_occupancy_livingroom
+- entity_id: switch.occ_room_livingroom
   platform: state
   to: 'off'
   
 condition:
 - condition: state
-  entity_id: switch.room_occupancy_livingroom
+  entity_id: switch.occ_room_livingroom
   state: 'off'
   
 action:
