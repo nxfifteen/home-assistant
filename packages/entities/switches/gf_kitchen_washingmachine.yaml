@@ -78,6 +78,10 @@ homeassistant:
       friendly_name: Washing Machine
       icon: mdi:washing-machine
       initial_state: on
+
+    switch.washing_machine_cost:
+      friendly_name: Running Cost
+      icon: mdi:currency-gbp
       
     sensor.washing_machine_status:
       friendly_name: Washing Machine Status
@@ -85,3 +89,9 @@ homeassistant:
       
     sensor.washing_machine_power:
       friendly_name: Washing Machine Power
+      
+    sensor.weekly_washing_machine:
+      friendly_name: Washing Machine Weekly Meter
+      
+    sensor.monthly_washing_machine:
+      friendly_name: Washing Machine Monthly Meter
