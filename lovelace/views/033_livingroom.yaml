@@ -12,10 +12,16 @@ cards:
         name: Livingroom
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[  sensor.occ_room_livingroom_reason.state ]]"
-      - type: section
-      - binary_sensor.gf_living_sensor_sensor
-      - switch.occ_room_livingroom
-      - sensor.occ_room_livingroom_reason
+
+  - type: picture-glance
+    entities:
+      - switch.gf_living_tv
+    title: Harmony
+    state_image:
+      "PowerOff": /local/images/power_off_red.png
+      "Watch TV": /local/images/humax.png
+      "Watch Fire TV": /local/images/amazon_tv.png
+    entity: sensor.remote_gf_livingroom
 
   - type: entities
     show_header_toggle: false
@@ -23,9 +29,6 @@ cards:
       - type: 'custom:text-divider-row'
         text: Harmony
       - sensor.remote_gf_livingroom
-      - switch.remote_gf_livingroom_watch_tv
-      - switch.remote_gf_livingroom_watch_fire_tv
-      - media_player.livingroom_fire_tv_stick
  
   - type: entities
     show_header_toggle: false
@@ -41,18 +44,6 @@ cards:
       - type: section
       - sensor.gf_living_tv_last_month
       - sensor.gf_living_tv_last_week
-
-  - type: picture-glance
-    title: Harmony
-    entities:
-      - switch.gf_living_tv
-      - switch.remote_gf_livingroom_watch_tv
-      - switch.remote_gf_livingroom_watch_fire_tv
-    state_image:
-      "PowerOff": /local/images/power_off_red.png
-      "Watch TV": /local/images/humax.png
-      "Watch Fire TV": /local/images/amazon_tv.png
-    entity: sensor.remote_gf_livingroom
 
   - type: entities
     show_header_toggle: false
@@ -71,7 +62,7 @@ cards:
         text: Plugs
       - switch.gf_living_tv
 
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
     - type: custom:mini-graph-card
       entities: 
@@ -128,38 +119,6 @@ cards:
         color: "#1db954"
       - value: 0
         color: "#3498db"
-
-  - type: vertical-stack
-    cards:
-      - type: custom:mini-media-player
-        name: FireTV
-        entity: media_player.livingroom_fire_tv
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-    
-      - type: custom:mini-media-player
-        name: Alexa
-        entity: media_player.alexa_livingroom
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
-    
-      - type: custom:mini-media-player
-        name: Alexa
-        entity: media_player.alexa_hallway
-        artwork: cover
-        source: icon
-        hide:
-          volume: false
-          source: true
-          power_state: true
         
   - type: entities
     show_header_toggle: false
