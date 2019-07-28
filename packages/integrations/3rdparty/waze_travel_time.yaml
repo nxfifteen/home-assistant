@@ -34,3 +34,16 @@ sensor:
   destination: zone.tayport
   scan_interval: 01:30
   region: 'EU'
+    
+homeassistant:
+  customize:
+    sensor.commute_stuart_home:
+      friendly_name: "Home"
+    sensor.commute_stuart_work:
+      friendly_name: "Work"
+    sensor.commute_kareen_home:
+      friendly_name: "Home"
+    sensor.commute_kareen_work_a:
+      friendly_name: "Newport"
+    sensor.commute_kareen_work_b:
+      friendly_name: "Tayport"
