@@ -39,3 +39,4 @@ redacted_users.txt
 !.gitattributes
 !.gitlab-ci.yml
 !**/.gitkeep
+.androidkeys/.androidkeys
