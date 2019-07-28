@@ -8,6 +8,9 @@ cards:
     show_header_toggle: false
     entities:
     - sensor.this_weeks_bin
+    
+  - type: custom:grocy-chores-card
+    entity: sensor.grocy
 
   - type: entities
     title: Litter Change

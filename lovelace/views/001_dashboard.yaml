@@ -3,25 +3,6 @@ id: dashboard
 title: Dashboard
 icon: mdi:home-assistant
 cards:  
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: House
-      - person.stuart
-      - person.kareen
-      - person.john
-      - person.maureen
-      - person.allan
-      - person.colin
-      - person.irene
-      - person.kayleigh
-      - person.kev
-      - person.khristen
-      - person.mecha
-      - person.scott
-      - person.steve
-
   - type: vertical-stack
     cards:
       #####################
@@ -156,8 +137,28 @@ cards:
         
   - type: vertical-stack
     cards:  
-      - type: thermostat
+      - type: 'custom:simple-thermostat'
         entity: climate.hallway
+        name: Nest
+        decimals: 1
+        icon: 'true'
+        step_size: 0.5
+        sensors:
+          - attribute: max_temp
+            name: Max temp
+          - attribute: temperature
+            name: Cur temp
+          - attribute: min_temp
+            name: Min temp
+        modes:
+          'heat':
+            name: Heating
+            include: true
+            icon: false
+          'off':
+            name: 'Off'
+            include: true
+            icon: mdi:whitewalker
     
       - type: custom:mini-graph-card
         entities: 

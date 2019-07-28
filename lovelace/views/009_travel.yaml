@@ -7,6 +7,22 @@ cards:
     show_header_toggle: false
     entities:
     - sensor.tay_road_bridge
+
+  - type: 'custom:travel-time-card'
+    entities:
+      - entity: sensor.commute_stuart_home
+        zone: zone.home
+      - entity: sensor.commute_stuart_work
+        zone: zone.cs_tps
+
+  - type: 'custom:travel-time-card'
+    entities:
+      - entity: sensor.commute_kareen_home
+        zone: zone.home
+      - entity: sensor.commute_kareen_work_a
+        zone: zone.newport
+      - entity: sensor.commute_kareen_work_b
+        zone: zone.tayport
   
   - type: entities
     show_header_toggle: false
