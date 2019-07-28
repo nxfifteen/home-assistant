@@ -1,0 +1,17 @@
+---
+alias: Check Room Occupancy - Studio
+
+trigger:
+- platform: state
+  entity_id: binary_sensor.motion_gf_studio_camera
+
+- platform: state
+  entity_id: sensor.family_family_state_raw
+  
+action:
+  - service: mqtt.publish
+    data:
+      topic: cmd/nodered/occcheck/studio
+      payload: "true"
+      qos: 2
+      retain: false

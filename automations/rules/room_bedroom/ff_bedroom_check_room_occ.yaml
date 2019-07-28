@@ -1,0 +1,35 @@
+---
+alias: Check Room Occupancy - Bedroom
+
+trigger:
+- platform: state
+  entity_id: binary_sensor.motion_ff_bedroom
+
+- platform: state
+  entity_id: sensor.family_family_state_raw
+
+- platform: state
+  entity_id: sensor.family_kareen_state
+
+- platform: state
+  entity_id: sensor.family_stuart_state
+
+- platform: state
+  entity_id: sensor.media_ff_bedroom_fire_tv
+
+- platform: state
+  entity_id: sensor.media_ff_bedroom_fire_tv
+
+- platform: state
+  entity_id: sensor.media_ff_bedroom_plex_audio
+
+- platform: state
+  entity_id: switch.ff_bedroom_tv
+  
+action:
+  - service: mqtt.publish
+    data:
+      topic: cmd/nodered/occcheck/bedroom
+      payload: "true"
+      qos: 2
+      retain: false
