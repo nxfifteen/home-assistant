@@ -45,9 +45,7 @@ cards:
       - type: 'custom:text-divider-row'
         text: Plugs
       - script.my_computer
-      - switch.wake_on_lan
       - switch.ff_study_monitors
-      - input_select.his_pc_options
       - type: section
       - switch.ff_study_fan
       - switch.study_sterio
