@@ -18,13 +18,16 @@ trigger:
   entity_id: sensor.media_ff_bedroom_fire_tv
 
 - platform: state
-  entity_id: sensor.media_ff_bedroom_fire_tv
-
-- platform: state
   entity_id: sensor.media_ff_bedroom_plex_audio
 
 - platform: state
   entity_id: switch.ff_bedroom_tv
+
+- platform: state
+  entity_id: sensor.family_stuart_loc_room
+
+- platform: state
+  entity_id: sensor.family_kareen_loc_room
   
 action:
   - service: mqtt.publish
