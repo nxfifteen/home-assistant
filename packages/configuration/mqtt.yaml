@@ -5,7 +5,7 @@ mqtt:
   username: !secret mqtt_broker_username
   password: !secret mqtt_broker_password
   discovery: true
-  discovery_prefix: ztm
+  discovery_prefix: discovery
   birth_message:
     topic: 'hass/status'
     payload: 'online'
