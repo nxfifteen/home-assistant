@@ -3,8 +3,9 @@ switch:
 - platform: mqtt
   name: ff_bedroom_fairylights
   icon: mdi:led-strip
-  state_topic: "zwave/9/37/1/0"
-  command_topic: "zwave/9/37/1/0/set"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/9/37/1/0"
+  command_topic: "Zwave2Mqtt/9/37/1/0/set"
   payload_on: "true"
   payload_off: "false"
   state_on: "true"
