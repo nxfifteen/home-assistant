@@ -2,15 +2,17 @@
 sensor:
 - platform: mqtt
   name: ff_study_loading_pi_power
-  state_topic: "zwave/7/50/1/8"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/7/50/1/8"
   device_class: power
 
 switch:
 - platform: mqtt
   name: ff_study_loading_pi
   icon: mdi:speaker-wireless
-  state_topic: "zwave/7/37/1/0"
-  command_topic: "zwave/7/37/1/0/set"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/7/37/1/0"
+  command_topic: "Zwave2Mqtt/7/37/1/0/set"
   payload_on: "true"
   payload_off: "false"
   state_on: "true"

@@ -2,15 +2,17 @@
 sensor:
 - platform: mqtt
   name: gf_dinning_tv_power
-  state_topic: "zwave/14/50/1/8"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/14/50/1/8"
   device_class: power
 
 switch:
 - platform: mqtt
   name: gf_dinning_tv
   icon: mdi:coffee-outline
-  state_topic: "zwave/14/37/1/0"
-  command_topic: "zwave/14/37/1/0/set"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/14/37/1/0"
+  command_topic: "Zwave2Mqtt/14/37/1/0/set"
   payload_on: "true"
   payload_off: "false"
   state_on: "true"

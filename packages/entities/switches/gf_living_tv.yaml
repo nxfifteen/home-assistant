@@ -2,7 +2,8 @@
 sensor:
 - platform: mqtt
   name: gf_living_tv_power
-  state_topic: "zwave/13/50/1/8"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/13/50/1/8"
   device_class: power
 
 - platform: template
@@ -29,8 +30,9 @@ switch:
 - platform: mqtt
   name: gf_living_tv
   icon: mdi:television-classic
-  state_topic: "zwave/13/37/1/0"
-  command_topic: "zwave/13/37/1/0/set"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/13/37/1/0"
+  command_topic: "Zwave2Mqtt/13/37/1/0/set"
   payload_on: "true"
   payload_off: "false"
   state_on: "true"

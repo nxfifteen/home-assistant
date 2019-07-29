@@ -2,12 +2,14 @@
 sensor:
 - platform: mqtt
   name: ff_study_monitors_power
-  state_topic: "zwave/20/50/1/8"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/20/50/1/8"
   device_class: power
 
 - platform: mqtt
   name: ff_study_monitors_colour
-  state_topic: "zwave/20/51/1/0"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/20/51/1/0"
   
 - platform: template
   sensors:
@@ -33,8 +35,9 @@ switch:
 - platform: mqtt
   name: ff_study_monitors
   icon: mdi:monitor-dashboard
-  state_topic: "zwave/20/37/1/0"
-  command_topic: "zwave/20/37/1/0/set"
+  value_template: "{{ value_json.value }}"
+  state_topic: "Zwave2Mqtt/20/37/1/0"
+  command_topic: "Zwave2Mqtt/20/37/1/0/set"
   payload_on: "true"
   payload_off: "false"
   state_on: "true"

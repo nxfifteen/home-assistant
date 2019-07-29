@@ -4,3 +4,11 @@ mqtt:
   port: !secret mqtt_broker_port
   username: !secret mqtt_broker_username
   password: !secret mqtt_broker_password
+  discovery: true
+  discovery_prefix: discovery
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
