@@ -20,6 +20,9 @@ sensor:
       media_ff_study_plex_alexa:
         value_template: "{% if states('media_player.plex_study_alexa') == 'unknown' %}off{% else %}{{ states('media_player.plex_study_alexa') }}{% endif %}"
 
+      media_gf_livingroom_plex_alexa:
+        value_template: "{% if states('media_player.plex_livingroom_alexa') == 'unknown' %}off{% else %}{{ states('media_player.plex_livingroom_alexa') }}{% endif %}"
+
       media_gf_livingroom_plex_fire:
         value_template: "{% if states('media_player.plex_livingroom_firetv') == 'unknown' %}off{% else %}{{ states('media_player.plex_livingroom_firetv') }}{% endif %}"
 

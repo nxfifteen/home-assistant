@@ -1,0 +1,18 @@
+---
+alias: Set Watts to Zero (Kitchen TV)
+
+trigger:
+- platform: state
+  entity_id: switch.gf_dinning_tv
+  from:  'on'
+  to:  'off'
+  
+action:
+  - service: mqtt.publish
+    data:
+      topic: zwave/14/50/1/8
+      payload: 0
+      qos: 2
+      retain: false
+
+ 

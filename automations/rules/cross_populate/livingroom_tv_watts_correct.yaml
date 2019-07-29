@@ -1,0 +1,18 @@
+---
+alias: Set Watts to Zero (Livingroom TV)
+
+trigger:
+- platform: state
+  entity_id: switch.gf_living_tv
+  from:  'on'
+  to:  'off'
+  
+action:
+  - service: mqtt.publish
+    data:
+      topic: zwave/13/50/1/8
+      payload: 0
+      qos: 2
+      retain: false
+
+ 
