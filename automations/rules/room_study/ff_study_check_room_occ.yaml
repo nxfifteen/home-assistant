@@ -12,10 +12,10 @@ trigger:
   entity_id: binary_sensor.ff_study_sensor_sensor
 
 - platform: state
-  entity_id: switch.ff_study_monitors
+  entity_id: switch.ff_study_monitors_switch
 
 - platform: state
-  entity_id: sensor.ff_study_monitors_power
+  entity_id: sensor.ff_study_monitors_power_watts
 
 - platform: state
   entity_id: sensor.media_ff_study_alexa

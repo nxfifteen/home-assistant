@@ -5,7 +5,7 @@ switchs_all_safe:
     - switch.ff_bedroom_fairylights
     - switch.ff_bedroom_fan
     - switch.ff_bedroom_tv
-    - switch.ff_study_monitors
+    - switch.ff_study_monitors_switch
     - switch.gf_dinning_tv
     - switch.gf_living_tv
     - switch.occ_room_bedroom

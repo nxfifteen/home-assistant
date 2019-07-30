@@ -42,8 +42,8 @@ cards:
       - type: section
       - sensor.family_family_state_raw
       - binary_sensor.motion_ff_study
-      - switch.ff_study_monitors
-      - sensor.ff_study_monitors_power
+      - switch.ff_study_monitors_switch
+      - sensor.ff_study_monitors_power_watts
       - sensor.media_ff_study_alexa
       - sensor.media_ff_study_plex_audio
       - sensor.media_ff_study_plex_alexa

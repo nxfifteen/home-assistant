@@ -1,16 +1,5 @@
 ---
 sensor:
-- platform: mqtt
-  name: ff_study_monitors_power
-  value_template: "{{ value_json.value }}"
-  state_topic: "zwave/20/50/1/8"
-  device_class: power
-
-- platform: mqtt
-  name: ff_study_monitors_colour
-  value_template: "{{ value_json.value }}"
-  state_topic: "zwave/20/51/1/0"
-  
 - platform: template
   sensors:
     ff_study_monitors_last_week:
@@ -22,7 +11,7 @@ sensor:
       friendly_name: 'Last Month'
       
     ff_study_monitors_cost:
-      entity_id: sensor.monthly_ff_study_monitors
+      entity_id: sensor.monthly_ff_study_monitors_switch
       friendly_name: 'Monitor Cost'
       value_template: >-
         {% if (states.sensor.monthly_ff_study_monitors.state|float > 0) %}
@@ -31,28 +20,13 @@ sensor:
           £{{ (states.sensor.monthly_ff_study_monitors.state|float * 0.000242)|round(2) }}
         {% endif %}
 
-switch:
-- platform: mqtt
-  name: ff_study_monitors
-  icon: mdi:monitor-dashboard
-  value_template: "{{ value_json.value }}"
-  state_topic: "zwave/20/37/1/0"
-  command_topic: "zwave/20/37/1/0/set"
-  payload_on: "true"
-  payload_off: "false"
-  state_on: "true"
-  state_off: "false"
-  optimistic: false
-  qos: 0
-  retain: true
-
 utility_meter:
   weekly_ff_study_monitors:
-    source: sensor.ff_study_monitors_power
+    source: sensor.ff_study_monitors_power_watts
     cycle: weekly
     
   monthly_ff_study_monitors:
-    source: sensor.ff_study_monitors_power
+    source: sensor.ff_study_monitors_power_watts
     cycle: monthly
 
 homeassistant:
@@ -63,7 +37,7 @@ homeassistant:
     sensor.ff_study_monitors_colour:
       friendly_name: Monitors Colour
       
-    sensor.ff_study_monitors_power:
+    sensor.ff_study_monitors_power_watts:
       friendly_name: Monitors Watts
       
     sensor.monthly_ff_study_monitors:

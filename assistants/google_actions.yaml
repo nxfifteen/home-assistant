@@ -45,7 +45,7 @@ google_actions:
       - switch.ff_bedroom_tv
       - switch.ff_study_fan
       - switch.ff_study_loading_pi
-      - switch.ff_study_monitors
+      - switch.ff_study_monitors_switch
       - switch.gf_dinning_tv
       - switch.study_sterio
       - switch.gf_hallway_camera
