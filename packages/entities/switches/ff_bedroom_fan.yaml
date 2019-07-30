@@ -4,8 +4,8 @@ switch:
   name: ff_bedroom_fan
   icon: mdi:television-classic
   value_template: "{{ value_json.value }}"
-  state_topic: "Zwave2Mqtt/12/37/1/0"
-  command_topic: "Zwave2Mqtt/12/37/1/0/set"
+  state_topic: "zwave/12/37/1/0"
+  command_topic: "zwave/12/37/1/0/set"
   payload_on: "true"
   payload_off: "false"
   state_on: "true"

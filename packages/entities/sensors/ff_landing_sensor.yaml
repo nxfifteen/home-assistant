@@ -3,7 +3,7 @@ binary_sensor:
 - platform: mqtt
   name: ff_landing_sensor
   value_template: "{{ value_json.value }}"
-  state_topic: "Zwave2Mqtt/10/48/1/0"
+  state_topic: "zwave/10/48/1/0"
   payload_on: "true"
   payload_off: "false"
   device_class: motion
@@ -21,7 +21,7 @@ sensor:
 - platform: mqtt
   name: ff_landing_sensor_battery
   value_template: "{{ value_json.value }}"
-  state_topic: "Zwave2Mqtt/10/128/1/0"
+  state_topic: "zwave/10/128/1/0"
   unit_of_measurement: "%"
   device_class: battery
 
