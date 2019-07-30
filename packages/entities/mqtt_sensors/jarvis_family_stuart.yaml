@@ -11,7 +11,10 @@ sensor:
 - platform: mqtt
   name: family_stuart_loc_room
   state_topic: "tracker/family/stuart/room"
-  value_template: '{{ value_json.data.loc }}'
+  value_template: '{{ value_json.loc }}'
+  json_attributes:
+    - prob
+    - seen
 
 - platform: mqtt
   name: family_stuart_locality
