@@ -3,7 +3,7 @@ binary_sensor:
 - platform: mqtt
   name: ff_study_sensor_sensor
   value_template: "{{ value_json.value }}"
-  state_topic: "Zwave2Mqtt/2/48/1/0"
+  state_topic: "zwave/2/48/1/0"
   payload_on: "true"
   payload_off: "false"
   device_class: motion
@@ -21,28 +21,28 @@ sensor:
 - platform: mqtt
   name: ff_study_sensor_battery
   value_template: "{{ value_json.value }}"
-  state_topic: "Zwave2Mqtt/2/128/1/0"
+  state_topic: "zwave/2/128/1/0"
   unit_of_measurement: "%"
   device_class: battery
 
 - platform: mqtt
   name: ff_study_sensor_temperature
   value_template: "{{ value_json.value }}"
-  state_topic: "Zwave2Mqtt/2/49/1/1"
+  state_topic: "zwave/2/49/1/1"
   unit_of_measurement: "�C"
   device_class: temperature
 
 - platform: mqtt
   name: ff_study_sensor_lux
   value_template: "{{ value_json.value }}"
-  state_topic: "Zwave2Mqtt/2/49/1/3"
+  state_topic: "zwave/2/49/1/3"
   unit_of_measurement: "lux"
   device_class: illuminance
 
 - platform: mqtt
   name: ff_study_sensor_tamper
   value_template: "{{ value_json.value }}"
-  state_topic: "Zwave2Mqtt/2/113/1/0"
+  state_topic: "zwave/2/113/1/0"
   unit_of_measurement: "#"
 
 homeassistant:

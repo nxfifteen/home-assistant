@@ -3,8 +3,8 @@ switch:
 - platform: mqtt
   name: gf_dinning_room_camera
   value_template: "{{ value_json.value }}"
-  state_topic: "Zwave2Mqtt/11/37/1/0"
-  command_topic: "Zwave2Mqtt/11/37/1/0/set"
+  state_topic: "zwave/11/37/1/0"
+  command_topic: "zwave/11/37/1/0/set"
   payload_on: "true"
   payload_off: "false"
   state_on: "true"
