@@ -1,18 +1,19 @@
 ---
+# Service running on Mosquitto Pi
 sensor:
   - platform: mqtt
     name: "printer_hp"
-    state_topic: !secret dev_printer_hp
+    state_topic: iot/sensors/printers/HPEnvy
     value_template: "{{ value_json.status }}"
     
   - platform: mqtt
     name: "printer_hp_colour"
-    state_topic: !secret dev_printer_hp
+    state_topic: iot/sensors/printers/HPEnvy
     value_template: "{{ value_json.colour.level }}"
     
   - platform: mqtt
     name: "printer_hp_black"
-    state_topic: !secret dev_printer_hp
+    state_topic: iot/sensors/printers/HPEnvy
     value_template: "{{ value_json.black.level }}"
 
 homeassistant:
