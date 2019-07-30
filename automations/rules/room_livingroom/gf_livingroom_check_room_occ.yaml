@@ -15,7 +15,7 @@ trigger:
   entity_id: sensor.family_family_state_raw
 
 - platform: state
-  entity_id: sensor.gf_living_tv_power
+  entity_id: sensor.gf_living_tv_power_watts
 
 - platform: state
   entity_id: sensor.media_gf_livingroom_alexa

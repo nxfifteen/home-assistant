@@ -10,7 +10,7 @@ cards:
     - switch.gf_hallway_camera
     - switch.gf_living_camera
     - switch.gf_studio_camera
-    - switch.gf_dinning_room_camera
+    - switch.gf_dinning_room_camera_switch
 
   - type: entities
     title: Bayesian Occupancy (dinning)
@@ -21,7 +21,7 @@ cards:
       - binary_sensor.motion_gf_dinning
       - binary_sensor.motion_gf_dinning_camera
       - binary_sensor.motion_gf_kitchen_camera
-      - switch.gf_dinning_tv
+      - switch.gf_dinning_tv_switch
 
   - type: entities
     title: Bayesian Occupancy (livingroom)
@@ -32,7 +32,7 @@ cards:
       - binary_sensor.motion_gf_living
       - binary_sensor.motion_gf_living_camera
       - binary_sensor.motion_gf_studio_camera
-      - sensor.gf_living_tv_power
+      - sensor.gf_living_tv_power_watts
       - sensor.remote_gf_livingroom
 
   - type: entities

@@ -3,7 +3,7 @@ alias: Restart Dinning Room IP Camera - By Socket
 
 trigger:
 - platform: state
-  entity_id: switch.gf_dinning_room_camera
+  entity_id: switch.gf_dinning_room_camera_switch
   from:  'on'
   to:  'off'
   for:
@@ -12,7 +12,7 @@ trigger:
 action:
   - service: switch.turn_on
     data:
-      entity_id: switch.gf_dinning_room_camera
+      entity_id: switch.gf_dinning_room_camera_switch
       
   - service: script.notify_join
     data_template:

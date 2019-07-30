@@ -46,12 +46,12 @@ alexa:
       - switch.ff_study_fan
       - switch.ff_study_loading_pi
       - switch.ff_study_monitors_switch
-      - switch.gf_dinning_tv
+      - switch.gf_dinning_tv_switch
       - switch.study_sterio
       - switch.gf_hallway_camera
       - switch.gf_living_camera
       - switch.gf_studio_camera
-      - switch.gf_dinning_room_camera
+      - switch.gf_dinning_room_camera_switch
       
     exclude_entities:
       - switch.dishwasher
@@ -68,7 +68,7 @@ alexa:
       - switch.wake_on_lan
       - switch.remote_gf_livingroom_watch_tv
       - switch.remote_gf_livingroom_watch_fire_tv
-      - switch.gf_living_tv
+      - switch.gf_living_tv_switch
   
   entity_config:
 
