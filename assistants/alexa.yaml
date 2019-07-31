@@ -40,8 +40,8 @@ alexa:
       - switch.adguard_parental_control
       - switch.adguard_safe_browsing
       - switch.adguard_safe_search
-      - switch.ff_bedroom_fairylights
-      - switch.ff_bedroom_fan
+      - switch.ff_bedroom_fairylights_switch
+      - switch.ff_bedroom_fan_switch
       - switch.ff_bedroom_tv_switch
       - switch.ff_study_fan_switch
       - switch.ff_study_loading_pi_switch
@@ -197,7 +197,7 @@ alexa:
       description: The Bedroom TV 
       display_categories: SWITCH
 
-    switch.ff_bedroom_fairylights:
+    switch.ff_bedroom_fairylights_switch:
       name: Bedroom Fairy Lights
       description: The Bedroom Fairy Lights 
       display_categories: SWITCH
@@ -277,7 +277,7 @@ alexa:
       description: Enable AdGuard Parental Controls
       display_categories: SWITCH
 
-    switch.ff_bedroom_fan:
+    switch.ff_bedroom_fan_switch:
       name: Bedroom Fan
       description: The Bedroom Fan
       display_categories: SWITCH
