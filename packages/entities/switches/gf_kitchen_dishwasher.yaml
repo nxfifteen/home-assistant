@@ -64,11 +64,11 @@ sensor:
           {% endif %}
 
 utility_meter:
-  gf_dinning_dishwasher_weekly:
+  gf_dinning_dishwasher_meter_weekly:
     source: sensor.gf_dinning_dishwasher_consumption
     cycle: weekly
     
-  gf_dinning_dishwasher_monthly:
+  gf_dinning_dishwasher_meter_monthly:
     source: sensor.gf_dinning_dishwasher_consumption
     cycle: monthly
 
