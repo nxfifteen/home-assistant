@@ -42,7 +42,7 @@ google_actions:
       - switch.adguard_safe_search
       - switch.ff_bedroom_fairylights
       - switch.ff_bedroom_fan
-      - switch.ff_bedroom_tv
+      - switch.ff_bedroom_tv_switch
       - switch.ff_study_fan
       - switch.ff_study_loading_pi
       - switch.ff_study_monitors_switch
@@ -168,7 +168,7 @@ google_actions:
       name: Loading Station
       room: Study
   
-    switch.ff_bedroom_tv:
+    switch.ff_bedroom_tv_switch:
       name: Bedroom TV
       room: Bedroom
 

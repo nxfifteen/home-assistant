@@ -57,7 +57,7 @@ cards:
       - sensor.family_family_state_raw
       - sensor.house_scene
       - binary_sensor.motion_ff_bedroom
-      - switch.ff_bedroom_tv
+      - switch.ff_bedroom_tv_switch
       - sensor.media_ff_bedroom_alexa
       - sensor.media_ff_bedroom_fire_tv
       - sensor.media_ff_bedroom_plex_audio
