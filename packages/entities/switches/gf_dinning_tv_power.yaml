@@ -1,30 +1,8 @@
 ---
-sensor:
-- platform: mqtt
-  name: gf_dinning_tv_power
-  value_template: "{{ value_json.value }}"
-  state_topic: "zwave/14/50/1/8"
-  device_class: power
-
-switch:
-- platform: mqtt
-  name: gf_dinning_tv
-  icon: mdi:coffee-outline
-  value_template: "{{ value_json.value }}"
-  state_topic: "zwave/14/37/1/0"
-  command_topic: "zwave/14/37/1/0/set"
-  payload_on: "true"
-  payload_off: "false"
-  state_on: "true"
-  state_off: "false"
-  optimistic: false
-  qos: 0
-  retain: true
-
 homeassistant:
   customize:
     switch.gf_dinning_tv:
       friendly_name: TV
-    sensor.gf_dinning_tv_power:
+    sensor.gf_dinning_tv_power_watts:
       friendly_name: TV Watts
  

@@ -8,4 +8,4 @@ my_computer:
 
     - service: switch.turn_on
       data:
-        entity_id: switch.ff_study_monitors
+        entity_id: switch.ff_study_monitors_switch

@@ -3,7 +3,7 @@ alias: Set Watts to Zero (Livingroom TV)
 
 trigger:
 - platform: state
-  entity_id: switch.gf_living_tv
+  entity_id: switch.gf_living_tv_switch
   from:  'on'
   to:  'off'
   

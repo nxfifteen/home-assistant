@@ -3,7 +3,7 @@ alias: Set Watts to Zero (Kitchen TV)
 
 trigger:
 - platform: state
-  entity_id: switch.gf_dinning_tv
+  entity_id: switch.gf_dinning_tv_switch
   from:  'on'
   to:  'off'
   

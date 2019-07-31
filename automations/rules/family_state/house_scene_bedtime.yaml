@@ -24,7 +24,7 @@ action:
 
   - service: switch.turn_off
     data:
-      entity_id: switch.gf_living_tv
+      entity_id: switch.gf_living_tv_switch
 
   - service: light.turn_on
     data:
@@ -60,7 +60,7 @@ action:
 
   - service: switch.turn_off
     data:
-      entity_id: switch.gf_dinning_tv
+      entity_id: switch.gf_dinning_tv_switch
 
   # Setup the Hallways
   - service: light.turn_on

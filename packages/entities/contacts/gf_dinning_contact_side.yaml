@@ -1,21 +1,4 @@
 ---
-binary_sensor:  
-- platform: mqtt
-  name: gf_dinning_contact_side
-  value_template: "{{ value_json.value }}"
-  state_topic: "zwave/21/48/1/0"
-  payload_on: "true"
-  payload_off: "false"
-  device_class: door
-
-sensor:
-- platform: mqtt
-  name: gf_dinning_contact_battery
-  value_template: "{{ value_json.value }}"
-  state_topic: "zwave/21/128/1/0"
-  unit_of_measurement: "%"
-  device_class: battery
-
 homeassistant:
   customize:
     binary_sensor.gf_dinning_contact_side:

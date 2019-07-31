@@ -23,7 +23,7 @@ family_state_8:
     
     - service: switch.turn_off
       data:
-        entity_id: switch.ff_study_monitors
+        entity_id: switch.ff_study_monitors_switch
     
     - service: switch.turn_off
       data:

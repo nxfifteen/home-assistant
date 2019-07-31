@@ -1,11 +1,5 @@
 ---
 sensor:
-- platform: mqtt
-  name: gf_living_tv_power
-  value_template: "{{ value_json.value }}"
-  state_topic: "zwave/13/50/1/8"
-  device_class: power
-
 - platform: template
   sensors:
     gf_living_tv_last_week:
@@ -17,7 +11,7 @@ sensor:
       friendly_name: 'Last Month'
       
     gf_living_tv_cost:
-      entity_id: sensor.monthly_gf_living_tv
+      entity_id: sensor.monthly_gf_living_tv_switch
       friendly_name: 'dishwasher Cost'
       value_template: >-
         {% if (states.sensor.monthly_gf_living_tv.state|float > 0) %}
@@ -26,28 +20,13 @@ sensor:
           £{{ (states.sensor.monthly_gf_living_tv.state|float * 0.000242)|round(2) }}
         {% endif %}
 
-switch:
-- platform: mqtt
-  name: gf_living_tv
-  icon: mdi:television-classic
-  value_template: "{{ value_json.value }}"
-  state_topic: "zwave/13/37/1/0"
-  command_topic: "zwave/13/37/1/0/set"
-  payload_on: "true"
-  payload_off: "false"
-  state_on: "true"
-  state_off: "false"
-  optimistic: false
-  qos: 0
-  retain: true
-
 utility_meter:
   weekly_gf_living_tv:
-    source: sensor.gf_living_tv_power
+    source: sensor.gf_living_tv_power_watts
     cycle: weekly
     
   monthly_gf_living_tv:
-    source: sensor.gf_living_tv_power
+    source: sensor.gf_living_tv_power_watts
     cycle: monthly
 
 homeassistant:
@@ -55,7 +34,7 @@ homeassistant:
     switch.gf_living_tv:
       friendly_name: TV
       
-    sensor.gf_living_tv_power:
+    sensor.gf_living_tv_power_watts:
       friendly_name: TV Watts
       
     sensor.monthly_gf_living_tv:

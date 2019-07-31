@@ -2,40 +2,56 @@
 alexa:
   filter:
     include_entities:
-      - input_boolean.enable_dishwasher_notification
-      - input_boolean.enable_washing_machine_notification
-      - sensor.gf_dinning_sensor_temperature
-      - sensor.gf_living_sensor_temperature
-      - sensor.ff_study_sensor_temperature
-      - sensor.ff_bedroom_sensor_temperature
-      - light.gf_hallway_celing
+      - group.light_ff_study_mood
       - group.light_gf_dinning
       - group.light_gf_kitchen
       - group.light_gf_living
-      - light.gf_living_celing
-      - light.gf_living_lamp
+      - input_boolean.enable_dishwasher_notification
+      - input_boolean.enable_washing_machine_notification
+      - light.ff_bedroom_bedside_kareen
+      - light.ff_bedroom_bedside_stuart
+      - light.ff_bedroom_celing
       - light.ff_landing_celing
       - light.ff_study_celing
-      - group.light_ff_study_mood
-      - light.ff_bedroom_celing
-      - light.ff_bedroom_bedside_stuart
-      - light.ff_bedroom_bedside_kareen
+      - light.gf_hallway_celing
+      - light.gf_living_celing
+      - light.gf_living_lamp
       - light.gf_studio_celing
+      - script.family_state_out_everyone
+      - script.family_state_out_her
+      - script.family_state_out_him
+      - script.find_phone_kareen
+      - script.find_phone_stuart
       - script.house_scene_bedtime
       - script.lighting_dull
       - script.lighting_night
       - script.lighting_sunset
       - script.my_computer
-      - script.my_computer_lock
       - script.my_computer_hibernate
-      - script.find_phone_stuart
-      - script.find_phone_kareen
-      - script.family_state_out_everyone
-      - script.family_state_out_her
-      - script.family_state_out_him
-    
-    include_domains:
-      - switch
+      - script.my_computer_lock
+      - sensor.ff_bedroom_sensor_temperature
+      - sensor.ff_study_sensor_temperature
+      - sensor.gf_dinning_sensor_temperature
+      - sensor.gf_living_sensor_temperature
+      - switch.unifi_wifi_guest 
+      - switch.adguard_protection
+      - switch.adguard_query_log
+      - switch.adguard_filtering
+      - switch.adguard_parental_control
+      - switch.adguard_safe_browsing
+      - switch.adguard_safe_search
+      - switch.ff_bedroom_fairylights
+      - switch.ff_bedroom_fan
+      - switch.ff_bedroom_tv
+      - switch.ff_study_fan
+      - switch.ff_study_loading_pi
+      - switch.ff_study_monitors_switch
+      - switch.gf_dinning_tv_switch
+      - switch.study_sterio
+      - switch.gf_hallway_camera
+      - switch.gf_living_camera
+      - switch.gf_studio_camera
+      - switch.gf_dinning_room_camera_switch
       
     exclude_entities:
       - switch.dishwasher
@@ -52,7 +68,7 @@ alexa:
       - switch.wake_on_lan
       - switch.remote_gf_livingroom_watch_tv
       - switch.remote_gf_livingroom_watch_fire_tv
-      - switch.gf_living_tv
+      - switch.gf_living_tv_switch
   
   entity_config:
 

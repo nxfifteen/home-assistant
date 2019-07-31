@@ -3,7 +3,7 @@ alias: Set Watts to Zero (Study Monitors)
 
 trigger:
 - platform: state
-  entity_id: switch.ff_study_monitors
+  entity_id: switch.ff_study_monitors_switch
   from:  'on'
   to:  'off'
   
