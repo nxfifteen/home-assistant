@@ -1,6 +1,6 @@
 ---
 homeassistant:
   customize:
-    switch.gf_dinning_room_camera_switch:
+    switch.gf_dinning_camera_switch:
       friendly_name: Dinning Room Camera
       icon: mdi:camera-wireless

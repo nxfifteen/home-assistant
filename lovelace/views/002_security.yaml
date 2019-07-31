@@ -10,7 +10,7 @@ cards:
     - switch.gf_hallway_camera_switch
     - switch.gf_living_camera_switch
     - switch.gf_studio_camera_switch
-    - switch.gf_dinning_room_camera_switch
+    - switch.gf_dinning_camera_switch
 
   - type: entities
     title: Camera Online
