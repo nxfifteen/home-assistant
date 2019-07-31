@@ -9,7 +9,7 @@ cards:
         show_header_toggle: off
         entities:
           - type: 'custom:text-divider-row'
-            text: Jarvis
+            text: SPHERE
 
           - type: custom:vertical-stack-in-card
             cards:
@@ -20,6 +20,22 @@ cards:
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.jarvis
+                  state:
+                    - value: "on"
+                      color: green
+                      icon: mdi:server-network
+                    - operator: default
+                      color: red
+                      icon: mdi:server-network-off
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
+                  tap_action:
+                    action: more-info
+                    
+                - type: "custom:button-card"
+                  color_type: icon
+                  entity: binary_sensor.nxfifteen
                   state:
                     - value: "on"
                       color: green
@@ -145,36 +161,6 @@ cards:
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.ssh_synology
-                  state:
-                    - value: "on"
-                      color: green
-                      icon: mdi:server-network
-                    - operator: default
-                      color: red
-                      icon: mdi:server-network-off
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
-                  tap_action:
-                    action: more-info
-
-  - type: vertical-stack
-    cards:
-      - type: entities
-        show_header_toggle: off
-        entities:
-          - type: 'custom:text-divider-row'
-            text: Websites
-
-          - type: custom:vertical-stack-in-card
-            cards:
-        
-            - type: horizontal-stack
-              cards:
-                    
-                - type: "custom:button-card"
-                  color_type: icon
-                  entity: binary_sensor.nxfifteen
                   state:
                     - value: "on"
                       color: green
