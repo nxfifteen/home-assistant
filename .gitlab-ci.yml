@@ -42,11 +42,11 @@ ha-rc:
     entrypoint: [""]
   allow_failure: true
 
-ha-dev:
-  <<: *ha
-  stage: test
-  image:
-    name: homeassistant/home-assistant:dev
-    entrypoint: [""]
-  allow_failure: true
+# ha-dev:
+#   <<: *ha
+#   stage: test
+#   image:
+#     name: homeassistant/home-assistant:dev
+#     entrypoint: [""]
+#   allow_failure: true
 
