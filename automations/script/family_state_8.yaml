@@ -19,7 +19,7 @@ family_state_8:
     
     - service: switch.turn_off
       data:
-        entity_id: switch.ff_bedroom_fairylights
+        entity_id: switch.ff_bedroom_fairylights_switch
     
     - service: switch.turn_off
       data:
@@ -27,7 +27,7 @@ family_state_8:
     
     - service: switch.turn_off
       data:
-        entity_id: switch.ff_bedroom_fan
+        entity_id: switch.ff_bedroom_fan_switch
     
     - service: switch.turn_off
       data:

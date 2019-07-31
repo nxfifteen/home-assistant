@@ -11,7 +11,7 @@ sensor:
       friendly_name: 'Last Month'
       
     ff_study_monitors_cost:
-      entity_id: sensor.monthly_ff_study_monitors_switch
+      entity_id: sensor.monthly_ff_study_monitors
       friendly_name: 'Monitor Cost'
       value_template: >-
         {% if (states.sensor.monthly_ff_study_monitors.state|float > 0) %}

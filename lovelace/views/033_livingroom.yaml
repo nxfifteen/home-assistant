@@ -37,8 +37,8 @@ cards:
         text: Power
       - sensor.gf_living_tv_power_watts
       - type: section
-      - sensor.monthly_gf_living_tv_switch
-      - sensor.weekly_gf_living_tv_switch
+      - sensor.monthly_gf_living_tv
+      - sensor.weekly_gf_living_tv
       - type: section
       - sensor.gf_living_tv_cost
       - type: section

@@ -33,7 +33,7 @@ condition:
 action:
     - service: switch.turn_on
       data:
-        entity_id: switch.ff_bedroom_fan
+        entity_id: switch.ff_bedroom_fan_switch
       
     - service: script.notify_join
       data_template:

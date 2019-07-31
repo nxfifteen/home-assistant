@@ -83,7 +83,7 @@ action:
 
   - service: switch.turn_on
     data:
-      entity_id: switch.ff_bedroom_fairylights
+      entity_id: switch.ff_bedroom_fairylights_switch
 
   - service: light.turn_on
     data:

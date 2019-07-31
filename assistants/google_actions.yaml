@@ -40,8 +40,8 @@ google_actions:
       - switch.adguard_parental_control
       - switch.adguard_safe_browsing
       - switch.adguard_safe_search
-      - switch.ff_bedroom_fairylights
-      - switch.ff_bedroom_fan
+      - switch.ff_bedroom_fairylights_switch
+      - switch.ff_bedroom_fan_switch
       - switch.ff_bedroom_tv_switch
       - switch.ff_study_fan_switch
       - switch.ff_study_loading_pi_switch
@@ -172,7 +172,7 @@ google_actions:
       name: Bedroom TV
       room: Bedroom
 
-    switch.ff_bedroom_fairylights:
+    switch.ff_bedroom_fairylights_switch:
       name: Bedroom Fairy Lights
       room: Bedroom
 
@@ -221,7 +221,7 @@ google_actions:
     switch.adguard_parental_control:
       name: Parental Control
 
-    switch.ff_bedroom_fan:
+    switch.ff_bedroom_fan_switch:
       name: Bedroom Fan
 
     switch.ff_study_fan_switch:

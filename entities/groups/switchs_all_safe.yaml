@@ -2,8 +2,8 @@
 switchs_all_safe:
   name: Switchs That Are Safe
   entities:
-    - switch.ff_bedroom_fairylights
-    - switch.ff_bedroom_fan
+    - switch.ff_bedroom_fairylights_switch
+    - switch.ff_bedroom_fan_switch
     - switch.ff_bedroom_tv_switch
     - switch.ff_study_monitors_switch
     - switch.gf_dinning_tv_switch
