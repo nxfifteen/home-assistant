@@ -19,7 +19,7 @@ cards:
                   - type: custom:card-modder
                     card:
                       type: "custom:button-card"
-                      entity: switch.washing_machine
+                      entity: switch.gf_dinning_washing_machine_switch
                       name: Washer
                       icon: mdi:washing-machine
                       tap_action:
@@ -36,7 +36,7 @@ cards:
                   - type: custom:card-modder
                     card:
                       type: "custom:button-card"
-                      entity: switch.dishwasher
+                      entity: switch.gf_dinning_dishwasher_switch
                       name: Dishwasher
                       icon: mdi:dishwasher
                       tap_action:
@@ -57,17 +57,17 @@ cards:
             columns: 2
             #color: '#bf4040'
             entities:
-              - entity: sensor.washing_machine_status
-              - entity: sensor.dishwasher_status
+              - entity: sensor.gf_dinning_washing_machine_status
+              - entity: sensor.gf_dinning_dishwasher_status
 
           - type: custom:mini-graph-card
             name: Consumption
             entities: 
-              - entity: sensor.washing_machine_power
+              - entity: sensor.gf_dinning_washing_machine_power
                 name: Washing Machine
                 show_state: true
                 unit: 'W'
-              - entity: sensor.dishwasher_power
+              - entity: sensor.gf_dinning_dishwasher_power
                 name: Dishwasher
                 show_state: true
                 unit: 'W'
@@ -86,7 +86,7 @@ cards:
     cards:
       - type: custom:mini-graph-card
         entities: 
-          - sensor.washing_machine_power
+          - sensor.gf_dinning_washing_machine_power
         name: Washing Machine
         height: 74
         line_width: 2
@@ -115,15 +115,15 @@ cards:
         title: Washing Machine
         show_header_toggle: false
         entities:
-        - sensor.washing_machine_cost
-        - sensor.washing_machine_friendly_status
+        - sensor.gf_dinning_washing_machine_cost
+        - sensor.gf_dinning_washing_machine_friendly_status
         - input_boolean.enable_washing_machine_notification
         - type: section
-        - sensor.washing_machine_load
-        - sensor.washing_machine_status_detail
+        - sensor.gf_dinning_washing_machine_load
+        - sensor.gf_dinning_washing_machine_status_detail
         - type: section
-        - sensor.weekly_washing_machine
-        - sensor.monthly_washing_machine
+        - sensor.gf_dinning_washing_machine_meter_weekly
+        - sensor.gf_dinning_washing_machine_meter_monthly
         - type: section
         - sensor.grocy_stock_washing_powder
         - sensor.grocy_stock_washing_softner
@@ -132,7 +132,7 @@ cards:
     cards:
       - type: custom:mini-graph-card
         entities: 
-          - sensor.dishwasher_power
+          - sensor.gf_dinning_dishwasher_power
         name: Dishwasher
         height: 74
         line_width: 2
@@ -161,15 +161,15 @@ cards:
         title: Dishwasher
         show_header_toggle: false
         entities:
-        - sensor.dishwasher_cost
-        - sensor.dishwasher_friendly_status
+        - sensor.gf_dinning_dishwasher_cost
+        - sensor.gf_dinning_dishwasher_friendly_status
         - input_boolean.disable_dishwasher_notification
         - type: section
-        - sensor.dishwasher_load
-        - sensor.dishwasher_status_detail
+        - sensor.gf_dinning_dishwasher_load
+        - sensor.gf_dinning_dishwasher_status_detail
         - type: section
-        - sensor.weekly_dishwasher
-        - sensor.monthly_dishwasher
+        - sensor.gf_dinning_dishwasher_meter_weekly
+        - sensor.gf_dinning_dishwasher_meter_monthly
         - type: section
         - sensor.grocy_stock_dishwasher_tabs
 

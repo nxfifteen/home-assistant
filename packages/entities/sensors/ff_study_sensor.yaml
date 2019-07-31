@@ -12,7 +12,7 @@ homeassistant:
   customize:
     sensor.ff_study_sensor_battery:
       friendly_name: PIR Battery
-    sensor.ff_study_sensor_lux:
+    sensor.ff_study_sensor_illuminance:
       friendly_name: Illuminance
     binary_sensor.ff_study_sensor_sensor:
       friendly_name: Study

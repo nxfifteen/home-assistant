@@ -29,7 +29,7 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Plugs
-      - switch.ff_bedroom_tv
+      - switch.ff_bedroom_tv_switch
       - switch.ff_bedroom_fairylights
       - switch.ff_bedroom_fan
 
@@ -60,7 +60,7 @@ cards:
     
       - type: custom:mini-graph-card
         entities: 
-          - sensor.ff_bedroom_sensor_lux
+          - sensor.ff_bedroom_sensor_illuminance
         name: Lux
         height: 74
         line_width: 2

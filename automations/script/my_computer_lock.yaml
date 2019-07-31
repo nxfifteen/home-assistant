@@ -8,7 +8,7 @@ my_computer_lock:
 
     - service: switch.turn_off
       data:
-        entity_id: switch.study_sterio
+        entity_id: switch.ff_study_sterio_switch
 
     - delay:
         seconds: 20

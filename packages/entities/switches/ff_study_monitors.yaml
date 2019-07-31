@@ -31,7 +31,7 @@ utility_meter:
 
 homeassistant:
   customize:
-    switch.ff_study_monitors:
+    switch.ff_study_monitors_switch:
       friendly_name: Monitors
       
     sensor.ff_study_monitors_colour:

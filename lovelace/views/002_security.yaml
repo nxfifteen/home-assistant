@@ -7,9 +7,9 @@ cards:
     title: Camera Sockets
     show_header_toggle: false
     entities:
-    - switch.gf_hallway_camera
-    - switch.gf_living_camera
-    - switch.gf_studio_camera
+    - switch.gf_hallway_camera_switch
+    - switch.gf_living_camera_switch
+    - switch.gf_studio_camera_switch
     - switch.gf_dinning_room_camera_switch
 
   - type: entities
@@ -57,7 +57,7 @@ cards:
       - sensor.family_family_state_raw
       - sensor.house_scene
       - binary_sensor.motion_ff_bedroom
-      - switch.ff_bedroom_tv
+      - switch.ff_bedroom_tv_switch
       - sensor.media_ff_bedroom_alexa
       - sensor.media_ff_bedroom_fire_tv
       - sensor.media_ff_bedroom_plex_audio
@@ -106,8 +106,8 @@ cards:
     title: ZWave Contacts
     show_header_toggle: false
     entities:
-    - binary_sensor.gf_dinning_contact_side
-    - binary_sensor.gf_hallway_contact_sensor
+    - binary_sensor.gf_dinning_contact_side_contact
+    - binary_sensor.gf_hallway_contact_contact
 
   #################################################################
   #                                                               #

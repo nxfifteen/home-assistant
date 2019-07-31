@@ -21,7 +21,7 @@ action:
 
   - service: switch.turn_off
     data:
-      entity_id: switch.ff_study_fan
+      entity_id: switch.ff_study_fan_switch
 
   - service: switch.turn_off
     data:
@@ -29,4 +29,4 @@ action:
 
   - service: switch.turn_off
     data:
-      entity_id: switch.study_sterio
+      entity_id: switch.ff_study_sterio_switch

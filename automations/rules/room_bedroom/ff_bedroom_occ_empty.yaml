@@ -21,7 +21,7 @@ action:
 
   - service: switch.turn_off
     data:
-      entity_id: switch.ff_bedroom_tv
+      entity_id: switch.ff_bedroom_tv_switch
 
   - service: switch.turn_off
     data:

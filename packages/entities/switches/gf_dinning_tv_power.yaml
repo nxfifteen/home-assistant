@@ -1,7 +1,7 @@
 ---
 homeassistant:
   customize:
-    switch.gf_dinning_tv:
+    switch.gf_dinning_tv_switch:
       friendly_name: TV
     sensor.gf_dinning_tv_power_watts:
       friendly_name: TV Watts

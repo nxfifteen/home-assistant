@@ -3,7 +3,7 @@
 alias: Send alert when Dishwasher is finished
 trigger:
   - platform: state
-    entity_id: sensor.dishwasher_status
+    entity_id: sensor.gf_dinning_dishwasher_status
     to: Clean
     for:
       minutes: 1
@@ -25,7 +25,7 @@ condition:
       entity_id: group.people_family
       state: 'home'
     - condition: state
-      entity_id: input_select.dishwasher_status
+      entity_id: input_select.gf_dinning_dishwasher_status
       state: Clean
     - condition: state
       entity_id: input_boolean.disable_dishwasher_notification
