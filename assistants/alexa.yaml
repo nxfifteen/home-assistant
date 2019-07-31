@@ -51,7 +51,7 @@ alexa:
       - switch.gf_hallway_camera_switch
       - switch.gf_living_camera_switch
       - switch.gf_studio_camera_switch
-      - switch.gf_dinning_room_camera_switch
+      - switch.gf_dinning_camera_switch
       
     exclude_entities:
       - switch.gf_dinning_dishwasher_switch
