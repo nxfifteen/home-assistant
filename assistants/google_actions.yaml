@@ -43,19 +43,19 @@ google_actions:
       - switch.ff_bedroom_fairylights
       - switch.ff_bedroom_fan
       - switch.ff_bedroom_tv_switch
-      - switch.ff_study_fan
-      - switch.ff_study_loading_pi
+      - switch.ff_study_fan_switch
+      - switch.ff_study_loading_pi_switch
       - switch.ff_study_monitors_switch
       - switch.gf_dinning_tv_switch
-      - switch.study_sterio
-      - switch.gf_hallway_camera
-      - switch.gf_living_camera
-      - switch.gf_studio_camera
+      - switch.ff_study_sterio_switch
+      - switch.gf_hallway_camera_switch
+      - switch.gf_living_camera_switch
+      - switch.gf_studio_camera_switch
       - switch.gf_dinning_room_camera_switch
       
     exclude_entities:
-      - switch.dishwasher
-      - switch.washing_machine
+      - switch.gf_dinning_dishwasher_switch
+      - switch.gf_dinning_washing_machine_switch
       - switch.occ_room_studio
       - switch.occ_room_hallway
       - switch.occ_room_livingroom
@@ -152,19 +152,19 @@ google_actions:
       name: Studio Light
       room: Studio
 
-    switch.gf_dinning_tv:
+    switch.gf_dinning_tv_switch:
       name: Kitchen TV
       room: Kitchen
 
-    switch.ff_study_monitors:
+    switch.ff_study_monitors_switch:
       name: Computer Monitors
       room: Study
 
-    switch.study_sterio:
+    switch.ff_study_sterio_switch:
       name: Study Hi-Fi
       room: Study
 
-    switch.ff_study_loading_pi:
+    switch.ff_study_loading_pi_switch:
       name: Loading Station
       room: Study
   
@@ -224,5 +224,5 @@ google_actions:
     switch.ff_bedroom_fan:
       name: Bedroom Fan
 
-    switch.ff_study_fan:
+    switch.ff_study_fan_switch:
       name: Study Fan

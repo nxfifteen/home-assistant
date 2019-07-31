@@ -2,25 +2,25 @@
 alias: Set Dishwasher active when power detected
 trigger:
   - platform: numeric_state
-    entity_id: switch.dishwasher
+    entity_id: switch.gf_dinning_dishwasher_switch
     value_template: '{{ state.attributes.current_power_w }}'
     above: 10
 condition:
   condition: or
   conditions:
     - condition: state
-      entity_id: sensor.dishwasher_status
+      entity_id: sensor.gf_dinning_dishwasher_status
       state: Idle
     - condition: state
-      entity_id: sensor.dishwasher_status
+      entity_id: sensor.gf_dinning_dishwasher_status
       state: Clean
     - condition: state
-      entity_id: sensor.dishwasher_status
+      entity_id: sensor.gf_dinning_dishwasher_status
       state: Finishing
 action:
   - service: input_select.select_option
     data:
-      entity_id: input_select.dishwasher_status
+      entity_id: input_select.gf_dinning_dishwasher_status
       option: Running
 
   - service: shell_command.grocy_consume_item

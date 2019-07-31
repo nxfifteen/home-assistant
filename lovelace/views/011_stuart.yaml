@@ -97,3 +97,13 @@ cards:
       - device_tracker.tile_c4f2161059284831
       - device_tracker.tile_19063e4f07561dcf
       - device_tracker.tile_353e0f954ad1a9af
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Phone
+      - sensor.pixel_2_xlpixel_2_xl_a2dp_sensor
+      - sensor.pixel_2_xlpixel_2_xl_call_state_sensor
+      - sensor.pixel_2_xlpixel_2_xl_hfp_sensor
+      - sensor.pixel_2_xlpixel_2_xl_pressure_sensor
+      - sensor.pixel_2_xlpixel_2_xl_wifi_sensor

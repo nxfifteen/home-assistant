@@ -14,4 +14,4 @@ switchs_all_safe:
     - switch.occ_room_landing
     - switch.occ_room_livingroom
     - switch.occ_room_studio
-    - switch.study_sterio
+    - switch.ff_study_sterio_switch

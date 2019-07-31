@@ -60,7 +60,7 @@ cards:
     
       - type: custom:mini-graph-card
         entities: 
-          - sensor.ff_bedroom_sensor_lux
+          - sensor.ff_bedroom_sensor_illuminance
         name: Lux
         height: 74
         line_width: 2

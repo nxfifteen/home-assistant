@@ -6,7 +6,7 @@ input_boolean:
     icon: mdi:dishwasher
 
 input_select:
-  dishwasher_status:
+  gf_dinning_dishwasher_status:
     name: Dishwasher Status
     options:
       - Idle
@@ -19,79 +19,79 @@ sensor:
   - platform: template
     sensors:
       ## dishwasher Status
-      dishwasher_status:
-        value_template: '{{ states.input_select.dishwasher_status.state}}'
+      gf_dinning_dishwasher_status:
+        value_template: '{{ states.input_select.gf_dinning_dishwasher_status.state}}'
         friendly_name: 'Dishwasher Status'
-      dishwasher_status_detail:
-        value_template: '{{ states.switch.dishwasher.attributes.state_detail}}'
+      gf_dinning_dishwasher_status_detail:
+        value_template: '{{ states.switch.gf_dinning_dishwasher_switch.attributes.state_detail}}'
         friendly_name: 'Dishwasher Status Detail'
       ## dishwasher Power Usage
-      dishwasher_power:
-        value_template: '{{ states.switch.dishwasher.attributes.current_power_w|default(0)|int }}'  
+      gf_dinning_dishwasher_power:
+        value_template: '{{ states.switch.gf_dinning_dishwasher_switch.attributes.current_power_w|default(0)|int }}'  
         friendly_name: 'Dishwasher Power'
       ## dishwasher Power Graph
-      dishwasher_load:
-        value_template: 'Power: {{ states.switch.dishwasher.attributes.current_power_w|default(0)|int }}'  
+      gf_dinning_dishwasher_load:
+        value_template: 'Power: {{ states.switch.gf_dinning_dishwasher_switch.attributes.current_power_w|default(0)|int }}'  
         friendly_name: 'Dishwasher Power'  
         unit_of_measurement: 'W'   
       ## dishwasher Status
-      dishwasher_friendly_status:
-        value_template: 'Dishwasher: {{ states.input_select.dishwasher_status.state}}'
+      gf_dinning_dishwasher_friendly_status:
+        value_template: 'Dishwasher: {{ states.input_select.gf_dinning_dishwasher_status.state}}'
         friendly_name: 'Dishwasher Status' 
 
-      dishwasher_consumption:
-        entity_id: switch.dishwasher
-        value_template: '{{ states.sensor.dishwasher_power.state|int }}' 
+      gf_dinning_dishwasher_consumption:
+        entity_id: switch.gf_dinning_dishwasher_switch
+        value_template: '{{ states.sensor.gf_dinning_dishwasher_power.state|int }}' 
         friendly_name: 'dishwasher Consumption' 
         unit_of_measurement: 'W' 
         
-      dishwasher_last_week:
-        value_template: "{{ states.sensor.weekly_dishwasher.attributes.last_period }}"
+      gf_dinning_dishwasher_last_week:
+        value_template: "{{ states.sensor.gf_dinning_dishwasher_meter_weekly.attributes.last_period }}"
         friendly_name: 'Last Week'
         
-      dishwasher_last_month:
-        value_template: "{{ states.sensor.monthly_dishwasher.attributes.last_period }}"
+      gf_dinning_dishwasher_last_month:
+        value_template: "{{ states.sensor.gf_dinning_dishwasher_meter_monthly.attributes.last_period }}"
         friendly_name: 'Last Month'
         
-      dishwasher_cost:
-        entity_id: sensor.monthly_dishwasher
+      gf_dinning_dishwasher_cost:
+        entity_id: sensor.gf_dinning_dishwasher_meter_monthly
         friendly_name: 'dishwasher Cost'
         value_template: >-
-          {% if (states.sensor.monthly_dishwasher.state|float > 0) %}
-            £{{ (states.sensor.monthly_dishwasher.state|float * 0.000242)|round(2) }}
-          {% elif (states.sensor.monthly_dishwasher.state|float == 0) %}
-            £{{ (states.sensor.monthly_dishwasher.state|float * 0.000242)|round(2) }}
+          {% if (states.sensor.gf_dinning_dishwasher_meter_monthly.state|float > 0) %}
+            £{{ (states.sensor.gf_dinning_dishwasher_meter_monthly.state|float * 0.000242)|round(2) }}
+          {% elif (states.sensor.gf_dinning_dishwasher_meter_monthly.state|float == 0) %}
+            £{{ (states.sensor.gf_dinning_dishwasher_meter_monthly.state|float * 0.000242)|round(2) }}
           {% endif %}
 
 utility_meter:
-  weekly_dishwasher:
-    source: sensor.dishwasher_consumption
+  gf_dinning_dishwasher_weekly:
+    source: sensor.gf_dinning_dishwasher_consumption
     cycle: weekly
     
-  monthly_dishwasher:
-    source: sensor.dishwasher_consumption
+  gf_dinning_dishwasher_monthly:
+    source: sensor.gf_dinning_dishwasher_consumption
     cycle: monthly
 
 homeassistant:
   customize:
-    switch.dishwasher:
+    switch.gf_dinning_dishwasher_switch:
       friendly_name: Dishwasher
       icon: mdi:dishwasher
       initial_state: on
 
-    switch.dishwasher_cost:
+    switch.gf_dinning_dishwasher_cost:
       friendly_name: Running Cost
       icon: mdi:currency-gbp
       
-    sensor.dishwasher_status:
+    sensor.gf_dinning_dishwasher_status:
       friendly_name: Dishwasher Status
       icon: mdi:dishwasher
       
-    sensor.dishwasher_power:
+    sensor.gf_dinning_dishwasher_power:
       friendly_name: Dishwasher Power
       
-    sensor.weekly_dishwasher:
+    sensor.gf_dinning_dishwasher_meter_weekly:
       friendly_name: Washing Dishwasher Meter
       
-    sensor.monthly_dishwasher:
+    sensor.gf_dinning_dishwasher_meter_monthly:
       friendly_name: Washing Dishwasher Meter

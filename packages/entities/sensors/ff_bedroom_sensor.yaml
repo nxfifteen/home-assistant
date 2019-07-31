@@ -13,7 +13,7 @@ homeassistant:
   customize:
     sensor.ff_bedroom_sensor_battery:
       friendly_name: PIR Battery
-    sensor.ff_bedroom_sensor_lux:
+    sensor.ff_bedroom_sensor_illuminance:
       friendly_name: Illuminance
     binary_sensor.ff_bedroom_sensor_sensor:
       friendly_name: Bedroom

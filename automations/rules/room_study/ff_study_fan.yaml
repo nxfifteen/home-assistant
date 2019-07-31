@@ -48,7 +48,7 @@ condition:
 action:
     - service: switch.turn_on
       data:
-        entity_id: switch.ff_study_fan
+        entity_id: switch.ff_study_fan_switch
       
     - service: script.notify_join
       data_template:

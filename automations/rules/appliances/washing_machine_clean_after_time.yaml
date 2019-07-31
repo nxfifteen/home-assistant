@@ -6,7 +6,7 @@
 alias: Set washing machine clean after timeout
 trigger:
   - platform: state
-    entity_id: input_select.washing_machine_status
+    entity_id: input_select.gf_dinning_washing_machine_status
     to: Finishing
     for:
       minutes: 5
@@ -14,10 +14,10 @@ condition:
   condition: and
   conditions:
     - condition: state
-      entity_id: input_select.washing_machine_status
+      entity_id: input_select.gf_dinning_washing_machine_status
       state: Finishing
 action:
   - service: input_select.select_option
     data:
-      entity_id: input_select.washing_machine_status
+      entity_id: input_select.gf_dinning_washing_machine_status
       option: Clean

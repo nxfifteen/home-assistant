@@ -13,7 +13,7 @@ cards:
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[  sensor.occ_room_kitchen_reason.state ]]"
       - type: section
-      - binary_sensor.gf_dinning_contact_side
+      - binary_sensor.gf_dinning_contact_side_contact
 
   - type: entities
     show_header_toggle: false
@@ -93,7 +93,7 @@ cards:
   
     - type: custom:mini-graph-card
       entities: 
-        - sensor.gf_dinning_sensor_lux
+        - sensor.gf_dinning_sensor_illuminance
       name: Lux
       height: 74
       line_width: 2

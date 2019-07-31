@@ -2,7 +2,7 @@
 alias: Contact Open - Front Door
 
 trigger:
-  - entity_id: binary_sensor.gf_hallway_contact_sensor
+  - entity_id: binary_sensor.gf_hallway_contact_contact
     platform: state
     to:  'on'
 

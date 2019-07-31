@@ -4,17 +4,17 @@
 alias: Set washing machine finished when power drops
 trigger:
   - platform: numeric_state
-    entity_id: switch.washing_machine
+    entity_id: switch.gf_dinning_washing_machine_switch
     value_template: '{{ state.attributes.current_power_w }}'
     below: 6
 condition:
   condition: and
   conditions:
     - condition: state
-      entity_id: input_select.washing_machine_status
+      entity_id: input_select.gf_dinning_washing_machine_status
       state: Running
 action:
   - service: input_select.select_option
     data:
-      entity_id: input_select.washing_machine_status
+      entity_id: input_select.gf_dinning_washing_machine_status
       option: Finishing

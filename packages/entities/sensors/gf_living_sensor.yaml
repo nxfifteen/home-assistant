@@ -13,7 +13,7 @@ homeassistant:
   customize:
     sensor.gf_living_sensor_battery:
       friendly_name: PIR Battery
-    sensor.gf_living_sensor_lux:
+    sensor.gf_living_sensor_illuminance:
       friendly_name: Illuminance
     binary_sensor.gf_living_sensor_sensor:
       friendly_name: Livingroom
