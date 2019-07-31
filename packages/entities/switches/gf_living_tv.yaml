@@ -11,7 +11,7 @@ sensor:
       friendly_name: 'Last Month'
       
     gf_living_tv_cost:
-      entity_id: sensor.monthly_gf_living_tv_switch
+      entity_id: sensor.monthly_gf_living_tv
       friendly_name: 'dishwasher Cost'
       value_template: >-
         {% if (states.sensor.monthly_gf_living_tv.state|float > 0) %}

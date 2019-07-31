@@ -20,8 +20,8 @@ cards:
         text: Power
       - sensor.ff_study_monitors_power_watts
       - type: section
-      - sensor.monthly_ff_study_monitors_switch
-      - sensor.weekly_ff_study_monitors_switch
+      - sensor.monthly_ff_study_monitors
+      - sensor.weekly_ff_study_monitors
       - type: section
       - sensor.ff_study_monitors_cost
       - type: section
