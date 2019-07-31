@@ -24,12 +24,12 @@ cards:
                     - value: "on"
                       color: green
                       icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
                     - operator: default
                       color: red
                       icon: mdi:server-network-off
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
 
@@ -57,6 +57,9 @@ cards:
                     - operator: default
                       color: red
                       icon: mdi:server-network-off
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
                     
@@ -67,12 +70,12 @@ cards:
                     - value: "on"
                       color: green
                       icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
                     - operator: default
                       color: red
                       icon: mdi:server-network-off
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
                     
@@ -83,12 +86,12 @@ cards:
                     - value: "on"
                       color: green
                       icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
                     - operator: default
                       color: red
                       icon: mdi:server-network-off
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
 
@@ -113,12 +116,12 @@ cards:
                     - value: "on"
                       color: green
                       icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
                     - operator: default
                       color: red
                       icon: mdi:server-network-off
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
                     
@@ -129,12 +132,12 @@ cards:
                     - value: "on"
                       color: green
                       icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
                     - operator: default
                       color: red
                       icon: mdi:server-network-off
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
         
@@ -146,12 +149,12 @@ cards:
                     - value: "on"
                       color: green
                       icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
                     - operator: default
                       color: red
                       icon: mdi:server-network-off
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
 
@@ -176,12 +179,12 @@ cards:
                     - value: "on"
                       color: green
                       icon: mdi:server-network
-                      styles:
-                        card:
-                          - animation: blink 2s ease infinite
                     - operator: default
                       color: red
                       icon: mdi:server-network-off
+                      styles:
+                        card:
+                          - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
 
