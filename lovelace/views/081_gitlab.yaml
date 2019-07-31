@@ -50,9 +50,6 @@ cards:
                     - sensor.gitlab_279_ci
                 style: 
                   border-radius: 0px
-            
-          - type: section
-            label: Weekly
            
           - type: horizontal-stack
             cards:
@@ -73,9 +70,6 @@ cards:
                     - sensor.gitlab_279_issues_last_week
                 style: 
                   border-radius: 0px
-
-          - type: section
-            label: Monthly
            
           - type: horizontal-stack
             cards:
