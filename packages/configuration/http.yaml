@@ -7,4 +7,6 @@ http:
   use_x_forwarded_for: true
   # You must set the trusted proxy IP address so that Home Assistant will properly accept connections
   # Set this to your NGINX machine IP, or localhost if hosted on the same machine.
-  trusted_proxies: !secret http_trusted_proxies
+  trusted_proxies: 
+    - 172.30.33.0/24 #Docker Network
+    - !secret http_trusted_proxies
