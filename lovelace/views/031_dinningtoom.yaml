@@ -37,11 +37,11 @@ cards:
       - type: 'custom:text-divider-row'
         text: Plugs
       - switch.gf_dinning_tv_switch
-      - sensor.gf_dinning_tv_power_watts
+      - sensor.gf_dinning_tv_power_2
 
   - type: custom:mini-graph-card
     entities: 
-      - sensor.gf_dinning_tv_power_watts
+      - sensor.gf_dinning_tv_power_2
     name: TV
     height: 74
     line_width: 2
