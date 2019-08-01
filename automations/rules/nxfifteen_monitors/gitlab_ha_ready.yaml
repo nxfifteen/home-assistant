@@ -1,0 +1,11 @@
+---
+alias: New HA Git Ready
+trigger:
+  - platform: state
+    entity_id: sensor.gitlab_279_pipeline_master
+    to: 'passed'
+  
+action:      
+  - service: hassio.addon_start
+    data:
+      addon: "core_git_pull"
