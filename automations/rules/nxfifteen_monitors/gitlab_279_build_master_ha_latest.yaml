@@ -1,0 +1,21 @@
+---
+alias: GitLab Build Passed Latest
+trigger:
+  - platform: state
+    entity_id: sensor.gitlab_279_build_master_ha_latest
+    to: 'success'
+  
+condition:
+  - condition: state
+    entity_id: sensor.family_stuart_state
+    state: '7'
+  - condition: state
+    entity_id: light.ff_study_wall
+    state: 'on'
+  
+action:           
+  - service: script.notify_tts
+    data_template:
+      room: "study"
+      value1: "Your Code past the on the latest build."
+      hashtag: "#GitLab #CI"

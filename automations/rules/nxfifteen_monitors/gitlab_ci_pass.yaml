@@ -2,16 +2,12 @@
 alias: GitLab CI Passed
 trigger:
   - platform: state
-    entity_id: sensor.gitlab_252_ci
-    to: 'success'
+    entity_id: sensor.gitlab_279_pipeline_develop
+    to: 'passed'
 
   - platform: state
-    entity_id: sensor.gitlab_274_ci
-    to: 'success'
-
-  - platform: state
-    entity_id: sensor.gitlab_279_ci
-    to: 'success'
+    entity_id: sensor.gitlab_279_pipeline_master
+    to: 'passed'
   
 condition:
   - condition: state
