@@ -6,6 +6,21 @@ cards:
   - type: entities
     entities:
       - type: 'custom:text-divider-row'
+        text: Master
+      - sensor.gitlab_279_push_master
+      - sensor.gitlab_279_pipeline_master
+      - sensor.gitlab_279_build_master_ha_latest
+      - sensor.gitlab_279_build_master_ha_rc
+      - type: 'custom:text-divider-row'
+        text: Develop
+      - sensor.gitlab_279_push_develop
+      - sensor.gitlab_279_pipeline_develop
+      - sensor.gitlab_279_build_develop_ha_latest
+      - sensor.gitlab_279_build_develop_ha_rc
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
         text: Weekly Trend
       - entity: sensor.gitlab_279_commits_weekly
         name: Commits
