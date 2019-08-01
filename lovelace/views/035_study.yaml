@@ -18,7 +18,7 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Power
-      - sensor.ff_study_monitors_power_watts
+      - sensor.ff_study_monitors_power_2
       - type: section
       - sensor.monthly_ff_study_monitors
       - sensor.weekly_ff_study_monitors
@@ -92,7 +92,7 @@ cards:
 
   - type: custom:mini-graph-card
     entities: 
-      - sensor.ff_study_loading_pi_power_watts
+      - sensor.ff_study_loading_pi_power_2
     name: Loading Station
     height: 74
     line_width: 2
@@ -148,7 +148,7 @@ cards:
 
   - type: custom:mini-graph-card
     entities: 
-      - sensor.ff_study_monitors_power_watts
+      - sensor.ff_study_monitors_power_2
     name: Monitors
     height: 74
     line_width: 2
