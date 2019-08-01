@@ -2,19 +2,13 @@
 alias: GitLab CI Failed (rest)
 trigger:
   - platform: state
-    entity_id: sensor.gitlab_252_ci
+    entity_id: sensor.gitlab_279_pipeline_master
     to: 'failed'
     for:
       minutes: 4
 
   - platform: state
-    entity_id: sensor.gitlab_274_ci
-    to: 'failed'
-    for:
-      minutes: 4
-
-  - platform: state
-    entity_id: sensor.gitlab_279_ci
+    entity_id: sensor.gitlab_279_pipeline_develop
     to: 'failed'
     for:
       minutes: 4

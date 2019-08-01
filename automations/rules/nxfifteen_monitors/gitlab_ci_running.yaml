@@ -2,15 +2,11 @@
 alias: GitLab CI Running
 trigger:
   - platform: state
-    entity_id: sensor.gitlab_252_ci
+    entity_id: sensor.gitlab_279_pipeline_master
     to: 'running'
-
+    
   - platform: state
-    entity_id: sensor.gitlab_274_ci
-    to: 'running'
-
-  - platform: state
-    entity_id: sensor.gitlab_279_ci
+    entity_id: sensor.gitlab_279_pipeline_develop
     to: 'running'
   
 condition:

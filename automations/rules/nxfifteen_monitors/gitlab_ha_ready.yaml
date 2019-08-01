@@ -1,0 +1,17 @@
+---
+alias: New HA Git Ready
+trigger:
+  - platform: state
+    entity_id: sensor.gitlab_279_pipeline_master
+    to: 'passed'
+  
+action:      
+  - service: script.notify_tts
+    data_template:
+      room: "study"
+      value1: "Updating Home Assistant configuration."
+      hashtag: "#GitLab #CI"
+
+  - service: hassio.addon_start
+    data:
+      addon: "core_git_pull"
