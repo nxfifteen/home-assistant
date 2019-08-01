@@ -10,3 +10,4 @@ recorder:
 
   # How often (in days) the purge task runs
   purge_interval: 1
+  db_url: !secret mariadb
