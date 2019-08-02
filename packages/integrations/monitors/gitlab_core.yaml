@@ -184,3 +184,10 @@ homeassistant:
     sensor.gitlab_279_build_develop_ha_rc:
       friendly_name: HA Develop Build RC
       icon: mdi:powershell
+
+    sensor.gitlab_279_merge_request_develop_master:
+      friendly_name: HA Merge Dev->Mast
+      icon: mdi:directions-fork
+    sensor.gitlab_279_merge_request_master_develop:
+      friendly_name: HA Merge Mast->Dev
+      icon: mdi:directions-fork
