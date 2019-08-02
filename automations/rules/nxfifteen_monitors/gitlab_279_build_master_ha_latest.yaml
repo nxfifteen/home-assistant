@@ -17,5 +17,5 @@ action:
   - service: script.notify_tts
     data_template:
       room: "study"
-      value1: "Your Code past the on the latest build."
+      value1: "Your Code the on the latest build."
       hashtag: "#GitLab #CI"
