@@ -199,7 +199,7 @@ cards:
               extrema: true
               icon_adaptive_color: true
             color_thresholds:
-              - value: 21
+              - value: 22
                 color: "#e74c3c"
               - value: 15
                 color: "#1db954"
@@ -222,7 +222,7 @@ cards:
               extrema: true
               icon_adaptive_color: true
             color_thresholds:
-              - value: 21
+              - value: 22
                 color: "#e74c3c"
               - value: 15
                 color: "#1db954"
@@ -247,7 +247,7 @@ cards:
               extrema: true
               icon_adaptive_color: true
             color_thresholds:
-              - value: 21
+              - value: 22
                 color: "#e74c3c"
               - value: 15
                 color: "#1db954"
@@ -270,7 +270,7 @@ cards:
               extrema: true
               icon_adaptive_color: true
             color_thresholds:
-              - value: 21
+              - value: 22
                 color: "#e74c3c"
               - value: 15
                 color: "#1db954"
