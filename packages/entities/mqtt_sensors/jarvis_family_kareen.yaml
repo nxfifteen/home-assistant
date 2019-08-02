@@ -52,6 +52,14 @@ sensor:
   state_topic: "tracker/family/kareen/phone/location"
   value_template: "{{ value_json.dist }}"
 
+- platform: places
+  name: family_kareen_places
+  devicetracker_id: device_tracker.kareen_phone
+  options: place
+  map_provider: google
+  map_zoom: 17
+  home_zone: zone.home
+
 input_select:
   kareen:
     options:
