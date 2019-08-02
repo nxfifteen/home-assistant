@@ -52,6 +52,7 @@ cards:
         text: Accounts
       - entity: sensor.steam_76561197982696593
         name: Steam
+      - sensor.family_stuart_places
   
   - type: horizontal-stack
     cards:
