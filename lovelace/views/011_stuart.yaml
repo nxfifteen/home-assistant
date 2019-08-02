@@ -23,6 +23,8 @@ cards:
             name: Room
           - entity: sensor.family_stuart_locality
             name: Locality
+          - entity: sensor.family_stuart_places
+            name: Places
           - type: section
           - script.find_phone_stuart
 
@@ -52,7 +54,6 @@ cards:
         text: Accounts
       - entity: sensor.steam_76561197982696593
         name: Steam
-      - sensor.family_stuart_places
   
   - type: horizontal-stack
     cards:

@@ -23,6 +23,8 @@ cards:
             name: Room
           - entity: sensor.family_kareen_locality
             name: Locality
+          - entity: sensor.family_kareen_places
+            name: Places
           - type: section
           - script.find_phone_kareen
 
