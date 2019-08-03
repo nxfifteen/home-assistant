@@ -1,6 +1,6 @@
 ---
 my_computer_hibernate:
-  alias: TaiChi Hibernate
+  alias: My Computer Hibernation
   sequence:
     - service: input_select.select_option
       data:
