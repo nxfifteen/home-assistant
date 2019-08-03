@@ -2,4 +2,4 @@
 homeassistant:
   customize:
     switch.ff_bedroom_tv_switch:
-      friendly_name: TV
+      friendly_name: Bedroom TV

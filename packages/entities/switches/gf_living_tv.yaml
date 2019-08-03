@@ -32,7 +32,7 @@ utility_meter:
 homeassistant:
   customize:
     switch.gf_living_tv_switch:
-      friendly_name: TV
+      friendly_name: Livingroom TV
       
     sensor.gf_living_tv_power_2:
       friendly_name: TV Watts
