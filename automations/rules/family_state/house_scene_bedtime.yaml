@@ -46,6 +46,12 @@ action:
       brightness: 150
       transition: 3
 
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_dinning_display_unit
+      brightness: 150
+      transition: 3
+
   - service: light.turn_off
     data:
       entity_id: group.light_gf_dinning
@@ -101,3 +107,17 @@ action:
     data:
       entity_id: climate.hallway
       temperature: 10
+
+  - delay: 00:10:00
+
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_studio_celing
+      brightness: 0
+      transition: 3
+
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_living_celing
+      brightness: 0
+      transition: 3
