@@ -1,0 +1,31 @@
+---
+alias: Welcome Lights when Front Door Open
+
+trigger:
+  - entity_id: binary_sensor.gf_hallway_contact_contact
+    platform: state
+    to:  'on'
+  
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: 'light.gf_hallway_celing'
+      state: 'off'
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: sensor.light_scene
+          state: Night
+        - condition: state
+          entity_id: sensor.light_scene
+          state: Sunset
+
+action:
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_hallway_celing
+      brightness: 150
+      rgb_color: [255,207,120]
+      transition: 3
+      effect: none
