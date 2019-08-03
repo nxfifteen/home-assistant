@@ -1,0 +1,35 @@
+---
+homeassistant:
+  customize:
+    sensor.gitlab_279_push_master:
+      friendly_name: HA Pushes to Master
+      icon: mdi:directions-fork
+    sensor.gitlab_279_pipeline_master:
+      friendly_name: HA Master Pipeline
+      icon: mdi:directions-fork
+    sensor.gitlab_279_build_master_ha_latest:
+      friendly_name: HA Master Build
+      icon: mdi:powershell
+    sensor.gitlab_279_build_master_ha_rc:
+      friendly_name: HA Master Build RC
+      icon: mdi:powershell
+
+    sensor.gitlab_279_push_develop:
+      friendly_name: HA Pushes to Develop
+      icon: mdi:directions-fork
+    sensor.gitlab_279_pipeline_develop:
+      friendly_name: HA Develop Pipeline
+      icon: mdi:directions-fork
+    sensor.gitlab_279_build_develop_ha_latest:
+      friendly_name: HA Develop Build
+      icon: mdi:powershell
+    sensor.gitlab_279_build_develop_ha_rc:
+      friendly_name: HA Develop Build RC
+      icon: mdi:powershell
+
+    sensor.gitlab_279_merge_request_develop_master:
+      friendly_name: HA Merge Dev->Mast
+      icon: mdi:directions-fork
+    sensor.gitlab_279_merge_request_master_develop:
+      friendly_name: HA Merge Mast->Dev
+      icon: mdi:directions-fork
