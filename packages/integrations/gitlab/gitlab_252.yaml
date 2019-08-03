@@ -1,0 +1,35 @@
+---
+homeassistant:
+  customize:
+    sensor.gitlab_252_push_master:
+      friendly_name: Store Pushes to Master
+      icon: mdi:directions-fork
+    sensor.gitlab_252_pipeline_master:
+      friendly_name: Store Master Pipeline
+      icon: mdi:directions-fork
+    sensor.gitlab_252_build_master_ha_latest:
+      friendly_name: Store Master Build
+      icon: mdi:powershell
+    sensor.gitlab_252_build_master_ha_rc:
+      friendly_name: Store Master Build RC
+      icon: mdi:powershell
+
+    sensor.gitlab_252_push_develop:
+      friendly_name: Store Pushes to Develop
+      icon: mdi:directions-fork
+    sensor.gitlab_252_pipeline_develop:
+      friendly_name: Store Develop Pipeline
+      icon: mdi:directions-fork
+    sensor.gitlab_252_build_develop_ha_latest:
+      friendly_name: Store Develop Build
+      icon: mdi:powershell
+    sensor.gitlab_252_build_develop_ha_rc:
+      friendly_name: Store Develop Build RC
+      icon: mdi:powershell
+
+    sensor.gitlab_252_merge_request_develop_master:
+      friendly_name: Store Merge Dev->Mast
+      icon: mdi:directions-fork
+    sensor.gitlab_252_merge_request_master_develop:
+      friendly_name: Store Merge Mast->Dev
+      icon: mdi:directions-fork

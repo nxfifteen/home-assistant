@@ -178,8 +178,8 @@ alexa:
       display_categories: SWITCH
 
     switch.ff_study_monitors_switch:
-      name: Computer Monitors
-      description: The Computer Monitors 
+      name: My Monitors
+      description: The My Monitors 
       display_categories: SWITCH
 
     switch.ff_study_sterio_switch:
