@@ -1,0 +1,9 @@
+---
+house_scene_im_going_to_bed:
+  alias: He's Going To Bed
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.his_pc_options
+        option: Hibernate
+    
