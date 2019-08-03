@@ -11,6 +11,11 @@ trigger:
   - entity_id: sensor.family_family_state_raw
     platform: state
     to: '3'
+  - entity_id: input_boolean.guest_mode
+    platform: state
+    to:  'off'
+    for:
+      minutes: 5
 
 condition:
   condition: or

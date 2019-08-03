@@ -1,6 +1,6 @@
 ---
 my_computer:
-  alias: TaiChi 
+  alias: My Computer 
   sequence:
     - service: switch.turn_on
       data:
