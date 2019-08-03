@@ -6,7 +6,7 @@ trigger:
     platform: state
     to: 'Going To Bed'
     for:
-      minutes: 10
+      minutes: 15
 
 action:
   - service: light.turn_off
