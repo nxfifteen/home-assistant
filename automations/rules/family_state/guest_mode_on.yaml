@@ -79,7 +79,7 @@ action:
 
   - service: input_boolean.turn_off
     data:
-      entity_id: input_boolean.enable_washing_machine_notification
+      entity_id: input_boolean.speech_notifications
 
   - service: switch.turn_on
     data:
