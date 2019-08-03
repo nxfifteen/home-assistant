@@ -1,5 +1,6 @@
 ---
 family_state_out_her:
+  alias: State She's Gone Out
   sequence:
     - service: joaoapps_join.join_her_send_tasker
       data_template:

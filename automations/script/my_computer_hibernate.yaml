@@ -1,5 +1,6 @@
 ---
 my_computer_hibernate:
+  alias: TaiChi Hibernate
   sequence:
     - service: input_select.select_option
       data:
