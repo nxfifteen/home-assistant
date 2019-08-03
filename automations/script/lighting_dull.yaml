@@ -1,5 +1,6 @@
 ---
 lighting_dull:
+  alias: Lighting Dull
   sequence:
     - service: input_select.select_option
       data:

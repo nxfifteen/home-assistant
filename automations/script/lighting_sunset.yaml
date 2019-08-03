@@ -1,5 +1,6 @@
 ---
 lighting_sunset:
+  alias: Lighting Sunset
   sequence:
     - service: input_select.select_option
       data:

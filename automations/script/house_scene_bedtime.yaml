@@ -1,5 +1,6 @@
 ---
 house_scene_bedtime:
+  alias: Bed Time
   sequence:
     - service: input_select.select_option
       data:

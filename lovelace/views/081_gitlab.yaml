@@ -12,6 +12,7 @@ cards:
       - sensor.gitlab_279_pipeline_master
       - sensor.gitlab_279_build_master_ha_latest
       - sensor.gitlab_279_build_master_ha_rc
+      - automation.new_ha_git_ready
       - type: 'custom:text-divider-row'
         text: Develop
       - sensor.gitlab_279_merge_request_master_develop

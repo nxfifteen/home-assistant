@@ -6,12 +6,19 @@ trigger:
     to: 'passed'
   
 action:      
+  - service: hassio.addon_start
+    data:
+      addon: "core_git_pull"
+
   - service: script.notify_tts
     data_template:
       room: "study"
       value1: "Updating Home Assistant configuration."
       hashtag: "#GitLab #CI"
 
-  - service: hassio.addon_start
-    data:
-      addon: "core_git_pull"
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Home Assistant Updating'
+      notification_id: "hass-online"
+      value1: "Updating Home Assistant configuration."
