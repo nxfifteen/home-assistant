@@ -1,5 +1,5 @@
 ---
-alias: Air Freshing for Her ON
+alias: Air Freshing for Her OFF
 
 trigger:
   - platform: state

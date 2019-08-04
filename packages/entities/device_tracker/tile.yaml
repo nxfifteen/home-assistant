@@ -9,20 +9,28 @@ device_tracker:
 homeassistant:
   customize:
     device_tracker.tile_19063e4f07561dcf:
-      friendly_name: Camera Bag
+      friendly_name: His Camera Bag
       icon: mdi:camera-account
       
     device_tracker.tile_353e0f954ad1a9af:
-      friendly_name: Camera
+      friendly_name: His Camera
       icon: mdi:camera
       
+    device_tracker.tile_98d840fa9b48f5b2:
+      friendly_name: His House Keys
+      icon: mdi:key
+      
     device_tracker.tile_964004c0e14c4228:
-      friendly_name: Keys
+      friendly_name: His Car Keys
       icon: mdi:car-key
       
     device_tracker.tile_c4f2161059284831:
-      friendly_name: Backpack
+      friendly_name: His Backpack
       icon: mdi:carry-on-bag-check
+      
+    device_tracker.tile_8cd8c4ede6ff52b8:
+      friendly_name: Her Keys
+      icon: mdi:key
       
     device_tracker.tile_c426ca7f461b4da2:
       friendly_name: Shed Key

@@ -37,7 +37,7 @@ cards:
       - type: 'custom:text-divider-row'
         text: Plugs
       - switch.gf_dinning_tv_switch
-      - sensor.gf_dinning_tv_power_2
+      - switch.wh_seasonal_two
 
   - type: custom:mini-graph-card
     entities: 

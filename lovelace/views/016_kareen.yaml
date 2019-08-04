@@ -88,3 +88,6 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Tiles
+      - entity: device_tracker.tile_8cd8c4ede6ff52b8
+        type: custom:secondaryinfo-entity-row
+        name: Keys
