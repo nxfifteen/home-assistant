@@ -95,10 +95,18 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Tiles
-      - device_tracker.tile_964004c0e14c4228
-      - device_tracker.tile_c4f2161059284831
-      - device_tracker.tile_19063e4f07561dcf
-      - device_tracker.tile_353e0f954ad1a9af
+      - entity: device_tracker.tile_964004c0e14c4228
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
+      - entity: device_tracker.tile_c4f2161059284831
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
+      - entity: device_tracker.tile_19063e4f07561dcf
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
+      - entity: device_tracker.tile_353e0f954ad1a9af
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
 
   - type: entities
     entities:
