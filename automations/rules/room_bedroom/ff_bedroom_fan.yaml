@@ -30,6 +30,13 @@ condition:
       entity_id: group.people_family
       state: 'home'
 
+    # Someone is home
+    - condition: state
+      entity_id: switch.ff_bedroom_fan_switch
+      state: 'off'
+      for:
+        minutes: 10
+
 action:
     - service: switch.turn_on
       data:

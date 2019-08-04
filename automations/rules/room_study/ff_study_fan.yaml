@@ -35,6 +35,13 @@ condition:
       entity_id: group.people_family
       state: 'home'
 
+    # Someone is home
+    - condition: state
+      entity_id: switch.ff_study_fan_switch
+      state: 'off'
+      for:
+        minutes: 10
+
     # The room is occupied
     - condition: state
       entity_id: switch.occ_room_study
