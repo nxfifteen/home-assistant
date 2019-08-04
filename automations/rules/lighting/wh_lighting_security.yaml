@@ -5,6 +5,9 @@ trigger:
 - entity_id: sensor.light_scene
   platform: state
   to: Night
+
+- entity_id: sensor.family_family_state_raw
+  platform: state
   
 condition:
   condition: and
@@ -12,8 +15,8 @@ condition:
     - condition: time
       before: '23:30:00'
     - condition: state
-      entity_id: sensor.house_scene
-      state: Empty
+      entity_id: sensor.family_family_state_raw
+      state: '1'
     - condition: state
       entity_id: sensor.light_scene
       state: Night

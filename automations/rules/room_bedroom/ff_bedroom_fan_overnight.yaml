@@ -11,12 +11,14 @@ condition:
   conditions:
     - condition: numeric_state
       entity_id: sensor.family_family_state_raw
-      above: 6
+      above: 9
+
     - condition: time
       after: '23:00:00'
+
     - condition: numeric_state
       entity_id: sensor.ff_bedroom_sensor_temperature
-      above: 20
+      above: 21
 
 action:
     - service: switch.turn_on

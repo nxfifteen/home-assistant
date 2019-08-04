@@ -14,15 +14,15 @@ trigger:
   entity_id: binary_sensor.motion_ff_bedroom
   from: 'off'
   to: 'on'
+
+- entity_id: sensor.family_family_state_raw
+  platform: state
   
 condition:
-- condition: state
-  entity_id: group.people_family
-  state: 'home'
-
 - condition: numeric_state
   entity_id: sensor.family_family_state_raw
-  below: 7 # Awake
+  below: 7 # Both Awake
+  above: 1
   
 action:
 - service: scene.turn_on
