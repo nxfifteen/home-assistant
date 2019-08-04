@@ -30,6 +30,12 @@ cards:
             card:
               type: glance
               title: People at home
+
+      - type: entities
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Tiles
+          - device_tracker.tile_c426ca7f461b4da2
                             
       #################################################################
       #                                                               #
