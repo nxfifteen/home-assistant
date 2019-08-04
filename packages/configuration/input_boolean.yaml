@@ -14,3 +14,8 @@ input_boolean:
     name: Guest Mode
     icon: mdi:emoticon-tongue-outline
     initial: off
+  
+  air_freshing:
+    name: Air Freshing
+    icon: mdi:flower
+    initial: off

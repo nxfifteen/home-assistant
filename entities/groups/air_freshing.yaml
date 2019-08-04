@@ -1,0 +1,5 @@
+---
+air_freshing:
+  name: Air Freshening
+  entities:
+    - input_boolean.air_freshing
