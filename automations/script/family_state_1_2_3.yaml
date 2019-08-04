@@ -15,6 +15,10 @@ family_state_1_2_3:
     - service: switch.turn_off
       data:
         entity_id: group.switchs_all_safe
+
+    - service: homeassistant.turn_off
+      data:
+        entity_id: group.air_freshing
     
     - service: nest.set_away_mode
       data:

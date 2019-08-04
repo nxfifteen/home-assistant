@@ -17,6 +17,11 @@ trigger:
     to: 'on'
     for:
       minutes: 10
+
+  - platform: state
+    entity_id: binary_sensor.ff_study_sensor_contact
+    from: 'off'
+    to: 'on'
     
 condition:
   condition: and
@@ -37,10 +42,17 @@ condition:
 
     # Someone is home
     - condition: state
+      entity_id: switch.occ_room_study
+      state: 'on'
+      for:
+        minutes: 8
+
+    # Someone is home
+    - condition: state
       entity_id: switch.ff_study_fan_switch
       state: 'off'
       for:
-        minutes: 10
+        minutes: 8
 
     # The room is occupied
     - condition: state

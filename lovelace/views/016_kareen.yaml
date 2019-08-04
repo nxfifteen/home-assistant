@@ -83,3 +83,8 @@ cards:
         icon: mdi:cash-usd
         type: custom:secondaryinfo-entity-row
         secondary_info:  "[[ {entity}.attributes.distance ]] km"
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Tiles

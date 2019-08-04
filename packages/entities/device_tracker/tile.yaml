@@ -23,3 +23,7 @@ homeassistant:
     device_tracker.tile_c4f2161059284831:
       friendly_name: Backpack
       icon: mdi:carry-on-bag-check
+      
+    device_tracker.tile_c426ca7f461b4da2:
+      friendly_name: Shed Key
+      icon: mdi:key
