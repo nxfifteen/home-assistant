@@ -1,0 +1,67 @@
+---
+alias: Detect Guest Mode - Off
+
+trigger:
+  platform: state
+  entity_id:
+    - person.john
+    - person.maureen
+    - person.allan
+    - person.colin
+    - person.irene
+    - person.kayleigh
+    - person.kev
+    - person.khristen
+    - person.mecha
+    - person.scott
+    - person.steve
+  from: home
+
+condition:
+  condition: and
+  conditions:
+    - condition: template
+      value_template: "{{ states.person.john.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.maureen.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.allan.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.colin.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.irene.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.kayleigh.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.kev.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.khristen.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.mecha.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.scott.state != 'home' }}"
+
+    - condition: template
+      value_template: "{{ states.person.steve.state != 'home' }}"
+
+action:      
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Guest Mode - Off'
+      notification_id: "hass-guest-off"
+      value1: 'All your guest have left.'
+      value2: "I've turned off guest mode"
+
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.guest_mode
