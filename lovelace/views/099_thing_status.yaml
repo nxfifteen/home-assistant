@@ -39,4 +39,5 @@ cards:
       - input_boolean.speech_notifications
       - input_boolean.text_notifications
       - input_boolean.guest_mode
+      - group.air_freshing
       

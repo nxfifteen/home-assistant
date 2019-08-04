@@ -1,0 +1,18 @@
+---
+alias: Dining Room TV Left On
+
+trigger:
+  - entity_id: sensor.gf_dinning_tv_power_2
+    platform: numeric_state
+    above: 10
+    below: 100
+    for:
+      minutes: 10
+
+action:
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Power Check'
+      notification_id: "hass-contact-front"
+      value1: 'Did you leave the Dining room TV on?'

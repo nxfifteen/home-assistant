@@ -1,5 +1,5 @@
 ---
-alias: Restart Dinning Room IP Camera - By Sensor
+alias: Restart Dining Room IP Camera - By Sensor
 
 trigger:
 - platform: state
@@ -22,9 +22,9 @@ action:
   - service: script.notify_join
     data_template:
       who: "stuart"
-      title: 'Dinning Room Camera'
+      title: 'Dining Room Camera'
       notification_id: "hass-cam-dinning"
       icon: !secret http_icon_cctv
       smallicon: !secret http_smallicon_cctv
       image: !secret http_image_cctv
-      value1: "The Dinning Room Camera crashed again! I've restarted it"
+      value1: "The Dining Room Camera crashed again! I've restarted it"

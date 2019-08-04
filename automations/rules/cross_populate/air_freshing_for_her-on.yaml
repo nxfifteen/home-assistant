@@ -1,0 +1,25 @@
+---
+alias: Air Freshing for Her ON
+
+trigger:
+  - platform: state
+    entity_id: input_boolean.guest_mode
+    to: 'on'
+      
+  - platform: state
+    entity_id: sensor.family_kareen_state
+
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state:  'on'
+    - condition: state
+      entity_id: sensor.family_kareen_state
+      state:  '7'
+
+action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id: group.air_freshing
