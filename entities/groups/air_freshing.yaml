@@ -3,4 +3,5 @@ air_freshing:
   name: Air Freshening
   entities:
     - input_boolean.air_freshing
-    - switch.ff_landing_air_fresh
+    - switch.wh_seasonal_one
+    - switch.wh_seasonal_two
