@@ -33,6 +33,14 @@ action:
       rgb_color: [255, 206, 121]
       transition: 3
 
+  - service: light.turn_off
+    data:
+      entity_id: light.gf_dinning_at_kitchen
+
+  - service: light.turn_off
+    data:
+      entity_id: light.gf_dinning_dinner_table
+
   # Setup the kitchen
   - service: light.turn_on
     data:
