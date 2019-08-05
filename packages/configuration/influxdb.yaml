@@ -21,9 +21,14 @@ influxdb:
 
   # Max number of retries in case of a failure#
   max_retries: 3
+  default_measurement: state
 
   # I like to specify (whitelist) each thing I'd like to put#
   # into InfluxDB, to keep the database as clean as possible.#
   include:
-    entities:
-      - sensor.empty_sensor
+    domains:
+       - sensor
+
+  tags:
+    instance: prod
+    source: hass
