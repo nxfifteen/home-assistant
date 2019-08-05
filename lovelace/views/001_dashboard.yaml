@@ -30,14 +30,6 @@ cards:
             card:
               type: glance
               title: People at home
-
-      - type: entities
-        entities:
-          - type: 'custom:text-divider-row'
-            text: Tiles
-          - entity: device_tracker.tile_c426ca7f461b4da2
-            type: custom:secondaryinfo-entity-row
-            secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
                             
       #################################################################
       #                                                               #
@@ -295,3 +287,9 @@ cards:
       - switch.wh_seasonal_two
       - switch.wh_seasonal_three
       - switch.wh_seasonal_four
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Tiles
+      - device_tracker.tile_c426ca7f461b4da2

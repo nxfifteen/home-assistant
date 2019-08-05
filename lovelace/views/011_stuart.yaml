@@ -96,25 +96,15 @@ cards:
       - type: 'custom:text-divider-row'
         text: Tiles
       - entity: device_tracker.tile_98d840fa9b48f5b2
-        type: custom:secondaryinfo-entity-row
         name: House Keys
-        secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
       - entity: device_tracker.tile_964004c0e14c4228
-        type: custom:secondaryinfo-entity-row
         name: Car Keys
-        secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
       - entity: device_tracker.tile_c4f2161059284831
-        type: custom:secondaryinfo-entity-row
         name: Backpack
-        secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
       - entity: device_tracker.tile_19063e4f07561dcf
-        type: custom:secondaryinfo-entity-row
         name: Camera Bag
-        secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
       - entity: device_tracker.tile_353e0f954ad1a9af
-        type: custom:secondaryinfo-entity-row
         name: Camera
-        secondary_info:  "[[ {entity}.attributes['is dead'] ]]"
 
   - type: entities
     entities:
