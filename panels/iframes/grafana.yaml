@@ -1,0 +1,5 @@
+---
+grafana:
+  title: Grafana
+  icon: mdi:chart-timeline
+  url: https://192.168.1.100:3000
