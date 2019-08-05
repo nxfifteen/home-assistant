@@ -35,6 +35,18 @@ action:
 
   - service: light.turn_off
     data:
+      entity_id: light.gf_dinning_cooker
+
+  - service: light.turn_off
+    data:
+      entity_id: light.gf_dinning_door_way
+
+  - service: switch.turn_off
+    data:
+      entity_id: switch.gf_dinning_tv_switch
+
+  - service: light.turn_off
+    data:
       entity_id: light.gf_dinning_at_kitchen
 
   - service: light.turn_off
@@ -59,22 +71,6 @@ action:
       entity_id: light.gf_dinning_display_unit
       brightness: 150
       transition: 3
-
-  - service: light.turn_off
-    data:
-      entity_id: group.light_gf_dinning
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_dinning_cooker
-
-  - service: light.turn_off
-    data:
-      entity_id: light.gf_dinning_door_way
-
-  - service: switch.turn_off
-    data:
-      entity_id: switch.gf_dinning_tv_switch
 
   # Setup the Hallways
   - service: light.turn_on
