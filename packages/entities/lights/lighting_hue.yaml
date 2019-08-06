@@ -16,128 +16,110 @@ sensor:
     state_topic: "iot/scene/lights"
   - platform: template
     sensors:
-      light.ff_bedroom_bedside_kareen_bright:
+      ff_bedroom_bedside_kareen_bright:
         value_template: '{{ states.sensor.light.ff_bedroom_bedside_kareen.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.ff_bedroom_bedside_stuart_bright:
+      ff_bedroom_bedside_stuart_bright:
         value_template: '{{ states.sensor.light.ff_bedroom_bedside_stuart.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.ff_bedroom_celing_bright:
+      ff_bedroom_celing_bright:
         value_template: '{{ states.sensor.light.ff_bedroom_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.ff_landing_celing_bright:
+      ff_landing_celing_bright:
         value_template: '{{ states.sensor.light.ff_landing_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.ff_study_celing_bright:
+      ff_study_celing_bright:
         value_template: '{{ states.sensor.light.ff_study_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.ff_study_desk_bright:
+      ff_study_desk_bright:
         value_template: '{{ states.sensor.light.ff_study_desk.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.ff_study_wall_bright:
+      ff_study_wall_bright:
         value_template: '{{ states.sensor.light.ff_study_wall.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_dinning_at_kitchen_bright:
+      gf_dinning_at_kitchen_bright:
         value_template: '{{ states.sensor.light.gf_dinning_at_kitchen.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_dinning_cooker_bright:
+      gf_dinning_cooker_bright:
         value_template: '{{ states.sensor.light.gf_dinning_cooker.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_dinning_dinner_table_bright:
+      gf_dinning_dinner_table_bright:
         value_template: '{{ states.sensor.light.gf_dinning_dinner_table.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_dinning_dishwahser_bright:
+      gf_dinning_dishwahser_bright:
         value_template: '{{ states.sensor.light.gf_dinning_dishwahser.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_dinning_display_unit_bright:
+      gf_dinning_display_unit_bright:
         value_template: '{{ states.sensor.light.gf_dinning_display_unit.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_dinning_door_way_bright:
+      gf_dinning_door_way_bright:
         value_template: '{{ states.sensor.light.gf_dinning_door_way.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_dinning_sink_bright:
+      gf_dinning_sink_bright:
         value_template: '{{ states.sensor.light.gf_dinning_sink.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_hallway_celing_bright:
+      gf_hallway_celing_bright:
         value_template: '{{ states.sensor.light.gf_hallway_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_living_celing_bright:
+      gf_living_celing_bright:
         value_template: '{{ states.sensor.light.gf_living_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_living_lamp_bright:
+      gf_living_lamp_bright:
         value_template: '{{ states.sensor.light.gf_living_lamp.attributes.brightness }}'
         friendly_name: 'Brightness'
 
   - platform: template
     sensors:
-      light.gf_studio_celing_bright:
+      gf_studio_celing_bright:
         value_template: '{{ states.sensor.light.gf_studio_celing.attributes.brightness }}'
-        friendly_name: 'Brightness'
-
-  - platform: template
-    sensors:
-      sensor.light_scene_bright:
-        value_template: '{{ states.sensor.sensor.light_scene.attributes.brightness }}'
-        friendly_name: 'Brightness'
-
-  - platform: template
-    sensors:
-      sensor.light_scene_ff_bright:
-        value_template: '{{ states.sensor.sensor.light_scene_ff.attributes.brightness }}'
-        friendly_name: 'Brightness'
-
-  - platform: template
-    sensors:
-      sensor.light_scene_gf_bright:
-        value_template: '{{ states.sensor.sensor.light_scene_gf.attributes.brightness }}'
         friendly_name: 'Brightness'
 
 
