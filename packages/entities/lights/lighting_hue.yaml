@@ -18,75 +18,75 @@ sensor:
   - platform: template
     sensors:
       ff_bedroom_bedside_kareen_bright:
-        value_template: '{{ states.sensor.light.ff_bedroom_bedside_kareen.attributes.brightness }}'
+        value_template: '{{ states.light.ff_bedroom_bedside_kareen.attributes.brightness }}'
         friendly_name: 'Brightness'
         
       ff_bedroom_bedside_stuart_bright:
-        value_template: '{{ states.sensor.light.ff_bedroom_bedside_stuart.attributes.brightness }}'
+        value_template: '{{ states.light.ff_bedroom_bedside_stuart.attributes.brightness }}'
         friendly_name: 'Brightness'
         
       ff_bedroom_celing_bright:
-        value_template: '{{ states.sensor.light.ff_bedroom_celing.attributes.brightness }}'
+        value_template: '{{ states.light.ff_bedroom_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
       
       ff_landing_celing_bright:
-        value_template: '{{ states.sensor.light.ff_landing_celing.attributes.brightness }}'
+        value_template: '{{ states.light.ff_landing_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
         
       ff_study_celing_bright:
-        value_template: '{{ states.sensor.light.ff_study_celing.attributes.brightness }}'
+        value_template: '{{ states.light.ff_study_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       ff_study_desk_bright:
-        value_template: '{{ states.sensor.light.ff_study_desk.attributes.brightness }}'
+        value_template: '{{ states.light.ff_study_desk.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       ff_study_wall_bright:
-        value_template: '{{ states.sensor.light.ff_study_wall.attributes.brightness }}'
+        value_template: '{{ states.light.ff_study_wall.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_dinning_at_kitchen_bright:
-        value_template: '{{ states.sensor.light.gf_dinning_at_kitchen.attributes.brightness }}'
+        value_template: '{{ states.light.gf_dinning_at_kitchen.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_dinning_cooker_bright:
-        value_template: '{{ states.sensor.light.gf_dinning_cooker.attributes.brightness }}'
+        value_template: '{{ states.light.gf_dinning_cooker.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_dinning_dinner_table_bright:
-        value_template: '{{ states.sensor.light.gf_dinning_dinner_table.attributes.brightness }}'
+        value_template: '{{ states.light.gf_dinning_dinner_table.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_dinning_dishwahser_bright:
-        value_template: '{{ states.sensor.light.gf_dinning_dishwahser.attributes.brightness }}'
+        value_template: '{{ states.light.gf_dinning_dishwahser.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_dinning_display_unit_bright:
-        value_template: '{{ states.sensor.light.gf_dinning_display_unit.attributes.brightness }}'
+        value_template: '{{ states.light.gf_dinning_display_unit.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_dinning_door_way_bright:
-        value_template: '{{ states.sensor.light.gf_dinning_door_way.attributes.brightness }}'
+        value_template: '{{ states.light.gf_dinning_door_way.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_dinning_sink_bright:
-        value_template: '{{ states.sensor.light.gf_dinning_sink.attributes.brightness }}'
+        value_template: '{{ states.light.gf_dinning_sink.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_hallway_celing_bright:
-        value_template: '{{ states.sensor.light.gf_hallway_celing.attributes.brightness }}'
+        value_template: '{{ states.light.gf_hallway_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_living_celing_bright:
-        value_template: '{{ states.sensor.light.gf_living_celing.attributes.brightness }}'
+        value_template: '{{ states.light.gf_living_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_living_lamp_bright:
-        value_template: '{{ states.sensor.light.gf_living_lamp.attributes.brightness }}'
+        value_template: '{{ states.light.gf_living_lamp.attributes.brightness }}'
         friendly_name: 'Brightness'
 
       gf_studio_celing_bright:
-        value_template: '{{ states.sensor.light.gf_studio_celing.attributes.brightness }}'
+        value_template: '{{ states.light.gf_studio_celing.attributes.brightness }}'
         friendly_name: 'Brightness'
 
 
@@ -159,14 +159,14 @@ homeassistant:
     light.gf_living_lamp:
       friendly_name: Livingroom Lamp
 
-    sensor.light_scene:
+    light.light_scene:
       friendly_name: Lighting Scene
       icon: mdi:ceiling-light
       
-    sensor.light_scene_gf:
+    light.light_scene_gf:
       friendly_name: GF Lighting Scene
       icon: mdi:ceiling-light
       
-    sensor.light_scene_ff:
+    light.light_scene_ff:
       friendly_name: FF Lighting Scene
       icon: mdi:ceiling-light
