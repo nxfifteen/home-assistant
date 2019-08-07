@@ -33,6 +33,11 @@ sensor:
   value_template: "{{ value_json.ignition }}"
 
 - platform: mqtt
+  name: family_stuart_drive_speed
+  state_topic: "tracker/family/stuart/phone/location"
+  value_template: "{{ value_json.vel }}"
+
+- platform: mqtt
   name: family_stuart_drive_dest
   state_topic: "tracker/family/stuart/phone/location"
   value_template: "{{ value_json.dest }}"
