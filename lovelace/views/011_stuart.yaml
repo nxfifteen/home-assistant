@@ -54,6 +54,8 @@ cards:
         text: Accounts
       - entity: sensor.steam_76561197982696593
         name: Steam
+      - entity: sensor.stuart_s_jabra_elite_65t
+        name: Jabra Elite        
   
   - type: horizontal-stack
     cards:

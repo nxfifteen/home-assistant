@@ -60,6 +60,11 @@ sensor:
   map_zoom: 17
   home_zone: zone.home
 
+- platform: template
+  sensors:
+    stuart_s_jabra_elite_65t:
+      value_template: '{{ states.media_player.stuart_s_jabra_elite_65t.state|default(off)|string }}' 
+
 input_select:
   stuart:
     options:
