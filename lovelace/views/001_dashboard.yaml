@@ -282,14 +282,5 @@ cards:
   - type: entities
     entities:
       - type: 'custom:text-divider-row'
-        text: Seasonal
-      - switch.wh_seasonal_one
-      - switch.wh_seasonal_two
-      - switch.wh_seasonal_three
-      - switch.wh_seasonal_four
-
-  - type: entities
-    entities:
-      - type: 'custom:text-divider-row'
         text: Tiles
       - device_tracker.tile_c426ca7f461b4da2
