@@ -42,6 +42,14 @@ ha-rc:
     entrypoint: [""]
   allow_failure: true
 
+ha-installed:
+  <<: *ha
+  stage: test
+  image:
+    name: homeassistant/home-assistant:0.96.5
+    entrypoint: [""]
+  allow_failure: true
+
 # ha-dev:
 #   <<: *ha
 #   stage: test
