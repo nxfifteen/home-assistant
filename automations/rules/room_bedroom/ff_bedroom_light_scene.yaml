@@ -25,10 +25,9 @@ condition:
       entity_id: sensor.family_family_state_raw
       below: 7 # Both Awake
       above: 1
-
-    - condition: state
-      entity_id: sensor.house_scene
-      state: 'Occupied'
+      
+    - condition: template
+      value_template: "{{ not is_state('sensor.house_scene', 'Going To Bed') }}"
 
   
 action:
