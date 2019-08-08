@@ -40,4 +40,13 @@ cards:
       - input_boolean.text_notifications
       - input_boolean.guest_mode
       - group.air_freshing
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Seasonal
+      - switch.wh_seasonal_one
+      - switch.wh_seasonal_two
+      - switch.wh_seasonal_three
+      - switch.wh_seasonal_four
       
