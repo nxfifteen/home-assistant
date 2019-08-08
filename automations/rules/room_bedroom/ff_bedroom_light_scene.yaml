@@ -19,10 +19,17 @@ trigger:
   platform: state
   
 condition:
-- condition: numeric_state
-  entity_id: sensor.family_family_state_raw
-  below: 7 # Both Awake
-  above: 1
+  condition: and
+  conditions:
+    - condition: numeric_state
+      entity_id: sensor.family_family_state_raw
+      below: 7 # Both Awake
+      above: 1
+
+    - condition: state
+      entity_id: sensor.house_scene
+      state: 'Occupied'
+
   
 action:
 - service: scene.turn_on
