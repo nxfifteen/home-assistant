@@ -1,7 +1,7 @@
 ---
 binary_sensor:
 - platform: template
-  sensors:        
+  sensors:
     motion_gf_living:
       friendly_name: "Living Motion"
       device_class: motion

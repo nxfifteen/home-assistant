@@ -4,32 +4,32 @@ notify:
     name: hass_synchat
     resource: !secret synology_webhook_hass_synchat
     verify_ssl: false
-    
+
   - platform: synology_chat
     name: synchat_hab
     resource: !secret synology_webhook_synchat_hab
     verify_ssl: false
-    
+
   - platform: synology_chat
     name: synchat_nx
     resource: !secret synology_webhook_synchat_nx
     verify_ssl: false
-    
+
   - platform: synology_chat
     name: synchat_outside
     resource: !secret synology_webhook_synchat_outside
     verify_ssl: false
-    
+
   - platform: synology_chat
     name: synchat_tts
     resource: !secret synology_webhook_synchat_tts
     verify_ssl: false
-    
+
   - platform: synology_chat
     name: synchat_tweets
     resource: !secret synology_webhook_synchat_tweets
     verify_ssl: false
-    
+
   - platform: synology_chat
     name: synchat_visitorlog
     resource: !secret synology_webhook_synchat_visitorlog

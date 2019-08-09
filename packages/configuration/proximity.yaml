@@ -1,6 +1,6 @@
 ---
 proximity:
-  home: 
+  home:
     ignored_zones:
       - cs_tps
       - newport
@@ -10,21 +10,21 @@ proximity:
       - device_tracker.kareen
     tolerance: 50
     unit_of_measurement: mi
-    
+
   cs_tps:
     ignored_zones:
       - home
     devices:
       - device_tracker.stuart_tasker
     tolerance: 10
-    
+
   newport:
     ignored_zones:
       - homehis_work
     devices:
       - device_tracker.kareen_tasker
     tolerance: 10
-    
+
   tayport:
     ignored_zones:
       - home
@@ -36,12 +36,12 @@ homeassistant:
   customize:
     proximity.home:
       friendly_name: Home
-      
+
     proximity.cs_tps:
       friendly_name: Work
-      
+
     proximity.newport:
       friendly_name: Newport
-      
+
     proximity.tayport:
       friendly_name: Tayport

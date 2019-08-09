@@ -1,7 +1,7 @@
 ---
 power_graph:    # This is the name of another template
   type: custom:mini-graph-card
-  entities: 
+  entities:
     - [[sensor]]
   name: [[name]]
   height: 74

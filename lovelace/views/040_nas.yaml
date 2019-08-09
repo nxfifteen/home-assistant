@@ -4,7 +4,7 @@ icon: mdi:nas
 title: Network
 cards:
   - type: custom:mini-graph-card
-    entities: 
+    entities:
       - sensor.speedtest_ping
     height: 50
     line_width: 2
@@ -23,7 +23,7 @@ cards:
   - type: horizontal-stack
     cards:
       - type: custom:mini-graph-card
-        entities: 
+        entities:
           - sensor.speedtest_download
         height: 50
         line_width: 2
@@ -38,9 +38,9 @@ cards:
             color: "#FFFF00"
           - value: 40
             color: "#3498db"
-            
+
       - type: custom:mini-graph-card
-        entities: 
+        entities:
           - sensor.speedtest_upload
         height: 50
         line_width: 2
@@ -57,7 +57,7 @@ cards:
             color: "#3498db"
 
   - type: vertical-stack
-    cards:    
+    cards:
       - type: entities
         show_header_toggle: off
         entities:
@@ -71,36 +71,36 @@ cards:
                     card:
                       type: picture
                       image: /local/images/hp_envy_4500.jpg
-                    style:                 
+                    style:
                       border-radius: 5px
-                 
+
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.printer_hp
                     title: Status
                     align: center
                     padding: 5px
-                    card_style: 
+                    card_style:
                       border-radius: 5px
-       
+
           - type: custom:bar-card
             align: split
             show_icon: true
             padding: 4px
             columns: 1
-            card_style: 
+            card_style:
               border-radius: 5px
             entities:
               - entity: sensor.printer_hp_black
                 title: Black
                 icon: mdi:alpha-b-box
-       
+
           - type: custom:bar-card
             align: split
             show_icon: true
             padding: 4px
             columns: 1
-            card_style: 
+            card_style:
               border-radius: 5px
             entities:
               - entity: sensor.printer_hp_colour
@@ -108,7 +108,7 @@ cards:
                 icon: mdi:alpha-c-box
 
   - type: vertical-stack
-    cards:    
+    cards:
       - type: entities
         show_header_toggle: off
         entities:
@@ -122,46 +122,46 @@ cards:
                     card:
                       type: picture
                       image: /local/images/hass.jpg
-                    style:                 
+                    style:
                       border-radius: 5px
-                 
+
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.synology_dsm_status_volume_1
                     title: Status
                     align: center
                     padding: 5px
-                    card_style: 
+                    card_style:
                       border-radius: 5px
-                      
+
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.synology_dsm_total_size_volume_1
                     title: Total Storage
                     align: center
                     padding: 5px
-                    card_style: 
+                    card_style:
                       border-radius: 5px
-       
+
           - type: custom:bar-card
             align: split
             show_icon: true
             padding: 4px
             columns: 1
-            card_style: 
+            card_style:
               border-radius: 5px
             entities:
               - entity: sensor.synology_dsm_volume_used_volume_1
                 title: Disk
                 icon: mdi:harddisk
-                
+
       - type: entities
         show_header_toggle: off
         entities:
         - sensor.synology_dsm_status_volume_1
 
   - type: vertical-stack
-    cards:    
+    cards:
       - type: entities
         show_header_toggle: off
         entities:
@@ -175,46 +175,46 @@ cards:
                     card:
                       type: picture
                       image: /local/images/media.jpg
-                    style:                 
+                    style:
                       border-radius: 5px
-                 
+
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.synology_dsm_status_volume_2
                     title: Status
                     align: center
                     padding: 5px
-                    card_style: 
+                    card_style:
                       border-radius: 5px
-                      
+
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.synology_dsm_total_size_volume_2
                     title: Total Storage
                     align: center
                     padding: 5px
-                    card_style: 
+                    card_style:
                       border-radius: 5px
-       
+
           - type: custom:bar-card
             align: split
             show_icon: true
             padding: 4px
             columns: 1
-            card_style: 
+            card_style:
               border-radius: 5px
             entities:
               - entity: sensor.synology_dsm_volume_used_volume_2
                 title: Disk
                 icon: mdi:harddisk
-                
+
       - type: entities
         show_header_toggle: off
         entities:
         - sensor.synology_dsm_status_volume_2
 
   - type: vertical-stack
-    cards:    
+    cards:
       - type: entities
         show_header_toggle: off
         entities:
@@ -228,39 +228,39 @@ cards:
                     card:
                       type: picture
                       image: /local/images/core_network.jpg
-                    style:                 
+                    style:
                       border-radius: 5px
-                 
+
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.synology_dsm_status_volume_3
                     title: Status
                     align: center
                     padding: 5px
-                    card_style: 
+                    card_style:
                       border-radius: 5px
-                      
+
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.synology_dsm_total_size_volume_3
                     title: Total Storage
                     align: center
                     padding: 5px
-                    card_style: 
+                    card_style:
                       border-radius: 5px
-       
+
           - type: custom:bar-card
             align: split
             show_icon: true
             padding: 4px
             columns: 1
-            card_style: 
+            card_style:
               border-radius: 5px
             entities:
               - entity: sensor.synology_dsm_volume_used_volume_3
                 title: Disk
                 icon: mdi:harddisk
-                
+
       - type: entities
         show_header_toggle: off
         entities:

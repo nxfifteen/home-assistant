@@ -8,7 +8,7 @@ trigger:
 - entity_id: switch.occ_room_kitchen
   platform: state
   to: 'off'
-  
+
 condition:
 - condition: state
   entity_id: switch.occ_room_livingroom
@@ -16,7 +16,7 @@ condition:
 - condition: state
   entity_id: switch.occ_room_kitchen
   state: 'off'
-  
+
 action:
 - service: light.turn_off
   data:

@@ -6,7 +6,7 @@ binary_sensor:
   payload_on: "true"
   payload_off: "false"
   device_class: motion
-  
+
 - platform: mqtt
   name: gf_studio_camera
   state_topic: "iot/sensors/motion/camera/backdoor/online"
@@ -14,7 +14,7 @@ binary_sensor:
   payload_off: "false"
 
 - platform: template
-  sensors:        
+  sensors:
     motion_gf_studio_camera:
       friendly_name: "Studio Camera Motion"
       device_class: motion

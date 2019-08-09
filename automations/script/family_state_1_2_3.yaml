@@ -19,7 +19,7 @@ family_state_1_2_3:
     - service: homeassistant.turn_off
       data:
         entity_id: group.air_freshing
-    
+
     - service: nest.set_away_mode
       data:
         away_mode: away

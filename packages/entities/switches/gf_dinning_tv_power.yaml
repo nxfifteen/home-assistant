@@ -5,4 +5,3 @@ homeassistant:
       friendly_name: Dinning Room TV
     sensor.gf_dinning_tv_power_2:
       friendly_name: TV Watts
- 

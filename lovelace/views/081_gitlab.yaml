@@ -58,17 +58,17 @@ cards:
                     - sensor.gitlab_279_forks
                     - sensor.gitlab_279_issues
                     - sensor.gitlab_279_commits
-                style: 
+                style:
                   border-radius: 0px
-                
+
               - type: custom:card-modder
                 card:
                   type: glance
                   entities:
                     - sensor.gitlab_279_ci
-                style: 
+                style:
                   border-radius: 0px
-           
+
           - type: horizontal-stack
             cards:
               - type: custom:card-modder
@@ -77,18 +77,18 @@ cards:
                   entities:
                     - sensor.gitlab_279_commits_weekly
                     - sensor.gitlab_279_commits_last_week
-                style: 
+                style:
                   border-radius: 0px
-          
+
               - type: custom:card-modder
                 card:
                   type: glance
                   entities:
                     - sensor.gitlab_279_issues_weekly
                     - sensor.gitlab_279_issues_last_week
-                style: 
+                style:
                   border-radius: 0px
-           
+
           - type: horizontal-stack
             cards:
               - type: custom:card-modder
@@ -97,16 +97,16 @@ cards:
                   entities:
                     - sensor.gitlab_279_commits_monthly
                     - sensor.gitlab_279_commits_last_month
-                style: 
+                style:
                   border-radius: 0px
-          
+
               - type: custom:card-modder
                 card:
                   type: glance
                   entities:
                     - sensor.gitlab_279_issues_monthly
                     - sensor.gitlab_279_issues_last_month
-                style: 
+                style:
                   border-radius: 0px
 
 

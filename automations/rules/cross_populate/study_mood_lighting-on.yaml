@@ -6,7 +6,7 @@ trigger:
   entity_id: switch.ff_study_monitors_switch
   from:  'off'
   to:  'on'
-  
+
 action:
   - service: light.turn_on
     data:
@@ -15,7 +15,7 @@ action:
       rgb_color: [58, 184, 255]
       transition: 5
       effect: none
-      
+
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk
@@ -24,4 +24,3 @@ action:
       transition: 5
       effect: none
 
- 

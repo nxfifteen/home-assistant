@@ -30,6 +30,6 @@ homeassistant:
   customize:
     sensor.family_family_state:
       friendly_name: "Family State"
-    
+
     sensor.family_family_state_raw:
       friendly_name: "Family State Raw"

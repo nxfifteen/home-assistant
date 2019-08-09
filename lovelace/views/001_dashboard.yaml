@@ -2,7 +2,7 @@
 id: dashboard
 title: Dashboard
 icon: mdi:home-assistant
-cards:  
+cards:
   - type: vertical-stack
     cards:
       #####################
@@ -30,7 +30,7 @@ cards:
             card:
               type: glance
               title: People at home
-                            
+
       #################################################################
       #                                                               #
       #                      Home - Weather Card                      #
@@ -81,7 +81,7 @@ cards:
   #                                                               #
   #                     Home - Presence Card                      #
   #                                                               #
-  ################################################################# 
+  #################################################################
   - type: entities
     show_header_toggle: false
     entities:
@@ -112,7 +112,7 @@ cards:
           - type: section
           - entity: sensor.family_stuart_battery_phone
             name: Battery
-          
+
       - type: entities
         show_header_toggle: false
         entities:
@@ -134,9 +134,9 @@ cards:
   #                   Home - Temperature Card                     #
   #                                                               #
   #################################################################
-        
+
   - type: vertical-stack
-    cards:  
+    cards:
       - type: 'custom:simple-thermostat'
         entity: climate.hallway
         name: Nest
@@ -159,9 +159,9 @@ cards:
             name: 'Off'
             include: true
             icon: mdi:whitewalker
-    
+
       - type: custom:mini-graph-card
-        entities: 
+        entities:
          - sensor.hallway_thermostat_temperature
         name: Nest
         height: 46
@@ -182,11 +182,11 @@ cards:
             color: "#3498db"
           - value: -100
             color: "#e74c3c"
-            
+
       - type: horizontal-stack
         cards:
           - type: custom:mini-graph-card
-            entities: 
+            entities:
               - sensor.ff_study_sensor_temperature
             name: Study
             height: 74
@@ -207,9 +207,9 @@ cards:
                 color: "#3498db"
               - value: -100
                 color: "#e74c3c"
-            
+
           - type: custom:mini-graph-card
-            entities: 
+            entities:
               - sensor.ff_bedroom_sensor_temperature
             name: Bedroom
             height: 74
@@ -230,11 +230,11 @@ cards:
                 color: "#3498db"
               - value: -100
                 color: "#e74c3c"
-            
+
       - type: horizontal-stack
         cards:
           - type: custom:mini-graph-card
-            entities: 
+            entities:
               - sensor.gf_dinning_sensor_temperature
             name: Dinning Room
             height: 74
@@ -255,9 +255,9 @@ cards:
                 color: "#3498db"
               - value: -100
                 color: "#e74c3c"
-            
+
           - type: custom:mini-graph-card
-            entities: 
+            entities:
               - sensor.gf_living_sensor_temperature
             name: Livingroom
             height: 74

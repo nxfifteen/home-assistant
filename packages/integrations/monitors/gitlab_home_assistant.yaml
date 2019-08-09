@@ -21,7 +21,7 @@ sensor:
       value_template: "{{ state_attr('sensor.gitlab_279_project', 'open_issues_count') }}"
       entity_id: sensor.gitlab_279_project
       friendly_name: 'Issues'
-      
+
     gitlab_279_forks:
       value_template: "{{ state_attr('sensor.gitlab_279_project', 'forks_count') }}"
       entity_id: sensor.gitlab_279_project
@@ -40,7 +40,7 @@ sensor:
     gitlab_279_stars_last_week:
       value_template: "{{ states.sensor.gitlab_279_stars_weekly.attributes.last_period }}"
       friendly_name: 'Last Week'
-      
+
     gitlab_279_stars_last_month:
       value_template: "{{ states.sensor.gitlab_279_stars_monthly.attributes.last_period }}"
       friendly_name: 'Last Month'
@@ -48,7 +48,7 @@ sensor:
     gitlab_279_issues_last_week:
       value_template: "{{ states.sensor.gitlab_279_issues_weekly.attributes.last_period }}"
       friendly_name: 'Last Week'
-      
+
     gitlab_279_issues_last_month:
       value_template: "{{ states.sensor.gitlab_279_issues_monthly.attributes.last_period }}"
       friendly_name: 'Last Month'
@@ -56,7 +56,7 @@ sensor:
     gitlab_279_commits_last_week:
       value_template: "{{ states.sensor.gitlab_279_commits_weekly.attributes.last_period }}"
       friendly_name: 'Last Week'
-      
+
     gitlab_279_commits_last_month:
       value_template: "{{ states.sensor.gitlab_279_commits_monthly.attributes.last_period }}"
       friendly_name: 'Last Month'
@@ -66,19 +66,19 @@ sensor:
   entity_id: sensor.gitlab_279_stars
   max_age:
     days: 7
-    
+
 - platform: statistics
   name: gitlab_279_stars_week_last
   entity_id: sensor.gitlab_279_stars
   max_age:
     days: 14
-    
+
 - platform: statistics
   name: gitlab_279_stars_month_this
   entity_id: sensor.gitlab_279_stars
   max_age:
     days: 30
-    
+
 - platform: statistics
   name: gitlab_279_stars_month_last
   entity_id: sensor.gitlab_279_stars
@@ -90,19 +90,19 @@ sensor:
   entity_id: sensor.gitlab_279_issues
   max_age:
     days: 7
-    
+
 - platform: statistics
   name: gitlab_279_issues_week_last
   entity_id: sensor.gitlab_279_issues
   max_age:
     days: 14
-    
+
 - platform: statistics
   name: gitlab_279_issues_month_this
   entity_id: sensor.gitlab_279_issues
   max_age:
     days: 30
-    
+
 - platform: statistics
   name: gitlab_279_issues_month_last
   entity_id: sensor.gitlab_279_issues
@@ -114,19 +114,19 @@ sensor:
   entity_id: sensor.gitlab_279_commits
   max_age:
     days: 7
-    
+
 - platform: statistics
   name: gitlab_279_commits_week_last
   entity_id: sensor.gitlab_279_commits
   max_age:
     days: 14
-    
+
 - platform: statistics
   name: gitlab_279_commits_month_this
   entity_id: sensor.gitlab_279_commits
   max_age:
     days: 30
-    
+
 - platform: statistics
   name: gitlab_279_commits_month_last
   entity_id: sensor.gitlab_279_commits
@@ -137,23 +137,23 @@ utility_meter:
   gitlab_279_stars_weekly:
     source: sensor.gitlab_279_stars
     cycle: weekly
-    
+
   gitlab_279_stars_monthly:
     source: sensor.gitlab_279_stars
     cycle: monthly
-    
+
   gitlab_279_issues_weekly:
     source: sensor.gitlab_279_issues
     cycle: weekly
-    
+
   gitlab_279_issues_monthly:
     source: sensor.gitlab_279_issues
     cycle: monthly
-    
+
   gitlab_279_commits_weekly:
     source: sensor.gitlab_279_commits
     cycle: weekly
-    
+
   gitlab_279_commits_monthly:
     source: sensor.gitlab_279_commits
     cycle: monthly
@@ -175,7 +175,7 @@ homeassistant:
     sensor.gitlab_279_commits:
       friendly_name: 'Commits'
       icon: mdi:source-branch
-    
+
     #'
     #  statistics
     #'
@@ -191,7 +191,7 @@ homeassistant:
     sensor.gitlab_279_stars_month_last:
       friendly_name: Stars Last Month
       icon: mdi:star-four-points-outline
-      
+
     sensor.gitlab_279_commits_week_this:
       friendly_name: Commits This Week
       icon: mdi:source-commit-start
@@ -216,7 +216,7 @@ homeassistant:
     sensor.gitlab_279_commits_month_last_mean:
       friendly_name: Commits Last Month Mean
       icon: mdi:source-commit-start-next-local
-    
+
     #'
     #  utility_meter
     #'
@@ -226,14 +226,14 @@ homeassistant:
     sensor.gitlab_279_stars_monthly:
       friendly_name: 'Stars'
       icon: mdi:star-four-points
-      
+
     sensor.gitlab_279_issues_weekly:
       friendly_name: 'Issues'
       icon: mdi:exclamation
     sensor.gitlab_279_issues_monthly:
       friendly_name: 'Issues'
       icon: mdi:exclamation
-      
+
     sensor.gitlab_279_commits_weekly:
       friendly_name: 'Commits'
       icon: mdi:source-merge

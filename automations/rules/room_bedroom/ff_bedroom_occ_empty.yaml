@@ -8,17 +8,17 @@ trigger:
   to: 'off'
   for:
     seconds: 90
-  
+
 condition:
   condition: and
   conditions:
     - condition: state
       entity_id: switch.occ_room_bedroom
       state: 'off'
-      
+
     - condition: template
       value_template: "{{ not is_state('sensor.house_scene', 'Going To Bed') }}"
-  
+
 action:
   - service: light.turn_off
     data:

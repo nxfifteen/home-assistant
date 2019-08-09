@@ -12,7 +12,7 @@ cards:
         name: Study
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[  sensor.occ_room_study_reason.state ]]"
- 
+
   - type: entities
     show_header_toggle: false
     entities:
@@ -57,7 +57,7 @@ cards:
   - type: vertical-stack
     cards:
     - type: custom:mini-graph-card
-      entities: 
+      entities:
         - sensor.ff_study_sensor_temperature
       name: Temperature
       height: 74
@@ -78,9 +78,9 @@ cards:
           color: "#3498db"
         - value: -100
           color: "#e74c3c"
-  
+
     - type: custom:mini-graph-card
-      entities: 
+      entities:
         - sensor.ff_study_sensor_illuminance
       name: Lux
       height: 74
@@ -93,7 +93,7 @@ cards:
         extrema: true
 
   - type: custom:mini-graph-card
-    entities: 
+    entities:
       - sensor.ff_study_loading_pi_power_2
     name: Loading Station
     height: 74
@@ -121,7 +121,7 @@ cards:
         color: "#1db954"
 
   - type: custom:mini-graph-card
-    entities: 
+    entities:
       - sensor.study_sterio_power
     name: Sterio
     height: 74
@@ -149,7 +149,7 @@ cards:
         color: "#1db954"
 
   - type: custom:mini-graph-card
-    entities: 
+    entities:
       - sensor.ff_study_monitors_power_2
     name: Monitors
     height: 74

@@ -17,13 +17,13 @@ trigger:
 
 - entity_id: sensor.family_family_state_raw
   platform: state
-  
+
 condition:
 - condition: numeric_state
   entity_id: sensor.family_family_state_raw
   below: 8 # He's Awake
   above: 1
-  
+
 action:
 - service: scene.turn_on
   data_template:

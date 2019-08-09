@@ -5,12 +5,12 @@ sensor:
     name: "printer_hp"
     state_topic: iot/sensors/printers/HPEnvy
     value_template: "{{ value_json.status }}"
-    
+
   - platform: mqtt
     name: "printer_hp_colour"
     state_topic: iot/sensors/printers/HPEnvy
     value_template: "{{ value_json.colour.level }}"
-    
+
   - platform: mqtt
     name: "printer_hp_black"
     state_topic: iot/sensors/printers/HPEnvy
@@ -26,7 +26,7 @@ homeassistant:
       friendly_name: "Ink level (Tri-color)"
       icon: mdi:alpha-c-box
       unit_of_measurement: '%'
-      
+
     sensor.printer_hp_black:
       friendly_name: "Ink level (Black)"
       icon: mdi:alpha-b-box

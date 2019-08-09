@@ -25,11 +25,11 @@ automation:
       to: "Lock"
     action:
       - service: shell_command.lock_his_pc
-      
+
   - alias: hibernate_his_pc
     trigger:
       platform: state
       entity_id: input_select.his_pc_options
       to: "Hibernate"
     action:
-      - service: shell_command.hibernate_his_pc  
+      - service: shell_command.hibernate_his_pc

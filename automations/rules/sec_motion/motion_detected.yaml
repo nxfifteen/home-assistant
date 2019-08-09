@@ -14,7 +14,7 @@ trigger:
     - binary_sensor.motion_gf_dinning
     - binary_sensor.motion_gf_living
   to: 'on'
-  
+
 condition:
   condition: or
   conditions:
@@ -24,7 +24,7 @@ condition:
     - condition: state
       entity_id: group.people_family
       state: 'not_home'
-    
+
 action:
   - service: script.notify_join
     data_template:

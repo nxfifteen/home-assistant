@@ -10,31 +10,31 @@ homeassistant:
     switch.gf_living_camera_switch:
       friendly_name: Livingroom IP Camera
       icon: mdi:camera-wireless
-      
+
     switch.gf_hallway_camera_switch:
       friendly_name: Hallway IP Camera
       icon: mdi:camera-wireless
-      
+
     switch.gf_studio_camera_switch:
       friendly_name: Studio IP Camera
       icon: mdi:camera-wireless
-      
+
     switch.ff_study_fan_switch:
       friendly_name: Study Fan
       icon: mdi:fan
-      
+
     switch.wh_seasonal_one:
       friendly_name: Landing AirFresh
       icon: mdi:flower
-      
+
     switch.wh_seasonal_two:
       friendly_name: Kitchen AirFresh
       icon: mdi:flower
-      
+
     switch.wh_seasonal_three:
       friendly_name: Seasonal Three
       icon: mdi:pine-tree
-      
+
     switch.wh_seasonal_four:
       friendly_name: Seasonal Four
       icon: mdi:pine-tree

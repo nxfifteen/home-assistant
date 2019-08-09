@@ -8,7 +8,7 @@ trigger:
 - entity_id: switch.occ_room_study
   platform: state
   to: 'off'
-  
+
 condition:
 - condition: state
   entity_id: switch.occ_room_bedroom
@@ -16,7 +16,7 @@ condition:
 - condition: state
   entity_id: switch.occ_room_study
   state: 'off'
-  
+
 action:
 - service: light.turn_off
   data:

@@ -5,11 +5,11 @@ sensor:
     ff_study_monitors_last_week:
       value_template: "{{ states.sensor.weekly_ff_study_monitors.attributes.last_period }}"
       friendly_name: 'Last Week'
-      
+
     ff_study_monitors_last_month:
       value_template: "{{ states.sensor.monthly_ff_study_monitors.attributes.last_period }}"
       friendly_name: 'Last Month'
-      
+
     ff_study_monitors_cost:
       entity_id: sensor.monthly_ff_study_monitors
       friendly_name: 'Monitor Cost'
@@ -24,7 +24,7 @@ utility_meter:
   weekly_ff_study_monitors:
     source: sensor.ff_study_monitors_power_2
     cycle: weekly
-    
+
   monthly_ff_study_monitors:
     source: sensor.ff_study_monitors_power_2
     cycle: monthly
@@ -33,22 +33,21 @@ homeassistant:
   customize:
     switch.ff_study_monitors_switch:
       friendly_name: My Monitors
-      
+
     sensor.ff_study_monitors_colour:
       friendly_name: Monitors Colour
-      
+
     sensor.ff_study_monitors_power_2:
       friendly_name: Monitors Watts
-      
+
     sensor.monthly_ff_study_monitors:
       friendly_name: Monitor Monthly Useage
       icon: mdi:chart-line-variant
-      
+
     sensor.weekly_ff_study_monitors:
       friendly_name: Monitor Weekly Useage
       icon: mdi:chart-multiline
-      
+
     sensor.ff_study_monitors_cost:
       friendly_name: Monitor Cost
       icon: mdi:chart-areaspline
-      

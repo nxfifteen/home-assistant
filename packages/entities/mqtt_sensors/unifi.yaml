@@ -4,17 +4,17 @@ sensor:
     name: unifi_client_count
     state_topic: "unifi/status/clientCount"
     value_template: '{{ value_json.val }}'
-    
+
   - platform: mqtt
     name: unifi_client_count_lan
     state_topic: "unifi/status/wifi/NxMESH/clientCount"
     value_template: '{{ value_json.val }}'
-    
+
   - platform: mqtt
     name: unifi_client_count_guest
     state_topic: "unifi/status/wifi/NxFriends/clientCount"
     value_template: '{{ value_json.val }}'
-    
+
   - platform: mqtt
     name: unifi_client_count_iot
     state_topic: "unifi/status/wifi/NxIoT/clientCount"
@@ -29,7 +29,7 @@ switch:
     optimistic: false
     qos: 2
     retain: true
-    
+
   - platform: mqtt
     name: unifi_wifi_guest
     icon: mdi:wifi
@@ -38,7 +38,7 @@ switch:
     optimistic: false
     qos: 2
     retain: true
-    
+
   - platform: mqtt
     name: unifi_wifi_iot
     icon: mdi:wifi
@@ -56,7 +56,7 @@ homeassistant:
       friendly_name: Guest WiFi
     switch.unifi_wifi_iot:
       friendly_name: IoT WiFi
-      
+
     sensor.unifi_client_count:
       friendly_name: Online Clients
     sensor.unifi_client_count_lan:

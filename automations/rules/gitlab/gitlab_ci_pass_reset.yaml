@@ -12,7 +12,7 @@ trigger:
     to: 'passed'
     for:
       minutes: 1
-  
+
 condition:
   - condition: state
     entity_id: sensor.family_stuart_state
@@ -20,13 +20,13 @@ condition:
   - condition: state
     entity_id: light.ff_study_wall
     state: 'on'
-  
+
 action:
   - service: light.turn_on
     data:
       entity_id: light.ff_study_wall
       effect: none
-      
+
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk
@@ -41,7 +41,7 @@ action:
       rgb_color: [58, 184, 255]
       transition: 10
       effect: none
-      
+
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk

@@ -3,7 +3,7 @@ alias: new_device_tracker
 trigger:
   - platform: event
     event_type: device_tracker_new_device
-    
+
 action:
   - service: notify.synchat_tweets
     data_template:
@@ -12,10 +12,10 @@ action:
         "New Device on the Network! @ubnt has alerted me and now it is locked down.",
         "Constant monitoring of the network by @ubnt has detected a new device in the environment."
         ] | random + " (https://amzn.to/2SKJ957)"}}
-        
+
   - service: notify.alexa_media
     data:
-      target: 
+      target:
         - media_player.alexa_study
       data:
         type: announce

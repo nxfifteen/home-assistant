@@ -4,11 +4,11 @@ trigger:
   - platform: state
     entity_id: sensor.gitlab_279_pipeline_master
     to: 'running'
-    
+
   - platform: state
     entity_id: sensor.gitlab_279_pipeline_develop
     to: 'running'
-  
+
 condition:
   - condition: state
     entity_id: sensor.family_stuart_state
@@ -16,7 +16,7 @@ condition:
   - condition: state
     entity_id: light.ff_study_wall
     state: 'on'
-  
+
 action:
   - service: light.turn_on
     data:
@@ -24,14 +24,14 @@ action:
       effect: colorloop
       brightness: 255
       transition: 3
-      
+
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk
       effect: colorloop
       brightness: 77
       transition: 3
-      
+
   - service: script.notify_tts
     data_template:
       room: "study"

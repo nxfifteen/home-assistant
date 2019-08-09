@@ -62,7 +62,7 @@ sensor:
     grocy_chore_litter_changed_next:
       friendly_name: grocy_chore_litter_changed_next
       value_template: '{{ states.sensor.grocy_chore_litter_changed.attributes["next_estimated_execution_time"] }}'
-      
+
     grocy_chore_cut_grass_count:
       friendly_name: grocy_chore_cut_grass_count
       value_template: '{{ states.sensor.grocy_chore_cut_grass.attributes["tracked_count"] }}'
@@ -72,7 +72,7 @@ sensor:
     grocy_chore_cut_grass_next:
       friendly_name: grocy_chore_cut_grass_next
       value_template: '{{ states.sensor.grocy_chore_cut_grass.attributes["next_estimated_execution_time"] }}'
-      
+
     grocy_chore_change_the_bed_count:
       friendly_name: grocy_chore_cut_grass_count
       value_template: '{{ states.sensor.grocy_chore_change_the_bed.attributes["tracked_count"] }}'
@@ -115,71 +115,71 @@ homeassistant:
     sensor.grocy_chore_litter_changed:
       friendly_name: Litter Last Changed
       icon: mdi:cat
-      
+
     sensor.grocy_chore_litter_changed_count:
       friendly_name: Litter Changed
       icon: mdi:calendar-check
-      
+
     sensor.grocy_chore_litter_changed_by:
       friendly_name: Litter Changed By
       icon: mdi:account
-      
+
     sensor.grocy_chore_litter_changed_next:
       friendly_name: Litter Next Changed
       icon: mdi:calendar-clock
-      
+
     script.grocy_url_chore_grass_done:
       friendly_name: Cut the Grass
       icon: mdi:tree
-    
+
     sensor.grocy_chore_cut_grass:
       friendly_name: Last Grass Cut
       icon: mdi:tree
-      
+
     sensor.grocy_chore_cut_grass_count:
       friendly_name: Grass Cuttings
       icon: mdi:calendar-check
-      
+
     sensor.grocy_chore_cut_grass_by:
       friendly_name: Grass Cut By
       icon: mdi:account
-      
+
     sensor.grocy_chore_cut_grass_next:
       friendly_name: Next Grass Cut
       icon: mdi:calendar-clock
-      
+
     script.grocy_url_change_the_bed_done:
       friendly_name: Changed the Bed
       icon: mdi:bed-empty
-      
+
     script.grocy_url_change_bed_done:
       friendly_name: Cut the Bed
       icon: mdi:bed-empty
-    
+
     sensor.grocy_chore_change_the_bed:
       friendly_name: Last Changed the Bed
       icon: mdi:bed-empty
-      
+
     sensor.grocy_chore_change_the_bed_count:
       friendly_name: Changed the Bed
       icon: mdi:calendar-check
-      
+
     sensor.grocy_chore_change_the_bed_by:
       friendly_name: Changed the Bed By
       icon: mdi:account
-      
+
     sensor.grocy_chore_change_the_bed_next:
       friendly_name: Next Bed Change
       icon: mdi:calendar-clock
-      
+
     sensor.grocy_stock_washing_powder:
       friendly_name: Washing Powder Stock
       icon: mdi:washing-machine
-      
+
     sensor.grocy_stock_washing_softner:
       friendly_name: Fabric Softner Stock
       icon: mdi:tumble-dryer
-      
+
     sensor.grocy_stock_dishwasher_tabs:
       friendly_name: Dishwasher Tabs
       icon: mdi:dishwasher

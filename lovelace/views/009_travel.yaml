@@ -25,7 +25,7 @@ cards:
         zone: zone.newport
       - entity: sensor.commute_kareen_work_b
         zone: zone.tayport
-  
+
   - type: entities
     show_header_toggle: false
     entities:
@@ -36,7 +36,7 @@ cards:
         icon: mdi:home-account
         type: custom:secondaryinfo-entity-row
         secondary_info:  "[[ {entity}.attributes.distance ]] km"
-        
+
       - entity: sensor.commute_stuart_work
         name: Work
         icon: mdi:cash-usd

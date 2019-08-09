@@ -14,7 +14,7 @@ binary_sensor:
   payload_off: "false"
 
 - platform: template
-  sensors:        
+  sensors:
     motion_gf_dinning_camera:
       friendly_name: "Dinning Room Camera Motion"
       device_class: motion

@@ -13,7 +13,7 @@ trigger:
 
 - platform: state
   entity_id: sensor.family_kareen_loc_room
-  
+
 action:
   - service: mqtt.publish
     data:

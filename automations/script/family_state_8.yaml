@@ -12,35 +12,35 @@ family_state_8:
       data:
         entity_id: climate.hallway
         temperature: 10
-    
+
     - service: switch.turn_off
       data:
         entity_id: switch.ff_bedroom_tv_switch
-    
+
     - service: switch.turn_off
       data:
         entity_id: switch.ff_bedroom_fairylights_switch
-    
+
     - service: switch.turn_off
       data:
         entity_id: switch.ff_study_monitors_switch
-    
+
     - service: switch.turn_off
       data:
         entity_id: switch.ff_bedroom_fan_switch
-    
+
     - service: switch.turn_off
       data:
         entity_id: switch.ff_study_sterio_switch
-    
+
     - service: light.turn_off
       data:
         entity_id: light.ff_bedroom_celing
-    
+
     - service: light.turn_off
       data:
         entity_id: light.ff_bedroom_bedside_stuart
-        
+
     - service: joaoapps_join.join_his_send_tasker
       data_template:
         command: "jarvis=:=sleeping"

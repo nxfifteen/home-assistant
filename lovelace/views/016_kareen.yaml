@@ -6,10 +6,10 @@ cards:
   - type: picture-entity
     entity: person.kareen
     name: Kareen
-    tap_action: 
+    tap_action:
       action: toggle
     image: !secret person_kareen_picture
-      
+
   - type: horizontal-stack
     cards:
       - type: entities
@@ -29,7 +29,7 @@ cards:
           - script.find_phone_kareen
 
   - type: custom:mini-graph-card
-    entities: 
+    entities:
      - sensor.family_kareen_battery_phone
     name: Phone Battery
     height: 74
@@ -47,7 +47,7 @@ cards:
         color: "#3498db"
       - value: 80
         color: "#1db954"
-  
+
   - type: entities
     entities:
       - type: 'custom:text-divider-row'

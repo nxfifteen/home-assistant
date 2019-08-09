@@ -27,12 +27,12 @@ cards:
                       size: '20%'
                       style:
                         - font-size: 14px
-                    style:                 
+                    style:
                       border-radius: 8px
-                      
+
                   - type: "custom:button-card"
                     color_type: blank-card
-  
+
                   - type: custom:card-modder
                     card:
                       type: "custom:button-card"
@@ -44,15 +44,15 @@ cards:
                       size: '20%'
                       style:
                         - font-size: 14px
-                    style:                 
+                    style:
                       border-radius: 8px
-                      
+
           - type: custom:bar-card
             title_position: off
             title: Status
             align: center
             padding: 4px
-            card_style: 
+            card_style:
               border-radius: 5px
             columns: 2
             #color: '#bf4040'
@@ -62,7 +62,7 @@ cards:
 
           - type: custom:mini-graph-card
             name: Consumption
-            entities: 
+            entities:
               - entity: sensor.gf_dinning_washing_machine_power
                 name: Washing Machine
                 show_state: true
@@ -85,7 +85,7 @@ cards:
   - type: vertical-stack
     cards:
       - type: custom:mini-graph-card
-        entities: 
+        entities:
           - sensor.gf_dinning_washing_machine_power
         name: Washing Machine
         height: 74
@@ -131,7 +131,7 @@ cards:
   - type: vertical-stack
     cards:
       - type: custom:mini-graph-card
-        entities: 
+        entities:
           - sensor.gf_dinning_dishwasher_power
         name: Dishwasher
         height: 74

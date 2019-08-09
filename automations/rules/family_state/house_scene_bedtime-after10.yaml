@@ -12,15 +12,15 @@ action:
   - service: switch.turn_off
     data:
       entity_id: switch.occ_room_kitchen
-      
+
   - service: switch.turn_off
     data:
       entity_id: switch.occ_room_livingroom
-      
+
   - service: switch.turn_off
     data:
       entity_id: switch.occ_room_studio
-      
+
   - service: light.turn_off
     data:
       entity_id: group.light_gf_living
@@ -31,7 +31,7 @@ action:
 
   - service: light.turn_off
     data:
-      entity_id: light.gf_studio_celing 
+      entity_id: light.gf_studio_celing
 
   - service: light.turn_off
     data:

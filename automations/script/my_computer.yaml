@@ -1,6 +1,6 @@
 ---
 my_computer:
-  alias: My Computer 
+  alias: My Computer
   sequence:
     - service: switch.turn_on
       data:

@@ -68,7 +68,7 @@ sensor:
 - platform: template
   sensors:
     stuart_s_jabra_elite_65t:
-      value_template: '{{ states.media_player.stuart_s_jabra_elite_65t.state|default(off)|string }}' 
+      value_template: '{{ states.media_player.stuart_s_jabra_elite_65t.state|default(off)|string }}'
 
 input_select:
   stuart:
@@ -84,40 +84,40 @@ homeassistant:
     sensor.family_stuart_battery_phone:
       friendly_name: Stuart's Battery
       icon: mdi:battery
-      
+
     sensor.family_stuart_drive_ignition:
       friendly_name: Stuart's Ignition
       icon: mdi:car
-      
+
     sensor.family_stuart_drive_dest:
       friendly_name: Stuart's Destination
       icon: mdi:google-maps
-      
+
     sensor.family_stuart_drive_eta:
       friendly_name: Stuart's ETA
       icon: mdi:timetable
-      
+
     sensor.family_stuart_drive_out:
       friendly_name: Stuart's Minutes Out
       icon: mdi:timer
-      
+
     sensor.family_stuart_drive_dist:
       friendly_name: Stuart's Distance
       icon: mdi:map-marker-distance
 
     sensor.family_stuart_state:
       friendly_name: "Stuart's State"
-    
+
     sensor.family_stuart_state_human:
       friendly_name: "Stuart's State"
-    
+
     sensor.family_stuart_loc_room:
       friendly_name: "Stuart's Room Location"
       icon: mdi:google-classroom
 
     sensor.pixel_2_xlpixel_2_xl_a2dp_sensor:
       friendly_name: A2DP
-      
+
     sensor.pixel_2_xlpixel_2_xl_call_state_sensor:
       friendly_name: Call State
       icon: mdi:phone-hangup

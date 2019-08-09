@@ -6,7 +6,7 @@ binary_sensor:
   payload_on: "true"
   payload_off: "false"
   device_class: motion
-  
+
 - platform: mqtt
   name: gf_living_camera
   state_topic: "iot/sensors/motion/camera/lounge/online"
@@ -14,7 +14,7 @@ binary_sensor:
   payload_off: "false"
 
 - platform: template
-  sensors:        
+  sensors:
     motion_gf_living_camera:
       friendly_name: "Livingroom Camera Motion"
       device_class: motion

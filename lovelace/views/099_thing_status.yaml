@@ -22,7 +22,7 @@ cards:
       title_position: inside
       align: center
       padding: 4px
-      card_style: 
+      card_style:
         border-radius: 5px
       columns: 2
       entities:
@@ -32,7 +32,7 @@ cards:
           title: Latest
         - entity: sensor.hacs
           title: HACS Updates
-      
+
   - type: entities
     show_header_toggle: off
     entities:
@@ -49,4 +49,4 @@ cards:
       - switch.wh_seasonal_two
       - switch.wh_seasonal_three
       - switch.wh_seasonal_four
-      
+

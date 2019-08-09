@@ -23,7 +23,7 @@ trigger:
   - sensor.cert_anderson_ha_zwave
   - sensor.cert_synology_stuartma
   below: 30
-    
+
 action:
   - service: script.notify_engine
     data_template:

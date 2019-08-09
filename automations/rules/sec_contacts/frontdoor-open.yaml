@@ -13,17 +13,17 @@ action:
       title: 'Jarvis Front Door'
       notification_id: "hass-contact-front"
       value1: 'The front door is open'
-      
+
   - service: script.notify_tts
     data_template:
       room: "kitchen"
       value1: "The front door is open"
-      
+
   - service: script.notify_tts
     data_template:
       room: "study"
       value1: "The front door is open"
-      
+
   - service: script.notify_tts
     data_template:
       room: "bedroom"

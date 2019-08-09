@@ -13,7 +13,7 @@ sensor:
   destination: zone.cs_tps
   scan_interval: 01:30
   region: 'EU'
-  
+
 - platform: waze_travel_time
   name: commute_kareen_home
   origin: person.kareen
@@ -34,7 +34,7 @@ sensor:
   destination: zone.tayport
   scan_interval: 01:30
   region: 'EU'
-    
+
 homeassistant:
   customize:
     sensor.commute_stuart_home:

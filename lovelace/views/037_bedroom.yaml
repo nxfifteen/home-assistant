@@ -38,7 +38,7 @@ cards:
   - type: vertical-stack
     cards:
       - type: custom:mini-graph-card
-        entities: 
+        entities:
           - sensor.ff_bedroom_sensor_temperature
         name: Temperature
         height: 74
@@ -59,9 +59,9 @@ cards:
             color: "#3498db"
           - value: -100
             color: "#e74c3c"
-    
+
       - type: custom:mini-graph-card
-        entities: 
+        entities:
           - sensor.ff_bedroom_sensor_illuminance
         name: Lux
         height: 74
@@ -72,7 +72,7 @@ cards:
         show:
           icon: true
           extrema: true
-       
+
   - type: entities
     show_header_toggle: false
     title: Batteries

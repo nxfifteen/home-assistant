@@ -4,7 +4,7 @@ alias: Lighting Family State - 8
 trigger:
   - entity_id: sensor.family_family_state_raw
     platform: state
-  
+
 condition:
 - condition: state
   entity_id: sensor.family_family_state_raw
@@ -18,7 +18,7 @@ condition:
     - condition: state
       entity_id: sensor.light_scene
       state: Night
-  
+
 action:
   - service: light.turn_on
     data:
@@ -26,7 +26,7 @@ action:
       transition: 5
       rgb_color: [255,207,120]
       brightness: 10
-  
+
   - service: light.turn_on
     data:
       entity_id: light.ff_landing_celing

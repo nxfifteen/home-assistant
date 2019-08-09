@@ -6,7 +6,7 @@ house_scene_im_going_to_bed:
       data:
         entity_id: input_select.his_pc_options
         option: Hibernate
-        
+
     - service: light.turn_on
       data:
         entity_id: light.ff_study_celing
@@ -20,7 +20,7 @@ house_scene_im_going_to_bed:
         entity_id: light.ff_study_wall
         transition: 3
         effect: none
-        
+
     - service: light.turn_off
       data:
         entity_id: light.ff_study_desk
@@ -48,4 +48,4 @@ house_scene_im_going_to_bed:
         entity_id: light.ff_study_celing
         transition: 3
         effect: none
-    
+
