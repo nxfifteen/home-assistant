@@ -35,7 +35,7 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Power
-      - sensor.gf_living_tv_power
+      - sensor.gf_living_tv_power_2
       - type: section
       - sensor.monthly_gf_living_tv
       - sensor.weekly_gf_living_tv
@@ -102,7 +102,7 @@ cards:
 
   - type: custom:mini-graph-card
     entities: 
-      - sensor.gf_living_tv_power
+      - sensor.gf_living_tv_power_2
     name: TV
     height: 74
     line_width: 2

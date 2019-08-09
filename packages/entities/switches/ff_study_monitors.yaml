@@ -22,11 +22,11 @@ sensor:
 
 utility_meter:
   weekly_ff_study_monitors:
-    source: sensor.ff_study_monitors_power
+    source: sensor.ff_study_monitors_power_2
     cycle: weekly
     
   monthly_ff_study_monitors:
-    source: sensor.ff_study_monitors_power
+    source: sensor.ff_study_monitors_power_2
     cycle: monthly
 
 homeassistant:
@@ -37,7 +37,7 @@ homeassistant:
     sensor.ff_study_monitors_colour:
       friendly_name: Monitors Colour
       
-    sensor.ff_study_monitors_power:
+    sensor.ff_study_monitors_power_2:
       friendly_name: Monitors Watts
       
     sensor.monthly_ff_study_monitors:

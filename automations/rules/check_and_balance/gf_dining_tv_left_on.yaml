@@ -2,7 +2,7 @@
 alias: Dining Room TV Left On
 
 trigger:
-  - entity_id: sensor.gf_dinning_tv_power
+  - entity_id: sensor.gf_dinning_tv_power_2
     platform: numeric_state
     above: 10
     below: 100
