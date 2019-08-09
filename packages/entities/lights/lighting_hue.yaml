@@ -109,7 +109,7 @@ homeassistant:
       friendly_name: Display Unit
     
     light.gf_dinning_at_kitchen:
-      friendly_name: Cat Litter
+      friendly_name: Side Door
     
     light.gf_dinning_dinner_table:
       friendly_name: Dinner Table

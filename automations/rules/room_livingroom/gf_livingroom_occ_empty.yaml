@@ -16,4 +16,4 @@ condition:
 action:
 - service: light.turn_off
   data:
-    entity_id: group.lights_gf_livingroom
+    entity_id: group.light_gf_living
