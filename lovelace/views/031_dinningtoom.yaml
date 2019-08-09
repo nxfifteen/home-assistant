@@ -41,7 +41,7 @@ cards:
 
   - type: custom:mini-graph-card
     entities: 
-      - sensor.gf_dinning_tv_power_2
+      - sensor.gf_dinning_tv_power
     name: TV
     height: 74
     line_width: 2
