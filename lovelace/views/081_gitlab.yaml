@@ -9,6 +9,10 @@ cards:
         label: Home-Assistant
       - sensor.gitlab_279_rest
       - automation.new_ha_git_ready
+      - sensor.gitlab_279_issues
+      - sensor.gitlab_279_forks
+      - sensor.gitlab_279_stars
+      - sensor.gitlab_279_commits
 
   - type: entities
     entities:

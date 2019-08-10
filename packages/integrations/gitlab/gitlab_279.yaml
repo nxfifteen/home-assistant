@@ -12,12 +12,6 @@ sensor:
     - star_count
     - forks_count
     - statistics
-    - statistics['commit_count']
-    - statistics.commit_count
-    - commit_count
-    - storage_size
-    - repository_size
-    - wiki_size
 
   headers:
     PRIVATE-TOKEN: !secret gitlab_token
@@ -72,12 +66,15 @@ sensor:
       friendly_name: 'Stars'
 
     gitlab_279_commits:
-      value_template: "{{ state_attr('sensor.gitlab_279_rest', 'statistics.commit_count') }}"
+      value_template: "{{ states.sensor.gitlab_279_rest.attributes.statistics.commit_count }}"
       entity_id: sensor.gitlab_279_rest
       friendly_name: 'Commits'
 
 homeassistant:
   customize:
+    sensor.gitlab_279_rest:
+      friendly_name: 'Home-Assistant.io'
+      icon: mdi:home-assistant
     sensor.gitlab_279_push_master:
       friendly_name: HA Pushes to Master
       icon: mdi:directions-fork
