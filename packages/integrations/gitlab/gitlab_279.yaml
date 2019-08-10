@@ -11,6 +11,9 @@ sensor:
     - open_issues_count
     - star_count
     - forks_count
+    - statistics
+    - statistics['commit_count']
+    - statistics.commit_count
     - commit_count
     - storage_size
     - repository_size
