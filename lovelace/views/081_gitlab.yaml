@@ -23,6 +23,15 @@ cards:
 
   - type: entities
     entities:
+      - sensor.gitlab_279_pipeline_master_duration
+      - sensor.gitlab_279_pipeline_develop_duration
+      - sensor.gitlab_279_build_master_ha_latest_duration
+      - sensor.gitlab_279_build_master_ha_rc_duration
+      - sensor.gitlab_279_build_develop_ha_latest_duration
+      - sensor.gitlab_279_build_develop_ha_rc_duration
+
+  - type: entities
+    entities:
       - type: 'custom:text-divider-row'
         text: Weekly Trend
       - entity: sensor.gitlab_279_commits_weekly
