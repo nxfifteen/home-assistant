@@ -14,7 +14,7 @@ trigger:
       minutes: 2
   - platform: time
     at: '20:45:00'
-    
+
 condition:
   condition: and
   conditions:

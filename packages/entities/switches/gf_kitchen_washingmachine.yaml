@@ -3,7 +3,7 @@ input_boolean:
   enable_washing_machine_notification:
     name: Enable Washing Machine Notification
     initial: on
-    icon: mdi:washing-machine  
+    icon: mdi:washing-machine
 
 input_select:
   gf_dinning_washing_machine_status:
@@ -27,12 +27,12 @@ sensor:
         friendly_name: 'Washing Machine Status Detail'
       ## Washing Machine Power Usage
       gf_dinning_washing_machine_power:
-        value_template: '{{ states.switch.gf_dinning_washing_machine_switch.attributes.current_power_w|default(0)|int }}'  
-        friendly_name: 'Washing Machine Power' 
+        value_template: '{{ states.switch.gf_dinning_washing_machine_switch.attributes.current_power_w|default(0)|int }}'
+        friendly_name: 'Washing Machine Power'
       ## Washer Power Graph
       gf_dinning_washing_machine_load:
-        value_template: 'Power: {{ states.switch.gf_dinning_washing_machine_switch.attributes.current_power_w|default(0)|int }}'  
-        friendly_name: 'Washer Power' 
+        value_template: 'Power: {{ states.switch.gf_dinning_washing_machine_switch.attributes.current_power_w|default(0)|int }}'
+        friendly_name: 'Washer Power'
         unit_of_measurement: 'W'
       ## Washer Status
       gf_dinning_washing_machine_friendly_status:
@@ -41,18 +41,18 @@ sensor:
 
       gf_dinning_washing_machine_consumption:
         entity_id: switch.gf_dinning_washing_machine_switch
-        value_template: '{{ states.sensor.gf_dinning_washing_machine_power.state|int }}' 
-        friendly_name: 'washing_machine Consumption' 
-        unit_of_measurement: 'W' 
-        
+        value_template: '{{ states.sensor.gf_dinning_washing_machine_power.state|int }}'
+        friendly_name: 'washing_machine Consumption'
+        unit_of_measurement: 'W'
+
       gf_dinning_washing_machine_last_week:
         value_template: "{{ states.sensor.gf_dinning_washing_machine_meter_weekly.attributes.last_period }}"
         friendly_name: 'Last Week'
-        
+
       gf_dinning_washing_machine_last_month:
         value_template: "{{ states.sensor.gf_dinning_washing_machine_meter_monthly.attributes.last_period }}"
         friendly_name: 'Last Month'
-        
+
       gf_dinning_washing_machine_cost:
         entity_id: sensor.gf_dinning_washing_machine_meter_monthly
         friendly_name: 'washing_machine Cost'
@@ -67,7 +67,7 @@ utility_meter:
   gf_dinning_washing_machine_meter_weekly:
     source: sensor.gf_dinning_washing_machine_consumption
     cycle: weekly
-    
+
   gf_dinning_washing_machine_meter_monthly:
     source: sensor.gf_dinning_washing_machine_consumption
     cycle: monthly
@@ -82,16 +82,16 @@ homeassistant:
     switch.gf_dinning_washing_machine_cost:
       friendly_name: Running Cost
       icon: mdi:currency-gbp
-      
+
     sensor.gf_dinning_washing_machine_status:
       friendly_name: Washing Machine Status
       icon: mdi:washing-machine
-      
+
     sensor.gf_dinning_washing_machine_power:
       friendly_name: Washing Machine Power
-      
+
     sensor.gf_dinning_washing_machine_meter_weekly:
       friendly_name: Washing Machine Weekly Meter
-      
+
     sensor.gf_dinning_washing_machine_meter_monthly:
       friendly_name: Washing Machine Monthly Meter

@@ -4,7 +4,7 @@ trigger:
   - platform: state
     entity_id: sensor.gitlab_279_build_master_ha_rc
     to: 'success'
-  
+
 condition:
   - condition: state
     entity_id: sensor.family_stuart_state
@@ -12,8 +12,8 @@ condition:
   - condition: state
     entity_id: light.ff_study_wall
     state: 'on'
-  
-action:           
+
+action:
   - service: script.notify_tts
     data_template:
       room: "study"

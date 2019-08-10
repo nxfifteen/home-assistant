@@ -9,7 +9,7 @@ sensor:
 - platform: mqtt
   name: mqtt_load_received_fifteen
   state_topic: "$SYS/broker/load/bytes/received/15min"
-  
+
 - platform: mqtt
   name: mqtt_load_sent_one
   state_topic: "$SYS/broker/load/bytes/sent/1min"
@@ -19,7 +19,7 @@ sensor:
 - platform: mqtt
   name: mqtt_load_sent_fifteen
   state_topic: "$SYS/broker/load/bytes/sent/15min"
-  
+
 - platform: mqtt
   name: mqtt_messages_received
   state_topic: "$SYS/broker/messages/received"

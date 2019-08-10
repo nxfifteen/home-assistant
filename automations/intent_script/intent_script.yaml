@@ -6,7 +6,7 @@ amzn1.ask.skill.be96a688-9463-494a-8b9f-aa2a6953ed5c:
     type: simple
     title: Welcome
     content: Okay
-    
+
 LocateIntent:
   speech:
     text: !include ../../entities/templates/intent_find_user.yaml

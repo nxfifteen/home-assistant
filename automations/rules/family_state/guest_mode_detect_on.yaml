@@ -64,7 +64,7 @@ condition:
       entity_id: person.steve
       state: home
 
-action:      
+action:
   - service: script.notify_join
     data_template:
       who: "stuart"

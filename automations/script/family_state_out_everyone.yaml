@@ -5,11 +5,11 @@ family_state_out_everyone:
     - service: script.turn_on
       data:
         entity_id: script.family_state_1_2_3
-        
+
     - service: joaoapps_join.join_his_send_tasker
       data_template:
         command: "jarvis=:=going_out"
-        
+
     - service: joaoapps_join.join_her_send_tasker
       data_template:
         command: "jarvis=:=going_out"

@@ -4,7 +4,7 @@ trigger:
 - entity_id: sensor.family_stuart_state
   platform: state
   to: '7'
-  
+
 condition:
   condition: or
   conditions:

@@ -6,7 +6,7 @@ trigger:
   entity_id: switch.gf_dinning_tv_switch
   from:  'on'
   to:  'off'
-  
+
 action:
   - service: mqtt.publish
     data:
@@ -15,4 +15,3 @@ action:
       qos: 2
       retain: false
 
- 

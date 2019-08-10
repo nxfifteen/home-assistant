@@ -3,7 +3,7 @@
 #                                                               #
 #                    Compact Header Config                      #
 #                                                               #
-################################################################# 
+#################################################################
 type: "custom:compact-custom-header"
 main_config: true
 menu: show

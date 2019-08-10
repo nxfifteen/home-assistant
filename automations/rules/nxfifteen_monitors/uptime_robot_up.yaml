@@ -16,11 +16,10 @@ trigger:
     - binary_sensor.nxfifteen
   from: 'off'
   to: 'on'
-    
+
 action:
   - service: script.notify_tts
     data_template:
       room: "study"
       value1: "{{ trigger.to_state.attributes.friendly_name }} is online again."
       hashtag: "#UpTimeRobot #Recovered"
-      

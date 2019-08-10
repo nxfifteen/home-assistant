@@ -10,10 +10,10 @@ sensor:
     sensors:
       media_ff_study_plex_video:
         value_template: "{% if states('media_player.plex_taichi') == 'unknown' %}off{% else %}{{ states('media_player.plex_taichi') }}{% endif %}"
-        
+
       media_ff_study_plex_audio:
         value_template: "{% if states('media_player.plex_taichi_audio') == 'unknown' %}off{% else %}{{ states('media_player.plex_taichi_audio') }}{% endif %}"
-        
+
       media_ff_bedroom_plex_audio:
         value_template: "{% if states('media_player.plex_bedroom_audio') == 'unknown' %}off{% else %}{{ states('media_player.plex_bedroom_audio') }}{% endif %}"
 
@@ -34,27 +34,27 @@ homeassistant:
       sensor.media_ff_study_plex_video:
         friendly_name: 'Study Plex (Video)'
         icon: mdi:kodi
-        
+
       sensor.media_ff_study_plex_audio:
         friendly_name: 'Study Plex (Audio)'
         icon: mdi:kodi
-        
+
       sensor.media_ff_study_plex_alexa:
         friendly_name: 'Study Plex (Alexa)'
         icon: mdi:kodi
-        
+
       sensor.media_gf_livingroom_plex_alexa:
         friendly_name: 'Livingroom Plex (Alexa)'
         icon: mdi:kodi
-        
+
       sensor.media_ff_bedroom_plex_audio:
         friendly_name: 'Bedroom Plex (Audio)'
         icon: mdi:kodi
-        
+
       sensor.media_gf_livingroom_plex_fire:
         friendly_name: 'Livingroom Plex (FireTV)'
         icon: mdi:kodi
-        
+
       sensor.media_gf_kitchen_plex_fire:
         friendly_name: 'Kitchen Plex (FireTV)'
         icon: mdi:kodi

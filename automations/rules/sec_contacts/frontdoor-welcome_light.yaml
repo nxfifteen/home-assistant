@@ -5,7 +5,7 @@ trigger:
   - entity_id: binary_sensor.gf_hallway_contact_contact
     platform: state
     to:  'on'
-  
+
 condition:
   condition: and
   conditions:

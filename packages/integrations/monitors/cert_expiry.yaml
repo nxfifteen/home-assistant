@@ -85,39 +85,39 @@ homeassistant:
     sensor.cert_license_nxfifteen_rocks:
       friendly_name: Rocks License
       icon: mdi:attachment
-      
+
     sensor.cert_nx15_at:
       friendly_name: Nx15.at
       icon: mdi:at
-      
+
     sensor.cert_nxfifteen_core:
       friendly_name: Core
       icon: mdi:database
-      
+
     sensor.cert_nxfifteen_core_docs:
       friendly_name: Core Docs
       icon: mdi:library-books
-      
+
     sensor.cert_nxfifteen_eml_web:
       friendly_name: NxWEBMAIL
       icon: mdi:email-check
-      
+
     sensor.cert_nxfifteen_git:
       friendly_name: GitLab Instance
       icon: mdi:gitlab
-      
+
     sensor.cert_nxfifteen_skizimport:
       friendly_name: Core Skiz Import
       icon: mdi:snowman
-      
+
     sensor.cert_nxfifteen_www:
       friendly_name: Wordpress Blog
       icon: mdi:wordpress
-      
+
     sensor.cert_nxfifteen_xyz:
       friendly_name: NxSHARED HOST
       icon: mdi:server
-      
+
     sensor.cert_nxfifteen_your:
       friendly_name: NxCLIENT
       icon: mdi:account-group
@@ -125,40 +125,39 @@ homeassistant:
     sensor.cert_anderson_ha:
       friendly_name: Home-Assitant
       icon: mdi:home-assistant
-      
+
     sensor.cert_anderson_ha_find3:
       friendly_name: FIND3
       icon: mdi:crosshairs-gps
-      
+
     sensor.cert_anderson_ha_grocy:
       friendly_name: Grocy
       icon: mdi:shopify
-      
+
     sensor.cert_anderson_ha_ide:
       friendly_name: Cloud9 IDE
       icon: mdi:border-color
-      
+
     sensor.cert_anderson_ha_node:
       friendly_name: NodeRed
       icon: mdi:nodejs
-      
+
     sensor.cert_anderson_ha_portainer:
       friendly_name: Portainer
       icon: mdi:docker
-      
+
     sensor.cert_anderson_ha_proxy:
       friendly_name: Proxy
       icon: mdi:spider-web
-      
+
     sensor.cert_anderson_ha_trac:
       friendly_name: TracCar
       icon: mdi:car
-      
+
     sensor.cert_anderson_ha_zwave:
       friendly_name: Z-Wave2MQTT
       icon: mdi:z-wave
-      
+
     sensor.cert_synology_stuartma:
       friendly_name: Synology
       icon: mdi:nas
-    

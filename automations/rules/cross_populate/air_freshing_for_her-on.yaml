@@ -5,7 +5,7 @@ trigger:
   - platform: state
     entity_id: input_boolean.guest_mode
     to: 'on'
-      
+
   - platform: state
     entity_id: sensor.family_kareen_state
 

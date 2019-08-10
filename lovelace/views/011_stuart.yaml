@@ -6,10 +6,10 @@ cards:
   - type: picture-entity
     entity: person.stuart
     name: Stuart
-    tap_action: 
+    tap_action:
       action: toggle
     image: !secret person_stuart_picture
-      
+
   - type: horizontal-stack
     cards:
       - type: entities
@@ -29,7 +29,7 @@ cards:
           - script.find_phone_stuart
 
   - type: custom:mini-graph-card
-    entities: 
+    entities:
      - sensor.family_stuart_battery_phone
     name: Phone Battery
     height: 74
@@ -47,7 +47,7 @@ cards:
         color: "#3498db"
       - value: 80
         color: "#1db954"
-  
+
   - type: entities
     entities:
       - type: 'custom:text-divider-row'
@@ -55,8 +55,8 @@ cards:
       - entity: sensor.steam_76561197982696593
         name: Steam
       - entity: sensor.stuart_s_jabra_elite_65t
-        name: Jabra Elite        
-  
+        name: Jabra Elite
+
   - type: horizontal-stack
     cards:
       - type: entities
@@ -86,7 +86,7 @@ cards:
         icon: mdi:home-account
         type: custom:secondaryinfo-entity-row
         secondary_info:  "[[ {entity}.attributes.distance ]] km"
-        
+
       - entity: sensor.commute_stuart_work
         name: Work
         icon: mdi:cash-usd

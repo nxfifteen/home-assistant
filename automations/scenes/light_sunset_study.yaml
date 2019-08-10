@@ -5,7 +5,7 @@ entities:
     transition: 5
     rgb_color: [255,207,120]
     brightness: 150
-    
+
   light.ff_landing_celing:
     state: on
     transition: 5

@@ -22,7 +22,7 @@ automation:
       data:
         entity_id: input_select.light_scene
         option: Sunset
-        
+
 - alias: 'Sun Nautical Twilight'
   trigger:
     - platform: numeric_state
@@ -35,7 +35,7 @@ automation:
       data:
         entity_id: input_select.light_scene
         option: Sunset
-        
+
 - alias: 'Sun Astronomical Twilight'
   trigger:
     - platform: numeric_state
@@ -48,7 +48,7 @@ automation:
       data:
         entity_id: input_select.light_scene
         option: Night
-        
+
 - alias: 'Sun Night'
   trigger:
     - platform: numeric_state
@@ -60,7 +60,7 @@ automation:
       data:
         entity_id: input_select.light_scene
         option: Night
-        
+
 - alias: 'Sun Up'
   trigger:
     - platform: numeric_state

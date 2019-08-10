@@ -6,7 +6,7 @@ trigger:
     to: 'off'
     for:
       seconds: 90
-    
+
 condition:
   condition: and
   conditions:

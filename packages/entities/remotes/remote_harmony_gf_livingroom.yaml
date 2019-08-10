@@ -20,7 +20,7 @@ switch:
           data:
             entity_id: remote.living_room
             activity: 'PowerOff'
-            
+
       remote_gf_livingroom_watch_fire_tv:
         value_template: "{{ is_state_attr('remote.living_room', 'current_activity', 'Watch Fire TV') }}"
         turn_on:

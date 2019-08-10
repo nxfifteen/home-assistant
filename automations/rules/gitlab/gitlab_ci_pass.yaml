@@ -8,7 +8,7 @@ trigger:
   - platform: state
     entity_id: sensor.gitlab_279_pipeline_master
     to: 'passed'
-  
+
 condition:
   - condition: state
     entity_id: sensor.family_stuart_state
@@ -16,18 +16,18 @@ condition:
   - condition: state
     entity_id: light.ff_study_wall
     state: 'on'
-  
-action:      
+
+action:
   - service: light.turn_on
     data:
       entity_id: light.ff_study_wall
       effect: none
-      
+
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk
       effect: none
-      
+
   - service: script.notify_tts
     data_template:
       room: "study"
@@ -43,7 +43,7 @@ action:
       effect: none
       rgb_color: [81, 255, 76]
       transition: 2
-      
+
   - service: light.turn_on
     data:
       entity_id: light.ff_study_desk

@@ -7,7 +7,7 @@ trigger:
 
   - entity_id: sensor.family_family_state_raw
     platform: state
-  
+
 condition:
   condition: and
   conditions:
@@ -16,7 +16,7 @@ condition:
     - condition: state
       entity_id: sensor.family_family_state_raw
       state: '1'
-  
+
 action:
 - delay: '00:{{ range(0,5) | random | int }}{{ range(0,9) | random | int }}:00'
 

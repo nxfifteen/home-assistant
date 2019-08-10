@@ -11,7 +11,7 @@ action:
     title: 'Home Assistant Startup'
     notification_id: "hass-online"
     value1: "Home Assistant is back online"
-    
+
 - service: script.notify_tts
   data_template:
     room: "study"

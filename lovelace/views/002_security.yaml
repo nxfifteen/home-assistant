@@ -64,7 +64,7 @@ cards:
   #                  Security - Smoke Alarm Card                  #
   #                                                               #
   #################################################################
-              
+
   - type: vertical-stack
     cards:
     - type: glance
@@ -80,7 +80,7 @@ cards:
           name: Smoke
         - entity: sensor.hallway_nest_protect_co_status
           name: CO
-          
+
   - type: vertical-stack
     cards:
     - type: glance

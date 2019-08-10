@@ -40,8 +40,8 @@ cards:
       - switch.wh_seasonal_two
 
   - type: custom:mini-graph-card
-    entities: 
-      - sensor.gf_dinning_tv_power
+    entities:
+      - sensor.gf_dinning_tv_power_2
     name: TV
     height: 74
     line_width: 2
@@ -69,7 +69,7 @@ cards:
   - type: vertical-stack
     cards:
     - type: custom:mini-graph-card
-      entities: 
+      entities:
         - sensor.gf_dinning_sensor_temperature
       name: Temperature
       height: 74
@@ -90,9 +90,9 @@ cards:
           color: "#3498db"
         - value: -100
           color: "#e74c3c"
-  
+
     - type: custom:mini-graph-card
-      entities: 
+      entities:
         - sensor.gf_dinning_sensor_illuminance
       name: Lux
       height: 74
@@ -103,7 +103,7 @@ cards:
       show:
         icon: true
         extrema: true
-        
+
   - type: entities
     show_header_toggle: false
     title: Batteries

@@ -17,7 +17,7 @@ binary_sensor:
           {% else %}
             mdi:skull
           {% endif %}
-        
+
       camera_backdoor_recording:
         friendly_name: 'Studio Camera Recording'
         value_template: "{{ is_state('camera.backdoor', 'recording') }}"
@@ -27,7 +27,7 @@ binary_sensor:
           {% else %}
             mdi:skull
           {% endif %}
-        
+
       camera_dinning_room_recording:
         friendly_name: 'Dinning Room Camera Recording'
         value_template: "{{ is_state('camera.dinning_room', 'recording') }}"
@@ -37,7 +37,7 @@ binary_sensor:
           {% else %}
             mdi:skull
           {% endif %}
-        
+
       camera_kitchen_recording:
         friendly_name: 'Kitch Camera Recording'
         value_template: "{{ is_state('camera.kitchen', 'recording') }}"
@@ -47,7 +47,7 @@ binary_sensor:
           {% else %}
             mdi:skull
           {% endif %}
-        
+
       camera_lounge_recording:
         friendly_name: 'Livingroom Camera Recording'
         value_template: "{{ is_state('camera.lounge', 'recording') }}"

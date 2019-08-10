@@ -8,7 +8,7 @@ trigger:
 
 - entity_id: sensor.family_family_state_raw
   platform: state
-  
+
 condition:
   condition: and
   conditions:
@@ -20,7 +20,7 @@ condition:
     - condition: state
       entity_id: sensor.light_scene
       state: Night
-  
+
 action:
 - delay: '00:{{ range(0,2) | random | int }}{{ range(0,9) | random | int }}:00'
 

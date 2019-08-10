@@ -4,6 +4,5 @@ homeassistant:
     switch.ff_study_loading_pi_switch:
       friendly_name: Loading Station
       icon: mdi:camera-party-mode
-    sensor.ff_study_loading_pi_power:
+    sensor.ff_study_loading_pi_power_2:
       friendly_name: Loading Station Watts
- 

@@ -8,23 +8,23 @@ homeassistant:
     binary_sensor.hallway_nest_protect_online:
       friendly_name: Hallway Protect
       icon: mdi:fire
-      
+
     sensor.hallway_nest_protect_smoke_status:
       friendly_name: Hallway Smoke Alarm
       icon: mdi:fire
-    
+
     binary_sensor.kitchen_nest_protect_online:
       friendly_name: Kitchen Room Protect
       icon: mdi:fire
-    
+
     sensor.kitchen_nest_protect_smoke_status:
       friendly_name: Kitchen Smoke Alarm
       icon: mdi:fire
-    
+
     binary_sensor.landing_nest_protect_online:
       friendly_name: Landing Protect
       icon: mdi:fire
-    
+
     sensor.landing_nest_protect_smoke_status:
       friendly_name: Landing Smoke Alarm
       icon: mdi:fire

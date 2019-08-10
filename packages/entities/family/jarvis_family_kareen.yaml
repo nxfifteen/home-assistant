@@ -20,7 +20,7 @@ sensor:
   name: family_kareen_locality
   state_topic: "tracker/family/kareen/phone/location"
   value_template: "{{ value_json.locality }}"
-  
+
 - platform: mqtt
   name: family_kareen_battery_phone
   state_topic: "tracker/family/kareen/phone/location"
@@ -79,33 +79,33 @@ homeassistant:
     sensor.family_kareen_battery_phone:
       friendly_name: Kareen's Battery
       icon: mdi:battery
-      
+
     sensor.family_kareen_drive_ignition:
       friendly_name: Kareen's Ignition
       icon: mdi:car
-      
+
     sensor.family_kareen_drive_dest:
       friendly_name: Kareen's Destination
       icon: mdi:google-maps
-      
+
     sensor.family_kareen_drive_eta:
       friendly_name: Kareen's ETA
       icon: mdi:timetable
-      
+
     sensor.family_kareen_drive_out:
       friendly_name: Kareen's Minutes Out
       icon: mdi:timer
-      
+
     sensor.family_kareen_drive_dist:
       friendly_name: Kareen's Distance
       icon: mdi:map-marker-distance
 
     sensor.family_kareen_state:
       friendly_name: "Kareen's State"
-    
+
     sensor.family_kareen_state_human:
       friendly_name: "Kareen's State"
-    
+
     sensor.family_kareen_loc_room:
       friendly_name: "Kareen's Room Location"
       icon: mdi:google-classroom

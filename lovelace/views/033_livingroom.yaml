@@ -29,13 +29,13 @@ cards:
       - type: 'custom:text-divider-row'
         text: Harmony
       - sensor.remote_gf_livingroom
- 
+
   - type: entities
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
         text: Power
-      - sensor.gf_living_tv_power
+      - sensor.gf_living_tv_power_2
       - type: section
       - sensor.monthly_gf_living_tv
       - sensor.weekly_gf_living_tv
@@ -65,7 +65,7 @@ cards:
   - type: vertical-stack
     cards:
     - type: custom:mini-graph-card
-      entities: 
+      entities:
         - sensor.gf_living_sensor_temperature
       name: Temperature
       height: 74
@@ -86,9 +86,9 @@ cards:
           color: "#3498db"
         - value: -100
           color: "#e74c3c"
-  
+
     - type: custom:mini-graph-card
-      entities: 
+      entities:
         - sensor.gf_living_sensor_illuminance
       name: Lux
       height: 74
@@ -101,8 +101,8 @@ cards:
         extrema: true
 
   - type: custom:mini-graph-card
-    entities: 
-      - sensor.gf_living_tv_power
+    entities:
+      - sensor.gf_living_tv_power_2
     name: TV
     height: 74
     line_width: 2
@@ -119,7 +119,7 @@ cards:
         color: "#1db954"
       - value: 0
         color: "#3498db"
-        
+
   - type: entities
     show_header_toggle: false
     title: Batteries

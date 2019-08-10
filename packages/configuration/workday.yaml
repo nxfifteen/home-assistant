@@ -2,5 +2,5 @@
 binary_sensor:
 - platform: workday
   country: UK
-  add_holidays: 
+  add_holidays:
     - '2019-05-21'

@@ -8,12 +8,12 @@ trigger:
   to:  'off'
   for:
     minutes: 5
-  
+
 action:
   - service: switch.turn_on
     data:
       entity_id: switch.gf_dinning_camera_switch
-      
+
   - service: script.notify_join
     data_template:
       who: "stuart"

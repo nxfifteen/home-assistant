@@ -5,7 +5,7 @@ trigger:
 - entity_id: sensor.light_scene
   platform: state
   to: None
-  
+
 action:
 - service: scene.turn_on
   data:

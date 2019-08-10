@@ -4,17 +4,17 @@ input_boolean:
     name: Speech Notifications
     icon: mdi:speaker-wireless
     initial: on
-  
+
   text_notifications:
     name: Text Notifications
     icon: mdi:cellphone-wireless
     initial: on
-  
+
   guest_mode:
     name: Guest Mode
     icon: mdi:emoticon-tongue-outline
     initial: off
-  
+
   air_freshing:
     name: Air Freshing
     icon: mdi:flower

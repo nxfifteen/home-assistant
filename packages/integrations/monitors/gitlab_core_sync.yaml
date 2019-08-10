@@ -20,7 +20,7 @@ sensor:
       value_template: "{{ state_attr('sensor.gitlab_274_project', 'open_issues_count') }}"
       entity_id: sensor.gitlab_274_project
       friendly_name: 'Issues'
-      
+
     gitlab_274_forks:
       value_template: "{{ state_attr('sensor.gitlab_274_project', 'forks_count') }}"
       entity_id: sensor.gitlab_274_project
@@ -34,7 +34,7 @@ sensor:
     gitlab_274_stars_last_week:
       value_template: "{{ states.sensor.gitlab_274_stars_weekly.attributes.last_period }}"
       friendly_name: 'Last Week'
-      
+
     gitlab_274_stars_last_month:
       value_template: "{{ states.sensor.gitlab_274_stars_monthly.attributes.last_period }}"
       friendly_name: 'Last Month'
@@ -42,7 +42,7 @@ sensor:
     gitlab_274_issues_last_week:
       value_template: "{{ states.sensor.gitlab_274_issues_weekly.attributes.last_period }}"
       friendly_name: 'Last Week'
-      
+
     gitlab_274_issues_last_month:
       value_template: "{{ states.sensor.gitlab_274_issues_monthly.attributes.last_period }}"
       friendly_name: 'Last Month'
@@ -52,19 +52,19 @@ sensor:
   entity_id: sensor.gitlab_274_stars
   max_age:
     days: 7
-    
+
 - platform: statistics
   name: gitlab_274_stars_week_last
   entity_id: sensor.gitlab_274_stars
   max_age:
     days: 14
-    
+
 - platform: statistics
   name: gitlab_274_stars_month_this
   entity_id: sensor.gitlab_274_stars
   max_age:
     days: 30
-    
+
 - platform: statistics
   name: gitlab_274_stars_month_last
   entity_id: sensor.gitlab_274_stars
@@ -76,19 +76,19 @@ sensor:
   entity_id: sensor.gitlab_274_issues
   max_age:
     days: 7
-    
+
 - platform: statistics
   name: gitlab_274_issues_week_last
   entity_id: sensor.gitlab_274_issues
   max_age:
     days: 14
-    
+
 - platform: statistics
   name: gitlab_274_issues_month_this
   entity_id: sensor.gitlab_274_issues
   max_age:
     days: 30
-    
+
 - platform: statistics
   name: gitlab_274_issues_month_last
   entity_id: sensor.gitlab_274_issues
@@ -99,15 +99,15 @@ utility_meter:
   gitlab_274_stars_weekly:
     source: sensor.gitlab_274_stars
     cycle: weekly
-    
+
   gitlab_274_stars_monthly:
     source: sensor.gitlab_274_stars
     cycle: monthly
-    
+
   gitlab_274_issues_weekly:
     source: sensor.gitlab_274_issues
     cycle: weekly
-    
+
   gitlab_274_issues_monthly:
     source: sensor.gitlab_274_issues
     cycle: monthly
@@ -126,7 +126,7 @@ homeassistant:
     sensor.gitlab_274_stars:
       friendly_name: 'Stars'
       icon: mdi:star-four-points
-    
+
     #'
     #  statistics
     #'
@@ -142,7 +142,7 @@ homeassistant:
     sensor.gitlab_274_stars_month_last:
       friendly_name: Stars Last Month
       icon: mdi:star-four-points-outline
-    
+
     #'
     #  utility_meter
     #'

@@ -13,10 +13,10 @@ cards:
 
           - type: custom:vertical-stack-in-card
             cards:
-        
+
             - type: horizontal-stack
               cards:
-                    
+
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.jarvis
@@ -32,7 +32,7 @@ cards:
                           - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
-                    
+
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.nxfifteen
@@ -59,10 +59,10 @@ cards:
 
           - type: custom:vertical-stack-in-card
             cards:
-        
+
             - type: horizontal-stack
               cards:
-                    
+
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.gitlab
@@ -78,7 +78,7 @@ cards:
                           - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
-                    
+
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.mail_server
@@ -94,7 +94,7 @@ cards:
                           - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
-                    
+
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.webmail
@@ -121,10 +121,10 @@ cards:
 
           - type: custom:vertical-stack-in-card
             cards:
-        
+
             - type: horizontal-stack
               cards:
-                    
+
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.ssh_odin
@@ -140,7 +140,7 @@ cards:
                           - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
-                    
+
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.ssh_roger_young
@@ -156,8 +156,8 @@ cards:
                           - animation: blink 2s ease infinite
                   tap_action:
                     action: more-info
-        
-                    
+
+
                 - type: "custom:button-card"
                   color_type: icon
                   entity: binary_sensor.ssh_synology
@@ -216,4 +216,3 @@ cards:
       - sensor.cert_nxfifteen_skizimport
       - sensor.cert_nxfifteen_your
       - sensor.cert_nxfifteen_xyz
-        

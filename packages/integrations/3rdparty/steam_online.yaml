@@ -1,5 +1,5 @@
 ---
-sensor: 
+sensor:
 - platform: steam_online
   api_key: !secret steam_api
   accounts:
