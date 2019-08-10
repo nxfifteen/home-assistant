@@ -70,6 +70,11 @@ sensor:
       entity_id: sensor.gitlab_279_rest
       friendly_name: 'Commits'
 
+    gitlab_279_size:
+      value_template: "{{ states.sensor.gitlab_279_rest.attributes.statistics.repository_size }}"
+      entity_id: sensor.gitlab_279_rest
+      friendly_name: 'Size'
+
 homeassistant:
   customize:
     sensor.gitlab_279_rest:
