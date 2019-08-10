@@ -65,8 +65,6 @@ cards:
             text: Car
           - entity: sensor.family_stuart_drive_ignition
             name: Ignition
-          - entity: device_tracker.stuart_car
-            name: Tracker
           - entity: sensor.family_stuart_drive_dest
             name: Destingation
           - entity: sensor.family_stuart_drive_eta
@@ -75,6 +73,8 @@ cards:
             name: Distance
           - entity: sensor.family_stuart_drive_out
             name: Minutes Away
+          - entity: device_tracker.stuart_car_parked
+            name: Parking Spot
 
   - type: entities
     show_header_toggle: false

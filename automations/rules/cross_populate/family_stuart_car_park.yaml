@@ -10,12 +10,11 @@ trigger:
 action:
   - service: device_tracker.see
     data_template:
-      dev_id: stuart_car
+      dev_id: stuart_car_parked
       gps:
       - '{{ state_attr("device_tracker.stuart", "latitude") }}'
       - '{{ state_attr("device_tracker.stuart", "longitude") }}'
       gps_accuracy: 1
-      host_name: "Stuart's Car"
-      mac: '00:25:42:73:A1:B9'
+      host_name: "Stuart's Car Parked"
       source_type: gps
 
