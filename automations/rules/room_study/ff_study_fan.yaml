@@ -62,7 +62,7 @@ condition:
     # The room is too hot
     - condition: numeric_state
       entity_id: sensor.ff_study_sensor_temperature
-      above: 22
+      above: 23
 
 action:
     - service: switch.turn_on
