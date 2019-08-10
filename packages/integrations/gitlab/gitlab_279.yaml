@@ -11,10 +11,10 @@ sensor:
     - open_issues_count
     - star_count
     - forks_count
-    - statistics.commit_count
-    - statistics.storage_size
-    - statistics.repository_size
-    - statistics.wiki_size
+    - commit_count
+    - storage_size
+    - repository_size
+    - wiki_size
 
   headers:
     PRIVATE-TOKEN: !secret gitlab_token
