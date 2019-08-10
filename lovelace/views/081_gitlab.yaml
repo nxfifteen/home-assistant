@@ -5,6 +5,13 @@ title: Git
 cards:
   - type: entities
     entities:
+      - type: section
+        label: Home-Assistant
+      - sensor.gitlab_279_rest
+      - automation.new_ha_git_ready
+
+  - type: entities
+    entities:
       - type: 'custom:text-divider-row'
         text: Master
       - sensor.gitlab_279_merge_request_develop_master
@@ -20,7 +27,7 @@ cards:
       - sensor.gitlab_279_pipeline_master_duration
       - sensor.gitlab_279_build_master_ha_latest_duration
       - sensor.gitlab_279_build_master_ha_rc_duration
-      
+
   - type: entities
     entities:
       - type: 'custom:text-divider-row'
@@ -38,9 +45,3 @@ cards:
       - sensor.gitlab_279_pipeline_develop_duration
       - sensor.gitlab_279_build_develop_ha_latest_duration
       - sensor.gitlab_279_build_develop_ha_rc_duration
-
-  - type: entities
-    entities:
-      - type: section
-        label: Home-Assistant
-      - automation.new_ha_git_ready
