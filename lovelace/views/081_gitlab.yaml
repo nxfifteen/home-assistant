@@ -12,7 +12,17 @@ cards:
       - sensor.gitlab_279_pipeline_master
       - sensor.gitlab_279_build_master_ha_latest
       - sensor.gitlab_279_build_master_ha_rc
-      - automation.new_ha_git_ready
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Master CI Time
+      - sensor.gitlab_279_pipeline_master_duration
+      - sensor.gitlab_279_build_master_ha_latest_duration
+      - sensor.gitlab_279_build_master_ha_rc_duration
+      
+  - type: entities
+    entities:
       - type: 'custom:text-divider-row'
         text: Develop
       - sensor.gitlab_279_merge_request_master_develop
@@ -23,12 +33,17 @@ cards:
 
   - type: entities
     entities:
-      - sensor.gitlab_279_pipeline_master_duration
+      - type: 'custom:text-divider-row'
+        text: Develop CI Time
       - sensor.gitlab_279_pipeline_develop_duration
-      - sensor.gitlab_279_build_master_ha_latest_duration
-      - sensor.gitlab_279_build_master_ha_rc_duration
       - sensor.gitlab_279_build_develop_ha_latest_duration
       - sensor.gitlab_279_build_develop_ha_rc_duration
+
+  - type: entities
+    entities:
+      - type: section
+        label: Home-Assistant
+      - automation.new_ha_git_ready
 
   - type: entities
     entities:
