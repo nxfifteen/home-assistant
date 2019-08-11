@@ -1,30 +1,46 @@
 ---
 sensor:
-- platform: mqtt
-  name: health_his_steps
-  state_topic: "nxhealth/stuart/steps"
-  
-- platform: mqtt
-  name: health_his_distance
-  state_topic: "nxhealth/stuart/distance"
-  
-- platform: mqtt
-  name: health_his_calories
-  state_topic: "nxhealth/stuart/calories"
-  
-- platform: mqtt
-  name: health_his_active_sedentary
-  state_topic: "nxhealth/stuart/active_sedentary"
-  
-- platform: mqtt
-  name: health_his_active_very
-  state_topic: "nxhealth/stuart/active_very"
-  
-- platform: mqtt
-  name: health_his_active_lightly
-  state_topic: "nxhealth/stuart/active_lightly"
-  
-- platform: mqtt
-  name: health_his_heart_resting
-  state_topic: "nxhealth/stuart/heart_resting"
+- platform: rest
+  name: health_his
+  resource: !secret nxhealth_his_url
+  value_template: '{{ value_json.today }}'
+  json_attributes:
+    - steps
+    - floors
+    - water
+    - weight
+    - fat
+    - bmi
+
+- platform: template
+  sensors:
+    health_his_steps:
+      value_template: "{{ states.sensor.health_his.attributes.steps.value }}"
+      entity_id: sensor.health_his
+      friendly_name: 'Steps'
+
+    health_his_floors:
+      value_template: "{{ states.sensor.health_his.attributes.floors.value }}"
+      entity_id: sensor.health_his
+      friendly_name: 'Floors'
+      
+    health_his_water:
+      value_template: "{{ states.sensor.health_his.attributes.water.value }}"
+      entity_id: sensor.health_his
+      friendly_name: 'Water'
+      
+    health_his_weight:
+      value_template: "{{ states.sensor.health_his.attributes.weight.value }}"
+      entity_id: sensor.health_his
+      friendly_name: 'Weight'
+      
+    health_his_fat:
+      value_template: "{{ states.sensor.health_his.attributes.fat.value }}"
+      entity_id: sensor.health_his
+      friendly_name: 'Fat'
+      
+    health_his_bmi:
+      value_template: "{{ states.sensor.health_his.attributes.bmi.value }}"
+      entity_id: sensor.health_his
+      friendly_name: 'BMI'
   
