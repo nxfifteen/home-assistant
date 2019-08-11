@@ -1,0 +1,30 @@
+---
+sensor:
+- platform: mqtt
+  name: health_his_steps
+  state_topic: "nxhealth/stuart/steps"
+  
+- platform: mqtt
+  name: health_his_distance
+  state_topic: "nxhealth/stuart/distance"
+  
+- platform: mqtt
+  name: health_his_calories
+  state_topic: "nxhealth/stuart/calories"
+  
+- platform: mqtt
+  name: health_his_active_sedentary
+  state_topic: "nxhealth/stuart/active_sedentary"
+  
+- platform: mqtt
+  name: health_his_active_very
+  state_topic: "nxhealth/stuart/active_very"
+  
+- platform: mqtt
+  name: health_his_active_lightly
+  state_topic: "nxhealth/stuart/active_lightly"
+  
+- platform: mqtt
+  name: health_his_heart_resting
+  state_topic: "nxhealth/stuart/heart_resting"
+  

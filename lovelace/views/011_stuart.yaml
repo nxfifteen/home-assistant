@@ -111,9 +111,34 @@ cards:
   - type: entities
     entities:
       - type: 'custom:text-divider-row'
-        text: Phone
-      - sensor.pixel_2_xlpixel_2_xl_a2dp_sensor
-      - sensor.pixel_2_xlpixel_2_xl_call_state_sensor
-      - sensor.pixel_2_xlpixel_2_xl_hfp_sensor
-      - sensor.pixel_2_xlpixel_2_xl_pressure_sensor
-      - sensor.pixel_2_xlpixel_2_xl_wifi_sensor
+        text: Fitness
+      - sensor.health_his_steps
+      - sensor.health_his_distance
+      - sensor.health_his_calories
+      - sensor.health_his_active_sedentary
+      - sensor.health_his_active_very
+      - sensor.health_his_active_lightly
+      - sensor.health_his_heart_resting
+
+  - type: 'custom:fitbit-card'
+    battery_entity: sensor.family_stuart_battery_phone
+    header_entities:
+      - entity: sensor.health_his_steps
+        icon_color: '#14308D'
+      - entity: sensor.health_his_distance
+        show_units: true
+      - entity: sensor.health_his_calories
+        icon_color: red
+    entities:
+      - entity: sensor.health_his_active_sedentary
+        max: 1000
+      - entity: sensor.health_his_active_very
+        max: 120
+      - entity: sensor.health_his_active_lightly
+        max: 50
+        color_stops:
+          '0': red
+          '50': yellow
+          '90': green
+      - entity: sensor.health_his_heart_resting
+        show_units: true
