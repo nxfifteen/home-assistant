@@ -31,6 +31,8 @@ person:
 
 - name: Colin
   id: uI1o4jjBrEDdZxOVXR
+  device_trackers:
+    - device_tracker.colin_phone
 
 - name: Irene
   id: id5FZ39htZdsZ3dsFz

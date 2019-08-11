@@ -49,3 +49,41 @@ cards:
       - sensor.gitlab_279_pipeline_develop_duration
       - sensor.gitlab_279_build_develop_ha_latest_duration
       - sensor.gitlab_279_build_develop_ha_rc_duration
+      
+  - type: entities
+    entities:
+      - type: section
+        label: NxHealth / Store
+      - sensor.gitlab_252_rest
+      - sensor.gitlab_252_issues
+      - sensor.gitlab_252_forks
+      - sensor.gitlab_252_stars
+      - sensor.gitlab_252_commits
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Store Master
+      - sensor.gitlab_252_merge_request_develop_master
+      - sensor.gitlab_252_push_master
+      - sensor.gitlab_252_pipeline_master
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Store Master CI Time
+      - sensor.gitlab_252_pipeline_master_duration
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Store Develop
+      - sensor.gitlab_252_merge_request_master_develop
+      - sensor.gitlab_252_push_develop
+      - sensor.gitlab_252_pipeline_develop
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Store Develop CI Time
+      - sensor.gitlab_252_pipeline_develop_duration
