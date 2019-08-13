@@ -15,15 +15,15 @@ trigger:
   from: 'off'
   to: 'on'
 
-- entity_id: sensor.family_family_state_raw
-  platform: state
+#- entity_id: sensor.family_family_state_raw
+#  platform: state
 
 condition:
   condition: and
   conditions:
     - condition: numeric_state
       entity_id: sensor.family_family_state_raw
-      below: 9 # Anyone Awake
+      below: 7 # Anyone Awake
       above: 1
 
     - condition: template
