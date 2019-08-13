@@ -1,5 +1,5 @@
 ---
-alias: Lighting Family State - 8
+alias: Lighting Family State - Stuart's Asleep
 
 trigger:
   - entity_id: sensor.family_family_state_raw
@@ -8,7 +8,7 @@ trigger:
 condition:
 - condition: state
   entity_id: sensor.family_family_state_raw
-  state: '8'
+  state: '9'
 
 - condition: or
   conditions:

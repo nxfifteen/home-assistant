@@ -11,7 +11,7 @@ condition:
   conditions:
     - condition: numeric_state
       entity_id: sensor.family_family_state_raw
-      above: 9
+      above: 7
 
     - condition: time
       after: '23:00:00'

@@ -1,5 +1,5 @@
 ---
-alias: Lighting Family State - 7
+alias: Lighting Family State - Kareens's Asleep
 
 trigger:
   - entity_id: sensor.family_family_state_raw
@@ -8,7 +8,7 @@ trigger:
 condition:
 - condition: state
   entity_id: sensor.family_family_state_raw
-  state: '7'
+  state: '8'
 
 - condition: or
   conditions:

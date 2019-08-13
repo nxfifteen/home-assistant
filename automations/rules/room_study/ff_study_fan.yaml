@@ -33,7 +33,7 @@ condition:
     # I'm awake
     - condition: numeric_state
       entity_id: sensor.family_family_state_raw
-      below: 8
+      below: 9
 
     # Someone is home
     - condition: state

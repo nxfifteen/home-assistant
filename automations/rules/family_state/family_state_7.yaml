@@ -1,10 +1,10 @@
 ---
-alias: Family State 7
+alias: Family State Kareens's Asleep
 
 trigger:
   - entity_id: sensor.family_family_state_raw
     platform: state
-    to: '7'
+    to: '8'
 
 action:
   - service: script.turn_on
