@@ -1,10 +1,10 @@
 ---
-alias: Family State 8
+alias: Family State Stuart's Asleep
 
 trigger:
   - entity_id: sensor.family_family_state_raw
     platform: state
-    to: '8'
+    to: '9'
 
 action:
   - service: script.turn_on

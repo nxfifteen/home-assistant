@@ -1,10 +1,21 @@
 ---
-alias: Family State 9
+alias: Family State Everyone's Asleep
 
 trigger:
+  # We're Both Asleep
   - entity_id: sensor.family_family_state_raw
     platform: state
-    to: '9'
+    to: '12'
+
+  # Stuart's Asleep Alone
+  - entity_id: sensor.family_family_state_raw
+    platform: state
+    to: '11'
+
+  # Kareens's Asleep Alone
+  - entity_id: sensor.family_family_state_raw
+    platform: state
+    to: '10'
 
 action:
   - service: script.turn_on
