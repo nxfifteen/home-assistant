@@ -4,4 +4,3 @@ air_freshing:
   entities:
     - input_boolean.air_freshing
     - switch.wh_seasonal_one
-    - switch.wh_seasonal_two

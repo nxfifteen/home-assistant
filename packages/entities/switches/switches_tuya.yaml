@@ -27,8 +27,8 @@ homeassistant:
       friendly_name: Landing AirFresh
       icon: mdi:flower
 
-    switch.wh_seasonal_two:
-      friendly_name: Kitchen AirFresh
+    switch.gf_living_light_jar:
+      friendly_name: Livingroom Light Jar
       icon: mdi:flower
 
     switch.wh_seasonal_three:
