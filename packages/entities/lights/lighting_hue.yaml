@@ -105,6 +105,9 @@ input_select:
 
 homeassistant:
   customize:
+    sensor.light_scene:
+      friendly_name: Lighting Scene
+      
     light.gf_dinning_display_unit:
       friendly_name: Display Unit
 
