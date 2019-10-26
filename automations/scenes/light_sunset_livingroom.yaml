@@ -11,3 +11,6 @@ entities:
     transition: 5
     rgb_color: [255,207,120]
     brightness: 150
+    
+  switch.gf_living_light_jar:
+    state: on
