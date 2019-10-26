@@ -47,7 +47,6 @@ cards:
       - script.my_computer
       - switch.ff_study_monitors_switch
       - type: section
-      - switch.ff_study_fan_switch
       - switch.ff_study_sterio_switch
       - type: section
       - switch.ff_study_loading_pi_switch

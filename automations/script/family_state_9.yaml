@@ -49,3 +49,7 @@ family_state_9:
         payload: "off"
         qos: 2
         retain: true
+
+    - service: switch.turn_on
+      data:
+        entity_id: switch.ff_bedroom_charger_stuart
