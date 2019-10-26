@@ -125,3 +125,7 @@ action:
       entity_id: light.gf_living_celing
       brightness: 0
       transition: 3
+
+  - service: switch.turn_on
+    data:
+      entity_id: switch.ff_bedroom_charger_stuart

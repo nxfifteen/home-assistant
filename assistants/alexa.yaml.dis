@@ -43,7 +43,7 @@ alexa:
       - switch.ff_bedroom_fairylights_switch
       - switch.ff_bedroom_fan_switch
       - switch.ff_bedroom_tv_switch
-      - switch.ff_study_fan_switch
+      - switch.ff_bedroom_charger_stuart
       - switch.ff_study_loading_pi_switch
       - switch.ff_study_monitors_switch
       - switch.gf_dinning_tv_switch
@@ -282,7 +282,7 @@ alexa:
       description: The Bedroom Fan
       display_categories: SWITCH
 
-    switch.ff_study_fan_switch:
+    switch.ff_bedroom_charger_stuart:
       name: Study Fan
       description: The Study Fan
       display_categories: SWITCH

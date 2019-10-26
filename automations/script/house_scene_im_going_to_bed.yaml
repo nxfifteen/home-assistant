@@ -27,9 +27,9 @@ house_scene_im_going_to_bed:
         transition: 3
         effect: none
 
-    - service: switch.turn_off
+    - service: switch.turn_on
       data:
-        entity_id: switch.ff_study_fan_switch
+        entity_id: switch.ff_bedroom_charger_stuart
 
     - service: switch.turn_off
       data:
