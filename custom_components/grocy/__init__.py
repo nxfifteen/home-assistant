@@ -8,19 +8,43 @@ from datetime import timedelta
 import voluptuous as vol
 
 import homeassistant.helpers.config_validation as cv
-from homeassistant.const import CONF_API_KEY, CONF_URL
+from homeassistant.const import (
+    CONF_API_KEY,
+    CONF_URL,
+    CONF_VERIFY_SSL,
+    CONF_PORT,
+)
 from homeassistant.helpers import discovery
 from homeassistant.util import Throttle
+from homeassistant.core import callback
 
-from .const import (CONF_ENABLED, CONF_NAME, CONF_SENSOR, DEFAULT_NAME, DOMAIN,
-                    DOMAIN_DATA, ISSUE_URL, PLATFORMS, REQUIRED_FILES, STARTUP,
-                    VERSION)
+from .const import (
+    CONF_ENABLED,
+    CONF_NAME,
+    CONF_SENSOR,
+    CONF_BINARY_SENSOR,
+    DEFAULT_NAME,
+    DOMAIN,
+    DEFAULT_PORT_NUMBER,
+    DOMAIN_DATA, ISSUE_URL,
+    PLATFORMS,
+    REQUIRED_FILES,
+    STARTUP,
+    VERSION,
+)
 
-MIN_TIME_BETWEEN_UPDATES = timedelta(seconds=30)
+MIN_TIME_BETWEEN_UPDATES = timedelta(seconds=60)
 
 _LOGGER = logging.getLogger(__name__)
 
 SENSOR_SCHEMA = vol.Schema(
+    {
+        vol.Optional(CONF_ENABLED, default=True): cv.boolean,
+        vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
+    }
+)
+
+BINARY_SENSOR_SCHEMA = vol.Schema(
     {
         vol.Optional(CONF_ENABLED, default=True): cv.boolean,
         vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
@@ -33,7 +57,14 @@ CONFIG_SCHEMA = vol.Schema(
             {
                 vol.Required(CONF_URL): cv.string,
                 vol.Required(CONF_API_KEY): cv.string,
-                vol.Optional(CONF_SENSOR): vol.All(cv.ensure_list, [SENSOR_SCHEMA]),
+                vol.Optional(CONF_PORT, default=DEFAULT_PORT_NUMBER): cv.port,
+                vol.Optional(CONF_VERIFY_SSL, default=True): cv.boolean,
+                vol.Optional(CONF_SENSOR): vol.All(
+                    cv.ensure_list, [SENSOR_SCHEMA]
+                ),
+                vol.Optional(CONF_BINARY_SENSOR): vol.All(
+                    cv.ensure_list, [BINARY_SENSOR_SCHEMA]
+                ),
             }
         )
     },
@@ -44,7 +75,7 @@ CONFIG_SCHEMA = vol.Schema(
 async def async_setup(hass, config):
     """Set up this component."""
     # Import client from a external python package hosted on PyPi
-    from pygrocy import Grocy,TransactionType
+    from pygrocy import Grocy, TransactionType
     from datetime import datetime
     import iso8601
 
@@ -63,9 +94,11 @@ async def async_setup(hass, config):
     # Get "global" configuration.
     url = config[DOMAIN].get(CONF_URL)
     api_key = config[DOMAIN].get(CONF_API_KEY)
+    verify_ssl = config[DOMAIN].get(CONF_VERIFY_SSL)
+    port_number = config[DOMAIN].get(CONF_PORT)
 
     # Configure the client.
-    grocy = Grocy(url, api_key)
+    grocy = Grocy(url, api_key, port_number, verify_ssl)
     hass.data[DOMAIN_DATA]["client"] = GrocyData(hass, grocy)
 
     # Load platforms
@@ -90,6 +123,7 @@ async def async_setup(hass, config):
                 )
             )
 
+    @callback
     def handle_add_product(call):
         product_id = call.data['product_id']
         amount = call.data.get('amount', 0)
@@ -98,6 +132,7 @@ async def async_setup(hass, config):
 
     hass.services.async_register(DOMAIN, "add_product", handle_add_product)
 
+    @callback
     def handle_consume_product(call):
         product_id = call.data['product_id']
         amount = call.data.get('amount', 0)
@@ -105,13 +140,19 @@ async def async_setup(hass, config):
 
         transaction_type_raw = call.data.get('transaction_type', None)
         transaction_type = TransactionType.CONSUME
-        
+
         if transaction_type_raw is not None:
             transaction_type = TransactionType[transaction_type_raw]
-        grocy.consume_product(product_id, amount, spoiled=spoiled, transaction_type=transaction_type)
+        grocy.consume_product(
+            product_id, amount,
+            spoiled=spoiled,
+            transaction_type=transaction_type)
 
-    hass.services.async_register(DOMAIN, "consume_product", handle_consume_product)
+    hass.services.async_register(
+        DOMAIN, "consume_product",
+        handle_consume_product)
 
+    @callback
     def handle_execute_chore(call):
         chore_id = call.data['chore_id']
         done_by = call.data.get('done_by', None)
@@ -123,7 +164,7 @@ async def async_setup(hass, config):
         grocy.execute_chore(chore_id, done_by, tracked_time)
 
     hass.services.async_register(DOMAIN, "execute_chore", handle_execute_chore)
-    
+
     return True
 
 
@@ -136,16 +177,26 @@ class GrocyData:
         self.client = client
 
     @Throttle(MIN_TIME_BETWEEN_UPDATES)
-    async def update_data(self):
+    async def async_update_stock(self):
         """Update data."""
         # This is where the main logic to update platform data goes.
-        try:
-            stock = self.client.stock(get_details=True)
-            chores = self.client.chores(get_details=True)
-            self.hass.data[DOMAIN_DATA]["stock"] = stock
-            self.hass.data[DOMAIN_DATA]["chores"] = chores
-        except Exception as error:  # pylint: disable=broad-except
-            _LOGGER.error("Could not update data - %s", error)
+        self.hass.data[DOMAIN_DATA]["stock"] = (
+            await self.hass.async_add_executor_job(self.client.stock, [True]))
+
+    @Throttle(MIN_TIME_BETWEEN_UPDATES)
+    async def async_update_chores(self):
+        """Update data."""
+        # This is where the main logic to update platform data goes.
+        self.hass.data[DOMAIN_DATA]["chores"] = (
+            await self.hass.async_add_executor_job(self.client.chores, [True]))
+
+    @Throttle(MIN_TIME_BETWEEN_UPDATES)
+    async def async_update_expiring_products(self):
+        """Update data."""
+        # This is where the main logic to update platform data goes.
+        self.hass.data[DOMAIN_DATA]["expiring_products"] = (
+            await self.hass.async_add_executor_job(
+                self.client.expiring_products))
 
 
 async def check_files(hass):
