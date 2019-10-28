@@ -20,8 +20,8 @@ homeassistant:
       icon: mdi:camera-wireless
 
     switch.ff_bedroom_charger_stuart:
-      friendly_name: Study Fan
-      icon: mdi:fan
+      friendly_name: Stuarts Phone Charger
+      icon: mdi:cellphone-arrow-down
 
     switch.wh_seasonal_one:
       friendly_name: Landing AirFresh
