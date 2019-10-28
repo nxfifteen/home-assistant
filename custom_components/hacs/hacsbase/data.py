@@ -5,6 +5,7 @@ from integrationhelper import Logger
 from . import Hacs
 from .const import STORAGE_VERSION
 from ..const import VERSION
+from ..repositories.manifest import HacsManifest
 
 
 STORES = {
@@ -52,12 +53,16 @@ class HacsData(Hacs):
         # Hacs
         path = f"{self.system.config_path}/.storage/{STORES['hacs']}"
         hacs = {"view": self.configuration.frontend_mode}
-        save(path, hacs)
+        save(self.logger, path, hacs)
 
         # Installed
         path = f"{self.system.config_path}/.storage/{STORES['installed']}"
         installed = {}
         for repository_name in self.common.installed:
+            if repository_name == "custom-components/hacs":
+                # Skip the old repo location
+                self.common.installed.remove(repository_name)
+                continue
             repository = self.get_by_name(repository_name)
             if repository is None:
                 self.logger.warning(f"Did not save information about {repository_name}")
@@ -67,14 +72,19 @@ class HacsData(Hacs):
                 "version_installed": repository.display_installed_version,
                 "version_available": repository.display_available_version,
             }
-        save(path, installed)
+        save(self.logger, path, installed)
 
         # Repositories
         path = f"{self.system.config_path}/.storage/{STORES['repositories']}"
         content = {}
         for repository in self.repositories:
+            if repository.repository_manifest is not None:
+                repository_manifest = repository.repository_manifest.manifest
+            else:
+                repository_manifest = None
             content[repository.information.uid] = {
                 "authors": repository.information.authors,
+                "topics": repository.information.topics,
                 "category": repository.information.category,
                 "description": repository.information.description,
                 "full_name": repository.information.full_name,
@@ -83,6 +93,7 @@ class HacsData(Hacs):
                 "installed": repository.status.installed,
                 "last_commit": repository.versions.available_commit,
                 "last_release_tag": repository.versions.available,
+                "repository_manifest": repository_manifest,
                 "name": repository.information.name,
                 "new": repository.status.new,
                 "selected_tag": repository.status.selected_tag,
@@ -90,20 +101,9 @@ class HacsData(Hacs):
                 "version_installed": repository.versions.installed,
             }
 
-        # Validate installed repositories
-        count_installed = len(installed) + 1  # For HACS it self
-        count_installed_restore = 0
-        for repository in self.repositories:
-            if repository.status.installed:
-                count_installed_restore += 1
-
-        if count_installed < count_installed_restore:
-            self.logger.debug("Save failed!")
-            self.logger.debug(
-                f"Number of installed repositories does not match the number of stored repositories [{count_installed} vs {count_installed_restore}]"
-            )
-            return
-        save(path, content)
+        save(self.logger, path, content)
+        self.hass.bus.async_fire("hacs/repository", {})
+        self.hass.bus.fire("hacs/config", {})
 
     async def restore(self):
         """Restore saved data."""
@@ -134,6 +134,9 @@ class HacsData(Hacs):
             repositrories = repositrories["data"]
             for entry in repositrories:
                 repo = repositrories[entry]
+                if repo["full_name"] == "custom-components/hacs":
+                    # Skip the old repo location
+                    continue
                 if not self.is_known(repo["full_name"]):
                     await self.register_repository(
                         repo["full_name"], repo["category"], False
@@ -146,6 +149,9 @@ class HacsData(Hacs):
                 # Restore repository attributes
                 if repo.get("authors") is not None:
                     repository.information.authors = repo["authors"]
+
+                if repo.get("topics", []):
+                    repository.information.topics = repo["topics"]
 
                 if repo.get("description") is not None:
                     repository.information.description = repo["description"]
@@ -164,6 +170,11 @@ class HacsData(Hacs):
                 if repo.get("selected_tag") is not None:
                     repository.status.selected_tag = repo["selected_tag"]
 
+                if repo.get("repository_manifest") is not None:
+                    repository.repository_manifest = HacsManifest.from_dict(
+                        repo["repository_manifest"]
+                    )
+
                 if repo.get("show_beta") is not None:
                     repository.status.show_beta = repo["show_beta"]
 
@@ -179,8 +190,9 @@ class HacsData(Hacs):
                 if repo.get("new") is not None:
                     repository.status.new = repo["new"]
 
-                if repo["full_name"] == "custom-components/hacs":
+                if repo["full_name"] == "hacs/integration":
                     repository.versions.installed = VERSION
+                    repository.status.installed = True
                     if "b" in VERSION:
                         repository.status.show_beta = True
                 elif repo.get("version_installed") is not None:
@@ -208,41 +220,16 @@ class HacsData(Hacs):
                             "version_available"
                         ]
 
-            # Check the restore.
-            count_installed = len(installed) + 1  # For HACS it self
-            count_installed_restore = 0
-            installed_restore = []
-            for repository in self.repositories:
-                if repository.status.installed:
-                    installed_restore.append(repository.information.full_name)
-                    if (
-                        repository.information.full_name not in self.common.installed
-                        and repository.information.full_name != "custom-components/hacs"
-                    ):
-                        self.logger.warning(
-                            f"{repository.information.full_name} is not in common.installed"
-                        )
-                    count_installed_restore += 1
-
-            if count_installed < count_installed_restore:
-                for repo in installed:
-                    installed_restore.remove(repo)
-                self.logger.warning(f"Check {repo}")
-
-                self.logger.critical("Restore failed!")
-                self.logger.critical(
-                    f"Number of installed repositories does not match the number of restored repositories [{count_installed} vs {count_installed_restore}]"
-                )
-                return False
-
             self.logger.info("Restore done")
         except Exception as exception:
-            self.logger.critical(f"[{exception}] Restore Failed!")
+            self.logger.critical(
+                f"[{exception}] Restore Failed! see https://github.com/hacs/integration/issues/639 for more details."
+            )
             return False
         return True
 
 
-def save(path, content):
+def save(logger, path, content):
     """Save file."""
     from .backup import Backup
 
@@ -252,6 +239,7 @@ def save(path, content):
         content = {"data": content, "schema": STORAGE_VERSION}
         with open(path, "w", encoding="utf-8") as storefile:
             json.dump(content, storefile, indent=4)
-    except Exception:  # pylint: disable=broad-except
+    except Exception as exception:  # pylint: disable=broad-except
+        logger.warning(f"Saving {path} failed - {exception}")
         backup.restore()
     backup.cleanup()
