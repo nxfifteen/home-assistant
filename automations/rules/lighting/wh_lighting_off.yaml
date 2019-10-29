@@ -11,6 +11,6 @@ action:
     data:
       entity_id: scene.light_off
 
-  - service: light.turn_off
+  - service: switch.turn_off
     data:
       entity_id: switch.gf_living_light_jar

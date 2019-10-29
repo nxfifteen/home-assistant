@@ -22,6 +22,6 @@ action:
     data:
       entity_id: light.gf_hallway_celing
 
-  - service: light.turn_off
+  - service: switch.turn_off
     data:
       entity_id: switch.gf_living_light_jar

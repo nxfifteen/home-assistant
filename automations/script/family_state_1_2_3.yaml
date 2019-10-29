@@ -24,6 +24,6 @@ family_state_1_2_3:
       data:
         away_mode: away
 
-    - service: light.turn_off
+    - service: switch.turn_off
       data:
         entity_id: switch.gf_living_light_jar
