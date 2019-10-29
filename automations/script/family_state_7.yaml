@@ -13,6 +13,10 @@ family_state_7:
         entity_id: climate.hallway
         temperature: 10
 
+    - service: light.turn_off
+      data:
+        entity_id: switch.gf_living_light_jar
+
     - service: switch.turn_off
       data:
         entity_id: switch.ff_bedroom_tv_switch

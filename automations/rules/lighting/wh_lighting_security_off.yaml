@@ -18,8 +18,12 @@ condition:
       state: '1'
 
 action:
-- delay: '00:{{ range(0,5) | random | int }}{{ range(0,9) | random | int }}:00'
+  - delay: '00:{{ range(0,5) | random | int }}{{ range(0,9) | random | int }}:00'
 
-- service: scene.turn_on
-  data:
-    entity_id: scene.light_off
+  - service: scene.turn_on
+    data:
+      entity_id: scene.light_off
+
+  - service: light.turn_off
+    data:
+      entity_id: switch.gf_living_light_jar
