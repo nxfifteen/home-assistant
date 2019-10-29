@@ -1,0 +1,12 @@
+---
+alias: His State's 0
+
+trigger:
+  - entity_id: sensor.family_stuart_state
+    platform: state
+    to: '0'
+
+action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ff_bedroom_charger_stuart

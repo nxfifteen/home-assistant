@@ -15,6 +15,10 @@ family_state_9:
 
     - service: light.turn_off
       data:
+        entity_id: switch.gf_living_light_jar
+
+    - service: light.turn_off
+      data:
         entity_id: group.all_lights
 
     - service: switch.turn_off
