@@ -92,6 +92,10 @@ cards:
       - sensor.house_scene
       - sensor.light_scene
       - type: section
+      - entity: sun.sun
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sun.sun.attributes.elevation ]]"
+      - type: section
       - input_select.family_family_act_bedtime
       - input_select.light_scene
 

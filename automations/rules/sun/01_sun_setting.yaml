@@ -1,0 +1,20 @@
+---
+alias: 'Sun Civil Twilight'
+hide_entity: true
+trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 2
+    above: -6
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: '15:00:00'
+      before: '23:59:59'
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.light_scene
+      option: Dusk

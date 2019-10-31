@@ -1,0 +1,13 @@
+---
+alias: 'Sun Up'
+hide_entity: true
+trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    above: 2
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.light_scene
+      option: None
