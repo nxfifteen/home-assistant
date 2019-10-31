@@ -23,8 +23,6 @@ cards:
             name: Room
           - entity: sensor.family_stuart_locality
             name: Locality
-          - entity: sensor.family_stuart_places
-            name: Places
           - type: section
           - script.find_phone_stuart
 
