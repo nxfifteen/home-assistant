@@ -1,14 +1,13 @@
----
-name: light security gf
+name: light sunset kitchen
 entities:
   group.light_gf_dinning:
     state: on
     transition: 5
-    rgb_color: [255,207,120]
-    brightness: 60
+    rgb_color: [255,255,255]
+    brightness: 100
 
   light.gf_hallway_celing:
     state: on
     transition: 5
-    rgb_color: [255,207,120]
-    brightness: 75
+    rgb_color: [255,255,255]
+    brightness: 100

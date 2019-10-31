@@ -4,3 +4,4 @@ light_gf_living:
   entities:
     - light.gf_living_celing
     - light.gf_living_lamp
+    - switch.gf_living_light_jar

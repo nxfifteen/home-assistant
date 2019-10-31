@@ -3,7 +3,7 @@ id: appliances
 icon: mdi:washing-machine
 title: Appliances
 cards:
-  - !include ../cards/gist_aftership_tracking.yaml
+  # - !include ../cards/gist_aftership_tracking.yaml
 
   - type: vertical-stack
     cards:
