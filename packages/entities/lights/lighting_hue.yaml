@@ -96,12 +96,13 @@ input_select:
     options:
     - None
     - Pulse
-    - Sunrise
-    - Dawn
     - Dull
+    - Full
+    - Dusk
     - Sunset
     - Night
-    - Full
+    - Dawn
+    - Sunrise
 
 homeassistant:
   customize:
