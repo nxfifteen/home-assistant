@@ -31,6 +31,10 @@ action:
 
   - service: light.turn_off
     data:
+      entity_id: group.light_gf_dinning
+
+  - service: light.turn_off
+    data:
       entity_id: light.gf_studio_celing
 
   - service: light.turn_off

@@ -17,8 +17,8 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.gf_living_celing
-      brightness: 75
-      rgb_color: [255, 206, 121]
+      brightness: 60
+      rgb_color: [255,207,120]
       transition: 3
 
   - service: light.turn_off
@@ -33,8 +33,8 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.gf_studio_celing
-      brightness: 30
-      rgb_color: [255, 206, 121]
+      brightness: 75
+      rgb_color: [255,207,120]
       transition: 3
 
   - service: light.turn_off
@@ -80,14 +80,14 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.gf_hallway_celing
-      rgb_color: [255, 206, 121]
+      rgb_color: [255,207,120]
       transition: 5
 
   - service: light.turn_on
     data:
       entity_id: light.ff_landing_celing
       brightness: 150
-      rgb_color: [255, 206, 121]
+      rgb_color: [255,207,120]
       transition: 5
 
   # Setup the Bedroom

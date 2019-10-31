@@ -11,7 +11,7 @@ house_scene_im_going_to_bed:
       data:
         entity_id: light.ff_study_celing
         brightness: 75
-        rgb_color: [58, 184, 255]
+        rgb_color: [255,207,120]
         transition: 3
         effect: none
 
