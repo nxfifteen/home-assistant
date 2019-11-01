@@ -4,10 +4,4 @@ entities:
     state: on
     transition: 5
     rgb_color: [255,255,255]
-    brightness: 100
-
-  light.gf_hallway_celing:
-    state: on
-    transition: 5
-    rgb_color: [255,255,255]
-    brightness: 100
+    brightness: 150

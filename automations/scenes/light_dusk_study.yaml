@@ -4,13 +4,7 @@ entities:
     state: on
     transition: 5
     rgb_color: [255,255,255]
-    brightness: 100
-
-  light.ff_landing_celing:
-    state: on
-    transition: 5
-    rgb_color: [255,255,255]
-    brightness: 100
+    brightness: 150
 
   light.ff_study_wall:
     state: on

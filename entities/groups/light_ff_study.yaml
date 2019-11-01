@@ -1,0 +1,7 @@
+---
+light_ff_study:
+  name: Study Lighting
+  entities:
+    - light.ff_study_desk
+    - light.ff_study_wall
+    - light.ff_study_celing

@@ -4,43 +4,29 @@ icon: mdi:shield-home
 title: Security
 cards:
   - type: entities
-    title: Camera Sockets
+    title: Room Occupancy
     show_header_toggle: false
     entities:
-    - switch.gf_hallway_camera_switch
-    - switch.gf_living_camera_switch
-    - switch.gf_studio_camera_switch
-    - switch.gf_dinning_camera_switch
-
-  - type: entities
-    title: Camera Online
-    show_header_toggle: false
-    entities:
-    - binary_sensor.gf_dinning_camera
-    - binary_sensor.gf_hallway_camera
-    - binary_sensor.gf_kitchen_camera
-    - binary_sensor.gf_living_camera
-    - binary_sensor.gf_studio_camera
-
-  - type: entities
-    title: Camera Motion
-    show_header_toggle: false
-    entities:
-    - binary_sensor.motion_gf_dinning_camera
-    - binary_sensor.motion_gf_hallway_camera
-    - binary_sensor.motion_gf_kitchen_camera
-    - binary_sensor.motion_gf_living_camera
-    - binary_sensor.motion_gf_studio_camera
-
-  - type: entities
-    title: Camera Recordings
-    show_header_toggle: false
-    entities:
-    - binary_sensor.camera_dinning_room_recording
-    - binary_sensor.camera_front_door_recording
-    - binary_sensor.camera_kitchen_recording
-    - binary_sensor.camera_lounge_recording
-    - binary_sensor.camera_backdoor_recording
+    - entity: switch.occ_room_kitchen
+      name: Dinning Room
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "[[  sensor.occ_room_kitchen_reason.state ]]" 
+    - entity: switch.occ_room_livingroom
+      name: Livingroom
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "[[  sensor.occ_room_livingroom_reason.state ]]"
+    - entity: switch.occ_room_study
+      name: Study
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "[[  sensor.occ_room_study_reason.state ]]"
+    - entity: switch.occ_room_bedroom
+      name: Bedroom
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "[[  sensor.occ_room_bedroom_reason.state ]]"
+    - entity: switch.occ_room_studio
+      name: Studio
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "[[ sensor.occ_room_studio_reason.state ]]"
 
   - type: entities
     title: ZWave Motion
@@ -51,6 +37,7 @@ cards:
     - binary_sensor.motion_ff_study
     - binary_sensor.motion_gf_dinning
     - binary_sensor.motion_gf_living
+    - binary_sensor.motion_ff_hallway
 
   - type: entities
     title: ZWave Contacts
@@ -112,3 +99,42 @@ cards:
           name: Smoke
         - entity: sensor.landing_nest_protect_co_status
           name: CO
+
+  - type: entities
+    title: Camera Sockets
+    show_header_toggle: false
+    entities:
+    - switch.gf_hallway_camera_switch
+    - switch.gf_living_camera_switch
+    - switch.gf_studio_camera_switch
+    - switch.gf_dinning_camera_switch
+
+  - type: entities
+    title: Camera Online
+    show_header_toggle: false
+    entities:
+    - binary_sensor.gf_dinning_camera
+    - binary_sensor.gf_hallway_camera
+    - binary_sensor.gf_kitchen_camera
+    - binary_sensor.gf_living_camera
+    - binary_sensor.gf_studio_camera
+
+  - type: entities
+    title: Camera Motion
+    show_header_toggle: false
+    entities:
+    - binary_sensor.motion_gf_dinning_camera
+    - binary_sensor.motion_gf_hallway_camera
+    - binary_sensor.motion_gf_kitchen_camera
+    - binary_sensor.motion_gf_living_camera
+    - binary_sensor.motion_gf_studio_camera
+
+  - type: entities
+    title: Camera Recordings
+    show_header_toggle: false
+    entities:
+    - binary_sensor.camera_dinning_room_recording
+    - binary_sensor.camera_front_door_recording
+    - binary_sensor.camera_kitchen_recording
+    - binary_sensor.camera_lounge_recording
+    - binary_sensor.camera_backdoor_recording
