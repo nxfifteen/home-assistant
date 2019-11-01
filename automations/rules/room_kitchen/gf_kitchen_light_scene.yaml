@@ -1,5 +1,5 @@
 ---
-alias: Lighting Night - Kitchen
+alias: Lighting Scene - Kitchen
 
 trigger:
 - platform: state
@@ -37,3 +37,7 @@ action:
 - service: scene.turn_on
   data_template:
     entity_id: scene.light_{{ states.sensor.light_scene.state.lower() | replace(" ", "_") }}_kitchen
+
+- service: scene.turn_on
+  data_template:
+    entity_id: scene.light_{{ states.sensor.light_scene.state.lower() | replace(" ", "_") }}_hallway

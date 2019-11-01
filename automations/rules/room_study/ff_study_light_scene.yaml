@@ -34,3 +34,7 @@ action:
 - service: scene.turn_on
   data_template:
     entity_id: scene.light_{{ states.sensor.light_scene.state.lower() | replace(" ", "_") }}_study
+
+- service: scene.turn_on
+  data_template:
+    entity_id: scene.light_{{ states.sensor.light_scene.state.lower() | replace(" ", "_") }}_hallway
