@@ -1,3 +1,5 @@
 shell_command:
   shell_plex_music_evening: !secret shell_plex_music_evening
   shell_plex_music_morning: !secret shell_plex_music_morning
+  shell_pve_stop_107: !secret shell_pve_stop_107
+  shell_pve_start_107: !secret shell_pve_start_107

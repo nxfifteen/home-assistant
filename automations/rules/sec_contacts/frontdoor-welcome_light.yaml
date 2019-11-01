@@ -20,6 +20,15 @@ condition:
         - condition: state
           entity_id: sensor.light_scene
           state: Sunset
+        - condition: state
+          entity_id: sensor.light_scene
+          state: Dusk
+        - condition: state
+          entity_id: sensor.light_scene
+          state: Dawn
+        - condition: state
+          entity_id: sensor.light_scene
+          state: Sunrise
 
 action:
   - service: light.turn_on
@@ -27,5 +36,4 @@ action:
       entity_id: light.gf_hallway_celing
       brightness: 150
       rgb_color: [255,207,120]
-      transition: 3
       effect: none

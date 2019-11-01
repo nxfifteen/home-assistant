@@ -30,6 +30,12 @@ condition:
       entity_id: switch.occ_room_study
       state: 'on'
 
+    - condition: template
+      value_template: "{{ not is_state('sensor.house_scene', 'Going To Bed') }}"
+
+    - condition: template
+      value_template: "{{ not is_state('sensor.house_scene', 'Asleep') }}"
+
 action:
 - service: scene.turn_on
   data_template:
