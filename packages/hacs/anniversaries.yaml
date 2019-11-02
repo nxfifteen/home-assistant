@@ -2,10 +2,10 @@
 sensor:
   - platform: anniversaries
     name: Stuart's Birthday
-    date: '1985-05-21'
+    date: !secret anniversaries_his_birthday
   - platform: anniversaries
     name: Kareen's Birthday
-    date: '1987-03-28'
+    date: !secret anniversaries_her_birthday
   - platform: anniversaries
     name: Our's Wedding Anniversary
-    date: '2017-08-12'
+    date: !secret anniversaries_our_anniversary
