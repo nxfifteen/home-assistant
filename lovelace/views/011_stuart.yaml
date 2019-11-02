@@ -110,17 +110,18 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Fitness
-      - sensor.health_his_steps
+      - entity: sensor.health_his_weight
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.health_his_weight_loss.state ]] kg Lost | [[ sensor.health_his_fat.state ]] % Fat | [[ sensor.health_his_bmi.state ]] BMI"
+      - entity: sensor.health_his_steps
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.health_his_distance.state ]] km"
       - sensor.health_his_floors
       - sensor.health_his_water
-      - sensor.health_his_weight_loss
-      - sensor.health_his_weight
-      - sensor.health_his_fat
-      - sensor.health_his_bmi
-      - sensor.health_his_distance
       - sensor.health_his_calories
-      - sensor.health_his_minutes_active
-      - sensor.health_his_resting_heart_rate
+      - entity: sensor.health_his_minutes_active
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "Resting Heart Rate [[ sensor.health_his_resting_heart_rate.state ]] bpm"
 
   - type: picture-elements
     image: /local/images/core_fit_1.png
@@ -261,7 +262,7 @@ cards:
       style:
         left: 3%
         top: 7%
-        "--iron-icon-fill-color": '#09C7E8'
+        "--iron-icon-fill-color": '#FFFFFF'
         transform: none
     - type: state-label
       entity: sensor.health_his_weight
@@ -277,7 +278,7 @@ cards:
       style:
         left: 31%
         top: 7%
-        "--iron-icon-fill-color": '#09C7E8'
+        "--iron-icon-fill-color": '#FFFFFF'
         transform: none
     - type: state-label
       entity: sensor.health_his_bmi
@@ -293,7 +294,7 @@ cards:
       style:
         left: 59%
         top: 7%
-        "--iron-icon-fill-color": '#09C7E8'
+        "--iron-icon-fill-color": '#FFFFFF'
         transform: none
     - type: state-label
       entity: sensor.health_his_fat
