@@ -1,0 +1,34 @@
+---
+garbage_collection:
+  sensors:
+  - name: Waste # Each even week on Thursday
+    frequency: "even-weeks"
+    collection_days: thu
+    icon_normal: mdi:trash-can
+    icon_today: mdi:delete-empty
+    icon_tomorrow: mdi:delete-sweep
+
+  - name: Garden # Each even week on Thursday
+    frequency: "even-weeks"
+    collection_days: thu
+    icon_normal: mdi:recycle
+    icon_today: mdi:delete-empty
+    icon_tomorrow: mdi:delete-sweep
+
+  - name: Paper # Every 4 weeks on Thursday
+    frequency: "every-n-weeks"
+    collection_days: thu
+    period: 4
+    first_week: 45
+    icon_normal: mdi:recycle
+    icon_today: mdi:delete-empty
+    icon_tomorrow: mdi:delete-sweep
+
+  - name: Plastic # Every 4 weeks on Thursday
+    frequency: "every-n-weeks"
+    collection_days: thu
+    period: 4
+    first_week: 47
+    icon_normal: mdi:recycle
+    icon_today: mdi:delete-empty
+    icon_tomorrow: mdi:delete-sweep
