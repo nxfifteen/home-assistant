@@ -6,54 +6,98 @@ sensor:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.steps }}"
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Steps'
+      unit_of_measurement: 'steps'
 
     health_his_floors:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.floors }}"
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Floors'
+      unit_of_measurement: 'floors'
       
     health_his_water:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.water }}"
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Water'
+      unit_of_measurement: 'ml'
       
     health_his_weight_loss:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.weight_loss }}"
       entity_id: sensor.core_fit_269vlg
-      friendly_name: 'Weight_loss'
+      friendly_name: 'Weight Loss'
+      unit_of_measurement: 'kg'
       
     health_his_weight:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.weight }}"
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Weight'
+      unit_of_measurement: 'kg'
       
     health_his_fat:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.fat }}"
       entity_id: sensor.core_fit_269vlg
-      friendly_name: 'fat'
+      friendly_name: 'Body Fat'
+      unit_of_measurement: '%'
       
     health_his_bmi:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.bmi }}"
       entity_id: sensor.core_fit_269vlg
-      friendly_name: 'bmi'
+      friendly_name: 'BMI'
       
     health_his_distance:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.distance }}"
       entity_id: sensor.core_fit_269vlg
-      friendly_name: 'distance'
+      friendly_name: 'Distance'
+      unit_of_measurement: 'km'
       
     health_his_calories:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.calories }}"
       entity_id: sensor.core_fit_269vlg
-      friendly_name: 'calories'
+      friendly_name: 'Calories'
+      unit_of_measurement: 'cals'
       
     health_his_minutes_active:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.minutes_active }}"
       entity_id: sensor.core_fit_269vlg
-      friendly_name: 'minutes_active'
+      friendly_name: 'Minutes Active'
+      unit_of_measurement: 'min'
       
     health_his_resting_heart_rate:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.resting_heart_rate }}"
       entity_id: sensor.core_fit_269vlg
-      friendly_name: 'heart rate'
+      friendly_name: 'Resting Heart Rate'
+      unit_of_measurement: 'bpm'
   
+homeassistant:
+  customize:
+    sensor.health_his_steps:
+      icon: mdi:paw
+
+    sensor.health_his_floors:
+      icon: mdi:arrow-top-right
+      
+    sensor.health_his_water:
+      icon: mdi:cup-water
+      
+    sensor.health_his_weight_loss:
+      icon: mdi:weight-kilogram
+      
+    sensor.health_his_weight:
+      icon: mdi:weight-kilogram
+      
+    sensor.health_his_fat:
+      icon: mdi:percent
+      
+    sensor.health_his_bmi:
+      icon: mdi:periodic-table
+      
+    sensor.health_his_distance:
+      icon: mdi:trending-neutral
+      
+    sensor.health_his_calories:
+      icon: mdi:food
+      
+    sensor.health_his_minutes_active:
+      icon: mdi:football
+      
+    sensor.health_his_resting_heart_rate:
+      icon: mdi:heart-pulse
