@@ -17,8 +17,43 @@ sensor:
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Water'
       
+    health_his_weight_loss:
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.weight_loss }}"
+      entity_id: sensor.core_fit_269vlg
+      friendly_name: 'Weight_loss'
+      
     health_his_weight:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.weight }}"
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Weight'
+      
+    health_his_fat:
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.fat }}"
+      entity_id: sensor.core_fit_269vlg
+      friendly_name: 'fat'
+      
+    health_his_bmi:
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.bmi }}"
+      entity_id: sensor.core_fit_269vlg
+      friendly_name: 'bmi'
+      
+    health_his_distance:
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.distance }}"
+      entity_id: sensor.core_fit_269vlg
+      friendly_name: 'distance'
+      
+    health_his_calories:
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.calories }}"
+      entity_id: sensor.core_fit_269vlg
+      friendly_name: 'calories'
+      
+    health_his_minutes_active:
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.minutes_active }}"
+      entity_id: sensor.core_fit_269vlg
+      friendly_name: 'minutes_active'
+      
+    health_his_resting_heart_rate:
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.resting_heart_rate }}"
+      entity_id: sensor.core_fit_269vlg
+      friendly_name: 'heart rate'
   
