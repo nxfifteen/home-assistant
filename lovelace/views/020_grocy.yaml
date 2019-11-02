@@ -4,41 +4,79 @@ icon: mdi:cart-arrow-down
 id: grocy
 cards:
   - type: entities
-    title: Reminders
+    title: Trash Day
     show_header_toggle: false
     entities:
     - sensor.this_weeks_bin
 
-  - type: custom:grocy-chores-card
-    entity: sensor.grocy
+    - type: section
 
-  # - type: entities
-  #   title: Litter Change
-  #   show_header_toggle: false
-  #   entities:
-  #   - binary_sensor.grocy_chore_litter_due
-  #   - type: section
-  #   - sensor.grocy_chore_litter_changed
-  #   - sensor.grocy_chore_litter_changed_next
-  #   - type: section
-  #   - script.grocy_url_chore_litter_done
+    - entity: sensor.waste
+      name: House Hold Trash
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "In [[ sensor.waste.attributes.days ]] Days"
 
-  # - type: entities
-  #   title: Cut Grass
-  #   show_header_toggle: false
-  #   entities:
-  #   - sensor.grocy_chore_cut_grass
-  #   - sensor.grocy_chore_cut_grass_next
-  #   - type: section
-  #   - script.grocy_url_chore_grass_done
+    - entity: sensor.garden
+      name: Garden Waste
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "In [[ sensor.garden.attributes.days ]] Days"
 
-  # - type: entities
-  #   title: Changed the Bed
-  #   show_header_toggle: false
-  #   entities:
-  #   - binary_sensor.grocy_chore_change_bed_due
-  #   - type: section
-  #   - sensor.grocy_chore_change_the_bed
-  #   - sensor.grocy_chore_change_the_bed_next
-  #   - type: section
-  #   - script.grocy_url_change_bed_done
+    - entity: sensor.paper
+      name: Paper & Cardboard
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "In [[ sensor.paper.attributes.days ]] Days"
+
+    - entity: sensor.plastic
+      name: Plastic & Cans
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "In [[ sensor.plastic.attributes.days ]] Days"
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Birthdays & Anniversaries
+      - entity: sensor.our_s_wedding_anniversary
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "Married for [[ sensor.our_s_wedding_anniversary.attributes.years ]] years in [[ sensor.our_s_wedding_anniversary.state ]] days"
+
+      - entity: sensor.kareen_s_birthday
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "Will be [[ sensor.kareen_s_birthday.attributes.years ]] in [[ sensor.kareen_s_birthday.state ]] days"
+
+      - entity: sensor.stuart_s_birthday
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "Will be [[ sensor.stuart_s_birthday.attributes.years ]] in [[ sensor.stuart_s_birthday.state ]] days"
+
+  # - type: custom:grocy-chores-card
+  #   entity: sensor.grocy
+
+  - type: entities
+    title: Litter Change
+    show_header_toggle: false
+    entities:
+    - binary_sensor.grocy_chore_litter_due
+    - type: section
+    - sensor.grocy_chore_litter_changed
+    - sensor.grocy_chore_litter_changed_next
+    - type: section
+    - script.grocy_url_chore_litter_done
+
+  - type: entities
+    title: Cut Grass
+    show_header_toggle: false
+    entities:
+    - sensor.grocy_chore_cut_grass
+    - sensor.grocy_chore_cut_grass_next
+    - type: section
+    - script.grocy_url_chore_grass_done
+
+  - type: entities
+    title: Changed the Bed
+    show_header_toggle: false
+    entities:
+    - binary_sensor.grocy_chore_change_bed_due
+    - type: section
+    - sensor.grocy_chore_change_the_bed
+    - sensor.grocy_chore_change_the_bed_next
+    - type: section
+    - script.grocy_url_change_bed_done

@@ -61,8 +61,8 @@ cards:
       - type: entities
         show_header_toggle: off
         entities:
-          - type: section
-            label: HP Envy 4500
+          - type: 'custom:text-divider-row'
+            text: HP Envy 4500
           - type: custom:vertical-stack-in-card
             cards:
               - type: horizontal-stack
@@ -112,8 +112,8 @@ cards:
       - type: entities
         show_header_toggle: off
         entities:
-          - type: section
-            label: Synolgy Storage - User Space
+          - type: 'custom:text-divider-row'
+            text: Synolgy Storage - User Space
           - type: custom:vertical-stack-in-card
             cards:
               - type: horizontal-stack
@@ -155,18 +155,15 @@ cards:
                 title: Disk
                 icon: mdi:harddisk
 
-      - type: entities
-        show_header_toggle: off
-        entities:
-        - sensor.synology_dsm_status_volume_1
+          - sensor.synology_dsm_status_volume_1
 
   - type: vertical-stack
     cards:
       - type: entities
         show_header_toggle: off
         entities:
-          - type: section
-            label: Synolgy Storage - Media
+          - type: 'custom:text-divider-row'
+            text: Synolgy Storage - Media
           - type: custom:vertical-stack-in-card
             cards:
               - type: horizontal-stack
@@ -208,18 +205,15 @@ cards:
                 title: Disk
                 icon: mdi:harddisk
 
-      - type: entities
-        show_header_toggle: off
-        entities:
-        - sensor.synology_dsm_status_volume_2
+          - sensor.synology_dsm_status_volume_2
 
   - type: vertical-stack
     cards:
       - type: entities
         show_header_toggle: off
         entities:
-          - type: section
-            label: Synolgy Storage - Backup Space
+          - type: 'custom:text-divider-row'
+            text: Synolgy Storage - Backup Space
           - type: custom:vertical-stack-in-card
             cards:
               - type: horizontal-stack
@@ -261,7 +255,120 @@ cards:
                 title: Disk
                 icon: mdi:harddisk
 
+          - sensor.synology_dsm_status_volume_3
+
+  - type: vertical-stack
+    cards:
       - type: entities
         show_header_toggle: off
         entities:
-        - sensor.synology_dsm_status_volume_3
+          - type: 'custom:text-divider-row'
+            text: PVE - Intel Nuc
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:card-modder
+                    card:
+                      type: picture
+                      image: /local/images/nuc.jpg
+                    style:
+                      border-radius: 5px
+
+                  - type: vertical-stack
+                    cards:
+                    
+                    - type: custom:bar-card
+                      align: split
+                      show_icon: true
+                      padding: 4px
+                      columns: 1
+                      card_style:
+                        border-radius: 5px
+                      entities:
+                        - entity: sensor.pve_cpu_used
+                          title: CPU
+                          icon: mdi:harddisk
+                    
+                    - type: custom:bar-card
+                      align: split
+                      show_icon: true
+                      padding: 4px
+                      columns: 1
+                      card_style:
+                        border-radius: 5px
+                      entities:
+                        - entity: sensor.pve_ram_used_percent
+                          title: RAM
+                          icon: mdi:harddisk
+                    
+                    - type: custom:bar-card
+                      align: split
+                      show_icon: true
+                      padding: 4px
+                      columns: 1
+                      card_style:
+                        border-radius: 5px
+                      entities:
+                        - entity: sensor.pve_disk_used_percent
+                          title: Disk
+                          icon: mdi:harddisk
+
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: off
+        entities:
+          - type: 'custom:text-divider-row'
+            text: PVE - Home Assistant
+          - type: custom:vertical-stack-in-card
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - type: custom:card-modder
+                    card:
+                      type: picture
+                      image: /local/images/ha-logo.png
+                    style:
+                      border-radius: 5px
+
+                  - type: vertical-stack
+                    cards:
+                    
+                    - type: custom:bar-card
+                      align: split
+                      show_icon: true
+                      padding: 4px
+                      columns: 1
+                      card_style:
+                        border-radius: 5px
+                      entities:
+                        - entity: sensor.home_assistant_cpu_used
+                          title: CPU
+                          icon: mdi:harddisk
+                    
+                    - type: custom:bar-card
+                      align: split
+                      show_icon: true
+                      padding: 4px
+                      columns: 1
+                      card_style:
+                        border-radius: 5px
+                      entities:
+                        - entity: sensor.home_assistant_ram_used_percent
+                          title: RAM
+                          icon: mdi:harddisk
+                    
+                    - type: custom:bar-card
+                      align: split
+                      show_icon: true
+                      padding: 4px
+                      columns: 1
+                      card_style:
+                        border-radius: 5px
+                      entities:
+                        - entity: sensor.home_assistant_disk_used_percent
+                          title: Disk
+                          icon: mdi:harddisk
+
+          - sensor.home_assistant_containers_active
