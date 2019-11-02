@@ -1,0 +1,5 @@
+---
+homeassistant:
+  customize:
+    binary_sensor.gf_studio_door_contact_contact:
+      friendly_name: Studio Door

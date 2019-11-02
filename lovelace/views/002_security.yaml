@@ -43,7 +43,9 @@ cards:
     show_header_toggle: false
     entities:
     - binary_sensor.gf_dinning_contact_side_contact
-    - binary_sensor.gf_hallway_contact_contact
+    - binary_sensor.gf_dinning_door_contact_contact
+    - binary_sensor.gf_frondoor_contact
+    - binary_sensor.gf_studio_door_contact_contact
 
   #################################################################
   #                                                               #
