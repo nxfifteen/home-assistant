@@ -2,7 +2,7 @@
 alias: Welcome Lights when Front Door Open
 
 trigger:
-  - entity_id: binary_sensor.gf_hallway_contact_contact
+  - entity_id: binary_sensor.gf_frondoor_contact
     platform: state
     to:  'on'
 
