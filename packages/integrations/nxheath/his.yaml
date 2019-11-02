@@ -3,22 +3,22 @@ sensor:
 - platform: template
   sensors:
     health_his_steps:
-      value_template: "{{ states.sensor.core_fit_269vlg.attributes.steps.value }}"
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.steps }}"
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Steps'
 
     health_his_floors:
-      value_template: "{{ states.sensor.core_fit_269vlg.attributes.floors.value }}"
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.floors }}"
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Floors'
       
     health_his_water:
-      value_template: "{{ states.sensor.core_fit_269vlg.attributes.water.value }}"
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.water }}"
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Water'
       
     health_his_weight:
-      value_template: "{{ states.sensor.core_fit_269vlg.attributes.weight.value }}"
+      value_template: "{{ states.sensor.core_fit_269vlg.attributes.weight }}"
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Weight'
   
