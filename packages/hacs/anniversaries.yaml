@@ -1,0 +1,11 @@
+---
+sensor:
+  - platform: anniversaries
+    name: Stuart's Birthday
+    date: '1985-05-21'
+  - platform: anniversaries
+    name: Kareen's Birthday
+    date: '1987-03-28'
+  - platform: anniversaries
+    name: Our's Wedding Anniversary
+    date: '2017-08-12'
