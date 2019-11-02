@@ -37,7 +37,6 @@ sensor:
       entity_id: sensor.core_fit_269vlg
       friendly_name: 'Body Fat'
       unit_of_measurement: '%'
-      icon: mdi:percent
       
     health_his_bmi:
       value_template: "{{ states.sensor.core_fit_269vlg.attributes.bmi }}"
