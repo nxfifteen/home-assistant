@@ -48,6 +48,6 @@ action:
   - service: script.notify_join
     data_template:
       who: "stuart"
-      title: 'Guest Mode On'
+      title: 'Appliances'
       notification_id: "hass-appliance-dishwasher"
       value1: 'The dishwasher has finished and is ready to be emptied'

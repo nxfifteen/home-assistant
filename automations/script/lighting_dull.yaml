@@ -5,4 +5,4 @@ lighting_dull:
     - service: input_select.select_option
       data:
         entity_id: input_select.light_scene
-        option: Dull
+        option: Dusk

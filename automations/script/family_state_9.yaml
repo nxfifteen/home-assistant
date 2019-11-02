@@ -57,3 +57,5 @@ family_state_9:
     - service: switch.turn_on
       data:
         entity_id: switch.ff_bedroom_charger_stuart
+
+    - service: shell_command.shell_pve_start_107

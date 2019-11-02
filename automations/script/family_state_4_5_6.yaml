@@ -36,3 +36,5 @@ family_state_4_5_6:
         payload: "default"
         qos: 2
         retain: true
+
+    - service: shell_command.shell_pve_start_107

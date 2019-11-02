@@ -12,33 +12,33 @@ cards:
   - type: custom:grocy-chores-card
     entity: sensor.grocy
 
-  - type: entities
-    title: Litter Change
-    show_header_toggle: false
-    entities:
-    - binary_sensor.grocy_chore_litter_due
-    - type: section
-    - sensor.grocy_chore_litter_changed
-    - sensor.grocy_chore_litter_changed_next
-    - type: section
-    - script.grocy_url_chore_litter_done
+  # - type: entities
+  #   title: Litter Change
+  #   show_header_toggle: false
+  #   entities:
+  #   - binary_sensor.grocy_chore_litter_due
+  #   - type: section
+  #   - sensor.grocy_chore_litter_changed
+  #   - sensor.grocy_chore_litter_changed_next
+  #   - type: section
+  #   - script.grocy_url_chore_litter_done
 
-  - type: entities
-    title: Cut Grass
-    show_header_toggle: false
-    entities:
-    - sensor.grocy_chore_cut_grass
-    - sensor.grocy_chore_cut_grass_next
-    - type: section
-    - script.grocy_url_chore_grass_done
+  # - type: entities
+  #   title: Cut Grass
+  #   show_header_toggle: false
+  #   entities:
+  #   - sensor.grocy_chore_cut_grass
+  #   - sensor.grocy_chore_cut_grass_next
+  #   - type: section
+  #   - script.grocy_url_chore_grass_done
 
-  - type: entities
-    title: Changed the Bed
-    show_header_toggle: false
-    entities:
-    - binary_sensor.grocy_chore_change_bed_due
-    - type: section
-    - sensor.grocy_chore_change_the_bed
-    - sensor.grocy_chore_change_the_bed_next
-    - type: section
-    - script.grocy_url_change_bed_done
+  # - type: entities
+  #   title: Changed the Bed
+  #   show_header_toggle: false
+  #   entities:
+  #   - binary_sensor.grocy_chore_change_bed_due
+  #   - type: section
+  #   - sensor.grocy_chore_change_the_bed
+  #   - sensor.grocy_chore_change_the_bed_next
+  #   - type: section
+  #   - script.grocy_url_change_bed_done

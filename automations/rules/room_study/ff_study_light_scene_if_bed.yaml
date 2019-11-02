@@ -1,9 +1,9 @@
 ---
-alias: Lighting Scene - Kitchen
+alias: Lighting Scene - Study
 
 trigger:
 - platform: state
-  entity_id: switch.occ_room_dinning
+  entity_id: switch.occ_room_study
   from: 'off'
   to: 'on'
 
@@ -11,7 +11,7 @@ trigger:
   platform: state
 
 - platform: state
-  entity_id: binary_sensor.motion_gf_dinning
+  entity_id: binary_sensor.motion_ff_study
   from: 'off'
   to: 'on'
 
@@ -23,23 +23,21 @@ condition:
   conditions:
     - condition: numeric_state
       entity_id: sensor.family_family_state_raw
-      below: 7 # Anyone Awake
+      below: 9 # He's Awake
       above: 1
 
-    - condition: template
-      value_template: "{{ not is_state('sensor.house_scene', 'Going To Bed') }}"
-
-    - condition: template
-      value_template: "{{ not is_state('sensor.house_scene', 'Asleep') }}"
+    - condition: state
+      entity_id: switch.occ_room_study
+      state: 'on'
 
     - condition: state
-      entity_id: switch.occ_room_dinning
-      state: 'on'
+      entity_id: sensor.house_scene
+      state: 'Going To Bed'
 
 action:
 - service: scene.turn_on
   data_template:
-    entity_id: scene.light_{{ states.sensor.light_scene.state.lower() | replace(" ", "_") }}_kitchen
+    entity_id: scene.light_scene_study_tropic
 
 - service: scene.turn_on
   data_template:
