@@ -1,0 +1,33 @@
+---
+alias: Security Lighting - Dusk
+
+trigger:
+- entity_id: sensor.light_scene
+  platform: state
+  to: Night
+
+- entity_id: sensor.family_family_state_raw
+  platform: state
+
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      before: '23:30:00'
+    - condition: state
+      entity_id: sensor.family_family_state_raw
+      state: '1'
+    - condition: state
+      entity_id: sensor.light_scene
+      state: Dusk
+
+action:
+- delay: '00:{{ range(0,2) | random | int }}{{ range(0,9) | random | int }}:00'
+
+- service: scene.turn_on
+  data:
+    entity_id: scene.light_security_ff
+
+- service: scene.turn_on
+  data:
+    entity_id: scene.light_security_gf
