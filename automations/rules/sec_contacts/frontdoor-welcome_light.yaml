@@ -5,6 +5,9 @@ trigger:
   - entity_id: binary_sensor.gf_frondoor_contact
     platform: state
     to:  'on'
+  - entity_id: binary_sensor.motion_gf_hallway_camera
+    platform: state
+    to:  'on'
 
 condition:
   condition: and

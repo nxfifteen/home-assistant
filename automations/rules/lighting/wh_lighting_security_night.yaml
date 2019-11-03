@@ -1,5 +1,5 @@
 ---
-alias: Security Lighting - ON
+alias: Security Lighting - Night
 
 trigger:
 - entity_id: sensor.light_scene
