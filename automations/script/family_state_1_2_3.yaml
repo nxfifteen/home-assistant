@@ -32,8 +32,8 @@ family_state_1_2_3:
       data:
         entity_id: script.unifi_lights_off
 
-    - service: script.turn_on
+    - service: switch.turn_on
       data:
-        entity_id: script.unifi_wifi_guest_on
+        entity_id: switch.unifi_wifi_guest
 
     - service: shell_command.shell_pve_stop_107

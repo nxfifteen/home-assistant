@@ -28,3 +28,7 @@ family_state_0:
         title: 'Jarvis'
         notification_id: "hass-family"
         value1: 'Family State Now in Vacation Mode'
+
+    - service: switch.turn_on
+      data:
+        entity_id: switch.unifi_wifi_guest

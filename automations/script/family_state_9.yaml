@@ -37,9 +37,9 @@ family_state_9:
       data:
         entity_id: script.unifi_lights_off
 
-    - service: script.turn_on
+    - service: switch.turn_off
       data:
-        entity_id: script.unifi_wifi_guest_off
+        entity_id: switch.unifi_wifi_guest
 
     - service: switch.turn_on
       data:
