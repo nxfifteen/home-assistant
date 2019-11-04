@@ -41,25 +41,12 @@ family_state_7:
       data_template:
         command: "jarvis=:=sleeping"
 
-    - service: mqtt.publish
+    - service: script.turn_on
       data:
-        topic: unifi/set/device/Entry/led
-        payload: "off"
-        qos: 2
-        retain: true
+        entity_id: script.unifi_lights_off
 
-    - service: mqtt.publish
+    - service: script.turn_on
       data:
-        topic: unifi/set/device/Study/led
-        payload: "off"
-        qos: 2
-        retain: true
-
-    - service: mqtt.publish
-      data:
-        topic: unifi/set/device/Dinning Room/led
-        payload: "off"
-        qos: 2
-        retain: true
+        entity_id: script.unifi_wifi_guest_off
 
     - service: shell_command.shell_pve_start_107

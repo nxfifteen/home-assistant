@@ -1,0 +1,57 @@
+---
+unifi_lights_on:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/Dinning Room/led
+        payload: "default"
+        qos: 2
+        retain: true
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/Entry/led
+        payload: "default"
+        qos: 2
+        retain: true
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/Entry Switch/led
+        payload: "default"
+        qos: 2
+        retain: true
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/FF Switch/led
+        payload: "default"
+        qos: 2
+        retain: true
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/Livingroom Switch/led
+        payload: "default"
+        qos: 2
+        retain: true
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/PVE Switch/led
+        payload: "default"
+        qos: 2
+        retain: true
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/Studio Switch/led
+        payload: "default"
+        qos: 2
+        retain: true
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/Study/led
+        payload: "default"
+        qos: 2
+        retain: true
+    - service: mqtt.publish
+      data:
+        topic: unifi/set/device/USG/led
+        payload: "default"
+        qos: 2
+        retain: true
