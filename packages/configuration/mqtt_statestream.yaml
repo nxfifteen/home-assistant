@@ -1,5 +1,22 @@
 ---
 mqtt_statestream:
-  base_topic: homeassistant
+  base_topic: hass/statestream/master
   publish_attributes: true
   publish_timestamps: true
+  exclude:
+    domains:
+      - automation
+      - calendar
+      - calendar
+      - climate
+      - device_tracker
+      - group
+      - light
+      - media_player
+      - persistent_notification
+      - person
+      - proximity
+      - remote
+      - script
+      - sun
+      - weather
