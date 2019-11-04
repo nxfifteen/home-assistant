@@ -1,0 +1,14 @@
+---
+alias: Family State 0
+
+trigger:
+  - entity_id: sensor.family_family_state_raw
+    platform: state
+    to: '1'
+    for:
+      hours: 3
+
+action:
+  - service: script.turn_on
+    data:
+      entity_id: script.family_state_0

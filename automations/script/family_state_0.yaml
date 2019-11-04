@@ -1,0 +1,30 @@
+---
+family_state_0:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: iot/scene/house
+        payload: "Vacation"
+        qos: 2
+        retain: true
+
+    - service: mqtt.publish
+      data:
+        topic: tracker/family/state/raw
+        payload: "0"
+        qos: 2
+        retain: true
+
+    - service: mqtt.publish
+      data:
+        topic: tracker/family/state
+        payload: "Vacation"
+        qos: 2
+        retain: true
+
+    - service: script.notify_join
+      data_template:
+        who: "stuart"
+        title: 'Jarvis'
+        notification_id: "hass-family"
+        value1: 'Family State Now in Vacation Mode'
