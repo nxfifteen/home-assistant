@@ -14,6 +14,7 @@ class VerticalStackInCard extends HTMLElement {
         this.style.borderRadius = "var(--ha-card-border-radius, 2px)";
         this.style.background = "var(--paper-card-background-color)";
         this.style.display = "block";
+        this.style.overflow = "hidden";
 
         const root = this.shadowRoot;
         while (root.hasChildNodes()) {
@@ -24,7 +25,7 @@ class VerticalStackInCard extends HTMLElement {
         if (config.title) {
             const title = document.createElement("div");
             title.className = "header";
-            title.style = "font-family: var(--paper-font-headline_-_font-family); -webkit-font-smoothing: var(--paper-font-headline_-_-webkit-font-smoothing); font-size: var(--paper-font-headline_-_font-size); font-weight: var(--paper-font-headline_-_font-weight); letter-spacing: var(--paper-font-headline_-_letter-spacing); line-height: var(--paper-font-headline_-_line-height);text-rendering: var(--paper-font-common-expensive-kerning_-_text-rendering);opacity: var(--dark-primary-opacity);padding: 24px 16px 0px 16px";
+            title.style = "font-family: var(--paper-font-headline_-_font-family); color: var(--paper-card-header-color); -webkit-font-smoothing: var(--paper-font-headline_-_-webkit-font-smoothing); font-size: var(--paper-font-headline_-_font-size); font-weight: var(--paper-font-headline_-_font-weight); letter-spacing: var(--paper-font-headline_-_letter-spacing); line-height: var(--paper-font-headline_-_line-height);text-rendering: var(--paper-font-common-expensive-kerning_-_text-rendering);opacity: var(--dark-primary-opacity);padding: 24px 16px 0px 16px";
             title.innerHTML = '<div class="name">' + config.title + '</div>';
             root.appendChild(title);
         }
@@ -148,11 +149,17 @@ class VerticalStackInCard extends HTMLElement {
                     this._card(searchEles[i]);
                 }
             } else {
-                element.shadowRoot.querySelector('ha-card').style.boxShadow = 'none';
+                let ele = element.shadowRoot.querySelector('ha-card')
+                ele.style.boxShadow = 'none';
+                ele.style.background = 'transparent';
+                ele.style.borderRadius = '0';
             }
         } else {
             if (typeof element.querySelector === 'function' && element.querySelector('ha-card')) {
-                element.querySelector('ha-card').style.boxShadow = 'none';
+                let ele = element.querySelector('ha-card')
+                ele.style.boxShadow = 'none';
+                ele.style.background = 'transparent';
+                ele.style.borderRadius = '0';
             }
             let searchEles = element.childNodes;
             for (let i = 0; i < searchEles.length; i++) {
