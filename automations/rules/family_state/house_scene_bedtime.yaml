@@ -9,6 +9,10 @@ trigger:
       seconds: 3
 
 action:
+  - service: script.turn_on
+    data:
+      entity_id: script.unifi_lights_off
+      
   - service: switch.turn_off
     data:
       entity_id: switch.gf_living_light_jar

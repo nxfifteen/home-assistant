@@ -13,9 +13,9 @@ condition:
   conditions:
     - condition: time
       after: '23:25:00'
-    - condition: state
+    - condition: numeric_state
       entity_id: sensor.family_family_state_raw
-      state: '1'
+      below: 2
 
 action:
   - delay: '00:{{ range(0,5) | random | int }}{{ range(0,9) | random | int }}:00'
