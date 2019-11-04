@@ -24,9 +24,6 @@ homeassistant:
     - type: legacy_api_password
       api_password: !secret http_password
 
-hacs:
-  token: !secret giltab_token_hacs
-
 system_health:
 
 # Example configuration.yaml entry
