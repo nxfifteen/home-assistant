@@ -20,13 +20,36 @@ cards:
         text: Power
       - sensor.ff_study_monitors_power_2
       - type: section
-      - sensor.monthly_ff_study_monitors
-      - sensor.weekly_ff_study_monitors
-      - type: section
+      - sensor.ff_study_monitors_cost_weekly
       - sensor.ff_study_monitors_cost
-      - type: section
-      - sensor.ff_study_monitors_last_month
-      - sensor.ff_study_monitors_last_week
+
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.ff_study_monitors_power_2
+    name: Monitors
+    height: 74
+    line_width: 2
+    font_size: 65
+    hours_to_show: 24
+    points_per_hour: 6
+    icon: mdi:desktop-tower-monitor
+    show:
+      icon: true
+      extrema: true
+      icon_adaptive_color: true
+    color_thresholds:
+        # High
+      - value: 75
+        color: "#e74c3c"
+        # In Use
+      - value: 45
+        color: "#ffa500"
+        # Stand By
+      - value: 5
+        color: "#3498db"
+        # Off
+      - value: -1
+        color: "#1db954"
 
   - type: entities
     show_header_toggle: false
@@ -123,34 +146,6 @@ cards:
     entities:
       - sensor.study_sterio_power
     name: Sterio
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 24
-    points_per_hour: 6
-    icon: mdi:power-socket-uk
-    show:
-      icon: true
-      extrema: true
-      icon_adaptive_color: true
-    color_thresholds:
-        # High
-      - value: 75
-        color: "#e74c3c"
-        # In Use
-      - value: 45
-        color: "#ffa500"
-        # Stand By
-      - value: 5
-        color: "#3498db"
-        # Off
-      - value: -1
-        color: "#1db954"
-
-  - type: custom:mini-graph-card
-    entities:
-      - sensor.ff_study_monitors_power_2
-    name: Monitors
     height: 74
     line_width: 2
     font_size: 65

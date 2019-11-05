@@ -1,5 +1,20 @@
 ---
+switch:
+  - platform: mqtt
+    name: ff_study_monitors_switch
+    state_topic: "zwave/20/37/1/0"
+    command_topic: "zwave/20/37/1/0/set"
+    payload_on: true
+    payload_off: false
+    qos: 0
+    retain: true
+
 sensor:
+- platform: mqtt
+  name: ff_study_monitors_power_2
+  state_topic: "zwave/20/50/1/8"
+  value_template: "{{ value_json.value }}"
+
 - platform: template
   sensors:
     ff_study_monitors_last_week:
@@ -20,6 +35,16 @@ sensor:
           £{{ (states.sensor.monthly_ff_study_monitors.state|float * 0.000242)|round(2) }}
         {% endif %}
 
+    ff_study_monitors_cost_weekly:
+      entity_id: sensor.weekly_ff_study_monitors
+      friendly_name: 'Monitor Cost'
+      value_template: >-
+        {% if (states.sensor.weekly_ff_study_monitors.state|float > 0) %}
+          £{{ (states.sensor.weekly_ff_study_monitors.state|float * 0.000242)|round(2) }}
+        {% elif (states.sensor.weekly_ff_study_monitors.state|float == 0) %}
+          £{{ (states.sensor.weekly_ff_study_monitors.state|float * 0.000242)|round(2) }}
+        {% endif %}
+
 utility_meter:
   weekly_ff_study_monitors:
     source: sensor.ff_study_monitors_power_2
@@ -33,12 +58,15 @@ homeassistant:
   customize:
     switch.ff_study_monitors_switch:
       friendly_name: My Monitors
+      icon: mdi:desktop-tower-monitor
 
     sensor.ff_study_monitors_colour:
       friendly_name: Monitors Colour
 
     sensor.ff_study_monitors_power_2:
       friendly_name: Monitors Watts
+      icon: mdi:flash
+      unit_of_measurement: W
 
     sensor.monthly_ff_study_monitors:
       friendly_name: Monitor Monthly Useage
@@ -49,5 +77,9 @@ homeassistant:
       icon: mdi:chart-multiline
 
     sensor.ff_study_monitors_cost:
-      friendly_name: Monitor Cost
+      friendly_name: Monthly Monitor Cost
+      icon: mdi:chart-areaspline
+
+    sensor.ff_study_monitors_cost_weekly:
+      friendly_name: Weekly Monitor Cost
       icon: mdi:chart-areaspline
