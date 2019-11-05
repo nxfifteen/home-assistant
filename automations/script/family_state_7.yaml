@@ -45,8 +45,32 @@ family_state_7:
       data:
         entity_id: script.unifi_lights_off
 
-    - service: script.turn_on
+    - service: switch.turn_off
       data:
-        entity_id: script.unifi_wifi_guest_off
+        entity_id: switch.unifi_wifi_guest
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.adguard_parental_control
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.adguard_safe_browsing
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.adguard_safe_search
+
+    - service: switch.turn_on
+      data:
+        entity_id: switch.adguard_filtering
+
+    - service: switch.turn_on
+      data:
+        entity_id: switch.adguard_protection
+
+    - service: switch.turn_on
+      data:
+        entity_id: switch.adguard_query_log
 
     - service: shell_command.shell_pve_start_107
