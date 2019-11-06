@@ -61,7 +61,7 @@ family_state_8:
       data:
         entity_id: switch.adguard_parental_control
 
-    - service: switch.turn_off
+    - service: switch.turn_on
       data:
         entity_id: switch.adguard_safe_browsing
 
