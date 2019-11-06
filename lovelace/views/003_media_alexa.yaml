@@ -60,3 +60,19 @@ cards:
       - type: 'custom:text-divider-row'
         text: Hallway
       - sensor.media_gf_hallway_alexa
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: DND
+      - switch.bedroom_do_not_disturb_switch
+      - switch.bedroom_fire_tv_stick_do_not_disturb_switch
+      - switch.downstairs_do_not_disturb_switch_2
+      - switch.hallway_do_not_disturb_switch
+      - switch.kitchen_do_not_disturb_switch
+      - switch.kitchen_fire_tv_stick_do_not_disturb_switch
+      - switch.livingroom_do_not_disturb_switch
+      - switch.livingroom_fire_tv_stick_do_not_disturb_switch
+      - switch.study_do_not_disturb_switch
+      - switch.upstairs_do_not_disturb_switch_2
