@@ -2,35 +2,43 @@
 sensor:
 - platform: mqtt
   name: "Occ Room Livingroom - Reason"
+  icon: mdi:exit-run
   state_topic: "iot/room/occupancy/livingroom/reason"
 
 - platform: mqtt
   name: "Occ Room Study - Reason"
+  icon: mdi:exit-run
   state_topic: "iot/room/occupancy/study/reason"
 
 - platform: mqtt
   name: "Occ Room Bedroom - Reason"
+  icon: mdi:exit-run
   state_topic: "iot/room/occupancy/bedroom/reason"
 
 - platform: mqtt
   name: "Occ Room Kitchen - Reason"
+  icon: mdi:exit-run
   state_topic: "iot/room/occupancy/kitchen/reason"
 
 - platform: mqtt
   name: "Occ Room Landing - Reason"
+  icon: mdi:exit-run
   state_topic: "iot/room/occupancy/landing/reason"
 
 - platform: mqtt
   name: "Occ Room Hallway - Reason"
+  icon: mdi:exit-run
   state_topic: "iot/room/occupancy/hallway/reason"
 
 - platform: mqtt
   name: "Occ Room Studio - Reason"
+  icon: mdi:exit-run
   state_topic: "iot/room/occupancy/studio/reason"
 
 switch:
 - platform: mqtt
   name: "Occ Room Livingroom"
+  icon: mdi:exit-run
   command_topic: "iot/room/occupancy/livingroom"
   state_topic: "iot/room/occupancy/livingroom"
   payload_on: "ON"
@@ -40,6 +48,7 @@ switch:
 
 - platform: mqtt
   name: "Occ Room Study"
+  icon: mdi:exit-run
   command_topic: "iot/room/occupancy/study"
   state_topic: "iot/room/occupancy/study"
   payload_on: "ON"
@@ -49,6 +58,7 @@ switch:
 
 - platform: mqtt
   name: "Occ Room Bedroom"
+  icon: mdi:exit-run
   command_topic: "iot/room/occupancy/bedroom"
   state_topic: "iot/room/occupancy/bedroom"
   payload_on: "ON"
@@ -58,6 +68,7 @@ switch:
 
 - platform: mqtt
   name: "Occ Room Kitchen"
+  icon: mdi:exit-run
   command_topic: "iot/room/occupancy/kitchen"
   state_topic: "iot/room/occupancy/kitchen"
   payload_on: "ON"
@@ -67,6 +78,7 @@ switch:
 
 - platform: mqtt
   name: "Occ Room Landing"
+  icon: mdi:exit-run
   command_topic: "iot/room/occupancy/landing"
   state_topic: "iot/room/occupancy/landing"
   payload_on: "ON"
@@ -76,6 +88,7 @@ switch:
 
 - platform: mqtt
   name: "Occ Room Hallway"
+  icon: mdi:exit-run
   command_topic: "iot/room/occupancy/hallway"
   state_topic: "iot/room/occupancy/hallway"
   payload_on: "ON"
@@ -85,6 +98,7 @@ switch:
 
 - platform: mqtt
   name: "Occ Room Studio"
+  icon: mdi:exit-run
   command_topic: "iot/room/occupancy/studio"
   state_topic: "iot/room/occupancy/studio"
   payload_on: "ON"

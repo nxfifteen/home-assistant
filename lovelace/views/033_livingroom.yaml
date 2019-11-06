@@ -105,6 +105,7 @@ cards:
     entities:
       - sensor.gf_living_tv_power_2
     name: TV
+    icon: mdi:television-classic
     height: 74
     line_width: 2
     font_size: 65

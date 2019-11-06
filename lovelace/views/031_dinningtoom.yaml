@@ -46,7 +46,7 @@ cards:
     line_width: 2
     font_size: 65
     hours_to_show: 24
-    icon: mdi:coffee-outline
+    icon: mdi:television-classic
     show:
       icon: true
       extrema: true
