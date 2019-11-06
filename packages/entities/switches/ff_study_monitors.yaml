@@ -4,6 +4,8 @@ switch:
     name: ff_study_monitors_switch
     state_topic: "zwave/20/37/1/0"
     command_topic: "zwave/20/37/1/0/set"
+    state_on: true
+    state_off: false
     payload_on: true
     payload_off: false
     qos: 0
