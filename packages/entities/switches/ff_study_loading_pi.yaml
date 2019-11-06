@@ -1,8 +1,30 @@
 ---
+switch:
+  - platform: mqtt
+    name: ff_study_loading_pi_switch
+    state_topic: "zwave/7/37/1/0"
+    command_topic: "zwave/7/37/1/0/set"
+    value_template: "{{ value_json.value }}"
+    state_on: true
+    state_off: false
+    payload_on: true
+    payload_off: false
+    qos: 0
+    retain: true
+
+sensor:
+- platform: mqtt
+  name: ff_study_loading_pi_power_2
+  state_topic: "zwave/7/50/1/8"
+  value_template: "{{ value_json.value }}"
+
 homeassistant:
   customize:
     switch.ff_study_loading_pi_switch:
       friendly_name: Loading Station
       icon: mdi:camera-party-mode
+      
     sensor.ff_study_loading_pi_power_2:
       friendly_name: Loading Station Watts
+      icon: mdi:flash
+      unit_of_measurement: W
