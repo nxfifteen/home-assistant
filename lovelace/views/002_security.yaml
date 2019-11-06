@@ -47,6 +47,16 @@ cards:
     - binary_sensor.gf_kitchen_side_contact_contact
     - binary_sensor.gf_studio_contact_contact
 
+  - type: entities
+    title: ZWave Batteries
+    show_header_toggle: false
+    entities:
+    - sensor.ff_landing_sensor_battery
+    - sensor.ff_bedroom_sensor_battery
+    - sensor.ff_study_sensor_battery
+    - sensor.gf_dinning_sensor_battery
+    - sensor.gf_living_sensor_battery
+
   #################################################################
   #                                                               #
   #                  Security - Smoke Alarm Card                  #
