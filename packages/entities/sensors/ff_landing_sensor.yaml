@@ -30,4 +30,4 @@ homeassistant:
     sensor.ff_landing_sensor_contact:
       friendly_name: Landing
     sensor.ff_landing_sensor_battery:
-      friendly_name: PIR Battery
+      friendly_name: Landing PIR

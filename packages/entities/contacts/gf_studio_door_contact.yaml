@@ -22,4 +22,4 @@ homeassistant:
       friendly_name: Studio Door
 
     binary_sensor.gf_studio_door_contact_battery:
-      friendly_name: Studio Door Battery
+      friendly_name: Studio Door Contact

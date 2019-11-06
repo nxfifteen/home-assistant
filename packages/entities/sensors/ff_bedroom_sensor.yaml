@@ -50,7 +50,7 @@ binary_sensor:
 homeassistant:
   customize:
     sensor.ff_bedroom_sensor_battery:
-      friendly_name: PIR Battery
+      friendly_name: Bedroom PIR
     sensor.ff_bedroom_sensor_illuminance:
       friendly_name: Illuminance
     binary_sensor.ff_bedroom_sensor_sensor:
