@@ -1,0 +1,103 @@
+---
+sensor:
+- platform: template
+  sensors:
+    health_hers_steps:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.steps }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Steps'
+      unit_of_measurement: 'steps'
+
+    health_hers_floors:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.floors }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Floors'
+      unit_of_measurement: 'floors'
+      
+    health_hers_water:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.water }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Water'
+      unit_of_measurement: 'ml'
+      
+    health_hers_weight_loss:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.weight_loss }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Weight Loss'
+      unit_of_measurement: 'kg'
+      
+    health_hers_weight:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.weight }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Weight'
+      unit_of_measurement: 'kg'
+      
+    health_hers_fat:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.fat }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Body Fat'
+      unit_of_measurement: '%'
+      
+    health_hers_bmi:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.bmi }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'BMI'
+      
+    health_hers_distance:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.distance }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Distance'
+      unit_of_measurement: 'km'
+      
+    health_hers_calories:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.calories }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Calories'
+      unit_of_measurement: 'cals'
+      
+    health_hers_minutes_active:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.minutes_active }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Minutes Active'
+      unit_of_measurement: 'min'
+      
+    health_hers_resting_heart_rate:
+      value_template: "{{ states.sensor.core_fit_kareen_ad.attributes.resting_heart_rate }}"
+      entity_id: sensor.core_fit_kareen_ad
+      friendly_name: 'Resting Heart Rate'
+      unit_of_measurement: 'bpm'
+  
+homeassistant:
+  customize:
+    sensor.health_hers_steps:
+      icon: mdi:paw
+
+    sensor.health_hers_floors:
+      icon: mdi:arrow-top-right
+      
+    sensor.health_hers_water:
+      icon: mdi:cup-water
+      
+    sensor.health_hers_weight_loss:
+      icon: mdi:weight-kilogram
+      
+    sensor.health_hers_weight:
+      icon: mdi:weight-kilogram
+      
+    sensor.health_hers_fat:
+      icon: mdi:percent
+      
+    sensor.health_hers_bmi:
+      icon: mdi:periodic-table
+      
+    sensor.health_hers_distance:
+      icon: mdi:trending-neutral
+      
+    sensor.health_hers_calories:
+      icon: mdi:food
+      
+    sensor.health_hers_minutes_active:
+      icon: mdi:football
+      
+    sensor.health_hers_resting_heart_rate:
+      icon: mdi:heart-pulse
