@@ -75,6 +75,8 @@ cards:
       - switch.ff_study_loading_pi_switch
       - type: section
       - switch.wh_seasonal_one
+      - type: section
+      - switch.wol_his_computer
 
   - type: vertical-stack
     cards:

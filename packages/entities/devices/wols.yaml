@@ -1,0 +1,9 @@
+---
+switch:
+  - platform: wake_on_lan
+    name: wol_his_computer
+    mac_address: "54-04-A6-D9-59-92"
+    
+  - platform: wake_on_lan
+    name: wol_media_computer
+    mac_address: "10-7b-44-7c-43-54"

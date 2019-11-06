@@ -9,10 +9,6 @@ input_select:
     initial: None
     icon: mdi:desktop-tower
 
-switch:
-  - platform: wake_on_lan
-    mac_address: "54-04-A6-D9-59-92"
-
 shell_command:
   lock_his_pc: !secret lock_his_pc
   hibernate_his_pc: !secret hibernate_his_pc

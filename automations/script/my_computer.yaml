@@ -4,7 +4,7 @@ my_computer:
   sequence:
     - service: switch.turn_on
       data:
-        entity_id: switch.wake_on_lan
+        entity_id: switch.wol_his_computer
 
     - service: switch.turn_on
       data:

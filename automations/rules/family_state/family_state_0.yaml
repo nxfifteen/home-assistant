@@ -6,7 +6,7 @@ trigger:
     platform: state
     to: '1'
     for:
-      hours: 3
+      hours: 1
 
 action:
   - service: script.turn_on
