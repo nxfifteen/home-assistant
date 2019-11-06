@@ -21,5 +21,5 @@ homeassistant:
     binary_sensor.gf_dinning_door_double_contact:
       friendly_name: Dinning Room Double Door
 
-    binary_sensor.gf_dinning_door_double_contact_battery:
+    sensor.gf_dinning_door_double_contact_battery:
       friendly_name: Dinning Room Double Door Contact
