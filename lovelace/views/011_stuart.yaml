@@ -15,8 +15,6 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - entity: device_tracker.stuart_presence
-            name: Presence
           - entity: sensor.family_stuart_state_human
             name: State
           - entity: sensor.family_stuart_loc_room

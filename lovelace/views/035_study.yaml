@@ -176,3 +176,5 @@ cards:
     entities:
       - entity: sensor.ff_study_sensor_battery
         name: Study Sensor
+      - entity: sensor.ff_landing_sensor_battery
+        name: Landing Sensor
