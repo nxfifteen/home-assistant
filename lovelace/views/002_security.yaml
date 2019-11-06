@@ -42,10 +42,10 @@ cards:
     title: ZWave Contacts
     show_header_toggle: false
     entities:
-    - binary_sensor.gf_dinning_contact_side_contact
-    - binary_sensor.gf_dinning_door_contact_contact
-    - binary_sensor.gf_kitchen_side_contact_contact
-    - binary_sensor.gf_studio_contact_contact
+    - binary_sensor.gf_dinning_door_side_contact
+    - binary_sensor.gf_dinning_door_double_contact
+    - binary_sensor.gf_front_door_contact_contact
+    - binary_sensor.gf_studio_door_contact_contact
 
   - type: entities
     title: ZWave Batteries
@@ -56,6 +56,10 @@ cards:
     - sensor.ff_study_sensor_battery
     - sensor.gf_dinning_sensor_battery
     - sensor.gf_living_sensor_battery
+    - sensor.gf_dinning_door_side_contact_battery
+    - sensor.gf_dinning_door_double_contact_battery
+    - sensor.gf_front_door_contact_contact_battery
+    - sensor.gf_studio_door_contact_contact_battery
 
   #################################################################
   #                                                               #

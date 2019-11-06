@@ -1,5 +1,5 @@
 ---
 homeassistant:
   customize:
-    binary_sensor.gf_dinning_door_contact_contact:
+    binary_sensor.gf_dinning_door_side_contact:
       friendly_name: Side Door
