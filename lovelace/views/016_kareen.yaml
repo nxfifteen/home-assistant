@@ -86,3 +86,211 @@ cards:
         text: Tiles
       - entity: device_tracker.tile_8cd8c4ede6ff52b8
         name: Keys
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Fitness
+      - entity: sensor.health_hers_weight
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.health_hers_weight_loss.state ]] kg Lost | [[ sensor.health_hers_fat.state ]] % Fat | [[ sensor.health_hers_bmi.state ]] BMI"
+      - entity: sensor.health_hers_steps
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.health_hers_distance.state ]] km"
+      - sensor.health_hers_floors
+      - sensor.health_hers_water
+      - sensor.health_hers_calories
+      - entity: sensor.health_hers_minutes_active
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "Resting Heart Rate [[ sensor.health_hers_resting_heart_rate.state ]] bpm"
+
+  - type: picture-elements
+    image: /local/images/core_fit_1.png
+    elements:
+    - type: custom:circle-sensor-card
+      entity: sensor.health_hers_weight_loss
+      max: 100
+      min: 0
+      stroke_width: 15
+      gradient: true
+      fill: '#125054'
+      name: loss
+      units: ' '
+      font_style:
+        font-size: 1.1em
+        color: white
+        text-shadow: '2px 2px black'
+      style:
+        top: 5%
+        left: 80%
+        width: 4em
+        height: 4em
+        transform: none
+    - type: custom:circle-sensor-card
+      entity: sensor.health_hers_steps
+      max: 10000
+      min: 0
+      stroke_width: 15
+      gradient: true
+      fill: '#125054'
+      name: steps
+      units: ' '
+      font_style:
+        font-size: 1.1em
+        color: white
+        text-shadow: '2px 2px black'
+      color_stops:
+        1: '#09C7E8'
+        10000: '#0BDF0E'
+      style:
+        top: 70%
+        left: 5%
+        width: 4em
+        height: 4em
+        transform: none
+    - type: custom:circle-sensor-card
+      entity: sensor.health_hers_floors
+      max: 10
+      min: 0
+      stroke_width: 15
+      gradient: true
+      fill: '#125054'
+      name: floors
+      units: ' '
+      font_style:
+        font-size: 1.1em
+        color: white
+        text-shadow: '2px 2px black'
+      color_stops:
+        1: '#09C7E8'
+        10: '#0BDF0E'
+      style:
+        top: 70%
+        left: 24%
+        width: 4em
+        height: 4em
+        transform: none
+    - type: custom:circle-sensor-card
+      entity: sensor.health_hers_distance
+      max: 10
+      min: 0
+      stroke_width: 15
+      gradient: true
+      fill: '#125054'
+      name: miles
+      units: ' '
+      font_style:
+        font-size: 1.1em
+        color: white
+        text-shadow: '2px 2px black'
+      color_stops:
+        1: '#09C7E8'
+        10: '#0BDF0E'
+      style:
+        top: 70%
+        left: 43%
+        width: 4em
+        height: 4em
+        transform: none
+    - type: custom:circle-sensor-card
+      entity: sensor.health_hers_calories
+      max: 3000
+      min: 0
+      stroke_width: 15
+      gradient: true
+      fill: '#125054'
+      name: cals
+      shadow: true
+      units: ' '
+      font_style:
+        font-size: 1.1em
+        color: white
+        text-shadow: '2px 2px black'
+      color_stops:
+        1: '#09C7E8'
+        3000: '#0BDF0E'
+      style:
+        top: 70%
+        left: 62%
+        width: 4em
+        height: 4em
+        transform: none
+    - type: custom:circle-sensor-card
+      entity: sensor.health_hers_minutes_active
+      max: 30
+      min: 0
+      stroke_width: 15
+      gradient: true
+      fill: '#125054'
+      name: active
+      units: ' '
+      font_style:
+        font-size: 1.1em
+        color: white
+        text-shadow: '2px 2px black'
+      color_stops:
+        1: '#09C7E8'
+        30: '#0BDF0E'
+      style:
+        top: 70%
+        left: 80%
+        width: 4em
+        height: 4em
+        transform: none
+    - type: state-icon
+      entity: sensor.health_hers_weight
+      title: Weight
+      style:
+        left: 3%
+        top: 7%
+        "--iron-icon-fill-color": '#FFFFFF'
+        transform: none
+    - type: state-label
+      entity: sensor.health_hers_weight
+      title: Weight
+      style:
+        left: 12%
+        top: 8%
+        color: white
+        transform: none
+    - type: state-icon
+      entity: sensor.health_hers_bmi
+      title: BMI
+      style:
+        left: 31%
+        top: 7%
+        "--iron-icon-fill-color": '#FFFFFF'
+        transform: none
+    - type: state-label
+      entity: sensor.health_hers_bmi
+      title: BMI
+      style:
+        left: 40%
+        top: 8%
+        color: white
+        transform: none
+    - type: state-icon
+      entity: sensor.health_hers_fat
+      title: Body Fat
+      style:
+        left: 59%
+        top: 7%
+        "--iron-icon-fill-color": '#FFFFFF'
+        transform: none
+    - type: state-label
+      entity: sensor.health_hers_fat
+      title: Body Fat
+      style:
+        left: 67%
+        top: 8%
+        color: white
+        transform: none
+    - type: state-icon
+      entity: sensor.health_hers_resting_heart_rate
+      title: Resting HR
+      style:
+        left: 3%
+        top: 21%
+        "--iron-icon-fill-color": red
+        transform: none
+    - type: state-label
