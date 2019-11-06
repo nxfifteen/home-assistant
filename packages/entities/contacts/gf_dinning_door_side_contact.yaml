@@ -2,4 +2,7 @@
 homeassistant:
   customize:
     binary_sensor.gf_dinning_door_side_contact:
-      friendly_name: Side Door
+      friendly_name: Dinning Room Side Door
+
+    sensor.gf_dinning_door_side_contact_battery:
+      friendly_name: Dinning Room Side Door Contact

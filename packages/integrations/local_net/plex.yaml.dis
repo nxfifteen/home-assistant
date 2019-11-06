@@ -1,6 +1,0 @@
----
-sensor:
-- platform: plex
-  host: !secret plex_server_host
-  name: !secret plex_server_name
-  token: !secret plex_server_token

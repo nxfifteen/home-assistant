@@ -50,7 +50,7 @@ binary_sensor:
 homeassistant:
   customize:
     sensor.gf_dinning_sensor_battery:
-      friendly_name: PIR Battery
+      friendly_name: Dinning Room PIR
     sensor.gf_dinning_sensor_illuminance:
       friendly_name: Illuminance
     binary_sensor.gf_dinning_sensor_sensor:

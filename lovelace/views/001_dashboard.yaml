@@ -104,7 +104,7 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - entity: device_tracker.stuart_presence
+          - entity: sensor.family_stuart_state_human
             name: Stuart
           - type: section
           - entity: sensor.family_stuart_loc_room
@@ -120,7 +120,7 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - entity: device_tracker.kareen_presence
+          - entity: sensor.family_kareen_state_human
             name: Kareen
           - type: section
           - entity: sensor.family_kareen_loc_room
