@@ -294,3 +294,10 @@ cards:
         "--iron-icon-fill-color": red
         transform: none
     - type: state-label
+      entity: sensor.health_hers_resting_heart_rate
+      title: Resting HR
+      style:
+        left: 12%
+        top: 22%
+        color: white
+        transform: none

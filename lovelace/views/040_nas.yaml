@@ -25,6 +25,7 @@ cards:
       - type: custom:mini-graph-card
         entities:
           - sensor.speedtest_download
+        icon: mdi:cloud-download
         height: 50
         line_width: 2
         font_size: 70
@@ -42,6 +43,7 @@ cards:
       - type: custom:mini-graph-card
         entities:
           - sensor.speedtest_upload
+        icon: mdi:cloud-upload
         height: 50
         line_width: 2
         font_size: 70
@@ -155,7 +157,9 @@ cards:
                 title: Disk
                 icon: mdi:harddisk
 
-          - sensor.synology_dsm_status_volume_1
+          - entity: sensor.synology_dsm_status_volume_1
+            name: Volume 1 Status
+            icon: mdi:harddisk
 
   - type: vertical-stack
     cards:
@@ -205,7 +209,9 @@ cards:
                 title: Disk
                 icon: mdi:harddisk
 
-          - sensor.synology_dsm_status_volume_2
+          - entity: sensor.synology_dsm_status_volume_2
+            name: Volume 2 Status
+            icon: mdi:harddisk
 
   - type: vertical-stack
     cards:
@@ -255,7 +261,9 @@ cards:
                 title: Disk
                 icon: mdi:harddisk
 
-          - sensor.synology_dsm_status_volume_3
+          - entity: sensor.synology_dsm_status_volume_3
+            name: Volume 3 Status
+            icon: mdi:harddisk
 
   - type: vertical-stack
     cards:

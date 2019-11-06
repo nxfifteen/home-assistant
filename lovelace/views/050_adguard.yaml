@@ -51,10 +51,14 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Connected Devices
-      - sensor.unifi_client_count
-      - sensor.unifi_client_count_lan
-      - sensor.unifi_client_count_guest
-      - sensor.unifi_client_count_iot
+      - entity: sensor.unifi_client_count
+        icon: mdi:desktop-tower-monitor
+      - entity: sensor.unifi_client_count_lan
+        icon: mdi:wifi-strength-4-lock
+      - entity: sensor.unifi_client_count_guest
+        icon: mdi:wifi-strength-4
+      - entity: sensor.unifi_client_count_iot
+        icon: mdi:wifi-star
 
   - type: entities
     show_header_toggle: off

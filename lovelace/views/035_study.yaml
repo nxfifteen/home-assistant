@@ -69,14 +69,11 @@ cards:
         text: Plugs
       - script.my_computer
       - switch.ff_study_monitors_switch
+      - switch.wol_his_computer
       - type: section
       - switch.ff_study_sterio_switch
       - type: section
       - switch.ff_study_loading_pi_switch
-      - type: section
-      - switch.wh_seasonal_one
-      - type: section
-      - switch.wol_his_computer
 
   - type: vertical-stack
     cards:

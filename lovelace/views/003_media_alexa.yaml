@@ -22,6 +22,9 @@ cards:
       - sensor.media_ff_study_plex_alexa
       - type: section
       - sensor.media_ff_study_plex_video
+      - type: section
+      - entity: switch.study_do_not_disturb_switch
+        name: Alexa - DND
 
   - type: entities
     show_header_toggle: false
@@ -32,6 +35,9 @@ cards:
       - sensor.media_ff_bedroom_plex_audio
       - type: section
       - sensor.media_ff_bedroom_fire_tv
+      - type: section
+      - entity: switch.bedroom_do_not_disturb_switch
+        name: Alexa - DND
 
   - type: entities
     show_header_toggle: false
@@ -42,6 +48,9 @@ cards:
       - type: section
       - sensor.media_gf_kitchen_fire_tv
       - sensor.media_gf_kitchen_plex_fire
+      - type: section
+      - entity: switch.kitchen_do_not_disturb_switch
+        name: Alexa - DND
 
   - type: entities
     show_header_toggle: false
@@ -53,6 +62,9 @@ cards:
       - type: section
       - sensor.media_gf_livingroom_fire_tv
       - sensor.media_gf_livingroom_plex_fire
+      - type: section
+      - entity: switch.livingroom_do_not_disturb_switch
+        name: Alexa - DND
 
   - type: entities
     show_header_toggle: false
@@ -60,19 +72,6 @@ cards:
       - type: 'custom:text-divider-row'
         text: Hallway
       - sensor.media_gf_hallway_alexa
-
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: DND
-      - switch.bedroom_do_not_disturb_switch
-      - switch.bedroom_fire_tv_stick_do_not_disturb_switch
-      - switch.downstairs_do_not_disturb_switch_2
-      - switch.hallway_do_not_disturb_switch
-      - switch.kitchen_do_not_disturb_switch
-      - switch.kitchen_fire_tv_stick_do_not_disturb_switch
-      - switch.livingroom_do_not_disturb_switch
-      - switch.livingroom_fire_tv_stick_do_not_disturb_switch
-      - switch.study_do_not_disturb_switch
-      - switch.upstairs_do_not_disturb_switch_2
+      - type: section
+      - entity: switch.hallway_do_not_disturb_switch
+        name: Alexa - DND
