@@ -116,7 +116,7 @@ cards:
 
   - type: custom:mini-graph-card
     entities:
-      - sensor.ff_study_loading_pi_power_2
+      - sensor.ff_study_loading_pi_power
     name: Loading Station
     height: 74
     line_width: 2
