@@ -171,7 +171,7 @@ cards:
         height: 46
         line_width: 2
         font_size: 65
-        hours_to_show: 36
+        hours_to_show: 24
         points_per_hour: 4
         show:
           icon: true
@@ -196,7 +196,7 @@ cards:
             height: 74
             line_width: 2
             font_size: 65
-            hours_to_show: 36
+            hours_to_show: 24
             points_per_hour: 2
             show:
               icon: true
@@ -219,7 +219,7 @@ cards:
             height: 74
             line_width: 2
             font_size: 65
-            hours_to_show: 36
+            hours_to_show: 24
             points_per_hour: 2
             show:
               icon: true
@@ -244,7 +244,7 @@ cards:
             height: 74
             line_width: 2
             font_size: 65
-            hours_to_show: 36
+            hours_to_show: 24
             points_per_hour: 2
             show:
               icon: true
@@ -267,7 +267,7 @@ cards:
             height: 74
             line_width: 2
             font_size: 65
-            hours_to_show: 36
+            hours_to_show: 24
             points_per_hour: 2
             show:
               icon: true
