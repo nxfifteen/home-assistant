@@ -34,5 +34,3 @@ discovery:
   enable:
     - belkin_wemo
     - plex_mediaserver
-
-readme:
