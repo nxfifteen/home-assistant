@@ -65,7 +65,7 @@ alexa:
       - switch.occ_room_hallway
       - switch.occ_room_landing
       - switch.occ_room_kitchen
-      - switch.wake_on_lan
+      - switch.wol_his_computer
       - switch.remote_gf_livingroom_watch_tv
       - switch.remote_gf_livingroom_watch_fire_tv
       - switch.gf_living_tv_switch

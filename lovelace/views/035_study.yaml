@@ -76,7 +76,7 @@ cards:
       - type: section
       - switch.wh_seasonal_one
       - type: section
-      - switch.wake_on_lan
+      - switch.wol_his_computer
 
   - type: vertical-stack
     cards:
