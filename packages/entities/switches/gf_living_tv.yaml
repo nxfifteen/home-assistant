@@ -1,5 +1,23 @@
 ---
+switch:
+  - platform: mqtt
+    name: gf_living_tv_switch
+    state_topic: "zwave/13/37/1/0"
+    command_topic: "zwave/13/37/1/0/set"
+    value_template: "{{ value_json.value }}"
+    state_on: true
+    state_off: false
+    payload_on: true
+    payload_off: false
+    qos: 0
+    retain: true
+
 sensor:
+- platform: mqtt
+  name: gf_living_tv_power_2
+  state_topic: "zwave/13/50/1/8"
+  value_template: "{{ value_json.value }}"
+
 - platform: template
   sensors:
     gf_living_tv_last_week:

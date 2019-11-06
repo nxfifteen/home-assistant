@@ -1,5 +1,43 @@
 ---
+sensor:
+- platform: mqtt
+  name: gf_living_sensor_battery
+  state_topic: "zwave/3/128/1/0"
+  value_template: "{{ value_json.value }}"
+  device_class: "battery"
+  unit_of_measurement: "%"
+  
+- platform: mqtt
+  name: gf_living_sensor_illuminance
+  state_topic: "zwave/3/49/1/3"
+  value_template: "{{ value_json.value }}"
+  device_class: "illuminance"
+  unit_of_measurement: "lux"
+  
+- platform: mqtt
+  name: gf_living_sensor_temperature
+  state_topic: "zwave/3/49/1/1"
+  value_template: "{{ value_json.value }}"
+  device_class: "temperature"
+  unit_of_measurement: "C"
+
 binary_sensor:
+- platform: mqtt
+  name: gf_living_sensor_contact
+  state_topic: "zwave/3/48/1/0"
+  value_template: "{{ value_json.value }}"
+  payload_on: true
+  payload_off: false
+  device_class: "motion"
+  
+- platform: mqtt
+  name: gf_living_sensor_tamper
+  state_topic: "zwave/3/156/1/0"
+  value_template: "{{ value_json.value }}"
+  payload_on: true
+  payload_off: false
+  device_class: "problem"
+
 - platform: template
   sensors:
     motion_gf_living:
