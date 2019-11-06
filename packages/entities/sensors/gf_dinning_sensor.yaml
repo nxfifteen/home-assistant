@@ -49,10 +49,6 @@ binary_sensor:
 
 homeassistant:
   customize:
-    sensor.gf_dinning_contact_battery:
-      friendly_name: PIR Battery
-    sensor.gf_dinning_contact_side_contact:
-      friendly_name: Side Door
     sensor.gf_dinning_sensor_battery:
       friendly_name: PIR Battery
     sensor.gf_dinning_sensor_illuminance:
