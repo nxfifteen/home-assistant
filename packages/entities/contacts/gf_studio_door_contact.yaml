@@ -9,16 +9,16 @@ sensor:
 
 binary_sensor:
 - platform: mqtt
-  name: gf_studio_door_contact_contact
+  name: gf_studio_door_contact
   state_topic: "zwave/26/113/1/9"
   value_template: "{{ value_json.value }}"
-  payload_on: 23
-  payload_off: 22
+  payload_on: 22
+  payload_off: 23
   device_class: "door"
 
 homeassistant:
   customize:
-    binary_sensor.gf_studio_door_contact_contact:
+    binary_sensor.gf_studio_door_contact:
       friendly_name: Studio Door
 
     binary_sensor.gf_studio_door_contact_battery:

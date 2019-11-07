@@ -1,7 +1,7 @@
 ---
 sensor:
 - platform: mqtt
-  name: gf_front_door_contact_contact
+  name: gf_front_door_contact_battery
   state_topic: "zwave/19/128/1/0"
   value_template: "{{ value_json.value }}"
   device_class: "battery"
@@ -9,7 +9,7 @@ sensor:
 
 binary_sensor:
 - platform: mqtt
-  name: gf_front_door_contact_contact_battery
+  name: gf_front_door_contact
   state_topic: "zwave/19/48/1/0"
   value_template: "{{ value_json.value }}"
   payload_on: true
@@ -18,8 +18,8 @@ binary_sensor:
 
 homeassistant:
   customize:
-    binary_sensor.gf_front_door_contact_contact:
+    binary_sensor.gf_front_door_contact:
       friendly_name: Front Door
       
-    sensor.gf_front_door_contact_contact_battery:
+    sensor.gf_front_door_contact_battery:
       friendly_name: Front Door Contact
