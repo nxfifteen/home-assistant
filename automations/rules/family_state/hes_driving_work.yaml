@@ -18,4 +18,4 @@ action:
     who: "stuart"
     title: 'His Driving Alerts'
     notification_id: "driving-alert-he"
-    value1: !include ../../entities/templates/driving_hes.yaml
+    value1: !include ../../../entities/templates/driving_hes.yaml
