@@ -2,7 +2,7 @@
 sensor:
 - platform: mqtt
   name: gf_dinning_door_double_contact_battery
-  state_topic: "zwave/26/128/1/0"
+  state_topic: "zwave/27/128/1/0"
   value_template: "{{ value_json.value }}"
   device_class: "battery"
   unit_of_measurement: "%"
@@ -10,10 +10,10 @@ sensor:
 binary_sensor:
 - platform: mqtt
   name: gf_dinning_door_double_contact
-  state_topic: "zwave/26/48/1/0"
+  state_topic: "zwave/27/113/1/9"
   value_template: "{{ value_json.value }}"
-  payload_on: true
-  payload_off: false
+  payload_on: 22
+  payload_off: 23
   device_class: "door"
 
 homeassistant:
