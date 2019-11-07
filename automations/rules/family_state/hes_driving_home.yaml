@@ -5,8 +5,8 @@ trigger:
     entity_id: sensor.family_stuart_drive_eta
 
 condition:
-  - entity_id: sensor.family_stuart_drive_dest
-    platform: state
+  - condition: state
+    entity_id: sensor.family_stuart_drive_dest
     state: 'Home'
 
 action:
