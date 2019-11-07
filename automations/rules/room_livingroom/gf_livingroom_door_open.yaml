@@ -1,0 +1,30 @@
+---
+alias: Livingroom Door Shut at Night
+
+trigger:
+- platform: state
+  entity_id: binary_sensor.gf_living_door_contact
+  from: 'on'
+  to: 'off'
+
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: sensor.house_scene
+      state: 'Going To Bed'
+
+action:
+  - service: light.turn_off
+    data:
+      entity_id: light.gf_studio_celing
+
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_living_celing
+      brightness: 1
+
+  - service: light.turn_on
+    data:
+      entity_id: light.gf_hallway_celing
+      brightness: 10
