@@ -89,6 +89,7 @@ cards:
         text: House
       - sensor.family_family_state
       - sensor.family_family_state_raw
+      - switch.family_family_vacation
       - sensor.house_scene
       - sensor.light_scene
       - type: section
