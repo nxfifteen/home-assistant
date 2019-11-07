@@ -16,6 +16,10 @@ family_state_4_5_6:
       data:
         away_mode: home
 
+    - service: switch.turn_off
+      data:
+        entity_id: switch.family_family_vacation
+
     - service: script.turn_on
       data:
         entity_id: script.unifi_lights_on

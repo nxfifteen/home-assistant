@@ -1,4 +1,16 @@
 ---
+switch:
+  - platform: mqtt
+    name: family_family_vacation
+    state_topic: "tracker/family/state/vacation"
+    command_topic: "tracker/family/state/vacation"
+    state_on: true
+    state_off: false
+    payload_on: true
+    payload_off: false
+    qos: 0
+    retain: true
+
 sensor:
 - platform: mqtt
   name: family_family_state_raw
@@ -28,6 +40,10 @@ input_select:
 
 homeassistant:
   customize:
+    switch.family_family_vacation:
+      friendly_name: "Family Vacation"
+      icon: mdi:emoticon-cool-outline
+
     sensor.family_family_state:
       friendly_name: "Family State"
 
