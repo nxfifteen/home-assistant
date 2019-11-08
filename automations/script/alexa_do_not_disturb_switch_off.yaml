@@ -1,0 +1,23 @@
+---
+alexa_do_not_disturb_switch_off:
+  alias: Alexa DND - OFF
+  sequence:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.kitchen_do_not_disturb_switch
+        
+    - service: switch.turn_off
+      data:
+        entity_id: switch.livingroom_do_not_disturb_switch
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.hallway_do_not_disturb_switch
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.bedroom_do_not_disturb_switch
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.study_do_not_disturb_switch
