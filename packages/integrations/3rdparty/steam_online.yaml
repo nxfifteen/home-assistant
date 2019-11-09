@@ -4,3 +4,9 @@ sensor:
   api_key: !secret steam_api
   accounts:
     - !secret steam_user
+
+sensor:
+  - platform: template
+    sensors:
+      steam_hes_playing:
+        value_template: "{% if not states.sensor.steam_76561197982696593.attributes.game %}None{% else %}{{ states.sensor.steam_76561197982696593.attributes.game }}{% endif %}"
