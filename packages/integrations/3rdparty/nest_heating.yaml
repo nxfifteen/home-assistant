@@ -1,0 +1,6 @@
+---
+sensor:
+  - platform: template
+    sensors:
+      heating_set_to:
+        value_template: "{{ states.climate.hallway.attributes.temperature }}"
