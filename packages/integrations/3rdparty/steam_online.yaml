@@ -1,11 +1,10 @@
 ---
 sensor:
-- platform: steam_online
-  api_key: !secret steam_api
-  accounts:
-    - !secret steam_user
+  - platform: steam_online
+    api_key: !secret steam_api
+    accounts:
+      - !secret steam_user
 
-sensor:
   - platform: template
     sensors:
       steam_hes_playing:
