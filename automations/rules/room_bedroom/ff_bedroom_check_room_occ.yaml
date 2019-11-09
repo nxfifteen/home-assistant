@@ -21,6 +21,12 @@ trigger:
   entity_id: sensor.media_ff_bedroom_plex_audio
 
 - platform: state
+  entity_id: sensor.media_ff_bedroom_plex_alexa
+
+- platform: state
+  entity_id: sensor.media_ff_bedroom_plex_fire
+
+- platform: state
   entity_id: switch.ff_bedroom_tv_switch
 
 - platform: state
