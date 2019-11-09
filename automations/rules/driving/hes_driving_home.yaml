@@ -1,21 +1,23 @@
 ---
-alias: He's Driving
+alias: He's Driving Home
 trigger:
-  - platform: state
-    entity_id: sensor.family_stuart_drive_dest
-
   - platform: state
     entity_id: sensor.family_stuart_drive_eta
 
 condition:
   - condition: state
     entity_id: sensor.family_stuart_drive_dest
-    state: 'Work'
+    state: 'Home'
 
 action:
+- service: script.notify_tts
+  data_template:
+    room: "everywhere"
+    value1: !include ../../../entities/templates/driving_him.yaml
+
 - service: script.notify_join
   data_template:
     who: "stuart"
     title: 'His Driving Alerts'
     notification_id: "driving-alert-he"
-    value1: !include ../../../entities/templates/driving_hes.yaml
+    value1: !include ../../../entities/templates/driving_him.yaml
