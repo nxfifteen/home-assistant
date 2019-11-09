@@ -61,6 +61,7 @@ cards:
         entities:
           - type: 'custom:text-divider-row'
             text: Car
+          - entity: sensor.family_stuart_drive_dest_home
           - entity: sensor.family_stuart_drive_ignition
             name: Ignition
           - entity: sensor.family_stuart_drive_dest
