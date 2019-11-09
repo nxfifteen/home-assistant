@@ -9,7 +9,7 @@ sensor:
 
 binary_sensor:
 - platform: mqtt
-  name: ff_landing_sensor_contact
+  name: ff_landing_sensor_motion
   state_topic: "zwave/22/48/1/0"
   value_template: "{{ value_json.value }}"
   payload_on: true
@@ -21,13 +21,13 @@ binary_sensor:
     motion_ff_landing:
       friendly_name: "Landing Motion"
       device_class: motion
-      value_template: "{{ is_state('binary_sensor.ff_landing_sensor_contact', 'on') }}"
+      value_template: "{{ is_state('binary_sensor.ff_landing_sensor_motion', 'on') }}"
       delay_off:
         minutes: 5
         
 homeassistant:
   customize:
-    sensor.ff_landing_sensor_contact:
+    sensor.ff_landing_sensor_motion:
       friendly_name: Landing
     sensor.ff_landing_sensor_battery:
       friendly_name: Landing PIR
