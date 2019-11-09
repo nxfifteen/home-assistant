@@ -12,6 +12,9 @@ cards:
         name: Study
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[  sensor.occ_room_study_reason.state ]]"
+      - type: section
+      - entity: switch.study_do_not_disturb_switch
+        name: Alexa - DND
 
   - type: entities
     show_header_toggle: false

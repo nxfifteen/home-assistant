@@ -13,7 +13,8 @@ cards:
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[  sensor.occ_room_kitchen_reason.state ]]"
       - type: section
-      # - binary_sensor.xd_kitchen_side
+      - entity: switch.kitchen_do_not_disturb_switch
+        name: Alexa - DND
 
   - type: entities
     show_header_toggle: false

@@ -12,6 +12,9 @@ cards:
         name: Livingroom
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[  sensor.occ_room_livingroom_reason.state ]]"
+      - type: section
+      - entity: switch.livingroom_do_not_disturb_switch
+        name: Alexa - DND
 
   - type: picture-glance
     entities:
