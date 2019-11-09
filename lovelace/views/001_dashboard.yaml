@@ -97,6 +97,8 @@ cards:
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ sun.sun.attributes.elevation ]]"
       - type: section
+      - sensor.heating_set_to
+      - type: section
       - input_select.family_family_act_bedtime
       - input_select.light_scene
 
