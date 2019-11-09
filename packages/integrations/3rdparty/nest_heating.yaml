@@ -4,3 +4,14 @@ sensor:
     sensors:
       heating_set_to:
         value_template: "{{ states.climate.hallway.attributes.temperature }}"
+
+      heating_hvac:
+        value_template: "{{ states.climate.hallway.attributes.hvac_action }}"
+
+      heating_state:
+        value_template: >-
+          {% if states.climate.hallway.attributes.current_temperature < states.climate.hallway.attributes.temperature %}
+            on
+          {% else %}
+            off
+          {% endif %}
