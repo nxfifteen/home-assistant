@@ -17,12 +17,12 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Plex MQTT
+      - sensor.mqtt_plex_study_alexa
       - sensor.mqtt_plex_taichi_video
       - sensor.mqtt_plex_taichi_audio
       - sensor.mqtt_plex_bedroom_audio
       - sensor.mqtt_plex_bedroom_alexa
       - sensor.mqtt_plex_bedroom_firetv
-      - sensor.mqtt_plex_study_alexa
       - sensor.mqtt_plex_livingroom_alexa
       - sensor.mqtt_plex_livingroom_firetv
       - sensor.mqtt_plex_dining_alexa
@@ -33,12 +33,12 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Media Helper
+      - sensor.media_ff_study_plex_alexa
       - sensor.media_ff_study_plex_video
       - sensor.media_ff_study_plex_audio
       - sensor.media_ff_bedroom_plex_audio
       - sensor.media_ff_bedroom_plex_alexa
       - sensor.media_ff_bedroom_plex_fire
-      - sensor.media_ff_study_plex_alexa
       - sensor.media_gf_livingroom_plex_alexa
       - sensor.media_gf_livingroom_plex_fire
       - sensor.media_gf_kitchen_plex_alexa
@@ -65,7 +65,9 @@ cards:
         text: Bedroom
       - sensor.media_ff_bedroom_alexa
       - sensor.media_ff_bedroom_plex_audio
+      - sensor.media_ff_bedroom_plex_alexa
       - type: section
+      - sensor.media_ff_bedroom_plex_fire
       - sensor.media_ff_bedroom_fire_tv
       - type: section
       - entity: switch.bedroom_do_not_disturb_switch
@@ -77,6 +79,7 @@ cards:
       - type: 'custom:text-divider-row'
         text: Kitchen
       - sensor.media_gf_kitchen_alexa
+      - sensor.media_gf_kitchen_plex_alexa
       - type: section
       - sensor.media_gf_kitchen_fire_tv
       - sensor.media_gf_kitchen_plex_fire
