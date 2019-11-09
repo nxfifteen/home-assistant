@@ -9,61 +9,73 @@ sensor:
   - platform: template
     sensors:
       media_ff_study_plex_video:
-        value_template: "{% if states('sensor.mqtt_plex_taichi_video') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_taichi_video') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_taichi_video') == 'unknown' || states('sensor.mqtt_plex_taichi_video') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_taichi_video') }}{% endif %}"
 
       media_ff_study_plex_audio:
-        value_template: "{% if states('sensor.mqtt_plex_taichi_audio') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_taichi_audio') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_taichi_audio') == 'unknown' || states('sensor.mqtt_plex_taichi_audio') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_taichi_audio') }}{% endif %}"
 
       media_ff_bedroom_plex_audio:
-        value_template: "{% if states('sensor.mqtt_plex_bedroom_audio') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_bedroom_audio') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_bedroom_audio') == 'unknown' || states('sensor.mqtt_plex_bedroom_audio') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_bedroom_audio') }}{% endif %}"
 
       media_ff_bedroom_plex_alexa:
-        value_template: "{% if states('sensor.mqtt_plex_bedroom_alexa') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_bedroom_alexa') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_bedroom_alexa') == 'unknown' || states('sensor.mqtt_plex_bedroom_alexa') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_bedroom_alexa') }}{% endif %}"
 
       media_ff_bedroom_plex_fire:
-        value_template: "{% if states('sensor.mqtt_plex_bedroom_firetv') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_bedroom_firetv') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_bedroom_firetv') == 'unknown' || states('sensor.mqtt_plex_bedroom_firetv') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_bedroom_firetv') }}{% endif %}"
 
       media_ff_study_plex_alexa:
-        value_template: "{% if states('sensor.mqtt_plex_study_alexa') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_study_alexa') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_study_alexa') == 'unknown' || states('sensor.mqtt_plex_study_alexa') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_study_alexa') }}{% endif %}"
 
       media_gf_livingroom_plex_alexa:
-        value_template: "{% if states('sensor.mqtt_plex_livingroom_alexa') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_livingroom_alexa') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_livingroom_alexa') == 'unknown' || states('sensor.mqtt_plex_livingroom_alexa') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_livingroom_alexa') }}{% endif %}"
 
       media_gf_livingroom_plex_fire:
-        value_template: "{% if states('sensor.mqtt_plex_livingroom_firetv') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_livingroom_firetv') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_livingroom_firetv') == 'unknown' || states('sensor.mqtt_plex_livingroom_firetv') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_livingroom_firetv') }}{% endif %}"
 
       media_gf_kitchen_plex_alexa:
-        value_template: "{% if states('sensor.mqtt_plex_dining_alexa') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_dining_alexa') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_dining_alexa') == 'unknown' || states('sensor.mqtt_plex_dining_alexa') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_dining_alexa') }}{% endif %}"
 
       media_gf_kitchen_plex_fire:
-        value_template: "{% if states('sensor.mqtt_plex_dining_firetv') == 'unknown' %}off{% else %}{{ states('sensor.mqtt_plex_dining_firetv') }}{% endif %}"
+        value_template: "{% if states('sensor.mqtt_plex_dining_firetv') == 'unknown' || states('sensor.mqtt_plex_dining_firetv') == 'stop' %}off{% else %}{{ states('sensor.mqtt_plex_dining_firetv') }}{% endif %}"
 
 homeassistant:
   customize:
       sensor.media_ff_study_plex_video:
         friendly_name: 'Study Plex (Video)'
-        icon: mdi:kodi
+        icon: mdi:television-box
 
       sensor.media_ff_study_plex_audio:
         friendly_name: 'Study Plex (Audio)'
-        icon: mdi:kodi
+        icon: mdi:music
 
       sensor.media_ff_study_plex_alexa:
         friendly_name: 'Study Plex (Alexa)'
-        icon: mdi:kodi
+        icon: mdi:google-home
 
       sensor.media_gf_livingroom_plex_alexa:
         friendly_name: 'Livingroom Plex (Alexa)'
-        icon: mdi:kodi
+        icon: mdi:google-home
 
       sensor.media_ff_bedroom_plex_audio:
         friendly_name: 'Bedroom Plex (Audio)'
-        icon: mdi:kodi
+        icon: mdi:music
+
+      sensor.media_ff_bedroom_plex_alexa:
+        friendly_name: 'Bedroom Plex (Alexa)'
+        icon: mdi:google-home
+
+      sensor.media_ff_bedroom_plex_fire:
+        friendly_name: 'Bedroom Plex (FireTV)'
+        icon: mdi:television-box
 
       sensor.media_gf_livingroom_plex_fire:
         friendly_name: 'Livingroom Plex (FireTV)'
-        icon: mdi:kodi
+        icon: mdi:television-box
+
+      sensor.media_gf_kitchen_plex_alexa:
+        friendly_name: 'Kitchen Plex (Alexa)'
+        icon: mdi:google-home
 
       sensor.media_gf_kitchen_plex_fire:
         friendly_name: 'Kitchen Plex (FireTV)'
-        icon: mdi:kodi
+        icon: mdi:television-box
