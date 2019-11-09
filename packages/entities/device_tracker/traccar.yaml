@@ -17,3 +17,4 @@ device_tracker:
     interval_seconds: 120
     consider_home: 60
     track_new_devices: yes
+    event: ['all_events']
