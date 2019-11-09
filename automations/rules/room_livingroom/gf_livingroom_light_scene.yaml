@@ -16,7 +16,7 @@ trigger:
   to: 'on'
 
 - platform: state
-  entity_id: binary_sensor.gf_living_door_contact
+  entity_id: binary_sensor.id_living
   from: 'off'
   to: 'on'
 

@@ -44,7 +44,7 @@ cards:
     entities:
     - binary_sensor.gf_front_door_contact
     - binary_sensor.gf_dinning_door_side_contact
-    - binary_sensor.gf_living_door_contact
+    - binary_sensor.id_living
     - binary_sensor.gf_studio_door_contact
 
   - type: entities
@@ -59,7 +59,7 @@ cards:
     - type: section
     - sensor.gf_front_door_contact_battery
     - sensor.gf_dinning_door_side_contact_battery
-    - sensor.gf_living_door_contact_battery
+    - sensor.id_living_battery
     - sensor.gf_studio_door_contact_battery
 
   #################################################################
