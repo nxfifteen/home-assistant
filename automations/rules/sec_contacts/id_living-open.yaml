@@ -1,0 +1,15 @@
+---
+alias: Contact Open - Livingroom Door
+
+trigger:
+  - entity_id: binary_sensor.id_living
+    platform: state
+    to:  'on'
+
+action:
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Jarvis Livingroom Door'
+      notification_id: "hass-contact-Livingroom"
+      value1: 'The Livingroom door is open'
