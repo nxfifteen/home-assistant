@@ -142,6 +142,30 @@ cards:
 
   - type: vertical-stack
     cards:
+
+      - type: custom:mini-graph-card
+        entities:
+         - sensor.hallway_thermostat_temperature
+        name: Nest
+        height: 46
+        line_width: 2
+        font_size: 65
+        hours_to_show: 24
+        points_per_hour: 4
+        show:
+          icon: true
+          extrema: true
+          icon_adaptive_color: true
+        color_thresholds:
+          - value: 21
+            color: "#e74c3c"
+          - value: 15
+            color: "#1db954"
+          - value: -1
+            color: "#3498db"
+          - value: -100
+            color: "#e74c3c"
+            
       - type: 'custom:simple-thermostat'
         entity: climate.hallway
         name: Nest
@@ -168,125 +192,6 @@ cards:
             name: 'Off'
             include: true
             icon: mdi:whitewalker
-
-      - type: custom:mini-graph-card
-        entities:
-         - sensor.hallway_thermostat_temperature
-        name: Nest
-        height: 46
-        line_width: 2
-        font_size: 65
-        hours_to_show: 24
-        points_per_hour: 4
-        show:
-          icon: true
-          extrema: true
-          icon_adaptive_color: true
-        color_thresholds:
-          - value: 21
-            color: "#e74c3c"
-          - value: 15
-            color: "#1db954"
-          - value: -1
-            color: "#3498db"
-          - value: -100
-            color: "#e74c3c"
-
-      - type: horizontal-stack
-        cards:
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.ff_study_sensor_temperature
-            name: Study
-            height: 74
-            line_width: 2
-            font_size: 65
-            hours_to_show: 24
-            points_per_hour: 2
-            show:
-              icon: true
-              extrema: true
-              icon_adaptive_color: true
-            color_thresholds:
-              - value: 22
-                color: "#e74c3c"
-              - value: 15
-                color: "#1db954"
-              - value: -1
-                color: "#3498db"
-              - value: -100
-                color: "#e74c3c"
-
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.ff_bedroom_sensor_temperature
-            name: Bedroom
-            height: 74
-            line_width: 2
-            font_size: 65
-            hours_to_show: 24
-            points_per_hour: 2
-            show:
-              icon: true
-              extrema: true
-              icon_adaptive_color: true
-            color_thresholds:
-              - value: 22
-                color: "#e74c3c"
-              - value: 15
-                color: "#1db954"
-              - value: -1
-                color: "#3498db"
-              - value: -100
-                color: "#e74c3c"
-
-      - type: horizontal-stack
-        cards:
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.gf_dinning_sensor_temperature
-            name: Dinning Room
-            height: 74
-            line_width: 2
-            font_size: 65
-            hours_to_show: 24
-            points_per_hour: 2
-            show:
-              icon: true
-              extrema: true
-              icon_adaptive_color: true
-            color_thresholds:
-              - value: 22
-                color: "#e74c3c"
-              - value: 15
-                color: "#1db954"
-              - value: -1
-                color: "#3498db"
-              - value: -100
-                color: "#e74c3c"
-
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.gf_living_sensor_temperature
-            name: Livingroom
-            height: 74
-            line_width: 2
-            font_size: 65
-            hours_to_show: 24
-            points_per_hour: 2
-            show:
-              icon: true
-              extrema: true
-              icon_adaptive_color: true
-            color_thresholds:
-              - value: 22
-                color: "#e74c3c"
-              - value: 15
-                color: "#1db954"
-              - value: -1
-                color: "#3498db"
-              - value: -100
-                color: "#e74c3c"
 
   - type: entities
     entities:
