@@ -30,8 +30,10 @@ cards:
           title: Current
         - entity: sensor.latest_ha_version
           title: Latest
-        - entity: sensor.hacs
-          title: HACS Updates
+        - entity: sensor.latest_ha_version
+          title: Latest
+        - entity: binary_sensor.updater
+          title: HA Updates
 
   - type: entities
     show_header_toggle: off
