@@ -1,0 +1,2 @@
+>
+  Stuart's driving {{ states.sensor.family_stuart_drive_dest.state }}. He is {{ states.sensor.family_stuart_drive_out.state }} minutes away, so his ETA is {{ states.sensor.family_stuart_drive_eta.state }}
