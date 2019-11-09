@@ -1,0 +1,15 @@
+---
+alias: Contact Closed - Front Door
+
+trigger:
+  - entity_id: binary_sensor.xd_studio
+    platform: state
+    to:  'off'
+
+action:
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Jarvis Back Door'
+      notification_id: "hass-contact-Back"
+      value1: 'The Back door is closed'

@@ -1,0 +1,30 @@
+---
+alias: Contact Open - Back Door
+
+trigger:
+  - entity_id: binary_sensor.xd_studio
+    platform: state
+    to:  'on'
+
+action:
+  - service: script.notify_join
+    data_template:
+      who: "stuart"
+      title: 'Jarvis Back Door'
+      notification_id: "hass-contact-Back"
+      value1: 'The Back door is open'
+
+  - service: script.notify_tts
+    data_template:
+      room: "kitchen"
+      value1: "The Back door is open"
+
+  - service: script.notify_tts
+    data_template:
+      room: "study"
+      value1: "The Back door is open"
+
+  - service: script.notify_tts
+    data_template:
+      room: "bedroom"
+      value1: "The Back door is open"

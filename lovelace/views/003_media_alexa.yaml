@@ -27,22 +27,6 @@ cards:
       - sensor.mqtt_plex_livingroom_firetv
       - sensor.mqtt_plex_dining_alexa
       - sensor.mqtt_plex_dining_firetv
-      
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Media Helper
-      - sensor.media_ff_study_plex_alexa
-      - sensor.media_ff_study_plex_video
-      - sensor.media_ff_study_plex_audio
-      - sensor.media_ff_bedroom_plex_audio
-      - sensor.media_ff_bedroom_plex_alexa
-      - sensor.media_ff_bedroom_plex_fire
-      - sensor.media_gf_livingroom_plex_alexa
-      - sensor.media_gf_livingroom_plex_fire
-      - sensor.media_gf_kitchen_plex_alexa
-      - sensor.media_gf_kitchen_plex_fire
 
   - type: entities
     show_header_toggle: false
@@ -95,8 +79,8 @@ cards:
       - sensor.media_gf_livingroom_alexa
       - sensor.media_gf_livingroom_plex_alexa
       - type: section
-      - sensor.media_gf_livingroom_fire_tv
       - sensor.media_gf_livingroom_plex_fire
+      - sensor.media_gf_livingroom_fire_tv
       - type: section
       - entity: switch.livingroom_do_not_disturb_switch
         name: Alexa - DND

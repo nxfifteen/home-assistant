@@ -12,8 +12,8 @@ binary_sensor:
   name: xd_kitchen_side
   state_topic: "zwave/21/48/1/0"
   value_template: "{{ value_json.value }}"
-  payload_on: true
-  payload_off: false
+  payload_on: false
+  payload_off: true
   device_class: "door"
 
 homeassistant:
