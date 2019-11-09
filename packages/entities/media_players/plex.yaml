@@ -9,7 +9,7 @@ sensor:
   - platform: template
     sensors:
       media_ff_study_plex_video:
-        value_template: "{% if states('media_player.plex_taichi') == 'unknown' %}off{% else %}{{ states('media_player.plex_taichi') }}{% endif %}"
+        value_template: "{% if states('media_player.plex_taichi_3') == 'unknown' %}off{% else %}{{ states('media_player.plex_taichi_3') }}{% endif %}"
 
       media_ff_study_plex_audio:
         value_template: "{% if states('media_player.plex_taichi_audio') == 'unknown' %}off{% else %}{{ states('media_player.plex_taichi_audio') }}{% endif %}"

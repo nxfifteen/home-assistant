@@ -1,7 +1,7 @@
 ---
 sensor:
 - platform: mqtt
-  name: gf_studio_door_contact_battery
+  name: xd_studio_battery
   state_topic: "zwave/26/128/1/0"
   value_template: "{{ value_json.value }}"
   device_class: "battery"
@@ -9,7 +9,7 @@ sensor:
 
 binary_sensor:
 - platform: mqtt
-  name: gf_studio_door_contact
+  name: xd_studio
   state_topic: "zwave/26/48/1/0"
   value_template: "{{ value_json.value }}"
   payload_on: true
@@ -18,8 +18,8 @@ binary_sensor:
 
 homeassistant:
   customize:
-    binary_sensor.gf_studio_door_contact:
+    binary_sensor.xd_studio:
       friendly_name: Studio Door
 
-    sensor.gf_studio_door_contact_battery:
+    sensor.xd_studio_battery:
       friendly_name: Studio Door Contact

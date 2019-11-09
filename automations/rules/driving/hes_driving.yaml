@@ -1,0 +1,14 @@
+---
+alias: He's Driving
+trigger:
+  - platform: state
+    entity_id: sensor.family_stuart_drive_ignition
+    to: 'True'
+
+action:
+- service: script.notify_join
+  data_template:
+    who: "stuart"
+    title: 'His Driving Alerts'
+    notification_id: "driving-alert-he"
+    value1: "He's in the car"

@@ -1,0 +1,57 @@
+---
+schedy_heating:  # This is our app instance name.
+  module: hass_apps_loader
+  class: SchedyApp
+
+  actor_type: thermostat
+
+  expression_environment: |
+    def house_scene():
+        return state("sensor.house_scene")
+
+  watched_entities:
+  - sensor.house_scene
+
+  statistics:
+  # Pick an arbitrary name for the parameter instance.
+  upstairs_temp_delta:
+    # The type of parameter as found in the actor'S documentation.
+    type: temp_delta
+    # More parameter-specific settings:
+    rooms:
+      house:
+
+  rooms:
+    house:
+      rescheduling_delay: 120
+      actors:
+        climate.hallway:
+      schedule:
+        - v: 15
+          rules:
+            - weekdays: 1-5
+              months: 1-3, 10-12
+              rules:
+                - x: "Next() if house_scene() == 'Occupied' else Break()"
+                - { start: "06:00", end: "07:30" }
+
+        - v: 15
+          rules:
+            - weekdays: 1-5
+              months: 1-3, 10-12
+              rules:
+                - x: "Next() if house_scene() == 'Occupied' else Break()"
+                - { start: "18:00", end: "22:30" }
+                
+        - v: 16
+          rules:
+            - weekdays: 6-7
+              months: 1-3, 10-12
+              rules:
+                - x: "Next() if house_scene() == 'Occupied' else Break()"
+                - { start: "08:00", end: "22:30" }
+
+        - v: 11
+          months: 1-3, 10-12
+
+        - v: "OFF"

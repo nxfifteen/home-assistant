@@ -7,3 +7,14 @@ switch:
   - platform: wake_on_lan
     name: wol_media_computer
     mac_address: "10-7b-44-7c-43-54"
+
+homeassistant:
+  customize:
+    switch.wol_his_computer:
+      friendly_name: TaiChi WoL
+      icon: mdi:desktop-tower
+
+    switch.wol_media_computer:
+      friendly_name: Odin WoL
+      icon: mdi:desktop-tower
+

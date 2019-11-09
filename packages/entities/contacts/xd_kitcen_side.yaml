@@ -1,16 +1,16 @@
 ---
 sensor:
 - platform: mqtt
-  name: gf_dinning_door_side_contact_battery
-  state_topic: "zwave/19/128/1/0"
+  name: xd_kitchen_side_battery
+  state_topic: "zwave/21/128/1/0"
   value_template: "{{ value_json.value }}"
   device_class: "battery"
   unit_of_measurement: "%"
 
 binary_sensor:
 - platform: mqtt
-  name: gf_dinning_door_side_contact
-  state_topic: "zwave/19/48/1/0"
+  name: xd_kitchen_side
+  state_topic: "zwave/21/48/1/0"
   value_template: "{{ value_json.value }}"
   payload_on: true
   payload_off: false
@@ -18,8 +18,8 @@ binary_sensor:
 
 homeassistant:
   customize:
-    binary_sensor.gf_dinning_door_side_contact:
+    binary_sensor.xd_kitchen_side:
       friendly_name: Dinning Room Side Door
 
-    sensor.gf_dinning_door_side_contact_battery:
+    sensor.xd_kitchen_side_battery:
       friendly_name: Dinning Room Side Door Contact

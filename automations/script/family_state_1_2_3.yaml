@@ -59,5 +59,9 @@ family_state_1_2_3:
     - service: switch.turn_on
       data:
         entity_id: switch.adguard_query_log
+      
+    - service: script.turn_on
+      data:
+        entity_id: script.alexa_do_not_disturb_switch_on
 
     - service: shell_command.shell_pve_stop_107

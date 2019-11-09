@@ -3,7 +3,7 @@ alias: Livingroom Door Shut at Night
 
 trigger:
 - platform: state
-  entity_id: binary_sensor.gf_living_door_contact
+  entity_id: binary_sensor.id_living
   from: 'on'
   to: 'off'
 
