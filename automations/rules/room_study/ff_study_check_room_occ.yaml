@@ -35,6 +35,9 @@ trigger:
 - platform: state
   entity_id: sensor.family_kareen_loc_room
 
+- platform: state
+  entity_id: sensor.steam_hes_playing
+
 action:
   - service: mqtt.publish
     data:
