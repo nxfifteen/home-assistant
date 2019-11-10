@@ -66,6 +66,15 @@ input_select:
       - Just Left       # 2
       - Just Arrived    # 3
 
+  family_kareen_drive_dest_home:
+    name: Driving Home
+    options:
+      - Idle
+      - On The Way
+      - Want Be Long
+      - Almost There
+      - Arriving
+
 homeassistant:
   customize:
     sensor.family_kareen_battery_phone:

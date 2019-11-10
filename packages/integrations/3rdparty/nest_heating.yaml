@@ -15,3 +15,41 @@ sensor:
           {% else %}
             off
           {% endif %}
+        value_template: "{{ states.climate.hallway.attributes.hvac_action }}"
+
+      heating_state_graphable:
+        value_template: >-
+          {% if states.climate.hallway.attributes.current_temperature < states.climate.hallway.attributes.temperature %}
+            1
+          {% else %}
+            0
+          {% endif %}
+
+homeassistant:
+  customize:
+    sensor.heating_set_to:
+      friendly_name: Heating Target Temp
+      unit_of_measurement: "C"
+      icon: mdi:temperature-celsius
+
+    sensor.heating_hvac:
+      friendly_name: Heating HVAC
+      icon: mdi:oil-temperature
+
+    sensor.heating_state:
+      friendly_name: Heating State
+      icon_template: >-
+        {% if is_state("sensor.heating_state", "on") %}
+          mdi:radiator
+        {% else %}
+          mdi:radiator-disabled
+        {% endif %}
+
+    sensor.heating_state_graphable:
+      friendly_name: Heating State
+      icon_template: >-
+        {% if is_state("sensor.heating_state", "on") %}
+          mdi:radiator
+        {% else %}
+          mdi:radiator-disabled
+        {% endif %}
