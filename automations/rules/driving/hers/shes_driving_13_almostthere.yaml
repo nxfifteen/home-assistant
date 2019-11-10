@@ -1,0 +1,30 @@
+---
+alias: Her driving input_select - Almost There
+trigger:
+- platform: state
+  entity_id: input_select.family_kareen_drive_dest_template
+  to: 'is almost %DEST%'
+
+condition:
+  - condition: state
+    entity_id: sensor.family_kareen_drive_dest
+    state: 'Home'
+
+action:
+- service: script.notify_tts
+  data_template:
+    room: "everywhere"
+    value1: !include ../../../../entities/templates/driving_her.yaml
+
+- service: script.notify_join
+  data_template:
+    who: "stuart"
+    title: 'Her Driving Alerts'
+    notification_id: "driving-alert-her"
+    value1: !include ../../../../entities/templates/driving_her.yaml
+
+- service: persistent_notification.create
+  data_template:
+    title: 'Her Driving Alerts'
+    message: !include ../../../../entities/templates/driving_her.yaml
+    notification_id: driving-alert-her

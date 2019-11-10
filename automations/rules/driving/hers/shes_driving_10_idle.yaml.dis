@@ -1,0 +1,13 @@
+---
+alias: Her driving input_select - Idle
+trigger:
+- entity_id: input_select.family_kareen_drive_dest_template
+  platform: state
+  to: Idle
+
+condition:
+  - condition: state
+    entity_id: sensor.family_kareen_drive_dest
+    state: 'Home'
+
+action:
