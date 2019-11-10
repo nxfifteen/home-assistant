@@ -75,10 +75,10 @@ input_select:
     name: Driving Home
     options:
       - Idle
-      - On The Way
-      - Arriving Soon
-      - Almost There
-      - Arriving
+      - Is On The Way Home Now
+      - Will Be Home Soon
+      - Is Almost Home Now
+      - Is About To Arrive
 
 homeassistant:
   customize:
