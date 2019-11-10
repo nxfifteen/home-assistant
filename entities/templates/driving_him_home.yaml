@@ -1,2 +1,0 @@
->
-  Stuart {{ states.input_select.family_stuart_drive_dest_home.state }}. He is {{ states.sensor.family_stuart_drive_out.state }} minutes away, so his ETA is {{ states.sensor.family_stuart_drive_eta.state }}

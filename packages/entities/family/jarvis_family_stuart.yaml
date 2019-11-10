@@ -71,14 +71,14 @@ input_select:
       - Just Left       # 2
       - Just Arrived    # 3
 
-  family_stuart_drive_dest_home:
+  family_stuart_drive_dest_template:
     name: Driving Home
     options:
       - Idle
-      - Is On The Way Home Now
-      - Will Be Home Soon
-      - Is Almost Home Now
-      - Is About To Arrive
+      - is on the way %DEST% now
+      - isn't far from %DEST%
+      - is almost %DEST%
+      - is about to arrive %DEST% any minute now
 
 homeassistant:
   customize:
