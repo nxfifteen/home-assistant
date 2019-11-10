@@ -11,7 +11,7 @@ condition:
     state: 'Home'
 
 action:
-- service: script.notify_tts
+- service: script.notify_tts_zone_everywhere
   data_template:
     room: "everywhere"
     value1: !include ../../../../entities/templates/driving_him.yaml

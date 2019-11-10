@@ -12,7 +12,7 @@ action:
     notification_id: "hass-online"
     value1: "Home Assistant is back online"
 
-- service: script.notify_tts
+- service: script.notify_tts_room
   data_template:
     room: "study"
     value1: "Home Assistant is back online"

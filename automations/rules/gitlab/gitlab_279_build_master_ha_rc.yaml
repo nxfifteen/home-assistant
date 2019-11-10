@@ -14,7 +14,7 @@ condition:
     state: 'on'
 
 action:
-  - service: script.notify_tts
+  - service: script.notify_tts_room
     data_template:
       room: "study"
       value1: "Your Code past on the R.C. build."

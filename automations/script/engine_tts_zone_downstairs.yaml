@@ -2,7 +2,7 @@
 ######################################################################################################
 ###Script to send notifications to IFTTT to notify me on the mobile Phone! Call like this:
   # action:
-  #   service: script.notify_tts
+  #   service: script.notify_tts_zone_downstairs
   #   data_template:
   #     room: "living_room | study | kitchen | everywhere | downstairs"
   #     value1: 'Startup: Home Assistant is Up and Running!'
@@ -10,7 +10,7 @@
   #     value3:
 ######################################################################################################
 
-notify_tts:
+notify_tts_zone_downstairs:
   sequence:
     - condition: or
       conditions:
@@ -20,24 +20,21 @@ notify_tts:
 
     - service: notify.alexa_media
       data_template:
-        target: >
-            {% if room == 'living_room' %}
-              media_player.alexa_livingroom
-            {% elif room == 'bedroom' %}
-              media_player.alexa_bedroom
-            {% elif room == 'study' %}
-              media_player.alexa_study
-            {% elif room == 'kitchen' %}
-              media_player.alexa_kitchen
-            {% elif room == 'everywhere' %}
-              media_player.zone_everywhere
-            {% elif room == 'downstairs' %}
-              media_player.zone_downstairs
-            {% elif room == 'upstairs' %}
-              media_player.zone_upstairs
-            {% else %}
-              media_player.zone_everywhere
-            {% endif %}
+        target: media_player.alexa_livingroom
+        data:
+          type: announce
+        message: "{{ value1 }} {{ value2 }} {{ value3 }}"
+
+    - service: notify.alexa_media
+      data_template:
+        target: media_player.alexa_kitchen
+        data:
+          type: announce
+        message: "{{ value1 }} {{ value2 }} {{ value3 }}"
+
+    - service: notify.alexa_media
+      data_template:
+        target: media_player.alexa_hallway
         data:
           type: announce
         message: "{{ value1 }} {{ value2 }} {{ value3 }}"

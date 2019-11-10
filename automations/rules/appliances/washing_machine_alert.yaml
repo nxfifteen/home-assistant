@@ -40,7 +40,7 @@ condition:
         {% endif %}
 
 action:
-  - service: script.notify_tts
+  - service: script.notify_tts_zone_upstairs
     data_template:
       room: "everywhere"
       value1: "The washing machine has finished and is ready to be emptied"

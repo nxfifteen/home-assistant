@@ -10,7 +10,7 @@ action:
     data:
       addon: "core_git_pull"
 
-  - service: script.notify_tts
+  - service: script.notify_tts_room
     data_template:
       room: "study"
       value1: "Updating Home Assistant configuration."

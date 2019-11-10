@@ -32,7 +32,7 @@ action:
       brightness: 77
       transition: 3
 
-  - service: script.notify_tts
+  - service: script.notify_tts_room
     data_template:
       room: "study"
       value1: "Git Lab is running continuous Integration testing now."
