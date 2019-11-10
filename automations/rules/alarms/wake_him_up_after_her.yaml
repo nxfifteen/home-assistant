@@ -20,7 +20,7 @@ action:
 
   - delay: 00:01:30
   - condition:
-      - condition: numeric_state
+      - condition: state
         entity_id: sensor.family_stuart_state
         state: '9'
         
@@ -30,7 +30,7 @@ action:
 
   - delay: 00:01:50
   - condition:
-      - condition: numeric_state
+      - condition: state
         entity_id: sensor.family_stuart_state
         state: '9'
 
