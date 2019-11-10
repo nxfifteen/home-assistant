@@ -3,13 +3,13 @@ alias: Wake Up Him After Her
 trigger:
   - platform: state
     entity_id: sensor.family_kareen_state
-    to: 7
-    from: 9
+    to: '7'
+    from: '9'
 
 condition:
   - condition: numeric_state
     entity_id: sensor.family_stuart_state
-    state: 9
+    state: '9'
 
 action:
   - service: light.turn_on
@@ -22,7 +22,7 @@ action:
   - condition:
       - condition: numeric_state
         entity_id: sensor.family_stuart_state
-        state: 9
+        state: '9'
         
   - service: switch.turn_on
     data:
@@ -32,7 +32,7 @@ action:
   - condition:
       - condition: numeric_state
         entity_id: sensor.family_stuart_state
-        state: 9
+        state: '9'
 
   - service: light.turn_on
     data:
