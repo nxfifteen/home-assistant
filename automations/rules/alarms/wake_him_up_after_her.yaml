@@ -19,20 +19,20 @@ action:
       brightness: 255
 
   - delay: 00:01:30
-  - condition:
-      - condition: state
-        entity_id: sensor.family_stuart_state
-        state: '9'
+
+  - condition: state
+    entity_id: sensor.family_stuart_state
+    state: '9'
         
   - service: switch.turn_on
     data:
       entity_id: switch.ff_bedroom_fairylights_switch
 
   - delay: 00:01:50
-  - condition:
-      - condition: state
-        entity_id: sensor.family_stuart_state
-        state: '9'
+  
+  - condition: state
+    entity_id: sensor.family_stuart_state
+    state: '9'
 
   - service: light.turn_on
     data:
