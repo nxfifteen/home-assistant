@@ -76,7 +76,7 @@ input_select:
     options:
       - Idle
       - is on the way %DEST% now
-      - isn't far from %DEST%
+      - is not far from %DEST%
       - is almost %DEST%
       - is about to arrive %DEST% any minute now
 

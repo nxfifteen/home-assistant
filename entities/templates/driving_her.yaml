@@ -1,2 +1,3 @@
 >
-  Kareen's driving {{ states.sensor.family_kareen_drive_dest.state }}. She is {{ states.sensor.family_kareen_drive_out.state }} minutes away, so her ETA is {{ states.sensor.family_kareen_drive_eta.state }}
+  Kareen {{ states.input_select.family_kareen_drive_dest_template.state | replace("%DEST%", states.sensor.family_kareen_drive_dest.state) }}.
+  She is {{ states.sensor.family_kareen_drive_out.state }} minutes away, so her ETA is {{ states.sensor.family_kareen_drive_eta.state | replace(".",":") }}
