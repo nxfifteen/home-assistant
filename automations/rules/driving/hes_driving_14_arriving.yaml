@@ -2,7 +2,7 @@
 alias: Driving input_select - Arriving
 trigger:
 - platform: state
-  entity_id: input_select.family_stuart_drive_dest_home
+  entity_id: input_select.family_stuart_drive_dest_template
   to: 'is about to arrive %DEST% any minute now'
 
 condition:

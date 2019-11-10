@@ -71,7 +71,7 @@ input_select:
       - Just Left       # 2
       - Just Arrived    # 3
 
-  family_stuart_drive_dest_home:
+  family_stuart_drive_dest_template:
     name: Driving Home
     options:
       - Idle
