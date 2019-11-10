@@ -59,6 +59,13 @@ schedy_heating:  # This is our app instance name.
                 - x: "Next() if house_scene() == 'Occupied' else Break()"
                 - { start: "10:00", end: "18:30" }
                 
+        - v: 13
+          rules:
+            - months: 1-3, 10-12
+              rules:
+                - x: "Next() if house_scene() == 'Asleep' else Break()"
+                - { start: "05:00", end: "10:00" }
+                
         - v: 19
           rules:
             - weekdays: 7, 1
