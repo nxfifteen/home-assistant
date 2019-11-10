@@ -98,7 +98,7 @@ cards:
         secondary_info: "[[ sun.sun.attributes.elevation ]]"
       - type: section
       - sensor.heating_hvac
-      - entity: heating_state
+      - entity: sensor.heating_state
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ sensor.heating_state_graphable.state ]]"
       - sensor.heating_set_to
