@@ -2,6 +2,10 @@
 house_scene_im_going_to_bed:
   alias: He's Going To Bed
   sequence:
+    - service: joaoapps_join.join_his_send_tasker
+      data_template:
+        command: "jarvis=:=going_to_bed"
+
     - service: input_select.select_option
       data:
         entity_id: input_select.his_pc_options
