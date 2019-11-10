@@ -16,7 +16,7 @@ condition:
       before: '23:30:00'
     - condition: numeric_state
       entity_id: sensor.family_family_state_raw
-      below: 2
+      below: 4
     - condition: state
       entity_id: sensor.light_scene
       state: Night
