@@ -1,5 +1,5 @@
 ---
-alias: Driving input_select - Arriving
+alias: His driving input_select - Arriving
 trigger:
 - platform: state
   entity_id: input_select.family_stuart_drive_dest_template
@@ -11,7 +11,7 @@ condition:
     state: 'Home'
 
 action:
-- service: script.notify_tts
+- service: script.notify_tts_zone_everywhere
   data_template:
     room: "everywhere"
     value1: !include ../../../../entities/templates/driving_him.yaml

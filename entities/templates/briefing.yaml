@@ -153,11 +153,11 @@
   {%- macro network_sentence() -%}
     I'm protecting {{states.sensor.unifi_client_count.state}} clients on the network from {{states.sensor.adguard_dns_queries_blocked.state}} ads.
     That is {{states.sensor.adguard_dns_queries_blocked_ratio.state}}% of the internet traffic.
-    {%- if float(states(states.sensor.adguard_safe_browsing_blocked.state)) > 0 and float(states(states.sensor.searches_safe_search_enforced.state)) > 0 -%}
+    {%- if float(states.sensor.adguard_safe_browsing_blocked.state) > 0 and float(states.sensor.searches_safe_search_enforced.state) > 0 -%}
       I've also protected you from {{states.sensor.adguard_safe_browsing_blocked.state}} suspect sites and enforced {{states.sensor.searches_safe_search_enforced.state}} safe searches.
-    {%- elif float(states(states.sensor.adguard_safe_browsing_blocked.state)) > 0 -%}
+    {%- elif float(states.sensor.adguard_safe_browsing_blocked.state) > 0 -%}
       I've also protected you from {{states.sensor.adguard_safe_browsing_blocked.state}} suspect sites.
-    {%- elif float(states(states.sensor.searches_safe_search_enforced.state)) > 0 -%}
+    {%- elif float(states.sensor.searches_safe_search_enforced.state) > 0 -%}
       I've also enforced {{states.sensor.searches_safe_search_enforced.state}} safe searches.
     {%- endif -%}
   {% endmacro %}
@@ -171,7 +171,7 @@
 
   {%- macro certs_sentence() -%}
     {%- for entity_id in states.group.certs.attributes.entity_id if float(states(entity_id)) < 20 -%}
-      {% if loop.first %}It would appear certificates for {% endif %}{% if loop.last and loop.length > 1 %} and {% elif not loop.first and loop.length > 1 %}, {% endif %}{{ state_attr(entity_id, 'friendly_name') }}{% if loop.last %} {% if loop.length == 1 %}is{% else %}are{% endif %} going to expire soon.
+      {% if loop.first %}It would appear certificates for {% endif %}{% if loop.last and loop.length > 2 %} and {% elif not loop.first and loop.length > 1 %}, {% endif %}{{ state_attr(entity_id, 'friendly_name') }}{% if loop.last %} {% if loop.length == 2 %}is{% else %}are{% endif %} going to expire soon.
       {% endif %}
     {%- endfor -%}
   {% endmacro %}

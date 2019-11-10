@@ -28,7 +28,7 @@ action:
       entity_id: light.ff_study_desk
       effect: none
 
-  - service: script.notify_tts
+  - service: script.notify_tts_room
     data_template:
       room: "study"
       value1: "Git Lab has accepted your code."

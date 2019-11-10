@@ -13,7 +13,7 @@ trigger:
   to: 'Emergency'
 
 action:
-  - service: script.notify_tts
+  - service: script.notify_tts_zone_everywhere
     data_template:
       room: "everywhere"
       value1: "An emergency has been detected on {{ trigger.to_state.attributes.friendly_name }}."

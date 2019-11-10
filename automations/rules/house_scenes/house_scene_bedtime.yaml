@@ -5,8 +5,6 @@ trigger:
   - entity_id: sensor.house_scene
     platform: state
     to: 'Going To Bed'
-    for:
-      seconds: 3
 
 action:
   - service: script.turn_on

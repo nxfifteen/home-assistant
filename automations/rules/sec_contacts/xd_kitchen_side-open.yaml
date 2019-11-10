@@ -14,17 +14,17 @@ action:
       notification_id: "hass-contact-Kitchen"
       value1: 'The Kitchen door is open'
 
-  - service: script.notify_tts
+  - service: script.notify_tts_room
     data_template:
       room: "living_room"
       value1: "The Kitchen door is open"
 
-  - service: script.notify_tts
+  - service: script.notify_tts_room
     data_template:
       room: "study"
       value1: "The Kitchen door is open"
 
-  - service: script.notify_tts
+  - service: script.notify_tts_room
     data_template:
       room: "bedroom"
       value1: "The Kitchen door is open"

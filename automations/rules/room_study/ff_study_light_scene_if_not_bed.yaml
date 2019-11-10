@@ -36,6 +36,9 @@ condition:
     - condition: template
       value_template: "{{ not is_state('sensor.house_scene', 'Asleep') }}"
 
+    - condition: template
+      value_template: "{{ not is_state('sensor.house_scene', 'Coming Home') }}"
+
 action:
 - service: scene.turn_on
   data_template:

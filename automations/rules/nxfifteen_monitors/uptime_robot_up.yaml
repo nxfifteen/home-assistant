@@ -18,7 +18,7 @@ trigger:
   to: 'on'
 
 action:
-  - service: script.notify_tts
+  - service: script.notify_tts_room
     data_template:
       room: "study"
       value1: "{{ trigger.to_state.attributes.friendly_name }} is online again."
