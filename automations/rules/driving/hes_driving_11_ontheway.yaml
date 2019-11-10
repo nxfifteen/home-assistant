@@ -1,8 +1,9 @@
 ---
-alias: He's Driving Home
+alias: Driving input_select - 
 trigger:
-  - platform: state
-    entity_id: sensor.family_stuart_drive_eta
+- entity_id: input_select.family_stuart_drive_dest_home
+  platform: state
+  to: On The Way
 
 condition:
   - condition: state
@@ -21,3 +22,9 @@ action:
     title: 'His Driving Alerts'
     notification_id: "driving-alert-he"
     value1: !include ../../../entities/templates/driving_him.yaml
+
+- service: persistent_notification.create
+  data_template:
+    title: 'His Driving Alerts'
+    message: !include ../../../entities/templates/driving_him.yaml
+    notification_id: driving-alert-he

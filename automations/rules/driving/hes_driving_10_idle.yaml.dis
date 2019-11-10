@@ -1,0 +1,13 @@
+---
+alias: Driving input_select - 
+trigger:
+- entity_id: input_select.family_stuart_drive_dest_home
+  platform: state
+  to: Idle
+
+condition:
+  - condition: state
+    entity_id: sensor.family_stuart_drive_dest
+    state: 'Home'
+
+action:
