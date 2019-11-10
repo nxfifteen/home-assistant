@@ -1,0 +1,41 @@
+---
+alias: Wake Up Him After Her
+trigger:
+  - platform: state
+    entity_id: sensor.family_kareen_state
+    to: 7
+    from: 9
+
+condition:
+  - condition: numeric_state
+    entity_id: sensor.family_stuart_state
+    state: 9
+
+action:
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_bedroom_bedside_stuart
+      transition: 90
+      brightness: 255
+
+  - delay: 00:01:30
+  - condition:
+      - condition: numeric_state
+        entity_id: sensor.family_stuart_state
+        state: 9
+        
+  - service: switch.turn_on
+    data:
+      entity_id: switch.ff_bedroom_fairylights_switch
+
+  - delay: 00:01:50
+  - condition:
+      - condition: numeric_state
+        entity_id: sensor.family_stuart_state
+        state: 9
+
+  - service: light.turn_on
+    data:
+      entity_id: light.ff_bedroom_celing
+      transition: 30
+      brightness: 75
