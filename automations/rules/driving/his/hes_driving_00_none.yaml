@@ -2,7 +2,7 @@
 alias: He's Not Driving
 trigger:
   - platform: state
-    entity_id: sensor.family_stuart_drive_eta
+    entity_id: sensor.family_stuart_drive_dest
     to: 'None'
 
 action:
