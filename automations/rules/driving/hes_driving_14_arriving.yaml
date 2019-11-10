@@ -1,9 +1,9 @@
 ---
 alias: Driving input_select - 
 trigger:
-- entity_id: input_select.family_stuart_drive_dest_home
-  platform: state
-  to: Arriving
+- platform: state
+  entity_id: input_select.family_stuart_drive_dest_home
+  to: 'Arriving'
 
 condition:
   - condition: state
