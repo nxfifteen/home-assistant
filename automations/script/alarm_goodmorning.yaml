@@ -5,10 +5,10 @@ alarm_goodmorning:
         entity_id: input_select.family_family_act_wakeup
         option: Good Morning
 
-    - service: script.notify_tts
+    - service: script.notify_tts_room
       data_template:
         room: "bedroom"
-        value1: "Time to start getting up"
+        value1: !include ../../entities/templates/driving_him.yaml
         hastag: "#Alarm #GoodMorning"
 
     #- service: joaoapps_join.join_her_send_tasker
