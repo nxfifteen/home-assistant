@@ -19,6 +19,12 @@ sensor:
           {% else %}
             off
           {% endif %}
+        icon_template: >-
+          {% if is_state("sensor.heating_state", "on") %}
+            mdi:radiator
+          {% else %}
+            mdi:radiator-disabled
+          {% endif %}
 
       heating_state_graphable:
         value_template: >-
@@ -26,6 +32,12 @@ sensor:
             1
           {% else %}
             0
+          {% endif %}
+        icon_template: >-
+          {% if is_state("sensor.heating_state", "on") %}
+            mdi:radiator
+          {% else %}
+            mdi:radiator-disabled
           {% endif %}
 
 homeassistant:
@@ -41,21 +53,9 @@ homeassistant:
 
     sensor.heating_state:
       friendly_name: Heating State
-      icon_template: >-
-        {% if is_state("sensor.heating_state", "on") %}
-          mdi:radiator
-        {% else %}
-          mdi:radiator-disabled
-        {% endif %}
 
     sensor.heating_state_graphable:
       friendly_name: Heating State
-      icon_template: >-
-        {% if is_state("sensor.heating_state", "on") %}
-          mdi:radiator
-        {% else %}
-          mdi:radiator-disabled
-        {% endif %}
 
     binary_sensor.hallway_nest_protect_online:
       friendly_name: Hallway Protect
