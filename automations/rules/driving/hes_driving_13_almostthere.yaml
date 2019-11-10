@@ -3,7 +3,7 @@ alias: Driving input_select - Almost There
 trigger:
 - platform: state
   entity_id: input_select.family_stuart_drive_dest_home
-  to: 'Almost There'
+  to: 'Is Almost Home Now'
 
 condition:
   - condition: state

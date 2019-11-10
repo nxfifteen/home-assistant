@@ -3,7 +3,7 @@ alias: Driving input_select - Arriving Soon
 trigger:
 - platform: state
   entity_id: input_select.family_stuart_drive_dest_home
-  to: 'Arriving Soon'
+  to: 'Will Be Home Soon'
 
 condition:
   - condition: state
