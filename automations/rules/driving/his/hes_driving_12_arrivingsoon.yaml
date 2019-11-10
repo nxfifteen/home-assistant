@@ -28,3 +28,21 @@ action:
     title: 'His Driving Alerts'
     message: !include ../../../../entities/templates/driving_him.yaml
     notification_id: driving-alert-he
+
+- service: nest.set_away_mode
+  data:
+    away_mode: home
+
+- service: mqtt.publish
+  data:
+    topic: tracker/family/state/raw
+    payload: 3
+    qos: 2
+    retain: true
+
+- service: mqtt.publish
+  data:
+    topic: tracker/family/state
+    payload: 'Coming Home'
+    qos: 2
+    retain: true
