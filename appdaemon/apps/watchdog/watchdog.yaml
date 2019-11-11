@@ -1,0 +1,19 @@
+---
+watchdog:
+  module: watchdog
+  class: Watchdog
+  state_normal: All good
+  state_offline: Something is wrong!
+  watchdogs:
+    - name: bedroom
+      entities:
+        - entity: sensor.ff_bedroom_sensor_battery
+          below: 30
+    - name: livingroom
+      entities:
+        - entity: sensor.gf_living_sensor_battery
+          above: 30
+        - entity: sensor.id_living_battery
+          above: 80
+        - entity: sensor.xd_studio_battery
+          above: 80
