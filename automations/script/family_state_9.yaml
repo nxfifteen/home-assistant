@@ -8,11 +8,6 @@ family_state_9:
         qos: 2
         retain: true
 
-    - service: climate.set_temperature
-      data:
-        entity_id: climate.hallway
-        temperature: 10
-
     - service: switch.turn_off
       data:
         entity_id: switch.family_family_vacation

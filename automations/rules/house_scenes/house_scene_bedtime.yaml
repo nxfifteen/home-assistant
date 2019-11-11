@@ -117,11 +117,6 @@ action:
 
   - service: shell_command.shell_plex_music_evening
 
-  - service: climate.set_temperature
-    data:
-      entity_id: climate.hallway
-      temperature: 10
-
   - service: script.turn_on
     data:
       entity_id: script.alexa_do_not_disturb_switch_on
