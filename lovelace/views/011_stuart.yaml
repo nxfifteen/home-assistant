@@ -50,8 +50,8 @@ cards:
         text: Accounts
       - entity: sensor.steam_76561197982696593
         name: Steam
-      - entity: sensor.steam_hes_playing
-        name: He's Playing
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.steam_hes_playing.state ]]"
       - entity: sensor.stuart_s_jabra_elite_65t
         name: Jabra Elite
 
