@@ -13,13 +13,13 @@ schedy_heating:  # This is our app instance name.
   - sensor.house_scene
 
   statistics:
-  # Pick an arbitrary name for the parameter instance.
-  upstairs_temp_delta:
-    # The type of parameter as found in the actor'S documentation.
-    type: temp_delta
-    # More parameter-specific settings:
-    rooms:
-      house:
+    # Pick an arbitrary name for the parameter instance.
+    upstairs_temp_delta:
+      # The type of parameter as found in the actor'S documentation.
+      type: temp_delta
+      # More parameter-specific settings:
+      rooms:
+        house:
 
   rooms:
     house:
@@ -27,21 +27,29 @@ schedy_heating:  # This is our app instance name.
       actors:
         climate.hallway:
       schedule:
-        - v: 14
-          rules:
-            - weekdays: 2-6
-              months: 1-3, 10-12
-              rules:
-                - x: "Next() if house_scene() == 'Occupied' else Break()"
-                - { start: "06:00", end: "07:30" }
-
         - v: 18
           rules:
-            - weekdays: 2-6
-              months: 1-3, 10-12
+            - months: 1-3, 10-12
               rules:
                 - x: "Next() if house_scene() == 'Occupied' else Break()"
                 - { start: "18:30", end: "21:30" }
+                
+            - months: 1-3, 10-12
+              rules:
+                - x: "Next() if house_scene() == 'Coming Home' else Break()"
+                - { start: "08:00", end: "23:59" }
+                
+        - v: 16
+          rules:
+            - months: 1-3, 10-12
+              rules:
+                - x: "Next() if house_scene() == 'Occupied' else Break()"
+                - { start: "10:00", end: "18:30" }
+
+            - months: 1-3, 10-12
+              rules:
+                - x: "Next() if house_scene() == 'Guests Are Present' else Break()"
+                - { start: "08:00", end: "23:59" }
                 
         - v: 14
           rules:
@@ -51,69 +59,38 @@ schedy_heating:  # This is our app instance name.
                 - x: "Next() if house_scene() == 'Occupied' else Break()"
                 - { start: "08:00", end: "10:00" }
                 
-        - v: 16
-          rules:
-            - weekdays: 7, 1
+            - weekdays: 2-6
               months: 1-3, 10-12
               rules:
                 - x: "Next() if house_scene() == 'Occupied' else Break()"
-                - { start: "10:00", end: "18:30" }
+                - { start: "06:00", end: "07:30" }
+                
+        - v: 13
+          rules:
+            - months: 1-3, 10-12
+              rules:
+                - x: "Next() if house_scene() == 'No Ones Home - Security Watch' else Break()"
+                - { start: "08:00", end: "20:00" }
                 
         - v: 12
           rules:
             - months: 1-3, 10-12
               rules:
-                - x: "Next() if house_scene() == 'Asleep' else Break()"
-                - { start: "05:00", end: "10:00" }
-                
-        - v: 18
-          rules:
-            - weekdays: 7, 1
-              months: 1-3, 10-12
-              rules:
-                - x: "Next() if house_scene() == 'Occupied' else Break()"
-                - { start: "18:30", end: "22:00" }
-                
-        - v: 16
-          rules:
-            - weekdays: 7, 1
-              months: 1-3, 10-12
-              rules:
-                - x: "Next() if house_scene() == 'Coming Home' else Break()"
-                - { start: "10:00", end: "18:30" }
-                
-        - v: 18
-          rules:
-            - weekdays: 7, 1
-              months: 1-3, 10-12
-              rules:
-                - x: "Next() if house_scene() == 'Coming Home' else Break()"
-                - { start: "18:30", end: "22:00" }
+                - x: "Next() if house_scene() == 'Vacation' else Break()"
+                - { start: "08:00", end: "20:00" }
                 
         - v: 10
           rules:
             - months: 1-3, 10-12
               rules:
                 - x: "Next() if house_scene() == 'Going To Bed' else Break()"
-                - { start: "18:30", end: "22:00" }
                 
-        - v: 10
-          rules:
             - months: 1-3, 10-12
               rules:
                 - x: "Next() if house_scene() == 'Asleep' else Break()"
-                
-        - v: 8
-          rules:
-            - rules:
-                - x: "Next() if house_scene() == 'Asleep' else Break()"
-                
-        - v: 8
-          rules:
-            - rules:
-                - x: "Next() if house_scene() == 'Asleep' else Break()"
 
         - v: 12
-          months: 1-3, 10-12
+          rules:
+            - months: 1-3, 10-12
 
         - v: 10
