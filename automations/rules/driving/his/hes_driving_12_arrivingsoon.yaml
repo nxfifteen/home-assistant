@@ -32,17 +32,14 @@ action:
 - service: nest.set_away_mode
   data:
     away_mode: home
+  
+- condition: numeric_state
+  entity_id: sensor.family_family_state_raw
+  below: '4'
 
 - service: mqtt.publish
   data:
-    topic: tracker/family/state/raw
-    payload: 3
-    qos: 2
-    retain: true
-
-- service: mqtt.publish
-  data:
-    topic: tracker/family/state
+    topic: iot/scene/house
     payload: 'Coming Home'
     qos: 2
     retain: true

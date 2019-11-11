@@ -102,6 +102,7 @@ cards:
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ sensor.heating_state_graphable.state ]]"
       - sensor.heating_set_to
+      - schedy_room.schedy_heating_house
       - type: section
       - input_select.family_family_act_bedtime
       - input_select.light_scene
