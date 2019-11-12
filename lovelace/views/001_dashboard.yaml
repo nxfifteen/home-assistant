@@ -104,7 +104,10 @@ cards:
       - sensor.heating_set_to
       - type: section
       - schedy_room.schedy_heating_house
-      - schedy_stats.house_temp_delta
+      - schedy_stats.schedy_heating_house_temp_delta
+      - type: section
+      - watchdog.bedroom
+      - watchdog.livingroom
       - type: section
       - input_select.family_family_act_bedtime
       - input_select.light_scene
