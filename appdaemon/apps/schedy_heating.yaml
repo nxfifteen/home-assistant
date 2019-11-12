@@ -22,7 +22,7 @@ schedy_heating:  # This is our app instance name.
         house:
 
   schedule_append:
-    - v: 5
+    - v: 8
 
   rooms:
     house:
@@ -91,8 +91,3 @@ schedy_heating:  # This is our app instance name.
             - months: 1-3, 10-12
               rules:
                 - x: "Next() if house_scene() == 'Asleep' else Break()"
-
-        - v: 12
-          rules:
-            - months: 1-3, 10-12
-
