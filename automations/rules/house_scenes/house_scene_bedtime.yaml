@@ -7,6 +7,15 @@ trigger:
     to: 'Going To Bed'
 
 action:
+  - service: climate.set_temperature
+    data:
+      entity_id: climate.hallway
+      temperature: 10
+
+  - service: remote.turn_off
+    data:
+      entity_id: remote.living_room
+
   - service: script.turn_on
     data:
       entity_id: script.unifi_lights_off
@@ -27,10 +36,6 @@ action:
     data:
       entity_id: light.gf_living_lamp
       transition: 3
-
-  - service: switch.turn_off
-    data:
-      entity_id: switch.gf_living_tv_switch
 
   - service: light.turn_on
     data:
@@ -121,16 +126,8 @@ action:
     data:
       entity_id: script.alexa_do_not_disturb_switch_on
 
-  - delay: 00:10:00
+  - delay: 00:05:00
 
-  - service: light.turn_on
+  - service: switch.turn_off
     data:
-      entity_id: light.gf_studio_celing
-      brightness: 0
-      transition: 3
-
-  - service: light.turn_on
-    data:
-      entity_id: light.gf_living_celing
-      brightness: 0
-      transition: 3
+      entity_id: switch.gf_living_tv_switch
