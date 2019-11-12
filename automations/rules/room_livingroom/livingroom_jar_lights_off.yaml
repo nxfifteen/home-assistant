@@ -1,0 +1,14 @@
+---
+alias: Turn off Jar light with standing lamp
+
+trigger:
+- platform: state
+  entity_id: light.gf_living_lamp
+  from:  'on'
+  to:  'off'
+
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.gf_living_light_jar
+
