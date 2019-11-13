@@ -1,0 +1,34 @@
+---
+sensor:
+  - platform: plex_recently_added
+    name: plex_recently_added
+    token: !secret plex_server_token
+    host: !secret plex_server_host
+    port: 32400
+
+  - platform: plex_recently_added
+    name: plex_recently_added_movies
+    token: !secret plex_server_token
+    host: !secret plex_server_host
+    port: 32400
+    section_types:
+    - movie
+
+  - platform: plex_recently_added
+    name: plex_recently_added_tv
+    token: !secret plex_server_token
+    host: !secret plex_server_host
+    port: 32400
+    section_types:
+    - show
+
+homeassistant:
+  customize:
+    sensor.plex_recently_added:
+      friendly_name: Recently Added
+      
+    sensor.plex_recently_added_movies:
+      friendly_name: Recently Added Movies
+      
+    sensor.plex_recently_added_tv:
+      friendly_name: Recently Added TV
