@@ -109,6 +109,8 @@ cards:
       - watchdog.bedroom
       - watchdog.livingroom
       - type: section
+      - binary_sensor.car_wash
+      - type: section
       - input_select.family_family_act_bedtime
       - input_select.light_scene
 
