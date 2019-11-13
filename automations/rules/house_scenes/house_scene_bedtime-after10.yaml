@@ -9,6 +9,11 @@ trigger:
       minutes: 15
 
 action:
+  - service: climate.set_temperature
+    data:
+      entity_id: climate.hallway
+      temperature: 10
+
   - service: switch.turn_off
     data:
       entity_id: switch.occ_room_kitchen

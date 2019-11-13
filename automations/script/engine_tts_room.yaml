@@ -25,6 +25,8 @@ notify_tts_room:
               media_player.alexa_livingroom
             {% elif room == 'bedroom' %}
               media_player.alexa_bedroom
+            {% elif room == 'hallway' %}
+              media_player.alexa_hallway
             {% elif room == 'study' %}
               media_player.alexa_study
             {% elif room == 'kitchen' %}
