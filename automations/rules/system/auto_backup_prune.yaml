@@ -1,0 +1,13 @@
+---
+alias: Daily snapshot clean up
+initial_state: 'on'
+trigger: 
+  platform: time
+  at: '01:00:00'
+  
+action:
+  - service: clean_up_snapshots_service.clean_up
+    # Data is optional if you have defined the number of snapshots to keep in the configuration.yaml.
+    # data:
+      # If this property is passed to the service it will be used regardless of what you have in the configuration.yaml
+      # number_of_backups_to_keep: 7

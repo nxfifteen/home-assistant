@@ -1,0 +1,5 @@
+---
+clean_up_snapshots_service:
+  host: !secret http_base_url
+  token: !secret http_access_token
+  number_of_snapshots_to_keep: 6
