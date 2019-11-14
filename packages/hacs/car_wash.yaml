@@ -1,0 +1,5 @@
+---
+# Example configuration.yaml entry
+binary_sensor:
+  - platform: car_wash
+    weather: weather.dark_sky
