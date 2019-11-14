@@ -1,0 +1,13 @@
+---
+alias: Family State 0 - Switch
+
+trigger:
+  - entity_id: switch.family_family_vacation
+    platform: state
+    from: 'off'
+    to: 'on'
+
+action:
+  - service: script.turn_on
+    data:
+      entity_id: script.family_state_0

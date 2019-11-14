@@ -26,11 +26,6 @@ cards:
     card:
       type: glance
       title: People at home
-      
-  - type: custom:username-element
-    style:
-      top: 59.6%
-      left: 26.8%
 
   #################################################################
   #                                                               #
@@ -96,7 +91,7 @@ cards:
       - type: 'custom:text-divider-row'
         text: House
       - sensor.family_family_state
-      - sensor.family_family_state_raw
+      # - sensor.family_family_state_raw
       - switch.family_family_vacation
       - sensor.house_scene
       - sensor.light_scene
@@ -204,19 +199,19 @@ cards:
             include: true
             icon: mdi:whitewalker
 
-      - type: entities
-        show_header_toggle: false
-        entities:
-          - type: 'custom:text-divider-row'
-            text: Schedy
-          - sensor.heating_hvac
-          - entity: sensor.heating_state
-            type: custom:secondaryinfo-entity-row
-            secondary_info: "[[ sensor.heating_state_graphable.state ]]"
-          - sensor.heating_set_to
-          - type: section
-          - schedy_room.schedy_heating_house
-          - schedy_stats.schedy_heating_house_temp_delta
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Schedy
+      - sensor.heating_hvac
+      - entity: sensor.heating_state
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.heating_state_graphable.state ]]"
+      - sensor.heating_set_to
+      - type: section
+      - schedy_room.schedy_heating_house
+      - schedy_stats.schedy_heating_house_temp_delta
 
   #################################################################
   #                                                               #

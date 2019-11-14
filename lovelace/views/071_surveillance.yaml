@@ -1,7 +1,8 @@
 ---
 id: surveillance
-icon: mdi:shield-home
+icon: mdi:cctv
 title: Surveillance
+panel: true
 cards:
   - type: custom:surveillance-card
     thumb_interval: 15
