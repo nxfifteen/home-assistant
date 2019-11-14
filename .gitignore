@@ -40,3 +40,4 @@ redacted_users.txt
 !.gitlab-ci.yml
 !**/.gitkeep
 .androidkeys/.androidkeys
+www/custom-lovelace/upcoming-media-card/images/plex/
