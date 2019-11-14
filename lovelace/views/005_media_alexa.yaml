@@ -3,15 +3,6 @@ id: media_devices
 icon: mdi:kodi
 title: Media Devices
 cards:
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Alexa Groups
-      - sensor.media_everywhere_alexa
-      - sensor.media_downstairs_alexa
-      - sensor.media_upstairs_alexa
-
   - type: custom:upcoming-media-card
     entity: sensor.plex_recently_added
     title: Recently Added
@@ -23,6 +14,15 @@ cards:
   - type: custom:upcoming-media-card
     entity: sensor.plex_recently_added_tv
     title: Recently Added TV
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Alexa Groups
+      - sensor.media_everywhere_alexa
+      - sensor.media_downstairs_alexa
+      - sensor.media_upstairs_alexa
 
   - type: entities
     show_header_toggle: false
