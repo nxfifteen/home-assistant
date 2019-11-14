@@ -7,6 +7,7 @@ cards:
     show_header_toggle: false
     entities:
     - sensor.tay_road_bridge
+    - binary_sensor.car_wash
 
   - type: 'custom:travel-time-card'
     map: waze
