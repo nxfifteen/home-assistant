@@ -10,10 +10,6 @@ cards:
       action: toggle
     image: !secret person_kareen_picture
     elements:
-      - type: custom:username-element
-        style:
-          top: 59.6%
-          left: 26.8%
 
   - type: horizontal-stack
     cards:

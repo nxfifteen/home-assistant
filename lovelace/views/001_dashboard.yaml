@@ -26,6 +26,11 @@ cards:
     card:
       type: glance
       title: People at home
+      
+  - type: custom:username-element
+    style:
+      top: 59.6%
+      left: 26.8%
 
   #################################################################
   #                                                               #
