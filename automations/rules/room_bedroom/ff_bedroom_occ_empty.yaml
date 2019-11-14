@@ -22,7 +22,7 @@ condition:
 action:
   - service: light.turn_off
     data:
-      entity_id: group.lights_ff_bedroom
+      entity_id: group.light_ff_bedroom
 
   - service: switch.turn_off
     data:
