@@ -28,6 +28,7 @@ influxdb:
   include:
     domains:
        - sensor
+       - schedy_room
 
   tags:
     instance: prod

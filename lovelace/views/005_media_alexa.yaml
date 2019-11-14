@@ -3,18 +3,6 @@ id: media_devices
 icon: mdi:kodi
 title: Media Devices
 cards:
-  - type: custom:upcoming-media-card
-    entity: sensor.plex_recently_added
-    title: Recently Added
-
-  - type: custom:upcoming-media-card
-    entity: sensor.plex_recently_added_movies
-    title: Recently Added Movies
-
-  - type: custom:upcoming-media-card
-    entity: sensor.plex_recently_added_tv
-    title: Recently Added TV
-
   - type: entities
     show_header_toggle: false
     entities:

@@ -77,7 +77,6 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - binary_sensor.car_wash
           - input_select.light_scene
 
   #################################################################
@@ -204,22 +203,7 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Schedy
-      - sensor.heating_hvac
       - entity: sensor.heating_state
         type: custom:secondaryinfo-entity-row
-        secondary_info: "[[ sensor.heating_state_graphable.state ]]"
+        secondary_info: "[[ sensor.heating_hvac.state ]]"
       - sensor.heating_set_to
-      - type: section
-      - schedy_room.schedy_heating_house
-      - schedy_stats.schedy_heating_house_temp_delta
-
-  #################################################################
-  #                                                               #
-  #                   Tiles                                       #
-  #                                                               #
-  #################################################################
-  - type: entities
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Tiles
-      - device_tracker.tile_c426ca7f461b4da2
