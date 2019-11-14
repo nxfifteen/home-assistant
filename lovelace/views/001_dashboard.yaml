@@ -91,7 +91,7 @@ cards:
       - type: 'custom:text-divider-row'
         text: House
       - sensor.family_family_state
-      - sensor.family_family_state_raw
+      # - sensor.family_family_state_raw
       - switch.family_family_vacation
       - sensor.house_scene
       - sensor.light_scene
