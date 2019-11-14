@@ -3,40 +3,37 @@ id: dashboard
 title: Dashboard
 icon: mdi:home-assistant
 cards:
+  #####################
+  # Home - Clock Card #
+  #####################
+  - type: entity-filter
+    entities:
+      - person.stuart
+      - person.kareen
+      - person.john
+      - person.maureen
+      - person.allan
+      - person.colin
+      - person.irene
+      - person.kayleigh
+      - person.kev
+      - person.khristen
+      - person.mecha
+      - person.scott
+      - person.steve
+    state_filter:
+      - home
+    card:
+      type: glance
+      title: People at home
+
+  #################################################################
+  #                                                               #
+  #                      Home - Weather Card                      #
+  #                                                               #
+  #################################################################
   - type: vertical-stack
     cards:
-      #####################
-      # Home - Clock Card #
-      #####################
-      - type: vertical-stack
-        cards:
-          - type: entity-filter
-            entities:
-              - person.stuart
-              - person.kareen
-              - person.john
-              - person.maureen
-              - person.allan
-              - person.colin
-              - person.irene
-              - person.kayleigh
-              - person.kev
-              - person.khristen
-              - person.mecha
-              - person.scott
-              - person.steve
-            state_filter:
-              - home
-            card:
-              type: glance
-              title: People at home
-
-      #################################################################
-      #                                                               #
-      #                      Home - Weather Card                      #
-      #                                                               #
-      #################################################################
-
       - type: 'custom:dark-sky-weather-card'
         entity_current_conditions: sensor.dark_sky_icon
         entity_temperature: sensor.dark_sky_temperature
@@ -77,6 +74,12 @@ cards:
         entity_pop_4: sensor.dark_sky_precip_probability_4d
         entity_pop_5: sensor.dark_sky_precip_probability_5d
 
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - binary_sensor.car_wash
+          - input_select.light_scene
+
   #################################################################
   #                                                               #
   #                     Home - Presence Card                      #
@@ -97,23 +100,14 @@ cards:
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ sun.sun.attributes.elevation ]]"
       - type: section
-      - sensor.heating_hvac
-      - entity: sensor.heating_state
-        type: custom:secondaryinfo-entity-row
-        secondary_info: "[[ sensor.heating_state_graphable.state ]]"
-      - sensor.heating_set_to
-      - type: section
-      - schedy_room.schedy_heating_house
-      - schedy_stats.schedy_heating_house_temp_delta
-      - type: section
       - watchdog.bedroom
       - watchdog.livingroom
-      - type: section
-      - binary_sensor.car_wash
-      - type: section
-      - input_select.family_family_act_bedtime
-      - input_select.light_scene
 
+  #################################################################
+  #                                                               #
+  #                     Family - Presence Card                    #
+  #                                                               #
+  #################################################################
   - type: vertical-stack
     cards:
       - type: entities
@@ -153,10 +147,8 @@ cards:
   #                   Home - Temperature Card                     #
   #                                                               #
   #################################################################
-
   - type: vertical-stack
     cards:
-
       - type: custom:mini-graph-card
         entities:
          - sensor.hallway_thermostat_temperature
@@ -207,6 +199,25 @@ cards:
             include: true
             icon: mdi:whitewalker
 
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - type: 'custom:text-divider-row'
+            text: Schedy
+          - sensor.heating_hvac
+          - entity: sensor.heating_state
+            type: custom:secondaryinfo-entity-row
+            secondary_info: "[[ sensor.heating_state_graphable.state ]]"
+          - sensor.heating_set_to
+          - type: section
+          - schedy_room.schedy_heating_house
+          - schedy_stats.schedy_heating_house_temp_delta
+
+  #################################################################
+  #                                                               #
+  #                   Tiles                                       #
+  #                                                               #
+  #################################################################
   - type: entities
     entities:
       - type: 'custom:text-divider-row'
