@@ -112,22 +112,22 @@ cards:
       - entity: device_tracker.tile_353e0f954ad1a9af
         name: Camera
 
-  - type: entities
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Fitness
-      - entity: sensor.health_his_weight
-        type: custom:secondaryinfo-entity-row
-        secondary_info: "[[ sensor.health_his_weight_loss.state ]] kg Lost | [[ sensor.health_his_fat.state ]] % Fat | [[ sensor.health_his_bmi.state ]] BMI"
-      - entity: sensor.health_his_steps
-        type: custom:secondaryinfo-entity-row
-        secondary_info: "[[ sensor.health_his_distance.state ]] km"
-      - sensor.health_his_floors
-      - sensor.health_his_water
-      - sensor.health_his_calories
-      - entity: sensor.health_his_minutes_active
-        type: custom:secondaryinfo-entity-row
-        secondary_info: "Resting Heart Rate [[ sensor.health_his_resting_heart_rate.state ]] bpm"
+  # - type: entities
+  #   entities:
+  #     - type: 'custom:text-divider-row'
+  #       text: Fitness
+  #     - entity: sensor.health_his_weight
+  #       type: custom:secondaryinfo-entity-row
+  #       secondary_info: "[[ sensor.health_his_weight_loss.state ]] kg Lost | [[ sensor.health_his_fat.state ]] % Fat | [[ sensor.health_his_bmi.state ]] BMI"
+  #     - entity: sensor.health_his_steps
+  #       type: custom:secondaryinfo-entity-row
+  #       secondary_info: "[[ sensor.health_his_distance.state ]] km"
+  #     - sensor.health_his_floors
+  #     - sensor.health_his_water
+  #     - sensor.health_his_calories
+  #     - entity: sensor.health_his_minutes_active
+  #       type: custom:secondaryinfo-entity-row
+  #       secondary_info: "Resting Heart Rate [[ sensor.health_his_resting_heart_rate.state ]] bpm"
 
   - type: picture-elements
     image: /local/images/core_fit_1.png
