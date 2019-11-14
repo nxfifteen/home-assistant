@@ -105,6 +105,8 @@ grocy:
   api_key: !secret grocy_url_key
   sensor:
     - enabled: true
+  binary_sensor:
+    - enabled : true
 
 homeassistant:
   customize:
