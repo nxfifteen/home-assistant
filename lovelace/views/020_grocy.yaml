@@ -80,3 +80,11 @@ cards:
     - sensor.grocy_chore_change_the_bed_next
     - type: section
     - script.grocy_url_change_bed_done
+
+  - type: entities
+    title: House Stock
+    show_header_toggle: false
+    entities:
+    - sensor.grocy_stock_washing_powder
+    - sensor.grocy_stock_washing_softner
+    - sensor.grocy_stock_dishwasher_tabs
