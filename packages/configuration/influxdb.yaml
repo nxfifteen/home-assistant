@@ -30,7 +30,7 @@ influxdb:
        - sensor
        - binary_sensor
        - schedy_room
-
+       - device_tracker
   tags:
     instance: prod
     source: hass
