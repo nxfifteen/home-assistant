@@ -28,6 +28,7 @@ influxdb:
   include:
     domains:
        - sensor
+       - binary_sensor
        - schedy_room
 
   tags:
