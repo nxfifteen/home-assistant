@@ -12,6 +12,23 @@ device_tracker:
       - !secret his_ip_range
       - !secret her_ip_range
       - !secret guest_ip_range
+      - 192.168.1.10 # Bitwarden
+      - 192.168.1.103 # FIND3
+      - 192.168.1.100 # HA
+      - 192.168.1.1 # PiHole
+      - 192.168.0.2 # NAS
+      - 192.168.1.101 # OwnTracks
+      - 192.168.0.254 # UniFi
+      - 192.168.1.104 # ZWave
+      - 192.168.0.1 # USG
+      - 192.168.50.46 # Study AP
+      - 192.168.50.47 # Entry AP
+      - 192.168.50.48 # Server Room Switch
+      - 192.168.50.49 # Entertainment Switch
+      - 192.168.50.50 # First Floor Switch
+      - 192.168.50.51 # Ground Floor Switch
+      - 192.168.50.52 # Kitchen AP
+      - 192.168.50.53 # Office Switch
     interval_seconds: 20
     exclude:
       - !secret nmap_exclude_1
