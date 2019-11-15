@@ -8,10 +8,7 @@ frontend:
   javascript_version: auto
 
   # List of additional resources to load (latest javascript)
-  extra_html_url:
-    - /local/icons/fa/hass-fontawesome-solid.html
-    - /local/icons/fa/hass-fontawesome-regular.html
-    - /local/icons/fa/hass-fontawesome-brands.html
+  extra_html_url: []
 
   # List of additional resource to load (es5 javascript)
   extra_html_url_es5: []
