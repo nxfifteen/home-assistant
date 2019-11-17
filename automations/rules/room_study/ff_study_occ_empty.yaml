@@ -1,8 +1,9 @@
 ---
-alias: The Study is Occupied
+alias: Occ Empty - FF Study
 trigger:
   - platform: state
     entity_id: switch.occ_room_study
+    from: 'on'
     to: 'off'
     for:
       seconds: 90
