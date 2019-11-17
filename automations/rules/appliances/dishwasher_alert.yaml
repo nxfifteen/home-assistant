@@ -1,6 +1,6 @@
 ---
 # ## Dishwasher Alerts
-alias: Send alert when Dishwasher is finished
+alias: TTS / Send alert when Dishwasher is finished
 trigger:
   - platform: state
     entity_id: sensor.gf_dinning_dishwasher_status

@@ -1,5 +1,5 @@
 ---
-alias: Wake Up Him After Her
+alias: Alarm Clock / Wake Up Him After Her
 trigger:
   - platform: state
     entity_id: sensor.family_kareen_state
