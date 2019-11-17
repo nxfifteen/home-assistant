@@ -1,6 +1,5 @@
 ---
 alias: Occ Empty - FF Bedroom
-
 trigger:
 - entity_id: switch.occ_room_bedroom
   platform: state

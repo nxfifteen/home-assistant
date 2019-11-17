@@ -16,14 +16,16 @@ adb_plex_bedroom:
       data:
         entity_id: switch.ff_bedroom_tv_switch
 
+    - delay: 00:00:03
+
     - service: androidtv.adb_command
       data:
-        command: HOME
-        entity_id: media_player.bedroom_fire_tv_stick_2
+        command: "input keyevent 3"
+        entity_id: media_player.bedroom_fire_tv_stick_adb
 
     - delay: 00:00:03
 
     - service: androidtv.adb_command
       data_template:
-        entity_id: media_player.bedroom_fire_tv_stick_2
+        entity_id: media_player.bedroom_fire_tv_stick_adb
         command: "am start -a android.intent.action.VIEW -d -n com.plexapp.android/com.plexapp.plex.activities.SplashActivity"

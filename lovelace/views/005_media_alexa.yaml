@@ -17,9 +17,15 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: ADB Devices
-      - media_player.bedroom_fire_tv_stick_2
-      - media_player.kitchen_fire_tv_stick_2
-      - media_player.livingroom_fire_tv_stick_2
+      - entity: media_player.bedroom_fire_tv_stick_adb
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ media_player.bedroom_fire_tv_stick_adb.attributes.adb_response ]]"
+      - entity: media_player.kitchen_fire_tv_stick_adb
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ media_player.kitchen_fire_tv_stick_adb.attributes.adb_response ]]"
+      - entity: media_player.livingroom_fire_tv_stick_adb
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ media_player.livingroom_fire_tv_stick_adb.attributes.adb_response ]]"
 
   - type: entities
     show_header_toggle: false

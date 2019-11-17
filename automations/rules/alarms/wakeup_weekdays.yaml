@@ -1,4 +1,8 @@
 ---
+#RC# Plex Scripting
+#RM# Some comments about the script bellow.
+#RM# Nothing Fancy, just words
+#RM# or thoughts
 alias: Alarm Clock / Wake Up - Weekdays
 trigger:
   platform: time
