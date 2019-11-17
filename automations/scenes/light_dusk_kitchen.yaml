@@ -3,5 +3,4 @@ entities:
   group.light_gf_dinning:
     state: on
     transition: 5
-    rgb_color: [255,255,255]
     brightness: 150
