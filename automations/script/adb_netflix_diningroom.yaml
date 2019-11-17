@@ -1,7 +1,0 @@
-adb_netflix_diningroom:
-  alias: Watch Neflix in the Diningroom
-  sequence:
-    - service: media_player.select_source
-      data:
-        entity_id: media_player.kitchen_fire_tv_stick
-        source: 'com.netflix.ninja'

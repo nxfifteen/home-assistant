@@ -16,6 +16,33 @@ cards:
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
+        text: ADB Devices
+      - media_player.bedroom_fire_tv_stick_2
+      - media_player.kitchen_fire_tv_stick_2
+      - media_player.livingroom_fire_tv_stick_2
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: ADB Plex Commands
+      - script.adb_plex_kitchen
+      - script.adb_plex_bedroom
+      - script.adb_plex_livingroom
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: ADB Iplayer Commands
+      - script.adb_bbc_kitchen
+      - script.adb_bbc_bedroom
+      - script.adb_bbc_livingroom
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
         text: Plex MQTT
       - sensor.mqtt_plex_study_alexa
       - sensor.mqtt_plex_taichi_video

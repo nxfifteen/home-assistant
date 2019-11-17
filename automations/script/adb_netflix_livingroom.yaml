@@ -1,7 +1,0 @@
-adb_netflix_livingroom:
-  alias: Watch Neflix in the Livingroom
-  sequence:
-    - service: media_player.select_source
-      data:
-        entity_id: media_player.livingroom_fire_tv_stick
-        source: 'com.netflix.ninja'
