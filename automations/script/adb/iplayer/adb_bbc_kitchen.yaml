@@ -16,9 +16,11 @@ adb_bbc_kitchen:
       data:
         entity_id: switch.gf_dinning_tv_switch
 
+    - delay: 00:00:03
+
     - service: androidtv.adb_command
       data:
-        command: HOME
+        command: "input keyevent 3"
         entity_id: media_player.kitchen_fire_tv_stick_adb
 
     - delay: 00:00:03
