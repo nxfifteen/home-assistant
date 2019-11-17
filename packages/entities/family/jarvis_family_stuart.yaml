@@ -17,6 +17,11 @@ sensor:
     - seen
 
 - platform: mqtt
+  name: family_stuart_phone_state
+  state_topic: "tracker/family/stuart/phone/location"
+  value_template: "{{ value_json.state_human }}"
+
+- platform: mqtt
   name: family_stuart_locality
   state_topic: "tracker/family/stuart/phone/location"
   value_template: "{{ value_json.locality }}"
@@ -112,24 +117,10 @@ homeassistant:
     sensor.family_stuart_state_human:
       friendly_name: "Stuart's State"
 
+    sensor.family_stuart_phone_state:
+      friendly_name: "Stuart's Phone State"
+
     sensor.family_stuart_loc_room:
       friendly_name: "Stuart's Room Location"
       icon: mdi:google-classroom
-
-    sensor.pixel_2_xlpixel_2_xl_a2dp_sensor:
-      friendly_name: A2DP
-
-    sensor.pixel_2_xlpixel_2_xl_call_state_sensor:
-      friendly_name: Call State
-      icon: mdi:phone-hangup
-
-    sensor.pixel_2_xlpixel_2_xl_hfp_sensor:
-      friendly_name: HFP
-
-    sensor.pixel_2_xlpixel_2_xl_pressure_sensor:
-      friendly_name: Pressure
-      icon: mdi:thermometer
-
-    sensor.pixel_2_xlpixel_2_xl_wifi_sensor:
-      friendly_name: WiFi
-      icon: mdi:wifi
+      

@@ -17,6 +17,11 @@ sensor:
     - seen
 
 - platform: mqtt
+  name: family_kareen_phone_state
+  state_topic: "tracker/family/kareen/phone/location"
+  value_template: "{{ value_json.state_human }}"
+
+- platform: mqtt
   name: family_kareen_locality
   state_topic: "tracker/family/kareen/phone/location"
   value_template: "{{ value_json.locality }}"
@@ -106,6 +111,9 @@ homeassistant:
 
     sensor.family_kareen_state_human:
       friendly_name: "Kareen's State"
+
+    sensor.family_kareen_phone_state:
+      friendly_name: "Kareen's Phone State"
 
     sensor.family_kareen_loc_room:
       friendly_name: "Kareen's Room Location"
