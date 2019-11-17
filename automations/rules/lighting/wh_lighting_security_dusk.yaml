@@ -4,7 +4,7 @@ alias: Security Lighting - Dusk
 trigger:
 - entity_id: sensor.light_scene
   platform: state
-  to: Night
+  to: Dusk
 
 - entity_id: sensor.family_family_state_raw
   platform: state

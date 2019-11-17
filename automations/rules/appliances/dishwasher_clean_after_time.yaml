@@ -3,7 +3,7 @@
 # ## decide the Dishwasher has finished. This way, if the
 # ## Dishwasher is in between cycles and the power drops, we
 # ## won't mark the Dishwasher cycle as finished too early.
-alias: Set Dishwasher clean after timeout
+alias: Power Monitors / Set Dishwasher clean after timeout
 trigger:
   - platform: state
     entity_id: input_select.gf_dinning_dishwasher_status

@@ -1,7 +1,7 @@
 ---
 # ## When the power drops, move the state of the washing_machine to
 # ## Finishing.
-alias: Set washing machine finished when power drops
+alias: Power Monitors / Set washing machine finished when power drops
 trigger:
   - platform: numeric_state
     entity_id: switch.gf_dinning_washing_machine_switch

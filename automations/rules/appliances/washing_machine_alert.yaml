@@ -1,6 +1,6 @@
 ---
 # ## washing_machine Alerts
-alias: Send alert when washing machine is finished
+alias: TTS / Send alert when washing machine is finished
 trigger:
   - platform: state
     entity_id: sensor.gf_dinning_washing_machine_status

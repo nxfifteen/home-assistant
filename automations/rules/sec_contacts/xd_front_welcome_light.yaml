@@ -22,6 +22,9 @@ condition:
           state: Night
         - condition: state
           entity_id: sensor.light_scene
+          state: Morning
+        - condition: state
+          entity_id: sensor.light_scene
           state: Sunset
         - condition: state
           entity_id: sensor.light_scene

@@ -1,5 +1,5 @@
 ---
-alias: Set Dishwasher active when power detected
+alias: Grocy Stock / Set Dishwasher active when power detected
 trigger:
   - platform: numeric_state
     entity_id: switch.gf_dinning_dishwasher_switch

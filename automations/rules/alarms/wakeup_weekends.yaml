@@ -1,5 +1,5 @@
 ---
-alias: Wake Up - Weekends
+alias: Alarm Clock / Wake Up - Weekends
 trigger:
   platform: time
   at: '06:15:00'

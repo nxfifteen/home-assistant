@@ -1,7 +1,7 @@
 ---
 # ## When the power drops, move the state of the Dishwasher to
 # ## Finishing.
-alias: Set Dishwasher finished when power drops
+alias: Power Monitors / Set Dishwasher finished when power drops
 trigger:
   - platform: numeric_state
     entity_id: switch.gf_dinning_dishwasher_switch

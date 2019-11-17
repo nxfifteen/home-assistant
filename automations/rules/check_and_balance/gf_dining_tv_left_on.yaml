@@ -1,5 +1,5 @@
 ---
-alias: Dining Room TV Left On
+alias: Power Savers / Dining Room TV Left On
 
 trigger:
   - entity_id: sensor.gf_dinning_tv_power_2
