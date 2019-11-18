@@ -5,6 +5,8 @@ schedy_heating:  # This is our app instance name.
 
   actor_type: thermostat
 
+  debug: true
+
   expression_environment: |
     def house_scene():
         return state("sensor.house_scene")
