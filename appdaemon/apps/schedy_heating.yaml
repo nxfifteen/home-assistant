@@ -5,6 +5,8 @@ schedy_heating:  # This is our app instance name.
 
   actor_type: thermostat
 
+  debug: true
+
   expression_environment: |
     def house_scene():
         return state("sensor.house_scene")
@@ -23,74 +25,46 @@ schedy_heating:  # This is our app instance name.
 
   rooms:
     house:
+      friendly_name: House
       rescheduling_delay: 120
       actors:
         climate.hallway:
+
       schedule:
-        - v: 16
+        - months: 1-3, 10-12
+          weekdays: 7, 1
           rules:
-            - x: "Next() if house_scene() == 'Coming Home' else Break()"
-            - months: 1-3, 10-12
-            - { start: "08:00", end: "18:30" }
+            - x: "Next() if house_scene() == 'Occupied' else Break()"
+            - { start: "06:00", end: "10:00" }
+            - v: 14
 
-        - v: 18
-          rules:
-            - x: "Next() if house_scene() == 'Coming Home' else Break()"
-            - months: 1-3, 10-12
-            - { start: "18:31", end: "23:59" }
-                
-        - v: 11
-          rules:
-            - months: 1-3, 10-12
-            - x: "Next() if house_scene() == 'Vacation' else Break()"
-            - { start: "08:00", end: "20:00" }
-                
-        - v: 10
-          rules:
-            - months: 1-3, 10-12
-            - x: "Next() if house_scene() == 'No Ones Home - Security Watch' else Break()"
-            - { start: "08:00", end: "20:00" }
-                
-        - v: 13
-          rules:
-            - months: 1-3, 10-12
-            - x: "Next() if house_scene() == 'Guests Are Present' else Break()"
-            - { start: "08:00", end: "23:59" }
-                
-        - v: 14
-          rules:
-            - weekdays: 7, 1
-            - months: 1-3, 10-12
-            - x: "Next() if house_scene() == 'Occupied' else Break()"
-            - { start: "08:00", end: "10:00" }
-                
-        - v: 14
-          rules:
-            - weekdays: 2-6
-            - months: 1-3, 10-12
-            - x: "Next() if house_scene() == 'Occupied' else Break()"
-            - { start: "06:00", end: "07:30" }
-                
-        - v: 16
+        - months: 1-3, 10-12
+          weekdays: 2-6
           rules:
             - x: "Next() if house_scene() == 'Occupied' else Break()"
-            - months: 1-3, 10-12
+            - { start: "06:00", end: "07:00" }
+            - v: 14
+
+        - months: 1-3, 10-12
+          rules:
+            - x: "Next() if house_scene() == 'Occupied' else Break()"
             - { start: "10:00", end: "18:30" }
+            - v: 16
 
-        - v: 18
+        - months: 1-3, 10-12
           rules:
             - x: "Next() if house_scene() == 'Occupied' else Break()"
-            - months: 1-3, 10-12
             - { start: "18:31", end: "21:30" }
-                
-        - v: 10
-          rules:
-            - x: "Next() if house_scene() == 'Going To Bed' else Break()"
-            - months: 1-3, 10-12
-                
-        - v: 10
+            - v: 18
+
+        - months: 1-3, 10-12
           rules:
             - x: "Next() if house_scene() == 'Asleep' else Break()"
-            - months: 1-3, 10-12
-        
+            - v: 10
+
+        - months: 1-3, 10-12
+          rules:
+            - x: "Next() if house_scene() == 'Going To Bed' else Break()"
+            - v: 10
+
         - v: 8
