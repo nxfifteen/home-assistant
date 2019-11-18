@@ -95,6 +95,8 @@ cards:
       - sensor.house_scene
       - sensor.light_scene
       - type: section
+      - input_select.family_almost_home
+      - type: section
       - entity: sun.sun
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ sun.sun.attributes.elevation ]]"

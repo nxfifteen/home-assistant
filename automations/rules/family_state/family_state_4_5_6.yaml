@@ -26,6 +26,11 @@ condition:
       state:  '6'
 
 action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.family_almost_home
+      option: "No"
+
   - service: script.turn_on
     data:
       entity_id: script.family_state_4_5_6

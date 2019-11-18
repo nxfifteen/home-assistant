@@ -29,6 +29,11 @@ action:
     message: !include ../../../../entities/templates/driving_him.yaml
     notification_id: driving-alert-he
 
+- service: input_select.select_option
+  data:
+    entity_id: input_select.family_almost_home
+    option: "Yes"
+
 - service: nest.set_away_mode
   data:
     away_mode: home
