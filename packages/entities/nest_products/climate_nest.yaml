@@ -40,14 +40,14 @@ sensor:
             mdi:radiator-disabled
           {% endif %}
 
-  - platform: histroy_stats
-    name: heating_on_today
-    entity_id: sensor.heating_hvac
-    state: 'heating'
-    type: time
-    end:  '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
-    duration:
-      hours: 24
+  # - platform: histroy_stats
+  #   name: heating_on_today
+  #   entity_id: sensor.heating_hvac
+  #   state: 'heating'
+  #   type: time
+  #   end:  '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+  #   duration:
+  #     hours: 24
 
 homeassistant:
   customize:
