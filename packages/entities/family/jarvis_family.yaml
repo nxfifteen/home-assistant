@@ -26,6 +26,12 @@ sensor:
   state_topic: "iot/scene/house"
 
 input_select:
+  family_almost_home:
+    name: Almost Home
+    options:
+      - "No"
+      - "Yes"
+
   family_family_act_bedtime:
     name: Bedtime Indicator
     options:

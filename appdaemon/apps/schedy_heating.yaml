@@ -10,9 +10,13 @@ schedy_heating:  # This is our app instance name.
   expression_environment: |
     def house_scene():
         return state("sensor.house_scene")
+        
+    def family_almost_home():
+        return state("input_select.family_almost_home")
 
   watched_entities:
   - sensor.house_scene
+  - input_select.family_almost_home
 
   statistics:
     # Pick an arbitrary name for the parameter instance.
@@ -35,12 +39,12 @@ schedy_heating:  # This is our app instance name.
       schedule:
         - v: 16
           rules:
-            - x: "Next() if house_scene() == 'Coming Home' else Break()"
+            - x: "Next() if family_almost_home() == 'Yes' else Break()"
             - { months: "1-3, 10-12", start: "08:00", end: "18:30" }
 
         - v: 18
           rules:
-            - x: "Next() if house_scene() == 'Coming Home' else Break()"
+            - x: "Next() if family_almost_home() == 'Yes' else Break()"
             - { months: "1-3, 10-12", start: "18:31", end: "23:59" }
                 
         - v: 11
