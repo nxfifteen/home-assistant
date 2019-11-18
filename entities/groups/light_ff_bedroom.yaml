@@ -1,7 +1,7 @@
 ---
 light_ff_bedroom:
-  name: Study Lighting
+  name: Bedroom Lighting
   entities:
-    - light.ff_study_desk
-    - light.ff_study_wall
-    - light.ff_study_celing
+    - light.ff_bedroom_celing
+    - light.ff_bedroom_bedside_stuart
+    - light.ff_bedroom_bedside_kareen
