@@ -40,7 +40,7 @@ sensor:
             mdi:radiator-disabled
           {% endif %}
 
-  - platform: histroy-stats
+  - platform: histroy_stats
     name: heating_on_today
     entity_id: sensor.heating_hvac
     state: 'heating'
