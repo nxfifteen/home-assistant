@@ -12,6 +12,14 @@
 
 notify_tts_room:
   sequence:
+    - service: joaoapps_join.join_his_send_tasker
+      data_template:
+        command: "tts=:={{ value1 }} {{ value2 }} {{ value3 }}"
+
+    - service_template: notify.synchat_tts
+      data_template:
+        message: "{{ value1 }} {{ value2 }} {{ value3 }} {{ hastag }}"
+
     - condition: or
       conditions:
         - condition: state
