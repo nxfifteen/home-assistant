@@ -68,6 +68,9 @@ homeassistant:
       friendly_name: Heating HVAC
       icon: mdi:oil-temperature
 
+    sensor.heating_rescheduling:
+      friendly_name: Heating Rescheduling
+
     sensor.heating_state:
       friendly_name: Heating State
 
