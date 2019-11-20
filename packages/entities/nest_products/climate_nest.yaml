@@ -14,7 +14,7 @@ sensor:
 
       heating_rescheduling:
         value_template: >-
-          {{ states.schedy_room.schedy_heating_house.rescheduling | int | timestamp_custom("%d.%m.%Y %H:%M") }}
+          {{ states.schedy_room.schedy_heating_house.attributes.rescheduling_time | int | timestamp_custom("%H:%M") }}
 
       heating_state:
         value_template: >-
