@@ -35,17 +35,17 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Birthdays & Anniversaries
-      - entity: sensor.our_s_wedding_anniversary
+      - entity: sensor.anniversary_ours
         type: custom:secondaryinfo-entity-row
-        secondary_info: "Married for [[ sensor.our_s_wedding_anniversary.attributes.years ]] years in [[ sensor.our_s_wedding_anniversary.state ]] days"
+        secondary_info: "Married for [[ sensor.anniversary_ours.attributes.years_at_next_anniversary ]] years in [[ sensor.anniversary_ours.state ]] days"
 
-      - entity: sensor.kareen_s_birthday
+      - entity: sensor.birthday_kareen
         type: custom:secondaryinfo-entity-row
-        secondary_info: "Will be [[ sensor.kareen_s_birthday.attributes.years ]] in [[ sensor.kareen_s_birthday.state ]] days"
+        secondary_info: "Will be [[ sensor.birthday_kareen.attributes.years_at_next_anniversary ]] in [[ sensor.birthday_kareen.state ]] days"
 
-      - entity: sensor.stuart_s_birthday
+      - entity: sensor.birthday_stuart
         type: custom:secondaryinfo-entity-row
-        secondary_info: "Will be [[ sensor.stuart_s_birthday.attributes.years ]] in [[ sensor.stuart_s_birthday.state ]] days"
+        secondary_info: "Will be [[ sensor.birthday_stuart.attributes.years_at_next_anniversary ]] in [[ sensor.birthday_stuart.state ]] days"
 
   # - type: custom:grocy-chores-card
   #   entity: sensor.grocy
