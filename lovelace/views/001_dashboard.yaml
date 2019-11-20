@@ -205,6 +205,7 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Schedy
+      - input_select.heating_control
       - entity: sensor.heating_state
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[ sensor.heating_hvac.state ]]"

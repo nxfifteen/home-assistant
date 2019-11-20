@@ -13,7 +13,8 @@ sensor:
         value_template: "{{ states.climate.hallway.attributes.hvac_action }}"
 
       heating_rescheduling:
-        value_template: '{{ states.schedy_room.schedy_heating_house.rescheduling | int | timestamp_custom("%d.%m.%Y %H:%M") }}'
+        value_template: >-
+          {{ states.schedy_room.schedy_heating_house.rescheduling | int | timestamp_custom("%d.%m.%Y %H:%M") }}
 
       heating_state:
         value_template: >-
@@ -42,6 +43,13 @@ sensor:
           {% else %}
             mdi:radiator-disabled
           {% endif %}
+
+input_select:
+  heating_control:
+    name: Heating Control
+    options:
+      - "Automatic"
+      - "Manual"
 
 homeassistant:
   customize:

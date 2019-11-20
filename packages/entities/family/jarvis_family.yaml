@@ -31,19 +31,16 @@ input_select:
     options:
       - "No"
       - "Yes"
-
   family_family_act_bedtime:
     name: Bedtime Indicator
     options:
       - Idle
       - Bed Time
-
   family_family_act_wakeup:
     name: Wakeup Indicator
     options:
       - Idle
       - Good Morning
-
 homeassistant:
   customize:
     switch.family_family_vacation:
