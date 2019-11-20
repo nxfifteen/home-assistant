@@ -216,3 +216,47 @@ cards:
       - sensor.cert_nxfifteen_skizimport
       - sensor.cert_nxfifteen_your
       - sensor.cert_nxfifteen_xyz
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+      - type: 'custom:text-divider-row'
+        text: HealthCheck.io
+
+      - type: custom:vertical-stack-in-card
+        cards:
+
+        - type: horizontal-stack
+          cards:
+
+            - type: "custom:button-card"
+              color_type: icon
+              entity: binary_sensor.check_cron_one
+              state:
+                - value: "on"
+                  color: green
+                  icon: mdi:server-network
+                - operator: default
+                  color: red
+                  icon: mdi:server-network-off
+                  styles:
+                    card:
+                      - animation: blink 2s ease infinite
+              tap_action:
+                action: more-info
+
+            - type: "custom:button-card"
+              color_type: icon
+              entity: binary_sensor.check_cron_two
+              state:
+                - value: "on"
+                  color: green
+                  icon: mdi:server-network
+                - operator: default
+                  color: red
+                  icon: mdi:server-network-off
+                  styles:
+                    card:
+                      - animation: blink 2s ease infinite
+              tap_action:
+                action: more-info
