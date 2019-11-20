@@ -15,6 +15,12 @@ sensor:
       heating_rescheduling:
         value_template: >-
           {{ states.schedy_room.schedy_heating_house.attributes.rescheduling_time | int | timestamp_custom("%H:%M") }}
+        icon_template: >-
+          {% if is_state("input_select.heating_control", "Automatic") %}
+            mdi:radiator
+          {% else %}
+            mdi:radiator-disabled
+          {% endif %}
 
       heating_state:
         value_template: >-
