@@ -43,6 +43,7 @@ homeassistant:
   customize:
     switch.ff_landing_airfresh:
       friendly_name: Landing Air Freshner
+      icon: mdi:flower
       
     binary_sensor.ff_landing_airfresh_update_available:
       friendly_name: Landing Air Freshner Update Available

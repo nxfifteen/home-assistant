@@ -83,6 +83,7 @@ homeassistant:
   customize:
     switch.ff_bedroom_charger_stuart:
       friendly_name: Stuart's Phone Charger
+      icon: mdi:cellphone-arrow-down
       
     binary_sensor.ff_bedroom_charger_stuart_update_available:
       friendly_name: Stuart's Phone Charger Update Available
