@@ -1,0 +1,17 @@
+---
+alias: Propogate Bedtime Dropdown
+trigger:
+- entity_id: input_select.family_family_act_bedtime
+  from: Idle
+  to: 'Bed Time'
+  platform: state
+
+action:
+- delay: 00:00:01
+
+- service: mqtt.publish
+  data:
+    topic: iot/scene/house
+    payload: 'Going To Bed'
+    qos: 2
+    retain: true

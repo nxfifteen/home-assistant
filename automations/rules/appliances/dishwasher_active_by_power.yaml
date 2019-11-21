@@ -25,7 +25,7 @@ action:
 
   - service: shell_command.grocy_consume_item
     data:
-      server_ip: !secret grocy_url
+      grocy_url: !secret grocy_url
       grocy_key: !secret grocy_api_key
       product_id: 4
       amount: 1

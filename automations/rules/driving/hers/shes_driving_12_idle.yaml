@@ -1,0 +1,12 @@
+---
+alias: Her driving input_select - Idle
+trigger:
+  - platform: state
+    entity_id: sensor.family_kareen_drive_out
+    to: '0'
+
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.family_kareen_drive_dest_template
+      option: Idle
