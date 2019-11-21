@@ -48,7 +48,7 @@ cards:
         height: 74
         line_width: 2
         font_size: 65
-        hours_to_show: 32
+        hours_to_show: 12
         points_per_hour: 4
         show:
           icon: true
