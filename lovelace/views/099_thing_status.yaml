@@ -48,7 +48,7 @@ cards:
       - type: 'custom:text-divider-row'
         text: Seasonal
       - sun.sun
-      - switch.wh_seasonal_one
+      - switch.ff_landing_airfresh
       - switch.wh_seasonal_three
       - switch.wh_seasonal_four
 

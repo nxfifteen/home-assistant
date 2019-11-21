@@ -37,7 +37,7 @@ cards:
       - switch.ff_bedroom_fan_switch
       - switch.ff_bedroom_charger_stuart
       - type: section
-      - switch.wh_seasonal_one
+      - switch.ff_landing_airfresh
 
   - type: vertical-stack
     cards:
