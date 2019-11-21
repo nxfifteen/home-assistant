@@ -1,0 +1,12 @@
+---
+alias: His driving input_select - Arriving
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.family_stuart_drive_out
+    below: 5
+
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.family_stuart_drive_dest_template
+      option: 'is about to arrive %DEST% any minute now'

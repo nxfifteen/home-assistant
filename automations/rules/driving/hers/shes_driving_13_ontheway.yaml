@@ -1,0 +1,12 @@
+---
+alias: Her driving input_select - On The Way
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.family_kareen_drive_out
+    above: 30
+
+action:
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.family_kareen_drive_dest_template
+      option: 'is on the way %DEST% now'
