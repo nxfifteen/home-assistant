@@ -498,3 +498,10 @@ cards:
                           icon: mdi:harddisk
 
           - sensor.zwave_containers_active
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - switch.pve_findserver
+      - switch.pve_cicd
+      - switch.pve_dvr
