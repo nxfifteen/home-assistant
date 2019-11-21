@@ -3,7 +3,7 @@ alias: His driving input_select - Idle
 trigger:
   - platform: state
     entity_id: sensor.family_stuart_drive_out
-    to: 0
+    to: '0'
 
 action:
   - service: input_select.select_option
