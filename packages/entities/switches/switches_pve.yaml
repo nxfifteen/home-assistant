@@ -1,0 +1,21 @@
+---
+switch:
+  - platform: command_line
+    switches:
+      pve_findserver:
+        friendly_name: 'FIND3 Server'
+        command_on: /config/node-red/sh_proxmox_resume.sh 107
+        command_off: /config/node-red/sh_proxmox_pause.sh 107
+        command_state: /config/node-red/sh_proxmox_status.sh 107
+        
+      pve_cicd:
+        friendly_name: 'Gitlab CI/CD Worker'
+        command_on: /config/node-red/sh_proxmox_resume.sh 106
+        command_off: /config/node-red/sh_proxmox_pause.sh 106
+        command_state: /config/node-red/sh_proxmox_status.sh 106
+
+      pve_dvr:
+        friendly_name: 'DVR'
+        command_on: /config/node-red/sh_proxmox_resume.sh 114
+        command_off: /config/node-red/sh_proxmox_pause.sh 114
+        command_state: /config/node-red/sh_proxmox_status.sh 114

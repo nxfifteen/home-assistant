@@ -84,4 +84,6 @@ family_state_8:
       data:
         entity_id: script.alexa_do_not_disturb_switch_on
 
-    - service: shell_command.shell_pve_start_107
+    - service: switch.turn_on
+      data:
+        entity_id: switch.pve_findserver
