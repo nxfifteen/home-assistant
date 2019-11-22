@@ -37,7 +37,7 @@ binary_sensor:
     sensors:
       ff_landing_airfresh_update_available:
         value_template: >-
-          {{ (states.sensor.sonoff_firmware_version_available.state > states.sensor.ff_landing_airfresh_firmware.state) }}
+          {{ (states.sensor.sonoff_firmware_version_available.state != states.sensor.ff_landing_airfresh_firmware.state) }}
 
 homeassistant:
   customize:
