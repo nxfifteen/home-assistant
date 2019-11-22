@@ -2,10 +2,10 @@
 switch:    
   - platform: mqtt
     name: ff_bedroom_charger_stuart
-    state_topic: "iot/tasmo/ff_bedroom_charger_stuart/RESULT"
+    state_topic: "iot/tasmota/ff/bedroom/charger/stuart/stat/RESULT"
     value_template: "{{ value_json.POWER }}"
-    command_topic: "iot/tasmo/ff_bedroom_charger_stuart/cmnd/POWER"
-    availability_topic: "iot/tasmo/ff_bedroom_charger_stuart/LWT"
+    command_topic: "iot/tasmota/ff/bedroom/charger/stuart/cmnd/POWER"
+    availability_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/LWT"
     qos: 1
     payload_on: "ON"
     payload_off: "OFF"
@@ -16,58 +16,58 @@ switch:
 sensor:
   - platform: mqtt
     name: ff_bedroom_charger_stuart_firmware
-    state_topic: "iot/tasmo/ff_bedroom_charger_stuart/STATUS2"
+    state_topic: "iot/tasmota/ff/bedroom/charger/stuart/stat/STATUS2"
     value_template: 'v{{ value_json.StatusFWR.Version }}'
     qos: 0
-    availability_topic: "iot/tasmo/ff_bedroom_charger_stuart/LWT"
+    availability_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
 
   - platform: mqtt
-    state_topic: "iot/tasmo/ff_bedroom_charger_stuart/STATE"
+    state_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/STATE"
     name: ff_bedroom_charger_stuart_signal
     unit_of_measurement: "%"
     value_template: "{{value_json['Wifi'].RSSI }}"
-    availability_topic: "iot/tasmo/ff_bedroom_charger_stuart/LWT"
+    availability_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
 
   - platform: mqtt
     name: ff_bedroom_charger_stuart_power
-    state_topic: "iot/tasmo/ff_bedroom_charger_stuart/SENSOR"
+    state_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/SENSOR"
     value_template: "{{ value_json['ENERGY'].Power }}"
     unit_of_measurement: "W"
-    availability_topic: "iot/tasmo/ff_bedroom_charger_stuart/LWT"
+    availability_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/LWT"
     qos: 1
     payload_available: "Online"
     payload_not_available: "Offline"
     
   - platform: mqtt
     name: ff_bedroom_charger_stuart_power_today
-    state_topic: "iot/tasmo/ff_bedroom_charger_stuart/SENSOR"
+    state_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/SENSOR"
     value_template: "{{ value_json['ENERGY'].Today }}"
     unit_of_measurement: "kWh"
-    availability_topic: "iot/tasmo/ff_bedroom_charger_stuart/LWT"
+    availability_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/LWT"
     qos: 1
     payload_available: "Online"
     payload_not_available: "Offline"
 
   - platform: mqtt
     name: ff_bedroom_charger_stuart_power_yesterday
-    state_topic: "iot/tasmo/ff_bedroom_charger_stuart/SENSOR"
+    state_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/SENSOR"
     value_template: "{{ value_json['ENERGY'].Yesterday }}"
     unit_of_measurement: "kWh"
-    availability_topic: "iot/tasmo/ff_bedroom_charger_stuart/LWT"
+    availability_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/LWT"
     qos: 1
     payload_available: "Online"
     payload_not_available: "Offline"
 
   - platform: mqtt
     name: ff_bedroom_charger_stuart_power_total
-    state_topic: "iot/tasmo/ff_bedroom_charger_stuart/SENSOR"
+    state_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/SENSOR"
     value_template: "{{ value_json['ENERGY'].Total }}"
     unit_of_measurement: "kWh"
-    availability_topic: "iot/tasmo/ff_bedroom_charger_stuart/LWT"
+    availability_topic: "iot/tasmota/ff/bedroom/charger/stuart/tele/LWT"
     qos: 1
     payload_available: "Online"
     payload_not_available: "Offline"
