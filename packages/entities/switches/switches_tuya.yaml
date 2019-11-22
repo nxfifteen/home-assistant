@@ -7,10 +7,6 @@ tuya:
 
 homeassistant:
   customize:
-    switch.gf_studio_camera_switch:
-      friendly_name: Studio IP Camera
-      icon: mdi:camera-wireless
-
     switch.wh_seasonal_three:
       friendly_name: Seasonal Three
       icon: mdi:pine-tree

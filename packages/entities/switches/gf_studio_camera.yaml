@@ -1,0 +1,55 @@
+---
+switch:    
+  - platform: mqtt
+    name: gf_studio_camera_switch
+    state_topic: "iot/tasmota/gf/studio/cam/stat/RESULT"
+    value_template: "{{ value_json.POWER }}"
+    command_topic: "iot/tasmota/gf/studio/cam/cmnd/POWER"
+    availability_topic: "iot/tasmota/gf/studio/cam/tele/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+sensor:
+  - platform: mqtt
+    name: gf_studio_camera_firmware
+    state_topic: "iot/tasmota/gf/studio/cam/stat/STATUS2"
+    value_template: 'v{{ value_json.StatusFWR.Version }}'
+    qos: 0
+    availability_topic: "iot/tasmota/gf/studio/cam/tele/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    state_topic: "iot/tasmota/gf/studio/cam/tele/STATE"
+    name: gf_studio_camera_signal
+    unit_of_measurement: "%"
+    value_template: "{{value_json['Wifi'].RSSI }}"
+    availability_topic: "iot/tasmota/gf/studio/cam/tele/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+binary_sensor:
+  - platform: template
+    sensors:
+      gf_studio_camera_update_available:
+        value_template: >-
+          {{ (states.sensor.sonoff_firmware_version_available.state != states.sensor.gf_studio_camera_firmware.state) }}
+
+homeassistant:
+  customize:
+    switch.gf_studio_camera_switch:
+      friendly_name: Studio Camera
+      icon: mdi:camera-wireless
+      
+    binary_sensor.gf_studio_camera_update_available:
+      friendly_name: Studio Camera Update Available
+      
+    sensor.gf_studio_camera_firmware:
+      friendly_name: Studio Camera Firmware
+      
+    sensor.gf_studio_camera_signal:
+      friendly_name: Studio Camera Signal
