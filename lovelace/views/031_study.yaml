@@ -20,6 +20,20 @@ cards:
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
+        text: Study
+      - sensor.media_ff_study_alexa
+      - sensor.media_ff_study_plex_audio
+      - sensor.media_ff_study_plex_alexa
+      - type: section
+      - sensor.media_ff_study_plex_video
+      - type: section
+      - entity: switch.study_do_not_disturb_switch
+        name: Alexa - DND
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
         text: Power
       - sensor.ff_study_monitors_power_2
       - type: section
