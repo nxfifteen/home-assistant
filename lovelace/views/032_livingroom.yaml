@@ -104,26 +104,12 @@ cards:
         icon: true
         extrema: true
 
-  - type: custom:mini-graph-card
-    entities:
-      - sensor.gf_living_tv_power_2
-    name: TV
-    icon: mdi:television-classic
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 168
-    points_per_hour: 1
-    show:
-      icon: false
-      extrema: true
-    color_thresholds:
-      - value: 28
-        color: "#e74c3c"
-      - value: 15
-        color: "#1db954"
-      - value: 0
-        color: "#3498db"
+  - type: custom:decluttering-card
+    template: graph_power
+    variables:
+      - name: TV
+      - sensor: sensor.gf_living_tv_power_2
+      - icon: television-classic
 
   - type: entities
     show_header_toggle: false

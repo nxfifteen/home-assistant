@@ -8,33 +8,6 @@ cards:
 #              Things Status - Firmware Status Card             #
 #                                                               #
 #################################################################
-
-  #- type: vertical-stack
-  #  cards:
-  - type: entities
-    show_header_toggle: off
-    entities:
-    - type: 'custom:text-divider-row'
-      text: HOME ASSISTANT
-    - entity: input_boolean.ha_update_available
-      name: HA Update Available
-    - type: custom:bar-card
-      title_position: inside
-      align: center
-      padding: 4px
-      card_style:
-        border-radius: 5px
-      columns: 2
-      entities:
-        - entity: sensor.current_version
-          title: Current
-        - entity: sensor.latest_ha_version
-          title: Latest
-        - entity: sensor.latest_ha_version
-          title: Latest
-        - entity: binary_sensor.updater
-          title: HA Updates
-
   - type: entities
     show_header_toggle: off
     entities:
@@ -55,26 +28,6 @@ cards:
         text: Air Freshners
       - group.air_freshing
       - switch.ff_landing_airfresh
-
-  - type: entities
-    show_header_toggle: off
-    entities:
-    - type: 'custom:text-divider-row'
-      text: HOME ASSISTANT
-    - entity: input_boolean.ha_update_available
-      name: HA Update Available
-    - type: custom:bar-card
-      title_position: inside
-      align: center
-      padding: 4px
-      card_style:
-        border-radius: 5px
-      columns: 2
-      entities:
-        - entity: sensor.current_version
-          title: Current
-        - entity: sensor.latest_ha_version
-          title: Latest
 
   - type: custom:decluttering-card
     template: firmware_update

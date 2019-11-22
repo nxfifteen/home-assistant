@@ -77,6 +77,13 @@ cards:
           icon: true
           extrema: true
 
+  - type: custom:decluttering-card
+    template: graph_power
+    variables:
+      - name: Stuart's Phone Charger
+      - sensor: sensor.ff_bedroom_charger_stuart_power
+      - icon: cellphone-arrow-down
+
   - type: entities
     show_header_toggle: false
     title: Batteries
