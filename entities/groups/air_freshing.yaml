@@ -2,5 +2,5 @@
 air_freshing:
   name: Air Freshening
   entities:
-    - input_boolean.air_freshing
-    - switch.ff_landing_airfresh
+    - switch.ff_landing_airfresh_switch
+    - switch.gf_studio_airfresh_switch

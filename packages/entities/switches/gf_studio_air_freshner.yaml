@@ -1,0 +1,19 @@
+---
+switch:
+  - platform: mqtt
+    name: gf_studio_airfresh_switch
+    state_topic: "zwave/12/37/1/0"
+    command_topic: "zwave/12/37/1/0/set"
+    value_template: "{{ value_json.value }}"
+    state_on: true
+    state_off: false
+    payload_on: true
+    payload_off: false
+    qos: 0
+    retain: true
+
+homeassistant:
+  customize:
+    switch.gf_studio_airfresh_switch:
+      friendly_name: Studio Air Freshner
+      icon: mdi:flower

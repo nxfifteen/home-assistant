@@ -1,7 +1,7 @@
 ---
 switch:    
   - platform: mqtt
-    name: ff_landing_airfresh
+    name: ff_landing_airfresh_switch
     state_topic: "iot/tasmota/ff/landing/airfresh/stat/RESULT"
     value_template: "{{ value_json.POWER }}"
     command_topic: "iot/tasmota/ff/landing/airfresh/cmnd/POWER"
@@ -41,7 +41,7 @@ binary_sensor:
 
 homeassistant:
   customize:
-    switch.ff_landing_airfresh:
+    switch.ff_landing_airfresh_switch:
       friendly_name: Landing Air Freshner
       icon: mdi:flower
       
