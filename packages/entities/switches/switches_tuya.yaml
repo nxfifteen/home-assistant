@@ -11,10 +11,6 @@ homeassistant:
       friendly_name: Livingroom IP Camera
       icon: mdi:camera-wireless
 
-    switch.gf_hallway_camera_switch:
-      friendly_name: Hallway IP Camera
-      icon: mdi:camera-wireless
-
     switch.gf_studio_camera_switch:
       friendly_name: Studio IP Camera
       icon: mdi:camera-wireless
