@@ -49,10 +49,9 @@ cards:
         text: Plugs
       - switch.ff_bedroom_tv_switch
       - switch.ff_bedroom_fairylights_switch
-      - switch.ff_bedroom_fan_switch
       - switch.ff_bedroom_charger_stuart
       - type: section
-      - switch.ff_landing_airfresh
+      - switch.ff_landing_airfresh_switch
 
   - type: vertical-stack
     cards:
