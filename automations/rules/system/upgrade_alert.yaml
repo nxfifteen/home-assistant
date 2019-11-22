@@ -5,7 +5,7 @@
 alias: system_upgrade_alert
 trigger:
   platform: state
-  entity_id: input_boolean.ha_update_available
+  entity_id: input_boolean.updater
   to: 'on'
 
 action:

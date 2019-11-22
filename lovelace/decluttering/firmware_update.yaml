@@ -1,5 +1,5 @@
 ---
-firmware_update:
+card:
   type: entities
   show_header_toggle: off
   entities:

@@ -82,32 +82,12 @@ cards:
               extrema: true
               fill: true
 
-  - type: custom:mini-graph-card
-    entities:
-      - sensor.gf_dinning_washing_machine_power
-    name: Washing Machine
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 24
-    icon: mdi:washing-machine
-    show:
-      icon: true
-      extrema: true
-      icon_adaptive_color: true
-    color_thresholds:
-        # High
-      - value: 75
-        color: "#e74c3c"
-        # In Use
-      - value: 45
-        color: "#ffa500"
-        # Stand By
-      - value: 5
-        color: "#3498db"
-        # Off
-      - value: -1
-        color: "#1db954"
+  - type: custom:decluttering-card
+    template: graph_power
+    variables:
+      - name: Washing Machine
+      - sensor: sensor.gf_dinning_washing_machine_power
+      - icon: washing-machine
 
   - type: entities
     title: Washing Machine
@@ -126,32 +106,12 @@ cards:
     - sensor.grocy_stock_washing_powder
     - sensor.grocy_stock_washing_softner
 
-  - type: custom:mini-graph-card
-    entities:
-      - sensor.gf_dinning_dishwasher_power
-    name: Dishwasher
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 24
-    icon: mdi:dishwasher
-    show:
-      icon: true
-      extrema: true
-      icon_adaptive_color: true
-    color_thresholds:
-        # High
-      - value: 75
-        color: "#e74c3c"
-        # In Use
-      - value: 45
-        color: "#ffa500"
-        # Stand By
-      - value: 5
-        color: "#3498db"
-        # Off
-      - value: -1
-        color: "#1db954"
+  - type: custom:decluttering-card
+    template: graph_power
+    variables:
+      - name: Dishwasher
+      - sensor: sensor.gf_dinning_dishwasher_power
+      - icon: dishwasher
 
   - type: entities
     title: Dishwasher

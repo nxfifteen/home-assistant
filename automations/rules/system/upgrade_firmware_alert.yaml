@@ -1,0 +1,36 @@
+---
+# This alerts me on my iPhone when a new release
+# of Home Assistant for Hass.io is released.
+#
+alias: tasmo_upgrade_alert
+trigger:
+  - platform: state
+    entity_id: input_boolean.ff_bedroom_charger_stuart_update_available
+    to: 'on'
+
+  - platform: state
+    entity_id: input_boolean.ff_landing_airfresh_update_available
+    to: 'on'
+
+action:
+  - service: notify.synchat_nx
+    data_template:
+      message: >-
+        There is a Tasmo firmware upgrade pending!
+        Version {{ states('sensor.sonoff_firmware_version_available') }} just got released! #GitLab #CI #Failed
+
+  - service: persistent_notification.create
+    data_template:
+      title: Upgrade time!
+      message: >-
+        There is a Tasmo firmware upgrade pending!
+        Version {{ states('sensor.sonoff_firmware_version_available') }} just got released!
+      notification_id: hassio_upgrade
+
+  - service: notify.alexa_media
+    data:
+      target:
+        - media_player.study
+      data:
+        type: announce
+      message: "There is a Tasmo firmware upgrade pending!"

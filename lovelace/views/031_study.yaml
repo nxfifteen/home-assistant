@@ -116,61 +116,19 @@ cards:
         icon: true
         extrema: true
 
-  - type: custom:mini-graph-card
-    entities:
-      - sensor.ff_study_loading_pi_power
-    name: Loading Station
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 24
-    points_per_hour: 6
-    icon: mdi:power-socket-uk
-    show:
-      icon: true
-      extrema: true
-      icon_adaptive_color: true
-    color_thresholds:
-        # High
-      - value: 75
-        color: "#e74c3c"
-        # In Use
-      - value: 45
-        color: "#ffa500"
-        # Stand By
-      - value: 5
-        color: "#3498db"
-        # Off
-      - value: -1
-        color: "#1db954"
+  - type: custom:decluttering-card
+    template: graph_power
+    variables:
+      - name: Loading Station
+      - sensor: sensor.ff_study_loading_pi_power
+      - icon: power-socket-uk
 
-  - type: custom:mini-graph-card
-    entities:
-      - sensor.study_sterio_power
-    name: Sterio
-    height: 74
-    line_width: 2
-    font_size: 65
-    hours_to_show: 24
-    points_per_hour: 6
-    icon: mdi:power-socket-uk
-    show:
-      icon: true
-      extrema: true
-      icon_adaptive_color: true
-    color_thresholds:
-        # High
-      - value: 75
-        color: "#e74c3c"
-        # In Use
-      - value: 45
-        color: "#ffa500"
-        # Stand By
-      - value: 5
-        color: "#3498db"
-        # Off
-      - value: -1
-        color: "#1db954"
+  - type: custom:decluttering-card
+    template: graph_power
+    variables:
+      - name: Sterio
+      - sensor: sensor.study_sterio_power
+      - icon: power-socket-uk
 
   - type: entities
     show_header_toggle: false
