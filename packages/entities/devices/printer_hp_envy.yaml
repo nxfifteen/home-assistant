@@ -16,10 +16,19 @@ sensor:
     state_topic: iot/sensors/printers/HPEnvy
     value_template: "{{ value_json.black.level }}"
 
+  - platform: mqtt
+    name: "printer_hp_impressions"
+    state_topic: iot/sensors/printers/HPEnvy
+    value_template: "{{ value_json.impressions }}"
+
 homeassistant:
   customize:
     sensor.printer_hp:
       friendly_name: "HP Envy 4500 Series"
+      icon: mdi:printer-wireless
+      
+    sensor.printer_hp_impressions:
+      friendly_name: "Prints"
       icon: mdi:printer-wireless
 
     sensor.printer_hp_colour:

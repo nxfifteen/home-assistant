@@ -20,6 +20,21 @@ cards:
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
+        text: Bedroom
+      - sensor.media_ff_bedroom_alexa
+      - sensor.media_ff_bedroom_plex_audio
+      - sensor.media_ff_bedroom_plex_alexa
+      - type: section
+      - sensor.media_ff_bedroom_plex_fire
+      - sensor.media_ff_bedroom_fire_tv
+      - type: section
+      - entity: switch.bedroom_do_not_disturb_switch
+        name: Alexa - DND
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
         text: Lights
       - light.ff_bedroom_celing
       - light.ff_bedroom_bedside_stuart

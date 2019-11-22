@@ -29,4 +29,4 @@ adb_plex_livingroom:
     - service: androidtv.adb_command
       data_template:
         entity_id: media_player.livingroom_fire_tv_stick_adb
-        command: "am start -a android.intent.action.VIEW -d -n com.plexapp.android/com.plexapp.plex.activities.SplashActivity"
+        command: "monkey -p com.plexapp.android -c android.intent.category.LAUNCHER 1"

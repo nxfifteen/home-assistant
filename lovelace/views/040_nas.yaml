@@ -109,6 +109,10 @@ cards:
                 title: Colour
                 icon: mdi:alpha-c-box
 
+          - entity: sensor.printer_hp_impressions
+            name: Prints
+            icon: mdi:harddisk
+
   - type: vertical-stack
     cards:
       - type: entities

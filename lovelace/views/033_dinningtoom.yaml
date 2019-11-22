@@ -20,6 +20,20 @@ cards:
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
+        text: Kitchen
+      - sensor.media_gf_kitchen_alexa
+      - sensor.media_gf_kitchen_plex_alexa
+      - type: section
+      - sensor.media_gf_kitchen_fire_tv
+      - sensor.media_gf_kitchen_plex_fire
+      - type: section
+      - entity: switch.kitchen_do_not_disturb_switch
+        name: Alexa - DND
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
         text: Lights
       - light.gf_dinning_at_kitchen
       - light.gf_dinning_dinner_table
