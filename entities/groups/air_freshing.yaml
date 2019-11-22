@@ -1,6 +1,6 @@
 ---
 air_freshing:
-  name: Air Freshening
+  name: Air Fresheners
   entities:
     - switch.ff_landing_airfresh_switch
     - switch.gf_studio_airfresh_switch
