@@ -69,7 +69,7 @@ cards:
         text: Lights
       - light.gf_living_celing
       - light.gf_living_lamp
-      - switch.gf_living_light_jar
+      - switch.gf_living_light_jar_switch
       - type: section
       - light.gf_hallway_celing
 

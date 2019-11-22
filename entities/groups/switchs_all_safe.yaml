@@ -10,4 +10,4 @@ switchs_all_safe:
     - switch.gf_dinning_tv_switch
     - switch.gf_living_tv_switch
     - switch.ff_study_sterio_switch
-    - switch.gf_living_light_jar
+    - switch.gf_living_light_jar_switch

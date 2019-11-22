@@ -19,10 +19,6 @@ homeassistant:
       friendly_name: Studio IP Camera
       icon: mdi:camera-wireless
 
-    switch.gf_living_light_jar:
-      friendly_name: Livingroom Light Jar
-      icon: mdi:flower
-
     switch.wh_seasonal_three:
       friendly_name: Seasonal Three
       icon: mdi:pine-tree
