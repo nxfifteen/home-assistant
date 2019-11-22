@@ -1,15 +1,17 @@
 ---
-power_graph:    # This is the name of another template
+default:
+  - icon: power-socket-uk
+card:
   type: custom:mini-graph-card
   entities:
-    - [[sensor]]
-  name: [[name]]
+    - '[[sensor]]'
+  name: '[[name]]'
   height: 74
   line_width: 2
   font_size: 65
   hours_to_show: 24
-  points_per_hour: 6
-  icon: mdi:power-socket-uk
+  points_per_hour: 1
+  icon: 'mdi:[[icon]]'
   show:
     icon: true
     extrema: true
