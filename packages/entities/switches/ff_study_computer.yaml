@@ -1,0 +1,107 @@
+---
+switch:    
+  - platform: mqtt
+    name: ff_study_computer_switch
+    state_topic: "iot/tasmota/ff/study/computer/stat/RESULT"
+    value_template: "{{ value_json.POWER }}"
+    command_topic: "iot/tasmota/ff/study/computer/cmnd/POWER"
+    availability_topic: "iot/tasmota/ff/study/computer/tele/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+sensor:
+  - platform: mqtt
+    name: ff_study_computer_firmware
+    state_topic: "iot/tasmota/ff/study/computer/stat/STATUS2"
+    value_template: 'v{{ value_json.StatusFWR.Version }}'
+    qos: 0
+    availability_topic: "iot/tasmota/ff/study/computer/tele/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    state_topic: "iot/tasmota/ff/study/computer/tele/STATE"
+    name: ff_study_computer_signal
+    unit_of_measurement: "%"
+    value_template: "{{value_json['Wifi'].RSSI }}"
+    availability_topic: "iot/tasmota/ff/study/computer/tele/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    name: ff_study_computer_power
+    state_topic: "iot/tasmota/ff/study/computer/tele/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Power }}"
+    unit_of_measurement: "W"
+    availability_topic: "iot/tasmota/ff/study/computer/tele/LWT"
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    
+  - platform: mqtt
+    name: ff_study_computer_power_today
+    state_topic: "iot/tasmota/ff/study/computer/tele/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Today }}"
+    unit_of_measurement: "kWh"
+    availability_topic: "iot/tasmota/ff/study/computer/tele/LWT"
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    name: ff_study_computer_power_yesterday
+    state_topic: "iot/tasmota/ff/study/computer/tele/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Yesterday }}"
+    unit_of_measurement: "kWh"
+    availability_topic: "iot/tasmota/ff/study/computer/tele/LWT"
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    name: ff_study_computer_power_total
+    state_topic: "iot/tasmota/ff/study/computer/tele/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Total }}"
+    unit_of_measurement: "kWh"
+    availability_topic: "iot/tasmota/ff/study/computer/tele/LWT"
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+binary_sensor:
+  - platform: template
+    sensors:
+      ff_study_computer_update_available:
+        value_template: >-
+          {{ (states.sensor.sonoff_firmware_version_available.state != states.sensor.ff_study_computer_firmware.state) }}
+
+homeassistant:
+  customize:
+    switch.ff_study_computer_switch:
+      friendly_name: Stuart's Computer
+      icon: mdi:cellphone-arrow-down
+      
+    binary_sensor.ff_study_computer_update_available:
+      friendly_name: Stuart's Computer Update Available
+      
+    sensor.ff_study_computer_firmware:
+      friendly_name: Stuart's Computer Firmware
+      
+    sensor.ff_study_computer_signal:
+      friendly_name: Stuart's Computer Signal
+      
+    sensor.ff_study_computer_power:
+      friendly_name: Stuart's Computer Power
+      
+    sensor.ff_study_computer_power_today:
+      friendly_name: Stuart's Computer Energy Today
+      
+    sensor.ff_study_computer_power_yesterday:
+      friendly_name: Stuart's Computer Energy Yesterday
+      
+    sensor.ff_study_computer_power_total:
+      friendly_name: Stuart's Computer Energy Today
