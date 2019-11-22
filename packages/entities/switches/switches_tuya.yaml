@@ -7,10 +7,6 @@ tuya:
 
 homeassistant:
   customize:
-    switch.gf_living_camera_switch:
-      friendly_name: Livingroom IP Camera
-      icon: mdi:camera-wireless
-
     switch.gf_studio_camera_switch:
       friendly_name: Studio IP Camera
       icon: mdi:camera-wireless

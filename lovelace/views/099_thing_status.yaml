@@ -77,3 +77,11 @@ cards:
       - update_available: binary_sensor.gf_hallway_camera_update_available
       - current_version: sensor.gf_hallway_camera_firmware
       - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Livingroom Camera
+      - update_available: binary_sensor.gf_living_camera_update_available
+      - current_version: sensor.gf_living_camera_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
