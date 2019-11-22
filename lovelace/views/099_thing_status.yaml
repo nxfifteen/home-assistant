@@ -33,7 +33,7 @@ cards:
     template: firmware_update
     variables:
       - name: HOME ASSISTANT
-      - update_available: input_boolean.ha_update_available
+      - update_available: input_boolean.updater
       - current_version: sensor.current_version
       - latest_version: sensor.latest_ha_version
 
