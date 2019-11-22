@@ -55,6 +55,14 @@ family_state_4_5_6:
     - service: script.turn_on
       data:
         entity_id: script.alexa_do_not_disturb_switch_off
+      
+    - service: switch.turn_on
+      data:
+        entity_id: switch.gf_dinning_washing_machine_switch
+      
+    - service: switch.turn_on
+      data:
+        entity_id: switch.gf_dinning_dishwasher_switch
 
     - service: switch.turn_on
       data:
