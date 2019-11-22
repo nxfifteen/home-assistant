@@ -78,6 +78,8 @@ cards:
         show_header_toggle: false
         entities:
           - input_select.light_scene
+          - sensor.tay_road_bridge
+          - binary_sensor.car_wash
 
   #################################################################
   #                                                               #
