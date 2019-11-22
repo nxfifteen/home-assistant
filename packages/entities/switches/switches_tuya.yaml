@@ -19,14 +19,6 @@ homeassistant:
       friendly_name: Studio IP Camera
       icon: mdi:camera-wireless
 
-    switch.ff_bedroom_charger_stuart:
-      friendly_name: Stuarts Phone Charger
-      icon: mdi:cellphone-arrow-down
-
-    switch.wh_seasonal_one:
-      friendly_name: Landing AirFresh
-      icon: mdi:flower
-
     switch.gf_living_light_jar:
       friendly_name: Livingroom Light Jar
       icon: mdi:flower

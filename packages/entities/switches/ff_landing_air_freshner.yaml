@@ -1,0 +1,55 @@
+---
+switch:    
+  - platform: mqtt
+    name: ff_landing_airfresh
+    state_topic: "iot/tasmo/ff_landing_airfresh/RESULT"
+    value_template: "{{ value_json.POWER }}"
+    command_topic: "iot/tasmo/ff_landing_airfresh/cmnd/POWER"
+    availability_topic: "iot/tasmo/ff_landing_airfresh/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+sensor:
+  - platform: mqtt
+    name: ff_landing_airfresh_firmware
+    state_topic: "iot/tasmo/ff_landing_airfresh/STATUS2"
+    value_template: 'v{{ value_json.StatusFWR.Version }}'
+    qos: 0
+    availability_topic: "iot/tasmo/ff_landing_airfresh/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    state_topic: "iot/tasmo/ff_landing_airfresh/STATE"
+    name: ff_landing_airfresh_signal
+    unit_of_measurement: "%"
+    value_template: "{{value_json['Wifi'].RSSI }}"
+    availability_topic: "iot/tasmo/ff_landing_airfresh/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+binary_sensor:
+  - platform: template
+    sensors:
+      ff_landing_airfresh_update_available:
+        value_template: >-
+          {{ (states.sensor.sonoff_firmware_version_available.state > states.sensor.ff_landing_airfresh_firmware.state) }}
+
+homeassistant:
+  customize:
+    switch.ff_landing_airfresh:
+      friendly_name: Landing Air Freshner
+      icon: mdi:flower
+      
+    binary_sensor.ff_landing_airfresh_update_available:
+      friendly_name: Landing Air Freshner Update Available
+      
+    sensor.ff_landing_airfresh_firmware:
+      friendly_name: Landing Air Freshner Firmware
+      
+    sensor.ff_landing_airfresh_signal:
+      friendly_name: Landing Air Freshner Signal
