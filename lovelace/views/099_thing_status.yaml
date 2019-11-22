@@ -61,3 +61,11 @@ cards:
       - update_available: binary_sensor.gf_living_light_jar_update_available
       - current_version: sensor.gf_living_light_jar_firmware
       - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Kitchen Camera
+      - update_available: binary_sensor.gf_kitchen_camera_update_available
+      - current_version: sensor.gf_kitchen_camera_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
