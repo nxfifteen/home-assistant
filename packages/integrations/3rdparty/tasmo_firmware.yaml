@@ -1,6 +1,0 @@
----
-sensor:
-  - platform: mqtt
-    name: Sonoff Firmware Version Available
-    state_topic: "webhooks/tasmo/latest"
-    qos: 0
