@@ -31,19 +31,25 @@ cards:
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
-        text: ADB Plex Commands
-      - script.adb_plex_kitchen
-      - script.adb_plex_bedroom
-      - script.adb_plex_livingroom
+        text: Watch Plex in ...
+      - entity: script.adb_plex_kitchen
+        name: Start Plex in Kitchen
+      - entity: script.adb_plex_bedroom
+        name: Start Plex in Bedroom
+      - entity: script.adb_plex_livingroom
+        name: Start Plex in Livingroom
 
   - type: entities
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
-        text: ADB Iplayer Commands
-      - script.adb_bbc_kitchen
-      - script.adb_bbc_bedroom
-      - script.adb_bbc_livingroom
+        text: Watch iPlayer in ...
+      - entity: script.adb_bbc_kitchen
+        name: Start iPlayer in Kitchen
+      - entity: script.adb_bbc_bedroom
+        name: Start iPlayer in Bedroom
+      - entity: script.adb_bbc_livingroom
+        name: Start iPlayer in Livingroom
 
   - type: entities
     show_header_toggle: false
