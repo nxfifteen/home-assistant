@@ -77,7 +77,7 @@ binary_sensor:
     sensors:
       ff_bedroom_charger_stuart_update_available:
         value_template: >-
-          {{ (states.sensor.sonoff_firmware_version_available.state > states.sensor.ff_bedroom_charger_stuart_firmware.state) }}
+          {{ (states.sensor.sonoff_firmware_version_available.state != states.sensor.ff_bedroom_charger_stuart_firmware.state) }}
 
 homeassistant:
   customize:

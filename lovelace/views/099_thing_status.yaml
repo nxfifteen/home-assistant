@@ -40,15 +40,62 @@ cards:
     entities:
       - input_boolean.speech_notifications
       - input_boolean.text_notifications
-      - input_boolean.guest_mode
-      - group.air_freshing
 
   - type: entities
     entities:
       - type: 'custom:text-divider-row'
         text: Seasonal
       - sun.sun
-      - switch.ff_landing_airfresh
       - switch.wh_seasonal_three
       - switch.wh_seasonal_four
 
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Air Freshners
+      - group.air_freshing
+      - switch.ff_landing_airfresh
+
+  - type: entities
+    show_header_toggle: off
+    entities:
+    - type: 'custom:text-divider-row'
+      text: HOME ASSISTANT
+    - entity: input_boolean.ha_update_available
+      name: HA Update Available
+    - type: custom:bar-card
+      title_position: inside
+      align: center
+      padding: 4px
+      card_style:
+        border-radius: 5px
+      columns: 2
+      entities:
+        - entity: sensor.current_version
+          title: Current
+        - entity: sensor.latest_ha_version
+          title: Latest
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: HOME ASSISTANT
+      - update_available: input_boolean.ha_update_available
+      - current_version: sensor.current_version
+      - latest_version: sensor.latest_ha_version
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Stuart's Phone Charger
+      - update_available: binary_sensor.ff_bedroom_charger_stuart_update_available
+      - current_version: sensor.ff_bedroom_charger_stuart_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Landing Air Freshner
+      - update_available: binary_sensor.ff_landing_airfresh_update_available
+      - current_version: sensor.ff_landing_airfresh_firmware
+      - latest_version: sensor.sonoff_firmware_version_available

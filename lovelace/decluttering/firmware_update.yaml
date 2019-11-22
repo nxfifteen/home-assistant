@@ -1,0 +1,21 @@
+---
+firmware_update:
+  type: entities
+  show_header_toggle: off
+  entities:
+  - type: 'custom:text-divider-row'
+    text: '[[name]]'
+  - entity: '[[update_available]]'
+    name: Update Available
+  - type: custom:bar-card
+    title_position: inside
+    align: center
+    padding: 4px
+    card_style:
+      border-radius: 5px
+    columns: 2
+    entities:
+      - entity: '[[current_version]]'
+        title: Current
+      - entity: '[[latest_version]]'
+        title: Latest

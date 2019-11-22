@@ -27,6 +27,37 @@ cards:
           - type: section
           - script.find_phone_kareen
 
+  - type: 'custom:travel-time-card'
+    map: waze
+    entities:
+      - entity: sensor.commute_kareen_home
+        zone: zone.home
+      - entity: sensor.commute_kareen_work_a
+        zone: zone.newport
+      - entity: sensor.commute_kareen_work_b
+        zone: zone.tayport
+
+  - type: entities
+    show_header_toggle: false
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Kareen
+      - entity: sensor.commute_kareen_home
+        name: Kareen Home
+        icon: mdi:home-account
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+      - entity: sensor.commute_kareen_work_a
+        name: Newport
+        icon: mdi:cash-usd
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+      - entity: sensor.commute_kareen_work_b
+        name: Tayport
+        icon: mdi:cash-usd
+        type: custom:secondaryinfo-entity-row
+        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+
   - type: custom:mini-graph-card
     entities:
      - sensor.family_kareen_battery_phone
