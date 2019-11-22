@@ -2,17 +2,12 @@
 switchs_all_safe:
   name: Switchs That Are Safe
   entities:
+    - switch.ff_landing_airfresh_switch
     - switch.ff_bedroom_fairylights_switch
-    - switch.ff_bedroom_fan_switch
+    - switch.gf_studio_airfresh_switch
     - switch.ff_bedroom_tv_switch
     - switch.ff_study_monitors_switch
     - switch.gf_dinning_tv_switch
     - switch.gf_living_tv_switch
-    - switch.occ_room_bedroom
-    - switch.occ_room_hallway
-    - switch.occ_room_kitchen
-    - switch.occ_room_landing
-    - switch.occ_room_livingroom
-    - switch.occ_room_studio
     - switch.ff_study_sterio_switch
     - switch.gf_living_light_jar

@@ -1,7 +1,7 @@
 ---
 switch:
   - platform: mqtt
-    name: ff_bedroom_fan_switch
+    name: gf_studio_airfresh_switch
     state_topic: "zwave/12/37/1/0"
     command_topic: "zwave/12/37/1/0/set"
     value_template: "{{ value_json.value }}"
@@ -14,6 +14,6 @@ switch:
 
 homeassistant:
   customize:
-    switch.ff_bedroom_fan_switch:
-      friendly_name: Bedroom Fan
-      icon: mdi:fan
+    switch.gf_studio_airfresh_switch:
+      friendly_name: Studio Air Freshner
+      icon: mdi:flower

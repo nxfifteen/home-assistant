@@ -27,7 +27,8 @@ cards:
       - type: 'custom:text-divider-row'
         text: Air Freshners
       - group.air_freshing
-      - switch.ff_landing_airfresh
+      - switch.ff_landing_airfresh_switch
+      - switch.gf_studio_airfresh_switch
 
   - type: custom:decluttering-card
     template: firmware_update
