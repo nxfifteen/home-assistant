@@ -26,7 +26,7 @@ family_state_1_2_3:
 
     - service: switch.turn_off
       data:
-        entity_id: switch.gf_living_light_jar
+        entity_id: switch.gf_living_light_jar_switch
 
     - service: script.turn_on
       data:

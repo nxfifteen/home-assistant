@@ -4,8 +4,12 @@ my_computer:
   sequence:
     - service: switch.turn_on
       data:
-        entity_id: switch.wol_his_computer
+        entity_id: switch.ff_study_monitors_switch
 
     - service: switch.turn_on
       data:
-        entity_id: switch.ff_study_monitors_switch
+        entity_id: switch.ff_study_computer_switch
+
+    - service: switch.turn_on
+      data:
+        entity_id: switch.wol_his_computer

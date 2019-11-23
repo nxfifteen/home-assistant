@@ -53,3 +53,51 @@ cards:
       - update_available: binary_sensor.ff_landing_airfresh_update_available
       - current_version: sensor.ff_landing_airfresh_firmware
       - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Livingroom Light Jar
+      - update_available: binary_sensor.gf_living_light_jar_update_available
+      - current_version: sensor.gf_living_light_jar_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Kitchen Camera
+      - update_available: binary_sensor.gf_kitchen_camera_update_available
+      - current_version: sensor.gf_kitchen_camera_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Hallway Camera
+      - update_available: binary_sensor.gf_hallway_camera_update_available
+      - current_version: sensor.gf_hallway_camera_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Livingroom Camera
+      - update_available: binary_sensor.gf_living_camera_update_available
+      - current_version: sensor.gf_living_camera_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Studio Camera
+      - update_available: binary_sensor.gf_studio_camera_update_available
+      - current_version: sensor.gf_studio_camera_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Stuart's Computer
+      - update_available: binary_sensor.ff_study_computer_update_available
+      - current_version: sensor.ff_study_computer_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
