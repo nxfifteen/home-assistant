@@ -86,7 +86,6 @@ cards:
         text: Plugs
       - script.my_computer
       - switch.ff_study_monitors_switch
-      - switch.ff_study_computer_switch
       - switch.wol_his_computer
       - type: section
       - switch.ff_study_sterio_switch
@@ -143,13 +142,6 @@ cards:
     variables:
       - name: Sterio
       - sensor: sensor.study_sterio_power
-      - icon: power-socket-uk
-
-  - type: custom:decluttering-card
-    template: graph_power
-    variables:
-      - name: Computer
-      - sensor: sensor.ff_study_computer_power
       - icon: power-socket-uk
 
   - type: entities
