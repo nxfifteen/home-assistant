@@ -17,6 +17,11 @@ sensor:
     - seen
 
 - platform: mqtt
+  name: family_stuart_phone_charging
+  state_topic: "tracker/family/stuart/phone/location"
+  value_template: "{{ value_json.charging }}"
+
+- platform: mqtt
   name: family_stuart_phone_state
   state_topic: "tracker/family/stuart/phone/location"
   value_template: "{{ value_json.state_human }}"

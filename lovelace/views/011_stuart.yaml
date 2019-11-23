@@ -26,6 +26,7 @@ cards:
             name: Locality
           - type: section
           - script.find_phone_stuart
+          - sensor.family_stuart_phone_charging
 
   - type: 'custom:travel-time-card'
     map: waze
