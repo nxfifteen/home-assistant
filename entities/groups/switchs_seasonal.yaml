@@ -1,0 +1,7 @@
+---
+switchs_seasonal:
+  name: Seasonal Switches
+  entities:
+    - switch.wh_seasonal_one_switch
+    - switch.wh_seasonal_two_switch
+    - switch.wh_seasonal_three_switch

@@ -1,0 +1,107 @@
+---
+switch:    
+  - platform: mqtt
+    name: wh_seasonal_one_switch
+    state_topic: "iot/tasmota/wh/seasonal/one/stat/RESULT"
+    value_template: "{{ value_json.POWER }}"
+    command_topic: "iot/tasmota/wh/seasonal/one/cmnd/POWER"
+    availability_topic: "iot/tasmota/wh/seasonal/one/tele/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+sensor:
+  - platform: mqtt
+    name: wh_seasonal_one_firmware
+    state_topic: "iot/tasmota/wh/seasonal/one/stat/STATUS2"
+    value_template: 'v{{ value_json.StatusFWR.Version }}'
+    qos: 0
+    availability_topic: "iot/tasmota/wh/seasonal/one/tele/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    state_topic: "iot/tasmota/wh/seasonal/one/tele/STATE"
+    name: wh_seasonal_one_signal
+    unit_of_measurement: "%"
+    value_template: "{{value_json['Wifi'].RSSI }}"
+    availability_topic: "iot/tasmota/wh/seasonal/one/tele/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    name: wh_seasonal_one_power
+    state_topic: "iot/tasmota/wh/seasonal/one/tele/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Power }}"
+    unit_of_measurement: "W"
+    availability_topic: "iot/tasmota/wh/seasonal/one/tele/LWT"
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    
+  - platform: mqtt
+    name: wh_seasonal_one_power_today
+    state_topic: "iot/tasmota/wh/seasonal/one/tele/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Today }}"
+    unit_of_measurement: "kWh"
+    availability_topic: "iot/tasmota/wh/seasonal/one/tele/LWT"
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    name: wh_seasonal_one_power_yesterday
+    state_topic: "iot/tasmota/wh/seasonal/one/tele/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Yesterday }}"
+    unit_of_measurement: "kWh"
+    availability_topic: "iot/tasmota/wh/seasonal/one/tele/LWT"
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    name: wh_seasonal_one_power_total
+    state_topic: "iot/tasmota/wh/seasonal/one/tele/SENSOR"
+    value_template: "{{ value_json['ENERGY'].Total }}"
+    unit_of_measurement: "kWh"
+    availability_topic: "iot/tasmota/wh/seasonal/one/tele/LWT"
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+binary_sensor:
+  - platform: template
+    sensors:
+      wh_seasonal_one_update_available:
+        value_template: >-
+          {{ (states.sensor.sonoff_firmware_version_available.state != states.sensor.wh_seasonal_one_firmware.state) }}
+
+homeassistant:
+  customize:
+    switch.wh_seasonal_one_switch:
+      friendly_name: Seasonal (One)
+      icon: mdi:cellphone-arrow-down
+      
+    binary_sensor.wh_seasonal_one_update_available:
+      friendly_name: Seasonal (One) Update Available
+      
+    sensor.wh_seasonal_one_firmware:
+      friendly_name: Seasonal (One) Firmware
+      
+    sensor.wh_seasonal_one_signal:
+      friendly_name: Seasonal (One) Signal
+      
+    sensor.wh_seasonal_one_power:
+      friendly_name: Seasonal (One) Power
+      
+    sensor.wh_seasonal_one_power_today:
+      friendly_name: Seasonal (One) Energy Today
+      
+    sensor.wh_seasonal_one_power_yesterday:
+      friendly_name: Seasonal (One) Energy Yesterday
+      
+    sensor.wh_seasonal_one_power_total:
+      friendly_name: Seasonal (One) Energy Today

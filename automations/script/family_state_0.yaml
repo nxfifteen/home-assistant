@@ -81,3 +81,7 @@ family_state_0:
     - service: switch.turn_off
       data:
         entity_id: switch.pve_findserver
+
+    - service: switch.turn_off
+      data:
+        entity_id: group.switchs_all_safe

@@ -19,8 +19,9 @@ cards:
       - type: 'custom:text-divider-row'
         text: Seasonal
       - sun.sun
+      - switch.wh_seasonal_one
+      - switch.wh_seasonal_two
       - switch.wh_seasonal_three
-      - switch.wh_seasonal_four
 
   - type: entities
     entities:
@@ -92,4 +93,28 @@ cards:
       - name: Studio Camera
       - update_available: binary_sensor.gf_studio_camera_update_available
       - current_version: sensor.gf_studio_camera_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Seasonal One
+      - update_available: binary_sensor.wh_seasonal_one_update_available
+      - current_version: sensor.wh_seasonal_one_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Seasonal Two
+      - update_available: binary_sensor.wh_seasonal_two_update_available
+      - current_version: sensor.wh_seasonal_two_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Seasonal Three
+      - update_available: binary_sensor.wh_seasonal_three_update_available
+      - current_version: sensor.wh_seasonal_three_firmware
       - latest_version: sensor.sonoff_firmware_version_available
