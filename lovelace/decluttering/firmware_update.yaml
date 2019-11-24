@@ -7,6 +7,8 @@ card:
     text: '[[name]]'
   - entity: '[[update_available]]'
     name: Update Available
+  - entity: '[[signal]]'
+    name: Signal Strength
   - type: custom:bar-card
     title_position: inside
     align: center

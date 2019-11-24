@@ -4,6 +4,12 @@ trigger:
   - platform: state
     entity_id: sensor.family_stuart_drive_out
     to: '0'
+  - platform: state
+    entity_id: sensor.family_stuart_drive_ignition
+    to: 'False'
+  - platform: state
+    entity_id: sensor.family_stuart_drive_dest
+    to: 'None'
 
 action:
   - service: input_select.select_option

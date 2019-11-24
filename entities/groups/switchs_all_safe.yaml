@@ -11,3 +11,6 @@ switchs_all_safe:
     - switch.gf_living_tv_switch
     - switch.ff_study_sterio_switch
     - switch.gf_living_light_jar_switch
+    - switch.wh_seasonal_one_switch
+    - switch.wh_seasonal_two_switch
+    - switch.wh_seasonal_three_switch

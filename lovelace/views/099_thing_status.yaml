@@ -19,8 +19,9 @@ cards:
       - type: 'custom:text-divider-row'
         text: Seasonal
       - sun.sun
+      - switch.wh_seasonal_one
+      - switch.wh_seasonal_two
       - switch.wh_seasonal_three
-      - switch.wh_seasonal_four
 
   - type: entities
     entities:
@@ -35,6 +36,7 @@ cards:
     variables:
       - name: HOME ASSISTANT
       - update_available: binary_sensor.updater
+      - signal: sensor.hacs
       - current_version: sensor.current_version
       - latest_version: sensor.latest_ha_version
 
@@ -43,6 +45,7 @@ cards:
     variables:
       - name: Stuart's Phone Charger
       - update_available: binary_sensor.ff_bedroom_charger_stuart_update_available
+      - signal: sensor.ff_bedroom_charger_stuart_signal
       - current_version: sensor.ff_bedroom_charger_stuart_firmware
       - latest_version: sensor.sonoff_firmware_version_available
 
@@ -51,6 +54,7 @@ cards:
     variables:
       - name: Landing Air Freshner
       - update_available: binary_sensor.ff_landing_airfresh_update_available
+      - signal: sensor.ff_landing_airfresh_signal
       - current_version: sensor.ff_landing_airfresh_firmware
       - latest_version: sensor.sonoff_firmware_version_available
 
@@ -59,6 +63,7 @@ cards:
     variables:
       - name: Livingroom Light Jar
       - update_available: binary_sensor.gf_living_light_jar_update_available
+      - signal: sensor.gf_living_light_jar_signal
       - current_version: sensor.gf_living_light_jar_firmware
       - latest_version: sensor.sonoff_firmware_version_available
 
@@ -67,6 +72,7 @@ cards:
     variables:
       - name: Kitchen Camera
       - update_available: binary_sensor.gf_kitchen_camera_update_available
+      - signal: sensor.gf_kitchen_camera_signal
       - current_version: sensor.gf_kitchen_camera_firmware
       - latest_version: sensor.sonoff_firmware_version_available
 
@@ -75,6 +81,7 @@ cards:
     variables:
       - name: Hallway Camera
       - update_available: binary_sensor.gf_hallway_camera_update_available
+      - signal: sensor.gf_hallway_camera_signal
       - current_version: sensor.gf_hallway_camera_firmware
       - latest_version: sensor.sonoff_firmware_version_available
 
@@ -83,6 +90,7 @@ cards:
     variables:
       - name: Livingroom Camera
       - update_available: binary_sensor.gf_living_camera_update_available
+      - signal: sensor.gf_living_camera_signal
       - current_version: sensor.gf_living_camera_firmware
       - latest_version: sensor.sonoff_firmware_version_available
 
@@ -91,13 +99,33 @@ cards:
     variables:
       - name: Studio Camera
       - update_available: binary_sensor.gf_studio_camera_update_available
+      - signal: sensor.gf_studio_camera_signal
       - current_version: sensor.gf_studio_camera_firmware
       - latest_version: sensor.sonoff_firmware_version_available
 
   - type: custom:decluttering-card
     template: firmware_update
     variables:
-      - name: Stuart's Computer
-      - update_available: binary_sensor.ff_study_computer_update_available
-      - current_version: sensor.ff_study_computer_firmware
+      - name: Seasonal One
+      - update_available: binary_sensor.wh_seasonal_one_update_available
+      - signal: sensor.wh_seasonal_one_signal
+      - current_version: sensor.wh_seasonal_one_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Seasonal Two
+      - update_available: binary_sensor.wh_seasonal_two_update_available
+      - signal: sensor.wh_seasonal_two_signal
+      - current_version: sensor.wh_seasonal_two_firmware
+      - latest_version: sensor.sonoff_firmware_version_available
+
+  - type: custom:decluttering-card
+    template: firmware_update
+    variables:
+      - name: Seasonal Three
+      - update_available: binary_sensor.wh_seasonal_three_update_available
+      - signal: sensor.wh_seasonal_three_signal
+      - current_version: sensor.wh_seasonal_three_firmware
       - latest_version: sensor.sonoff_firmware_version_available

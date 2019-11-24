@@ -14,6 +14,10 @@ family_state_7:
 
     - service: switch.turn_off
       data:
+        entity_id: group.switchs_seasonal
+
+    - service: switch.turn_off
+      data:
         entity_id: switch.gf_living_light_jar_switch
 
     - service: switch.turn_off

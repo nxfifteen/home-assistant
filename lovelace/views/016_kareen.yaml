@@ -26,6 +26,7 @@ cards:
             name: Locality
           - type: section
           - script.find_phone_kareen
+          - sensor.family_kareen_phone_charging
 
   - type: 'custom:travel-time-card'
     map: waze
