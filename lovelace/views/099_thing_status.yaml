@@ -19,9 +19,9 @@ cards:
       - type: 'custom:text-divider-row'
         text: Seasonal
       - sun.sun
-      - switch.wh_seasonal_one
-      - switch.wh_seasonal_two
-      - switch.wh_seasonal_three
+      - switch.wh_seasonal_one_switch
+      - switch.wh_seasonal_two_switch
+      - switch.wh_seasonal_three_switch
 
   - type: entities
     entities:
