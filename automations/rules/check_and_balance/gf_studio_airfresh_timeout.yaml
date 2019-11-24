@@ -1,0 +1,14 @@
+---
+alias: Turn off gf_studio_airfresh_switch after an hour
+
+trigger:
+- platform: state
+  entity_id: switch.gf_studio_airfresh_switch
+  to:  'on'
+  for:
+    minutes: 59
+
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.gf_studio_airfresh_switch
