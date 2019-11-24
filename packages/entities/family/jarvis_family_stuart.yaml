@@ -11,6 +11,11 @@ sensor:
   value_template: '{{ value_json.state.human }}'
 
 - platform: mqtt
+  name: family_stuart_state_reason
+  state_topic: "tracker/family/stuart"
+  value_template: '{{ value_json.gps.t }}'
+
+- platform: mqtt
   name: family_stuart_loc_room
   state_topic: "tracker/family/stuart"
   value_template: '{{ value_json.room.loc }}'
