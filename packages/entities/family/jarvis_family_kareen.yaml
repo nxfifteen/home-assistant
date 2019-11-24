@@ -2,71 +2,79 @@
 sensor:
 - platform: mqtt
   name: family_kareen_state
-  state_topic: "tracker/family/kareen/state"
+  state_topic: "tracker/family/kareen"
+  value_template: '{{ value_json.state.int }}'
 
 - platform: mqtt
   name: family_kareen_state_human
-  state_topic: "tracker/family/kareen/state/human"
+  state_topic: "tracker/family/kareen"
+  value_template: '{{ value_json.state.human }}'
+
+- platform: mqtt
+  name: family_kareen_state_reason
+  state_topic: "tracker/family/kareen"
+  value_template: '{{ value_json.gps.t }}'
 
 - platform: mqtt
   name: family_kareen_loc_room
-  state_topic: "tracker/family/kareen/room"
-  value_template: '{{ value_json.loc }}'
-  json_attributes:
-    - prob
-    - seen
+  state_topic: "tracker/family/kareen"
+  value_template: '{{ value_json.room.loc }}'
+
+- platform: mqtt
+  name: family_kareen_loc_room_prob
+  state_topic: "tracker/family/kareen"
+  value_template: '{{ value_json.room.prob }}'
 
 - platform: mqtt
   name: family_kareen_phone_charging
-  state_topic: "tracker/family/kareen/phone/location"
+  state_topic: "tracker/family/kareen"
   value_template: "{{ value_json.charging }}"
 
 - platform: mqtt
   name: family_kareen_phone_state
-  state_topic: "tracker/family/kareen/phone/location"
-  value_template: "{{ value_json.state_human }}"
+  state_topic: "tracker/family/kareen"
+  value_template: "{{ value_json.state.human }}"
 
 - platform: mqtt
   name: family_kareen_locality
-  state_topic: "tracker/family/kareen/phone/location"
-  value_template: "{{ value_json.locality }}"
+  state_topic: "tracker/family/kareen"
+  value_template: "{{ value_json.gps.locality }}"
 
 - platform: mqtt
   name: family_kareen_battery_phone
-  state_topic: "tracker/family/kareen/phone/location"
+  state_topic: "tracker/family/kareen"
   unit_of_measurement: '%'
-  value_template: "{{ value_json.batt }}"
+  value_template: "{{ value_json.battery_level }}"
 
 - platform: mqtt
   name: family_kareen_drive_ignition
-  state_topic: "tracker/family/kareen/phone/location"
-  value_template: "{{ value_json.ignition }}"
+  state_topic: "tracker/family/kareen"
+  value_template: "{{ value_json.eta.ignition }}"
 
 - platform: mqtt
   name: family_kareen_drive_speed
-  state_topic: "tracker/family/kareen/phone/location"
-  value_template: "{{ value_json.vel }}"
+  state_topic: "tracker/family/kareen"
+  value_template: "{{ value_json.gps.vel }}"
 
 - platform: mqtt
   name: family_kareen_drive_dest
-  state_topic: "tracker/family/kareen/phone/location"
-  value_template: "{{ value_json.dest }}"
+  state_topic: "tracker/family/kareen"
+  value_template: "{{ value_json.eta.dest }}"
 
 - platform: mqtt
   name: family_kareen_drive_eta
-  state_topic: "tracker/family/kareen/phone/location"
-  value_template: "{{ value_json.eta }}"
+  state_topic: "tracker/family/kareen"
+  value_template: "{{ value_json.eta.eta }}"
 
 - platform: mqtt
   name: family_kareen_drive_out
-  state_topic: "tracker/family/kareen/phone/location"
-  value_template: "{{ value_json.out }}"
+  state_topic: "tracker/family/kareen"
+  value_template: "{{ value_json.eta.out }}"
 
 - platform: mqtt
   name: family_kareen_drive_dist
-  state_topic: "tracker/family/kareen/phone/location"
-  value_template: "{{ value_json.dist }}"
-
+  state_topic: "tracker/family/kareen"
+  value_template: "{{ value_json.eta.dist }}"
 input_select:
   kareen:
     options:

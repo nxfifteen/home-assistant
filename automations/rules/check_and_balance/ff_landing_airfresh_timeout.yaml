@@ -1,0 +1,14 @@
+---
+alias: Turn off ff_landing_airfresh_switch after an hour
+
+trigger:
+- platform: state
+  entity_id: switch.ff_landing_airfresh_switch
+  to:  'on'
+  for:
+    minutes: 59
+
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.ff_landing_airfresh_switch
