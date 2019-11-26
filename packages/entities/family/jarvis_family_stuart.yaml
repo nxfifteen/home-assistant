@@ -16,6 +16,21 @@ sensor:
   value_template: '{{ value_json.gps.t }}'
 
 - platform: mqtt
+  name: family_stuart_state_activity
+  state_topic: "tracker/family/stuart"
+  value_template: '{{ value_json.gps.activity }}'
+
+- platform: mqtt
+  name: family_stuart_state_flex
+  state_topic: "tracker/family/stuart"
+  value_template: '{{ value_json.state.flex }}'
+
+- platform: mqtt
+  name: family_stuart_state_tent_pole
+  state_topic: "tracker/family/stuart"
+  value_template: '{{ value_json.state.tent_pole }}'
+
+- platform: mqtt
   name: family_stuart_loc_room
   state_topic: "tracker/family/stuart"
   value_template: '{{ value_json.room.loc }}'

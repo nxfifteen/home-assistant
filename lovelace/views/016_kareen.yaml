@@ -22,11 +22,16 @@ cards:
             name: Tasker
           - entity: sensor.family_kareen_loc_room
             name: Room
+            type: custom:secondaryinfo-entity-row
+            secondary_info: "[[ sensor.family_kareen_loc_room_prob.state ]]"
           - entity: sensor.family_kareen_locality
             name: Locality
           - type: section
           - script.find_phone_kareen
           - sensor.family_kareen_phone_charging
+          - type: section
+          - sensor.family_kareen_state_reason
+          - sensor.family_kareen_state_activity
 
   - type: 'custom:travel-time-card'
     map: waze
