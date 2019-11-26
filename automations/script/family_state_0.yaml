@@ -78,10 +78,6 @@ family_state_0:
       data:
         entity_id: switch.gf_dinning_dishwasher_switch
 
-    - service: switch.turn_on
-      data:
-        entity_id: switch.pve_findserver
-
     - service: switch.turn_off
       data:
         entity_id: group.switchs_all_safe
