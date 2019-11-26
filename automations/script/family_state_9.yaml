@@ -79,7 +79,3 @@ family_state_9:
     - service: switch.turn_on
       data:
         entity_id: switch.gf_dinning_dishwasher_switch
-
-    - service: switch.turn_on
-      data:
-        entity_id: switch.pve_findserver
