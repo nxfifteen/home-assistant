@@ -3,7 +3,7 @@ unifi_wifi_guest_off:
   sequence:
     - service: mqtt.publish
       data:
-        topic: unifi/set/wifi/NxFriends/enabled
+        topic: disabeled/unifi/set/wifi/NxFriends/enabled
         payload: "off"
         qos: 2
         retain: true

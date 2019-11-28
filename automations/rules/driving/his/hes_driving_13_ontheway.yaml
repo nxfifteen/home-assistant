@@ -1,9 +1,9 @@
 ---
 alias: His driving input_select - On The Way
 trigger:
-  - platform: numeric_state
+  - platform: state
     entity_id: sensor.family_stuart_drive_out
-    above: 30
+    from: '0'
 
 action:
   - service: input_select.select_option
