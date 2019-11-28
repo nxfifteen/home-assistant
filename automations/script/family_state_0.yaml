@@ -36,10 +36,6 @@ family_state_0:
 
     - service: switch.turn_on
       data:
-        entity_id: switch.unifi_wifi_guest
-
-    - service: switch.turn_on
-      data:
         entity_id: switch.family_family_vacation
 
     - service: switch.turn_on

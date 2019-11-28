@@ -24,10 +24,6 @@ family_state_4_5_6:
       data:
         entity_id: script.unifi_lights_on
 
-    - service: switch.turn_on
-      data:
-        entity_id: switch.unifi_wifi_guest
-
     - service: switch.turn_off
       data:
         entity_id: switch.adguard_parental_control

@@ -54,10 +54,6 @@ family_state_8:
 
     - service: switch.turn_off
       data:
-        entity_id: switch.unifi_wifi_guest
-
-    - service: switch.turn_off
-      data:
         entity_id: switch.adguard_parental_control
 
     - service: switch.turn_on
