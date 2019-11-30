@@ -4,3 +4,6 @@ entities:
     state: on
     transition: 5
     brightness: 200
+    
+  switch.wh_seasonal_two_switch:
+    state: on

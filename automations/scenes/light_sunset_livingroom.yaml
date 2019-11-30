@@ -17,3 +17,6 @@ entities:
     
   switch.gf_living_light_jar_switch:
     state: on
+    
+  switch.wh_seasonal_three_switch:
+    state: on
