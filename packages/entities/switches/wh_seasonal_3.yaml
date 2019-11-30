@@ -82,26 +82,26 @@ binary_sensor:
 homeassistant:
   customize:
     switch.wh_seasonal_three_switch:
-      friendly_name: Seasonal (Three)
+      friendly_name: Christmas Tree (Livingroom)
       icon: mdi:cellphone-arrow-down
       
     binary_sensor.wh_seasonal_three_update_available:
-      friendly_name: Seasonal (Three) Update Available
+      friendly_name: Christmas Tree (Livingroom) Update Available
       
     sensor.wh_seasonal_three_firmware:
-      friendly_name: Seasonal (Three) Firmware
+      friendly_name: Christmas Tree (Livingroom) Firmware
       
     sensor.wh_seasonal_three_signal:
-      friendly_name: Seasonal (Three) Signal
+      friendly_name: Christmas Tree (Livingroom) Signal
       
     sensor.wh_seasonal_three_power:
-      friendly_name: Seasonal (Three) Power
+      friendly_name: Christmas Tree (Livingroom) Power
       
     sensor.wh_seasonal_three_power_today:
-      friendly_name: Seasonal (Three) Energy Today
+      friendly_name: Christmas Tree (Livingroom) Energy Today
       
     sensor.wh_seasonal_three_power_yesterday:
-      friendly_name: Seasonal (Three) Energy Yesterday
+      friendly_name: Christmas Tree (Livingroom) Energy Yesterday
       
     sensor.wh_seasonal_three_power_total:
-      friendly_name: Seasonal (Three) Energy Today
+      friendly_name: Christmas Tree (Livingroom) Energy Today
