@@ -33,6 +33,18 @@ family_state_0:
         title: 'Jarvis'
         notification_id: "hass-family"
         value1: 'Family State Now in Vacation Mode'
+        
+    - service: switch.turn_off
+      data:
+        entity_id: switch.wh_seasonal_one_switch
+        
+    - service: switch.turn_off
+      data:
+        entity_id: switch.wh_seasonal_two_switch
+        
+    - service: switch.turn_off
+      data:
+        entity_id: switch.wh_seasonal_three_switch
 
     - service: switch.turn_on
       data:

@@ -23,6 +23,18 @@ action:
   - service: switch.turn_off
     data:
       entity_id: switch.gf_living_light_jar_switch
+        
+  - service: switch.turn_off
+    data:
+      entity_id: switch.wh_seasonal_one_switch
+      
+  - service: switch.turn_off
+    data:
+      entity_id: switch.wh_seasonal_two_switch
+      
+  - service: switch.turn_off
+    data:
+      entity_id: switch.wh_seasonal_three_switch
 
   # Setup the livingroom
   - service: light.turn_on

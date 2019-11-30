@@ -5,3 +5,6 @@ entities:
     transition: 5
     rgb_color: [255,255,255]
     brightness: 100
+    
+  switch.wh_seasonal_three_switch:
+    state: on
