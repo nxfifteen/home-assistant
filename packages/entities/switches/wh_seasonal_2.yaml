@@ -82,26 +82,26 @@ binary_sensor:
 homeassistant:
   customize:
     switch.wh_seasonal_two_switch:
-      friendly_name: Seasonal (Two)
+      friendly_name: Christmas Tree (Kitchen)
       icon: mdi:cellphone-arrow-down
       
     binary_sensor.wh_seasonal_two_update_available:
-      friendly_name: Seasonal (Two) Update Available
+      friendly_name: Christmas Tree (Kitchen) Update Available
       
     sensor.wh_seasonal_two_firmware:
-      friendly_name: Seasonal (Two) Firmware
+      friendly_name: Christmas Tree (Kitchen) Firmware
       
     sensor.wh_seasonal_two_signal:
-      friendly_name: Seasonal (Two) Signal
+      friendly_name: Christmas Tree (Kitchen) Signal
       
     sensor.wh_seasonal_two_power:
-      friendly_name: Seasonal (Two) Power
+      friendly_name: Christmas Tree (Kitchen) Power
       
     sensor.wh_seasonal_two_power_today:
-      friendly_name: Seasonal (Two) Energy Today
+      friendly_name: Christmas Tree (Kitchen) Energy Today
       
     sensor.wh_seasonal_two_power_yesterday:
-      friendly_name: Seasonal (Two) Energy Yesterday
+      friendly_name: Christmas Tree (Kitchen) Energy Yesterday
       
     sensor.wh_seasonal_two_power_total:
-      friendly_name: Seasonal (Two) Energy Today
+      friendly_name: Christmas Tree (Kitchen) Energy Today

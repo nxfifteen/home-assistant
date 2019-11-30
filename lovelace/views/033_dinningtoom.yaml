@@ -45,6 +45,8 @@ cards:
       - light.gf_dinning_door_way
       - type: section
       - light.gf_hallway_celing
+      - type: section
+      - switch.wh_seasonal_two_switch
 
   - type: entities
     show_header_toggle: false
