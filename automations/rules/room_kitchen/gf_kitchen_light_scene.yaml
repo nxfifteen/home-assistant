@@ -3,7 +3,7 @@ alias: Lighting Scene - Kitchen
 
 trigger:
 - platform: state
-  entity_id: switch.occ_room_dinning
+  entity_id: switch.occ_room_kitchen
   from: 'off'
   to: 'on'
 
@@ -36,7 +36,7 @@ condition:
       value_template: "{{ not is_state('sensor.house_scene', 'Coming Home') }}"
 
     - condition: state
-      entity_id: switch.occ_room_dinning
+      entity_id: switch.occ_room_kitchen
       state: 'on'
 
 action:
