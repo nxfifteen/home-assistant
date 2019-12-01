@@ -1,0 +1,6 @@
+---
+christmas_trees:
+  name: Christmas Trees
+  entities:
+    - switch.wh_seasonal_two_switch
+    - switch.wh_seasonal_three_switch
