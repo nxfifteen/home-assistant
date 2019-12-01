@@ -13,6 +13,11 @@ cards:
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[  sensor.occ_room_kitchen_reason.state ]]"
       - type: section
+      - entity: script.adb_plex_kitchen
+        name: Start Plex in Kitchen
+      - entity: script.adb_bbc_kitchen
+        name: Start iPlayer in Kitchen
+      - type: section
       - entity: switch.kitchen_do_not_disturb_switch
         name: Alexa - DND
 

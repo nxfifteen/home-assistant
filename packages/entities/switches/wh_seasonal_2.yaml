@@ -83,7 +83,7 @@ homeassistant:
   customize:
     switch.wh_seasonal_two_switch:
       friendly_name: Christmas Tree (Kitchen)
-      icon: mdi:cellphone-arrow-down
+      icon: fas:tree
       
     binary_sensor.wh_seasonal_two_update_available:
       friendly_name: Christmas Tree (Kitchen) Update Available

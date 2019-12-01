@@ -13,6 +13,11 @@ cards:
         type: custom:secondaryinfo-entity-row
         secondary_info: "[[  sensor.occ_room_bedroom_reason.state ]]"
       - type: section
+      - entity: script.adb_plex_bedroom
+        name: Start Plex in Bedroom
+      - entity: script.adb_bbc_bedroom
+        name: Start iPlayer in Bedroom
+      - type: section
       - entity: switch.bedroom_do_not_disturb_switch
         name: Alexa - DND
 

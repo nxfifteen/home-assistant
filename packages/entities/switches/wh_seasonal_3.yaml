@@ -83,7 +83,7 @@ homeassistant:
   customize:
     switch.wh_seasonal_three_switch:
       friendly_name: Christmas Tree (Livingroom)
-      icon: mdi:cellphone-arrow-down
+      icon: fas:tree
       
     binary_sensor.wh_seasonal_three_update_available:
       friendly_name: Christmas Tree (Livingroom) Update Available
