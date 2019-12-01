@@ -50,6 +50,6 @@ condition:
             - fri
 
 action:
-- service: switch.turn_off
+- service: switch.turn_on
   data:
     entity_id: switch.wh_seasonal_three_switch
