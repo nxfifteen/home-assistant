@@ -1,0 +1,55 @@
+---
+alias: Christmas Lights - Kitchen
+
+trigger:
+- platform: state
+  entity_id: switch.occ_room_kitchen
+  from: 'off'
+  to: 'on'
+
+condition:
+  condition: and
+  conditions:
+    - condition: numeric_state
+      entity_id: sensor.family_family_state_raw
+      below: 7 # Anyone Awake
+      above: 1
+
+    - condition: template
+      value_template: "{{ not is_state('sensor.house_scene', 'Going To Bed') }}"
+
+    - condition: template
+      value_template: "{{ not is_state('sensor.house_scene', 'Asleep') }}"
+
+    - condition: template
+      value_template: "{{ not is_state('sensor.house_scene', 'Coming Home') }}"
+
+    - condition: state
+      entity_id: switch.occ_room_kitchen
+      state: 'on'
+
+    - condition: or
+      conditions:
+        - condition: time
+          # At least one of the following is required.
+          after: '06:00:00'
+          before: '22:00:00'
+          weekday:
+            - sat
+            - sun
+            
+        - condition: time
+          # At least one of the following is required.
+          after: '13:00:00'
+          before: '22:00:00'
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+
+action:
+- service: switch.turn_off
+  data:
+    entity_id: switch.wh_seasonal_two_switch
