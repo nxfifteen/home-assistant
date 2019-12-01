@@ -8,12 +8,31 @@ garbage_collection:
     icon_today: mdi:delete-empty
     icon_tomorrow: mdi:delete-sweep
 
-  - name: Garden # Each even week on Thursday
+  - name: "Garden" # Combination of winter and summer sensors
+    frequency: "group"
+    entities:
+    - sensor.garden_summer
+    - sensor.garden_winter
+
+  - name: "Garden Summer" # Each even week on Thursday
     frequency: "even-weeks"
     collection_days: thu
     icon_normal: mdi:recycle
     icon_today: mdi:delete-empty
     icon_tomorrow: mdi:delete-sweep
+    first_month: "mar"
+    last_month: "oct"
+
+  - name: "Garden Winter" # Each even week on Thursday
+    frequency: "every-n-weeks"
+    collection_days: thu
+    period: 4
+    first_week: 50
+    icon_normal: mdi:recycle
+    icon_today: mdi:delete-empty
+    icon_tomorrow: mdi:delete-sweep
+    first_month: "nov"
+    last_month: "feb"
 
   - name: Paper # Every 4 weeks on Thursday
     frequency: "every-n-weeks"
