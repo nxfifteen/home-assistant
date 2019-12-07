@@ -5,4 +5,4 @@ elastic:
     username: !secret elastic_username
     password: !secret elastic_password
     exclude:
-        domains: ['group']
+        domains: ['group', 'media_player', 'calendar', 'device_tracker', 'watchdog', 'zone']
