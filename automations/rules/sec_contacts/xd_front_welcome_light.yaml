@@ -15,6 +15,12 @@ condition:
     - condition: state
       entity_id: 'light.gf_hallway_celing'
       state: 'off'
+      
+    - condition: numeric_state
+      entity_id: sensor.family_family_state_raw
+      below: 7 # Anyone Awake
+      above: 1
+
     - condition: or
       conditions:
         - condition: state
