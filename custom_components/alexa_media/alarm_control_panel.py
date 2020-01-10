@@ -11,16 +11,20 @@ import logging
 from typing import Dict, List, Text  # noqa pylint: disable=unused-import
 
 from homeassistant import util
-from homeassistant.components.alarm_control_panel import (
-    SUPPORT_ALARM_ARM_AWAY,
-    AlarmControlPanel,
-)
+from homeassistant.components.alarm_control_panel import AlarmControlPanel
 from homeassistant.const import STATE_ALARM_ARMED_AWAY, STATE_ALARM_DISARMED
 from homeassistant.helpers.event import async_call_later
 
-from . import CONF_EMAIL, CONF_EXCLUDE_DEVICES, CONF_INCLUDE_DEVICES, DATA_ALEXAMEDIA
-from . import DOMAIN as ALEXA_DOMAIN
-from . import MIN_TIME_BETWEEN_FORCED_SCANS, MIN_TIME_BETWEEN_SCANS, hide_email
+from . import (
+    CONF_EMAIL,
+    CONF_EXCLUDE_DEVICES,
+    CONF_INCLUDE_DEVICES,
+    DATA_ALEXAMEDIA,
+    DOMAIN as ALEXA_DOMAIN,
+    MIN_TIME_BETWEEN_FORCED_SCANS,
+    MIN_TIME_BETWEEN_SCANS,
+    hide_email,
+)
 from .helpers import _catch_login_errors, add_devices, retry_async
 
 _LOGGER = logging.getLogger(__name__)
@@ -284,4 +288,10 @@ class AlexaAlarmControlPanel(AlarmControlPanel):
     @property
     def supported_features(self) -> int:
         """Return the list of supported features."""
+        try:
+            from homeassistant.components.alarm_control_panel import (
+                SUPPORT_ALARM_ARM_AWAY,
+            )
+        except ImportError:
+            return 0
         return SUPPORT_ALARM_ARM_AWAY
