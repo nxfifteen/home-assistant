@@ -269,62 +269,62 @@ cards:
             name: Volume 3 Status
             icon: mdi:harddisk
 
-  - type: vertical-stack
-    cards:
-      - type: entities
-        show_header_toggle: off
-        entities:
-          - type: 'custom:text-divider-row'
-            text: PVE - Intel Nuc
-          - type: custom:vertical-stack-in-card
-            cards:
-              - type: horizontal-stack
-                cards:
-                  - type: custom:card-modder
-                    card:
-                      type: picture
-                      image: /local/images/nuc.jpg
-                    style:
-                      border-radius: 5px
+  # - type: vertical-stack
+  #   cards:
+  #     - type: entities
+  #       show_header_toggle: off
+  #       entities:
+  #         - type: 'custom:text-divider-row'
+  #           text: PVE - Intel Nuc
+  #         - type: custom:vertical-stack-in-card
+  #           cards:
+  #             - type: horizontal-stack
+  #               cards:
+  #                 - type: custom:card-modder
+  #                   card:
+  #                     type: picture
+  #                     image: /local/images/nuc.jpg
+  #                   style:
+  #                     border-radius: 5px
 
-                  - type: vertical-stack
-                    cards:
+  #                 - type: vertical-stack
+  #                   cards:
                     
-                    - type: custom:bar-card
-                      align: split
-                      show_icon: true
-                      padding: 4px
-                      columns: 1
-                      card_style:
-                        border-radius: 5px
-                      entities:
-                        - entity: sensor.pve_cpu_used
-                          title: CPU
-                          icon: mdi:harddisk
+  #                   - type: custom:bar-card
+  #                     align: split
+  #                     show_icon: true
+  #                     padding: 4px
+  #                     columns: 1
+  #                     card_style:
+  #                       border-radius: 5px
+  #                     entities:
+  #                       - entity: sensor.pve_cpu_used
+  #                         title: CPU
+  #                         icon: mdi:harddisk
                     
-                    - type: custom:bar-card
-                      align: split
-                      show_icon: true
-                      padding: 4px
-                      columns: 1
-                      card_style:
-                        border-radius: 5px
-                      entities:
-                        - entity: sensor.pve_ram_used_percent
-                          title: RAM
-                          icon: mdi:harddisk
+  #                   - type: custom:bar-card
+  #                     align: split
+  #                     show_icon: true
+  #                     padding: 4px
+  #                     columns: 1
+  #                     card_style:
+  #                       border-radius: 5px
+  #                     entities:
+  #                       - entity: sensor.pve_ram_used_percent
+  #                         title: RAM
+  #                         icon: mdi:harddisk
                     
-                    - type: custom:bar-card
-                      align: split
-                      show_icon: true
-                      padding: 4px
-                      columns: 1
-                      card_style:
-                        border-radius: 5px
-                      entities:
-                        - entity: sensor.pve_disk_used_percent
-                          title: Disk
-                          icon: mdi:harddisk
+  #                   - type: custom:bar-card
+  #                     align: split
+  #                     show_icon: true
+  #                     padding: 4px
+  #                     columns: 1
+  #                     card_style:
+  #                       border-radius: 5px
+  #                     entities:
+  #                       - entity: sensor.pve_disk_used_percent
+  #                         title: Disk
+  #                         icon: mdi:harddisk
 
   - type: vertical-stack
     cards:
