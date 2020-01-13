@@ -1,0 +1,7 @@
+hue_frontdoor_1:
+  sequence:
+    - service: persistent_notification.create
+      data_template:
+        title: 'Hue Button (FrontDoor)'
+        message: "Button 1"
+        notification_id: hue_frontdoor

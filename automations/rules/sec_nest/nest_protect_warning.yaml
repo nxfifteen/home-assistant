@@ -55,11 +55,11 @@ action:
   - service: light.turn_on
     data:
       entity_id: light.gf_hallway_celing
-      rgb_color: [255,255,255]
+      rgb_color: [255,207,120]
       brightness: 255
 
   - service: light.turn_on
     data:
       entity_id: light.ff_landing_celing
-      rgb_color: [255,255,255]
+      rgb_color: [255,207,120]
       brightness: 255
