@@ -1,0 +1,7 @@
+flic_sout_2_double:
+  sequence:
+    - service: persistent_notification.create
+      data_template:
+        title: 'Flic Button (S.Out)'
+        message: "Double Pressed"
+        notification_id: flic_sout

@@ -1,0 +1,7 @@
+flic_injest_3_hold:
+  sequence:
+    - service: persistent_notification.create
+      data_template:
+        title: 'Flic Button (Injest)'
+        message: "Hold Pressed"
+        notification_id: flic_injest

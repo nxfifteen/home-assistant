@@ -1,0 +1,7 @@
+flic_sbedside_1_single:
+  sequence:
+    - service: persistent_notification.create
+      data_template:
+        title: 'Flic Button (S.Bedside)'
+        message: "Single Pressed"
+        notification_id: flic_sbedside
