@@ -1,0 +1,7 @@
+flic_study_2_double:
+  sequence:
+    - service: persistent_notification.create
+      data_template:
+        title: 'Flic Button (Study)'
+        message: "Double Pressed"
+        notification_id: flic_study
