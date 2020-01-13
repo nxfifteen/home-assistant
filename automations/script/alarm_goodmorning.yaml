@@ -5,12 +5,6 @@ alarm_goodmorning:
         entity_id: input_select.family_family_act_wakeup
         option: Good Morning
 
-    - service: script.notify_tts_room
-      data_template:
-        room: "bedroom"
-        value1: !include ../../entities/templates/driving_him.yaml
-        hastag: "#Alarm #GoodMorning"
-
     #- service: joaoapps_join.join_her_send_tasker
     #  data_template:
     #    command: "jarvis=:=wake_up"
@@ -32,3 +26,9 @@ alarm_goodmorning:
         entity_id: light.ff_bedroom_bedside_stuart
         transition: 600
         brightness: 150
+
+    - service: script.notify_tts_room
+      data_template:
+        room: "bedroom"
+        value1: !include ../../entities/templates/briefing.yaml
+        hastag: "#Alarm #GoodMorning"
