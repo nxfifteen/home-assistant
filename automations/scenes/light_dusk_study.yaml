@@ -3,13 +3,13 @@ entities:
   light.ff_study_celing:
     state: on
     transition: 5
-    rgb_color: [255,255,255]
+    rgb_color: [255,207,120]
     brightness: 150
 
   light.ff_study_wall:
     state: on
     transition: 5
-    rgb_color: [255,255,255]
+    rgb_color: [255,207,120]
     brightness: 255
 
   light.ff_study_desk:

@@ -3,7 +3,7 @@ entities:
   light.gf_living_celing:
     state: on
     transition: 5
-    rgb_color: [255,255,255]
+    rgb_color: [255,207,120]
     brightness: 100
     
   switch.wh_seasonal_three_switch:
