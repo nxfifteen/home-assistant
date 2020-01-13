@@ -5,3 +5,4 @@ hue_frontdoor_1:
         title: 'Hue Button (FrontDoor)'
         message: "Button 1"
         notification_id: hue_frontdoor
+        

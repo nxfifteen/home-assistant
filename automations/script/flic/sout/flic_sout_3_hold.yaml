@@ -5,3 +5,7 @@ flic_sout_3_hold:
         title: 'Flic Button (S.Out)'
         message: "Hold Pressed"
         notification_id: flic_sout
+
+    - service: joaoapps_join.join_his_send_tasker
+      data_template:
+        command: "flic_cmd=:=flic_sout_3_hold"
