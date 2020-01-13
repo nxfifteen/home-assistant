@@ -1,0 +1,7 @@
+flic_study_3_hold:
+  sequence:
+    - service: persistent_notification.create
+      data_template:
+        title: 'Flic Button (Study)'
+        message: "Hold Pressed"
+        notification_id: flic_study

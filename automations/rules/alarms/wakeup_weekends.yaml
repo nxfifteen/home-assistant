@@ -1,13 +1,23 @@
 ---
-alias: Alarm Clock / Wake Up - Weekends
+alias: Weekend Alarm Call
 trigger:
   platform: time
-  at: '06:15:00'
+  at: '07:00:00'
 
 condition:
-  - condition: numeric_state
-    entity_id: sensor.family_family_state_raw
-    above: '7'
+  condition: and
+  conditions:
+    - condition: numeric_state
+      entity_id: sensor.family_stuart_state
+      above: '8'
+
+    - condition: time
+      # At least one of the following is required.
+      after: '05:00:00'
+      before: '07:00:00'
+      weekday:
+        - sat
+        - sun
 
 action:
 - service: script.turn_on

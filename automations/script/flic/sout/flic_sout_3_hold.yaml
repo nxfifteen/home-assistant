@@ -1,0 +1,7 @@
+flic_sout_3_hold:
+  sequence:
+    - service: persistent_notification.create
+      data_template:
+        title: 'Flic Button (S.Out)'
+        message: "Hold Pressed"
+        notification_id: flic_sout

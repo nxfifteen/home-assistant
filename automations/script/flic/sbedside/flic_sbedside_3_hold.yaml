@@ -1,0 +1,7 @@
+flic_sbedside_3_hold:
+  sequence:
+    - service: persistent_notification.create
+      data_template:
+        title: 'Flic Button (S.Bedside)'
+        message: "Hold Pressed"
+        notification_id: flic_sbedside

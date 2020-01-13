@@ -1,0 +1,7 @@
+flic_injest_2_double:
+  sequence:
+    - service: persistent_notification.create
+      data_template:
+        title: 'Flic Button (Injest)'
+        message: "Double Pressed"
+        notification_id: flic_injest
