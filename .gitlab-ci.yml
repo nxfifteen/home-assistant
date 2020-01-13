@@ -48,6 +48,6 @@ ha-installed:
   <<: *ha
   stage: test
   image:
-    name: homeassistant/home-assistant:0.101.3
+    name: homeassistant/home-assistant:0.103.2
     entrypoint: [""]
   allow_failure: true
