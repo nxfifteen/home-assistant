@@ -9,3 +9,9 @@ flic_sbedside_2_double:
     - service: joaoapps_join.join_his_send_tasker
       data_template:
         command: "flic_cmd=:=flic_sbedside_2_double"
+
+    - service: script.notify_tts_room
+      data_template:
+        room: "bedroom"
+        value1: !include ../../entities/templates/briefing.yaml
+        hastag: "#Alarm #GoodMorning"

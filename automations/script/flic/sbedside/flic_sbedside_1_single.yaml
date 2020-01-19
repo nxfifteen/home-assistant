@@ -9,3 +9,9 @@ flic_sbedside_1_single:
     - service: joaoapps_join.join_his_send_tasker
       data_template:
         command: "flic_cmd=:=flic_sbedside_1_single"
+
+    - service: light.turn_on
+      data:
+        entity_id: light.ff_bedroom_bedside_stuart
+        transition: 5
+        brightness: 5
