@@ -13,5 +13,5 @@ flic_sbedside_2_double:
     - service: script.notify_tts_room
       data_template:
         room: "bedroom"
-        value1: !include ../../entities/templates/briefing.yaml
+        value1: !include ../../../../entities/templates/briefing.yaml
         hastag: "#Alarm #GoodMorning"
