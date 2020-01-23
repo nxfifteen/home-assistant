@@ -2,7 +2,7 @@
 Integration to integrate with healthchecks.io
 
 For more details about this component, please refer to
-https://github.com/custom-components/healthchecksio
+https://github.com/custom-components/healthcheckslan
 """
 import os
 import async_timeout
@@ -26,7 +26,7 @@ MIN_TIME_BETWEEN_UPDATES = timedelta(seconds=300)
 async def async_setup(hass, config):
     """Set up this component using YAML is not supported."""
     if config.get(DOMAIN) is not None:
-        Logger("custom_components.healthchecksio").error(
+        Logger("custom_components.healthcheckslan").error(
             "Configuration with YAML is not supported"
         )
 
@@ -36,7 +36,7 @@ async def async_setup(hass, config):
 async def async_setup_entry(hass, config_entry):
     """Set up this integration using UI."""
     # Print startup message
-    Logger("custom_components.healthchecksio").info(
+    Logger("custom_components.healthcheckslan").info(
         CC_STARTUP_VERSION.format(name=DOMAIN, version=VERSION, issue_link=ISSUE_URL)
     )
 
@@ -56,7 +56,7 @@ async def async_setup_entry(hass, config_entry):
     check = config_entry.data.get("check")
 
     # Configure the client.
-    hass.data[DOMAIN_DATA]["client"] = HealthchecksioData(hass, api_key, check)
+    hass.data[DOMAIN_DATA]["client"] = healthcheckslanData(hass, api_key, check)
 
     # Add binary_sensor
     hass.async_add_job(
@@ -66,7 +66,7 @@ async def async_setup_entry(hass, config_entry):
     return True
 
 
-class HealthchecksioData:
+class healthcheckslanData:
     """This class handle communication and stores the data."""
 
     def __init__(self, hass, api_key, check):
@@ -78,20 +78,20 @@ class HealthchecksioData:
     @Throttle(MIN_TIME_BETWEEN_UPDATES)
     async def update_data(self):
         """Update data."""
-        Logger("custom_components.healthchecksio").debug("Running update")
+        Logger("custom_components.healthcheckslan").debug("Running update")
         # This is where the main logic to update platform data goes.
         try:
             session = async_get_clientsession(self.hass)
             headers = {"X-Api-Key": self.api_key}
             async with async_timeout.timeout(10, loop=asyncio.get_event_loop()):
                 data = await session.get(
-                    "https://healthchecks.io/api/v1/checks/", headers=headers
+                    "https://healthchecks.ha.nxfifteen.me.uk/api/v1/checks/", headers=headers
                 )
                 self.hass.data[DOMAIN_DATA]["data"] = await data.json()
 
                 await session.get(f"https://hc-ping.com/{self.check}")
         except Exception as error:  # pylint: disable=broad-except
-            Logger("custom_components.healthchecksio").error(
+            Logger("custom_components.healthcheckslan").error(
                 f"Could not update data - {error}"
             )
 
@@ -107,7 +107,7 @@ async def check_files(hass):
             missing.append(file)
 
     if missing:
-        Logger("custom_components.healthchecksio").critical(
+        Logger("custom_components.healthcheckslan").critical(
             f"The following files are missing: {missing}"
         )
         returnvalue = False
@@ -120,6 +120,6 @@ async def check_files(hass):
 async def async_remove_entry(hass, config_entry):
     """Handle removal of an entry."""
     await hass.config_entries.async_forward_entry_unload(config_entry, "binary_sensor")
-    Logger("custom_components.healthchecksio").info(
-        "Successfully removed the healthchecksio integration"
+    Logger("custom_components.healthcheckslan").info(
+        "Successfully removed the healthcheckslan integration"
     )

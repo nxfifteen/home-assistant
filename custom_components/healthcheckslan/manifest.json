@@ -1,7 +1,7 @@
 {
-  "domain": "healthchecksio",
+  "domain": "healthcheckslan",
   "name": "Healthchecks.io",
-  "documentation": "https://github.com/custom-components/healthchecksio",
+  "documentation": "https://github.com/custom-components/healthcheckslan",
   "dependencies": [],
   "config_flow": true,
   "codeowners": [
