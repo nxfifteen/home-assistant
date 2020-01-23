@@ -121,7 +121,7 @@
   {% endmacro %}
 
   {%- macro time_sentence() -%}
-    The current time is {{ now().strftime('%I:%M %p') }}. The temperature is {{ states.sensor.dark_sky_temperature.state }} {{ states.sensor.dark_sky_temperature.attributes.unit_of_measurement }}, the forcast is {{ states.sensor.dark_sky_summary_1d.state }}.
+    The current time is {{ now().strftime('%I:%M') }}. The temperature is {{ states.sensor.dark_sky_temperature.state }} {{ states.sensor.dark_sky_temperature.attributes.unit_of_measurement }}, the forcast is {{ states.sensor.dark_sky_summary_1d.state }}.
   {% endmacro %}
 
   {%- macro traffic_sentence() -%}
@@ -164,7 +164,7 @@
 
   {%- macro servers_sentence() -%}
     {%- for entity_id in states.group.uptime_robot.attributes.entity_id if states(entity_id) == 'off' -%}
-      {% if loop.first %}It looks like {% endif %}{% if loop.last and loop.length > 1 %} and {% elif not loop.first and loop.length > 1 %}, {% endif %}{{ state_attr(entity_id, 'friendly_name') }}{% if loop.last %} {% if loop.length == 1 %}is{% else %}are{% endif %} offline. You might want to check this out.
+      {% if loop.first %}It looks like {% endif %}{% if loop.last and loop.length > 2 %} and {% elif not loop.first and loop.length > 2 %}, {% endif %}{{ state_attr(entity_id, 'friendly_name') }}{% if loop.last %} {% if loop.length == 2 %}is{% else %}are{% endif %} offline. You might want to check this out.
       {% endif %}
     {%- endfor -%}
   {% endmacro %}
@@ -203,12 +203,19 @@
   {%- else -%}
     {{ evening_opening_sentence() }}
   {% endif %}
+  
   {{ time_sentence() }}
+  
   {{ traffic_sentence() }}
-  {{ network_sentence() }}
+  
+  {# network_sentence() #}
+  
   {{ servers_sentence() }}
+  
   {{ certs_sentence() }}
+  
   {{ bin_sentence() }}
+
   {% if now().hour< morning_hours  -%}
     {{ morning_closing_sentence() }}
   {%- elif now().hour< afternoon_hours -%}
