@@ -9,3 +9,7 @@ flic_sout_1_single:
     - service: joaoapps_join.join_his_send_tasker
       data_template:
         command: "flic_cmd=:=flic_sout_1_single"
+
+    - service: script.turn_on
+      data:
+        entity_id: script.family_state_4_5_6

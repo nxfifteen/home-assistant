@@ -5,4 +5,16 @@ hue_frontdoor_1:
         title: 'Hue Button (FrontDoor)'
         message: "Button 1"
         notification_id: hue_frontdoor
+
+    - service: joaoapps_join.join_his_send_tasker
+      data_template:
+        command: "jarvis=:=going_out"
+
+    - service: joaoapps_join.join_her_send_tasker
+      data_template:
+        command: "jarvis=:=going_out"
+
+    - service: script.turn_on
+      data:
+        entity_id: script.family_state_1_2_3
         

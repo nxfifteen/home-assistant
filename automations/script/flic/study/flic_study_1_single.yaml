@@ -5,3 +5,7 @@ flic_study_1_single:
         title: 'Flic Button (Study)'
         message: "Single Pressed"
         notification_id: flic_study
+
+    - service: script.turn_on
+      data:
+        entity_id: script.my_computer
