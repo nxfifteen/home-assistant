@@ -1,6 +1,6 @@
 """Constants for blueprint."""
 # Base component constants
-DOMAIN = "healthchecksio"
+DOMAIN = "healthcheckslan"
 DOMAIN_DATA = f"{DOMAIN}_data"
 VERSION = "0.1.2"
 PLATFORMS = ["binary_sensor"]
@@ -11,7 +11,7 @@ REQUIRED_FILES = [
     "config_flow.py",
     "manifest.json",
 ]
-ISSUE_URL = "https://github.com/custom-components/healthchecksio/issues"
+ISSUE_URL = "https://github.com/custom-components/healthcheckslan/issues"
 ATTRIBUTION = "Data from this is provided by healthchecks.io."
 
 BINARY_SENSOR_DEVICE_CLASS = "connectivity"

@@ -1,3 +1,4 @@
+
 class GarbageCollectionCard extends HTMLElement {
 
   constructor() {
@@ -118,6 +119,10 @@ class GarbageCollectionCard extends HTMLElement {
     if (typeof icon_color === "undefined") icon_color="black"
     let due_color = config.due_color;
     if (typeof due_color === "undefined") due_color="red"
+    let details_size = config.details_size;
+    if (typeof details_size === "undefined") details_size="14px"
+    let title_size = config.title_size;
+    if (typeof title_size === "undefined") title_size="17px"
 
     style.textContent = `
       table {
@@ -141,11 +146,15 @@ class GarbageCollectionCard extends HTMLElement {
       .alerted {
         --iron-icon-fill-color: ${due_color};
       }
+      .details {
+        font-size: ${details_size}
+      }
       .emp {
         font-size: 130%;
       }
       .name {
         text-align: left;
+        font-size: ${title_size}
       }
     `;
     content.innerHTML = `
@@ -168,7 +177,7 @@ class GarbageCollectionCard extends HTMLElement {
           <td class="name"><span class="emp">${attribute.friendly_name}</span></td>
         </tr>
         <tr>
-          <td>
+          <td class="details">
             ${hdate === false ? `${attribute.next_date}` : ''}
             ${hdays === false ? " " + `${this._label('ui.components.relative_time.future.In', 'in')}` +
                                 " " + `${attribute.days}` + " " + `${this._label('ui.duration.days', 'days')}` : '' }
@@ -205,7 +214,27 @@ class GarbageCollectionCard extends HTMLElement {
     if ( isNaN(this._stateObj.state) ) {
       hide_days = true;
       hide_date = false;
-      attributes[0].next_date = this._stateObj.state;
+
+      const translationLocal = "/local/community/garbage-collection-card/translations/" + hass.language + ".json";
+      var rawFile = new XMLHttpRequest();
+   // rawFile.responseType = 'json';
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", translationLocal, false);
+      rawFile.send(null);
+      if ( rawFile.status != 200 ) {
+        attributes[0].next_date = this._stateObj.state;
+      } else {
+        if ( attributes[0].days > 1 ) {
+          attributes[0].next_date = this._stateObj.state;
+        } else {
+          var translationJSONobj = JSON.parse(rawFile.responseText);
+          if ( typeof translationJSONobj != "undefined" ) {
+            attributes[0].next_date = translationJSONobj.state[this._stateObj.state];
+          } else {
+            attributes[0].next_date = this._stateObj.state;
+          }
+        }
+      }
     }
 
     this._updateContent(root.getElementById('attributes'), attributes, hide_date, hide_days, hide_card );
@@ -214,6 +243,7 @@ class GarbageCollectionCard extends HTMLElement {
   getCardSize() {
     return 1;
   }
+
 }
 
 customElements.define('garbage-collection-card', GarbageCollectionCard);

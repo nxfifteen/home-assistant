@@ -73,14 +73,14 @@ class BlueprintFlowHandler(config_entries.ConfigFlow):
             headers = {"X-Api-Key": api_key}
 
             async with async_timeout.timeout(10, loop=asyncio.get_event_loop()):
-                Logger("custom_components.healthchecksio").info("Checking API Key")
+                Logger("custom_components.healthcheckslan").info("Checking API Key")
                 data = await session.get(
-                    "https://healthchecks.io/api/v1/checks/", headers=headers
+                    "https://healthchecks.ha.nxfifteen.me.uk/api/v1/checks/", headers=headers
                 )
                 self.hass.data[DOMAIN_DATA] = {"data": await data.json()}
-                Logger("custom_components.healthchecksio").info("Checking Check ID")
+                Logger("custom_components.healthcheckslan").info("Checking Check ID")
                 data = await session.get(f"https://hc-ping.com/{check}")
             return True
         except Exception as exception:  # pylint: disable=broad-except
-            Logger("custom_components.healthchecksio").error(exception)
+            Logger("custom_components.healthcheckslan").error(exception)
         return False

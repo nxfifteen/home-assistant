@@ -44,8 +44,9 @@
                 "data": {
                     "first_month": "První měsíc svozu",
                     "last_month": "Poslední měsíc scozu",
-                    "period": "Perioda (svoz každých n týdnů): (1-52)",
+                    "period": "Perioda (svoz každých n týdnů/dnů): (1-52)",
                     "first_week": "První týden svozu (1-52)",
+                    "first_date": "První datum",
                     "weekday_order_number_1": "Prvn den v měsíci",
                     "weekday_order_number_2": "Druhý den v měsíci",
                     "weekday_order_number_3": "Třetí den v měsíci",
@@ -57,7 +58,12 @@
                     "week_order_number_4": "Čtvrtý týden v měsíci",
                     "week_order_number_5": "Pátý týden v měsíci",
                     "include_dates": "Přidané datumy (volitelné)",
-                    "exclude_dates": "Zakázané datumy (volitelné)"
+                    "exclude_dates": "Zakázané datumy (volitelné)",
+                    "move_country_holidays": "Státní svátky - země (volitelné)",
+                    "prov": "Státní svátky - provincie (volitelné)",
+                    "state": "Státní svátky - stát (volitelné)",
+                    "observed": "Státní svátky - observed (volitelné)"
+
                 }
             }
         },
@@ -120,8 +126,9 @@
                 "data": {
                     "first_month": "První měsíc svozu",
                     "last_month": "Poslední měsíc scozu",
-                    "period": "Perioda (svoz každých n týdnů): (1-52)",
+                    "period": "Perioda (svoz každých n týdnů-dnů): (1-52)",
                     "first_week": "První týden svozu (1-52)",
+                    "first_date": "První datum",
                     "weekday_order_number_1": "Prvn den v měsíci",
                     "weekday_order_number_2": "Druhý den v měsíci",
                     "weekday_order_number_3": "Třetí den v měsíci",
@@ -133,7 +140,11 @@
                     "week_order_number_4": "Čtvrtý týden v měsíci",
                     "week_order_number_5": "Pátý týden v měsíci",
                     "include_dates": "Přidané datumy (volitelné)",
-                    "exclude_dates": "Zakázané datumy (volitelné)"
+                    "exclude_dates": "Zakázané datumy (volitelné)",
+                    "move_country_holidays": "Státní svátky - země (volitelné)",
+                    "prov": "Státní svátky - provincie (volitelné)",
+                    "state": "Státní svátky - stát (volitelné)",
+                    "observed": "Státní svátky - observed (volitelné)"
                 }
             }
         },
