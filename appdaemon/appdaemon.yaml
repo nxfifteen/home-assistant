@@ -9,7 +9,11 @@ appdaemon:
     HASS:
       type: hass
       ha_url: http://hassio/homeassistant
-      token: 2d46ee598984ed85ee82c6bd837a489a751535387445c2e17614af71d9ae4de27db74d55ef29c9c404f0cb816f68c76ef2d765aeaae47c14
+      token: 335c0d438982f282d23169dda0e8ebc5e80277d72a78b42b7eb17b2db67d31f80351178ba34dc7ff501b545c73ffbd13e2d711ac6bf45faa
 hadashboard:
   dash_url: http://127.0.0.1:5050
   dash_dir: /config/appdaemon/dashboards
+# Creates all legacy groups.  All newly created entity_id's will be added to the correct legacy group.
+groups:
+  module: group_all
+  class: GroupAll
