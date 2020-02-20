@@ -1,6 +1,5 @@
 ---
 alias: nest_protect_emergency
-hide_entity: true
 trigger:
   platform: state
   entity_id:

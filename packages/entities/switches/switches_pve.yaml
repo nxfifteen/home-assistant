@@ -4,18 +4,18 @@ switch:
     switches:
       pve_findserver:
         friendly_name: 'FIND3 Server'
-        command_on: /config/node-red/sh_proxmox_resume.sh 107
-        command_off: /config/node-red/sh_proxmox_pause.sh 107
-        command_state: /config/node-red/sh_proxmox_status.sh 107
+        command_on: /config/node-red/shell/repos/proxmox-remote-vm-control/pve-remote.sh start 107 rhino
+        command_off: /config/node-red/shell/repos/proxmox-remote-vm-control/pve-remote.sh stop 107 rhino
+        command_state: /config/node-red/shell/repos/proxmox-remote-vm-control/pve-remote.sh status 107 rhino
         
       pve_cicd:
         friendly_name: 'Gitlab CI/CD Worker'
-        command_on: /config/node-red/sh_proxmox_resume.sh 106
-        command_off: /config/node-red/sh_proxmox_pause.sh 106
-        command_state: /config/node-red/sh_proxmox_status.sh 106
+        command_on: /config/node-red/shell/repos/proxmox-remote-vm-control/pve-remote.sh start 106 rhino
+        command_off: /config/node-red/shell/repos/proxmox-remote-vm-control/pve-remote.sh stop 106 rhino
+        command_state: /config/node-red/shell/repos/proxmox-remote-vm-control/pve-remote.sh status 106 rhino
 
       pve_dvr:
         friendly_name: 'DVR'
-        command_on: /config/node-red/sh_proxmox_resume.sh 114
-        command_off: /config/node-red/sh_proxmox_pause.sh 114
-        command_state: /config/node-red/sh_proxmox_status.sh 114
+        command_on: /config/node-red/shell/repos/proxmox-remote-vm-control/pve-remote.sh start 100 hipo
+        command_off: /config/node-red/shell/repos/proxmox-remote-vm-control/pve-remote.sh stop 100 hipo
+        command_state: /config/node-red/shell/repos/proxmox-remote-vm-control/pve-remote.sh status 100 hipo

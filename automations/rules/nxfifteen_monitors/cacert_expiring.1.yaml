@@ -13,14 +13,9 @@ trigger:
   - sensor.cert_nxfifteen_xyz
   - sensor.cert_nxfifteen_your
   - sensor.cert_anderson_ha
-  - sensor.cert_anderson_ha_find3
   - sensor.cert_anderson_ha_grocy
-  - sensor.cert_anderson_ha_ide
   - sensor.cert_anderson_ha_node
-  - sensor.cert_anderson_ha_portainer
   - sensor.cert_anderson_ha_proxy
-  - sensor.cert_anderson_ha_trac
-  - sensor.cert_anderson_ha_zwave
   - sensor.cert_synology_stuartma
   below: 30
 

@@ -1,6 +1,5 @@
 ---
 alias: 'Sun Civil Twilight'
-hide_entity: true
 trigger:
   - platform: numeric_state
     entity_id: sun.sun

@@ -187,14 +187,10 @@ cards:
       - type: 'custom:text-divider-row'
         text: Home-Assitant
       - sensor.cert_anderson_ha
-      - sensor.cert_anderson_ha_find3
       - sensor.cert_anderson_ha_grocy
-      - sensor.cert_anderson_ha_ide
       - sensor.cert_anderson_ha_node
-      - sensor.cert_anderson_ha_portainer
       - sensor.cert_anderson_ha_proxy
       - sensor.cert_anderson_ha_trac
-      - sensor.cert_anderson_ha_zwave
 
   - type: entities
     show_header_toggle: off
@@ -226,37 +222,178 @@ cards:
       - type: custom:vertical-stack-in-card
         cards:
 
-        - type: horizontal-stack
-          cards:
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.dns_mirrors
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
 
-            - type: "custom:button-card"
-              color_type: icon
-              entity: binary_sensor.check_cron_one
-              state:
-                - value: "on"
-                  color: green
-                  icon: mdi:server-network
-                - operator: default
-                  color: red
-                  icon: mdi:server-network-off
-                  styles:
-                    card:
-                      - animation: blink 2s ease infinite
-              tap_action:
-                action: more-info
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.firefly_iii_backup
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
 
-            - type: "custom:button-card"
-              color_type: icon
-              entity: binary_sensor.check_cron_two
-              state:
-                - value: "on"
-                  color: green
-                  icon: mdi:server-network
-                - operator: default
-                  color: red
-                  icon: mdi:server-network-off
-                  styles:
-                    card:
-                      - animation: blink 2s ease infinite
-              tap_action:
-                action: more-info
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.gitlab_backup
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
+
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.iplayer
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
+
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.nas_backup_prune
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
+
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.state_publish
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
+
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.twit_podcasts
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
+
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.user_space
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
+
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.youtube
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
+
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.zimbra_full
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
+
+          - type: "custom:button-card"
+            color_type: icon
+            entity: binary_sensor.zimbra_inc
+            state:
+              - value: "on"
+                color: green
+                icon: mdi:server-network
+              - operator: default
+                color: red
+                icon: mdi:server-network-off
+                styles:
+                  card:
+                    - animation: blink 2s ease infinite
+            tap_action:
+              action: more-info
