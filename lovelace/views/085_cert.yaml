@@ -187,14 +187,10 @@ cards:
       - type: 'custom:text-divider-row'
         text: Home-Assitant
       - sensor.cert_anderson_ha
-      - sensor.cert_anderson_ha_find3
       - sensor.cert_anderson_ha_grocy
-      - sensor.cert_anderson_ha_ide
       - sensor.cert_anderson_ha_node
-      - sensor.cert_anderson_ha_portainer
       - sensor.cert_anderson_ha_proxy
       - sensor.cert_anderson_ha_trac
-      - sensor.cert_anderson_ha_zwave
 
   - type: entities
     show_header_toggle: off

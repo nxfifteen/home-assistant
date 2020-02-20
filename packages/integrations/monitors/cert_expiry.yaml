@@ -49,24 +49,12 @@ sensor:
   name: cert_anderson_ha
 
 - platform: cert_expiry
-  host: find3.ha.anderson.eu.com
-  name: cert_anderson_ha_find3
-
-- platform: cert_expiry
   host: grocy.ha.anderson.eu.com
   name: cert_anderson_ha_grocy
 
 - platform: cert_expiry
-  host: ide.ha.anderson.eu.com
-  name: cert_anderson_ha_ide
-
-- platform: cert_expiry
   host: node.ha.anderson.eu.com
   name: cert_anderson_ha_node
-
-- platform: cert_expiry
-  host: portainer.ha.anderson.eu.com
-  name: cert_anderson_ha_portainer
 
 - platform: cert_expiry
   host: proxy.ha.anderson.eu.com
@@ -75,10 +63,6 @@ sensor:
 - platform: cert_expiry
   host: trac.ha.anderson.eu.com
   name: cert_anderson_ha_trac
-
-- platform: cert_expiry
-  host: zwave.ha.anderson.eu.com
-  name: cert_anderson_ha_zwave
 
 homeassistant:
   customize:
@@ -126,25 +110,13 @@ homeassistant:
       friendly_name: Home-Assitant
       icon: mdi:home-assistant
 
-    sensor.cert_anderson_ha_find3:
-      friendly_name: FIND3
-      icon: mdi:crosshairs-gps
-
     sensor.cert_anderson_ha_grocy:
       friendly_name: Grocy
       icon: mdi:shopify
 
-    sensor.cert_anderson_ha_ide:
-      friendly_name: Cloud9 IDE
-      icon: mdi:border-color
-
     sensor.cert_anderson_ha_node:
       friendly_name: NodeRed
       icon: mdi:nodejs
-
-    sensor.cert_anderson_ha_portainer:
-      friendly_name: Portainer
-      icon: mdi:docker
 
     sensor.cert_anderson_ha_proxy:
       friendly_name: Proxy
@@ -153,10 +125,6 @@ homeassistant:
     sensor.cert_anderson_ha_trac:
       friendly_name: TracCar
       icon: mdi:car
-
-    sensor.cert_anderson_ha_zwave:
-      friendly_name: Z-Wave2MQTT
-      icon: mdi:z-wave
 
     sensor.cert_synology_stuartma:
       friendly_name: Synology
