@@ -149,6 +149,21 @@ homeassistant:
     sensor.family_stuart_phone_state:
       friendly_name: "Stuart's Phone State"
 
+    sensor.family_stuart_phone_charging:
+      friendly_name: "Stuart's Phone Charging"
+
+    sensor.family_stuart_state_reason:
+      friendly_name: "Stuart's State Reported"
+
+    sensor.family_stuart_state_activity:
+      friendly_name: "Stuart's Current Activity"
+
+    sensor.family_stuart_state_flex:
+      friendly_name: "Stuart's Phone State"
+
+    sensor.family_stuart_state_tent_pole:
+      friendly_name: "Stuart's Phone State"
+
     sensor.family_stuart_loc_room:
       friendly_name: "Stuart's Room Location"
       icon: mdi:google-classroom
