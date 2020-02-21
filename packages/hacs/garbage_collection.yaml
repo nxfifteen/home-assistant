@@ -8,7 +8,7 @@ garbage_collection:
     icon_today: mdi:delete-empty
     icon_tomorrow: mdi:delete-sweep
 
-  - name: "Garden" # Combination of winter and summer sensors
+  - name: "Brown Bin" # Combination of winter and summer sensors
     frequency: "group"
     entities:
     - sensor.garden_summer

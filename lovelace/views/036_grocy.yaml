@@ -16,7 +16,7 @@ cards:
       type: custom:secondaryinfo-entity-row
       secondary_info: "In [[ sensor.waste.attributes.days ]] Days"
 
-    - entity: sensor.garden
+    - entity: sensor.brown_bin
       name: Garden Waste
       type: custom:secondaryinfo-entity-row
       secondary_info: "In [[ sensor.garden.attributes.days ]] Days"
