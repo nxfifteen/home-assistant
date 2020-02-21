@@ -19,7 +19,17 @@ cards:
     - entity: sensor.brown_bin
       name: Garden Waste
       type: custom:secondaryinfo-entity-row
-      secondary_info: "In [[ sensor.garden.attributes.days ]] Days"
+      secondary_info: "In [[ sensor.brown_bin.attributes.days ]] Days"
+
+    - entity: sensor.garden_summer
+      name: Garden Waste Summer
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "In [[ sensor.garden_summer.attributes.days ]] Days"
+
+    - entity: sensor.garden_winter
+      name: Garden Waste Winter
+      type: custom:secondaryinfo-entity-row
+      secondary_info: "In [[ sensor.garden_winter.attributes.days ]] Days"
 
     - entity: sensor.paper
       name: Paper & Cardboard
