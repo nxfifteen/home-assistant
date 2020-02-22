@@ -51,3 +51,7 @@ action:
       title: 'Appliances'
       notification_id: "hass-appliance-washing"
       value1: 'The washing machine has finished and is ready to be emptied'
+
+  - service: notify.signal_stuart
+    data:
+      message: "That's the washing machine finished"

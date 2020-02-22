@@ -51,3 +51,7 @@ action:
       title: 'Appliances'
       notification_id: "hass-appliance-dishwasher"
       value1: 'The dishwasher has finished and is ready to be emptied'
+
+  - service: notify.signal_stuart
+    data:
+      message: "That's the dishwasher finished"
