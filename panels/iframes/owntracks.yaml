@@ -4,7 +4,7 @@
 #
 # https://www.home-assistant.io/components/panel_iframe/
 #
-gitwiki:
-  title: Wiki
-  icon: mdi:wikipedia
-  url: https://git.nxfifteen.rocks/home/home-assistant/wikis/home
+owntracks:
+  title: OwnTracks
+  icon: mdi:car-connected
+  url: !secret iframe_owntracks_url

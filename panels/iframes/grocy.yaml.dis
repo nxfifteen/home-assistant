@@ -1,5 +1,0 @@
----
-grocy:
-  title: Grocy
-  icon: mdi:fridge-outline
-  url: !secret iframe_grocy_url
