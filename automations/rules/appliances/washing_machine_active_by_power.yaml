@@ -6,34 +6,23 @@ trigger:
     value_template: '{{ state.attributes.current_power_w }}'
     above: 10
 condition:
-  condition: or
-  conditions:
-    - condition: state
-      entity_id: sensor.gf_dinning_washing_machine_status
-      state: Idle
-    - condition: state
-      entity_id: sensor.gf_dinning_washing_machine_status
-      state: Clean
-    - condition: state
-      entity_id: sensor.gf_dinning_washing_machine_status
-      state: Finishing
+  - condition: state
+    entity_id: sensor.gf_dinning_washing_machine_status
+    state: Idle
+
 action:
   - service: input_select.select_option
     data:
       entity_id: input_select.gf_dinning_washing_machine_status
       option: Running
 
-  - service: shell_command.grocy_consume_item
+  - service: rest_command.grocy_consume_item
     data:
-      server_ip: !secret grocy_url
-      grocy_key: !secret grocy_api_key
       product_id: 6
       amount: 40
 
-  - service: shell_command.grocy_consume_item
+  - service: rest_command.grocy_consume_item
     data:
-      server_ip: !secret grocy_url
-      grocy_key: !secret grocy_api_key
       product_id: 7
       amount: 80
 
@@ -43,3 +32,7 @@ action:
       title: 'Appliances'
       notification_id: "hass-appliance-washing"
       value1: 'The washing machine is on'
+
+  - service: notify.signal_stuart
+    data:
+      message: "That's the washing machine on"

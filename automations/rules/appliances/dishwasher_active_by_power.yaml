@@ -6,27 +6,18 @@ trigger:
     value_template: '{{ state.attributes.current_power_w }}'
     above: 10
 condition:
-  condition: or
-  conditions:
-    - condition: state
-      entity_id: sensor.gf_dinning_dishwasher_status
-      state: Idle
-    - condition: state
-      entity_id: sensor.gf_dinning_dishwasher_status
-      state: Clean
-    - condition: state
-      entity_id: sensor.gf_dinning_dishwasher_status
-      state: Finishing
+  - condition: state
+    entity_id: sensor.gf_dinning_dishwasher_status
+    state: Idle
+
 action:
   - service: input_select.select_option
     data:
       entity_id: input_select.gf_dinning_dishwasher_status
       option: Running
 
-  - service: shell_command.grocy_consume_item
+  - service: rest_command.grocy_consume_item
     data:
-      grocy_url: !secret grocy_url
-      grocy_key: !secret grocy_api_key
       product_id: 4
       amount: 1
 
@@ -36,3 +27,7 @@ action:
       title: 'Appliances'
       notification_id: "hass-appliance-dishwasher"
       value1: 'The dish washer is on'
+
+  - service: notify.signal_stuart
+    data:
+      message: "That's the dishwasher on"

@@ -94,8 +94,15 @@ binary_sensor:
         friendly_name: 'Bed Change Due'
         value_template: '{{ (as_timestamp(now()) | int) > (as_timestamp(states.sensor.grocy_chore_change_the_bed_next.state) | int) }}'
 
+# Example configuration.yaml entry
+rest_command:
+  grocy_consume_item:
+    url: !secret grocy_url_nodered
+    method: POST
+    payload: '{"product_id": "{{ product_id }}","amount": "{{ amount }}"}'
+    content_type:  'application/json; charset=utf-8'
+
 shell_command:
-  grocy_consume_item: "curl -X POST {{grocy_url}}/api/stock/products/{{product_id}}/consume -H 'Accept: application/json' -H 'Content-Type: application/json' -H 'GROCY-API-KEY: {{grocy_api_key}}' -H 'cache-control: no-cache' -d '{\"amount\":{{amount}},\"transaction_type\":\"consume\",\"spoiled\":false}'"
   grocy_url_chore_1_done: !secret grocy_url_chore_1_done
   grocy_url_chore_2_done: !secret grocy_url_chore_2_done
   grocy_url_chore_3_done: !secret grocy_url_chore_3_done
