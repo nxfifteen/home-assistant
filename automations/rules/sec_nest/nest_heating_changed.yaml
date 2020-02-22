@@ -6,8 +6,6 @@ trigger:
     - sensor.heating_set_to
 
 action:
-  - service: script.notify_join
-    data_template:
-      who: "stuart"
-      title: 'Heating Adjustment'
-      value1: 'The heating has been changed to {{ states.climate.hallway.attributes.temperature }}.'
+  - service: notify.signal_stuart
+    data:
+      message: 'The heating has been changed to {{ states.climate.hallway.attributes.temperature }}.'

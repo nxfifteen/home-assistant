@@ -25,3 +25,7 @@ action:
       channel: "nx"
       value1: '{{ trigger.to_state.attributes.friendly_name }} is about to expire.'
       value2: '#CertCheck'
+
+  - service: notify.signal_stuart
+    data:
+      message: '{{ trigger.to_state.attributes.friendly_name }} is about to expire.'

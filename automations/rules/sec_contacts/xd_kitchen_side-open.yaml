@@ -7,12 +7,9 @@ trigger:
     to:  'on'
 
 action:
-  - service: script.notify_join
-    data_template:
-      who: "stuart"
-      title: 'Jarvis Kitchen Door'
-      notification_id: "hass-contact-Kitchen"
-      value1: 'The Kitchen door is open'
+  - service: notify.signal_stuart
+    data:
+      message: 'The Kitchen door is open'
 
   - service: script.notify_tts_room
     data_template:

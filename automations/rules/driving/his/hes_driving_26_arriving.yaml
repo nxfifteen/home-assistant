@@ -16,18 +16,10 @@ action:
     room: "everywhere"
     value1: !include ../../../../entities/templates/driving_him.yaml
 
-- service: script.notify_join
+- service: script.notify_engine
   data_template:
-    who: "stuart"
-    title: 'His Driving Alerts'
-    notification_id: "driving-alert-he"
-    value1: !include ../../../../entities/templates/driving_him.yaml
-
-- service: persistent_notification.create
-  data_template:
-    title: 'His Driving Alerts'
-    message: !include ../../../../entities/templates/driving_him.yaml
-    notification_id: driving-alert-he
+    channel: "visitorlog"
+    value1: !include ../../../../entities/templates/driving_her.yaml
 
 - service: nest.set_away_mode
   data:
