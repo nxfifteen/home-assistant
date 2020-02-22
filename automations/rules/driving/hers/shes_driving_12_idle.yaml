@@ -10,6 +10,9 @@ trigger:
   - platform: state
     entity_id: sensor.family_kareen_drive_dest
     to: 'None'
+  - platform: state
+    entity_id: sensor.family_kareen_state_human
+    to: 'Home'
 
 action:
   - service: input_select.select_option

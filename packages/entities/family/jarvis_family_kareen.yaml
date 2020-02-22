@@ -143,6 +143,15 @@ homeassistant:
     sensor.family_kareen_phone_state:
       friendly_name: "Kareen's Phone State"
 
+    sensor.family_kareen_phone_charging:
+      friendly_name: "Kareen's Phone Charging"
+
+    sensor.family_kareen_state_reason:
+      friendly_name: "Kareen's State Reported"
+
+    sensor.family_kareen_state_activity:
+      friendly_name: "Kareen's Current Activity"
+
     sensor.family_kareen_loc_room:
       friendly_name: "Kareen's Room Location"
       icon: mdi:google-classroom
