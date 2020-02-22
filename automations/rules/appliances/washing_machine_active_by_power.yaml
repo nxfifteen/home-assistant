@@ -25,14 +25,3 @@ action:
     data:
       product_id: 7
       amount: 80
-
-  - service: script.notify_join
-    data_template:
-      who: "stuart"
-      title: 'Appliances'
-      notification_id: "hass-appliance-washing"
-      value1: 'The washing machine is on'
-
-  - service: notify.signal_stuart
-    data:
-      message: "That's the washing machine on"
