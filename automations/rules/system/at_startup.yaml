@@ -17,6 +17,6 @@ action:
     room: "study"
     value1: "Home Assistant is back online"
 
-  - service: notify.signal_stuart
-    data:
-      message: "Home Assistant is back online"
+- service: notify.signal_stuart
+  data:
+    message: "Home Assistant is back online"
