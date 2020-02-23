@@ -11,40 +11,36 @@ condition:
     state: 'Home'
 
 action:
-- service: script.notify_tts_zone_everywhere
-  data_template:
-    room: "everywhere"
-    value1: !include ../../../../entities/templates/driving_her.yaml
+  - service: script.notify_tts_zone_everywhere
+    data_template:
+      room: "everywhere"
+      value1: !include ../../../../entities/templates/driving_her.yaml
+    
+  - service: notify.signal_stuart
+    data:
+      message: !include ../../../../entities/templates/driving_her.yaml
 
-- service: script.notify_join
-  data_template:
-    who: "stuart"
-    title: 'Her Driving Alerts'
-    notification_id: "driving-alert-her"
-    value1: !include ../../../../entities/templates/driving_her.yaml
+  - service: script.notify_engine
+    data_template:
+      channel: "visitorlog"
+      value1: !include ../../../../entities/templates/driving_her.yaml
 
-- service: persistent_notification.create
-  data_template:
-    title: 'Her Driving Alerts'
-    message: !include ../../../../entities/templates/driving_her.yaml
-    notification_id: driving-alert-her
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.family_almost_home
+      option: "Yes"
 
-- service: input_select.select_option
-  data:
-    entity_id: input_select.family_almost_home
-    option: "Yes"
+  - service: nest.set_away_mode
+    data:
+      away_mode: home
+    
+  - condition: numeric_state
+    entity_id: sensor.family_family_state_raw
+    below: '4'
 
-- service: nest.set_away_mode
-  data:
-    away_mode: home
-  
-- condition: numeric_state
-  entity_id: sensor.family_family_state_raw
-  below: '4'
-
-- service: mqtt.publish
-  data:
-    topic: iot/scene/house
-    payload: 'Coming Home'
-    qos: 2
-    retain: true
+  - service: mqtt.publish
+    data:
+      topic: iot/scene/house
+      payload: 'Coming Home'
+      qos: 2
+      retain: true

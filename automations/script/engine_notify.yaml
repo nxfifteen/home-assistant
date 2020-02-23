@@ -27,6 +27,8 @@ notify_engine:
             notify.synchat_tweets
           {% elif channel == 'outside' %}
             notify.synchat_outside
+          {% elif channel == 'visitorlog' %}
+            notify.synchat_visitorlog            
           {% else %}
             notify.synchat_nx
           {% endif %}

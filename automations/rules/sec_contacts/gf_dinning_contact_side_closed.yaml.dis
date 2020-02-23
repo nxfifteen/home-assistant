@@ -1,12 +1,12 @@
 ---
-alias: Contact Open - Side Door
+alias: Contact Closed - Side Door
 
 trigger:
   - entity_id: binary_sensor.xd_kitchen_side
     platform: state
-    to:  'on'
+    to:  'off'
 
 action:
   - service: notify.signal_stuart
     data:
-      message: 'The side door is open'
+      message: 'The side door is closed'

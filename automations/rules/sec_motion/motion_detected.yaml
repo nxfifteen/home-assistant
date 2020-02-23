@@ -26,9 +26,6 @@ condition:
       state: 'not_home'
 
 action:
-  - service: script.notify_join
-    data_template:
-      who: "stuart"
-      title: 'Motion Detected'
-      notification_id: "hass-sec-motion"
-      value1: 'Motion has been detected by {{ trigger.to_state.attributes.friendly_name }}.'
+  - service: notify.signal_stuart
+    data:
+      message: 'Motion has been detected by {{ trigger.to_state.attributes.friendly_name }}.'

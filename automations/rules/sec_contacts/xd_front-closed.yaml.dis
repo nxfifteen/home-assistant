@@ -1,0 +1,12 @@
+---
+alias: Contact Closed - Front Door
+
+trigger:
+  - entity_id: binary_sensor.xd_front
+    platform: state
+    to:  'off'
+
+action:
+  - service: notify.signal_stuart
+    data:
+      message: 'The front door is closed'

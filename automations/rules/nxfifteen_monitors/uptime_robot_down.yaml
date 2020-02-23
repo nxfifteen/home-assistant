@@ -25,3 +25,7 @@ action:
       room: "study"
       value1: "{{ trigger.to_state.attributes.friendly_name }} has disconnected. Please investigate IMMEDIATELY"
       hashtag: "#UpTimeRobot #Failed"
+
+  - service: notify.signal_stuart
+    data:
+      message: "{{ trigger.to_state.attributes.friendly_name }} has disconnected. Please investigate IMMEDIATELY"

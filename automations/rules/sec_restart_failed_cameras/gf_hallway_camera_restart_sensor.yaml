@@ -19,12 +19,6 @@ action:
     data:
       entity_id: switch.gf_hallway_camera_switch
 
-  - service: script.notify_join
-    data_template:
-      who: "stuart"
-      title: 'Hallway Camera'
-      notification_id: "hass-cam-hallway"
-      icon: !secret http_icon_cctv
-      smallicon: !secret http_smallicon_cctv
-      image: !secret http_image_cctv
-      value1: "The Hallway Camera crashed again! I've restarted it"
+  - service: notify.signal_stuart
+    data:
+      message: "The Hallway Camera crashed again! I've restarted it"

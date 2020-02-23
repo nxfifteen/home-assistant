@@ -6,9 +6,8 @@ trigger:
     to: 'True'
 
 action:
-- service: script.notify_join
-  data_template:
-    who: "stuart"
-    title: 'His Driving Alerts'
-    notification_id: "driving-alert-he"
-    value1: "He's in the car"
+
+  - service: script.notify_engine
+    data_template:
+      channel: "visitorlog"
+      value1: !include ../../../../entities/templates/driving_her.yaml

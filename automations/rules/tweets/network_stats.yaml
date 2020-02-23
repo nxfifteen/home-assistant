@@ -16,3 +16,11 @@ action:
           "As reported by #PiHole, there are {{states.sensor.unifi_client_count.state}} clients on my network.",
           ] | random + " (https://amzn.to/2SKJ957)" }}
       hashtag: '#PiHole #Security'
+
+  - service: notify.signal_stuart
+    data:
+      message: >
+          {{ [
+          "There are currently {{states.sensor.unifi_client_count.state}} clients on my network.",
+          "As reported by #PiHole, there are {{states.sensor.unifi_client_count.state}} clients on my network.",
+          ] | random + " (https://amzn.to/2SKJ957)" }}

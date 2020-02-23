@@ -20,3 +20,7 @@ action:
       data:
         type: announce
       message: "A new device just joined the network."
+
+  - service: notify.signal_stuart
+    data:
+      message: "A new device just joined the network."

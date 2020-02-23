@@ -54,11 +54,13 @@ condition:
       value_template: "{{ states.person.steve.state != 'home' }}"
 
 action:
-  - service: script.notify_join
+  - service: notify.signal_stuart
+    data:
+      message: "I've turned off guest mode"
+      
+  - service: script.notify_engine
     data_template:
-      who: "stuart"
-      title: 'Guest Mode - Off'
-      notification_id: "hass-guest-off"
+      channel: "visitorlog"
       value1: 'All your guest have left.'
       value2: "I've turned off guest mode"
 

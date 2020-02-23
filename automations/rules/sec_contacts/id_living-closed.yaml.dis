@@ -1,12 +1,12 @@
 ---
-alias: Contact Open - Livingroom Door
+alias: Contact Closed - Livingroom Door
 
 trigger:
   - entity_id: binary_sensor.id_living
     platform: state
-    to:  'on'
+    to:  'off'
 
 action:
   - service: notify.signal_stuart
     data:
-      message: 'The Livingroom door is open'
+      message: 'The Livingroom door is closed'

@@ -65,13 +65,15 @@ condition:
       state: home
 
 action:
-  - service: script.notify_join
+  - service: notify.signal_stuart
+    data:
+      message: "I've turned on guest mode"
+      
+  - service: script.notify_engine
     data_template:
-      who: "stuart"
-      title: 'Guest Mode - On'
-      notification_id: "hass-guest-on"
-      value1: '{{ trigger.to_state.attributes.friendly_name }} arrived.'
-      value2: "I've turned on Guest Mode"
+      channel: "visitorlog"
+      value1: 'All your guest have left.'
+      value2: "I've turned on guest mode"
 
   - service: input_boolean.turn_on
     data:

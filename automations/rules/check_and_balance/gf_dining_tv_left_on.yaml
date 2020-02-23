@@ -10,9 +10,6 @@ trigger:
       minutes: 10
 
 action:
-  - service: script.notify_join
-    data_template:
-      who: "stuart"
-      title: 'Power Check'
-      notification_id: "hass-contact-front"
-      value1: 'Did you leave the Dining room TV on?'
+  - service: notify.signal_stuart
+    data:
+      message: "Did you leave the Dining room TV on?"

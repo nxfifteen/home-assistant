@@ -15,6 +15,10 @@ action:
         There is a Home Assistant upgrade for Hass.io pending!
         Version {{ states('sensor.version_available') }} just got released! #GitLab #CI #Failed
 
+  - service: notify.signal_stuart
+    data:
+      message: "Home Assistant version {{ states('sensor.version_available') }} just got released!"
+
   - service: persistent_notification.create
     data_template:
       title: Upgrade time!

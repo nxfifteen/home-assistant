@@ -20,14 +20,3 @@ action:
     data:
       product_id: 4
       amount: 1
-
-  - service: script.notify_join
-    data_template:
-      who: "stuart"
-      title: 'Appliances'
-      notification_id: "hass-appliance-dishwasher"
-      value1: 'The dish washer is on'
-
-  - service: notify.signal_stuart
-    data:
-      message: "That's the dishwasher on"
