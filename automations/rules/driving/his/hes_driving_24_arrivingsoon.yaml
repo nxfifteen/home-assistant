@@ -19,7 +19,7 @@ action:
 - service: script.notify_engine
   data_template:
     channel: "visitorlog"
-    value1: !include ../../../../entities/templates/driving_her.yaml
+    value1: !include ../../../../entities/templates/driving_him.yaml
 
 - service: input_select.select_option
   data:
