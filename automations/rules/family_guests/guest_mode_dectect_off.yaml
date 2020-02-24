@@ -64,10 +64,6 @@ action:
       channel: "visitorlog"
       value1: 'All your guest have left.'
       value2: "I've turned off guest mode"
-
-  - condition: state
-    entity_id: sensor.family_stuart_state
-    state: 0
     
   - service: notify.signal_stuart
     data:

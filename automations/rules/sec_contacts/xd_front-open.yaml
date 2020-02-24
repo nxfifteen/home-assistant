@@ -17,10 +17,6 @@ action:
       room: "bedroom"
       value1: "The front door is open"
 
-  - condition: state
-    entity_id: sensor.family_stuart_state
-    state: 0
-
   - service: notify.signal_stuart
     data:
       message: "The front door is open"
