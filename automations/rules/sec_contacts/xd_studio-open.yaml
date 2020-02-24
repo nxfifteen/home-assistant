@@ -7,10 +7,6 @@ trigger:
     to:  'on'
 
 action:
-  - service: notify.signal_stuart
-    data:
-      message: 'The Back door is open'
-
   - service: script.notify_tts_room
     data_template:
       room: "kitchen"
@@ -25,3 +21,11 @@ action:
     data_template:
       room: "bedroom"
       value1: "The Back door is open"
+      
+  - condition: state
+    entity_id: sensor.family_stuart_state
+    state: 0
+
+  - service: notify.signal_stuart
+    data:
+      message: 'The Back door is open'

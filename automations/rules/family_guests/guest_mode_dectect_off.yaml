@@ -54,9 +54,10 @@ condition:
       value_template: "{{ states.person.steve.state != 'home' }}"
 
 action:
-  - service: notify.signal_stuart
+
+  - service: input_boolean.turn_off
     data:
-      message: "I've turned off guest mode"
+      entity_id: input_boolean.guest_mode
       
   - service: script.notify_engine
     data_template:
@@ -64,6 +65,10 @@ action:
       value1: 'All your guest have left.'
       value2: "I've turned off guest mode"
 
-  - service: input_boolean.turn_off
+  - condition: state
+    entity_id: sensor.family_stuart_state
+    state: 0
+    
+  - service: notify.signal_stuart
     data:
-      entity_id: input_boolean.guest_mode
+      message: "I've turned off guest mode"

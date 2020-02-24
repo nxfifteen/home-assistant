@@ -51,3 +51,11 @@ action:
       effect: none
       rgb_color: [81, 255, 76]
       transition: 2
+      
+  - condition: state
+    entity_id: sensor.family_stuart_state
+    state: 0
+
+  - service: notify.signal_stuart
+    data:
+      message: "Git Lab has accepted your code."
