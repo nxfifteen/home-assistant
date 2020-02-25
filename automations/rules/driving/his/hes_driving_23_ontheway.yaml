@@ -19,7 +19,7 @@ action:
 - service: script.notify_engine
   data_template:
     channel: "visitorlog"
-    value1: !include ../../../../entities/templates/driving_her.yaml
+    value1: !include ../../../../entities/templates/driving_him.yaml
   
 - condition: numeric_state
   entity_id: sensor.family_family_state_raw

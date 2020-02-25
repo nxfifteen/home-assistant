@@ -65,9 +65,9 @@ condition:
       state: home
 
 action:
-  - service: notify.signal_stuart
+  - service: input_boolean.turn_on
     data:
-      message: "I've turned on guest mode"
+      entity_id: input_boolean.guest_mode
       
   - service: script.notify_engine
     data_template:
@@ -75,6 +75,6 @@ action:
       value1: 'All your guest have left.'
       value2: "I've turned on guest mode"
 
-  - service: input_boolean.turn_on
+  - service: notify.signal_stuart
     data:
-      entity_id: input_boolean.guest_mode
+      message: "I've turned on guest mode"
