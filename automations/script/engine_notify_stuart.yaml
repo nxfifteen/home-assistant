@@ -1,0 +1,6 @@
+---
+notify_engine_stuart:
+  sequence:
+    - service: notify.signal_stuart
+      data_template:
+        message: "{{ message }}"
