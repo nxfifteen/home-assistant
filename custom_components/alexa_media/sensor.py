@@ -69,6 +69,14 @@ async def async_setup_platform(hass, config, add_devices_callback, discovery_inf
                 hide_email(account),
                 hide_serial(key),
             )
+            if devices:
+                await add_devices(
+                    hide_email(account),
+                    devices,
+                    add_devices_callback,
+                    include_filter,
+                    exclude_filter,
+                )
             return False
         if key not in (account_dict["entities"]["sensor"]):
             (account_dict["entities"]["sensor"][key]) = {}
@@ -193,6 +201,12 @@ class AlexaMediaSensor(Entity):
             # this is typically an older alarm
             value[1][self._sensor_property] = datetime.datetime.fromtimestamp(
                 value[1]["alarmTime"] / 1000, tz=LOCAL_TIMEZONE
+            )
+            _LOGGER.warning(
+                "There is an old format alarm on %s set for %s. "
+                " This alarm should be removed in the Alexa app and recreated. ",
+                self._client.name,
+                dt.as_local(value[1][self._sensor_property]),
             )
         else:
             _LOGGER.warning(
@@ -390,7 +404,7 @@ class TimerSensor(AlexaMediaSensor):
         return (
             dt.as_local(
                 super()._round_time(
-                    dt.utc_from_timestamp(
+                    datetime.datetime.fromtimestamp(
                         self._timestamp.timestamp()
                         + self._next[self._sensor_property] / 1000
                     )
