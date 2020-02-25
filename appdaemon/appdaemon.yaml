@@ -9,7 +9,10 @@ appdaemon:
     HASS:
       type: hass
       ha_url: http://hassio/homeassistant
-      token: 2d46ee598984ed85ee82c6bd837a489a751535387445c2e17614af71d9ae4de27db74d55ef29c9c404f0cb816f68c76ef2d765aeaae47c14
+      token: 6e4b0ef3b0952fbe2f181ed37ceef8bab4dd78521f219085de19b98b03e2b789f8c9a9ce08dd7c758ced6aa24c371e37318fee77a666e972
 hadashboard:
   dash_url: http://127.0.0.1:5050
   dash_dir: /config/appdaemon/dashboards
+groups:
+  module: group_all
+  class: GroupAll

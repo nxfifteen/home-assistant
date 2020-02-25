@@ -101,6 +101,8 @@ class anniversaries(Entity):
         """update the sensor"""
         today = date.today()
         nextDate = date(today.year, self._date.month, self._date.day)
+        if today < self._date.date():
+            nextDate = self._date.date()
         daysRemaining = 0
         years = today.year - self._date.year
         if today < nextDate:
@@ -113,7 +115,7 @@ class anniversaries(Entity):
             daysRemaining = (nextDate - today).days
             years = years + 1
             if self._unknown_year:
-                self._date = nextDate
+                self._date = datetime(nextDate.year, nextDate.month, nextDate.day)
 
         if daysRemaining == 0:
             self._icon = self._icon_today
