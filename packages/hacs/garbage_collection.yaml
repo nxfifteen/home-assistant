@@ -51,3 +51,17 @@ garbage_collection:
     icon_normal: mdi:recycle
     icon_today: mdi:delete-empty
     icon_tomorrow: mdi:delete-sweep
+
+sensor:
+  - platform: template
+    sensors:
+      this_weeks_bin:
+        friendly_name: 'This Weeks Bin'
+        value_template: >
+          {% if states.sensor.waste.attributes.days < 8 %}
+            {{ states.sensor.waste.attributes.friendly_name }}
+          {% elif states.sensor.paper.attributes.days < 8 %}
+            {{ states.sensor.paper.attributes.friendly_name }}
+          {% elif states.sensor.plastic.attributes.days < 8 %}
+            {{ states.sensor.plastic.attributes.friendly_name }}
+          {% endif %}

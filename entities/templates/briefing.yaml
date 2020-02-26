@@ -177,20 +177,26 @@
   {% endmacro %}
 
   {%- macro bin_sentence() -%}
-    {%- if states.calendar.reminders_bin_trash.state == 'on' -%}
+    {% if states.sensor.waste.attributes.days < 8 %}
       {%- set thisweeksbin = "Blue & Brown bins" -%}
+      {%- set pluralOne = "are" -%}
       {%- set plural = "are they" -%}
-    {%- elif states.calendar.reminders_bin_grey.state == 'on' -%}
+      {%- set binstate = states.sensor.waste.state -%}
+    {% elif states.sensor.paper.attributes.days < 8 %}
       {%- set thisweeksbin = "Grey bin" -%}
+      {%- set pluralOne = "is" -%}
       {%- set plural = "is it" -%}
-    {%- elif states.calendar.reminders_bin_green.state == 'on' -%}
+      {%- set binstate = states.sensor.paper.state -%}
+    {% elif states.sensor.plastic.attributes.days < 8 %}
       {%- set thisweeksbin = "Green bin" -%}
+      {%- set pluralOne = "is" -%}
       {%- set plural = "is it" -%}
-    {%- endif -%}
-    {%- if states.calendar.reminders_bin_out.state == 'on' -%}
+      {%- set binstate = states.sensor.plastic.state -%}
+    {% endif %}    
+    {%- if binstate == "1" -%}
       Remember their collecting the {{ thisweeksbin }} tomorrow.
-    {%- elif states.calendar.reminders_bin_day.state == 'on' -%}
-      It's that time again. The {{ thisweeksbin }} are getting collected today, so, {{ plural }} out yet?
+    {%- elif binstate == "0" -%}
+      It's that time again. The {{ thisweeksbin }} {{ pluralOne }} getting collected today, so, {{ plural }} out yet?
     {%- else -%}
       One last thing. Remember their collecting the {{ thisweeksbin }} this week.
     {%- endif -%}

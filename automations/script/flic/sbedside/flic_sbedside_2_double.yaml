@@ -1,14 +1,8 @@
 flic_sbedside_2_double:
   sequence:
-    - service: persistent_notification.create
-      data_template:
-        title: 'Flic Button (S.Bedside)'
-        message: "Double Pressed"
-        notification_id: flic_sbedside
-
     - service: joaoapps_join.join_his_send_tasker
       data_template:
-        command: "flic_cmd=:=flic_sbedside_2_double"
+        command: "flic_cmd=:=flic_act_briefing"
 
     - service: script.notify_tts_room
       data_template:
