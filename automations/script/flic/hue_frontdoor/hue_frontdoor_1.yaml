@@ -1,18 +1,12 @@
 hue_frontdoor_1:
   sequence:
-    - service: persistent_notification.create
-      data_template:
-        title: 'Hue Button (FrontDoor)'
-        message: "Button 1"
-        notification_id: hue_frontdoor
-
     - service: joaoapps_join.join_his_send_tasker
       data_template:
-        command: "jarvis=:=going_out"
+        command: "flic_cmd=:=flic_state_out"
 
     - service: joaoapps_join.join_her_send_tasker
       data_template:
-        command: "jarvis=:=going_out"
+        command: "flic_cmd=:=flic_state_out"
 
     - service: script.turn_on
       data:
