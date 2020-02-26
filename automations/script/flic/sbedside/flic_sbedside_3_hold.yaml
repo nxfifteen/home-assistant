@@ -9,3 +9,11 @@ flic_sbedside_3_hold:
     - service: joaoapps_join.join_his_send_tasker
       data_template:
         command: "flic_cmd=:=flic_sbedside_3_hold"
+
+    - service: light.turn_off
+      data:
+        entity_id: light.ff_bedroom_bedside_stuart
+
+    - service: switch.turn_off
+      data:
+        entity_id: switch.ff_bedroom_fairylights_switch

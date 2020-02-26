@@ -38,6 +38,6 @@ notify:
   - name: signal_stuart
     platform: signal_messenger
     url: !secret signal_api_url # the URL where the Signal Messenger REST API is listening
-    number: !secret signal_api_sender # the sender number
+    number: !secret signal_api_sender_two # the sender number
     recipients: # one or more recipients
       - !secret signal_api_rec_stuart
