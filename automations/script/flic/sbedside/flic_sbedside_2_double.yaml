@@ -15,3 +15,7 @@ flic_sbedside_2_double:
         room: "bedroom"
         value1: !include ../../../../entities/templates/briefing.yaml
         hastag: "#Alarm #GoodMorning"
+
+    - service: notify.signal_stuart
+      data_template:
+        message: !include ../../../../entities/templates/briefing.yaml
