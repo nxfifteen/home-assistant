@@ -5,3 +5,4 @@ light_gf_living:
     - light.gf_living_celing
     - light.gf_living_lamp
     - switch.gf_living_light_jar_switch
+    - light.gf_studio_celing

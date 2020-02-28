@@ -1,0 +1,6 @@
+---
+light_hallways:
+  name: Hallway Lighting
+  entities:
+    - light.gf_hallway_celing
+    - light.ff_landing_celing
