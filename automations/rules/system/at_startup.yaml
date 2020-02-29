@@ -5,6 +5,10 @@ trigger:
   - platform: homeassistant
     event: start
 action:
+- service: hassio.addon_start
+  data:
+    addon: "a0d7b954_nodered"
+
 - service: script.notify_join
   data_template:
     who: "stuart"
