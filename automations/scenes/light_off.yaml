@@ -1,5 +1,5 @@
 ---
 name: light off
 entities:
-  group.all_lights:
+  group.lights_all_safe:
     state: off
