@@ -44,6 +44,12 @@ action:
     data_template:
       room: "everywhere"
       value1: "The washing machine has finished and is ready to be emptied"
+  
+  - condition: or
+    conditions:
+      - condition: state
+        entity_id: input_boolean.text_notifications
+        state: 'on'
 
   - service: notify.signal_stuart
     data:
