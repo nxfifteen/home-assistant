@@ -18,7 +18,7 @@ action:
       hashtag: '#PiHole #Security'
 
   - service: notify.signal_stuart
-    data:
+    data_template:
       message: >
           {{ [
           "There are currently {{states.sensor.unifi_client_count.state}} clients on my network.",
