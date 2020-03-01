@@ -132,16 +132,10 @@ cards:
     entities:
       - type: 'custom:text-divider-row'
         text: Tiles
-      - entity: device_tracker.tile_98d840fa9b48f5b2
-        name: House Keys
       - entity: device_tracker.tile_964004c0e14c4228
-        name: Car Keys
+        name: Keys
       - entity: device_tracker.tile_c4f2161059284831
         name: Backpack
-      - entity: device_tracker.tile_19063e4f07561dcf
-        name: Camera Bag
-      - entity: device_tracker.tile_353e0f954ad1a9af
-        name: Camera
 
   # - type: entities
   #   entities:
