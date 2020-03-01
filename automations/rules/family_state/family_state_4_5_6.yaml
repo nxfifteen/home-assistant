@@ -13,17 +13,25 @@ trigger:
     to: '6'
 
 condition:
-  condition: or
+  condition: and
   conditions:
-    - condition: state
-      entity_id: sensor.family_family_state_raw
-      state:  '4'
-    - condition: state
-      entity_id: sensor.family_family_state_raw
-      state:  '5'
-    - condition: state
-      entity_id: sensor.family_family_state_raw
-      state:  '6'
+    - condition: template
+      value_template: "{{ not is_state('sensor.house_scene', 'Going To Bed') }}"
+
+    - condition: template
+      value_template: "{{ not is_state('sensor.house_scene', 'Asleep') }}"
+    
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: sensor.family_family_state_raw
+          state:  '4'
+        - condition: state
+          entity_id: sensor.family_family_state_raw
+          state:  '5'
+        - condition: state
+          entity_id: sensor.family_family_state_raw
+          state:  '6'
 
 action:
   - service: input_select.select_option

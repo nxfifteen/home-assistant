@@ -19,7 +19,7 @@ action:
       hashtag: '#AdGuard #Security'
       
   - service: notify.signal_stuart
-    data:
+    data_template:
       message: >
           {{ [
           "I blocked {{states.sensor.adguard_dns_queries_blocked.state}} ads via #adguard. That is {{states.sensor.adguard_dns_queries_blocked_ratio.state}}% of my internet traffic.",
