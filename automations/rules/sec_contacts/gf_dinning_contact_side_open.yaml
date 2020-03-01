@@ -7,6 +7,16 @@ trigger:
     to:  'on'
 
 action:
+  - condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.family_family_state_raw
+        below: '7'
+        
+      - condition: state
+        entity_id: input_boolean.text_notifications
+        state: 'on'
+
   - service: notify.signal_stuart
     data:
       message: 'The side door is open'

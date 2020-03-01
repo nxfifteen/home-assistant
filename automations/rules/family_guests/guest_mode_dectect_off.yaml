@@ -64,6 +64,12 @@ action:
       channel: "visitorlog"
       value1: 'All your guest have left.'
       value2: "I've turned off guest mode"
+  
+  - condition: or
+    conditions:
+      - condition: state
+        entity_id: input_boolean.text_notifications
+        state: 'on'
     
   - service: notify.signal_stuart
     data:
