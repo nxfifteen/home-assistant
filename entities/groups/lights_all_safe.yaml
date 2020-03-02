@@ -1,0 +1,16 @@
+---
+lights_all_safe:
+  name: Lights That Are Safe
+  entities:
+    - light.ff_bedroom_bedside_stuart
+    - light.ff_bedroom_bedside_kareen
+    - light.ff_bedroom_celing
+    - light.gf_hallway_celing
+    - light.ff_landing_celing
+    - light.gf_living_celing
+    - light.gf_living_lamp
+    - light.gf_studio_celing
+    - light.ff_study_desk
+    - light.ff_study_wall
+    - light.ff_study_celing
+    - switch.gf_living_light_jar_switch
