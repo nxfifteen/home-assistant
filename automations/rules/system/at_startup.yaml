@@ -8,6 +8,34 @@ action:
 - service: hassio.addon_start
   data:
     addon: "a0d7b954_nodered"
+    
+- service: hassio.addon_start
+  data:
+    addon: "a0d7b954_grafana"
+    
+- service: hassio.addon_start
+  data:
+    addon: "a0d7b954_grocy"
+    
+- service: hassio.addon_start
+  data:
+    addon: "a0d7b954_adb"
+    
+- service: hassio.addon_start
+  data:
+    addon: "a0d7b954_appdaemon3"
+    
+- service: hassio.addon_start
+  data:
+    addon: "a0d7b954_influxdb"
+    
+- service: hassio.addon_start
+  data:
+    addon: "core_mariadb"
+    
+- service: hassio.addon_start
+  data:
+    addon: "a0d7b954_sonweb"
 
 - service: joaoapps_join.join_his_send_tasker
   data_template:
