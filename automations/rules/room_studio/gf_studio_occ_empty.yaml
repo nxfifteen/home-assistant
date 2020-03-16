@@ -7,12 +7,22 @@ trigger:
   to: 'off'
   for:
     seconds: 90
+    
+- entity_id: switch.occ_room_livingroom
+  platform: state
+  to: 'off'
+  for:
+    seconds: 90
 
 condition:
   condition: and
   conditions:
     - condition: state
       entity_id: switch.occ_room_studio
+      state: 'off'
+
+    - condition: state
+      entity_id: switch.occ_room_livingroom
       state: 'off'
 
     - condition: template
