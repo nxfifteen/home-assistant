@@ -6,7 +6,7 @@ trigger:
   entity_id: binary_sensor.gf_dinning_camera_switch
   to:  'off'
   for:
-    seconds: 30
+    minutes: 5
 
 action:
   - service: switch.turn_off
