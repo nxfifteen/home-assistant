@@ -19,37 +19,27 @@ cards:
           - entity: sensor.family_kareen_state_human
             name: State
           - entity: sensor.family_kareen_phone_state
-            name: Tasker
-          - entity: sensor.family_kareen_loc_room
-            name: Room
-            type: custom:secondaryinfo-entity-row
-            secondary_info: "[[ sensor.family_kareen_loc_room_prob.state ]]"
+            name: Tasker Profile
+          #- entity: sensor.family_kareen_loc_room
+          #  name: Room
+          #  type: custom:secondaryinfo-entity-row
+          #  secondary_info: "[[ sensor.family_kareen_loc_room_prob.state ]]"
           - entity: sensor.family_kareen_locality
             name: Locality
           - type: section
           - script.find_phone_kareen
           - sensor.family_kareen_phone_charging
-          - type: section
-          - sensor.family_kareen_state_reason
-          - sensor.family_kareen_state_activity
-
-  - type: 'custom:travel-time-card'
-    map: waze
-    entities:
-      - entity: sensor.commute_kareen_home
-        zone: zone.home
-      - entity: sensor.commute_kareen_work_a
-        zone: zone.newport
-      - entity: sensor.commute_kareen_work_b
-        zone: zone.tayport
+          #- type: section
+          #- sensor.family_kareen_state_reason
+          #- sensor.family_kareen_state_activity
 
   - type: entities
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
-        text: Kareen
+        text: Commute Timing
       - entity: sensor.commute_kareen_home
-        name: Kareen Home
+        name: Home
         icon: mdi:home-account
         type: custom:secondaryinfo-entity-row
         secondary_info:  "[[ {entity}.attributes.distance ]] km"
@@ -101,49 +91,11 @@ cards:
         name: Minutes Away
 
   - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Travel
-      - entity: sensor.commute_kareen_home
-        name: Kareen Home
-        icon: mdi:home-account
-        type: custom:secondaryinfo-entity-row
-        secondary_info:  "[[ {entity}.attributes.distance ]] km"
-      - entity: sensor.commute_kareen_work_a
-        name: Newport
-        icon: mdi:cash-usd
-        type: custom:secondaryinfo-entity-row
-        secondary_info:  "[[ {entity}.attributes.distance ]] km"
-      - entity: sensor.commute_kareen_work_b
-        name: Tayport
-        icon: mdi:cash-usd
-        type: custom:secondaryinfo-entity-row
-        secondary_info:  "[[ {entity}.attributes.distance ]] km"
-
-  - type: entities
     entities:
       - type: 'custom:text-divider-row'
         text: Tiles
       - entity: device_tracker.tile_8cd8c4ede6ff52b8
         name: Keys
-
-  # - type: entities
-  #   entities:
-  #     - type: 'custom:text-divider-row'
-  #       text: Fitness
-  #     - entity: sensor.health_hers_weight
-  #       type: custom:secondaryinfo-entity-row
-  #       secondary_info: "[[ sensor.health_hers_weight_loss.state ]] kg Lost | [[ sensor.health_hers_fat.state ]] % Fat | [[ sensor.health_hers_bmi.state ]] BMI"
-  #     - entity: sensor.health_hers_steps
-  #       type: custom:secondaryinfo-entity-row
-  #       secondary_info: "[[ sensor.health_hers_distance.state ]] km"
-  #     - sensor.health_hers_floors
-  #     - sensor.health_hers_water
-  #     - sensor.health_hers_calories
-  #     - entity: sensor.health_hers_minutes_active
-  #       type: custom:secondaryinfo-entity-row
-  #       secondary_info: "Resting Heart Rate [[ sensor.health_hers_resting_heart_rate.state ]] bpm"
 
   - type: picture-elements
     image: /local/images/core_fit_1.png

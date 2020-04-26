@@ -92,3 +92,7 @@ schedy_heating:  # This is our app instance name.
         - v: 10
           rules:
             - x: "Next() if heating_control() == 'Automatic' else Break()"
+
+        - v: 10
+          rules:
+            - x: "Next() if house_scene() == 'Empty' else Break()"

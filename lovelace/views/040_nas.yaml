@@ -80,34 +80,45 @@ cards:
                     title_position: inside
                     entity: sensor.printer_hp
                     title: Status
-                    align: center
-                    padding: 5px
-                    card_style:
-                      border-radius: 5px
+                    style: |-
+                      bar-card-value {
+                        margin-right: auto;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-shadow: 1px 1px #0005;
+                      }
 
           - type: custom:bar-card
             align: split
             show_icon: true
-            padding: 4px
             columns: 1
-            card_style:
-              border-radius: 5px
             entities:
               - entity: sensor.printer_hp_black
                 title: Black
                 icon: mdi:alpha-b-box
+            style: |-
+              bar-card-value {
+                margin-right: auto;
+                font-size: 13px;
+                font-weight: bold;
+                text-shadow: 1px 1px #0005;
+              }
 
           - type: custom:bar-card
             align: split
             show_icon: true
-            padding: 4px
             columns: 1
-            card_style:
-              border-radius: 5px
             entities:
               - entity: sensor.printer_hp_colour
                 title: Colour
                 icon: mdi:alpha-c-box
+            style: |-
+              bar-card-value {
+                margin-right: auto;
+                font-size: 13px;
+                font-weight: bold;
+                text-shadow: 1px 1px #0005;
+              }
 
           - entity: sensor.printer_hp_impressions
             name: Prints
@@ -135,31 +146,41 @@ cards:
                     title_position: inside
                     entity: sensor.synology_dsm_status_volume_1
                     title: Status
-                    align: center
-                    padding: 5px
-                    card_style:
-                      border-radius: 5px
+                    style: |-
+                      bar-card-value {
+                        margin-right: auto;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-shadow: 1px 1px #0005;
+                      }
 
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.synology_dsm_total_size_volume_1
                     title: Total Storage
-                    align: center
-                    padding: 5px
-                    card_style:
-                      border-radius: 5px
+                    style: |-
+                      bar-card-value {
+                        margin-right: auto;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-shadow: 1px 1px #0005;
+                      }
 
           - type: custom:bar-card
             align: split
             show_icon: true
-            padding: 4px
             columns: 1
-            card_style:
-              border-radius: 5px
             entities:
               - entity: sensor.synology_dsm_volume_used_volume_1
                 title: Disk
                 icon: mdi:harddisk
+            style: |-
+              bar-card-value {
+                margin-right: auto;
+                font-size: 13px;
+                font-weight: bold;
+                text-shadow: 1px 1px #0005;
+              }
 
           - entity: sensor.synology_dsm_status_volume_1
             name: Volume 1 Status
@@ -187,27 +208,36 @@ cards:
                     title_position: inside
                     entity: sensor.synology_dsm_status_volume_2
                     title: Status
-                    align: center
-                    padding: 5px
-                    card_style:
-                      border-radius: 5px
+                    style: |-
+                      bar-card-value {
+                        margin-right: auto;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-shadow: 1px 1px #0005;
+                      }
 
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.synology_dsm_total_size_volume_2
                     title: Total Storage
-                    align: center
-                    padding: 5px
-                    card_style:
-                      border-radius: 5px
+                    style: |-
+                      bar-card-value {
+                        margin-right: auto;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-shadow: 1px 1px #0005;
+                      }
 
           - type: custom:bar-card
             align: split
             show_icon: true
-            padding: 4px
-            columns: 1
-            card_style:
-              border-radius: 5px
+            style: |-
+              bar-card-value {
+                margin-right: auto;
+                font-size: 13px;
+                font-weight: bold;
+                text-shadow: 1px 1px #0005;
+              }
             entities:
               - entity: sensor.synology_dsm_volume_used_volume_2
                 title: Disk
@@ -239,27 +269,36 @@ cards:
                     title_position: inside
                     entity: sensor.synology_dsm_status_volume_3
                     title: Status
-                    align: center
-                    padding: 5px
-                    card_style:
-                      border-radius: 5px
+                    style: |-
+                      bar-card-value {
+                        margin-right: auto;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-shadow: 1px 1px #0005;
+                      }
 
                   - type: custom:bar-card
                     title_position: inside
                     entity: sensor.synology_dsm_total_size_volume_3
                     title: Total Storage
-                    align: center
-                    padding: 5px
-                    card_style:
-                      border-radius: 5px
+                    style: |-
+                      bar-card-value {
+                        margin-right: auto;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-shadow: 1px 1px #0005;
+                      }
 
           - type: custom:bar-card
             align: split
             show_icon: true
-            padding: 4px
-            columns: 1
-            card_style:
-              border-radius: 5px
+            style: |-
+              bar-card-value {
+                margin-right: auto;
+                font-size: 13px;
+                font-weight: bold;
+                text-shadow: 1px 1px #0005;
+              }
             entities:
               - entity: sensor.synology_dsm_volume_used_volume_3
                 title: Disk
@@ -268,63 +307,6 @@ cards:
           - entity: sensor.synology_dsm_status_volume_3
             name: Volume 3 Status
             icon: mdi:harddisk
-
-  # - type: vertical-stack
-  #   cards:
-  #     - type: entities
-  #       show_header_toggle: off
-  #       entities:
-  #         - type: 'custom:text-divider-row'
-  #           text: PVE - Intel Nuc
-  #         - type: custom:vertical-stack-in-card
-  #           cards:
-  #             - type: horizontal-stack
-  #               cards:
-  #                 - type: custom:card-modder
-  #                   card:
-  #                     type: picture
-  #                     image: /local/images/nuc.jpg
-  #                   style:
-  #                     border-radius: 5px
-
-  #                 - type: vertical-stack
-  #                   cards:
-                    
-  #                   - type: custom:bar-card
-  #                     align: split
-  #                     show_icon: true
-  #                     padding: 4px
-  #                     columns: 1
-  #                     card_style:
-  #                       border-radius: 5px
-  #                     entities:
-  #                       - entity: sensor.pve_cpu_used
-  #                         title: CPU
-  #                         icon: mdi:harddisk
-                    
-  #                   - type: custom:bar-card
-  #                     align: split
-  #                     show_icon: true
-  #                     padding: 4px
-  #                     columns: 1
-  #                     card_style:
-  #                       border-radius: 5px
-  #                     entities:
-  #                       - entity: sensor.pve_ram_used_percent
-  #                         title: RAM
-  #                         icon: mdi:harddisk
-                    
-  #                   - type: custom:bar-card
-  #                     align: split
-  #                     show_icon: true
-  #                     padding: 4px
-  #                     columns: 1
-  #                     card_style:
-  #                       border-radius: 5px
-  #                     entities:
-  #                       - entity: sensor.pve_disk_used_percent
-  #                         title: Disk
-  #                         icon: mdi:harddisk
 
   - type: entities
     show_header_toggle: false

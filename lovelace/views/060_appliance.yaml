@@ -89,22 +89,22 @@ cards:
       - sensor: sensor.gf_dinning_washing_machine_power
       - icon: washing-machine
 
-  - type: entities
-    title: Washing Machine
-    show_header_toggle: false
-    entities:
-    - sensor.gf_dinning_washing_machine_cost
-    - sensor.gf_dinning_washing_machine_friendly_status
-    - input_boolean.enable_washing_machine_notification
-    - type: section
-    - sensor.gf_dinning_washing_machine_load
-    - sensor.gf_dinning_washing_machine_status_detail
-    - type: section
-    - sensor.gf_dinning_washing_machine_meter_weekly
-    - sensor.gf_dinning_washing_machine_meter_monthly
-    - type: section
-    - sensor.grocy_stock_washing_powder
-    - sensor.grocy_stock_washing_softner
+  # - type: entities
+  #   title: Washing Machine
+  #   show_header_toggle: false
+  #   entities:
+  #   - sensor.gf_dinning_washing_machine_cost
+  #   - sensor.gf_dinning_washing_machine_friendly_status
+  #   - input_boolean.enable_washing_machine_notification
+  #   - type: section
+  #   - sensor.gf_dinning_washing_machine_load
+  #   - sensor.gf_dinning_washing_machine_status_detail
+  #   - type: section
+  #   - sensor.gf_dinning_washing_machine_meter_weekly
+  #   - sensor.gf_dinning_washing_machine_meter_monthly
+  #   - type: section
+  #   - sensor.grocy_stock_washing_powder
+  #   - sensor.grocy_stock_washing_softner
 
   - type: custom:decluttering-card
     template: graph_power
@@ -113,19 +113,19 @@ cards:
       - sensor: sensor.gf_dinning_dishwasher_power
       - icon: dishwasher
 
-  - type: entities
-    title: Dishwasher
-    show_header_toggle: false
-    entities:
-    - sensor.gf_dinning_dishwasher_cost
-    - sensor.gf_dinning_dishwasher_friendly_status
-    - input_boolean.disable_dishwasher_notification
-    - type: section
-    - sensor.gf_dinning_dishwasher_load
-    - sensor.gf_dinning_dishwasher_status_detail
-    - type: section
-    - sensor.gf_dinning_dishwasher_meter_weekly
-    - sensor.gf_dinning_dishwasher_meter_monthly
-    - type: section
-    - sensor.grocy_stock_dishwasher_tabs
+  # - type: entities
+  #   title: Dishwasher
+  #   show_header_toggle: false
+  #   entities:
+  #   - sensor.gf_dinning_dishwasher_cost
+  #   - sensor.gf_dinning_dishwasher_friendly_status
+  #   - input_boolean.disable_dishwasher_notification
+  #   - type: section
+  #   - sensor.gf_dinning_dishwasher_load
+  #   - sensor.gf_dinning_dishwasher_status_detail
+  #   - type: section
+  #   - sensor.gf_dinning_dishwasher_meter_weekly
+  #   - sensor.gf_dinning_dishwasher_meter_monthly
+  #   - type: section
+  #   - sensor.grocy_stock_dishwasher_tabs
 

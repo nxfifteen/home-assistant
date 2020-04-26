@@ -19,37 +19,29 @@ cards:
           - entity: sensor.family_stuart_state_human
             name: State
           - entity: sensor.family_stuart_phone_state
-            name: Tasker
-          - entity: sensor.family_stuart_loc_room
-            name: Room
-            type: custom:secondaryinfo-entity-row
-            secondary_info: "[[ sensor.family_stuart_loc_room_prob.state ]]"
+            name: Tasker Profile
+          #- entity: sensor.family_stuart_loc_room
+          #  name: Room
+          #  type: custom:secondaryinfo-entity-row
+          #  secondary_info: "[[ sensor.family_stuart_loc_room_prob.state ]]"
           - entity: sensor.family_stuart_locality
             name: Locality
           - type: section
           - script.find_phone_stuart
           - sensor.family_stuart_phone_charging
-          - type: section
-          - sensor.family_stuart_state_reason
-          - sensor.family_stuart_state_activity
-          - sensor.family_stuart_state_flex
-          - sensor.family_stuart_state_tent_pole
-
-  - type: 'custom:travel-time-card'
-    map: waze
-    entities:
-      - entity: sensor.commute_stuart_home
-        zone: zone.home
-      - entity: sensor.commute_stuart_work
-        zone: zone.cs_tps
+          #- type: section
+          #- sensor.family_stuart_state_reason
+          #- sensor.family_stuart_state_activity
+          #- sensor.family_stuart_state_flex
+          #- sensor.family_stuart_state_tent_pole
 
   - type: entities
     show_header_toggle: false
     entities:
       - type: 'custom:text-divider-row'
-        text: Stuart
+        text: Commute Timing
       - entity: sensor.commute_stuart_home
-        name: Stuart Home
+        name: Home
         icon: mdi:home-account
         type: custom:secondaryinfo-entity-row
         secondary_info:  "[[ {entity}.attributes.distance ]] km"
@@ -83,50 +75,20 @@ cards:
   - type: entities
     entities:
       - type: 'custom:text-divider-row'
-        text: Accounts
-      - entity: sensor.steam_76561197982696593
-        name: Steam
-        type: custom:secondaryinfo-entity-row
-        secondary_info: "[[ sensor.steam_hes_playing.state ]]"
-      - entity: sensor.stuart_s_jabra_elite_65t
-        name: Jabra Elite
-
-  - type: horizontal-stack
-    cards:
-      - type: entities
-        entities:
-          - type: 'custom:text-divider-row'
-            text: Car
-          - entity: input_select.family_stuart_drive_dest_template
-          - entity: sensor.family_stuart_drive_ignition
-            name: Ignition
-          - entity: sensor.family_stuart_drive_dest
-            name: Destingation
-          - entity: sensor.family_stuart_drive_eta
-            name: ETA
-          - entity: sensor.family_stuart_drive_dist
-            name: Distance
-          - entity: sensor.family_stuart_drive_out
-            name: Minutes Away
-          - entity: device_tracker.stuart_car_parked
-            name: Parking Spot
-
-  - type: entities
-    show_header_toggle: false
-    entities:
-      - type: 'custom:text-divider-row'
-        text: Travel
-      - entity: sensor.commute_stuart_home
-        name: Stuart Home
-        icon: mdi:home-account
-        type: custom:secondaryinfo-entity-row
-        secondary_info:  "[[ {entity}.attributes.distance ]] km"
-
-      - entity: sensor.commute_stuart_work
-        name: Work
-        icon: mdi:cash-usd
-        type: custom:secondaryinfo-entity-row
-        secondary_info:  "[[ {entity}.attributes.distance ]] km"
+        text: Car
+      - entity: input_select.family_stuart_drive_dest_template
+      - entity: sensor.family_stuart_drive_ignition
+        name: Ignition
+      - entity: sensor.family_stuart_drive_dest
+        name: Destingation
+      - entity: sensor.family_stuart_drive_eta
+        name: ETA
+      - entity: sensor.family_stuart_drive_dist
+        name: Distance
+      - entity: sensor.family_stuart_drive_out
+        name: Minutes Away
+      - entity: device_tracker.stuart_car_parked
+        name: Parking Spot
 
   - type: entities
     entities:
@@ -136,23 +98,6 @@ cards:
         name: Keys
       - entity: device_tracker.tile_c4f2161059284831
         name: Backpack
-
-  # - type: entities
-  #   entities:
-  #     - type: 'custom:text-divider-row'
-  #       text: Fitness
-  #     - entity: sensor.health_his_weight
-  #       type: custom:secondaryinfo-entity-row
-  #       secondary_info: "[[ sensor.health_his_weight_loss.state ]] kg Lost | [[ sensor.health_his_fat.state ]] % Fat | [[ sensor.health_his_bmi.state ]] BMI"
-  #     - entity: sensor.health_his_steps
-  #       type: custom:secondaryinfo-entity-row
-  #       secondary_info: "[[ sensor.health_his_distance.state ]] km"
-  #     - sensor.health_his_floors
-  #     - sensor.health_his_water
-  #     - sensor.health_his_calories
-  #     - entity: sensor.health_his_minutes_active
-  #       type: custom:secondaryinfo-entity-row
-  #       secondary_info: "Resting Heart Rate [[ sensor.health_his_resting_heart_rate.state ]] bpm"
 
   - type: picture-elements
     image: /local/images/core_fit_1.png
@@ -351,3 +296,12 @@ cards:
         top: 22%
         color: white
         transform: none
+
+  - type: entities
+    entities:
+      - type: 'custom:text-divider-row'
+        text: Accounts
+      - entity: sensor.steam_76561197982696593
+        name: Steam
+        type: custom:secondaryinfo-entity-row
+        secondary_info: "[[ sensor.steam_hes_playing.state ]]"
